@@ -73,14 +73,14 @@ if ! command -v snap &> /dev/null; then
 fi
 
 # Install yq using snap
-sudo snap install yq
+#sudo snap install yq
 # Check if yq was installed successfully
-if [ $? -ne 0 ]; then
-    echo "ERROR: Failed to install yq"
-    exit 1
-else
-    echo "✓ yq installed successfully"
-fi
+#if [ $? -ne 0 ]; then
+#    echo "ERROR: Failed to install yq"
+#    exit 1
+#else
+#    echo "✓ yq installed successfully"
+#fi
 
 # Set up Python 3.x
 echo -e "\n\n*** Setting up Python 3.x ***"

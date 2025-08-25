@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# First check if we did a first install of required files
+# If so, remove rcS.local
+# Other programs like SetupHelper makes use of this file
+# so to avoid conflicts, we remove it.
+
+# --- TFT35 / First-install logic ---
+if [ -f /data/tft35screen_configured ]; then
+    if [ -f /data/rcS.local ]; then
+        rm -f /data/rcS.local
+    else
+        # Check if we did a firmware update.
+        # If so, we have to recopy all libraries
+        if [ ! -f /usr/lib/libwiringPi.so ]; then
+            /data/tft35_scripts/tft35ReInstall
+        fi
+    fi
+fi
+
+# --- Display helpers (run in background) ---
+# Start only if not already running (defensiv, falls rc.local mehrfach getriggert wird)
+pgrep -f "/data/tft35_scripts/fbcp /dev/fb2" >/dev/null 2>&1 || \
+    /data/tft35_scripts/fbcp /dev/fb2 &
+
+pgrep -f "/data/tft35_scripts/backlightCtrl /dev/input/touchscreen0 45" >/dev/null 2>&1 || \
+    /data/tft35_scripts/backlightCtrl /dev/input/touchscreen0 45 &
+
+# --- dbus-mqtt-devices: setup + runit service link ---
+mkdir -p /data/logs
+
+# Run dependency setup (Log anhängen für Diagnose)
+if [ -x /data/drivers/dbus-mqtt-devices-0.9.0/bin/setup-dependencies.sh ]; then
+    /data/drivers/dbus-mqtt-devices-0.9.0/bin/setup-dependencies.sh >>/data/logs/dbus-mqtt-devices-setup.log 2>&1
+fi
+
+# Create runit service symlink if missing (Venus OS räumt /service beim Boot gern auf)
+if [ ! -L /service/dbus-mqtt-devices ]; then
+    ln -s /data/drivers/dbus-mqtt-devices-0.9.0/bin/service /service/dbus-mqtt-devices
+fi
+
+exit 0
+

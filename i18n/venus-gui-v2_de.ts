@@ -123,7 +123,7 @@
     <message id="levels_page_environment">
       <location filename="../../pages/LevelsPage.qml" line="64"/>
       <source>Environment</source>
-      <translation>Umgebung</translation>
+      <translation>Temperaturen</translation>
     </message>
     <message id="notifications_no_current_alerts">
       <location filename="../../pages/NotificationsPage.qml" line="98"/>
@@ -5376,7 +5376,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="nav_levels">
       <location filename="../../pages/LevelsPage.qml" line="20"/>
       <source>Levels</source>
-      <translation>Füllstände</translation>
+      <translation>Sensoren</translation>
     </message>
     <message id="nav_notifications">
       <location filename="../../pages/NotificationsPage.qml" line="14"/>

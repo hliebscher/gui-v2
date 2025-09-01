@@ -2853,7 +2853,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
       <location filename="../../components/CommonWords.qml" line="511"/>
       <source>Switch</source>
       <extracomment>Change the mode value</extracomment>
-      <translation>Umschalten</translation>
+      <translation>Schalter</translation>
     </message>
     <message id="devicelist_battery_initializing">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="43"/>

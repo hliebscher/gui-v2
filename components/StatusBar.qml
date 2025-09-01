@@ -130,7 +130,7 @@ FocusScope {
 		text: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? ""
 				: qsTrId("statusbar_switch")
 		display: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? Button.IconOnly : Button.TextBesideIcon
-		color: activeFocus ? Theme.color_ok : Theme.color_font_primary
+		color: auxCardsOpened ? Theme.color_ok : (activeFocus ? Theme.color_ok : Theme.color_font_primary)
 		enabled: root.leftButton !== VenusOS.StatusBar_LeftButton_ControlsActive
 		KeyNavigation.right: breadcrumbs
 

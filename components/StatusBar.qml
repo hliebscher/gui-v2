@@ -125,6 +125,7 @@ FocusScope {
 		icon.source: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? ""
 				: auxCardsOpened ? "qrc:/images/icon_smartswitch_on_32.svg"
 				: "qrc:/images/icon_smartswitch_off_32.svg"
+		icon.color: auxCardsOpened ? Theme.color_ok : (activeFocus ? Theme.color_ok : Theme.color_font_primary)
 		//% "Switch"
 		text: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? ""
 				: qsTrId("statusbar_switch")

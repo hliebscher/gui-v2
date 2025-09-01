@@ -53,7 +53,7 @@ FocusScope {
 
 	component StatusBarButton : Button {
 		radius: 0
-		width: Theme.geometry_statusBar_button_height
+		width: display === Button.TextBesideIcon ? implicitWidth : Theme.geometry_statusBar_button_height
 		height: Theme.geometry_statusBar_button_height
 		backgroundColor: "transparent"  // don't show background when disabled
 		display: Button.IconOnly
@@ -125,6 +125,11 @@ FocusScope {
 		icon.source: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? ""
 				: auxCardsOpened ? "qrc:/images/icon_smartswitch_on_32.svg"
 				: "qrc:/images/icon_smartswitch_off_32.svg"
+		//% "Switch"
+		text: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? ""
+				: qsTrId("statusbar_switch")
+		display: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? Button.IconOnly : Button.TextBesideIcon
+		color: activeFocus ? Theme.color_ok : Theme.color_font_primary
 		enabled: root.leftButton !== VenusOS.StatusBar_LeftButton_ControlsActive
 		KeyNavigation.right: breadcrumbs
 

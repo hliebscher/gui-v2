@@ -16,7 +16,7 @@ QtObject {
 		"qrc:/qt/qml/Victron/VenusOS/pages/BriefPage.qml": briefAndOverviewConfig,
 		"qrc:/qt/qml/Victron/VenusOS/pages/OverviewPage.qml": briefAndOverviewConfig,
 		"qrc:/qt/qml/Victron/VenusOS/pages/LevelsPage.qml": levelsConfig,
-		"qrc:/qt/qml/Victron/BoatPageComponents/BoatPage.qml": boatPageConfig,
+		"qrc:/qt/qml/Victron/Boat/BoatPage.qml": boatPageConfig,
 	})
 
 	function setConfigIndex(pageConfig, configIndex) {
@@ -43,7 +43,7 @@ QtObject {
 	}
 
 	function currentNavBarUrl() {
-		const data = Global.pageManager.navBar.model.get(Global.pageManager.navBar.currentIndex)
+		const data = Global.mainView.navBar.model.get(Global.mainView.navBar.currentIndex)
 		return data.url
 	}
 
@@ -88,7 +88,7 @@ QtObject {
 		case Qt.Key_6:
 			if (!!Global.pageManager) {
 				const newIndex = key - Qt.Key_1
-				Global.pageManager.navBar.setCurrentIndex(newIndex)
+				Global.mainView.navBar.setCurrentIndex(newIndex)
 			}
 			break
 		case Qt.Key_Comma:
@@ -310,7 +310,7 @@ QtObject {
 	}
 
 	property Rectangle _configLabel: Rectangle {
-		parent: !!Global.pageManager ? Global.pageManager.statusBar : null
+		parent: Global.mainView?.statusBar ?? null
 		width: pageConfigTitle.width * 1.1
 		height: pageConfigTitle.implicitHeight * 1.1
 		color: "white"

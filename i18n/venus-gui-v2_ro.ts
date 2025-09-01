@@ -3,8 +3,8 @@
 <TS version="2.1" language="ro">
   <context>
     <name/>
-    <message id="switchable_output_trip_low_voltage">
-      <location filename="../../src/enums.cpp" line="452"/>
+    <message id="switchable_output_disabled">
+      <location filename="../../src/enums.cpp" line="449"/>
       <source>Disabled</source>
       <translation>Dezactivat</translation>
     </message>
@@ -19,24 +19,23 @@
       <extracomment>Electric power, as measured in Watts</extracomment>
       <translation>Putere</translation>
     </message>
-    <message id="digitalinputs_state_off">
-      <location filename="../../src/enums.cpp" line="237"/>
+    <message id="solarchargers_state_off">
+      <location filename="../../src/enums.cpp" line="326"/>
       <source>Off</source>
-      <extracomment>Digital input state</extracomment>
       <translation>Oprit</translation>
     </message>
-    <message id="settings_remote_console_appearance_auto">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="108"/>
+    <message id="common_words_auto">
+      <location filename="../../components/CommonWords.qml" line="80"/>
       <source>Auto</source>
       <translation>Auto</translation>
     </message>
-    <message id="batteryalarms_high_battery_voltage">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="24"/>
+    <message id="common_words_high_battery_voltage">
+      <location filename="../../components/CommonWords.qml" line="226"/>
       <source>High battery voltage</source>
       <translation>Tensiune ridicata baterie</translation>
     </message>
-    <message id="common_words_inverter_charger">
-      <location filename="../../components/CommonWords.qml" line="261"/>
+    <message id="overview_widget_inverter_title">
+      <location filename="../../components/widgets/InverterChargerWidget.qml" line="31"/>
       <source>Inverter / Charger</source>
       <translation>Invertor/Încărcător</translation>
     </message>
@@ -45,15 +44,14 @@
       <source>Low battery voltage</source>
       <translation>Tensiune scazuta baterie</translation>
     </message>
-    <message id="settings_tcpip_manual">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="105"/>
+    <message id="common_words_manual">
+      <location filename="../../components/CommonWords.qml" line="296"/>
       <source>Manual</source>
       <translation>Manual</translation>
     </message>
-    <message id="common_words_none_errors">
-      <location filename="../../components/CommonWords.qml" line="357"/>
+    <message id="settings_startpage_none">
+      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="53"/>
       <source>None</source>
-      <extracomment>Indicates there are no errors</extracomment>
       <translation>Niciuna</translation>
     </message>
     <message id="common_words_position_ac">
@@ -62,71 +60,69 @@
       <extracomment>AC input or output position</extracomment>
       <translation>Pozitie</translation>
     </message>
-    <message id="common_words_speed">
-      <location filename="../../components/CommonWords.qml" line="467"/>
+    <message id="settings_minmax_speed">
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="183"/>
       <source>Speed</source>
-      <extracomment>A speed measurement value</extracomment>
       <translation>Viteza</translation>
     </message>
-    <message id="settings_state">
-      <location filename="../../pages/settings/PageCanbusStatus.qml" line="116"/>
+    <message id="settings_tailscale_state">
+      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="170"/>
       <source>State</source>
       <translation>Stare</translation>
     </message>
-    <message id="settings_firmware_online_installing">
-      <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="86"/>
+    <message id="settings_firmware_installing">
+      <location filename="../../components/FirmwareUpdate.qml" line="67"/>
       <source>Installing %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>Instalare %1...</translation>
     </message>
-    <message id="settings_vrm_unknown_error">
-      <location filename="../../pages/settings/PageSettingsLogger.qml" line="308"/>
+    <message id="splash_view_unknown_error">
+      <location filename="../../components/SplashView.qml" line="331"/>
       <source>Unknown error</source>
       <translation>Eroare necunoscuta</translation>
     </message>
-    <message id="ess_card_minimum_soc">
-      <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="15"/>
-      <location filename="../../pages/controlcards/ESSCard.qml" line="52"/>
+    <message id="controlcard_inverter_charger_ess_minimum_soc">
+      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="105"/>
       <source>Minimum SOC</source>
       <translation>SoC minim</translation>
     </message>
-    <message id="settings_root_enter_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="262"/>
+    <message id="settings_radio_button_enter_password">
+      <location filename="../../components/RadioButtonListPage.qml" line="134"/>
       <source>Enter password</source>
       <translation>Introduceți parola</translation>
     </message>
-    <message id="settings_canbus_unique_id_press_to_check">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="112"/>
+    <message id="settings_firmware_press_to_check">
+      <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="18"/>
       <source>Press to check</source>
       <translation>Apasa pentru a verifica</translation>
     </message>
-    <message id="settings_system_grid">
-      <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="18"/>
+    <message id="common_words_grid">
+      <location filename="../../components/CommonWords.qml" line="217"/>
       <source>Grid</source>
       <translation>Retea</translation>
     </message>
-    <message id="brief_solar_yield">
-      <location filename="../../pages/BriefSidePanel.qml" line="25"/>
+    <message id="overview_widget_solaryield_title">
+      <location filename="../../components/widgets/SolarYieldWidget.qml" line="26"/>
       <source>Solar yield</source>
       <translation>Producția de energie solară</translation>
     </message>
-    <message id="solarchargers_state_external control">
-      <location filename="../../src/enums.cpp" line="347"/>
+    <message id="ess_state_external_control">
+      <location filename="../../data/Ess.qml" line="41"/>
       <source>External control</source>
       <translation>Control extern</translation>
     </message>
     <message id="levels_page_tanks">
-      <location filename="../../pages/LevelsPage.qml" line="62"/>
+      <location filename="../../pages/LevelsPage.qml" line="61"/>
       <source>Tanks</source>
       <translation>Rezervoare</translation>
     </message>
     <message id="levels_page_environment">
-      <location filename="../../pages/LevelsPage.qml" line="64"/>
+      <location filename="../../pages/LevelsPage.qml" line="63"/>
       <source>Environment</source>
       <translation>Mediu inconjurator</translation>
     </message>
     <message id="notifications_no_current_alerts">
-      <location filename="../../pages/NotificationsPage.qml" line="98"/>
+      <location filename="../../pages/NotificationsPage.qml" line="97"/>
       <source>No current alerts</source>
       <translation>Nu există alerte curente</translation>
     </message>
@@ -135,8 +131,8 @@
       <source>General</source>
       <translation>General</translation>
     </message>
-    <message id="pagesettingsgeneral_firmware">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="112"/>
+    <message id="pagesettingssupportstate_firmware">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="352"/>
       <source>Firmware</source>
       <translation>Firmware</translation>
     </message>
@@ -155,8 +151,8 @@
       <source>ESS</source>
       <translation>ESS</translation>
     </message>
-    <message id="pagesettingsconnectivity_ethernet">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="18"/>
+    <message id="settings_tailscale_ethernet">
+      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="98"/>
       <source>Ethernet</source>
       <translation>Retea locala</translation>
     </message>
@@ -171,23 +167,23 @@
       <extracomment>GPS units</extracomment>
       <translation>GPS</translation>
     </message>
-    <message id="settings_relay_tank_pump">
-      <location filename="../../pages/settings/PageSettingsRelay.qml" line="60"/>
+    <message id="settings_tank_pump">
+      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="122"/>
       <source>Tank pump</source>
       <translation>Pompa de rezervor</translation>
     </message>
     <message id="controlcard_generator_subcard_button_manual_stop">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="34"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="33"/>
       <source>Manual Stop</source>
       <translation>Oprire manuală</translation>
     </message>
     <message id="controlcard_generator_subcard_button_manual_start">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="37"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="36"/>
       <source>Manual Start</source>
       <translation>PORNIRE MANUALA</translation>
     </message>
-    <message id="controlcard_generator_label_autostart">
-      <location filename="../../pages/controlcards/GeneratorCard.qml" line="64"/>
+    <message id="evcs_autostart">
+      <location filename="../../pages/evcs/EvChargerSetupPage.qml" line="22"/>
       <source>Autostart</source>
       <translation>Pornire automată</translation>
     </message>
@@ -257,7 +253,7 @@
       <translation>Opreşte când %1 este mai mică decât</translation>
     </message>
     <message id="settings_fronius_remove_ip_address">
-      <location filename="../../pages/settings/IpAddressListView.qml" line="51"/>
+      <location filename="../../pages/settings/IpAddressListView.qml" line="49"/>
       <source>Remove IP address?</source>
       <translation>Eliminați adresa IP?</translation>
     </message>
@@ -267,37 +263,37 @@
       <translation>Max: %1</translation>
     </message>
     <message id="settings_deviceinfo_connection">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="25"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="24"/>
       <source>Connection</source>
       <translation>Conexiuni</translation>
     </message>
     <message id="settings_deviceinfo_product">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="32"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="31"/>
       <source>Product</source>
       <translation>Produs</translation>
     </message>
-    <message id="settings_tcpip_name">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="16"/>
+    <message id="page_switchable_output_name">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="35"/>
       <source>Name</source>
       <translation>Nume</translation>
     </message>
     <message id="settings_deviceinfo_name">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="39"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="38"/>
       <source>Name</source>
       <translation type="unfinished">Nume</translation>
     </message>
     <message id="settings_deviceinfo_product_id">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="49"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="48"/>
       <source>Product ID</source>
       <translation>ID produs</translation>
     </message>
     <message id="settings_deviceinfo_hardware_version">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="63"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="62"/>
       <source>Hardware version</source>
       <translation>Versiune Hardware</translation>
     </message>
     <message id="settings_deviceinfo_device_name">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="84"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="83"/>
       <source>Device name</source>
       <translation>Enhetsnavn</translation>
     </message>
@@ -356,10 +352,15 @@
       <source>Value must be lower than start value</source>
       <translation>Valoarea trebuie sa fie mai mica decat valoarea de pornire</translation>
     </message>
+    <message id="settings_minmax_acout_max_power">
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="119"/>
+      <source>AC output</source>
+      <translation>Iesire AC</translation>
+    </message>
     <message id="ac_output">
       <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="29"/>
       <source>AC output</source>
-      <translation>Iesire AC</translation>
+      <translation type="unfinished">Iesire AC</translation>
     </message>
     <message id="page_generator_ac_load_use_ac_load">
       <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="39"/>
@@ -396,15 +397,25 @@
       <source>Stop when power is lower than</source>
       <translation>Opreste dupa ce puterea este mai scazuta decat</translation>
     </message>
+    <message id="settings_system_battery_monitor">
+      <location filename="../../pages/settings/PageSettingsBatteries.qml" line="23"/>
+      <source>Battery monitor</source>
+      <translation>Monitor baterie</translation>
+    </message>
+    <message id="settings_system_unavailable_monitor">
+      <location filename="../../pages/settings/PageSettingsBatteries.qml" line="26"/>
+      <source>Unavailable monitor, set another</source>
+      <translation>Monitor indisponibil, defineste altul</translation>
+    </message>
     <message id="page_generator_conditions_battery_monitor">
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="42"/>
       <source>Battery monitor</source>
-      <translation>Monitor baterie</translation>
+      <translation type="unfinished">Monitor baterie</translation>
     </message>
     <message id="page_generator_conditions_unavailable_monitor_set_another">
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="44"/>
       <source>Unavailable monitor, set another</source>
-      <translation>Monitor indisponibil, defineste altul</translation>
+      <translation type="unfinished">Monitor indisponibil, defineste altul</translation>
     </message>
     <message id="page_generator_conditions_on_loss_of_communication">
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="68"/>
@@ -431,8 +442,13 @@
       <source>Battery SOC</source>
       <translation>SOC baterie</translation>
     </message>
-    <message id="page_generator_conditions_inverter_high_temperature">
-      <location filename="../../pages/settings/PageGeneratorConditions.qml" line="139"/>
+    <message id="page_generator_conditions_periodic_run">
+      <location filename="../../pages/settings/PageGeneratorConditions.qml" line="173"/>
+      <source>Periodic run</source>
+      <translation type="unfinished">Functionare periodica</translation>
+    </message>
+    <message id="settings_inverter_high_temperature">
+      <location filename="../../data/Generators.qml" line="84"/>
       <source>Inverter high temperature</source>
       <translation>Temperatura ridicata invertor</translation>
     </message>
@@ -445,11 +461,6 @@
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="150"/>
       <source>Start on overload warning</source>
       <translation>Porneste la avertizarea de supraincarcare</translation>
-    </message>
-    <message id="page_generator_conditions_periodic_run">
-      <location filename="../../pages/settings/PageGeneratorConditions.qml" line="173"/>
-      <source>Periodic run</source>
-      <translation type="unfinished">Functionare periodica</translation>
     </message>
     <message id="generator_periodic_run">
       <location filename="../../data/Generators.qml" line="66"/>
@@ -610,8 +621,8 @@
       <source>Enter name</source>
       <translation type="unfinished">Introduceți numele</translation>
     </message>
-    <message id="settings_briefview_active_battery_monitor">
-      <location filename="../../pages/settings/PageSettingsDisplayBrief.qml" line="83"/>
+    <message id="settings_briefview_center_active_battery_monitor">
+      <location filename="../../components/listitems/ListBriefCenterDetails.qml" line="27"/>
       <source>Active battery monitor</source>
       <translation>Monitor baterie activ</translation>
     </message>
@@ -645,15 +656,10 @@
       <source>Phase type</source>
       <translation>Tip faza</translation>
     </message>
-    <message id="ac-in-setup_single_phase">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="142"/>
-      <source>Single phase</source>
-      <translation>Monofazat</translation>
-    </message>
     <message id="settings_single_phase">
       <location filename="../../pages/settings/PageSettingsCGwacs.qml" line="68"/>
       <source>Single phase</source>
-      <translation type="unfinished">Monofazat</translation>
+      <translation>Monofazat</translation>
     </message>
     <message id="settings_multi_phase">
       <location filename="../../pages/settings/PageSettingsCGwacs.qml" line="70"/>
@@ -705,8 +711,8 @@
       <source>Up, but no services (250 kbit/s)</source>
       <translation>În funcțiune, dar fără servicii (250 kbit/s)</translation>
     </message>
-    <message id="ac-in-setup_devices">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="161"/>
+    <message id="common_words_devices">
+      <location filename="../../components/CommonWords.qml" line="163"/>
       <source>Devices</source>
       <translation>Dispozitiv</translation>
     </message>
@@ -739,6 +745,11 @@
       <location filename="../../pages/settings/PageSettingsCanbus.qml" line="107"/>
       <source>Check Unique id numbers</source>
       <translation>Verifica numerele de identificare</translation>
+    </message>
+    <message id="settings_canbus_unique_id_press_to_check">
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="112"/>
+      <source>Press to check</source>
+      <translation type="unfinished">Apasa pentru a verifica</translation>
     </message>
     <message id="settings_canbus_unique_id_conflict">
       <location filename="../../pages/settings/PageSettingsCanbus.qml" line="125"/>
@@ -780,23 +791,23 @@
       <source>30 sec</source>
       <translation>30 sec</translation>
     </message>
-    <message id="settings_displayoff_1min">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="45"/>
+    <message id="settings_1_min">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="115"/>
       <source>1 min</source>
       <translation>1 min</translation>
     </message>
-    <message id="settings_displayoff_10min">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="47"/>
+    <message id="settings_10_min">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="119"/>
       <source>10 min</source>
       <translation>10 min</translation>
     </message>
-    <message id="settings_displayoff_30min">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="49"/>
+    <message id="settings_30_min">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="123"/>
       <source>30 min</source>
       <translation>30 min</translation>
     </message>
-    <message id="settings_displayoff_never">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="51"/>
+    <message id="settings_startpage_timeout_never">
+      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="14"/>
       <source>Never</source>
       <translation>Niciodata</translation>
     </message>
@@ -854,93 +865,98 @@
       <translation>°F</translation>
     </message>
     <message id="settings_dvcc_instructions">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="19"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="18"/>
       <source>&lt;b&gt;CAUTION:&lt;/b&gt; Read the manual before adjusting.</source>
       <translation>&lt;b&gt;ATENŢIE:&lt;/b&gt; Citiți manualul înainte de a efectua reglajul.</translation>
     </message>
     <message id="settings_dvcc_limit_managed_battery_charge_voltage">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="40"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="39"/>
       <source>Limit managed battery charge voltage</source>
       <translation>Limitare tensiune incarcare baterie gestionata</translation>
     </message>
     <message id="settings_dvcc_max_charge_voltage">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="52"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="51"/>
       <source>Maximum charge voltage</source>
       <translation>Tensiune de incarcare maxima</translation>
     </message>
     <message id="settings_dvcc_shared_voltage_sense">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="62"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="61"/>
       <source>SVS - Shared voltage sense</source>
       <translation>SVS - Sens comun tensiune</translation>
     </message>
     <message id="settings_dvcc_shared_temp_sense">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="71"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="70"/>
       <source>STS - Shared temperature sense</source>
       <translation>STS - Sens comun temperatura</translation>
     </message>
-    <message id="settings_system_unavailable_sensor">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="82"/>
+    <message id="settings_tank_unavailable_sensor">
+      <location filename="../../pages/settings/PageSettingsTankPump.qml" line="70"/>
       <source>Unavailable sensor, set another</source>
       <translation>Senzor indisponibil, defineste altul</translation>
     </message>
+    <message id="settings_system_unavailable_sensor">
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="81"/>
+      <source>Unavailable sensor, set another</source>
+      <translation type="unfinished">Senzor indisponibil, defineste altul</translation>
+    </message>
     <message id="settings_dvcc_used_sensor">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="121"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="120"/>
       <source>Used sensor</source>
       <translation>Senzor utilizat</translation>
     </message>
     <message id="settings_dvcc_shared_current_sense">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="132"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="131"/>
       <source>SCS - Shared current sense</source>
       <translation>SCS - Sens comun intensitate</translation>
     </message>
     <message id="settings_dvcc_scs_status">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="139"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="138"/>
       <source>SCS status</source>
       <translation>Stare SCS</translation>
     </message>
     <message id="settings_dvcc_scs_disabled_external_control">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="147"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="146"/>
       <source>Disabled (external control)</source>
       <translation>Dezactivat (Control extern)</translation>
     </message>
     <message id="settings_dvcc_scs_disabled_no_chargers">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="149"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="148"/>
       <source>Disabled (no chargers)</source>
       <translation>Dezactivat (fara incarcatoare)</translation>
     </message>
     <message id="settings_dvcc_scs_disabled_no_battery_monitor">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="151"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="150"/>
       <source>Disabled (no battery monitor)</source>
       <translation>Dezactivat (fara monitor baterie)</translation>
     </message>
     <message id="settings_dvcc_auto_selection">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="161"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="160"/>
       <source>Automatic selection</source>
       <translation>Selectare automată</translation>
     </message>
     <message id="settings_dvcc_no_bms_control">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="163"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="162"/>
       <source>No BMS control</source>
       <translation>Fără cotrol BMS</translation>
     </message>
     <message id="settings_dvcc_controlling_bms">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="167"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="166"/>
       <source>Controlling BMS</source>
       <translation>Control BMS</translation>
     </message>
     <message id="settings_dvcc_unavailable_bms">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="173"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="172"/>
       <source>Unavailable, set another</source>
       <extracomment>Shown when BMS instance is invalid</extracomment>
       <translation>Indisponibil, configurați altul</translation>
     </message>
     <message id="settings_dvcc_auto_selected">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="203"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="202"/>
       <source>Auto selected</source>
       <translation>Selectat automat</translation>
     </message>
     <message id="settings_dvcc_auto_selected_none">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="209"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="208"/>
       <source>None</source>
       <extracomment>Indicates no option is selected</extracomment>
       <translation type="unfinished">Niciuna</translation>
@@ -1056,6 +1072,12 @@
       <extracomment>Firmware update progress. %1 = firmware version, %2 = current update progress</extracomment>
       <translation>Instalare %1 %2%</translation>
     </message>
+    <message id="settings_firmware_online_installing">
+      <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="86"/>
+      <source>Installing %1...</source>
+      <extracomment>%1 = firmware version</extracomment>
+      <translation type="unfinished">Instalare %1...</translation>
+    </message>
     <message id="settings_firmware_update_build_date_time">
       <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="109"/>
       <source>Update build date/time</source>
@@ -1122,13 +1144,13 @@
       <source>AC-In1 MP</source>
       <translation>AC-In1 MP</translation>
     </message>
-    <message id="page_setting_fronius_inverters_ac_in1_l">
-      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="52"/>
+    <message id="page_setting_fronius_inverters_ac_in1_l1">
+      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="108"/>
       <source>AC-In1 L%1</source>
       <translation>AC-In1 L%1</translation>
     </message>
-    <message id="page_setting_fronius_inverters_ac_in1_phase_unknown">
-      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="56"/>
+    <message id="page_setting_fronius_inverters_ac_in1_unknown">
+      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="112"/>
       <source>AC-In1 --</source>
       <translation>AC-In1 --</translation>
     </message>
@@ -1136,6 +1158,16 @@
       <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="64"/>
       <source>AC-Out MP</source>
       <translation>AC-Out MP</translation>
+    </message>
+    <message id="page_setting_fronius_inverters_ac_in1_l">
+      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="52"/>
+      <source>AC-In1 L%1</source>
+      <translation type="unfinished">AC-In1 L%1</translation>
+    </message>
+    <message id="page_setting_fronius_inverters_ac_in1_phase_unknown">
+      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="56"/>
+      <source>AC-In1 --</source>
+      <translation type="unfinished">AC-In1 --</translation>
     </message>
     <message id="page_setting_fronius_inverters_ac_out_l">
       <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="70"/>
@@ -1162,23 +1194,13 @@
       <source>AC-In2 --</source>
       <translation>AC-In2 --</translation>
     </message>
-    <message id="page_setting_fronius_inverters_ac_in1_l1">
-      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="108"/>
-      <source>AC-In1 L%1</source>
-      <translation type="unfinished">AC-In1 L%1</translation>
-    </message>
-    <message id="page_setting_fronius_inverters_ac_in1_unknown">
-      <location filename="../../pages/settings/PageSettingsFroniusInverters.qml" line="112"/>
-      <source>AC-In1 --</source>
-      <translation type="unfinished">AC-In1 --</translation>
-    </message>
     <message id="settings_fronius_rescan_title">
-      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="35"/>
+      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="34"/>
       <source>Rescan for IP addresses?</source>
       <translation>Doriți să rescanați pentru adrese IP?</translation>
     </message>
     <message id="settings_fronius_rescan">
-      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="37"/>
+      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="36"/>
       <source>Rescan</source>
       <translation>Rescaneaza</translation>
     </message>
@@ -1198,7 +1220,7 @@
       <translation>IP si port pentru asistenta</translation>
     </message>
     <message id="reboot_button_reboot_now">
-      <location filename="../../components/listitems/ListRebootButton.qml" line="16"/>
+      <location filename="../../components/listitems/ListRebootButton.qml" line="15"/>
       <source>Reboot now</source>
       <translation>Reporniți acum</translation>
     </message>
@@ -1636,20 +1658,10 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Slow charge</source>
       <translation>Incarcare lenta</translation>
     </message>
-    <message id="inverters_state_sustain">
-      <location filename="../../data/System.qml" line="154"/>
-      <source>Sustain</source>
-      <translation>Sustine</translation>
-    </message>
-    <message id="inverters_state_externalccontrol">
-      <location filename="../../data/System.qml" line="179"/>
-      <source>External control</source>
-      <translation type="unfinished">Control extern</translation>
-    </message>
     <message id="inverters_state_system_sustain">
       <location filename="../../data/System.qml" line="185"/>
       <source>Sustain</source>
-      <translation type="unfinished">Sustine</translation>
+      <translation>Sustine</translation>
     </message>
     <message id="inverters_state_recharge">
       <location filename="../../data/System.qml" line="188"/>
@@ -1721,28 +1733,10 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Door alarm</source>
       <translation>Alarma usa</translation>
     </message>
-    <message id="dcMeter_bilge_pump">
-      <location filename="../../src/enums.cpp" line="115"/>
+    <message id="digitalinputs_type_bilgepump">
+      <location filename="../../src/enums.cpp" line="196"/>
       <source>Bilge pump</source>
       <translation>Pompa de santina</translation>
-    </message>
-    <message id="battery_mode_idle">
-      <location filename="../../src/enums.cpp" line="26"/>
-      <source>Idle</source>
-      <extracomment>Battery mode</extracomment>
-      <translation type="unfinished">inactiv</translation>
-    </message>
-    <message id="battery_mode_charging">
-      <location filename="../../src/enums.cpp" line="30"/>
-      <source>Charging</source>
-      <extracomment>Battery mode</extracomment>
-      <translation type="unfinished">Încărcare</translation>
-    </message>
-    <message id="battery_mode_discharging">
-      <location filename="../../src/enums.cpp" line="34"/>
-      <source>Discharging</source>
-      <extracomment>Battery mode</extracomment>
-      <translation type="unfinished">descarcare</translation>
     </message>
     <message id="digitalinputs_type_bilgealarm">
       <location filename="../../src/enums.cpp" line="199"/>
@@ -1769,15 +1763,13 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>CO2 alarm</source>
       <translation>Alarma CO2</translation>
     </message>
-    <message id="settings_large_signal_k">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="231"/>
-      <location filename="../../pages/settings/PageSettingsSignalK.qml" line="18"/>
+    <message id="pagesettingssupportstate_signal_k">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="465"/>
       <source>Signal K</source>
       <translation>Server de Signal K</translation>
     </message>
-    <message id="settings_large_node_red">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="246"/>
-      <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="17"/>
+    <message id="pagesettingssupportstate_node_red">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="478"/>
       <source>Node-RED</source>
       <translation>Server de Node-RED</translation>
     </message>
@@ -1810,30 +1802,15 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Log interval</source>
       <translation>Interval inregistrare parametri</translation>
     </message>
-    <message id="settings_1_min">
-      <location filename="../../pages/settings/PageSettingsLogger.qml" line="115"/>
-      <source>1 min</source>
-      <translation type="unfinished">1 min</translation>
-    </message>
     <message id="settings_5_min">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="117"/>
       <source>5 min</source>
       <translation>5 min</translation>
     </message>
-    <message id="settings_10_min">
-      <location filename="../../pages/settings/PageSettingsLogger.qml" line="119"/>
-      <source>10 min</source>
-      <translation type="unfinished">10 min</translation>
-    </message>
     <message id="settings_15_min">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="121"/>
       <source>15 min</source>
       <translation>15 min</translation>
-    </message>
-    <message id="settings_30_min">
-      <location filename="../../pages/settings/PageSettingsLogger.qml" line="123"/>
-      <source>30 min</source>
-      <translation type="unfinished">30 min</translation>
     </message>
     <message id="settings_1_hr">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="125"/>
@@ -1952,6 +1929,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>External storage</source>
       <translation>Stocare externa</translation>
     </message>
+    <message id="settings_vrm_unknown_error">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="308"/>
+      <source>Unknown error</source>
+      <translation type="unfinished">Eroare necunoscuta</translation>
+    </message>
     <message id="settings_vrm_no_error">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="311"/>
       <source>No Error</source>
@@ -2042,6 +2024,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Alarm relay</source>
       <translation>Releu alarma</translation>
     </message>
+    <message id="settings_relay_tank_pump">
+      <location filename="../../pages/settings/PageSettingsRelay.qml" line="60"/>
+      <source>Tank pump</source>
+      <translation type="unfinished">Pompa de rezervor</translation>
+    </message>
     <message id="settings_relay_manual">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="62"/>
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="94"/>
@@ -2088,16 +2075,22 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>This option allows you to switch between the current and the previous firmware version. No internet or sdcard needed.</source>
       <translation>Aceasta optiune iti permite sa schimbi intre versiunea curenta si versiunea anterioara. Nu este necesar card SD sau conexiune la internet.</translation>
     </message>
-    <message id="settings_firmware_backup_version">
-      <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="59"/>
+    <message id="settings_firmware_current_version">
+      <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="94"/>
       <source>Firmware %1 (%2)</source>
-      <extracomment>%1 = backup version, %2 = backup version build number</extracomment>
+      <extracomment>%1 = current firmware version, %2 = current firmware build number</extracomment>
       <translation>Firmware %1 (%2)</translation>
     </message>
     <message id="settings_firmware_press_to_boot">
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="62"/>
       <source>Press to boot</source>
       <translation>Apasa pentru a porni</translation>
+    </message>
+    <message id="settings_firmware_backup_version">
+      <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="59"/>
+      <source>Firmware %1 (%2)</source>
+      <extracomment>%1 = backup version, %2 = backup version build number</extracomment>
+      <translation type="unfinished">Firmware %1 (%2)</translation>
     </message>
     <message id="settings_firmware_rebooting_to">
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="80"/>
@@ -2109,12 +2102,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="84"/>
       <source>Switching firmware version is not possible when auto update is set to "Check and update". Set auto update to "Disabled" or "Check only" to enable this option.</source>
       <translation>Schimbarea versiunii firmware nu este posibilă dacă actualizarea automată este configurată la „Verificați și actualizați”. Setați actualizarea automată la „Dezactivat” sau „Numai verificare” pentru a activa această opțiune.</translation>
-    </message>
-    <message id="settings_firmware_current_version">
-      <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="94"/>
-      <source>Firmware %1 (%2)</source>
-      <extracomment>%1 = current firmware version, %2 = current firmware build number</extracomment>
-      <translation type="unfinished">Firmware %1 (%2)</translation>
     </message>
     <message id="settings_firmware_backup_not_available">
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="101"/>
@@ -2136,10 +2123,9 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Vehicle</source>
       <translation>Vehicul</translation>
     </message>
-    <message id="common_words_boat_page">
-      <location filename="../../components/CommonWords.qml" line="111"/>
+    <message id="nav_boat">
+      <location filename="../../pages/boat/BoatPage.qml" line="14"/>
       <source>Boat</source>
-      <extracomment>The 'Boat' page</extracomment>
       <translation>Ambarcatiune</translation>
     </message>
     <message id="settings_system_name">
@@ -2147,8 +2133,8 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>System name</source>
       <translation>Nume sistem</translation>
     </message>
-    <message id="settings_system_name_auto">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="32"/>
+    <message id="settings_tcpip_auto">
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="103"/>
       <source>Automatic</source>
       <translation>Automa</translation>
     </message>
@@ -2181,16 +2167,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="95"/>
       <source>Monitor for shore disconnect</source>
       <translation>Monitor deconectarea de la tarm</translation>
-    </message>
-    <message id="settings_system_battery_monitor">
-      <location filename="../../pages/settings/PageSettingsBatteries.qml" line="23"/>
-      <source>Battery monitor</source>
-      <translation type="unfinished">Monitor baterie</translation>
-    </message>
-    <message id="settings_system_unavailable_monitor">
-      <location filename="../../pages/settings/PageSettingsBatteries.qml" line="26"/>
-      <source>Unavailable monitor, set another</source>
-      <translation type="unfinished">Monitor indisponibil, defineste altul</translation>
     </message>
     <message id="settings_system_auto_selected">
       <location filename="../../pages/settings/PageSettingsBatteries.qml" line="48"/>
@@ -2247,11 +2223,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Tank sensor</source>
       <translation>Senzor rezervor</translation>
     </message>
-    <message id="settings_tank_unavailable_sensor">
-      <location filename="../../pages/settings/PageSettingsTankPump.qml" line="70"/>
-      <source>Unavailable sensor, set another</source>
-      <translation type="unfinished">Senzor indisponibil, defineste altul</translation>
-    </message>
     <message id="settings_tank_start_level">
       <location filename="../../pages/settings/PageSettingsTankPump.qml" line="90"/>
       <source>Start level</source>
@@ -2262,8 +2233,9 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Stop level</source>
       <translation>Nivel oprire</translation>
     </message>
-    <message id="lynxdistributor_connection_lost">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxDistributorList.qml" line="49"/>
+    <message id="settings_tcpip_connection_lost">
+      <location filename="../../pages/settings/PageSettingsEthernet.qml" line="24"/>
+      <location filename="../../pages/settings/PageSettingsTcpIp.qml" line="33"/>
       <source>Connection lost</source>
       <translation>Conexiune intrerupta</translation>
     </message>
@@ -2273,6 +2245,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/PageSettingsTcpIp.qml" line="35"/>
       <source>Unplugged</source>
       <translation>Deconectat</translation>
+    </message>
+    <message id="settings_tcpip_name">
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="16"/>
+      <source>Name</source>
+      <translation type="unfinished">Nume</translation>
     </message>
     <message id="settings_tcpip_hidden">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="21"/>
@@ -2315,10 +2292,10 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>IP configuration</source>
       <translation>Configuratie IP</translation>
     </message>
-    <message id="settings_tcpip_auto">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="103"/>
-      <source>Automatic</source>
-      <translation type="unfinished">Automa</translation>
+    <message id="settings_tcpip_manual">
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="105"/>
+      <source>Manual</source>
+      <translation type="unfinished">Manual</translation>
     </message>
     <message id="settings_tcpip_off">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="107"/>
@@ -2451,28 +2428,28 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <translation>Pacific</translation>
     </message>
     <message id="settings_vrm_device_instances_unconnected">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="251"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="250"/>
       <source>Unconnected %1</source>
       <extracomment>Name for an unconnected device. %1 = type of device</extracomment>
       <translation>Neconectat %1</translation>
     </message>
     <message id="settings_vrm_device_instances_reboot_now">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="304"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="303"/>
       <source>Reboot now?</source>
       <translation>Reporniți acum?</translation>
     </message>
     <message id="settings_vrm_device_instances_reboot_now_description">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="307"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="306"/>
       <source>VRM instance changes will not be applied until the device is rebooted.</source>
       <translation>Modificările instanței VRM nu vor fi aplicate până când dispozitivul nu este repornit.</translation>
     </message>
     <message id="settings_vrm_device_instances_rebooting">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="327"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="326"/>
       <source>Device is rebooting...</source>
       <translation>Dispozitivul se repornește...</translation>
     </message>
     <message id="settings_vrm_device_instances_rebooted">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="330"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="329"/>
       <source>Device has been rebooted.</source>
       <translation>Dispozitivul a fost repornit.</translation>
     </message>
@@ -2486,24 +2463,28 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>High battery voltage alarm</source>
       <translation>Alarma tensiune ridicata baterie</translation>
     </message>
-    <message id="lynxiondiagnostics_last_error">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="29"/>
+    <message id="common_words_last_error">
+      <location filename="../../components/CommonWords.qml" line="612"/>
       <source>Last error</source>
+      <extracomment>Details of last error</extracomment>
       <translation>Ultima eroare</translation>
     </message>
-    <message id="lynxiondiagnostics_2nd_last_error">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="31"/>
+    <message id="common_words_2nd_last_error">
+      <location filename="../../components/CommonWords.qml" line="615"/>
       <source>2nd last error</source>
+      <extracomment>Details of 2nd last error</extracomment>
       <translation>Penultima eroare</translation>
     </message>
-    <message id="lynxiondiagnostics_3rd_last_error">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="33"/>
+    <message id="common_words_3rd_last_error">
+      <location filename="../../components/CommonWords.qml" line="618"/>
       <source>3rd last error</source>
+      <extracomment>Details of 3rd last error</extracomment>
       <translation>Ante-penultima eorare</translation>
     </message>
-    <message id="lynxiondiagnostics_4th_last_error">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="35"/>
+    <message id="common_words_4th_last_error">
+      <location filename="../../components/CommonWords.qml" line="621"/>
       <source>4th last error</source>
+      <extracomment>Details of 4th last error</extracomment>
       <translation>4 erori in urma</translation>
     </message>
     <message id="charger_networked">
@@ -2516,10 +2497,16 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Mode setting</source>
       <translation>Configurari mod</translation>
     </message>
+    <message id="systemsettings_networkstatus_standalone">
+      <location filename="../../data/SystemSettings.qml" line="123"/>
+      <source>Standalone</source>
+      <extracomment>Network status: Standalone</extracomment>
+      <translation>De sine statator</translation>
+    </message>
     <message id="charger_standalone">
       <location filename="../../pages/solar/PageSolarParallelOperation.qml" line="45"/>
       <source>Standalone</source>
-      <translation>De sine statator</translation>
+      <translation type="unfinished">De sine statator</translation>
     </message>
     <message id="charger_charge">
       <location filename="../../pages/solar/PageSolarParallelOperation.qml" line="48"/>
@@ -2571,9 +2558,10 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Charge voltage</source>
       <translation type="unfinished">Tensiune incarcare</translation>
     </message>
-    <message id="switchable_output_slave">
-      <location filename="../../src/enums.cpp" line="403"/>
+    <message id="systemsettings_networkstatus_slave">
+      <location filename="../../data/SystemSettings.qml" line="107"/>
       <source>Slave</source>
+      <extracomment>Network status: Slave</extracomment>
       <translation>Secundar</translation>
     </message>
     <message id="charger_group_master">
@@ -2597,12 +2585,12 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <translation>Tensiune incarcare</translation>
     </message>
     <message id="common_words_reset">
-      <location filename="../../components/CommonWords.qml" line="434"/>
+      <location filename="../../components/CommonWords.qml" line="437"/>
       <source>Reset</source>
       <translation>Resetare</translation>
     </message>
-    <message id="ac-in-genset_load">
-      <location filename="../../components/PageGensetModel.qml" line="252"/>
+    <message id="solarcharger_load">
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="235"/>
       <source>Load</source>
       <translation>Incarcare</translation>
     </message>
@@ -2612,24 +2600,25 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <translation>Functionare in retea</translation>
     </message>
     <message id="charger_history_table_view">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="24"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="23"/>
       <source>Table view</source>
       <translation>Vizualizare tabel</translation>
     </message>
     <message id="charger_history_chart">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="26"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="25"/>
       <source>Chart</source>
       <translation>Grafic</translation>
     </message>
-    <message id="vebus_device_alarm_group_warning">
-      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmGroup.qml" line="44"/>
+    <message id="listitems_alarm_level_warning">
+      <location filename="../../components/listitems/core/ListAlarm.qml" line="21"/>
       <source>Warning</source>
+      <extracomment>Voltage alarm is at "Warning" level</extracomment>
       <translation>Avertisment</translation>
     </message>
-    <message id="devicelist_battery_alarm_state">
-      <location filename="../../components/listitems/ListAlarmState.qml" line="19"/>
+    <message id="listitems_alarm_level_alarm">
+      <location filename="../../components/listitems/core/ListAlarm.qml" line="25"/>
       <source>Alarm</source>
-      <extracomment>Alarm state is active</extracomment>
+      <extracomment>Voltage alarm is at "Alarm" level</extracomment>
       <translation>Alarma</translation>
     </message>
     <message id="devicelist_tankshape_volume">
@@ -2638,13 +2627,13 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <extracomment>The volume (as a percentage) for this tank shape point</extracomment>
       <translation>Volum</translation>
     </message>
-    <message id="temperature_short_circuited">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="32"/>
+    <message id="tank_status_short_circuited">
+      <location filename="../../data/Tanks.qml" line="177"/>
       <source>Short circuited</source>
       <translation>Scurtcircuitat</translation>
     </message>
-    <message id="temperature_reverse_polarity">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="35"/>
+    <message id="tank_status_reverse_polarity">
+      <location filename="../../data/Tanks.qml" line="180"/>
       <source>Reverse polarity</source>
       <translation>Polaritate inversata</translation>
     </message>
@@ -2689,13 +2678,8 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Enable charging</source>
       <translation>Activare incarcare</translation>
     </message>
-    <message id="evcs_autostart">
-      <location filename="../../pages/evcs/EvChargerSetupPage.qml" line="23"/>
-      <source>Autostart</source>
-      <translation type="unfinished">Pornire automată</translation>
-    </message>
     <message id="evcs_lock_charger_display">
-      <location filename="../../pages/evcs/EvChargerSetupPage.qml" line="29"/>
+      <location filename="../../pages/evcs/EvChargerSetupPage.qml" line="28"/>
       <source>Lock charger display</source>
       <translation>Blocați afișajul încărcătorului</translation>
     </message>
@@ -2773,11 +2757,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <extracomment>Device is not supported</extracomment>
       <translation>Incompatibil</translation>
     </message>
-    <message id="settings_tank_pump">
-      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="122"/>
-      <source>Tank pump</source>
-      <translation type="unfinished">Pompa de rezervor</translation>
-    </message>
     <message id="devicelist_remove_disconnected_devices">
       <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="129"/>
       <source>Remove disconnected devices</source>
@@ -2829,8 +2808,8 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Note that changing the Low state-of-charge setting also changes the Time-to-go discharge floor setting in the battery menu.</source>
       <translation>Retineti ca modificand „Nivelul de încărcare inferior”, de asemenea schimba și „Timpul rămas până la pragul inferior de descărcare” din meniul de configurare a bateriei.</translation>
     </message>
-    <message id="batteryalarms_fuse_blown">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="113"/>
+    <message id="lynxdistributor_fuse_blown">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxDistributorList.qml" line="63"/>
       <source>Fuse blown</source>
       <translation>Siguranta arsa</translation>
     </message>
@@ -2871,7 +2850,7 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <translation>Pictograme de alarma</translation>
     </message>
     <message id="common_words_switch">
-      <location filename="../../components/CommonWords.qml" line="508"/>
+      <location filename="../../components/CommonWords.qml" line="511"/>
       <source>Switch</source>
       <extracomment>Change the mode value</extracomment>
       <translation>Comutator</translation>
@@ -2911,13 +2890,8 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <extracomment>Status is 'Contactor check'</extracomment>
       <translation>Verificare contactor</translation>
     </message>
-    <message id="battery_bank_error_communication">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="96"/>
-      <source>Communication error</source>
-      <translation type="unfinished">Eroare comunicare</translation>
-    </message>
-    <message id="battery_state_of_health">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="182"/>
+    <message id="batteryalarms_state_of_health">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="66"/>
       <source>State of health</source>
       <translation>State of health</translation>
     </message>
@@ -2936,8 +2910,8 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Starter voltage</source>
       <translation>Tensiunea demarorului</translation>
     </message>
-    <message id="battery_bus_voltage">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="212"/>
+    <message id="battery_buss_voltage">
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="252"/>
       <source>Bus voltage</source>
       <translation>Tensiune Bus</translation>
     </message>
@@ -2945,6 +2919,21 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="220"/>
       <source>Top section voltage</source>
       <translation>Tensiune sectiune superioara</translation>
+    </message>
+    <message id="battery_bank_error_communication">
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="96"/>
+      <source>Communication error</source>
+      <translation type="unfinished">Eroare comunicare</translation>
+    </message>
+    <message id="battery_state_of_health">
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="182"/>
+      <source>State of health</source>
+      <translation type="unfinished">State of health</translation>
+    </message>
+    <message id="battery_bus_voltage">
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="212"/>
+      <source>Bus voltage</source>
+      <translation type="unfinished">Tensiune Bus</translation>
     </message>
     <message id="battery_bottom_section_voltage">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="228"/>
@@ -2960,11 +2949,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="244"/>
       <source>Consumed AmpHours</source>
       <translation>Consum amperi ora</translation>
-    </message>
-    <message id="battery_buss_voltage">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="252"/>
-      <source>Bus voltage</source>
-      <translation type="unfinished">Tensiune Bus</translation>
     </message>
     <message id="battery_time_to_go">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="260"/>
@@ -3041,15 +3025,20 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>High discharge current</source>
       <translation>Intensitate descarcare ridicata</translation>
     </message>
-    <message id="batteryalarms_low_soc">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="59"/>
+    <message id="evchargers_status_low_state_of_charge">
+      <location filename="../../data/EvChargers.qml" line="128"/>
       <source>Low SOC</source>
       <translation>SOC scazut</translation>
     </message>
-    <message id="batteryalarms_state_of_health">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="66"/>
-      <source>State of health</source>
-      <translation type="unfinished">State of health</translation>
+    <message id="batteryalarms_high_battery_voltage">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="24"/>
+      <source>High battery voltage</source>
+      <translation type="unfinished">Tensiune ridicata baterie</translation>
+    </message>
+    <message id="batteryalarms_low_soc">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="59"/>
+      <source>Low SOC</source>
+      <translation type="unfinished">SOC scazut</translation>
     </message>
     <message id="batteryalarms_low_starter_voltage">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="73"/>
@@ -3070,6 +3059,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="106"/>
       <source>Mid-point voltage</source>
       <translation>Tensiune punct-median</translation>
+    </message>
+    <message id="batteryalarms_fuse_blown">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="113"/>
+      <source>Fuse blown</source>
+      <translation type="unfinished">Siguranta arsa</translation>
     </message>
     <message id="batteryalarms_high_internal_temperature">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="120"/>
@@ -3303,8 +3297,8 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>48 Volt</source>
       <translation>48 Volt</translation>
     </message>
-    <message id="lynxionsystem_capacity">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="18"/>
+    <message id="devicelist_tanksetup_capacity">
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="19"/>
       <source>Capacity</source>
       <translation>Capacitate</translation>
     </message>
@@ -3388,6 +3382,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>No power on busbar</source>
       <translation>Fără alimentare pe bară</translation>
     </message>
+    <message id="lynxdistributor_connection_lost">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxDistributorList.qml" line="49"/>
+      <source>Connection lost</source>
+      <translation type="unfinished">Conexiune intrerupta</translation>
+    </message>
     <message id="lynxdistributor_count_fuses_blown" numerus="yes">
       <location filename="../../pages/settings/devicelist/battery/PageLynxDistributorList.qml" line="61"/>
       <source>%n fuse(s) blown</source>
@@ -3397,11 +3396,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
         <numerusform>%n siguranța (siguranțele) este (sunt) arsă(e)</numerusform>
         <numerusform>%n siguranța (siguranțele) este (sunt) arsă(e)</numerusform>
       </translation>
-    </message>
-    <message id="lynxdistributor_fuse_blown">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxDistributorList.qml" line="63"/>
-      <source>Fuse blown</source>
-      <translation type="unfinished">Siguranta arsa</translation>
     </message>
     <message id="lynxdistributor_no_information_available">
       <location filename="../../pages/settings/devicelist/battery/PageLynxDistributorList.qml" line="84"/>
@@ -3429,6 +3423,26 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Shutdowns due error</source>
       <translation>Opriri din cauza erorilor</translation>
     </message>
+    <message id="lynxiondiagnostics_last_error">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="29"/>
+      <source>Last error</source>
+      <translation type="unfinished">Ultima eroare</translation>
+    </message>
+    <message id="lynxiondiagnostics_2nd_last_error">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="31"/>
+      <source>2nd last error</source>
+      <translation type="unfinished">Penultima eroare</translation>
+    </message>
+    <message id="lynxiondiagnostics_3rd_last_error">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="33"/>
+      <source>3rd last error</source>
+      <translation type="unfinished">Ante-penultima eorare</translation>
+    </message>
+    <message id="lynxiondiagnostics_4th_last_error">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml" line="35"/>
+      <source>4th last error</source>
+      <translation type="unfinished">4 erori in urma</translation>
+    </message>
     <message id="lynxionio_system_switch">
       <location filename="../../pages/settings/devicelist/battery/PageLynxIonIo.qml" line="18"/>
       <source>System Switch</source>
@@ -3448,6 +3462,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../components/CommonWords.qml" line="54"/>
       <source>Batteries</source>
       <translation>Baterii</translation>
+    </message>
+    <message id="lynxionsystem_capacity">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="18"/>
+      <source>Capacity</source>
+      <translation type="unfinished">Capacitate</translation>
     </message>
     <message id="lynxionsystem_parallel">
       <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="30"/>
@@ -3560,15 +3579,10 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Consumed energy</source>
       <translation>Energie consumată</translation>
     </message>
-    <message id="digitalinput_enable_alarm">
-      <location filename="../../pages/settings/devicelist/PageDigitalInput.qml" line="48"/>
-      <source>Enable alarm</source>
-      <translation>Activeaza alarma</translation>
-    </message>
     <message id="devicelist_tankalarm_enable_alarm">
       <location filename="../../pages/settings/devicelist/tank/PageTankAlarm.qml" line="18"/>
       <source>Enable alarm</source>
-      <translation type="unfinished">Activeaza alarma</translation>
+      <translation>Activeaza alarma</translation>
     </message>
     <message id="devicelist_tankalarm_active_level">
       <location filename="../../pages/settings/devicelist/tank/PageTankAlarm.qml" line="24"/>
@@ -3600,15 +3614,10 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Sensor battery</source>
       <translation type="unfinished">Baterie senzor</translation>
     </message>
-    <message id="page_meteo_battery_voltage">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="99"/>
+    <message id="temperature_sensor_battery">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="72"/>
       <source>Sensor battery</source>
       <translation>Baterie senzor</translation>
-    </message>
-    <message id="devicelist_tanksetup_capacity">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="19"/>
-      <source>Capacity</source>
-      <translation type="unfinished">Capacitate</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_type">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="32"/>
@@ -3630,10 +3639,15 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>US (240 to 30 Ohm)</source>
       <translation>US (240 la 30 Ohmi)</translation>
     </message>
+    <message id="settings_tailscale_custom">
+      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="108"/>
+      <source>Custom</source>
+      <translation>Personalizat</translation>
+    </message>
     <message id="devicelist_tanksetup_custom">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="54"/>
       <source>Custom</source>
-      <translation>Personalizat</translation>
+      <translation type="unfinished">Personalizat</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_empty">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="60"/>
@@ -3733,6 +3747,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Switch position</source>
       <translation>Comutare pozitie</translation>
     </message>
+    <message id="ac-in-setup_single_phase">
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="142"/>
+      <source>Single phase</source>
+      <translation type="unfinished">Monofazat</translation>
+    </message>
     <message id="ac-in-setup_two_phase">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="144"/>
       <source>2-phase</source>
@@ -3742,6 +3761,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="146"/>
       <source>3-phase</source>
       <translation>Trei feze</translation>
+    </message>
+    <message id="ac-in-setup_devices">
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="161"/>
+      <source>Devices</source>
+      <translation type="unfinished">Dispozitiv</translation>
     </message>
     <message id="ac-in-genset_ac">
       <location filename="../../components/PageGensetModel.qml" line="194"/>
@@ -3796,24 +3820,24 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <translation>Totaluri AC</translation>
     </message>
     <message id="ac-in-modeldefault_energy_x">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="119"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="121"/>
       <source>Energy L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
       <translation>Energie L%1</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="153"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="155"/>
       <source>Phase Sequence</source>
       <translation>Ordine faze</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence_l3_first">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="159"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="161"/>
       <source>L1-L3-L2</source>
       <extracomment>Phase sequence L1-L3-L2</extracomment>
       <translation>L1-L3-L2</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence_ordered">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="162"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="164"/>
       <source>L1-L2-L3</source>
       <extracomment>Phase sequence L1-L2-L3</extracomment>
       <translation>L!-L2-L3</translation>
@@ -3872,10 +3896,20 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>DC</source>
       <translation>DC</translation>
     </message>
+    <message id="pulsecounter_setup_inverted">
+      <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="21"/>
+      <source>Inverted</source>
+      <translation>Inversat</translation>
+    </message>
+    <message id="digitalinput_enable_alarm">
+      <location filename="../../pages/settings/devicelist/PageDigitalInput.qml" line="48"/>
+      <source>Enable alarm</source>
+      <translation type="unfinished">Activeaza alarma</translation>
+    </message>
     <message id="digitalinput_inverted">
       <location filename="../../pages/settings/devicelist/PageDigitalInput.qml" line="54"/>
       <source>Inverted</source>
-      <translation>Inversat</translation>
+      <translation type="unfinished">Inversat</translation>
     </message>
     <message id="digitalinput_invert_alarm_logic">
       <location filename="../../pages/settings/devicelist/PageDigitalInput.qml" line="60"/>
@@ -3912,6 +3946,11 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Wind speed</source>
       <translation>Viteza vantului</translation>
     </message>
+    <message id="page_meteo_battery_voltage">
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="99"/>
+      <source>Sensor battery</source>
+      <translation type="unfinished">Baterie senzor</translation>
+    </message>
     <message id="meteo_sensor_battery_status_low">
       <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="120"/>
       <source>Low</source>
@@ -3937,11 +3976,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Aggregate</source>
       <translation>Agregat</translation>
     </message>
-    <message id="pulsecounter_setup_inverted">
-      <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="21"/>
-      <source>Inverted</source>
-      <translation type="unfinished">Inversat</translation>
-    </message>
     <message id="pulsecounter_setup_multiplier">
       <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="27"/>
       <source>Multiplier</source>
@@ -3951,6 +3985,16 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="35"/>
       <source>Reset counter</source>
       <translation>Reseteaza contor</translation>
+    </message>
+    <message id="temperature_short_circuited">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="32"/>
+      <source>Short circuited</source>
+      <translation type="unfinished">Scurtcircuitat</translation>
+    </message>
+    <message id="temperature_reverse_polarity">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="35"/>
+      <source>Reverse polarity</source>
+      <translation type="unfinished">Polaritate inversata</translation>
     </message>
     <message id="temperature_sensor_battery_low">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="38"/>
@@ -3966,11 +4010,6 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="62"/>
       <source>Pressure</source>
       <translation>Presiune</translation>
-    </message>
-    <message id="temperature_sensor_battery">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="72"/>
-      <source>Sensor battery</source>
-      <translation type="unfinished">Baterie senzor</translation>
     </message>
     <message id="temperature_sensor_battery_status_low">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="93"/>
@@ -3992,13 +4031,13 @@ Utilizați dacă nu este interzis de furnizorul de utilități.</translation>
       <source>Sensor voltage</source>
       <translation>Tensiune senzor</translation>
     </message>
-    <message id="charger_total_pv_power">
-      <location filename="../../pages/solar/SolarDevicePage.qml" line="50"/>
+    <message id="settings_multirs_total_pv_power">
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="209"/>
       <source>Total PV Power</source>
       <translation>Putere totala PV</translation>
     </message>
     <message id="common_words_product_page">
-      <location filename="../../components/CommonWords.qml" line="417"/>
+      <location filename="../../components/CommonWords.qml" line="420"/>
       <source>Product page</source>
       <translation>Pagină produs</translation>
     </message>
@@ -4098,8 +4137,8 @@ Doriți să continuați?</translation>
       <source>DC Current</source>
       <translation>Intensitate DC</translation>
     </message>
-    <message id="settings_advanced">
-      <location filename="../../pages/SettingsPage.qml" line="69"/>
+    <message id="settings_tailscale_advanced">
+      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="277"/>
       <source>Advanced</source>
       <translation>Avansat</translation>
     </message>
@@ -4149,10 +4188,15 @@ Doriți să continuați?</translation>
       <source>Interrupting...</source>
       <translation>Se intrerupe...</translation>
     </message>
+    <message id="settings_tailscale_starting">
+      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="51"/>
+      <source>Starting...</source>
+      <translation>Porneste...</translation>
+    </message>
     <message id="vebus_device_starting">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="117"/>
       <source>Starting...</source>
-      <translation>Porneste...</translation>
+      <translation type="unfinished">Porneste...</translation>
     </message>
     <message id="vebus_device_press_to_interrupt">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="120"/>
@@ -4254,13 +4298,13 @@ Doriți să continuați?</translation>
       <source>VE.Bus Error 8 / 11 report</source>
       <translation>Raport eroare VE.Bus 8 / 11</translation>
     </message>
-    <message id="vebus_device_alarm_only">
-      <location filename="../../pages/vebusdevice/PageVeBusAlarmSettings.qml" line="18"/>
+    <message id="alarm_level_alarm_only">
+      <location filename="../../components/listitems/ListAlarmLevelRadioButtonGroup.qml" line="13"/>
       <source>Alarm only</source>
       <translation>Doar alarma</translation>
     </message>
-    <message id="vebus_device_alarms_and_warnings">
-      <location filename="../../pages/vebusdevice/PageVeBusAlarmSettings.qml" line="20"/>
+    <message id="alarm_level_alarms_and_warnings">
+      <location filename="../../components/listitems/ListAlarmLevelRadioButtonGroup.qml" line="15"/>
       <source>Alarms &amp; warnings</source>
       <translation>Alarma si avertizari</translation>
     </message>
@@ -4411,10 +4455,9 @@ Doriți să continuați?</translation>
       <source>Voltage sense error</source>
       <translation>Eroare detectare tensiune</translation>
     </message>
-    <message id="common_words_alarm_setting_overload">
-      <location filename="../../components/CommonWords.qml" line="58"/>
+    <message id="rssystemalarms_overload">
+      <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="48"/>
       <source>Overload</source>
-      <extracomment>Alarm configuration when 'overload' state is triggered</extracomment>
       <translation>Supraincarcat</translation>
     </message>
     <message id="common_words_alarm_setting_dc_ripple">
@@ -4437,11 +4480,6 @@ Doriți să continuați?</translation>
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="27"/>
       <source>Phase rotation</source>
       <translation>Rotirea fazelor</translation>
-    </message>
-    <message id="rssystemalarms_overload">
-      <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="48"/>
-      <source>Overload</source>
-      <translation type="unfinished">Supraincarcat</translation>
     </message>
     <message id="vebus_device_vebus_version">
       <location filename="../../pages/vebusdevice/VeBusDeviceInfoModel.qml" line="11"/>
@@ -4467,6 +4505,12 @@ Doriți să continuați?</translation>
       <location filename="../../pages/vebusdevice/VeBusDeviceInfoModel.qml" line="19"/>
       <source>VE.Bus BMS version</source>
       <translation>Versiune BMS VE.Bus</translation>
+    </message>
+    <message id="ess_card_minimum_soc">
+      <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="15"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="51"/>
+      <source>Minimum SOC</source>
+      <translation type="unfinished">SoC minim</translation>
     </message>
     <message id="ess_unless_grid_fails">
       <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="32"/>
@@ -4533,6 +4577,12 @@ Doriți să continuați?</translation>
       <extracomment>Voltage alarm is at "Alarm" level</extracomment>
       <translation type="unfinished">Alarma</translation>
     </message>
+    <message id="common_words_alarm_setting_overload">
+      <location filename="../../components/CommonWords.qml" line="58"/>
+      <source>Overload</source>
+      <extracomment>Alarm configuration when 'overload' state is triggered</extracomment>
+      <translation type="unfinished">Supraincarcat</translation>
+    </message>
     <message id="common_words_alarm_status">
       <location filename="../../components/CommonWords.qml" line="68"/>
       <source>Alarm status</source>
@@ -4553,18 +4603,13 @@ Doriți să continuați?</translation>
       <source>Allow to discharge</source>
       <translation>Permite descarcarea</translation>
     </message>
-    <message id="common_words_auto">
-      <location filename="../../components/CommonWords.qml" line="80"/>
-      <source>Auto</source>
-      <translation type="unfinished">Auto</translation>
-    </message>
     <message id="common_words_automatic_scanning">
       <location filename="../../components/CommonWords.qml" line="83"/>
       <source>Automatic scanning</source>
       <translation>Scanare automata</translation>
     </message>
-    <message id="common_words_battery">
-      <location filename="../../components/CommonWords.qml" line="89"/>
+    <message id="gauges_battery">
+      <location filename="../../components/Gauges.js" line="17"/>
       <source>Battery</source>
       <translation>Baterie</translation>
     </message>
@@ -4595,14 +4640,14 @@ Doriți să continuați?</translation>
       <extracomment>Action to clear an error state</extracomment>
       <translation>Sterge eraorea</translation>
     </message>
-    <message id="common_words_closed_status">
-      <location filename="../../components/CommonWords.qml" line="133"/>
+    <message id="digitalinputs_state_closed">
+      <location filename="../../src/enums.cpp" line="257"/>
       <source>Closed</source>
-      <extracomment>Status is 'closed'</extracomment>
+      <extracomment>Digital input state</extracomment>
       <translation>Inchis</translation>
     </message>
-    <message id="common_words_connected">
-      <location filename="../../components/CommonWords.qml" line="136"/>
+    <message id="evchargers_status_connected">
+      <location filename="../../data/EvChargers.qml" line="111"/>
       <source>Connected</source>
       <translation>Conectare</translation>
     </message>
@@ -4634,23 +4679,13 @@ Doriți să continuați?</translation>
       <extracomment>Title for device information</extracomment>
       <translation>Dispozitiv</translation>
     </message>
-    <message id="common_words_devices">
-      <location filename="../../components/CommonWords.qml" line="163"/>
-      <source>Devices</source>
-      <translation type="unfinished">Dispozitiv</translation>
-    </message>
-    <message id="common_words_disabled">
-      <location filename="../../components/CommonWords.qml" line="166"/>
-      <source>Disabled</source>
-      <translation type="unfinished">Dezactivat</translation>
-    </message>
     <message id="common_words_discharging">
       <location filename="../../components/CommonWords.qml" line="169"/>
       <source>Discharging</source>
       <translation>descarcare</translation>
     </message>
-    <message id="common_words_disconnected">
-      <location filename="../../components/CommonWords.qml" line="172"/>
+    <message id="wifimodel_disconnected">
+      <location filename="../../components/WifiModel.qml" line="28"/>
       <source>Disconnected</source>
       <translation>Deconectat</translation>
     </message>
@@ -4670,9 +4705,10 @@ Doriți să continuați?</translation>
       <extracomment>Amount of charged energy</extracomment>
       <translation>Energie</translation>
     </message>
-    <message id="common_words_error">
-      <location filename="../../components/CommonWords.qml" line="188"/>
+    <message id="pvinverter_statusCode_error">
+      <location filename="../../src/enums.cpp" line="307"/>
       <source>Error</source>
+      <extracomment>PV inverter status code</extracomment>
       <translation>Eroare</translation>
     </message>
     <message id="common_words_error_colon">
@@ -4690,25 +4726,15 @@ Doriți să continuați?</translation>
       <source>Firmware version</source>
       <translation>Versiune Firmware</translation>
     </message>
-    <message id="common_words_generator">
-      <location filename="../../components/CommonWords.qml" line="214"/>
+    <message id="digitalinputs_type_generator">
+      <location filename="../../src/enums.cpp" line="214"/>
       <source>Generator</source>
       <translation>Generator</translation>
-    </message>
-    <message id="common_words_grid">
-      <location filename="../../components/CommonWords.qml" line="217"/>
-      <source>Grid</source>
-      <translation type="unfinished">Retea</translation>
     </message>
     <message id="common_words_high_battery_temperature">
       <location filename="../../components/CommonWords.qml" line="223"/>
       <source>High battery temperature</source>
       <translation>Temperatura ridicată baterie</translation>
-    </message>
-    <message id="common_words_high_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="226"/>
-      <source>High battery voltage</source>
-      <translation type="unfinished">Tensiune ridicata baterie</translation>
     </message>
     <message id="common_words_high_level_alarm">
       <location filename="../../components/CommonWords.qml" line="230"/>
@@ -4788,11 +4814,6 @@ Doriți să continuați?</translation>
       <source>Low voltage alarms</source>
       <translation>Alarme tensiune scazuta</translation>
     </message>
-    <message id="common_words_manual">
-      <location filename="../../components/CommonWords.qml" line="296"/>
-      <source>Manual</source>
-      <translation type="unfinished">Manual</translation>
-    </message>
     <message id="common_words_manufacturer">
       <location filename="../../components/CommonWords.qml" line="308"/>
       <source>Manufacturer</source>
@@ -4828,11 +4849,10 @@ Doriți să continuați?</translation>
       <source>Model name</source>
       <translation>Nume model</translation>
     </message>
-    <message id="common_words_no">
-      <location filename="../../components/CommonWords.qml" line="341"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="433"/>
+    <message id="digitalinputs_state_no">
+      <location filename="../../src/enums.cpp" line="245"/>
       <source>No</source>
+      <extracomment>Digital input state</extracomment>
       <translation>Nu</translation>
     </message>
     <message id="common_words_no_error">
@@ -4840,13 +4860,8 @@ Doriți să continuați?</translation>
       <source>No error</source>
       <translation>Nicio eroare</translation>
     </message>
-    <message id="common_words_none_option">
-      <location filename="../../components/CommonWords.qml" line="353"/>
-      <source>None</source>
-      <translation type="unfinished">Niciuna</translation>
-    </message>
-    <message id="common_words_not_available">
-      <location filename="../../components/CommonWords.qml" line="360"/>
+    <message id="acInputs_not_available">
+      <location filename="../../data/AcInputs.qml" line="109"/>
       <source>Not available</source>
       <translation>Indisponibil</translation>
     </message>
@@ -4855,51 +4870,20 @@ Doriți să continuați?</translation>
       <source>Not connected</source>
       <translation>Nedetectat</translation>
     </message>
-    <message id="common_words_off">
-      <location filename="../../components/CommonWords.qml" line="366"/>
-      <source>Off</source>
-      <translation type="unfinished">Oprit</translation>
-    </message>
     <message id="common_words_offline">
       <location filename="../../components/CommonWords.qml" line="369"/>
       <source>Offline</source>
       <translation>Deconectat</translation>
     </message>
-    <message id="common_words_ok">
-      <location filename="../../components/CommonWords.qml" line="372"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="41"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="45"/>
+    <message id="listitems_alarm_level_ok">
+      <location filename="../../components/listitems/core/ListAlarm.qml" line="17"/>
       <source>OK</source>
+      <extracomment>Voltage alarm is at "OK" level</extracomment>
       <translation>In regula</translation>
     </message>
-    <message id="common_words_last_error">
-      <location filename="../../components/CommonWords.qml" line="606"/>
-      <source>Last error</source>
-      <extracomment>Details of last error</extracomment>
-      <translation type="unfinished">Ultima eroare</translation>
-    </message>
-    <message id="common_words_2nd_last_error">
-      <location filename="../../components/CommonWords.qml" line="609"/>
-      <source>2nd last error</source>
-      <extracomment>Details of 2nd last error</extracomment>
-      <translation type="unfinished">Penultima eroare</translation>
-    </message>
-    <message id="common_words_3rd_last_error">
-      <location filename="../../components/CommonWords.qml" line="612"/>
-      <source>3rd last error</source>
-      <extracomment>Details of 3rd last error</extracomment>
-      <translation type="unfinished">Ante-penultima eorare</translation>
-    </message>
-    <message id="common_words_4th_last_error">
-      <location filename="../../components/CommonWords.qml" line="615"/>
-      <source>4th last error</source>
-      <extracomment>Details of 4th last error</extracomment>
-      <translation type="unfinished">4 erori in urma</translation>
-    </message>
-    <message id="digitalinputs_state_on">
-      <location filename="../../src/enums.cpp" line="241"/>
+    <message id="switchable_output_on">
+      <location filename="../../src/enums.cpp" line="443"/>
       <source>On</source>
-      <extracomment>Digital input state</extracomment>
       <translation>Pornit</translation>
     </message>
     <message id="common_words_online">
@@ -4907,10 +4891,10 @@ Doriți să continuați?</translation>
       <source>Online</source>
       <translation>Conectat</translation>
     </message>
-    <message id="common_words_open_status">
-      <location filename="../../components/CommonWords.qml" line="382"/>
+    <message id="digitalinputs_state_open">
+      <location filename="../../src/enums.cpp" line="253"/>
       <source>Open</source>
-      <extracomment>Status is 'open'</extracomment>
+      <extracomment>Digital input open</extracomment>
       <translation>Deschis</translation>
     </message>
     <message id="common_words_password">
@@ -4924,220 +4908,214 @@ Doriți să continuați?</translation>
       <translation>Faza</translation>
     </message>
     <message id="common_words_press_to_clear">
-      <location filename="../../components/CommonWords.qml" line="408"/>
+      <location filename="../../components/CommonWords.qml" line="411"/>
       <source>Press to clear</source>
       <translation>Apasa pentru a sterge</translation>
     </message>
     <message id="common_words_press_to_reset">
-      <location filename="../../components/CommonWords.qml" line="411"/>
+      <location filename="../../components/CommonWords.qml" line="414"/>
       <source>Press to reset</source>
       <translation>Apasa pentru a reseta</translation>
     </message>
     <message id="common_words_press_to_scan">
-      <location filename="../../components/CommonWords.qml" line="414"/>
+      <location filename="../../components/CommonWords.qml" line="417"/>
       <source>Press to scan</source>
       <translation>Apasa pentru a scana</translation>
     </message>
     <message id="common_words_pv_inverter">
-      <location filename="../../components/CommonWords.qml" line="420"/>
+      <location filename="../../components/CommonWords.qml" line="423"/>
       <source>PV Inverter</source>
       <translation>Invertor PV</translation>
     </message>
     <message id="common_words_pv_power">
-      <location filename="../../components/CommonWords.qml" line="424"/>
+      <location filename="../../components/CommonWords.qml" line="427"/>
       <source>PV Power</source>
       <extracomment>Photovoltaic power (for a solar charger or tracker)</extracomment>
       <translation>Putere PV</translation>
     </message>
     <message id="common_words_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="427"/>
+      <location filename="../../components/CommonWords.qml" line="430"/>
       <source>Quiet hours</source>
       <translation>Ore de liniste</translation>
     </message>
     <message id="common_words_relay">
-      <location filename="../../components/CommonWords.qml" line="431"/>
+      <location filename="../../components/CommonWords.qml" line="434"/>
       <source>Relay</source>
       <extracomment>Relay switch</extracomment>
       <translation>Releu</translation>
     </message>
     <message id="common_words_reboot">
-      <location filename="../../components/CommonWords.qml" line="437"/>
+      <location filename="../../components/CommonWords.qml" line="440"/>
       <source>Reboot</source>
       <translation>Repornire</translation>
     </message>
     <message id="common_words_remove">
-      <location filename="../../components/CommonWords.qml" line="440"/>
+      <location filename="../../components/CommonWords.qml" line="443"/>
       <source>Remove</source>
       <translation>Elimina</translation>
     </message>
-    <message id="pvinverter_statusCode_running">
-      <location filename="../../src/enums.cpp" line="295"/>
+    <message id="switch_state_running">
+      <location filename="../../src/enums.cpp" line="358"/>
       <source>Running</source>
-      <extracomment>PV inverter status code</extracomment>
       <translation>Functioneaza</translation>
     </message>
     <message id="common_words_scanning">
-      <location filename="../../components/CommonWords.qml" line="447"/>
+      <location filename="../../components/CommonWords.qml" line="450"/>
       <source>Scanning %1%</source>
       <translation>Scanează %1 %</translation>
     </message>
     <message id="common_words_serial_number">
-      <location filename="../../components/CommonWords.qml" line="450"/>
+      <location filename="../../components/CommonWords.qml" line="453"/>
       <source>Serial number</source>
       <translation>Numar serial</translation>
     </message>
-    <message id="common_words_settings">
-      <location filename="../../components/CommonWords.qml" line="453"/>
+    <message id="nav_settings">
+      <location filename="../../pages/SettingsPage.qml" line="18"/>
       <source>Settings</source>
       <translation>Configurari</translation>
     </message>
     <message id="common_words_setup">
-      <location filename="../../components/CommonWords.qml" line="456"/>
+      <location filename="../../components/CommonWords.qml" line="459"/>
       <source>Setup</source>
       <translation>Configurare</translation>
     </message>
     <message id="common_words_signal_strength">
-      <location filename="../../components/CommonWords.qml" line="459"/>
+      <location filename="../../components/CommonWords.qml" line="462"/>
       <source>Signal strength</source>
       <translation>Putere semnal</translation>
     </message>
-    <message id="common_words_standby">
-      <location filename="../../components/CommonWords.qml" line="470"/>
+    <message id="pvinverter_statusCode_standby">
+      <location filename="../../src/enums.cpp" line="299"/>
       <source>Standby</source>
+      <extracomment>PV inverter status code</extracomment>
       <translation>Asteptare</translation>
     </message>
     <message id="common_words_start_after_condition_reached_for">
-      <location filename="../../components/CommonWords.qml" line="473"/>
+      <location filename="../../components/CommonWords.qml" line="476"/>
       <source>Start after the condition is reached for</source>
       <translation>Porneste cand conditia s-a indeplinit de</translation>
     </message>
     <message id="common_words_start_time">
-      <location filename="../../components/CommonWords.qml" line="476"/>
+      <location filename="../../components/CommonWords.qml" line="479"/>
       <source>Start time</source>
       <translation>Ora de inceput</translation>
     </message>
     <message id="common_words_start_value_during_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="479"/>
+      <location filename="../../components/CommonWords.qml" line="482"/>
       <source>Start value during quiet hours</source>
       <translation>Valoarea de pornire in timpul orelor de liniste</translation>
     </message>
     <message id="common_words_start_when_warning_is_active_for">
-      <location filename="../../components/CommonWords.qml" line="482"/>
+      <location filename="../../components/CommonWords.qml" line="485"/>
       <source>Start when warning is active for</source>
       <translation>Porneste cand avertizarea este activa de</translation>
     </message>
-    <message id="common_words_state">
-      <location filename="../../components/CommonWords.qml" line="485"/>
-      <source>State</source>
-      <translation type="unfinished">Stare</translation>
-    </message>
     <message id="common_words_state_of_charge">
-      <location filename="../../components/CommonWords.qml" line="488"/>
+      <location filename="../../components/CommonWords.qml" line="491"/>
       <source>State of charge</source>
       <translation>Nivel de incarcare</translation>
     </message>
     <message id="common_words_status">
-      <location filename="../../components/CommonWords.qml" line="491"/>
+      <location filename="../../components/CommonWords.qml" line="494"/>
       <source>Status</source>
       <translation>Stare</translation>
     </message>
-    <message id="common_words_startup_status">
-      <location filename="../../components/CommonWords.qml" line="495"/>
+    <message id="pvinverter_statusCode_startup">
+      <location filename="../../src/enums.cpp" line="291"/>
       <source>Startup (%1)</source>
-      <extracomment>Status = "start up". %1 = the startup status number</extracomment>
+      <extracomment>PV inverter status code. %1 = the startup status number</extracomment>
       <translation>Pornire (%1)</translation>
     </message>
     <message id="common_words_stop_value_during_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="498"/>
+      <location filename="../../components/CommonWords.qml" line="501"/>
       <source>Stop value during quiet hours</source>
       <translation>Valoare de oprire in timpul orelor de liniste</translation>
     </message>
     <message id="common_words_stop_after_the_condition_is_reached_for">
-      <location filename="../../components/CommonWords.qml" line="501"/>
+      <location filename="../../components/CommonWords.qml" line="504"/>
       <source>Stop after the condition is reached for</source>
       <translation>Opreste cand conditia s-a indeplinit de</translation>
     </message>
-    <message id="common_words_stopped">
-      <location filename="../../components/CommonWords.qml" line="504"/>
+    <message id="digitalinputs_state_stopped">
+      <location filename="../../src/enums.cpp" line="273"/>
       <source>Stopped</source>
+      <extracomment>Digital input state</extracomment>
       <translation>Oprit</translation>
     </message>
     <message id="common_words_temperature">
-      <location filename="../../components/CommonWords.qml" line="511"/>
+      <location filename="../../components/CommonWords.qml" line="514"/>
       <source>Temperature</source>
       <translation>Temperatura</translation>
     </message>
     <message id="common_words_temperature_sensor">
-      <location filename="../../components/CommonWords.qml" line="514"/>
+      <location filename="../../components/CommonWords.qml" line="517"/>
       <source>Temperature sensor</source>
       <translation>Senzor temperatura</translation>
     </message>
     <message id="common_words_today">
-      <location filename="../../components/CommonWords.qml" line="517"/>
+      <location filename="../../components/CommonWords.qml" line="520"/>
       <source>Today</source>
       <translation>Azi</translation>
     </message>
     <message id="common_words_total">
-      <location filename="../../components/CommonWords.qml" line="520"/>
+      <location filename="../../components/CommonWords.qml" line="523"/>
       <source>Total</source>
       <translation>Total</translation>
     </message>
     <message id="common_words_tracker">
-      <location filename="../../components/CommonWords.qml" line="524"/>
+      <location filename="../../components/CommonWords.qml" line="530"/>
       <source>Tracker</source>
       <extracomment>Solar tracker</extracomment>
       <translation>Monitor</translation>
     </message>
-    <message id="common_words_type">
-      <location filename="../../components/CommonWords.qml" line="527"/>
+    <message id="page_switchable_output_type">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="55"/>
       <source>Type</source>
       <translation>Tip</translation>
     </message>
     <message id="common_words_unique_id_number">
-      <location filename="../../components/CommonWords.qml" line="530"/>
+      <location filename="../../components/CommonWords.qml" line="536"/>
       <source>Unique Identity Number</source>
       <translation>Numar Unic de Identificare</translation>
     </message>
-    <message id="temperature_type_unknown">
-      <location filename="../../data/EnvironmentInputs.qml" line="66"/>
+    <message id="settings_radio_button_group_unknown">
+      <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
       <source>Unknown</source>
       <translation>Necunoscut</translation>
     </message>
     <message id="common_words_vebus_error">
-      <location filename="../../components/CommonWords.qml" line="537"/>
+      <location filename="../../components/CommonWords.qml" line="543"/>
       <source>VE.Bus Error</source>
       <translation>Eroare VE.Bus</translation>
     </message>
     <message id="common_words_voltage">
-      <location filename="../../components/CommonWords.qml" line="540"/>
+      <location filename="../../components/CommonWords.qml" line="546"/>
       <source>Voltage</source>
       <translation>Tensiune</translation>
     </message>
     <message id="common_words_vrm_instance">
-      <location filename="../../components/CommonWords.qml" line="543"/>
+      <location filename="../../components/CommonWords.qml" line="549"/>
       <source>VRM instance</source>
       <translation>Instanta VRM</translation>
     </message>
     <message id="common_words_when_warning_is_cleared_stop_after">
-      <location filename="../../components/CommonWords.qml" line="546"/>
+      <location filename="../../components/CommonWords.qml" line="552"/>
       <source>When warning is cleared stop after</source>
       <translation>Cand avertizarea este indepartata opreste dupa</translation>
     </message>
-    <message id="common_words_yes">
-      <location filename="../../components/CommonWords.qml" line="549"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="159"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="431"/>
+    <message id="digitalinputs_state_yes">
+      <location filename="../../src/enums.cpp" line="249"/>
       <source>Yes</source>
+      <extracomment>Digital input state</extracomment>
       <translation>Da</translation>
     </message>
     <message id="common_words_yesterday">
-      <location filename="../../components/CommonWords.qml" line="552"/>
+      <location filename="../../components/CommonWords.qml" line="558"/>
       <source>Yesterday</source>
       <translation>Ieri</translation>
     </message>
     <message id="common_words_yield_kwh">
-      <location filename="../../components/CommonWords.qml" line="556"/>
+      <location filename="../../components/CommonWords.qml" line="562"/>
       <source>Yield</source>
       <extracomment>Solar charger yield, in kWh (kilowatt hours)</extracomment>
       <translation>Productie</translation>
@@ -5194,7 +5172,7 @@ Doriți să continuați?</translation>
       <translation>Anuleaza</translation>
     </message>
     <message id="settings_vrm_device_instances_close">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="313"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="312"/>
       <source>Close</source>
       <translation>Închidere</translation>
     </message>
@@ -5204,69 +5182,68 @@ Doriți să continuați?</translation>
       <translation>Setați ora </translation>
     </message>
     <message id="deviceinstanceswap_already_assigned">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="87"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="86"/>
       <source>Already in use</source>
       <translation>În uz</translation>
     </message>
     <message id="deviceinstanceswap_swap_error">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="90"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="89"/>
       <source>Swap error</source>
       <translation>Eroare schimb</translation>
     </message>
     <message id="deviceinstanceswap_swap_completed">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="92"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="91"/>
       <source>Swap complete</source>
       <translation>Schimb complet</translation>
     </message>
     <message id="deviceinstanceswap_busy">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="98"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="97"/>
       <source>Swapping device instances...</source>
       <translation>Schimbarea instanțelor dispozitivului...</translation>
     </message>
     <message id="deviceinstanceswap_already_assigned_description_with_name">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="103"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="102"/>
       <source>Device instance %1 is already used by '%3'. Swap device instances and assign that to %2?</source>
       <extracomment>%1 and %2 are unique device instance numbers, %3 = another device's name</extracomment>
       <translation>Instanța dispozitivului %1 este deja utilizată de ‚’%3’. Schimbați instanțele de dispozitiv și atribuiți-l la %2?</translation>
     </message>
     <message id="deviceinstanceswap_already_assigned_description">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="110"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="109"/>
       <source>Device instance %1 is already used by another device of the same type. Swap device instances and assign that to %2?</source>
       <extracomment>%1 and %2 are unique device instance numbers</extracomment>
       <translation>Instanța dispozitivului %1 este deja utilizată de un alt dispozitiv de același tip. Schimbați instanțele de dispozitiv și atribuiți-l la %2?</translation>
     </message>
     <message id="deviceinstanceswap_timed_out">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="118"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="117"/>
       <source>Cannot swap device instances: operation timed out.</source>
       <translation>Nu se pot schimba instanțele de dispozitiv: operațiunea a expirat.</translation>
     </message>
     <message id="deviceinstanceswap_active_on_reboot">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="120"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="119"/>
       <source>New device instances will be active on reboot.</source>
       <translation>Noile instanțe de dispozitiv vor fi active la repornire.</translation>
     </message>
     <message id="deviceinstanceswap_swap">
-      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="127"/>
+      <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="126"/>
       <source>Swap</source>
       <extracomment>Confirm that the two devices' instance number should be swapped.</extracomment>
       <translation>Schimbare</translation>
     </message>
+    <message id="pagesettingssupportstate_firmware_online_check_failed">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="156"/>
+      <source>Error while checking for firmware updates</source>
+      <translation>Eroare în timpul verificării actualizărilor de firmware</translation>
+    </message>
     <message id="settings_firmware_error_during_checking_for_updates">
       <location filename="../../components/FirmwareUpdate.qml" line="55"/>
       <source>Error while checking for firmware updates</source>
-      <translation>Eroare în timpul verificării actualizărilor de firmware</translation>
+      <translation type="unfinished">Eroare în timpul verificării actualizărilor de firmware</translation>
     </message>
     <message id="settings_firmware_downloading_and_installing">
       <location filename="../../components/FirmwareUpdate.qml" line="63"/>
       <source>Downloading and installing firmware %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>Descărcare și instalare firmware %1...</translation>
-    </message>
-    <message id="settings_firmware_installing">
-      <location filename="../../components/FirmwareUpdate.qml" line="67"/>
-      <source>Installing %1...</source>
-      <extracomment>%1 = firmware version</extracomment>
-      <translation type="unfinished">Instalare %1...</translation>
     </message>
     <message id="settings_firmware_installing_firmware">
       <location filename="../../components/FirmwareUpdate.qml" line="70"/>
@@ -5288,68 +5265,63 @@ Doriți să continuați?</translation>
       <source>No firmware found</source>
       <translation>Nu s-a gasit niciun firmware</translation>
     </message>
-    <message id="gauges_battery">
-      <location filename="../../components/Gauges.js" line="19"/>
-      <source>Battery</source>
-      <translation type="unfinished">Baterie</translation>
-    </message>
     <message id="gauges_fuel">
-      <location filename="../../components/Gauges.js" line="27"/>
+      <location filename="../../components/Gauges.js" line="25"/>
       <source>Fuel</source>
       <translation>Combustibil</translation>
     </message>
     <message id="gauges_fresh_water">
-      <location filename="../../components/Gauges.js" line="35"/>
+      <location filename="../../components/Gauges.js" line="33"/>
       <source>Fresh water</source>
       <translation>Apa dulce</translation>
     </message>
     <message id="gauges_waste_water">
-      <location filename="../../components/Gauges.js" line="43"/>
+      <location filename="../../components/Gauges.js" line="41"/>
       <source>Waste water</source>
       <translation>Apa reziduala</translation>
     </message>
     <message id="gauges_live_well">
-      <location filename="../../components/Gauges.js" line="51"/>
+      <location filename="../../components/Gauges.js" line="49"/>
       <source>Live well</source>
       <translation>Live well</translation>
     </message>
     <message id="gauges_oil">
-      <location filename="../../components/Gauges.js" line="59"/>
+      <location filename="../../components/Gauges.js" line="57"/>
       <source>Oil</source>
       <translation>Ulei</translation>
     </message>
     <message id="gauges_black_water">
-      <location filename="../../components/Gauges.js" line="67"/>
+      <location filename="../../components/Gauges.js" line="65"/>
       <source>Black water</source>
       <translation>APA REZIDUALA</translation>
     </message>
     <message id="gauges_gasoline">
-      <location filename="../../components/Gauges.js" line="75"/>
+      <location filename="../../components/Gauges.js" line="73"/>
       <source>Gasoline</source>
       <translation>Benzină</translation>
     </message>
     <message id="gauges_diesel">
-      <location filename="../../components/Gauges.js" line="83"/>
+      <location filename="../../components/Gauges.js" line="81"/>
       <source>Diesel</source>
       <translation>Motorină</translation>
     </message>
     <message id="gauges_lpg">
-      <location filename="../../components/Gauges.js" line="91"/>
+      <location filename="../../components/Gauges.js" line="89"/>
       <source>LPG</source>
       <translation>GPL</translation>
     </message>
     <message id="gauges_lng">
-      <location filename="../../components/Gauges.js" line="99"/>
+      <location filename="../../components/Gauges.js" line="97"/>
       <source>LNG</source>
       <translation>GNL</translation>
     </message>
     <message id="gauges_hydraulic_oil">
-      <location filename="../../components/Gauges.js" line="107"/>
+      <location filename="../../components/Gauges.js" line="105"/>
       <source>Hydraulic oil</source>
       <translation>Ulei hidraulic</translation>
     </message>
     <message id="gauges_raw_water">
-      <location filename="../../components/Gauges.js" line="115"/>
+      <location filename="../../components/Gauges.js" line="113"/>
       <source>Raw water</source>
       <translation>Apă crudă</translation>
     </message>
@@ -5363,24 +5335,23 @@ Doriți să continuați?</translation>
       <source>Incorrect password</source>
       <translation>Parola incorecta</translation>
     </message>
-    <message id="common_words_brief_page">
-      <location filename="../../components/CommonWords.qml" line="115"/>
+    <message id="welcome_brief_title">
+      <location filename="../../pages/welcome/WelcomeView.qml" line="81"/>
       <source>Brief</source>
-      <extracomment>The 'Brief' page</extracomment>
       <translation>Pe scurt</translation>
     </message>
-    <message id="nav_overview">
-      <location filename="../../pages/OverviewPage.qml" line="432"/>
+    <message id="welcome_overview_title">
+      <location filename="../../pages/welcome/WelcomeView.qml" line="90"/>
       <source>Overview</source>
       <translation>Sitem</translation>
     </message>
     <message id="nav_levels">
-      <location filename="../../pages/LevelsPage.qml" line="20"/>
+      <location filename="../../pages/LevelsPage.qml" line="19"/>
       <source>Levels</source>
       <translation>Niveluri</translation>
     </message>
     <message id="nav_notifications">
-      <location filename="../../pages/NotificationsPage.qml" line="14"/>
+      <location filename="../../pages/NotificationsPage.qml" line="13"/>
       <source>Notifications</source>
       <translation>Notificari</translation>
     </message>
@@ -5492,8 +5463,8 @@ Doriți să continuați?</translation>
       <source>PV</source>
       <translation type="unfinished">PV</translation>
     </message>
-    <message id="inverter_pv">
-      <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="56"/>
+    <message id="settings_multirs_pv">
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="190"/>
       <source>PV</source>
       <translation>PV</translation>
     </message>
@@ -5502,8 +5473,8 @@ Doriți să continuați?</translation>
       <source>PV &amp; Battery</source>
       <translation>Fotovoltaic și baterie</translation>
     </message>
-    <message id="pagesettingssupportstate_firmware_checking">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="153"/>
+    <message id="settings_firmware_checking">
+      <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="16"/>
       <source>Checking...</source>
       <translation>Se verifica...</translation>
     </message>
@@ -5511,6 +5482,12 @@ Doriți să continuați?</translation>
       <location filename="../../components/listitems/ListAlarmState.qml" line="11"/>
       <source>Alarm state</source>
       <translation>Stare alarma</translation>
+    </message>
+    <message id="devicelist_battery_alarm_state">
+      <location filename="../../components/listitems/ListAlarmState.qml" line="19"/>
+      <source>Alarm</source>
+      <extracomment>Alarm state is active</extracomment>
+      <translation type="unfinished">Alarma</translation>
     </message>
     <message id="clear_history_button_clear_history">
       <location filename="../../components/listitems/ListClearHistoryButton.qml" line="15"/>
@@ -5657,10 +5634,15 @@ Doriți să continuați?</translation>
       <source>Min Voltage</source>
       <translation>Tensiune minimă</translation>
     </message>
+    <message id="charger_history_max_voltage">
+      <location filename="../../components/SolarHistoryTableView.qml" line="75"/>
+      <source>Max Voltage</source>
+      <translation>Tensiune maximă</translation>
+    </message>
     <message id="charger_history_box_max_voltage">
       <location filename="../../components/SolarDetailBox.qml" line="64"/>
       <source>Max Voltage</source>
-      <translation>Tensiune maximă</translation>
+      <translation type="unfinished">Tensiune maximă</translation>
     </message>
     <message id="charger_history_box_max_current">
       <location filename="../../components/SolarDetailBox.qml" line="70"/>
@@ -5741,11 +5723,6 @@ Doriți să continuați?</translation>
       <extracomment>Details of 4th last error</extracomment>
       <translation>Al patrulea de la capăt</translation>
     </message>
-    <message id="charger_history_max_voltage">
-      <location filename="../../components/SolarHistoryTableView.qml" line="75"/>
-      <source>Max Voltage</source>
-      <translation type="unfinished">Tensiune maximă</translation>
-    </message>
     <message id="charger_history_max_power">
       <location filename="../../components/SolarHistoryTableView.qml" line="77"/>
       <source>Max Power</source>
@@ -5761,10 +5738,15 @@ Doriți să continuați?</translation>
       <source>Disconnected, attempting to reconnect</source>
       <translation>Deconectat, încercare de reconectare</translation>
     </message>
+    <message id="utils_connman_connecting">
+      <location filename="../../components/Utils.js" line="285"/>
+      <source>Connecting</source>
+      <translation>Conectare</translation>
+    </message>
     <message id="splash_view_connecting">
       <location filename="../../components/SplashView.qml" line="288"/>
       <source>Connecting</source>
-      <translation>Conectare</translation>
+      <translation type="unfinished">Conectare</translation>
     </message>
     <message id="splash_view_connected">
       <location filename="../../components/SplashView.qml" line="290"/>
@@ -5816,18 +5798,13 @@ Doriți să continuați?</translation>
       <source>Protocol violation error</source>
       <translation>Eroare de încălcare a protocolului</translation>
     </message>
-    <message id="splash_view_unknown_error">
-      <location filename="../../components/SplashView.qml" line="331"/>
-      <source>Unknown error</source>
-      <translation type="unfinished">Eroare necunoscuta</translation>
-    </message>
     <message id="splash_view_mqtt5_error">
       <location filename="../../components/SplashView.qml" line="333"/>
       <source>MQTT protocol level 5 error</source>
       <translation>Eroare de nivel 5 al protocolului MQTT</translation>
     </message>
     <message id="notifications_silence_alarm">
-      <location filename="../../components/StatusBar.qml" line="309"/>
+      <location filename="../../components/StatusBar.qml" line="308"/>
       <source>Silence alarm</source>
       <translation>Opriți alarma</translation>
     </message>
@@ -5876,11 +5853,6 @@ Doriți să continuați?</translation>
       <source>Failure</source>
       <translation>Avarie</translation>
     </message>
-    <message id="utils_connman_connecting">
-      <location filename="../../components/Utils.js" line="285"/>
-      <source>Connecting</source>
-      <translation type="unfinished">Conectare</translation>
-    </message>
     <message id="utils_connman_retrieving_ip_address">
       <location filename="../../components/Utils.js" line="288"/>
       <source>Retrieving IP address</source>
@@ -5901,13 +5873,13 @@ Doriți să continuați?</translation>
       <source>Disconnected</source>
       <translation type="unfinished">Deconectat</translation>
     </message>
-    <message id="brief_ac_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="254"/>
+    <message id="overview_widget_acloads_title">
+      <location filename="../../components/widgets/AcLoadsWidget.qml" line="17"/>
       <source>AC Loads</source>
       <translation>Consumatori AC</translation>
     </message>
-    <message id="brief_dc_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="281"/>
+    <message id="overview_widget_dcloads_title">
+      <location filename="../../components/widgets/DcLoadsWidget.qml" line="23"/>
       <source>DC Loads</source>
       <translation>Consumatori DC</translation>
     </message>
@@ -5916,11 +5888,6 @@ Doriți să continuați?</translation>
       <source>EVCS</source>
       <extracomment>Abbreviation of Electric Vehicle Charging Station</extracomment>
       <translation>EVCS</translation>
-    </message>
-    <message id="acInputs_not_available">
-      <location filename="../../data/AcInputs.qml" line="109"/>
-      <source>Not available</source>
-      <translation type="unfinished">Indisponibil</translation>
     </message>
     <message id="acInputs_shore">
       <location filename="../../data/AcInputs.qml" line="116"/>
@@ -6016,11 +5983,6 @@ Doriți să continuați?</translation>
       <source>Disconnected</source>
       <translation type="unfinished">Deconectat</translation>
     </message>
-    <message id="evchargers_status_connected">
-      <location filename="../../data/EvChargers.qml" line="111"/>
-      <source>Connected</source>
-      <translation type="unfinished">Conectare</translation>
-    </message>
     <message id="evchargers_status_charged">
       <location filename="../../data/EvChargers.qml" line="116"/>
       <source>Charged</source>
@@ -6040,11 +6002,6 @@ Doriți să continuați?</translation>
       <location filename="../../data/EvChargers.qml" line="125"/>
       <source>Waiting for start</source>
       <translation>În așteptare pentru pornire</translation>
-    </message>
-    <message id="evchargers_status_low_state_of_charge">
-      <location filename="../../data/EvChargers.qml" line="128"/>
-      <source>Low SOC</source>
-      <translation type="unfinished">SOC scazut</translation>
     </message>
     <message id="evchargers_status_ground_test_error">
       <location filename="../../data/EvChargers.qml" line="131"/>
@@ -6219,6 +6176,11 @@ Doriți să continuați?</translation>
       <source>Power supply mode</source>
       <translation>Mod sursa de alimentare</translation>
     </message>
+    <message id="inverters_state_sustain">
+      <location filename="../../data/System.qml" line="154"/>
+      <source>Sustain</source>
+      <translation type="unfinished">Sustine</translation>
+    </message>
     <message id="inverters_state_wakeup">
       <location filename="../../data/System.qml" line="158"/>
       <source>Wake up</source>
@@ -6254,6 +6216,11 @@ Doriți să continuați?</translation>
       <source>Test</source>
       <translation>Test</translation>
     </message>
+    <message id="inverters_state_externalccontrol">
+      <location filename="../../data/System.qml" line="179"/>
+      <source>External control</source>
+      <translation type="unfinished">Control extern</translation>
+    </message>
     <message id="inverters_state_dynamic_ess">
       <location filename="../../data/System.qml" line="194"/>
       <source>Dynamic ESS</source>
@@ -6263,12 +6230,6 @@ Doriți să continuați?</translation>
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="97"/>
       <source>Dynamic ESS</source>
       <translation>SSE dinamic</translation>
-    </message>
-    <message id="systemsettings_networkstatus_slave">
-      <location filename="../../data/SystemSettings.qml" line="107"/>
-      <source>Slave</source>
-      <extracomment>Network status: Slave</extracomment>
-      <translation type="unfinished">Secundar</translation>
     </message>
     <message id="systemsettings_networkstatus_group_master">
       <location filename="../../data/SystemSettings.qml" line="111"/>
@@ -6287,12 +6248,6 @@ Doriți să continuați?</translation>
       <source>Group &amp; Instance Master</source>
       <extracomment>Network status: Group &amp; Instance Master</extracomment>
       <translation>Grup si instanta principala</translation>
-    </message>
-    <message id="systemsettings_networkstatus_standalone">
-      <location filename="../../data/SystemSettings.qml" line="123"/>
-      <source>Standalone</source>
-      <extracomment>Network status: Standalone</extracomment>
-      <translation type="unfinished">De sine statator</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone_and_group_master">
       <location filename="../../data/SystemSettings.qml" line="127"/>
@@ -6340,8 +6295,8 @@ Doriți să continuați?</translation>
       <source>Generator total run time (hours)</source>
       <translation>Timpul de functionare total al generatorului (ore)</translation>
     </message>
-    <message id="brief_dc_input">
-      <location filename="../../pages/BriefSidePanel.qml" line="213"/>
+    <message id="settings_minmax_dc_input">
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="107"/>
       <source>DC input</source>
       <translation>Intrare CC</translation>
     </message>
@@ -6350,18 +6305,23 @@ Doriți să continuați?</translation>
       <source>For Lithium batteries, below 10% charge is not recommended. For other battery types, check the datasheet for the minimum level recommended by the manufacturer.</source>
       <translation>Pentru bateriile cu litiu, nu se recomandă o încărcare sub 10 %. Pentru alte tipuri de baterii, verificați fișa tehnică pentru nivelul minim recomandat de producător.</translation>
     </message>
+    <message id="controlcard_generator_label_autostart">
+      <location filename="../../pages/controlcards/GeneratorCard.qml" line="63"/>
+      <source>Autostart</source>
+      <translation type="unfinished">Pornire automată</translation>
+    </message>
     <message id="controlcard_generator_autostart_conditions">
-      <location filename="../../pages/controlcards/GeneratorCard.qml" line="70"/>
+      <location filename="../../pages/controlcards/GeneratorCard.qml" line="69"/>
       <source>Start and stop the generator based on the configured autostart conditions.</source>
       <translation>Porniți și opriți generatorul pe baza condițiilor de pornire automată configurate.</translation>
     </message>
     <message id="generator_dialog_disabled">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="103"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="102"/>
       <source>Generator start/stop disabled</source>
       <translation>Pornirea/oprirea generatorului dezactivată</translation>
     </message>
     <message id="generator_dialog_remote_start_disabled">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="106"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="105"/>
       <source>The remote start functionality is disabled on the genset. The GX will not be able to start or stop the genset now. Enable it on the genset control panel.</source>
       <translation>Funcționalitatea de pornire de la distanță este dezactivată pe generator. GX nu va putea porni sau opri generatorul acum. Activați-o pe panoul de control al generatorului.</translation>
     </message>
@@ -6377,11 +6337,6 @@ Doriți să continuați?</translation>
       <extracomment>%1 = the inverter/charger name</extracomment>
       <translation>Invertor/Încărcător (%1)</translation>
     </message>
-    <message id="controlcard_inverter_charger_ess_minimum_soc">
-      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="105"/>
-      <source>Minimum SOC</source>
-      <translation type="unfinished">SoC minim</translation>
-    </message>
     <message id="settings_page_debug_quit_application">
       <location filename="../../pages/settings/debug/PageDebug.qml" line="36"/>
       <source>Quit application</source>
@@ -6392,10 +6347,15 @@ Doriți să continuați?</translation>
       <source>This genset controller requires a helper relay to be controlled but the helper relay is not configured. Please configure Relay 1 under Settings → Relay to "Connected genset helper relay".</source>
       <translation>Acest controler de generator necesită un releu ajutător pentru a fi controlat, dar releul ajutător nu este configurat. Vă rugăm să configurați releul 1 în Setări → Releu la "Releu de ajutor pentru generator conectat".</translation>
     </message>
+    <message id="settings_page_relay_generator_run_time">
+      <location filename="../../pages/settings/PageGenerator.qml" line="71"/>
+      <source>Current run time</source>
+      <translation>Timpul curent de funcționare</translation>
+    </message>
     <message id="settings_page_genset_generator_run_time">
       <location filename="../../components/PageGensetModel.qml" line="102"/>
       <source>Current run time</source>
-      <translation>Timpul curent de funcționare</translation>
+      <translation type="unfinished">Timpul curent de funcționare</translation>
     </message>
     <message id="ac-in-genset_auto_control_status">
       <location filename="../../components/PageGensetModel.qml" line="110"/>
@@ -6426,6 +6386,11 @@ Doriți să continuați?</translation>
       <location filename="../../components/PageGensetModel.qml" line="245"/>
       <source>Speed</source>
       <translation type="unfinished">Viteza</translation>
+    </message>
+    <message id="ac-in-genset_load">
+      <location filename="../../components/PageGensetModel.qml" line="252"/>
+      <source>Load</source>
+      <translation type="unfinished">Incarcare</translation>
     </message>
     <message id="ac-in-genset_oil_pressure">
       <location filename="../../components/PageGensetModel.qml" line="260"/>
@@ -6664,15 +6629,15 @@ Doriți să continuați?</translation>
       <source>Autostart functionality</source>
       <translation>Funcționalitatea de pornire automată</translation>
     </message>
-    <message id="settings_page_relay_generator_run_time">
-      <location filename="../../pages/settings/PageGenerator.qml" line="71"/>
-      <source>Current run time</source>
-      <translation type="unfinished">Timpul curent de funcționare</translation>
-    </message>
     <message id="page_generator_conditions_make_sure_generator_is_not_connected">
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="97"/>
       <source>Make sure that the generator is not connected to AC input %1 when using this option</source>
       <translation>Asigurați-vă că generatorul nu este conectat la intrarea de curent alternativ %1 în momentul în care se utilizează această opțiune</translation>
+    </message>
+    <message id="page_generator_conditions_inverter_high_temperature">
+      <location filename="../../pages/settings/PageGeneratorConditions.qml" line="139"/>
+      <source>Inverter high temperature</source>
+      <translation type="unfinished">Temperatura ridicata invertor</translation>
     </message>
     <message id="page_generator_conditions_tank_level">
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="159"/>
@@ -6738,6 +6703,31 @@ Doriți să continuați?</translation>
       <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="123"/>
       <source>Brief page</source>
       <translation>Scurtă pagină</translation>
+    </message>
+    <message id="settings_displayoff_1min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="45"/>
+      <source>1 min</source>
+      <translation type="unfinished">1 min</translation>
+    </message>
+    <message id="settings_displayoff_10min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="47"/>
+      <source>10 min</source>
+      <translation type="unfinished">10 min</translation>
+    </message>
+    <message id="settings_displayoff_30min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="49"/>
+      <source>30 min</source>
+      <translation type="unfinished">30 min</translation>
+    </message>
+    <message id="settings_displayoff_never">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="51"/>
+      <source>Never</source>
+      <translation type="unfinished">Niciodata</translation>
+    </message>
+    <message id="settings_remote_console_appearance_auto">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="108"/>
+      <source>Auto</source>
+      <translation type="unfinished">Auto</translation>
     </message>
     <message id="settings_brief_view_start_page">
       <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="115"/>
@@ -6812,6 +6802,11 @@ Doriți să continuați?</translation>
       <source>Clean</source>
       <translation type="unfinished">Curăță</translation>
     </message>
+    <message id="pagesettingsgeneral_firmware">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="112"/>
+      <source>Firmware</source>
+      <translation type="unfinished">Firmware</translation>
+    </message>
     <message id="pagesettingsgeneral_access_and_security">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="124"/>
       <source>Access &amp; Security</source>
@@ -6862,6 +6857,11 @@ Doriți să continuați?</translation>
       <source>Tank is not connected.</source>
       <translation>Rezervorul nu este conectat.</translation>
     </message>
+    <message id="settings_briefview_active_battery_monitor">
+      <location filename="../../pages/settings/PageSettingsDisplayBrief.qml" line="83"/>
+      <source>Active battery monitor</source>
+      <translation type="unfinished">Monitor baterie activ</translation>
+    </message>
     <message id="settings_briefview_individual_batteries">
       <location filename="../../pages/settings/PageSettingsDisplayBrief.qml" line="86"/>
       <source>Individual batteries</source>
@@ -6909,7 +6909,7 @@ Doriți să continuați?</translation>
       <translation>Afișare procente</translation>
     </message>
     <message id="settings_dvcc_charge_current_limits">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="31"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="30"/>
       <source>Charge current limits</source>
       <translation>Limite de curent de încărcare</translation>
     </message>
@@ -6990,20 +6990,15 @@ Doriți să continuați?</translation>
       <source>No password and the network communication is not encrypted</source>
       <translation>Nu există parolă și comunicarea prin rețea nu este criptată</translation>
     </message>
-    <message id="settings_security_too_short_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="158"/>
-      <source>Password needs to be at least 8 characters long</source>
-      <translation type="unfinished">Parola trebuie să aibă cel puțin 8 caractere</translation>
-    </message>
-    <message id="settings_root_too_short_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="267"/>
-      <source>Password needs to be at least 8 characters long</source>
-      <translation>Parola trebuie să aibă cel puțin 8 caractere</translation>
-    </message>
     <message id="settings_logout_now">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="313"/>
       <source>Log out now</source>
       <translation type="unfinished">Deconectați-vă acum</translation>
+    </message>
+    <message id="settings_security_profile_password_incorrect_length">
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
+      <source>Password needs to be at least 8 characters long</source>
+      <translation>Parola trebuie să aibă cel puțin 8 caractere</translation>
     </message>
     <message id="settings_security_profile_secured_title">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="220"/>
@@ -7050,10 +7045,25 @@ Doriți să continuați?</translation>
       <source>Page will automatically reload in 5 seconds</source>
       <translation>Pagina se va reîncărca automat în 5 secunde</translation>
     </message>
+    <message id="settings_security_too_short_password">
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="158"/>
+      <source>Password needs to be at least 8 characters long</source>
+      <translation type="unfinished">Parola trebuie să aibă cel puțin 8 caractere</translation>
+    </message>
     <message id="settings_root_password">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="259"/>
       <source>Root password</source>
       <translation>Parolă rădăcină</translation>
+    </message>
+    <message id="settings_root_enter_password">
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="262"/>
+      <source>Enter password</source>
+      <translation type="unfinished">Introduceți parola</translation>
+    </message>
+    <message id="settings_root_too_short_password">
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="267"/>
+      <source>Password needs to be at least 8 characters long</source>
+      <translation type="unfinished">Parola trebuie să aibă cel puțin 8 caractere</translation>
     </message>
     <message id="settings_root_password_changed_to">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="273"/>
@@ -7265,8 +7275,13 @@ Doriți să continuați?</translation>
       <source>Server Applications</source>
       <translation>Aplicații server</translation>
     </message>
-    <message id="pagesettingsintegrations_modbus_tcp_server">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="208"/>
+    <message id="settings_large_victron_community">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="279"/>
+      <source>Victron Community</source>
+      <translation type="unfinished">Comunitatea Victron</translation>
+    </message>
+    <message id="pagesettingssupportstate_modbus_tcp_server">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="453"/>
       <source>Modbus TCP Server</source>
       <translation>Server Modbus TCP</translation>
     </message>
@@ -7274,11 +7289,6 @@ Doriți să continuați?</translation>
       <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="223"/>
       <source>Venus OS Large Features</source>
       <translation>Caracteristici ale Venus OS Large</translation>
-    </message>
-    <message id="settings_large_victron_community">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="279"/>
-      <source>Victron Community</source>
-      <translation type="unfinished">Comunitatea Victron</translation>
     </message>
     <message id="page_settings_nodered_factory_reset">
       <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="31"/>
@@ -7371,6 +7381,11 @@ Doriți să continuați?</translation>
       <source>Switching firmware version is not possible without "Network Security Profile" in "Settings / General" being selected.</source>
       <translation>Schimbarea versiunii firmware nu este posibilă fără a selecta "Profil de securitate rețea" în "Setări / General".</translation>
     </message>
+    <message id="pagesettingsconnectivity_ethernet">
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="18"/>
+      <source>Ethernet</source>
+      <translation type="unfinished">Retea locala</translation>
+    </message>
     <message id="pagesettingsconnectivity_mobile_network">
       <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="53"/>
       <source>Mobile Network</source>
@@ -7385,6 +7400,11 @@ Doriți să continuați?</translation>
       <location filename="../../pages/settings/PageSettingsSystem.qml" line="21"/>
       <source>Boat</source>
       <translation type="unfinished">Ambarcatiune</translation>
+    </message>
+    <message id="settings_system_name_auto">
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="32"/>
+      <source>Automatic</source>
+      <translation type="unfinished">Automa</translation>
     </message>
     <message id="pagesettingssystem_ac_system">
       <location filename="../../pages/settings/PageSettingsSystem.qml" line="60"/>
@@ -7415,6 +7435,11 @@ Doriți să continuați?</translation>
       <location filename="../../pages/settings/PageSettingsSystem.qml" line="89"/>
       <source>Distributed Voltage and Current Control (DVCC)</source>
       <translation>Controlul distribuit al tensiunii și curentului (DVCC)</translation>
+    </message>
+    <message id="settings_system_grid">
+      <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="18"/>
+      <source>Grid</source>
+      <translation type="unfinished">Retea</translation>
     </message>
     <message id="settings_system_ac_position">
       <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="58"/>
@@ -7506,10 +7531,9 @@ Doriți să continuați?</translation>
       <source>Ethernet, Wi-Fi, Bluetooth, VE.Can</source>
       <translation>Ethernet, Wi-Fi, Bluetooth, VE.Can</translation>
     </message>
-    <message id="settings_remote_console_forced_by_vrm">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="92"/>
+    <message id="settings_vrm">
+      <location filename="../../pages/SettingsPage.qml" line="60"/>
       <source>VRM</source>
-      <extracomment>Forced by %2 to dark</extracomment>
       <translation>VRM</translation>
     </message>
     <message id="settings_remote_monitoring_portal">
@@ -7517,25 +7541,15 @@ Doriți să continuați?</translation>
       <source>Remote monitoring portal</source>
       <translation>Portal de monitorizare la distanță</translation>
     </message>
-    <message id="pagesettingssupportstate_integrations">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="448"/>
-      <source>Integrations</source>
-      <translation>Integrări</translation>
-    </message>
-    <message id="nav_settings">
-      <location filename="../../pages/SettingsPage.qml" line="18"/>
-      <source>Settings</source>
-      <translation type="unfinished">Configurari</translation>
-    </message>
-    <message id="settings_vrm">
-      <location filename="../../pages/SettingsPage.qml" line="60"/>
-      <source>VRM</source>
-      <translation type="unfinished">VRM</translation>
+    <message id="settings_advanced">
+      <location filename="../../pages/SettingsPage.qml" line="69"/>
+      <source>Advanced</source>
+      <translation type="unfinished">Avansat</translation>
     </message>
     <message id="settings_integrations">
       <location filename="../../pages/SettingsPage.qml" line="74"/>
       <source>Integrations</source>
-      <translation type="unfinished">Integrări</translation>
+      <translation>Integrări</translation>
     </message>
     <message id="settings_relays_sensors_tanks">
       <location filename="../../pages/SettingsPage.qml" line="76"/>
@@ -7605,18 +7619,13 @@ Doriți să continuați?</translation>
       <extracomment>Solar charger system yield</extracomment>
       <translation type="unfinished">Randament sistem</translation>
     </message>
-    <message id="solarcharger_load">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="235"/>
-      <source>Load</source>
-      <translation type="unfinished">Incarcare</translation>
-    </message>
-    <message id="inverter_total_yield">
-      <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="76"/>
+    <message id="settings_multirs_total_yield">
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="63"/>
       <source>Total yield</source>
       <translation>Randament total</translation>
     </message>
-    <message id="inverter_system_yield">
-      <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="84"/>
+    <message id="settings_multirs_system_yield">
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="71"/>
       <source>System yield</source>
       <translation>Randament sistem</translation>
     </message>
@@ -7626,7 +7635,7 @@ Doriți să continuați?</translation>
       <translation>Alarma de temperatură ridicată</translation>
     </message>
     <message id="charger_history_last_x_days">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="66"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="65"/>
       <source>Last %1 days</source>
       <extracomment>%1 = number of days of solar history that will be shown</extracomment>
       <translation>Ultimele %1 zile</translation>
@@ -7662,7 +7671,7 @@ Doriți să continuați?</translation>
       <translation>Repornirea sistemului VE.Bus va reseta orice invertor de pe acest sistem și va duce la o pierdere de energie la ieșirile acestora.</translation>
     </message>
     <message id="common_words_dynamic_power_limit">
-      <location filename="../../components/CommonWords.qml" line="563"/>
+      <location filename="../../components/CommonWords.qml" line="569"/>
       <source>Dynamic power limit</source>
       <translation>Limită curent dinamic</translation>
     </message>
@@ -7676,20 +7685,73 @@ Doriți să continuați?</translation>
       <source>Auto-started • %1</source>
       <translation>Pornit automat • %1</translation>
     </message>
+    <message id="common_words_battery">
+      <location filename="../../components/CommonWords.qml" line="89"/>
+      <source>Battery</source>
+      <translation type="unfinished">Baterie</translation>
+    </message>
+    <message id="common_words_boat_page">
+      <location filename="../../components/CommonWords.qml" line="111"/>
+      <source>Boat</source>
+      <extracomment>The 'Boat' page</extracomment>
+      <translation type="unfinished">Ambarcatiune</translation>
+    </message>
+    <message id="common_words_brief_page">
+      <location filename="../../components/CommonWords.qml" line="115"/>
+      <source>Brief</source>
+      <extracomment>The 'Brief' page</extracomment>
+      <translation type="unfinished">Pe scurt</translation>
+    </message>
+    <message id="common_words_closed_status">
+      <location filename="../../components/CommonWords.qml" line="133"/>
+      <source>Closed</source>
+      <extracomment>Status is 'closed'</extracomment>
+      <translation type="unfinished">Inchis</translation>
+    </message>
+    <message id="common_words_connected">
+      <location filename="../../components/CommonWords.qml" line="136"/>
+      <source>Connected</source>
+      <translation type="unfinished">Conectare</translation>
+    </message>
     <message id="common_words_daily_history">
       <location filename="../../components/CommonWords.qml" line="149"/>
       <source>Daily history</source>
       <translation>Istoric zilnic</translation>
+    </message>
+    <message id="common_words_disabled">
+      <location filename="../../components/CommonWords.qml" line="166"/>
+      <source>Disabled</source>
+      <translation type="unfinished">Dezactivat</translation>
+    </message>
+    <message id="common_words_disconnected">
+      <location filename="../../components/CommonWords.qml" line="172"/>
+      <source>Disconnected</source>
+      <translation type="unfinished">Deconectat</translation>
+    </message>
+    <message id="common_words_error">
+      <location filename="../../components/CommonWords.qml" line="188"/>
+      <source>Error</source>
+      <translation type="unfinished">Eroare</translation>
     </message>
     <message id="common_words_error_not_a_number">
       <location filename="../../components/CommonWords.qml" line="197"/>
       <source>'%1' is not a number.</source>
       <translation>"%1" nu este un număr.</translation>
     </message>
+    <message id="common_words_generator">
+      <location filename="../../components/CommonWords.qml" line="214"/>
+      <source>Generator</source>
+      <translation type="unfinished">Generator</translation>
+    </message>
     <message id="common_words_input_current_limit">
       <location filename="../../components/CommonWords.qml" line="258"/>
       <source>Input current limit</source>
       <translation>Limita intensitate curent</translation>
+    </message>
+    <message id="common_words_inverter_charger">
+      <location filename="../../components/CommonWords.qml" line="261"/>
+      <source>Inverter / Charger</source>
+      <translation type="unfinished">Invertor/Încărcător</translation>
     </message>
     <message id="common_words_inverter_mode_eco">
       <location filename="../../components/CommonWords.qml" line="265"/>
@@ -7717,10 +7779,51 @@ Doriți să continuați?</translation>
       <source>Minimum current</source>
       <translation>Curent minim</translation>
     </message>
+    <message id="common_words_no">
+      <location filename="../../components/CommonWords.qml" line="341"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="433"/>
+      <source>No</source>
+      <translation type="unfinished">Nu</translation>
+    </message>
+    <message id="common_words_none_option">
+      <location filename="../../components/CommonWords.qml" line="353"/>
+      <source>None</source>
+      <translation type="unfinished">Niciuna</translation>
+    </message>
+    <message id="common_words_none_errors">
+      <location filename="../../components/CommonWords.qml" line="357"/>
+      <source>None</source>
+      <extracomment>Indicates there are no errors</extracomment>
+      <translation type="unfinished">Niciuna</translation>
+    </message>
+    <message id="common_words_not_available">
+      <location filename="../../components/CommonWords.qml" line="360"/>
+      <source>Not available</source>
+      <translation type="unfinished">Indisponibil</translation>
+    </message>
+    <message id="common_words_off">
+      <location filename="../../components/CommonWords.qml" line="366"/>
+      <source>Off</source>
+      <translation type="unfinished">Oprit</translation>
+    </message>
+    <message id="common_words_ok">
+      <location filename="../../components/CommonWords.qml" line="372"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="41"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="45"/>
+      <source>OK</source>
+      <translation type="unfinished">In regula</translation>
+    </message>
     <message id="common_words_on">
       <location filename="../../components/CommonWords.qml" line="375"/>
       <source>On</source>
       <translation type="unfinished">Pornit</translation>
+    </message>
+    <message id="common_words_open_status">
+      <location filename="../../components/CommonWords.qml" line="382"/>
+      <source>Open</source>
+      <extracomment>Status is 'open'</extracomment>
+      <translation type="unfinished">Deschis</translation>
     </message>
     <message id="common_words_open_circuit">
       <location filename="../../components/CommonWords.qml" line="385"/>
@@ -7732,32 +7835,87 @@ Doriți să continuați?</translation>
       <source>Overall history</source>
       <translation>Istoric general</translation>
     </message>
+    <message id="common_words_press">
+      <location filename="../../components/CommonWords.qml" line="408"/>
+      <source>Press</source>
+      <translation type="unfinished">Apăsați</translation>
+    </message>
     <message id="common_words_running_status">
-      <location filename="../../components/CommonWords.qml" line="444"/>
+      <location filename="../../components/CommonWords.qml" line="447"/>
       <source>Running</source>
       <extracomment>Status = "running"</extracomment>
       <translation type="unfinished">Functioneaza</translation>
     </message>
+    <message id="common_words_settings">
+      <location filename="../../components/CommonWords.qml" line="456"/>
+      <source>Settings</source>
+      <translation type="unfinished">Configurari</translation>
+    </message>
     <message id="common_words_soc">
-      <location filename="../../components/CommonWords.qml" line="463"/>
+      <location filename="../../components/CommonWords.qml" line="466"/>
       <source>SOC %1</source>
       <extracomment>State of charge (as a percentage). %1 = the SOC value</extracomment>
       <translation>SoC %1</translation>
     </message>
+    <message id="common_words_speed">
+      <location filename="../../components/CommonWords.qml" line="470"/>
+      <source>Speed</source>
+      <extracomment>A speed measurement value</extracomment>
+      <translation type="unfinished">Viteza</translation>
+    </message>
+    <message id="common_words_standby">
+      <location filename="../../components/CommonWords.qml" line="473"/>
+      <source>Standby</source>
+      <translation type="unfinished">Asteptare</translation>
+    </message>
+    <message id="common_words_state">
+      <location filename="../../components/CommonWords.qml" line="488"/>
+      <source>State</source>
+      <translation type="unfinished">Stare</translation>
+    </message>
+    <message id="common_words_startup_status">
+      <location filename="../../components/CommonWords.qml" line="498"/>
+      <source>Startup (%1)</source>
+      <extracomment>Status = "start up". %1 = the startup status number</extracomment>
+      <translation type="unfinished">Pornire (%1)</translation>
+    </message>
+    <message id="common_words_stopped">
+      <location filename="../../components/CommonWords.qml" line="507"/>
+      <source>Stopped</source>
+      <translation type="unfinished">Oprit</translation>
+    </message>
+    <message id="common_words_total_power">
+      <location filename="../../components/CommonWords.qml" line="526"/>
+      <source>Total power</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="common_words_type">
+      <location filename="../../components/CommonWords.qml" line="533"/>
+      <source>Type</source>
+      <translation type="unfinished">Tip</translation>
+    </message>
     <message id="common_words_unknown_status">
-      <location filename="../../components/CommonWords.qml" line="534"/>
+      <location filename="../../components/CommonWords.qml" line="540"/>
       <source>Unknown</source>
       <extracomment>Status = "unknown"</extracomment>
       <translation type="unfinished">Necunoscut</translation>
     </message>
+    <message id="common_words_yes">
+      <location filename="../../components/CommonWords.qml" line="555"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="159"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="431"/>
+      <source>Yes</source>
+      <translation type="unfinished">Da</translation>
+    </message>
     <message id="common_words_yield_today">
-      <location filename="../../components/CommonWords.qml" line="560"/>
+      <location filename="../../components/CommonWords.qml" line="566"/>
       <source>Yield Today</source>
       <extracomment>Solar charger yield for today, in kWh (kilowatt hours)</extracomment>
       <translation>Randament astăzi</translation>
     </message>
     <message id="common_words_format_error">
-      <location filename="../../components/CommonWords.qml" line="600"/>
+      <location filename="../../components/CommonWords.qml" line="606"/>
       <source>#%1 %2</source>
       <extracomment>%1 = error number, %2 = text description of this error</extracomment>
       <translation>#%1 %2</translation>
@@ -7782,9 +7940,10 @@ Doriți să continuați?</translation>
       <source>Firmware installed, device rebooting</source>
       <translation>Firmware instalat, dispozitiv repornit</translation>
     </message>
-    <message id="modaldialog_confirm">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
+    <message id="settings_radio_button_group_confirm">
+      <location filename="../../components/RadioButtonListPage.qml" line="119"/>
       <source>Confirm</source>
+      <extracomment>Confirm password, and verify it if possible</extracomment>
       <translation>Confirmați</translation>
     </message>
     <message id="nav_brief_close_side_panel_high_cpu">
@@ -7842,8 +8001,8 @@ Doriți să continuați?</translation>
       <source>Touch input control</source>
       <translation>Control de intrare tactilă</translation>
     </message>
-    <message id="switch_state_over_temperature">
-      <location filename="../../src/enums.cpp" line="361"/>
+    <message id="switchable_output_over_temperature">
+      <location filename="../../src/enums.cpp" line="437"/>
       <source>Over temperature</source>
       <translation>Temperatura peste limita</translation>
     </message>
@@ -7851,6 +8010,29 @@ Doriți să continuați?</translation>
       <location filename="../../src/enums.cpp" line="364"/>
       <source>Temperature warning</source>
       <translation>Avertizare de temperatură</translation>
+    </message>
+    <message id="battery_mode_idle">
+      <location filename="../../src/enums.cpp" line="26"/>
+      <source>Idle</source>
+      <extracomment>Battery mode</extracomment>
+      <translation type="unfinished">inactiv</translation>
+    </message>
+    <message id="battery_mode_charging">
+      <location filename="../../src/enums.cpp" line="30"/>
+      <source>Charging</source>
+      <extracomment>Battery mode</extracomment>
+      <translation type="unfinished">Încărcare</translation>
+    </message>
+    <message id="battery_mode_discharging">
+      <location filename="../../src/enums.cpp" line="34"/>
+      <source>Discharging</source>
+      <extracomment>Battery mode</extracomment>
+      <translation type="unfinished">descarcare</translation>
+    </message>
+    <message id="dcMeter_bilge_pump">
+      <location filename="../../src/enums.cpp" line="115"/>
+      <source>Bilge pump</source>
+      <translation type="unfinished">Pompa de santina</translation>
     </message>
     <message id="switch_state_channel_fault">
       <location filename="../../src/enums.cpp" line="367"/>
@@ -7897,20 +8079,10 @@ Doriți să continuați?</translation>
       <source>Tripped</source>
       <translation>Declanșat</translation>
     </message>
-    <message id="switchable_output_over_temperature">
-      <location filename="../../src/enums.cpp" line="437"/>
-      <source>Over temperature</source>
-      <translation type="unfinished">Temperatura peste limita</translation>
-    </message>
     <message id="switchable_output_output_Fault">
       <location filename="../../src/enums.cpp" line="440"/>
       <source>Output fault</source>
       <translation>Eroare ieșire</translation>
-    </message>
-    <message id="switchable_output_on">
-      <location filename="../../src/enums.cpp" line="443"/>
-      <source>On</source>
-      <translation type="unfinished">Pornit</translation>
     </message>
     <message id="switchable_output_short">
       <location filename="../../src/enums.cpp" line="446"/>
@@ -7987,28 +8159,23 @@ Doriți să continuați?</translation>
       <source>Battery voltage condition</source>
       <translation>Condiție tensiune baterie</translation>
     </message>
-    <message id="settings_inverter_high_temperature">
-      <location filename="../../data/Generators.qml" line="84"/>
-      <source>Inverter high temperature</source>
-      <translation type="unfinished">Temperatura ridicata invertor</translation>
-    </message>
     <message id="settings_inverter_overload_condition">
       <location filename="../../data/Generators.qml" line="87"/>
       <source>Inverter overload condition</source>
       <translation>Condiție supraîncărcare invertor</translation>
     </message>
     <message id="application_content_touch_input_on">
-      <location filename="../../ApplicationContent.qml" line="61"/>
+      <location filename="../../ApplicationContent.qml" line="54"/>
       <source>Touch input on</source>
       <translation>Intrare tactilă pornit</translation>
     </message>
     <message id="application_content_touch_input_off">
-      <location filename="../../ApplicationContent.qml" line="63"/>
+      <location filename="../../ApplicationContent.qml" line="56"/>
       <source>Touch input off</source>
       <translation>Intrare tactilă oprit</translation>
     </message>
     <message id="application_content_touch_input_disabled">
-      <location filename="../../ApplicationContent.qml" line="77"/>
+      <location filename="../../ApplicationContent.qml" line="70"/>
       <source>Touch input disabled</source>
       <translation>Intrare tactilă dezactivat</translation>
     </message>
@@ -8049,11 +8216,6 @@ Doriți să continuați?</translation>
       <source>Disconnected | AP Off</source>
       <translation>Deconectat | AP oprit</translation>
     </message>
-    <message id="wifimodel_disconnected">
-      <location filename="../../components/WifiModel.qml" line="28"/>
-      <source>Disconnected</source>
-      <translation type="unfinished">Deconectat</translation>
-    </message>
     <message id="ac-in-genset_disableautostartdialog_title">
       <location filename="../../components/dialogs/GeneratorDisableAutoStartDialog.qml" line="13"/>
       <source>Disable autostart?</source>
@@ -8075,11 +8237,6 @@ If the generator is currently running due to a autostart condition, disabling au
       <location filename="../../components/listitems/ListBriefCenterDetails.qml" line="20"/>
       <source>Center details</source>
       <translation>Detalii centru</translation>
-    </message>
-    <message id="settings_briefview_center_active_battery_monitor">
-      <location filename="../../components/listitems/ListBriefCenterDetails.qml" line="27"/>
-      <source>Active battery monitor</source>
-      <translation type="unfinished">Monitor baterie activ</translation>
     </message>
     <message id="settings_briefview_center_temperature_services">
       <location filename="../../components/listitems/ListBriefCenterDetails.qml" line="35"/>
@@ -8124,7 +8281,7 @@ If the generator is currently running due to a autostart condition, disabling au
       <translation>Trebuie configurat un profil de securitate înainte ca serviciile de rețea să poată fi activate, consultați Setări - General</translation>
     </message>
     <message id="reboot_button_press_ok_to_reboot">
-      <location filename="../../components/listitems/ListRebootButton.qml" line="25"/>
+      <location filename="../../components/listitems/ListRebootButton.qml" line="24"/>
       <source>Press 'OK' to reboot</source>
       <translation>Apăsați „OK” pentru repornire</translation>
     </message>
@@ -8218,7 +8375,7 @@ If the generator is currently running due to a autostart condition, disabling au
       <translation>Pagina se va reîncărca automat în zece secunde pentru a încărca cea mai recentă versiune.</translation>
     </message>
     <message id="controlcard_evcs_title">
-      <location filename="../../pages/controlcards/EVCSCard.qml" line="22"/>
+      <location filename="../../pages/controlcards/EVCSCard.qml" line="21"/>
       <source>EVCS (%1)</source>
       <extracomment>%1 = the EVCS name</extracomment>
       <translation>EVCS (%1)</translation>
@@ -8275,16 +8432,6 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
       <extracomment>%1 = 'AC input 1' or 'AC input 2', %2 = name of connected input (e.g. Grid, Shore)</extracomment>
       <translation>%1 (%2)</translation>
     </message>
-    <message id="settings_minmax_dc_input">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="107"/>
-      <source>DC input</source>
-      <translation type="unfinished">Intrare CC</translation>
-    </message>
-    <message id="settings_minmax_acout_max_power">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="119"/>
-      <source>AC output</source>
-      <translation type="unfinished">Iesire AC</translation>
-    </message>
     <message id="settings_minmax_acout_max_acin1">
       <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="125"/>
       <source>Maximum current: AC in 1 connected</source>
@@ -8310,11 +8457,6 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
       <source>Solar</source>
       <translation>Solar</translation>
     </message>
-    <message id="settings_startpage_timeout_never">
-      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="14"/>
-      <source>Never</source>
-      <translation type="unfinished">Niciodata</translation>
-    </message>
     <message id="settings_startpage_timeout_minutes" numerus="yes">
       <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="20"/>
       <source>After %n minute(s)</source>
@@ -8323,11 +8465,6 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
         <numerusform>După %n minut(e)</numerusform>
         <numerusform>După %n minut(e)</numerusform>
       </translation>
-    </message>
-    <message id="settings_startpage_none">
-      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="53"/>
-      <source>None</source>
-      <translation type="unfinished">Niciuna</translation>
     </message>
     <message id="settings_startpage_description">
       <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="58"/>
@@ -8380,47 +8517,47 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
       <translation>Dispozitive descoperite</translation>
     </message>
     <message id="add_modbus_tcp_udp_device">
-      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="17"/>
+      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="15"/>
       <source>Add Modbus TCP/UDP device</source>
       <translation>Adăugați un dispozitiv Modbus TCP/UDP</translation>
     </message>
     <message id="modbus_add_device_tcp">
-      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="31"/>
+      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="29"/>
       <source>TCP</source>
       <translation>TCP</translation>
     </message>
     <message id="modbus_add_device_udp">
-      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="33"/>
+      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="31"/>
       <source>UDP</source>
       <translation>UDP</translation>
     </message>
     <message id="modbus_add_device_protocol">
-      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="36"/>
+      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="34"/>
       <source>Protocol</source>
       <translation>Protocol</translation>
     </message>
     <message id="modbus_add_device_unit">
-      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="57"/>
+      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="55"/>
       <source>Unit</source>
       <translation>Unitate</translation>
     </message>
     <message id="modbus_add_unit_invalid">
-      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="63"/>
+      <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="61"/>
       <source>%1 is not a valid unit number. Use a number between 1-247.</source>
       <translation>%1 nu este un număr de unitate valid. Utilizați un număr cuprins între 1-247.</translation>
     </message>
     <message id="settings_modbus_no_devices_saved">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="40"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="38"/>
       <source>No Modbus devices saved</source>
       <translation>No Modbus devices saved</translation>
     </message>
     <message id="page_settings_modbus_device_number">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="55"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="53"/>
       <source>Device %1</source>
       <translation>Dispozitiv %1</translation>
     </message>
     <message id="page_settings_modbus_device_remove_device">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="117"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="115"/>
       <source>Remove Modbus device?</source>
       <translation>Eliminați dispozitivul Modbus?</translation>
     </message>
@@ -8485,11 +8622,6 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
       <source>'%1' was replaced with '%2' since it contained invalid characters.</source>
       <translation>„%1”a fost înlocuit cu „%2” deoarece conținea caractere invalide.</translation>
     </message>
-    <message id="settings_tailscale_starting">
-      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="51"/>
-      <source>Starting...</source>
-      <translation type="unfinished">Porneste...</translation>
-    </message>
     <message id="settings_tailscale_initializing">
       <location filename="../../pages/settings/PageSettingsTailscale.qml" line="57"/>
       <source>Initializing...</source>
@@ -8516,20 +8648,10 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
       <source>ERROR: %1</source>
       <translation>Eroare: %1</translation>
     </message>
-    <message id="settings_tailscale_ethernet">
-      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="98"/>
-      <source>Ethernet</source>
-      <translation type="unfinished">Retea locala</translation>
-    </message>
     <message id="settings_tailscale_wifi">
       <location filename="../../pages/settings/PageSettingsTailscale.qml" line="103"/>
       <source>WiFi</source>
       <translation>Wi-Fi</translation>
-    </message>
-    <message id="settings_tailscale_custom">
-      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="108"/>
-      <source>Custom</source>
-      <translation type="unfinished">Personalizat</translation>
     </message>
     <message id="settings_tailscale_disabled">
       <location filename="../../pages/settings/PageSettingsTailscale.qml" line="113"/>
@@ -8545,11 +8667,6 @@ Rețineți că acest meniu afișează doar contoarele Carlo Gavazzi conectate pr
       <location filename="../../pages/settings/PageSettingsTailscale.qml" line="164"/>
       <source>Enable Tailscale</source>
       <translation>Activați Tailscale</translation>
-    </message>
-    <message id="settings_tailscale_state">
-      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="170"/>
-      <source>State</source>
-      <translation type="unfinished">Stare</translation>
     </message>
     <message id="settings_tailscale_machinename">
       <location filename="../../pages/settings/PageSettingsTailscale.qml" line="184"/>
@@ -8612,11 +8729,6 @@ Această caracteristică, numită rute de subrețea de către Tailscale, permite
 Câmpurile de rețele personalizate acceptă o listă de subrețele cu notație CIDR separate prin virgulă.
 
 După adăugarea/activarea unei noi rețele, trebuie să o aprobați o dată în consola de administrare Tailscale.</translation>
-    </message>
-    <message id="settings_tailscale_advanced">
-      <location filename="../../pages/settings/PageSettingsTailscale.qml" line="277"/>
-      <source>Advanced</source>
-      <translation type="unfinished">Avansat</translation>
     </message>
     <message id="settings_tailscale_advanced_custom_tailscale_up_arguments">
       <location filename="../../pages/settings/PageSettingsTailscale.qml" line="290"/>
@@ -8740,31 +8852,11 @@ După adăugarea/activarea unei noi rețele, trebuie să o aprobați o dată în
       <source>Minimum battery voltage</source>
       <translation>Tensiune minima baterie</translation>
     </message>
-    <message id="settings_multirs_total_yield">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="63"/>
-      <source>Total yield</source>
-      <translation type="unfinished">Randament total</translation>
-    </message>
-    <message id="settings_multirs_system_yield">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="71"/>
-      <source>System yield</source>
-      <translation type="unfinished">Randament sistem</translation>
-    </message>
     <message id="settings_multirs_ac_out_phase">
       <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="162"/>
       <source>AC out %1</source>
       <extracomment>%1 = phase name (e.g. L1, L2, L3)</extracomment>
       <translation>Ieșire CA %1</translation>
-    </message>
-    <message id="settings_multirs_pv">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="190"/>
-      <source>PV</source>
-      <translation type="unfinished">PV</translation>
-    </message>
-    <message id="settings_multirs_total_pv_power">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="209"/>
-      <source>Total PV Power</source>
-      <translation type="unfinished">Putere totala PV</translation>
     </message>
     <message id="settings_multirs_trackers">
       <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="216"/>
@@ -8797,22 +8889,22 @@ După adăugarea/activarea unei noi rețele, trebuie să o aprobați o dată în
       <translation>Înapoi</translation>
     </message>
     <message id="welcome_whatsnew">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="35"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="34"/>
       <source>What's New</source>
       <translation>Ce este nou</translation>
     </message>
     <message id="welcome_skip">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="45"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="44"/>
       <source>Skip</source>
       <translation>Salt</translation>
     </message>
     <message id="welcome_landing_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="64"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="63"/>
       <source>Welcome!</source>
       <translation>Bine ați venit!</translation>
     </message>
     <message id="welcome_landing_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="70"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="69"/>
       <source>We’re excited to introduce a completely redesigned interface that enhances both the usability and aesthetics of your GX.
 
 With streamlined navigation and a fresh look, everything you love is now even easier to access and more visually appealing.</source>
@@ -8821,73 +8913,63 @@ With streamlined navigation and a fresh look, everything you love is now even ea
 Cu o navigare simplificată și un aspect nou, tot ceea ce vă place este acum și mai ușor de accesat și mai atrăgător din punct de vedere vizual.</translation>
     </message>
     <message id="welcome_colors_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="74"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="73"/>
       <source>Dark - light mode</source>
       <translation>Mod întunecat - luminos</translation>
     </message>
     <message id="welcome_colors_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="78"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="77"/>
       <source>Different environments call for different display settings. Dark and Light Modes ensure the best viewing experience no matter where you are.</source>
       <translation>Mediile diferite necesită setări de afișare diferite. Modurile întuneric și lumină asigură cea mai bună experiență de vizionare, indiferent de locul în care vă aflați.</translation>
     </message>
-    <message id="welcome_brief_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="82"/>
-      <source>Brief</source>
-      <translation type="unfinished">Pe scurt</translation>
-    </message>
     <message id="welcome_brief_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="87"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="86"/>
       <source>All the key information you need, presented in a clean and simple layout. The centerpiece is a customizable widget featuring rings, giving you quick access to your system insights at a glance.</source>
       <translation>Toate informațiile cheie de care aveți nevoie, prezentate într-un aspect simplu și curat. Piesa centrală este un widget personalizabil cu inele, care vă oferă acces rapid la informațiile despre sistem dintr-o singură privire.</translation>
     </message>
-    <message id="welcome_overview_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="91"/>
-      <source>Overview</source>
-      <translation type="unfinished">Sitem</translation>
-    </message>
     <message id="welcome_overview_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="95"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="94"/>
       <source>Gain greater control with our updated Overview panel, featuring real-time system data — all in one place for easy monitoring.</source>
       <translation>Obțineți un control sporit cu panoul nostru de prezentare actualizat, care oferă date în timp real despre sistem - toate într-un singur loc pentru o monitorizare ușoară.</translation>
     </message>
     <message id="welcome_controls_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="99"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="98"/>
       <source>Controls</source>
       <translation>Controale</translation>
     </message>
     <message id="welcome_controls_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="102"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="101"/>
       <source>All the day to day controls are now combined together in the new Controls pane. Accessible from anywhere by tapping the dedicated button on top left of the display.</source>
       <translation>Toate comenzile de zi cu zi sunt acum combinate în noul panou de Comenzi. Accesibil de oriunde prin atingerea butonului dedicat din stânga sus a ecranului.</translation>
     </message>
     <message id="welcome_units_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="106"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="105"/>
       <source>Watts &amp; Amps</source>
       <translation>Watts &amp; Amperi</translation>
     </message>
     <message id="welcome_units_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="110"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="109"/>
       <source>You can now switch between Watts and Amps. Choose the unit that best fits your preference.</source>
       <translation>Acum puteți comuta între wați și amperi. Alegeți unitatea care se potrivește cel mai bine preferințelor dvs.</translation>
     </message>
     <message id="welcome_more_title">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="114"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="113"/>
       <source>Learn more</source>
       <translation>Aflați mai multe</translation>
     </message>
     <message id="welcome_more_text_wasm">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="119"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="118"/>
       <source>Access the link below to find out more about the Renewed UI.&lt;br /&gt;&lt;br /&gt;&lt;a href="%1"&gt;%1&lt;/a&gt;</source>
       <extracomment>%1 = link to URL with more information</extracomment>
       <translation>Accesați link-ul de mai jos pentru a afla mai multe despre IU reînnoită.&lt;br /&gt;&lt;br /&gt;&lt;a href="%1"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message id="welcome_more_text">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="121"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="120"/>
       <source>Scan the QR code to find out more about the Renewed UI.</source>
       <translation>Scanați codul QR pentru a afla mai multe despre IU reînnoită.</translation>
     </message>
     <message id="welcome_done">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="137"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="136"/>
       <source>Done</source>
       <translation type="unfinished">Efectuat</translation>
     </message>
@@ -8897,7 +8979,7 @@ Cu o navigare simplificată și un aspect nou, tot ceea ce vă place este acum �
       <translation>Efectuat</translation>
     </message>
     <message id="welcome_next">
-      <location filename="../../pages/welcome/WelcomeView.qml" line="139"/>
+      <location filename="../../pages/welcome/WelcomeView.qml" line="138"/>
       <source>Next</source>
       <translation>Următor</translation>
     </message>
@@ -8954,7 +9036,7 @@ Dispozitivul GX poate controla un singur grup electrogen conectat și îl ia pe 
       <translation>Altele</translation>
     </message>
     <message id="ac-in-modeldefault_energy_reverse_x">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="136"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="138"/>
       <source>Reversed Energy L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
       <translation>Energie L%1 inversată</translation>
@@ -8968,11 +9050,6 @@ Dispozitivul GX poate controla un singur grup electrogen conectat și îl ia pe 
       <location filename="../../src/enums.cpp" line="419"/>
       <source>Unsupported type: %1</source>
       <translation>Tip neacceptat: %1</translation>
-    </message>
-    <message id="switchable_output_press">
-      <location filename="../../components/SwitchableOutputDelegate.qml" line="299"/>
-      <source>Press</source>
-      <translation>Apăsați</translation>
     </message>
     <message id="output_aux_battery_service_changed_dcdc">
       <location filename="../../components/listitems/ListOutputBatteryRadioButtonGroup.qml" line="27"/>
@@ -8988,11 +9065,6 @@ Dispozitivul GX poate controla un singur grup electrogen conectat și îl ia pe 
       <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="177"/>
       <source>Gauge Display</source>
       <translation>Afișaj indicator</translation>
-    </message>
-    <message id="settings_minmax_speed">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="183"/>
-      <source>Speed</source>
-      <translation type="unfinished">Viteza</translation>
     </message>
     <message id="settings_minmax_time_to_go">
       <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="185"/>
@@ -9024,20 +9096,10 @@ Dispozitivul GX poate controla un singur grup electrogen conectat și îl ia pe 
       <source>Module Voltage</source>
       <translation>Tensiunea modulului</translation>
     </message>
-    <message id="page_switchable_output_name">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="35"/>
-      <source>Name</source>
-      <translation type="unfinished">Nume</translation>
-    </message>
     <message id="page_switchable_output_group">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="45"/>
       <source>Group</source>
       <translation>Grup</translation>
-    </message>
-    <message id="page_switchable_output_type">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="55"/>
-      <source>Type</source>
-      <translation type="unfinished">Tip</translation>
     </message>
     <message id="page_switchable_output_fuse_rating">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="72"/>
@@ -9045,17 +9107,17 @@ Dispozitivul GX poate controla un singur grup electrogen conectat și îl ia pe 
       <translation>Clasificare siguranță</translation>
     </message>
     <message id="boat_page_rpm">
-      <location filename="../../pages/boatpage/LargeCenterGauge.qml" line="158"/>
+      <location filename="../../pages/boat/LargeCenterGauge.qml" line="158"/>
       <source>RPM</source>
       <translation>Rotații pe minut</translation>
     </message>
     <message id="boat_page_motor_drive">
-      <location filename="../../pages/boatpage/MotorDriveGauges.qml" line="42"/>
+      <location filename="../../pages/boat/MotorDriveGauges.qml" line="41"/>
       <source>Motordrive</source>
       <translation>Motor</translation>
     </message>
     <message id="boat_page_time_to_go">
-      <location filename="../../pages/boatpage/TimeToGo.qml" line="56"/>
+      <location filename="../../pages/boat/TimeToGo.qml" line="55"/>
       <source>Time To Go</source>
       <translation>Timpul rămas</translation>
     </message>
@@ -9430,20 +9492,20 @@ Dispozitivul GX poate controla un singur grup electrogen conectat și îl ia pe 
       <translation>Documentație</translation>
     </message>
     <message id="common_words_ac_input_number">
-      <location filename="../../components/CommonWords.qml" line="572"/>
+      <location filename="../../components/CommonWords.qml" line="578"/>
       <source>AC input %1</source>
       <extracomment>%1 = number of the AC input</extracomment>
       <translation>Intrare AC %1</translation>
-    </message>
-    <message id="settings_security_profile_password_incorrect_length">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
-      <source>Password needs to be at least 8 characters long</source>
-      <translation type="unfinished">Parola trebuie să aibă cel puțin 8 caractere</translation>
     </message>
     <message id="settings_security_profile_change_password_title">
       <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
       <source>Changing the GX Password</source>
       <translation>Schimbarea parolei GX</translation>
+    </message>
+    <message id="modaldialog_confirm">
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
+      <source>Confirm</source>
+      <translation type="unfinished">Confirmați</translation>
     </message>
     <message id="settings_security_profile_change_password_description">
       <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="79"/>
@@ -9494,12 +9556,12 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <translation>Conectați acest dispozitiv GX la contul dvs. Tailscale</translation>
     </message>
     <message id="settings_dvcc_control_mk3_usb_inverter_charger_system">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="234"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="233"/>
       <source>Control MK3-USB connected inverter/charger system</source>
       <translation>Controlează sistemul invertor/încărcător conectat MK3-USB</translation>
     </message>
     <message id="settings_dvcc_control_mk3_usb_inverter_charger_system_caption">
-      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="239"/>
+      <location filename="../../pages/settings/PageSettingsDvcc.qml" line="238"/>
       <source>Enable this setting when having a secondary MultiPlus or Quattro system powered by the same battery bank as the main inverter/charger system. When this setting is enabled, this secondary system will use the CVL and DCL parameters of the selected BMS.</source>
       <translation>Activați această setare când aveți un sistem secundar MultiPlus sau Quattro alimentat de aceeași bancă de baterii ca și sistemul invertor/încărcător principal. Când această setare este activată, acest sistem secundar va utiliza parametrii CVL și DCL ai BMS-ului selectat.</translation>
     </message>
@@ -9545,7 +9607,7 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <translation>Niciun modem celular conectat</translation>
     </message>
     <message id="ess_active_soc_limit">
-      <location filename="../../pages/controlcards/ESSCard.qml" line="86"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="85"/>
       <source>Active SOC Limit: %1%</source>
       <translation>Limită SOC activă: %1%</translation>
     </message>
@@ -9659,10 +9721,10 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>Installed and enabled, disables at next boot</source>
       <translation>Instalat și activat, se dezactivează la următoarea pornire</translation>
     </message>
-    <message id="pagesettingssupportstate_firmware_online_check_failed">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="156"/>
-      <source>Error while checking for firmware updates</source>
-      <translation type="unfinished">Eroare în timpul verificării actualizărilor de firmware</translation>
+    <message id="pagesettingssupportstate_firmware_checking">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="153"/>
+      <source>Checking...</source>
+      <translation type="unfinished">Se verifica...</translation>
     </message>
     <message id="pagesettingssupportstate_firmware_unknown">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="166"/>
@@ -9711,11 +9773,6 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>File system (rootfs) status</source>
       <translation>Stare sistem de fișiere (rootfs)</translation>
     </message>
-    <message id="pagesettingssupportstate_firmware">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="352"/>
-      <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
-    </message>
     <message id="pagesettingssupportstate_latest_official_firmware_installed">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="368"/>
       <source>Latest official firmware version installed?</source>
@@ -9726,20 +9783,10 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>Disable also custom startup scripts?</source>
       <translation>Dezactivați și scripturile de pornire personalizate?</translation>
     </message>
-    <message id="pagesettingssupportstate_modbus_tcp_server">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="453"/>
-      <source>Modbus TCP Server</source>
-      <translation type="unfinished">Server Modbus TCP</translation>
-    </message>
-    <message id="pagesettingssupportstate_signal_k">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="465"/>
-      <source>Signal K</source>
-      <translation type="unfinished">Server de Signal K</translation>
-    </message>
-    <message id="pagesettingssupportstate_node_red">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="478"/>
-      <source>Node-RED</source>
-      <translation type="unfinished">Server de Node-RED</translation>
+    <message id="pagesettingssupportstate_integrations">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="448"/>
+      <source>Integrations</source>
+      <translation type="unfinished">Integrări</translation>
     </message>
     <message id="pagesettingssupportstate_orange_items_description">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="494"/>
@@ -9760,6 +9807,23 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="33"/>
       <source>Device Integrations</source>
       <translation>Integrări dispozitive</translation>
+    </message>
+    <message id="pagesettingsintegrations_modbus_tcp_server">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="208"/>
+      <source>Modbus TCP Server</source>
+      <translation type="unfinished">Server Modbus TCP</translation>
+    </message>
+    <message id="settings_large_signal_k">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="231"/>
+      <location filename="../../pages/settings/PageSettingsSignalK.qml" line="18"/>
+      <source>Signal K</source>
+      <translation type="unfinished">Server de Signal K</translation>
+    </message>
+    <message id="settings_large_node_red">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="246"/>
+      <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="17"/>
+      <source>Node-RED</source>
+      <translation type="unfinished">Server de Node-RED</translation>
     </message>
     <message id="settings_venusos_large_documentation">
       <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="272"/>
@@ -9800,11 +9864,6 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <location filename="../../data/Ess.qml" line="34"/>
       <source>Optimized without BatteryLife</source>
       <translation>Optimizat fără BatteryLife</translation>
-    </message>
-    <message id="ess_state_external_control">
-      <location filename="../../data/Ess.qml" line="41"/>
-      <source>External control</source>
-      <translation type="unfinished">Control extern</translation>
     </message>
     <message id="pagesettingssupportstate_support_state_check_below_red_orange">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="29"/>
@@ -9905,7 +9964,7 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <translation>Relee dispozitiv GX</translation>
     </message>
     <message id="ess_active_soc_limit_info">
-      <location filename="../../pages/controlcards/ESSCard.qml" line="94"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="93"/>
       <source>BatteryLife dynamically adjusts the minimum battery state of charge to prevent deep discharges and ensure regular full charges, helping to prolong battery life and maintain system reliability.</source>
       <translation>BatteryLife ajustează dinamic starea minimă de încărcare a bateriei pentru a preveni descărcările profunde și a asigura încărcări complete regulate, contribuind la prelungirea duratei de viață a bateriei și la menținerea fiabilității sistemului.</translation>
     </message>
@@ -9953,6 +10012,12 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>auto</source>
       <extracomment>Forced by app to %1</extracomment>
       <translation>automat</translation>
+    </message>
+    <message id="settings_remote_console_forced_by_vrm">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="92"/>
+      <source>VRM</source>
+      <extracomment>Forced by %2 to dark</extracomment>
+      <translation type="unfinished">VRM</translation>
     </message>
     <message id="settings_remote_console_forced_by_app">
       <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="95"/>
@@ -10085,39 +10150,17 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>Disabled</source>
       <translation type="unfinished">Dezactivat</translation>
     </message>
-    <message id="digitalinputs_type_bilgepump">
-      <location filename="../../src/enums.cpp" line="196"/>
-      <source>Bilge pump</source>
-      <translation type="unfinished">Pompa de santina</translation>
-    </message>
-    <message id="digitalinputs_type_generator">
-      <location filename="../../src/enums.cpp" line="214"/>
-      <source>Generator</source>
-      <translation type="unfinished">Generator</translation>
-    </message>
-    <message id="digitalinputs_state_no">
-      <location filename="../../src/enums.cpp" line="245"/>
-      <source>No</source>
+    <message id="digitalinputs_state_off">
+      <location filename="../../src/enums.cpp" line="237"/>
+      <source>Off</source>
       <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">Nu</translation>
+      <translation type="unfinished">Oprit</translation>
     </message>
-    <message id="digitalinputs_state_yes">
-      <location filename="../../src/enums.cpp" line="249"/>
-      <source>Yes</source>
+    <message id="digitalinputs_state_on">
+      <location filename="../../src/enums.cpp" line="241"/>
+      <source>On</source>
       <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">Da</translation>
-    </message>
-    <message id="digitalinputs_state_open">
-      <location filename="../../src/enums.cpp" line="253"/>
-      <source>Open</source>
-      <extracomment>Digital input open</extracomment>
-      <translation type="unfinished">Deschis</translation>
-    </message>
-    <message id="digitalinputs_state_closed">
-      <location filename="../../src/enums.cpp" line="257"/>
-      <source>Closed</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">Inchis</translation>
+      <translation type="unfinished">Pornit</translation>
     </message>
     <message id="digitalinputs_state_ok">
       <location filename="../../src/enums.cpp" line="261"/>
@@ -10137,39 +10180,21 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">Functioneaza</translation>
     </message>
-    <message id="digitalinputs_state_stopped">
-      <location filename="../../src/enums.cpp" line="273"/>
-      <source>Stopped</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">Oprit</translation>
-    </message>
-    <message id="pvinverter_statusCode_startup">
-      <location filename="../../src/enums.cpp" line="291"/>
-      <source>Startup (%1)</source>
-      <extracomment>PV inverter status code. %1 = the startup status number</extracomment>
-      <translation type="unfinished">Pornire (%1)</translation>
-    </message>
-    <message id="pvinverter_statusCode_standby">
-      <location filename="../../src/enums.cpp" line="299"/>
-      <source>Standby</source>
-      <extracomment>PV inverter status code</extracomment>
-      <translation type="unfinished">Asteptare</translation>
-    </message>
-    <message id="pvinverter_statusCode_error">
-      <location filename="../../src/enums.cpp" line="307"/>
-      <source>Error</source>
-      <extracomment>PV inverter status code</extracomment>
-      <translation type="unfinished">Eroare</translation>
-    </message>
-    <message id="solarchargers_state_off">
-      <location filename="../../src/enums.cpp" line="326"/>
-      <source>Off</source>
-      <translation type="unfinished">Oprit</translation>
-    </message>
-    <message id="switch_state_running">
-      <location filename="../../src/enums.cpp" line="358"/>
+    <message id="pvinverter_statusCode_running">
+      <location filename="../../src/enums.cpp" line="295"/>
       <source>Running</source>
+      <extracomment>PV inverter status code</extracomment>
       <translation type="unfinished">Functioneaza</translation>
+    </message>
+    <message id="solarchargers_state_external control">
+      <location filename="../../src/enums.cpp" line="347"/>
+      <source>External control</source>
+      <translation type="unfinished">Control extern</translation>
+    </message>
+    <message id="switch_state_over_temperature">
+      <location filename="../../src/enums.cpp" line="361"/>
+      <source>Over temperature</source>
+      <translation type="unfinished">Temperatura peste limita</translation>
     </message>
     <message id="switchable_output_temperature_setpoint">
       <location filename="../../src/enums.cpp" line="393"/>
@@ -10180,6 +10205,11 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <location filename="../../src/enums.cpp" line="396"/>
       <source>Stepped switch</source>
       <translation>Comutator în trepte</translation>
+    </message>
+    <message id="switchable_output_slave">
+      <location filename="../../src/enums.cpp" line="403"/>
+      <source>Slave</source>
+      <translation type="unfinished">Secundar</translation>
     </message>
     <message id="switchable_output_dropdown">
       <location filename="../../src/enums.cpp" line="407"/>
@@ -10201,8 +10231,8 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>Three-state switch</source>
       <translation>Comutator cu trei stări</translation>
     </message>
-    <message id="switchable_output_disabled">
-      <location filename="../../src/enums.cpp" line="449"/>
+    <message id="switchable_output_trip_low_voltage">
+      <location filename="../../src/enums.cpp" line="452"/>
       <source>Disabled</source>
       <translation type="unfinished">Dezactivat</translation>
     </message>
@@ -10226,100 +10256,87 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <source>Press to refresh</source>
       <translation>Apăsați pentru a reîmprospăta</translation>
     </message>
-    <message id="settings_radio_button_group_confirm">
-      <location filename="../../components/RadioButtonListPage.qml" line="120"/>
-      <source>Confirm</source>
-      <extracomment>Confirm password, and verify it if possible</extracomment>
-      <translation type="unfinished">Confirmați</translation>
-    </message>
-    <message id="settings_radio_button_enter_password">
-      <location filename="../../components/RadioButtonListPage.qml" line="135"/>
-      <source>Enter password</source>
-      <translation type="unfinished">Introduceți parola</translation>
-    </message>
-    <message id="alarm_level_alarm_only">
-      <location filename="../../components/listitems/ListAlarmLevelRadioButtonGroup.qml" line="13"/>
-      <source>Alarm only</source>
-      <translation type="unfinished">Doar alarma</translation>
-    </message>
-    <message id="alarm_level_alarms_and_warnings">
-      <location filename="../../components/listitems/ListAlarmLevelRadioButtonGroup.qml" line="15"/>
-      <source>Alarms &amp; warnings</source>
-      <translation type="unfinished">Alarma si avertizari</translation>
-    </message>
-    <message id="settings_firmware_checking">
-      <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="16"/>
-      <source>Checking...</source>
-      <translation type="unfinished">Se verifica...</translation>
-    </message>
-    <message id="settings_firmware_press_to_check">
-      <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="18"/>
-      <source>Press to check</source>
-      <translation type="unfinished">Apasa pentru a verifica</translation>
-    </message>
-    <message id="listitems_alarm_level_ok">
-      <location filename="../../components/listitems/core/ListAlarm.qml" line="17"/>
-      <source>OK</source>
-      <extracomment>Voltage alarm is at "OK" level</extracomment>
-      <translation type="unfinished">In regula</translation>
-    </message>
-    <message id="listitems_alarm_level_warning">
-      <location filename="../../components/listitems/core/ListAlarm.qml" line="21"/>
-      <source>Warning</source>
-      <extracomment>Voltage alarm is at "Warning" level</extracomment>
-      <translation type="unfinished">Avertisment</translation>
-    </message>
-    <message id="listitems_alarm_level_alarm">
-      <location filename="../../components/listitems/core/ListAlarm.qml" line="25"/>
-      <source>Alarm</source>
-      <extracomment>Voltage alarm is at "Alarm" level</extracomment>
-      <translation type="unfinished">Alarma</translation>
-    </message>
-    <message id="settings_radio_button_group_unknown">
-      <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
+    <message id="temperature_type_unknown">
+      <location filename="../../data/EnvironmentInputs.qml" line="66"/>
       <source>Unknown</source>
       <translation type="unfinished">Necunoscut</translation>
     </message>
-    <message id="overview_widget_acloads_title">
-      <location filename="../../components/widgets/AcLoadsWidget.qml" line="17"/>
-      <source>AC Loads</source>
-      <translation type="unfinished">Consumatori AC</translation>
-    </message>
-    <message id="overview_widget_dcloads_title">
-      <location filename="../../components/widgets/DcLoadsWidget.qml" line="24"/>
-      <source>DC Loads</source>
-      <translation type="unfinished">Consumatori DC</translation>
-    </message>
-    <message id="overview_widget_inverter_title">
-      <location filename="../../components/widgets/InverterChargerWidget.qml" line="31"/>
-      <source>Inverter / Charger</source>
-      <translation type="unfinished">Invertor/Încărcător</translation>
-    </message>
-    <message id="overview_widget_solaryield_title">
-      <location filename="../../components/widgets/SolarYieldWidget.qml" line="26"/>
+    <message id="brief_solar_yield">
+      <location filename="../../pages/BriefSidePanel.qml" line="25"/>
       <source>Solar yield</source>
       <translation type="unfinished">Producția de energie solară</translation>
     </message>
-    <message id="tank_status_short_circuited">
-      <location filename="../../data/Tanks.qml" line="177"/>
-      <source>Short circuited</source>
-      <translation type="unfinished">Scurtcircuitat</translation>
+    <message id="brief_dc_input">
+      <location filename="../../pages/BriefSidePanel.qml" line="213"/>
+      <source>DC input</source>
+      <translation type="unfinished">Intrare CC</translation>
     </message>
-    <message id="tank_status_reverse_polarity">
-      <location filename="../../data/Tanks.qml" line="180"/>
-      <source>Reverse polarity</source>
-      <translation type="unfinished">Polaritate inversata</translation>
+    <message id="brief_ac_loads">
+      <location filename="../../pages/BriefSidePanel.qml" line="254"/>
+      <source>AC Loads</source>
+      <translation type="unfinished">Consumatori AC</translation>
     </message>
-    <message id="settings_tcpip_connection_lost">
-      <location filename="../../pages/settings/PageSettingsEthernet.qml" line="24"/>
-      <location filename="../../pages/settings/PageSettingsTcpIp.qml" line="33"/>
-      <source>Connection lost</source>
-      <translation type="unfinished">Conexiune intrerupta</translation>
+    <message id="brief_dc_loads">
+      <location filename="../../pages/BriefSidePanel.qml" line="281"/>
+      <source>DC Loads</source>
+      <translation type="unfinished">Consumatori DC</translation>
     </message>
-    <message id="nav_boat">
-      <location filename="../../pages/boatpage/BoatPage.qml" line="15"/>
-      <source>Boat</source>
-      <translation type="unfinished">Ambarcatiune</translation>
+    <message id="nav_overview">
+      <location filename="../../pages/OverviewPage.qml" line="432"/>
+      <source>Overview</source>
+      <translation type="unfinished">Sitem</translation>
+    </message>
+    <message id="settings_state">
+      <location filename="../../pages/settings/PageCanbusStatus.qml" line="116"/>
+      <source>State</source>
+      <translation type="unfinished">Stare</translation>
+    </message>
+    <message id="inverter_pv">
+      <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="56"/>
+      <source>PV</source>
+      <translation type="unfinished">PV</translation>
+    </message>
+    <message id="inverter_total_yield">
+      <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="76"/>
+      <source>Total yield</source>
+      <translation type="unfinished">Randament total</translation>
+    </message>
+    <message id="inverter_system_yield">
+      <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="84"/>
+      <source>System yield</source>
+      <translation type="unfinished">Randament sistem</translation>
+    </message>
+    <message id="charger_total_pv_power">
+      <location filename="../../pages/solar/SolarDevicePage.qml" line="50"/>
+      <source>Total PV Power</source>
+      <translation type="unfinished">Putere totala PV</translation>
+    </message>
+    <message id="vebus_device_alarm_only">
+      <location filename="../../pages/vebusdevice/PageVeBusAlarmSettings.qml" line="18"/>
+      <source>Alarm only</source>
+      <translation type="unfinished">Doar alarma</translation>
+    </message>
+    <message id="vebus_device_alarms_and_warnings">
+      <location filename="../../pages/vebusdevice/PageVeBusAlarmSettings.qml" line="20"/>
+      <source>Alarms &amp; warnings</source>
+      <translation type="unfinished">Alarma si avertizari</translation>
+    </message>
+    <message id="vebus_device_alarm_group_warning">
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmGroup.qml" line="44"/>
+      <source>Warning</source>
+      <translation type="unfinished">Avertisment</translation>
+    </message>
+    <message id="load_delegate_status">
+      <location filename="../../pages/loads/LoadListDelegate.qml" line="66"/>
+      <source>Status: %1</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="venus_os_gui">
+      <location filename="../../Main.qml" line="17"/>
+      <source>Venus OS GUI</source>
+      <extracomment>Application title</extracomment>
+      <translation type="unfinished"/>
+      <extra-Context>only shown on desktop systems</extra-Context>
     </message>
   </context>
   <context>
@@ -11802,146 +11819,146 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
   <context>
     <name>QGuiApplication</name>
     <message>
-      <location filename="../../src/main.cpp" line="113"/>
+      <location filename="../../src/main.cpp" line="118"/>
       <source>Use D-Bus data source: connect to the specified D-Bus address.</source>
       <translation>Utilizați sursa de date D-Bus: conectați-vă la adresa D-Bus specificată.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="114"/>
+      <location filename="../../src/main.cpp" line="119"/>
       <source>address</source>
       <comment>D-Bus address</comment>
       <translation>adresa</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="119"/>
+      <location filename="../../src/main.cpp" line="124"/>
       <source>Use D-Bus data source: connect to the default D-Bus address</source>
       <translation>Utilizați sursa de date D-Bus: conectați-vă la adresa D-Bus standard</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="125"/>
+      <location filename="../../src/main.cpp" line="130"/>
       <source>Use MQTT data source: connect to the specified MQTT broker address.</source>
       <translation>Utilizați sursa de date MQTT: conectați-vă la adresa de broker MQTT specificată.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="126"/>
+      <location filename="../../src/main.cpp" line="131"/>
       <source>address</source>
       <comment>MQTT broker address</comment>
       <translation>adresa</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="132"/>
+      <location filename="../../src/main.cpp" line="137"/>
       <source>MQTT data source device portal id.</source>
       <translation>ID-ul portalului de dispozitiv al sursei de date MQTT.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="133"/>
+      <location filename="../../src/main.cpp" line="138"/>
       <source>portalId</source>
       <translation>ID portal</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="138"/>
+      <location filename="../../src/main.cpp" line="143"/>
       <source>MQTT VRM webhost shard</source>
       <translation>MQTT VRM webhost segment</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="139"/>
+      <location filename="../../src/main.cpp" line="144"/>
       <source>shard</source>
       <comment>MQTT VRM webhost shard</comment>
       <translation>segment</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="144"/>
+      <location filename="../../src/main.cpp" line="149"/>
       <source>MQTT data source username</source>
       <translation>Nume de utilizator sursă de date MQTT</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="145"/>
+      <location filename="../../src/main.cpp" line="150"/>
       <source>user</source>
       <comment>MQTT broker username.</comment>
       <translation>Utilizator</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="150"/>
+      <location filename="../../src/main.cpp" line="155"/>
       <source>MQTT data source password</source>
       <translation>Parola sursei de date MQTT</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="151"/>
+      <location filename="../../src/main.cpp" line="156"/>
       <source>pass</source>
       <comment>MQTT broker password.</comment>
       <translation>par</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="156"/>
+      <location filename="../../src/main.cpp" line="161"/>
       <source>MQTT data source token</source>
       <translation>Tokenul sursei de date MQTT</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="157"/>
+      <location filename="../../src/main.cpp" line="162"/>
       <source>token</source>
       <comment>MQTT broker auth token.</comment>
       <translation>token</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="162"/>
+      <location filename="../../src/main.cpp" line="167"/>
       <source>Enable FPS counter</source>
       <translation>Activează contorul FPS</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="167"/>
+      <location filename="../../src/main.cpp" line="172"/>
       <source>Skip splash screen</source>
       <translation>Omite ecranul de întâmpinare</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="172"/>
+      <location filename="../../src/main.cpp" line="177"/>
       <source>Use mock data source for testing.</source>
       <translation>Utilizați o sursă de date simulată pentru testare.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="177"/>
+      <location filename="../../src/main.cpp" line="182"/>
       <source>Name of mock configuration</source>
       <translation>Numele configurației simulate</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="178"/>
+      <location filename="../../src/main.cpp" line="183"/>
       <source>mockConfig</source>
       <comment>Configuration name</comment>
       <translation>mockConfig</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="184"/>
+      <location filename="../../src/main.cpp" line="189"/>
       <source>Set to disable mock timers on startup</source>
       <translation>Setat pentru a dezactiva cronometrele simulate la pornire</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="189"/>
+      <location filename="../../src/main.cpp" line="194"/>
       <source>Node-RED URL</source>
       <translation>URL Node-RED</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="190"/>
+      <location filename="../../src/main.cpp" line="195"/>
       <source>url</source>
       <comment>Node-RED URL</comment>
       <translation>url</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="195"/>
+      <location filename="../../src/main.cpp" line="200"/>
       <source>Signal K URL</source>
       <translation>URL Signal K</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="196"/>
+      <location filename="../../src/main.cpp" line="201"/>
       <source>url</source>
       <comment>Signal K URL</comment>
       <translation>url</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="201"/>
+      <location filename="../../src/main.cpp" line="206"/>
       <source>Color scheme (dark, light, auto, default)</source>
       <translation>Schema de culori (întunecată, deschisă, auto, implicită)</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="202"/>
+      <location filename="../../src/main.cpp" line="207"/>
       <source>scheme</source>
       <comment>Color scheme value</comment>
       <translation>scheme</translation>
@@ -12664,6 +12681,119 @@ vă rugăm să așteptați sau să verificați conexiunea la internet</translati
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="17"/>
       <source>Easter Island Standard Time</source>
       <translation>Ora standard a Insulei Paștelui</translation>
+    </message>
+  </context>
+  <context>
+    <name>VebusError</name>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="10"/>
+      <source>Device switched off</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="13"/>
+      <source>Mixed old/new MK2</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="16"/>
+      <source>Expected devices error</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="19"/>
+      <source>No other device detected</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="22"/>
+      <source>Overvoltage on AC-out</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="25"/>
+      <source>DDC program error</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="28"/>
+      <source>VE.Bus BMS without assistant</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="31"/>
+      <source>Ground relay test failed</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="34"/>
+      <source>System time sync error</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="37"/>
+      <source>Grid relay test fault</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="40"/>
+      <source>Config mismatch with 2nd mcu</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="43"/>
+      <source>Device transmit error</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="46"/>
+      <source>Awaiting configuration or dongle missing</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="49"/>
+      <source>Phase master missing</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="52"/>
+      <source>Overvoltage has occurred</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="55"/>
+      <source>Slave does not have AC input!</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="58"/>
+      <source>Device can't be slave</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="61"/>
+      <source>System protection initiated</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="64"/>
+      <source>Firmware incompatibiltiy</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="67"/>
+      <source>Internal error</source>
+      <translation type="unfinished">Eroare interna</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="70"/>
+      <source>Failing relay test prevents connection</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="73"/>
+      <source>VE.Bus error</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>

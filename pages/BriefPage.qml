@@ -373,7 +373,7 @@ SwipeViewPage {
 	}
 
 	Connections {
-		target: !!Global.pageManager ? Global.pageManager.statusBar : null
+		target: Global.mainView?.statusBar ?? null
 		enabled: root.isCurrentPage
 
 		function onRightButtonClicked() {
@@ -454,7 +454,6 @@ SwipeViewPage {
 		Transition {
 			to: "panelOpening"
 			from: "initialized"
-			enabled: Global.allPagesLoaded
 			SequentialAnimation {
 				NumberAnimation {
 					target: root
@@ -473,7 +472,6 @@ SwipeViewPage {
 		Transition {
 			to: "initialized"
 			from: "panelOpened"
-			enabled: Global.allPagesLoaded
 			SequentialAnimation {
 				NumberAnimation {
 					target: sidePanel

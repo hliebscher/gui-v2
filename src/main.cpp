@@ -10,6 +10,10 @@
 #include "src/mockmanager.h"
 #include "src/frameratemodel.h"
 
+#if VENUS_GX_BUILD
+#include "src/urlinterceptor.h"
+#endif
+
 #if defined(VENUS_WEBASSEMBLY_BUILD)
 #include <emscripten/html5.h>
 #include <emscripten/val.h>
@@ -448,6 +452,9 @@ int main(int argc, char *argv[])
 	bool skipSplashScreen = false;
 
 	QQmlEngine engine;
+#if VENUS_GX_BUILD
+	engine.addUrlInterceptor(new Victron::VenusOS::UrlInterceptor());
+#endif
 	QZXing::registerQMLTypes();
 	QZXing::registerQMLImageProvider(engine);
 
@@ -481,6 +488,12 @@ int main(int argc, char *argv[])
 
 	QScopedPointer<QObject> object(component.beginCreate(engine.rootContext()));
 	const auto window = qobject_cast<QQuickWindow *>(object.data());
+#if defined(VENUS_DESKTOP_BUILD) || defined(VENUS_GX_BUILD_AARCH64) || defined(VENUS_WEBASSEMBLY_BUILD)
+	// CerboGX doesn't support multisample render buffers; other platforms do.
+	QSurfaceFormat format = window->format();
+	format.setSamples(4); // enable MSAA
+	window->setFormat(format);
+#endif
 
 #if defined(VENUS_WEBASSEMBLY_BUILD)
 	QObject::connect(window, &QQuickWindow::activeFocusItemChanged, [window] {
@@ -498,11 +511,6 @@ int main(int argc, char *argv[])
 	fpsCounter->setWindow(window);
 	fpsCounter->setEnabled(enableFpsCounter);
 
-#if defined(VENUS_DESKTOP_BUILD)
-	QSurfaceFormat format = window->format();
-	format.setSamples(4); // enable MSAA
-	window->setFormat(format);
-#endif
 	engine.setIncubationController(window->incubationController());
 
 	/* Write to window properties here to perform any additional initialization

@@ -85,6 +85,8 @@ VisibleItemModel {
 	ListQuantityGroup {
 		//% "AC Totals"
 		text: qsTrId("ac-in-modeldefault_ac_totals")
+		preferredVisible: root.phaseNumbers.length > 1
+
 		model: QuantityObjectModel {
 			QuantityObject { object: totalPower; unit: VenusOS.Units_Watt }
 			QuantityObject { object: totalEnergy; unit: VenusOS.Units_Energy_KiloWattHour; defaultValue: "--" }
@@ -117,6 +119,8 @@ VisibleItemModel {
 				//: %1 = phase number (1-3)
 				//% "Energy L%1"
 				text: qsTrId("ac-in-modeldefault_energy_x").arg(modelData)
+				valueColor: Theme.color_quantityTable_quantityValue
+				unitColor: Theme.color_quantityTable_quantityUnit
 				dataItem.uid: "%1/Ac/L%2/Energy/Forward".arg(root.bindPrefix).arg(modelData)
 				unit: VenusOS.Units_Energy_KiloWattHour
 				preferredVisible: root.phaseCountKnown || dataItem.valid
@@ -134,6 +138,8 @@ VisibleItemModel {
 				//: %1 = phase number (1-3)
 				//% "Reversed Energy L%1"
 				text: qsTrId("ac-in-modeldefault_energy_reverse_x").arg(modelData)
+				valueColor: Theme.color_quantityTable_quantityValue
+				unitColor: Theme.color_quantityTable_quantityUnit
 				dataItem.uid: "%1/Ac/L%2/Energy/Reverse".arg(root.bindPrefix).arg(modelData)
 				unit: VenusOS.Units_Energy_KiloWattHour
 				preferredVisible: root.phaseCountKnown || dataItem.valid

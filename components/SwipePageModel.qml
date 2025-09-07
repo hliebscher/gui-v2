@@ -1,7 +1,7 @@
 import QtQuick
 import QtQml.Models
 import Victron.VenusOS
-import Victron.BoatPageComponents as BoatPageComponents
+import Victron.Boat as Boat
 
 ObjectModel {
 	id: root
@@ -12,14 +12,14 @@ ObjectModel {
 	readonly property bool environmentInputCount: Global.environmentInputs ? Global.environmentInputs.model.count : 0
 
 	readonly property Component boatPage: Component {
-		BoatPageComponents.BoatPage {
+		Boat.BoatPage {
 			view: root.view
 		}
 	}
 	readonly property VeQuickItem showBoatPage: VeQuickItem {
 		uid: !!Global.systemSettings ? Global.systemSettings.serviceUid + "/Settings/Gui/ElectricPropulsionUI/Enabled" : ""
 		onValueChanged: {
-			if (!_completed) {
+			if (!completed) {
 				return
 			}
 
@@ -38,7 +38,7 @@ ObjectModel {
 	}
 	property LevelsPage levelsPage
 
-	property bool _completed: false
+	property bool completed: false
 
 	BriefPage {
 		view: root.view
@@ -78,11 +78,11 @@ ObjectModel {
 			insert(0, boatPage.createObject(parent))
 		}
 
-		_completed = true
+		completed = true
 	}
 
 	onShowLevelsPageChanged: {
-		if (!_completed) {
+		if (!completed) {
 			return
 		}
 

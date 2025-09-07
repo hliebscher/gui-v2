@@ -60,13 +60,6 @@ public:
 	};
 	Q_ENUM(StatusBar_RightButton)
 
-	enum SpinBox_FocusMode {
-		SpinBox_FocusMode_NoAction,
-		SpinBox_FocusMode_Navigate,
-		SpinBox_FocusMode_Edit
-	};
-	Q_ENUM(SpinBox_FocusMode)
-
 	enum Units_Type {
 		Units_None = 0,
 		Units_Volume_CubicMetre,
@@ -573,6 +566,7 @@ public:
 	Q_ENUM(CanBusConfig_Type)
 
 	enum Relay_Function {
+		Relay_Function_Disabled = -1,
 		Relay_Function_Alarm = 0,
 		Relay_Function_GeneratorStartStop,
 		Relay_Function_Manual,

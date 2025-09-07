@@ -4,6 +4,7 @@
 */
 import QtQuick
 import Victron.VenusOS
+import QtQuick.Templates as CT
 
 BaseListItem {
 	id: root
@@ -173,16 +174,17 @@ BaseListItem {
 					return true
 				case Qt.Key_Up:
 				case Qt.Key_Down:
-					// Prevent key navigation to other grid delegates while in edit mode.
-					return true
+					if (activeFocus) {
+						// Prevent key navigation to other grid delegates while in edit mode.
+						return true
+					}
+					break
 				}
 				return false
 			}
 
 			function _toggleState() {
-				if (!dimmingState.busy) {
-					dimmingState.writeValue(output.state === 0 ? 1 : 0)
-				}
+				dimmingState.writeValue(output.state === 0 ? 1 : 0)
 			}
 
 			width: root._buttonWidth
@@ -195,12 +197,10 @@ BaseListItem {
 			stepSize: 1
 			state: dimmingState.expectedValue
 
-			// On the MQTT backend, many consecutive changes can create a huge queue of backend
-			// changes. Avoid this by preventing changes until the backend is in sync.
-			enabled: !dimmingValue.busy || dragging
-
 			onDraggingChanged: {
-				if (!dragging) {
+				if (dragging) {
+					delayedSliderUpdate.stop()
+				} else {
 					dimmingValue.syncBackendValueToSlider()
 				}
 			}
@@ -262,6 +262,9 @@ BaseListItem {
 				onBusyChanged: if (!busy) syncBackendValueToSlider()
 			}
 
+			// When the slider is released, wait a second for the user value to sync to the backend,
+			// else the user will release the slider and then immediately see it jump several times
+			// as the backend catches up to the last written value.
 			Timer {
 				id: delayedSliderUpdate
 				interval: 1000
@@ -278,10 +281,7 @@ BaseListItem {
 
 			function handlePress(key) {
 				if (key === Qt.Key_Space) {
-					// Write state=1 (on) if no other write is in progress.
-					if (!momentaryState.busy) {
-						momentaryState.writeValue(1)
-					}
+					momentaryState.writeValue(1)
 					return true
 				}
 				return false
@@ -301,14 +301,14 @@ BaseListItem {
 			width: root._buttonWidth
 			height: Theme.geometry_switchableoutput_button_height
 
-			// Disable if a write is in progress, unless expecting mouse/key release.
-			enabled: !momentaryState.busy || momentaryState.expectedValue === 1
-
 			// Show as checked, when pressing or backend indicates it is pressed
 			checked: momentaryState.expectedValue === 1
 				// Or when waiting for a release to be synced, else the button text flickers between
 				// "On" and "Pressed" on Wasm when there is a delay between release and sync.
 				|| momentaryState.busy
+
+			// Only show the press effect when the backend has written the state succesfully.
+			pressEffectRunning: momentaryState.backendValue === 1
 
 			// Do not give focus to the control when clicked/tabbed, as it has no edit mode.
 			focusPolicy: Qt.NoFocus
@@ -328,46 +328,31 @@ BaseListItem {
 	Component {
 		id: toggleComponent
 
-		SegmentedButtonRow {
-			id: buttonRow
+		ToggleButtonRow {
+			id: toggleButtonRow
 
 			function handlePress(key) {
 				if (key === Qt.Key_Space && enabled) {
-					// Toggle the currentIndex between 0 and 1.
-					activateIndex(currentIndex === 0 ? 1 : 0)
+					toggleState.writeValue(toggleState.backendValue === 1 ? 0 : 1)
 					return true
 				}
 				return false
 			}
 
-			function activateIndex(index) {
-				const newValue = index === 1 ? 1 : 0
-				if (newValue !== toggleState.backendValue) {
-					currentIndex = index
-					toggleState.writeValue(newValue)
-				}
-			}
-
 			width: root._buttonWidth
 			height: Theme.geometry_switchableoutput_button_height
-			fontPixelSize: Theme.font_size_body1
-			model: [{ "value": CommonWords.off, "selectedBackgroundColor": Theme.color_button_off_background },
-				{ "value": CommonWords.on, "selectedBackgroundColor": Theme.color_button_on_background }]
-			enabled: !toggleState.busy
+			on: toggleState.expectedValue === 1
 
-			// Do not give focus to the control when clicked/tabbed, as it has no edit mode.
+			// Do not focus the internal buttons when clicked, as this control has no edit mode.
 			focusPolicy: Qt.NoFocus
 
-			onButtonClicked: (buttonIndex) => {
-				activateIndex(buttonIndex)
-			}
+			onOnClicked: toggleState.writeValue(1)
+			onOffClicked: toggleState.writeValue(0)
 
 			SettingSync {
 				id: toggleState
 				backendValue: output.state
 				onUpdateToBackend: (value) => { output.setState(value) }
-				onBackendValueChanged: buttonRow.currentIndex = backendValue === 1 ? 1 : 0
-				Component.onCompleted: buttonRow.currentIndex = backendValue === 1 ? 1 : 0
 			}
 		}
 	}
@@ -414,7 +399,6 @@ BaseListItem {
 			}
 
 			width: root._buttonWidth
-			enabled: !dropdownSync.busy
 			onActivated: (index) => dropdownSync.writeValue(index)
 
 			// Process key events in edit mode.
@@ -450,13 +434,17 @@ BaseListItem {
 
 			SettingSync {
 				id: dropdownSync
-				backendValue: dropdownSelection.value
-				onUpdateToBackend: (value) => { dropdownSelection.setValue(Math.floor(value)) }
-				onBackendValueChanged: {
+
+				function syncValueToDropdown() {
 					if (backendValue >= 0 && backendValue < dropdown.count) {
 						dropdown.currentIndex = Math.floor(backendValue)
 					}
 				}
+
+				backendValue: dropdownSelection.value
+				onUpdateToBackend: (value) => { dropdownSelection.setValue(Math.floor(value)) }
+				onBackendValueChanged: syncValueToDropdown()
+				onTimeout: syncValueToDropdown()
 			}
 
 			VeQuickItem {
@@ -492,12 +480,113 @@ BaseListItem {
 	Component {
 		id: unrangedSetpointComponent
 
-		PlaceholderDelegate {}
+		MiniSpinBox {
+			id: spinBox
+
+			function handlePress(key) {
+				// Enter edit mode when space is pressed.
+				switch (key) {
+				case Qt.Key_Space:
+					focus = true
+					return true
+				default:
+					return false
+				}
+			}
+
+			width: root._buttonWidth
+			height: Theme.geometry_switchableoutput_button_height
+			editable: !Global.isGxDevice // no room for VKB in the switch pane
+			suffix: unrangedUnit.value ?? ""
+			from: decimalConverter.intFrom
+			to: decimalConverter.intTo
+			stepSize: decimalConverter.intStepSize
+			value: decimalConverter.decimalToInt(unrangedValueSync.backendValue)
+			textFromValue: (value, locale) => decimalConverter.textFromValue(value)
+			valueFromText: (text, locale) => {
+				const v = decimalConverter.valueFromText(text)
+				return isNaN(v) ? decimalConverter.decimalToInt(unrangedValueSync.backendValue) : v
+			}
+			onValueModified: {
+				// Update the /Dimming value to the user-entered value.
+				unrangedValueSync.writeValue(decimalConverter.intToDecimal(value))
+			}
+
+			VeQuickItem {
+				id: unrangedMin
+				uid: root.outputUid + "/Settings/DimmingMin"
+			}
+			VeQuickItem {
+				id: unrangedMax
+				uid: root.outputUid + "/Settings/DimmingMax"
+			}
+			VeQuickItem {
+				id: unrangedStepSize
+				uid: root.outputUid + "/Settings/StepSize"
+			}
+			VeQuickItem {
+				id: unrangedUnit
+				uid: root.outputUid + "/Settings/Unit"
+			}
+
+			SpinBoxDecimalConverter {
+				id: decimalConverter
+
+				decimals: 2
+				from: unrangedMin.valid ? unrangedMin.value : 0
+				to: unrangedMax.valid ? unrangedMax.value : 100
+				stepSize: unrangedStepSize.valid ? unrangedStepSize.value : 1
+			}
+
+			SettingSync {
+				id: unrangedValueSync
+				backendValue: output.dimming
+				onUpdateToBackend: (value) => { output.setDimming(value) }
+				onTimeout: spinBox.value = decimalConverter.decimalToInt(backendValue)
+			}
+		}
 	}
 
 	Component {
 		id: threeStateSwitchComponent
 
-		PlaceholderDelegate {}
+		AutoToggleButton {
+			id: autoToggleButton
+
+			function handlePress(key) {
+				switch (key) {
+				case Qt.Key_Space:
+					focus = true
+					return true
+				}
+				return false
+			}
+
+			height: Theme.geometry_switchableoutput_button_height
+			width: root._buttonWidth
+			enabled: !toggleState.busy || !autoToggleState.busy
+			onChecked: toggleState.backendValue === 1
+			autoChecked: autoToggleState.backendValue
+			onOnClicked: toggleState.writeValue(1)
+			onOffClicked: toggleState.writeValue(0)
+			onAutoClicked: autoToggleState.writeValue(autoToggleState.backendValue === 1 ? 0 : 1)
+
+			SettingSync {
+				id: autoToggleState
+				backendValue: autoState.value
+				onUpdateToBackend: (value) => { autoState.setValue(value) }
+			}
+
+			VeQuickItem {
+				id: autoState
+				uid: root.outputUid + "/Auto"
+			}
+
+			SettingSync {
+				id: toggleState
+				backendValue: output.state
+				onUpdateToBackend: (value) => { output.setState(value) }
+			}
+		}
 	}
 }

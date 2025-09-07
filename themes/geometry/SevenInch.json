@@ -13,6 +13,8 @@
     "geometry_flickable_maximumFlickVelocity": 2500,
     "geometry_flickable_flickDeceleration": 2500,
 
+    "geometry_autotoggle_button_spacing": 10,
+
     "geometry_barGauge_vertical_width_large": 8,
     "geometry_barGauge_vertical_width_small": 4,
     "geometry_barGauge_horizontal_height": 10,
@@ -77,7 +79,6 @@
     "geometry_spinBox_indicator_maximumWidth": 136,
     "geometry_spinBox_indicator_height": 64,
     "geometry_spinBox_indicator_radius": 6,
-    "geometry_spinBox_spacing": "geometry_button_spacing",
 
     "geometry_switch_container_width": 48,
     "geometry_switch_container_height": 24,

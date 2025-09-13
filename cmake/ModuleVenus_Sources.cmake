@@ -64,6 +64,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/LoadGraph.qml
     components/LoadGraphShapePath.qml
     components/KeyNavigationListHelper.qml
+    components/MultiStepButton.qml
     components/NavBar.qml
     components/NavButton.qml
     components/NetworkServices.qml
@@ -396,7 +397,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsSupportStatus.qml
     pages/settings/PageSettingsSystem.qml
     pages/settings/PageSettingsSystemStatus.qml
-    pages/settings/PageSettingsTailscale.qml
     pages/settings/PageSettingsTankPump.qml
     pages/settings/PageSettingsTcpIp.qml
     pages/settings/PageSettingsVecanDevice.qml

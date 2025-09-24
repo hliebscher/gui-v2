@@ -12,9 +12,7 @@ QtObject {
 	property var main
 	property var pageManager
 	property var mainView
-	property VeQItemTableModel dataServiceModel: null
 	property var firmwareUpdate
-	property var allDevicesModel
 	property bool applicationActive: true
 	property bool keyNavigationEnabled
 
@@ -80,9 +78,7 @@ QtObject {
 		// as main will never be destroyed during the ui rebuild.
 		pageManager = null
 		mainView = null
-		dataServiceModel = null
 		firmwareUpdate = null
-		allDevicesModel = null
 		dialogLayer = null
 		notificationLayer = null
 
@@ -112,6 +108,22 @@ QtObject {
 	}
 
 	readonly property IntValidator _intValidator: IntValidator {
+	}
+
+	readonly property VeQuickItem _customisations: VeQuickItem {
+		// Only listen to the customisations MQTT path in WASM.
+		// GX and Desktop builds read customisations from filesystem instead.
+		// TODO: update the path to the correct MQTT-only path once it is decided.
+		uid: (Qt.platform.os === "wasm" && systemSettings && systemSettings.serviceUid.length > 0)
+			? systemSettings.serviceUid + "/Gui2/Customisations"
+			: ""
+		property string json: valid && BackendConnection.state === BackendConnection.Ready ? value : "[]"
+		onJsonChanged: {
+			// don't unload customisations if we lose backend data connection.
+			if (Qt.platform.os === "wasm" && BackendConnection.state === BackendConnection.Ready) {
+				Customisations.customisationsJson = Global._customisations.json
+			}
+		}
 	}
 }
 

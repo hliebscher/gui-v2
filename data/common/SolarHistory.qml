@@ -9,17 +9,14 @@ import Victron.VenusOS
 QtObject {
 	id: root
 
-	property string bindPrefix
-	property string deviceName
-	property int trackerCount
+	// The uid of the solarcharger/multi/inverter service
+	required property string serviceUid
+
+	readonly property int trackerCount: _nrOfTrackers.valid ? _nrOfTrackers.value
+		// For solarcharger services, assume trackerCount=1 if /NrOfTrackers is not set.
+		: (BackendConnection.serviceTypeFromUid(serviceUid) === "solarcharger" ? 1 : 0)
 	readonly property int daysAvailable: _veHistoryCount.valid ? _veHistoryCount.value : 0
-	readonly property bool valid: _veHistoryCount.valid && _veHistoryCount.value > 0
-
-	property SolarHistoryErrorModel errorModel: SolarHistoryErrorModel {
-		uidPrefix: root.bindPrefix + "/History/Overall"
-	}
-
-	signal yieldUpdatedForDay(day: int, yieldKwh: real)
+	readonly property bool ready: daysAvailable === _historyObjects.count
 
 	function dailyHistory(day) {
 		return _historyObjects.dailyHistory(day)
@@ -27,20 +24,6 @@ QtObject {
 
 	function dailyTrackerHistory(day, trackerIndex) {
 		return _historyObjects.dailyTrackerHistory(day, trackerIndex)
-	}
-
-	function trackerName(trackerIndex, format) {
-		const nameObject = _trackerNames.objectAt(trackerIndex)
-		const name = nameObject ? nameObject.value || "" : ""
-		return Global.solarInputs.formatTrackerName(name, trackerIndex, trackerCount, deviceName, format)
-	}
-
-	readonly property Instantiator _trackerNames: Instantiator {
-		model: root.trackerCount
-		delegate: VeQuickItem {
-			required property int index
-			uid: root.bindPrefix + "/Pv/" + index + "/Name"
-		}
 	}
 
 	readonly property Instantiator _historyObjects: Instantiator {
@@ -72,28 +55,13 @@ QtObject {
 				}
 			}
 
-			property bool _completed
-
 			// uid is e.g. com.victronenergy.root.tty0/History/Daily/<day>
-			uidPrefix: root.bindPrefix + "/History/Daily/" + model.index
-
-			onYieldKwhChanged: {
-				if (_completed) {
-					root.yieldUpdatedForDay(model.index, yieldKwh)
-				}
-			}
-
-			Component.onCompleted: {
-				_completed = true
-				if (!isNaN(yieldKwh)) {
-					root.yieldUpdatedForDay(model.index, yieldKwh)
-				}
-			}
+			uidPrefix: root.serviceUid + "/History/Daily/" + model.index
 		}
 	}
 
 	readonly property VeQuickItem _veHistoryCount: VeQuickItem {
-		uid: root.bindPrefix + "/History/Overall/DaysAvailable"
+		uid: root.serviceUid + "/History/Overall/DaysAvailable"
 		onValueChanged: {
 			if (value !== undefined) {
 				_historyObjects.model = value
@@ -101,4 +69,7 @@ QtObject {
 		}
 	}
 
+	readonly property VeQuickItem _nrOfTrackers: VeQuickItem {
+		uid: root.serviceUid + "/NrOfTrackers"
+	}
 }

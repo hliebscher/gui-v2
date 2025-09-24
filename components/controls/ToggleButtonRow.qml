@@ -6,10 +6,12 @@
 import QtQuick
 import Victron.VenusOS
 
-Rectangle {
+FocusScope {
 	id: root
 
 	property bool on
+	property string offButtonText: CommonWords.off
+	property bool useOffButtonColors: true // set to false to use standard colours for Off button
 
 	readonly property real _buttonWidth: (width / 2) - Theme.geometry_button_border_width
 	readonly property real _buttonHeight: height - (2 * Theme.geometry_button_border_width)
@@ -19,13 +21,18 @@ Rectangle {
 
 	implicitWidth: Theme.geometry_controlCard_minimumWidth
 	implicitHeight: Theme.geometry_segmentedButtonRow_height
-	color: enabled ? Theme.color_ok : Theme.color_font_disabled
-	radius: Theme.geometry_button_radius
+	focusPolicy: Qt.TabFocus
+
+	// Background rectangle
+	Rectangle {
+		id: backgroundRect
+		anchors.fill: parent
+		color: enabled ? Theme.color_ok : Theme.color_font_disabled
+		radius: Theme.geometry_button_radius
+	}
 
 	Button {
 		id: offButton
-
-		readonly property bool selected: !root.on
 
 		anchors {
 			left: parent.left
@@ -34,25 +41,32 @@ Rectangle {
 		}
 		width: root._buttonWidth
 		height: root._buttonHeight
-		backgroundColor: enabled
-			? (selected ? Theme.color_button_off_background : Theme.color_darkOk)
-			: (selected ? Theme.color_button_off_background_disabled : Theme.color_background_disabled)
-		color: enabled
-			? (down || selected ? Theme.color_button_down_text : Theme.color_font_primary)
-			: (selected ? Theme.color_gray6 : Theme.color_gray4)
+		checked: !root.on
+		down: checked
 		borderWidth: 0
-		topLeftRadius: root.radius - Theme.geometry_button_border_width
-		bottomLeftRadius: root.radius - Theme.geometry_button_border_width
-		text: CommonWords.off
+		radius: 0 // ensure press effect does not have radius
+		topLeftRadius: Theme.geometry_button_radius - Theme.geometry_button_border_width
+		bottomLeftRadius: Theme.geometry_button_radius - Theme.geometry_button_border_width
+		flat: false
+		text: root.offButtonText
+		focus: checked
 		focusPolicy: root.focusPolicy
+		KeyNavigation.right: onButton
 
 		onClicked: root.offClicked()
+
+		Binding {
+			target: offButton
+			when: root.useOffButtonColors
+			property: "backgroundColor"
+			value: offButton.enabled
+					? (offButton.down ? Theme.color_button_off_background : Theme.color_darkOk)
+					: (offButton.down ? Theme.color_button_off_background_disabled : Theme.color_background_disabled)
+		}
 	}
 
 	Button {
 		id: onButton
-
-		readonly property bool selected: root.on
 
 		anchors {
 			right: parent.right
@@ -61,16 +75,15 @@ Rectangle {
 		}
 		width: root._buttonWidth
 		height: root._buttonHeight
-		backgroundColor: enabled
-			? (selected ? Theme.color_ok : Theme.color_darkOk)
-			: (selected ? Theme.color_button_on_background_disabled : Theme.color_background_disabled)
-		color: enabled
-			? (down || selected ? Theme.color_button_down_text : Theme.color_font_primary)
-			: (selected ? Theme.color_gray6 : Theme.color_gray4)
+		flat: false
+		checked: root.on
+		down: checked
+		radius: 0 // ensure press effect does not have radius
 		borderWidth: 0
-		topRightRadius: root.radius - Theme.geometry_button_border_width
-		bottomRightRadius: root.radius - Theme.geometry_button_border_width
+		topRightRadius: Theme.geometry_button_radius - Theme.geometry_button_border_width
+		bottomRightRadius: Theme.geometry_button_radius - Theme.geometry_button_border_width
 		text: CommonWords.on
+		focus: checked
 		focusPolicy: root.focusPolicy
 
 		onClicked: root.onClicked()

@@ -14,7 +14,6 @@ DevicePage {
 
 	required property string bindPrefix
 	readonly property int trackerCount: nrOfTrackers.valid ? nrOfTrackers.value : 1
-	readonly property SolarDevice solarDevice: Global.solarInputs.devices.deviceAt(Global.solarInputs.devices.indexOf(bindPrefix))
 
 	function _isModelSupported() {
 		if (!device.productId || !firmwareVersion.valid) {
@@ -145,9 +144,7 @@ DevicePage {
 					id: tableRow
 
 					preferredVisible: tracker.enabled
-					headerText: Global.solarInputs.formatTrackerName(
-							tracker.name, index, root.trackerCount, root.solarDevice.name,
-							VenusOS.TrackerName_NoDevicePrefix)
+					headerText: tracker.name
 					model: QuantityObjectModel {
 						QuantityObject { object: tracker; key: "voltage"; unit: VenusOS.Units_Volt_DC }
 						QuantityObject { object: tracker; key: "current"; unit: VenusOS.Units_Amp }
@@ -156,8 +153,9 @@ DevicePage {
 
 					SolarTracker {
 						id: tracker
-						device: root.solarDevice
+						serviceUid: root.bindPrefix
 						trackerIndex: tableRow.index
+						trackerCount: root.trackerCount
 					}
 				}
 
@@ -272,14 +270,7 @@ DevicePage {
 			preferredVisible: root.trackerCount > 0
 			onClicked: {
 				Global.pageManager.pushPage("/pages/solar/SolarHistoryPage.qml",
-						{ "solarHistory": solarHistory })
-			}
-
-			SolarHistory {
-				id: solarHistory
-				bindPrefix: root.bindPrefix
-				deviceName: root.title
-				trackerCount: root.trackerCount
+						{ "serviceUid": root.bindPrefix })
 			}
 		}
 

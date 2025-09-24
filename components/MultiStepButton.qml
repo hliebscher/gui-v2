@@ -18,10 +18,11 @@ BaseListView {
 	signal offClicked()
 
 	implicitWidth: parent.width
-	implicitHeight: Theme.geometry_segmentedButtonRow_height
+	implicitHeight: Theme.geometry_switchableoutput_control_height
 
 	orientation: ListView.Horizontal
 	focus: false
+	interactive: false
 
 	delegate: BaseListItem {
 
@@ -57,12 +58,13 @@ BaseListView {
 
 			text: modelData.text
 			font.pixelSize: Theme.font_size_body1
-			color: root.enabled ? index === root.currentIndex ? Theme.color_button_down_text : Theme.color_font_primary : Theme.color_font_disabled
-			backgroundColor: !root.enabled ? Theme.color_background_disabled
-					: index === root.currentIndex ? (root.checked ? Theme.color_ok : Theme.color_button_off_background)
+			flat: false
+			color: root.enabled ? checked ? Theme.color_button_down_text : Theme.color_font_primary : Theme.color_font_disabled
+			backgroundColor: !root.enabled ? (checked ? Theme.color_button_off_background_disabled : Theme.color_background_disabled)
+					: checked ? (root.checked ? Theme.color_ok : Theme.color_button_off_background)
 					: Theme.color_darkOk
-
 			enabled: root.checked
+			checked: index === root.currentIndex
 			focus: true
 
 			onClicked: root.indexClicked(index)
@@ -71,7 +73,7 @@ BaseListView {
 
 	header: BaseListItem  {
 		width: Math.ceil(labelTextMetrics.tightBoundingRect.x + labelTextMetrics.tightBoundingRect.width)
-			   + Theme.geometry_dimmingSlider_separator_width + (Theme.geometry_dimmingSlider_text_padding * 2)
+			   + Theme.geometry_miniSlider_separator_width + (Theme.geometry_miniSlider_text_padding * 2)
 		height: parent.height
 
 		// background border color
@@ -102,8 +104,9 @@ BaseListView {
 
 			text: root.checked ? CommonWords.on : CommonWords.off
 			font.pixelSize: Theme.font_size_body1
+			borderWidth: 0
+			flat: false
 			backgroundColor: root.enabled ? Theme.color_darkOk : Theme.color_background_disabled
-
 			focus: true
 
 			onClicked: root.checked ? root.offClicked() : root.onClicked()
@@ -112,9 +115,9 @@ BaseListView {
 		Rectangle {
 			anchors.right: parent.right
 			anchors.verticalCenter: parent.verticalCenter
-			width: Theme.geometry_dimmingSlider_separator_width
-			height: parent.height - (Theme.geometry_dimmingSlider_decorator_vertical_padding * 2)
-			radius: Theme.geometry_dimmingSlider_separator_width / 2
+			width: Theme.geometry_miniSlider_separator_width
+			height: parent.height - (Theme.geometry_miniSlider_decorator_vertical_padding * 2)
+			radius: Theme.geometry_miniSlider_separator_width / 2
 			visible: currentIndex > 0
 			color: root.enabled ? Theme.color_multistepbutton_separator : Theme.color_background_disabled
 		}

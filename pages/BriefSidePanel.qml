@@ -11,7 +11,6 @@ ColumnLayout {
 	id: root
 
 	property bool animationEnabled
-	property string dcInputIconSource
 
 	readonly property AcInput generatorInput: Global.acInputs.input1?.source === VenusOS.AcInputs_InputSource_Generator ? Global.acInputs.input1
 			: Global.acInputs.input2?.source === VenusOS.AcInputs_InputSource_Generator ? Global.acInputs.input2
@@ -27,7 +26,10 @@ ColumnLayout {
 		loadersActive: Global.solarInputs.devices.count > 0 // pvinverters do not have history, so ignore them
 		visible: Global.solarInputs.devices.count > 0
 		quantityLabel.dataObject: Global.system.solar
-		sideComponent: SolarYieldGraph {}
+		sideComponent: SolarYieldGraph {
+			spacing: Theme.geometry_sidePanel_solar_graph_bar_spacing
+			maximumBarCount: Theme.geometry_sidePanel_solar_graph_bar_count
+		}
 	}
 
 	// In most cases there is only 1 generator, so don't worry about other ones here.
@@ -207,10 +209,12 @@ exported power v  0.4 |   /
 
 	BriefSidePanelWidget {
 		title: Global.dcInputs.model.count === 1
-				? VenusOS.dcMeter_typeToText(Global.dcInputs.model.firstObject.inputType)
+				? VenusOS.dcMeter_typeToText(Global.dcInputs.model.firstMeterType)
 				  //% "DC input"
 				: qsTrId("brief_dc_input")
-		icon.source: root.dcInputIconSource
+		icon.source: Global.dcInputs.model.count === 1
+				? VenusOS.dcMeter_iconForType(Global.dcInputs.model.firstMeterType)
+				: VenusOS.dcMeter_iconForMultipleTypes()
 		loadersActive: Global.dcInputs.model.count > 0
 		visible: loadersActive
 		quantityLabel.dataObject: Global.dcInputs

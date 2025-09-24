@@ -61,7 +61,7 @@ QtObject {
 	readonly property int state: _state.valid ? _state.value : -1
 	readonly property int status: _status.valid ? _status.value : -1
 	readonly property string name: _name.value ?? ""
-	readonly property int dimming: _dimming.valid ? _dimming.value : 0  // 0-100 %
+	readonly property real dimming: _dimming.valid ? _dimming.value : 0  // 0-100 %
 	readonly property bool hasDimming: _dimming.valid
 
 	// Output/channel settings
@@ -99,8 +99,11 @@ QtObject {
 
 	readonly property VeQuickItem _dimming: VeQuickItem {
 		uid: root.type === VenusOS.SwitchableOutput_Type_Dimmable
-				|| root.type === VenusOS.SwitchableOutput_Type_UnrangedSetpoint
+				|| root.type === VenusOS.SwitchableOutput_Type_SteppedSwitch
+				|| root.type === VenusOS.SwitchableOutput_Type_NumericInput
 				|| root.type === VenusOS.SwitchableOutput_Type_TemperatureSetpoint
+				|| root.type === VenusOS.SwitchableOutput_Type_Dropdown
+				|| root.type === VenusOS.SwitchableOutput_Type_BasicSlider
 			 ? `${root.uid}/Dimming` : ""
 	}
 

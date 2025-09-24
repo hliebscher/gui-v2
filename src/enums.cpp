@@ -179,6 +179,11 @@ QString Enums::dcMeter_iconForType(DcMeter_Type type) const
 	}
 }
 
+QString Enums::dcMeter_iconForMultipleTypes() const
+{
+	return "qrc:/images/icon_dc_24.svg";
+}
+
 QString Enums::digitalInput_typeToText(DigitalInput_Type type) const
 {
 	switch (type) {
@@ -408,24 +413,32 @@ QString Enums::switchableOutput_typeToText(SwitchableOutput_Type value, const QS
 	case SwitchableOutput_Type_BasicSlider:
 		//% "Basic slider"
 		return qtTrId("switchable_output_basic_slider");
-	case SwitchableOutput_Type_UnrangedSetpoint:
-		//% "Unranged setpoint"
-		return qtTrId("switchable_output_unranged_setpoint");
+	case SwitchableOutput_Type_NumericInput:
+		//% "Numeric input"
+		return qtTrId("switchable_output_numeric_input");
 	case SwitchableOutput_Type_ThreeStateSwitch:
 		//% "Three-state switch"
 		return qtTrId("switchable_output_three_state_switch");
+	case SwitchableOutput_Type_BilgePump:
+		//% "Bilge pump"
+		return qtTrId("switchable_output_bilge_pump");
 	default:
 		//% "Unsupported type: %1"
 		return qtTrId("switchable_output_unsupported").arg(value);
 	}
 }
 
-QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value) const{
-
+QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, SwitchableOutput_Type type) const
+{
 	switch (value) {
 	case SwitchableOutput_Status_Off:
-		//% "Off"
-		return qtTrId("switchable_output_off");
+		if (type == SwitchableOutput_Type_BilgePump) {
+			//% "Not running"
+			return qtTrId("switchable_output_not_running");
+		} else {
+			//% "Off"
+			return qtTrId("switchable_output_off");
+		}
 	case SwitchableOutput_Status_Powered:
 		//% "Powered"
 		return qtTrId("switchable_output_powered");
@@ -436,11 +449,16 @@ QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value) cons
 		//% "Over temperature"
 		return qtTrId("switchable_output_over_temperature");
 	case SwitchableOutput_Status_Output_Fault:
-		//% "Output fault"
-		return qtTrId("switchable_output_output_Fault");
+		//% "Fault"
+		return qtTrId("switchable_output_fault");
 	case SwitchableOutput_Status_On:
-		//% "On"
-		return qtTrId("switchable_output_on");
+		if (type == SwitchableOutput_Type_BilgePump) {
+			//% "Running"
+			return qtTrId("switchable_output_running");
+		} else {
+			//% "On"
+			return qtTrId("switchable_output_on");
+		}
 	case SwitchableOutput_Status_Short_Fault:
 		//% "Short"
 		return qtTrId("switchable_output_short");
@@ -448,11 +466,64 @@ QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value) cons
 		//% "Disabled"
 		return qtTrId("switchable_output_disabled");
 	case SwitchableOutput_Status_TripLowVoltage:
-		//% "Disabled"
+		//% "Trip low voltage"
 		return qtTrId("switchable_output_trip_low_voltage");
 	default:
 		return QString::number(static_cast<int>(value));
 	}
+}
+
+QString Enums::tank_fluidTypeToText(Tank_Type type) const
+{
+	switch (type) {
+	case Tank_Type_Fuel:
+		//% "Fuel"
+		return qtTrId("tank_type_fuel");
+	case Tank_Type_FreshWater:
+		//% "Fresh water"
+		return qtTrId("tank_type_fresh_water");
+	case Tank_Type_WasteWater:
+		//% "Waste water"
+		return qtTrId("tank_type_waste_water");
+	case Tank_Type_LiveWell:
+		//% "Live well"
+		return qtTrId("tank_type_live_well");
+	case Tank_Type_Oil:
+		//% "Oil"
+		return qtTrId("tank_type_oil");
+	case Tank_Type_BlackWater:
+		//% "Black water"
+		return qtTrId("tank_type_black_water");
+	case Tank_Type_Gasoline:
+		//% "Gasoline"
+		return qtTrId("tank_type_gasoline");
+	case Tank_Type_Diesel:
+		//% "Diesel"
+		return qtTrId("tank_type_diesel");
+	case Tank_Type_LPG:
+		//% "LPG"
+		return qtTrId("tank_type_lpg");
+	case Tank_Type_LNG:
+		//% "LNG"
+		return qtTrId("tank_type_lng");
+	case Tank_Type_HydraulicOil:
+		//% "Hydraulic oil"
+		return qtTrId("tank_type_hydraulic_oil");
+	case Tank_Type_RawWater:
+		//% "Raw water"
+		return qtTrId("tank_type_raw_water");
+	default:
+		return QString();
+	}
+}
+
+Enums* Enums::create(QQmlEngine *engine, QJSEngine *jsEngine)
+{
+	Q_UNUSED(engine)
+	Q_UNUSED(jsEngine)
+
+	static Enums *instance = new Enums;
+	return instance;
 }
 
 }

@@ -49,6 +49,8 @@
 
     "geometry_segmentedButtonRow_height": 48,
 
+    "geometry_switches_header_topMargin": 8,
+
     "geometry_listItem_height": 48,
     "geometry_listItem_radius": 8,
     "geometry_listItem_content_horizontalMargin": 24,
@@ -68,12 +70,15 @@
     "geometry_slider_groove_height": 8,
     "geometry_slider_groove_radius": 8,
 
-    "geometry_dimmingSlider_height": 40,
-    "geometry_dimmingSlider_text_padding": 13,
-    "geometry_dimmingSlider_handle_width": 12,
-    "geometry_dimmingSlider_indicator_width": 4,
-    "geometry_dimmingSlider_separator_width": 2,
-    "geometry_dimmingSlider_decorator_vertical_padding": 6,
+    "geometry_slider_indicator_width": 4,
+    "geometry_slider_indicator_height": 28,
+    "geometry_Slider_indicator_radius": 2,
+
+    "geometry_miniSlider_text_padding": 12,
+    "geometry_miniSlider_handle_width": 12,
+    "geometry_miniSlider_indicator_width": 4,
+    "geometry_miniSlider_separator_width": 2,
+    "geometry_miniSlider_decorator_vertical_padding": 6,
 
     "geometry_temperatureSlider_text_horizontal_padding": 8,
     "geometry_temperatureSlider_dot_size": 4,
@@ -229,6 +234,8 @@
     "geometry_sidePanel_sideWidget_bottomMargin": 4,
     "geometry_sidePanel_quantityLabel_bottomMargin": 2,
     "geometry_sidePanel_verticalMargin": 8,
+    "geometry_sidePanel_solar_graph_bar_count": 7,
+    "geometry_sidePanel_solar_graph_bar_spacing": 8,
 
     "geometry_acInputDirectionIcon_rightMargin": 2,
 
@@ -251,7 +258,7 @@
     "geometry_switchableoutput_topMargin": 16,
     "geometry_switchableoutput_row_count": 4,
     "geometry_switchableoutput_label_margin": 4,
-    "geometry_switchableoutput_button_height": 40,
+    "geometry_switchableoutput_control_height": 40,
     "geometry_switchableoutput_status_verticalPadding": 2,
     "geometry_switchableoutput_status_horizontalPadding": 8,
     "geometry_switchableoutput_status_radius": 10,
@@ -290,9 +297,10 @@
 
     "geometry_overviewPage_layout_expanded_bottomMargin": 24,
 
-    "geometry_overviewPage_widget_solar_graph_bar_width": 8,
+    "geometry_overviewPage_widget_solar_graph_bar_count": 10,
+    "geometry_overviewPage_widget_solar_graph_bar_width": 10,
     "geometry_overviewPage_widget_solar_graph_bar_radius": 8,
-    "geometry_overviewPage_widget_solar_graph_margins": 8,
+    "geometry_overviewPage_widget_solar_graph_margins": 12,
     "geometry_overviewPage_batterywidget_renewable_icon_right_margin": 8,
     "geometry_overviewPage_batterywidget_renewable_icon_bottom_margin": 3,
 

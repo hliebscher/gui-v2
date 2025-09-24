@@ -9,13 +9,15 @@ import Victron.VenusOS
 QtObject {
 	id: root
 
-	required property SolarDevice device
+	required property string serviceUid
 	required property int trackerIndex
+	required property int trackerCount
 
-	readonly property string name: _name.value ?? ""
+	readonly property string name: _name.value || "#%1".arg(trackerIndex + 1)
 	readonly property real power: _power.valid ? _power.value : NaN
 	readonly property real voltage: _voltage.valid ? _voltage.value : NaN
 	readonly property real current: !power || !voltage ? NaN : power / voltage
+	readonly property real todaysYield: _todaysYield.valid ? _todaysYield.value : NaN
 
 	// Whether the tracker is enabled, i.e. it should appear in the UI.
 	// This is true if the /Enabled setting is not present, for compatibility with older systems.
@@ -23,16 +25,20 @@ QtObject {
 
 	// If there is only 1 tracker (e.g. all common MPPTs), the voltage and power are provided via
 	// /Pv/V and /Yield/Power instead of /Pv/0/V and /Pv/0/P.
-	readonly property string _pv: root.device.serviceUid + "/Pv"
+	readonly property string _pv: root.serviceUid + "/Pv"
 	readonly property string _pvTrackerIndex: _pv + "/" + root.trackerIndex
-	readonly property bool _trackerCountLessEqualOne: root.device.trackerCount <= 1
+	readonly property bool _trackerCountLessEqualOne: root.trackerCount <= 1
+
+	readonly property VeQuickItem _todaysYield: VeQuickItem {
+		uid: root._trackerCountLessEqualOne ? "" : root.serviceUid + "/History/Daily/0/Pv/" + root.trackerIndex + "/Yield"
+	}
 
 	readonly property VeQuickItem _voltage: VeQuickItem {
-		uid: root._trackerCountLessEqualOne ? root.device.serviceUid + "/Pv/V" : root._pvTrackerIndex + "/V"
+		uid: root._trackerCountLessEqualOne ? root.serviceUid + "/Pv/V" : root._pvTrackerIndex + "/V"
 	}
 
 	readonly property VeQuickItem _power: VeQuickItem {
-		uid: root._trackerCountLessEqualOne ? root.device.serviceUid + "/Yield/Power" : root._pvTrackerIndex + "/P"
+		uid: root._trackerCountLessEqualOne ? root.serviceUid + "/Yield/Power" : root._pvTrackerIndex + "/P"
 	}
 
 	readonly property VeQuickItem _name: VeQuickItem {

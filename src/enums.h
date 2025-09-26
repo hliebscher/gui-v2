@@ -70,6 +70,7 @@ public:
 		Units_Volt_AC,
 		Units_Volt_DC,
 		Units_VoltAmpere,
+		Units_VoltAmpereReactive,
 		Units_Watt,
 		Units_Amp,
 		Units_Hertz,
@@ -365,6 +366,39 @@ public:
 		VeBusDevice_Bms_Type_VeBus = 2
 	};
 	Q_ENUM(VeBusDevice_Bms_Type)
+
+	enum Tank_Backup_Restore_Action {
+		Tank_Backup_Restore_Action_Idle = 0,
+		Tank_Backup_Restore_Action_Create_USB,
+		Tank_Backup_Restore_Action_Backup,
+		Tank_Backup_Restore_Action_Restore,
+		Tank_Backup_Restore_Action_Delete,
+	};
+	Q_ENUM(Tank_Backup_Restore_Action)
+
+	enum Tank_Backup_Restore_Notification {
+		Tank_Backup_Restore_Notification_Create_USB_Successful = 1,
+		Tank_Backup_Restore_Notification_Backup_Successful = 2,
+		Tank_Backup_Restore_Notification_Restore_Successful = 3,
+		Tank_Backup_Restore_Notification_Delete_Successful = 4,
+		Tank_Backup_Restore_Notification_Create_USB_Failed = 101,
+		Tank_Backup_Restore_Notification_Backup_Failed = 102,
+		Tank_Backup_Restore_Notification_Restore_Failed = 103,
+		Tank_Backup_Restore_Notification_Delete_Failed = 104,
+	};
+	Q_ENUM(Tank_Backup_Restore_Notification)
+
+	enum Tank_Backup_Restore_Error {
+		Tank_Backup_Restore_Error_None = 0,
+		Tank_Backup_Restore_Error_UsbDriveNotMounted,
+		Tank_Backup_Restore_Error_CreateUsbException,
+		Tank_Backup_Restore_Error_BackupException,
+		Tank_Backup_Restore_Error_RestoreException,
+		Tank_Backup_Restore_Error_ArchiveFileDeleteFailed,
+		Tank_Backup_Restore_Error_BackupFileDeleteFailed,
+		Tank_Backup_Restore_Error_BackupFileMissing,
+	};
+	Q_ENUM(Tank_Backup_Restore_Error)
 
 	enum Relays_State {
 		Relays_State_Inactive = 0,
@@ -875,6 +909,27 @@ public:
 	};
 	Q_ENUM(MotorDriveGear)
 
+	enum TailscaleConnectState {
+		TailscaleConnectState_Initializing = 0,
+		TailscaleConnectState_Backend_Starting = 1,
+		TailscaleConnectState_Backend_Stopped = 2,
+		TailscaleConnectState_Connection_Failed = 3,
+		TailscaleConnectState_Stopped = 4,
+		TailscaleConnectState_Logged_Out = 5,
+		TailscaleConnectState_Wait_For_Response = 6,
+		TailscaleConnectState_Wait_For_Login = 7,
+		TailscaleConnectState_No_State = 8,
+		TailscaleConnectState_Connection_Ok = 100
+	};
+	Q_ENUM(TailscaleConnectState)
+
+	enum MicrogridMode {
+		MicrogridMode_GridForming = 0,
+		MicrogridMode_GridFollowing = 1,
+		MicrogridMode_HybridDroop = 3
+	};
+	Q_ENUM(MicrogridMode)
+
 	Q_INVOKABLE QString battery_modeToText(Battery_Mode mode) const;
 	Q_INVOKABLE Battery_Mode battery_modeFromPower(qreal power) const;
 	Q_INVOKABLE QString battery_iconFromMode(Battery_Mode mode) const;
@@ -894,6 +949,8 @@ public:
 	Q_INVOKABLE QString switch_deviceStateToText(Switch_DeviceState value) const;
 	Q_INVOKABLE QString switchableOutput_typeToText(SwitchableOutput_Type value, const QString &channelId = QString()) const;
 	Q_INVOKABLE QString switchableOutput_statusToText(SwitchableOutput_Status value, SwitchableOutput_Type type) const;
+
+	Q_INVOKABLE QString microgridModeToText(MicrogridMode mode) const;
 
 	Q_INVOKABLE QString tank_fluidTypeToText(Tank_Type type) const;
 

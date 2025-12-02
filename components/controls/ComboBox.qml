@@ -25,23 +25,15 @@ T.ComboBox {
 
 		width: root.width
 		height: root.height
-		highlighted: root.highlightedIndex === index
+		highlighted: root.highlightedIndex === index || pressed
 
 		contentItem: Rectangle {
 			anchors.fill: parent
-			radius: Theme.geometry_button_radius
+			topLeftRadius: index === 0 ? Theme.geometry_button_radius : 0
+			topRightRadius: index === 0 ? Theme.geometry_button_radius : 0
+			bottomLeftRadius: index === root.count - 1 ? Theme.geometry_button_radius : 0
+			bottomRightRadius: index === root.count - 1 ? Theme.geometry_button_radius : 0
 			color: optionDelegate.highlighted ? Theme.color_ok : "transparent"
-
-			// Add another rectangle to fill out the bottom and/or top corners to pretend this is
-			// showing a half-rounded rect for the first/last options, and no rounded corners for
-			// the other options in between.
-			Rectangle {
-				y: index === 0 ? height : 0
-				width: parent.width
-				height: index === 0 || index === root.count - 1 ? parent.height / 2 : parent.height
-				color: parent.color
-				visible: root.count > 0
-			}
 
 			Label {
 				anchors.fill: parent
@@ -97,10 +89,15 @@ T.ComboBox {
 
 		contentItem: ListView {
 			clip: true
-			interactive: false
-			implicitHeight: contentHeight
+			implicitHeight: Math.min(contentHeight, Global.mainView.height - (2 * Theme.geometry_comboBox_verticalPadding))
+			boundsBehavior: Flickable.StopAtBounds
 			model: root.popup.visible ? root.delegateModel : null
 			currentIndex: root.highlightedIndex
+
+			ScrollBar.vertical: ScrollBar {
+				topPadding: Theme.geometry_comboBox_verticalPadding
+				bottomPadding: Theme.geometry_comboBox_verticalPadding
+			}
 		}
 
 		background: Rectangle {
@@ -120,9 +117,18 @@ T.ComboBox {
 			}
 		}
 
-		// Workaround for QTBUG-121029 (popup does not open as popup visible=true even when closed)
-		function _updateVisibility() { visible = opened }
-		onOpenedChanged: Qt.callLater(_updateVisibility)
+		onAboutToShow: {
+			// Prefer to show popup in a position where the current selection is shown over the top
+			// of the combo box.
+			y = -(root.currentIndex * root.height)
+
+			// If the popup would be shown with the top edge above the top of the main view, move
+			// it downwards.
+			const posInWindow = mapToItem(Global.mainView, 0, y)
+			if (posInWindow.y < Theme.geometry_comboBox_verticalPadding) {
+				y = mapFromItem(Global.mainView, 0, Theme.geometry_comboBox_verticalPadding).y
+			}
+		}
 	}
 
 	Keys.enabled: Global.keyNavigationEnabled

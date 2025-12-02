@@ -9,6 +9,8 @@ import Victron.VenusOS
 Page {
 	id: root
 
+	title: CommonWords.devices
+
 	GradientListView {
 		id: deviceListView
 
@@ -19,28 +21,19 @@ Page {
 		delegate: BaseListLoader {
 			id: delegateLoader
 
-			required property bool connected
 			required property BaseDevice device
 			required property string cachedDeviceName
-
-			readonly property bool _loadCustomDelegate: connected && !!device
-			property bool _usingCustomDelegate
+			property bool _completed
 
 			function _resetSource() {
-				if (_loadCustomDelegate) {
-					if (source.toString().length === 0 || !_usingCustomDelegate) {
-						setSource("delegates/DeviceListDelegate_%1.qml".arg(device.serviceType), {
-							device: Qt.binding(function() { return delegateLoader.device }),
-						})
-						_usingCustomDelegate = true
-					}
+				if (!!device) {
+					setSource("delegates/DeviceListDelegate_%1.qml".arg(device.serviceType), {
+						device: Qt.binding(function() { return delegateLoader.device }),
+					})
 				} else {
-					if (source.toString().length === 0 || _usingCustomDelegate) {
-						setSource("delegates/DisconnectedDeviceListDelegate.qml", {
-							cachedDeviceName: Qt.binding(function() { return delegateLoader.cachedDeviceName }),
-						})
-						_usingCustomDelegate = false
-					}
+					setSource("delegates/DisconnectedDeviceListDelegate.qml", {
+						cachedDeviceName: Qt.binding(function() { return delegateLoader.cachedDeviceName }),
+					})
 				}
 			}
 
@@ -56,8 +49,16 @@ Page {
 				}
 			}
 
-			on_LoadCustomDelegateChanged: _resetSource()
-			Component.onCompleted: _resetSource()
+			onDeviceChanged: {
+				// Reset the content when the device is disconnected/reconnected.
+				if (_completed) {
+					_resetSource()
+				}
+			}
+			Component.onCompleted: {
+				_resetSource()
+				_completed = true
+			}
 		}
 
 		footer: SettingsColumn {

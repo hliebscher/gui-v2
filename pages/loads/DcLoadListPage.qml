@@ -9,54 +9,110 @@ import Victron.VenusOS
 Page {
 	id: root
 
-	required property FilteredDeviceModel model
+	required property FilteredDeviceModel systemModel
+	required property FilteredDeviceModel nonSystemModel
 
-	//% "DC Load"
-	title: qsTrId("dcload")
+	function _showSettingsPage(device) {
+		if (BackendConnection.serviceTypeFromUid(device.serviceUid) === "dcdc") {
+			Global.pageManager.pushPage("/pages/settings/devicelist/dc-in/PageDcDcConverter.qml",
+					{ "bindPrefix": device.serviceUid })
+		} else {
+			  Global.pageManager.pushPage("/pages/settings/devicelist/dc-in/PageDcMeter.qml",
+					{ "bindPrefix": device.serviceUid })
+		}
+	}
 
 	GradientListView {
-		id: settingsListView
+		header: BaseListItem {
+			readonly property alias columnWidth: loadSummary.fixedColumnWidth
+			readonly property alias columnSpacing: loadSummary.columnSpacing
 
-		header: SettingsColumn {
-			width: parent.width
-			bottomPadding: settingsListView.spacing
+			width: parent?.width ?? 0
+			height: dcsystemTable.y + dcsystemTable.height + bottomInset
+			bottomInset: Theme.geometry_gradientList_spacing
 
-			BaseListItem {
+			QuantityTableSummary {
+				id: loadSummary
+
 				width: parent.width
-				height: summary.height
+				equalWidthColumns: true
 
-				QuantityTableSummary {
-					id: summary
+				// rightPadding = 32px width of the sub-menu arrow icon in each list delegate, plus
+				// margin, to align with the columns in the delegates.
+				rightPadding: 32 + Theme.geometry_listItem_content_horizontalMargin
+				summaryModel: [
+					{ text: "", unit: VenusOS.Units_None },
+					{ text: "", unit: VenusOS.Units_None },
+					{ text: CommonWords.total_power, unit: VenusOS.Units_None },
+				]
+				bodyHeaderText: CommonWords.total
+				bodyModel: QuantityObjectModel {
+					// Add empty columns for volts/amps so that these columns align with those
+					// in the QuantityTable.
+					QuantityObject { unit: VenusOS.Units_Volt_DC; hidden: true }
+					QuantityObject { unit: VenusOS.Units_Amp; hidden: true }
+					QuantityObject { object: Global.system.dc; key: "power"; unit: VenusOS.Units_Watt }
+				}
+			}
 
-					width: parent.width
-					rightPadding: Theme.geometry_listItem_content_horizontalMargin + Theme.geometry_icon_size_medium
-					summaryModel: [
-						{ text: CommonWords.power_watts, unit: VenusOS.Units_Watt },
-						{ text: CommonWords.energy, unit: VenusOS.Units_Energy_KiloWattHour },
-					]
-					bodyHeaderText: CommonWords.total
-					bodyModel: QuantityObjectModel {
-						QuantityObject { object: Global.system.dcload; key: "power"; unit: VenusOS.Units_Watt }
-						QuantityObject { object: Global.system.dcload; key: "energy"; unit: VenusOS.Units_Energy_KiloWattHour }
+			QuantityTable {
+				id: dcsystemTable
+
+				anchors.top: loadSummary.bottom
+				rightPadding: loadSummary.rightPadding
+				width: parent.width
+				equalWidthColumns: true
+				model: root.systemModel.count > 1 ? root.systemModel : null
+				delegate: QuantityTable.TableRow {
+					id: dcsystemTableRow
+
+					required property Device device
+
+					headerText: dcSystemDevice.name
+					model: QuantityObjectModel {
+						QuantityObject { object: dcSystemDevice; key: "voltage"; unit: VenusOS.Units_Volt_DC }
+						QuantityObject { object: dcSystemDevice; key: "current"; unit: VenusOS.Units_Amp }
+						QuantityObject { object: dcSystemDevice; key: "power"; unit: VenusOS.Units_Watt }
+					}
+
+					DcDevice {
+						id: dcSystemDevice
+						serviceUid: dcsystemTableRow.device.serviceUid
 					}
 				}
 			}
 		}
 
-		model: root.model
-		delegate: ListQuantityGroupNavigation {
+		model: root.nonSystemModel
+		delegate: LoadListDelegate {
 			id: deviceDelegate
 
 			required property var device
 
-			text: device.name
-			quantityModel: QuantityObjectModel {
-				QuantityObject { object: dcDevice; key: "voltage"; unit: VenusOS.Units_Volt_DC }
-				QuantityObject { object: dcDevice; key: "current"; unit: VenusOS.Units_Amp }
-				QuantityObject { object: dcDevice; key: "power"; unit: VenusOS.Units_Watt }
-			}
+			name: device.name
+			power: dcDevice.power ?? NaN
+			temperature: temperatureItem.value ?? NaN
+			columnWidth: ListView.view.headerItem?.columnWidth ?? NaN
+			columnSpacing: ListView.view.headerItem?.columnSpacing ?? 0
+
+			// Status depends on the service:
+			// - dcdc: /State
+			statusText: !statusItem.valid ? ""
+				: device.serviceType === "dcdc" ? Global.system.systemStateToText(statusItem.value)
+				: ""
 
 			onClicked: root._showSettingsPage(device)
+
+			VeQuickItem {
+				id: temperatureItem
+				uid: device.serviceUid + "/Dc/0/Temperature"
+			}
+
+			VeQuickItem {
+				id: statusItem
+				uid: device.serviceType === "dcdc" ? device.serviceUid + "/State"
+					: ""
+			}
 
 			DcDevice {
 				id: dcDevice

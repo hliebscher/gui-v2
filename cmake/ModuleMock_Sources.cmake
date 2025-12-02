@@ -8,6 +8,7 @@ set(VictronMock_QML_MODULE_SOURCES
     data/mock/MockSetup.qml
     data/mock/MockShortcuts.qml
     data/mock/MotorDrivesImpl.qml
+    data/mock/MockNotification.qml
     data/mock/NotificationsImpl.qml
     data/mock/SolarInputsImpl.qml
     data/mock/SystemAcImpl.qml
@@ -27,7 +28,8 @@ SET(VictronMock_QML_MODULE_RESOURCES
     data/mock/conf/services/alternator.json
     data/mock/conf/services/dcgenset.json
     data/mock/conf/services/dcload-fridge.json
-    data/mock/conf/services/dcsystem.json
+    data/mock/conf/services/dcsystem1.json
+    data/mock/conf/services/dcsystem2.json
     data/mock/conf/services/dse-genset.json
     data/mock/conf/services/digitalinput-alarm.json
     data/mock/conf/services/em-acload.json

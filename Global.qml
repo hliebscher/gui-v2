@@ -61,13 +61,10 @@ QtObject {
 	property bool backendReadyLatched
 	onBackendReadyChanged: if (backendReady) backendReadyLatched = true
 
-	signal aboutToFocusTextField(var textField, var textFieldContainer, var flickable)
+	signal aboutToFocusTextField(var textField, var textFieldContainer, var viewToScroll)
 
-	function showToastNotification(category, text, autoCloseInterval = 0) {
-		if (!!notificationLayer) {
-			return notificationLayer.showToastNotification(category, text, autoCloseInterval)
-		}
-		return null
+	function showToastNotification(type, text, autoCloseInterval = 0) {
+		return ToastModel.add(type, text, autoCloseInterval)
 	}
 
 	function reset() {
@@ -110,20 +107,22 @@ QtObject {
 	readonly property IntValidator _intValidator: IntValidator {
 	}
 
-	readonly property VeQuickItem _customisations: VeQuickItem {
-		// Only listen to the customisations MQTT path in WASM.
-		// GX and Desktop builds read customisations from filesystem instead.
+/*
+	readonly property VeQuickItem _guiPlugins: VeQuickItem {
+		// Only listen to the gui plugins MQTT path in WASM.
+		// GX and Desktop builds read gui plugins from filesystem instead.
 		// TODO: update the path to the correct MQTT-only path once it is decided.
-		uid: (Qt.platform.os === "wasm" && systemSettings && systemSettings.serviceUid.length > 0)
-			? systemSettings.serviceUid + "/Gui2/Customisations"
+		uid: (Qt.platform.os === "wasm")
+			? pluginsService.serviceUid + "/Gui2/Plugins"
 			: ""
 		property string json: valid && BackendConnection.state === BackendConnection.Ready ? value : "[]"
 		onJsonChanged: {
-			// don't unload customisations if we lose backend data connection.
+			// don't unload plugins if we lose backend data connection.
 			if (Qt.platform.os === "wasm" && BackendConnection.state === BackendConnection.Ready) {
-				Customisations.customisationsJson = Global._customisations.json
+				GuiPluginLoader.pluginsJson = json
 			}
 		}
 	}
+*/
 }
 

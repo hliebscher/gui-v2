@@ -32,14 +32,19 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/CircularSingleGauge.qml
     components/CheapBarGauge.qml
     components/ClippingBarGauge.qml
+    components/ColorPresetGrid.qml
+    components/ColorSelector.qml
+    components/ColorWheelModeButton.qml
     components/ControlCard.qml
     components/CpuMonitor.qml
     components/CustomDevicePageEntry.qml
     components/DateSelector.qml
     components/DeviceListDelegate.qml
+    components/DeviceListPluginPage.qml
     components/DevicePage.qml
     components/DynamicValueRange.qml
     components/ElectricalQuantityLabel.qml
+    components/EmptyPageItem.qml
     components/EnvironmentGauge.qml
     components/EnvironmentGaugePanel.qml
     components/ExpandedTanksView.qml
@@ -54,6 +59,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/GeneratorIconLabel.qml
     components/GradientListView.qml
     components/GsmStatusIcon.qml
+    components/ColorButton.qml
     components/IconButton.qml
     components/InputPanel.qml
     components/InverterAcOutSettings.qml
@@ -88,6 +94,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/SettingsRangeSlider.qml
     components/SettingsSlider.qml
     components/SettingSync.qml
+    components/SliderSettingSync.qml
     components/ShinyProgressArc.qml
     components/SideGauge.qml
     components/SideMultiGauge.qml
@@ -102,8 +109,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/StatusBar.qml
     components/SwipePageModel.qml
     components/SwipeViewPage.qml
-    components/SwitchableOutputGroupCard.qml
-    components/SwitchableOutputSlider.qml
     components/SystemBatteryDelegate.qml
     components/SystemBatteryDeviceModel.qml
     components/SystemReason.qml
@@ -123,9 +128,9 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/ViewGradient.qml
     components/WasmVirtualKeyboardHandler.qml
     components/WifiModel.qml
-    components/ClassAndVrmInstance.qml
     components/controls/AutoToggleButton.qml
     components/controls/Button.qml
+    components/controls/CloseButton.qml
     components/controls/ComboBox.qml
     components/controls/EditFrame.qml
     components/controls/GlobalKeyNavigationHighlight.qml
@@ -153,6 +158,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/controls/TextField.qml
     components/controls/ToggleButtonRow.qml
 
+    components/dialogs/ColorWheelDialog.qml
     components/dialogs/CurrentLimitDialog.qml
     components/dialogs/DateSelectorDialog.qml
     components/dialogs/DialogShadow.qml
@@ -194,6 +200,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/ListMountStateButton.qml
     components/listitems/ListAcInPositionRadioButtonGroup.qml
     components/listitems/ListOutputBatteryRadioButtonGroup.qml
+    components/listitems/ListPasswordField.qml
     components/listitems/ListPvInverterPositionRadioButtonGroup.qml
     components/listitems/ListRebootButton.qml
     components/listitems/ListRelayState.qml
@@ -235,6 +242,9 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/core/SliderHandleHighlight.qml
 
     components/switches/SwitchableOutputCardDelegateHeader.qml
+    components/switches/SwitchableOutputGroupCard.qml
+    components/switches/SwitchableOutputDimmableSlider.qml
+    components/switches/SwitchableOutputSlider.qml
     components/switches/delegates/SwitchableOutputCardDelegate_0.qml
     components/switches/delegates/SwitchableOutputCardDelegate_1.qml
     components/switches/delegates/SwitchableOutputCardDelegate_2.qml
@@ -245,6 +255,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/switches/delegates/SwitchableOutputCardDelegate_8.qml
     components/switches/delegates/SwitchableOutputCardDelegate_9.qml
     components/switches/delegates/SwitchableOutputCardDelegate_10.qml
+    components/switches/delegates/SwitchableOutputCardDelegate_color.qml
 
     components/widgets/AcWidget.qml
     components/widgets/AcInputWidget.qml
@@ -292,7 +303,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     data/common/Generator.qml
     data/common/GensetErrorModel.qml
     data/common/Inverter.qml
-    data/common/Notification.qml
     data/common/PvInverter.qml
     data/common/PvMonitor.qml
     data/common/SolarDailyHistory.qml
@@ -301,7 +311,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     data/common/SolarHistoryErrorModel.qml
     data/common/SolarTracker.qml
     data/common/SolarTrackerDailyHistory.qml
-    data/common/SwitchableOutput.qml
     data/common/Tank.qml
     data/common/TankDescription.qml
     data/common/TankModel.qml
@@ -359,6 +368,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsBleSensors.qml
     pages/settings/PageSettingsBluetooth.qml
     pages/settings/PageSettingsCanbus.qml
+    pages/settings/PageSettingsCanOpenMotordrive.qml
     pages/settings/PageSettingsCGwacs.qml
     pages/settings/PageSettingsCGwacsOverview.qml
     pages/settings/PageSettingsConnectivity.qml
@@ -376,8 +386,10 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsFirmwareOffline.qml
     pages/settings/PageSettingsFirmwareOnline.qml
     pages/settings/PageSettingsFronius.qml
+    pages/settings/PageSettingsFroniusAddLocation.qml
     pages/settings/PageSettingsFroniusInverter.qml
     pages/settings/PageSettingsFroniusInverters.qml
+    pages/settings/PageSettingsFroniusModbus.qml
     pages/settings/PageSettingsFroniusSetIpAddresses.qml
     pages/settings/PageSettingsFroniusShowIpAddresses.qml
     pages/settings/PageSettingsGeneral.qml
@@ -403,6 +415,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsRvcDeviceConfiguration.qml
     pages/settings/PageSettingsRvcDevices.qml
     pages/settings/PageSettingsShelly.qml
+    pages/settings/PageSettingsShellySetIpAddresses.qml
     pages/settings/PageSettingsSignalK.qml
     pages/settings/PageSettingsSupportStatus.qml
     pages/settings/PageSettingsSystem.qml
@@ -581,8 +594,10 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/basetankdevice.cpp
     src/basetankdevicemodel.h
     src/basetankdevicemodel.cpp
-    src/customisations.h
-    src/customisations.cpp
+    src/classandvrminstancemodel.h
+    src/classandvrminstancemodel.cpp
+    src/colordimmerdata.h
+    src/colordimmerdata.cpp
     src/dcmeterdevicemodel.h
     src/dcmeterdevicemodel.cpp
     src/device.h
@@ -595,6 +610,8 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/filtereddevicemodel.cpp
     src/filteredservicemodel.h
     src/filteredservicemodel.cpp
+    src/guiplugins.h
+    src/guiplugins.cpp
     src/runtimedevicemodel.h
     src/runtimedevicemodel.cpp
     src/theme.h
@@ -608,10 +625,8 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/enums.cpp
     src/fastutils.h
     src/fastutils.cpp
-    src/basenotification.h
-    src/basenotification.cpp
-    src/notificationsmodel.h
-    src/notificationsmodel.cpp
+    src/notificationmodel.h
+    src/notificationmodel.cpp
     src/notificationsortfilterproxymodel.h
     src/notificationsortfilterproxymodel.cpp
     src/clocktime.h
@@ -653,6 +668,8 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/solarinputmodel.cpp
     src/solaryieldmodel.h
     src/solaryieldmodel.cpp
+    src/switchableoutput.h
+    src/switchableoutput.cpp
     src/switchableoutputmodel.h
     src/switchableoutputmodel.cpp
     src/switchableoutputgroupmodel.h
@@ -687,7 +704,10 @@ set(VictronVenusOS_RESOURCES
     images/icon_vrm_32.png
     images/brief.svg
     images/cloud.svg
+    images/color_wheel_rgb.png
+    images/color_wheel_temperature.png
     images/consumption.svg
+    images/controlcards-no-devices.svg
     images/dcloads.svg
     images/dot.svg
     images/dropdown.svg
@@ -703,6 +723,7 @@ set(VictronVenusOS_RESOURCES
     images/icon_charging_renewables.svg
     images/icon_charging_shore.svg
     images/icon_CL_24.svg
+    images/icon_trash_32.svg
     images/icon_fresh_water_24.svg
     images/icon_raw_water_24.svg
     images/icon_waste_water_24.svg
@@ -724,6 +745,7 @@ set(VictronVenusOS_RESOURCES
     images/grid.svg
     images/icon_simlocked_32.svg
     images/icon_warning_24.svg
+    images/icon_alarm_32.svg
     images/icon_alarm_48.svg
     images/icon_alarm_snooze_24.svg
     images/icon_autostart_24.svg
@@ -739,6 +761,7 @@ set(VictronVenusOS_RESOURCES
     images/icon_manualstart_24.svg
     images/icon_manualstart_timer_24.svg
     images/icon_minus.svg
+    images/icon_minus_bordered.svg
     images/icon_plus.svg
     images/icon_plus_32.svg
     images/icon_refresh_32.svg
@@ -756,8 +779,11 @@ set(VictronVenusOS_RESOURCES
     images/overview.svg
     images/rain.svg
     images/scatteredcloud.svg
+    images/selection_dot.svg
     images/settings.svg
     images/shore.svg
+    images/slider_background_light.svg
+    images/slider_background_dark.svg
     images/solaryield.svg
     images/spinbox_arrow_up.svg
     images/splash-logo-icon.svg

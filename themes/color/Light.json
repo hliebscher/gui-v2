@@ -23,7 +23,7 @@
     "color_critical_background": "#F58B87",
 
     "color_font_primary": "color_gray2",
-    "color_font_secondary": "color_dimGray2",
+    "color_font_secondary": "color_gray5",
     "color_font_disabled": "color_gray4",
 
     "color_background_primary": "color_white",
@@ -52,6 +52,13 @@
 
     "color_modalDialog_border": "color_gray2",
 
+    "color_colorWheelDialog_preset_empty_button_border": "color_dimWhite",
+    "color_colorWheelDialog_preset_empty_button_border_disabled": "color_gray7",
+    "color_colorWheelDialog_preset_empty_button_icon_disabled": "#CCCBC7",
+    "color_colorWheelDialog_preset_empty_button_background": "color_gray8",
+    "color_colorWheelDialog_mode_button_background": "color_gray8",
+    "color_colorWheelDialog_mode_button_separator": "color_gray7",
+
     "color_radioButton_indicator_on": "color_ok",
     "color_radioButton_indicator_off": "color_gray3",
     "color_radioButton_indicator_disabled": "color_gray6",
@@ -62,7 +69,7 @@
     "color_listItem_down_forwardIcon": "color_button_icon_down",
     "color_listItem_separator": "color_gray5",
     "color_listItem_secondaryText": "color_gray4",
-    "color_listItem_highAccessLevel": "#66F0962E",
+    "color_listItem_highAccessLevel": "color_darkOrange",
 
     "color_scrollBar_bar": "color_gray5",
 
@@ -94,6 +101,9 @@
     "color_toastNotification_highlight_warning": "color_warning",
     "color_toastNotification_highlight_error": "color_critical",
 
+    "color_notificationsPage_delegate_unacknowledged_border": "#C1CDDD",
+    "color_notificationsPage_delegate_unacknowledged_background": "#E4EAF2",
+
     "color_page_background": "color_gray7",
 
     "color_viewGradient_color1": "transparent",
@@ -105,6 +115,8 @@
     "color_quantityTable_row_background": "color_gray9",
     "color_quantityTable_row_alternateBackground": "color_gray7",
 
+    "color_emptyPageItem_logo": "color_lightBlue",
+
     "color_solarDetailBox_border": "color_gray3",
     "color_solarDetailBox_quantityTitle": "color_gray4",
     "color_solarDetailBox_columnTitle": "color_gray3",
@@ -115,6 +127,7 @@
     "color_overviewPage_widget_border": "color_ok",
     "color_overviewPage_widget_solar_graph_bar": "color_ok",
     "color_overviewPage_widget_battery_background": "color_lightBlue",
+    "color_overviewPage_widget_battery_font_secondary": "color_dimGray2",
 
     "color_boatPage_background": "color_gray9",
 

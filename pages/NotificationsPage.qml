@@ -9,8 +9,7 @@ import Victron.VenusOS
 SwipeViewPage {
 	id: root
 
-	//% "Notifications"
-	navButtonText: qsTrId("nav_notifications")
+	navButtonText: CommonWords.notifications
 	navButtonIcon: Global.notifications?.navBarNotificationCounterVisible ? "qrc:/images/notifications_subtract.svg" : "qrc:/images/notifications.svg"
 	url: "qrc:/qt/qml/Victron/VenusOS/pages/NotificationsPage.qml"
 	topLeftButton: VenusOS.StatusBar_LeftButton_ControlsInactive
@@ -23,35 +22,41 @@ SwipeViewPage {
 		// over the top of the notificationsView
 		clip: true
 
-		header: Global.notifications.activeOrUnAcknowledgedCount === 0 ? noAlertsHeader : null
+		readonly property int activeNotifications: NotificationModel.activeAlarms + NotificationModel.activeWarnings + NotificationModel.activeInfos
+		readonly property int unacknowledgedNotifications: NotificationModel.unacknowledgedAlarms + NotificationModel.unacknowledgedWarnings + NotificationModel.unacknowledgedInfos
+		header: (activeNotifications > 0 || unacknowledgedNotifications > 0) ? null : noAlertsHeader
 		onHeaderItemChanged: {
 			if (headerItem) {
 				notificationsView.positionViewAtBeginning()
 			}
 		}
 
-		section.property: "activeOrUnAcknowledged"
+		section.property: "section"
 		section.delegate: SettingsListHeader {
-			required property bool section
-
-			height: section ? 0 : implicitHeight
+			id: sectionDelegate
+			required property int section
 			bottomPadding: Theme.geometry_gradientList_spacing
-			text: section ? "" : CommonWords.history
+			text: sectionDelegate.section === 0 ?
+					//: List section header, for the section which contains current/active notifications
+					//% "Active Notifications"
+					qsTrId("notifications_page_active_notifications")
+				: sectionDelegate.section === 1 ?
+					//: List section header, for the section which contains inactive (but unseen) notifications
+					//% "Inactive Notifications"
+					qsTrId("notifications_page_inactive_notifications")
+				: CommonWords.history
 		}
 
-		model: Global.notifications.sortedModel
-		delegate: NotificationDelegate {
-			id: notifDelegate
+		model: NotificationSortFilterProxyModel {
+			sourceModel: NotificationModel
+		}
 
-			function _acknowledge() {
-				// we have access to the BaseNotification via the notification role
-				// but it needs to be "as" Notification for us to be able to call updateAcknowledged()
-				(notifDelegate.notification as Notification)?.updateAcknowledged(true)
-			}
+		delegate: NotificationDelegate {
+			id: del
 
 			Keys.onSpacePressed: {
-				if (!notifDelegate.acknowledged) {
-					_acknowledge()
+				if (!del.acknowledged) {
+					NotificationModel.acknowledge(modelId)
 				}
 			}
 			Keys.enabled: Global.keyNavigationEnabled
@@ -59,9 +64,9 @@ SwipeViewPage {
 			// When the delegate is clicked, acknowledge it.
 			PressArea {
 				anchors.fill: parent
-				enabled: !notifDelegate.acknowledged
+				enabled: !del.acknowledged
 				radius: Theme.geometry_listItem_radius
-				onReleased: notifDelegate._acknowledge()
+				onReleased: NotificationModel.acknowledge(del.modelId)
 			}
 		}
 
@@ -76,12 +81,16 @@ SwipeViewPage {
 					id: iconContainer
 
 					anchors.verticalCenter: parent.verticalCenter
-					width: checkmarkIcon.width + (2 * Theme.geometry_listItem_content_horizontalMargin)
+					width: checkmarkIcon.width + 2*checkmarkIcon.anchors.leftMargin
 					height: parent.height
 
 					Image {
 						id: checkmarkIcon
-						anchors.centerIn: parent
+						anchors {
+							verticalCenter: parent.verticalCenter
+							left: parent.left
+							leftMargin: Theme.geometry_listItem_content_horizontalMargin - 8 // (48 - 32) / 2, to centre with delegate icons
+						}
 						source: "qrc:/images/icon_checkmark_48"
 					}
 				}
@@ -89,13 +98,23 @@ SwipeViewPage {
 				Label {
 					anchors.verticalCenter: parent.verticalCenter
 					width: parent.width - iconContainer.width
-					color: Theme.color_font_secondary
-					font.pixelSize: Theme.font_size_body3
+					color: Theme.color_font_primary
+					font.pixelSize: Theme.font_size_h1
 
-					//% "No current alerts"
-					text: qsTrId("notifications_no_current_alerts")
+					//% "No active notifications"
+					text: qsTrId("notifications_no_active_notifications")
 				}
 			}
+		}
+	}
+
+	// automatically acknowledge all Info notifications,
+	// and also all non-active Warning+Alarm notifications,
+	// upon navigating away from this page.
+	onIsCurrentPageChanged: {
+		if (!isCurrentPage) {
+			NotificationModel.acknowledgeType(VenusOS.Notification_Info)
+			NotificationModel.acknowledgeAllInactive()
 		}
 	}
 }

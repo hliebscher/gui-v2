@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
-CustomDevicePageEntry {
+DeviceListPluginPage {
 	id: root
 
 	//% "Cell Voltages"
@@ -13,9 +13,9 @@ CustomDevicePageEntry {
 
 		model: VisibleItemModel {
 			ListSwitch {
+				property bool value
 				//% "Battery"
 				text: qsTrId("devicelistexample_cellvoltages_text_battery") + " " + root.device.serviceUid
-				property bool value
 				checked: value
 				onClicked: {
 					value = !checked

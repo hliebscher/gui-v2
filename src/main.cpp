@@ -6,6 +6,7 @@
 #include "src/language.h"
 #include "src/logging.h"
 #include "src/backendconnection.h"
+#include "src/guiplugins.h"
 #include "src/allservicesmodel.h"
 #include "src/mockmanager.h"
 #include "src/frameratemodel.h"
@@ -495,6 +496,9 @@ int main(int argc, char *argv[])
 #endif
 	languageLoader->init(); // load the translation catalogue.
 
+	/* Force construction of gui plugin loader */
+	Victron::VenusOS::GuiPluginLoader *guiPluginLoader = Victron::VenusOS::GuiPluginLoader::create(&engine);
+
 	/* Force construction of fps counter */
 	Victron::VenusOS::FrameRateModel* fpsCounter = Victron::VenusOS::FrameRateModel::create();
 
@@ -536,7 +540,7 @@ int main(int argc, char *argv[])
 #if defined(VENUS_DESKTOP_BUILD)
 	const bool desktop(true);
 #else
-	const bool desktop(QGuiApplication::primaryScreen()->availableSize().height() > 600);
+	const bool desktop(false);
 #endif
 
 	window->setProperty("scaleFactor", scaleFactor);

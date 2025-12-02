@@ -51,7 +51,7 @@ if (${VENUS_GX_BUILD})
         DESTINATION ${CMAKE_INSTALL_BINDIR}/Victron/VenusOS)
     install(
         FILES
-            ${PROJECT_SOURCE_DIR}/tools/customisationcompiler.py
+            ${PROJECT_SOURCE_DIR}/tools/gui-v2-plugin-compiler.py
         DESTINATION ${CMAKE_INSTALL_BINDIR})
 endif()
 

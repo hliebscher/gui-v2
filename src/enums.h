@@ -93,7 +93,10 @@ public:
 		Units_Time_Hour,
 		Units_Time_Minute,
 		Units_Altitude_Metre,
-		Units_Altitude_Foot
+		Units_Altitude_Foot,
+		Units_PartsPerMillion,
+		Units_MicrogramPerCubicMeter,
+		Units_Lux
 	};
 	Q_ENUM(Units_Type)
 
@@ -541,7 +544,13 @@ public:
 		SwitchableOutput_Type_BasicSlider,
 		SwitchableOutput_Type_NumericInput,
 		SwitchableOutput_Type_ThreeStateSwitch,
-		SwitchableOutput_Type_BilgePump
+		SwitchableOutput_Type_BilgePump,
+		SwitchableOutput_Type_ColorDimmerRgb,
+		SwitchableOutput_Type_ColorDimmerCct,
+		SwitchableOutput_Type_ColorDimmerRgbW,
+
+		// Update this value whenever new types are added.
+		SwitchableOutput_Type_MaxSupportedType = SwitchableOutput_Type_ColorDimmerRgbW
 	};
 	Q_ENUM(SwitchableOutput_Type)
 
@@ -554,9 +563,18 @@ public:
 		SwitchableOutput_Status_On = 0x09,  //inputActive + active
 		SwitchableOutput_Status_Short_Fault = 0x10,
 		SwitchableOutput_Status_Disabled = 0x20,
-		SwitchableOutput_Status_TripLowVoltage = 0x22
+		SwitchableOutput_Status_TripLowVoltage = 0x22,
+		SwitchableOutput_Status_Bypassed = 0x40
 	};
 	Q_ENUM(SwitchableOutput_Status)
+
+	enum SwitchableOutput_ShowUiControl {
+		SwitchableOutput_ShowUiControl_Off = 0x0,
+		SwitchableOutput_ShowUiControl_Always = 0x1,
+		SwitchableOutput_ShowUiControl_Local = 0x2,
+		SwitchableOutput_ShowUiControl_Remote = 0x4,
+	};
+	Q_ENUM(SwitchableOutput_ShowUiControl)
 
 	enum Notification_Type {
 		Notification_Warning,
@@ -582,7 +600,9 @@ public:
 		CanBusProfile_None250,
 		CanBusProfile_RvC,
 		CanBusProfile_HighVoltage,
-		CanBusProfile_None500
+		CanBusProfile_None500,
+		CanBusProfile_CanOpenMotordrive250,
+		CanBusProfile_CanOpenMotordrive500
 	};
 	Q_ENUM(CanBusProfile_Type)
 
@@ -861,7 +881,9 @@ public:
 		StartPage_Type_Levels_Tanks,
 		StartPage_Type_Levels_Environment,
 		StartPage_Type_BatteryList,
-		StartPage_Type_Boat
+		StartPage_Type_Boat,
+		StartPage_Type_Notifications,
+		StartPage_Type_DeviceList,
 	};
 	Q_ENUM(StartPage_Type)
 

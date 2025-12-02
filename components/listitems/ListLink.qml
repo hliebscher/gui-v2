@@ -12,10 +12,9 @@ ListItem {
 
 	property string url
 	readonly property string formattedUrl: "<font color=\"%1\">%2</font>".arg(Theme.color_font_primary).arg(url)
-
 	readonly property int mode: Qt.platform.os == "wasm" ? VenusOS.ListLink_Mode_LinkButton : VenusOS.ListLink_Mode_QRCode
 
-	interactive: mode === VenusOS.ListLink_Mode_LinkButton
+	interactive: true
 
 	content.children: [
 		SecondaryListLabel {
@@ -35,26 +34,65 @@ ListItem {
 			color: root.down ? Theme.color_listItem_down_forwardIcon : Theme.color_listItem_forwardIcon
 		},
 
-		Item {
-			visible: root.mode === VenusOS.ListLink_Mode_QRCode
-			width: Theme.geometry_listLink_qrCodeSize
-			height: Theme.geometry_listLink_qrCodeSize + (2 * Theme.geometry_listItem_content_verticalMargin)
+		ListItemButton {
+			id: button
 
-			Image {
-				anchors.centerIn: parent
-				source: root.mode === VenusOS.ListLink_Mode_QRCode
-						? `image://QZXing/encode/${root.url}?correctionLevel=M&format=qrcode`
-						: ""
-				sourceSize.width: Theme.geometry_listLink_qrCodeSize
-				sourceSize.height: Theme.geometry_listLink_qrCodeSize
-			}
+			visible: root.mode === VenusOS.ListLink_Mode_QRCode
+			focusPolicy: Qt.NoFocus
+			//% "Show QR code"
+			text: qsTrId("listlink_show_qr_code")
+
+			onClicked: Global.dialogLayer.open(largeQrCodeComponent)
 		}
 	]
 
 	caption: root.mode === VenusOS.ListLink_Mode_LinkButton ? ""
 		  //: %1 = url text
-		  //% "Scan the QR code with your portable device.<br />Or insert the link: %1"
+		  //% "Open the QR code to scan it with your portable device.<br />Or insert the link: %1"
 		: qsTrId("listlink_scan_qr_code").arg(formattedUrl)
 
-	onClicked: BackendConnection.openUrl(root.url)
+	onClicked: {
+		if (mode === VenusOS.ListLink_Mode_LinkButton) {
+			BackendConnection.openUrl(root.url)
+		} else {
+			Global.dialogLayer.open(largeQrCodeComponent)
+		}
+	}
+
+	Component {
+		id: largeQrCodeComponent
+
+		ModalDialog {
+			id: dialog
+
+			dialogDoneOptions: VenusOS.ModalDialog_DoneOptions_NoOptions
+			closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+			header: null
+			contentItem: Rectangle {
+				id: quietZone
+
+				anchors.fill: parent
+
+				Image {
+					// i.e. if a QR code (including quiet zone) is 100 px wide, the
+					// quiet zone will be 30px wide, or 15px on each side.
+					readonly property real _quietZoneFractionalSize: 0.3
+					readonly property int qrCodeSize: quietZone.height * (1 - _quietZoneFractionalSize)
+
+					anchors.centerIn: parent
+					source: `image://QZXing/encode/${root.url}?correctionLevel=M&format=qrcode`
+					sourceSize: Qt.size(qrCodeSize, qrCodeSize)
+					fillMode: Image.PreserveAspectFit
+				}
+
+				CloseButton {
+					anchors {
+						right: parent.right
+						top: parent.top
+					}
+					onClicked: dialog.close()
+				}
+			}
+		}
+	}
 }

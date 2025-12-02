@@ -26,10 +26,10 @@ DevicePage {
 				id: chargerSummary
 
 				readonly property string currentSummaryText: {
-					if (root.energyMeterMode) {
-						return "--"
-					}
 					const actual = isNaN(evCharger.current) ? "--" : Math.round(evCharger.current)
+					if (root.energyMeterMode) {
+						return actual
+					}
 					const max = isNaN(evCharger.maxCurrent) ? "--" : Math.round(evCharger.maxCurrent)
 					return actual + "/" + max
 				}
@@ -79,9 +79,9 @@ DevicePage {
 						// the summary and not the individual devices, so just add empty values
 						// here to pad out the remaining columns.
 						QuantityObject { object: tableRow; key: "power"; unit: VenusOS.Units_Watt }
-						QuantityObject {}
-						QuantityObject {}
-						QuantityObject {}
+						QuantityObject { hidden: true }
+						QuantityObject { hidden: true }
+						QuantityObject { hidden: true }
 					}
 				}
 
@@ -122,6 +122,7 @@ DevicePage {
 			dataItem.uid: evCharger.serviceUid + "/Mode"
 			preferredVisible: dataItem.valid
 			optionModel: Global.evChargers.modeOptionModel
+			writeAccessLevel: VenusOS.User_AccessType_User
 		}
 
 		ListEvcsSetCurrentSpinBox {
@@ -135,6 +136,7 @@ DevicePage {
 			text: qsTrId("evcs_enable_charging")
 			dataItem.uid: evCharger.serviceUid + "/StartStop"
 			preferredVisible: dataItem.valid
+			writeAccessLevel: VenusOS.User_AccessType_User
 		}
 
 		ListNavigation {
@@ -143,7 +145,7 @@ DevicePage {
 			onClicked: {
 				if (root.energyMeterMode) {
 					Global.pageManager.pushPage("/pages/settings/devicelist/ac-in/PageAcInSetup.qml",
-							{ "title": text, "bindPrefix": evCharger.serviceUid })
+							{ "title": text, "bindPrefix": evCharger.serviceUid, "deviceSettingsPage": root })
 				} else {
 					Global.pageManager.pushPage("/pages/evcs/EvChargerSetupPage.qml",
 							{ "title": text, "bindPrefix": evCharger.serviceUid })

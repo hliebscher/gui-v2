@@ -3,24 +3,24 @@
 <TS version="2.1" language="nl">
   <context>
     <name/>
-    <message id="switchable_output_disabled">
-      <location filename="../../src/enums.cpp" line="449"/>
+    <message id="page_switchable_output_switch_mode_disabled">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="45"/>
       <source>Disabled</source>
       <translation>Uitgeschakeld</translation>
     </message>
     <message id="common_words_inverter_overload">
-      <location filename="../../components/CommonWords.qml" line="268"/>
+      <location filename="../../components/CommonWords.qml" line="271"/>
       <source>Inverter overload</source>
       <translation>Overbelasting omvormer</translation>
     </message>
     <message id="common_words_power_watts">
-      <location filename="../../components/CommonWords.qml" line="406"/>
+      <location filename="../../components/CommonWords.qml" line="413"/>
       <source>Power</source>
       <extracomment>Electric power, as measured in Watts</extracomment>
       <translation>Vermogen</translation>
     </message>
     <message id="solarchargers_state_off">
-      <location filename="../../src/enums.cpp" line="326"/>
+      <location filename="../../src/enums.cpp" line="331"/>
       <source>Off</source>
       <translation>Uit</translation>
     </message>
@@ -30,22 +30,22 @@
       <translation>Automatisch</translation>
     </message>
     <message id="common_words_high_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="226"/>
+      <location filename="../../components/CommonWords.qml" line="229"/>
       <source>High battery voltage</source>
       <translation>Hoge accuspanning</translation>
     </message>
     <message id="overview_widget_inverter_title">
-      <location filename="../../components/widgets/InverterChargerWidget.qml" line="31"/>
+      <location filename="../../components/widgets/InverterChargerWidget.qml" line="32"/>
       <source>Inverter / Charger</source>
       <translation>Omvormer / Lader</translation>
     </message>
     <message id="common_words_low_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="277"/>
+      <location filename="../../components/CommonWords.qml" line="280"/>
       <source>Low battery voltage</source>
       <translation>Lage accuspanning</translation>
     </message>
     <message id="common_words_manual">
-      <location filename="../../components/CommonWords.qml" line="296"/>
+      <location filename="../../components/CommonWords.qml" line="299"/>
       <source>Manual</source>
       <translation>Handmatig</translation>
     </message>
@@ -55,15 +55,20 @@
       <translation>Geen</translation>
     </message>
     <message id="common_words_position_ac">
-      <location filename="../../components/CommonWords.qml" line="413"/>
+      <location filename="../../components/CommonWords.qml" line="420"/>
       <source>Position</source>
       <extracomment>AC input or output position</extracomment>
       <translation>Positie</translation>
     </message>
     <message id="settings_minmax_speed">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="183"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="193"/>
       <source>Speed</source>
       <translation>Snelheid</translation>
+    </message>
+    <message id="common_words_state">
+      <location filename="../../components/CommonWords.qml" line="506"/>
+      <source>State</source>
+      <translation>Status</translation>
     </message>
     <message id="settings_firmware_installing">
       <location filename="../../components/FirmwareUpdate.qml" line="67"/>
@@ -72,19 +77,30 @@
       <translation>%1 wordt geïnstalleerd...</translation>
     </message>
     <message id="splash_view_unknown_error">
-      <location filename="../../components/SplashView.qml" line="331"/>
+      <location filename="../../components/SplashView.qml" line="329"/>
       <source>Unknown error</source>
       <translation>Onbekende fout</translation>
     </message>
     <message id="controlcard_inverter_charger_ess_minimum_soc">
-      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="105"/>
+      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="106"/>
       <source>Minimum SOC</source>
       <translation>Minimum laadtoestand</translation>
     </message>
+    <message id="settings_radio_button_group_confirm">
+      <location filename="../../components/RadioButtonListPage.qml" line="121"/>
+      <source>Confirm</source>
+      <extracomment>Confirm password, and verify it if possible</extracomment>
+      <translation type="unfinished">Bevestigen</translation>
+    </message>
     <message id="settings_radio_button_enter_password">
-      <location filename="../../components/RadioButtonListPage.qml" line="134"/>
+      <location filename="../../components/RadioButtonListPage.qml" line="136"/>
       <source>Enter password</source>
       <translation>Geef wachtwoord</translation>
+    </message>
+    <message id="settings_firmware_checking">
+      <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="16"/>
+      <source>Checking...</source>
+      <translation type="unfinished">Controleren...</translation>
     </message>
     <message id="settings_firmware_press_to_check">
       <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="18"/>
@@ -92,7 +108,7 @@
       <translation>Drukken om te controleren</translation>
     </message>
     <message id="common_words_grid">
-      <location filename="../../components/CommonWords.qml" line="217"/>
+      <location filename="../../components/CommonWords.qml" line="220"/>
       <source>Grid</source>
       <translation>Net</translation>
     </message>
@@ -101,8 +117,8 @@
       <source>Solar yield</source>
       <translation>Zon opbrengst</translation>
     </message>
-    <message id="ess_state_external_control">
-      <location filename="../../data/Ess.qml" line="41"/>
+    <message id="inverters_state_externalccontrol">
+      <location filename="../../data/System.qml" line="183"/>
       <source>External control</source>
       <translation>Externe besturing</translation>
     </message>
@@ -115,11 +131,6 @@
       <location filename="../../pages/LevelsPage.qml" line="63"/>
       <source>Environment</source>
       <translation>Omgeving</translation>
-    </message>
-    <message id="notifications_no_current_alerts">
-      <location filename="../../pages/NotificationsPage.qml" line="96"/>
-      <source>No current alerts</source>
-      <translation>Geen actuele waarschuwingen</translation>
     </message>
     <message id="settings_general">
       <location filename="../../pages/SettingsPage.qml" line="41"/>
@@ -142,9 +153,14 @@
       <translation>DVCC</translation>
     </message>
     <message id="common_words_ess">
-      <location filename="../../components/CommonWords.qml" line="200"/>
+      <location filename="../../components/CommonWords.qml" line="203"/>
       <source>ESS</source>
       <translation>ESS</translation>
+    </message>
+    <message id="pagesettingsconnectivity_ethernet">
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="18"/>
+      <source>Ethernet</source>
+      <translation>Ethernet</translation>
     </message>
     <message id="pagesettingsconnectivity_wifi">
       <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="28"/>
@@ -152,23 +168,23 @@
       <translation>WiFi</translation>
     </message>
     <message id="settings_units_gps">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="62"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="63"/>
       <source>GPS</source>
       <extracomment>GPS units</extracomment>
       <translation>GPS</translation>
     </message>
     <message id="settings_tank_pump">
-      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="122"/>
+      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="118"/>
       <source>Tank pump</source>
       <translation>Tankpomp</translation>
     </message>
     <message id="controlcard_generator_subcard_button_manual_stop">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="33"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="34"/>
       <source>Manual Stop</source>
       <translation>Handmatige Stop</translation>
     </message>
     <message id="controlcard_generator_subcard_button_manual_start">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="36"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="37"/>
       <source>Manual Start</source>
       <translation>Handmatig starten</translation>
     </message>
@@ -243,7 +259,7 @@
       <translation>Stop als %1 lager is dan</translation>
     </message>
     <message id="settings_fronius_remove_ip_address">
-      <location filename="../../pages/settings/IpAddressListView.qml" line="49"/>
+      <location filename="../../pages/settings/IpAddressListView.qml" line="53"/>
       <source>Remove IP address?</source>
       <translation>IP adres verwijderen?</translation>
     </message>
@@ -263,7 +279,7 @@
       <translation>Product</translation>
     </message>
     <message id="page_switchable_output_name">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="35"/>
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="18"/>
       <source>Name</source>
       <translation>Naam</translation>
     </message>
@@ -273,17 +289,17 @@
       <translation type="unfinished">Naam</translation>
     </message>
     <message id="settings_deviceinfo_product_id">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="48"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="49"/>
       <source>Product ID</source>
       <translation>Product ID</translation>
     </message>
     <message id="settings_deviceinfo_hardware_version">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="62"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="63"/>
       <source>Hardware version</source>
       <translation>Hardware versie</translation>
     </message>
     <message id="settings_deviceinfo_device_name">
-      <location filename="../../pages/settings/PageDeviceInfo.qml" line="83"/>
+      <location filename="../../pages/settings/PageDeviceInfo.qml" line="84"/>
       <source>Device name</source>
       <translation>Apparaatnaam</translation>
     </message>
@@ -303,22 +319,22 @@
       <translation>Aggregaat niet gedetecteerd bij AC ingang</translation>
     </message>
     <message id="settings_page_run_time_and_service_accumulated_running_time">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="140"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="141"/>
       <source>Accumulated running time since last test run</source>
       <translation>Totale bedrijfstijd sinds laatste testbedrijf</translation>
     </message>
     <message id="settings_page_run_time_and_service_time_to_next_test_run">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="116"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="117"/>
       <source>Time to next test run</source>
       <translation>Tijd tot volgende testbedrijf</translation>
     </message>
     <message id="settings_page_run_time_and_service_running_now">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="133"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="134"/>
       <source>Running now</source>
       <translation>In bedrijf</translation>
     </message>
     <message id="common_words_manual_start">
-      <location filename="../../components/CommonWords.qml" line="302"/>
+      <location filename="../../components/CommonWords.qml" line="305"/>
       <source>Manual start</source>
       <translation>Handmatig starten</translation>
     </message>
@@ -332,58 +348,58 @@
       <source>Daily run time</source>
       <translation>Dagelijkse bedrijfstijd</translation>
     </message>
-    <message id="value_must_be_greater_than_stop_value">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="17"/>
+    <message id="common_words_value_must_be_greater_than_stop_value">
+      <location filename="../../components/CommonWords.qml" line="564"/>
       <source>Value must be greater than stop value</source>
       <translation>Waarde moet hoger zijn dan stopwaarde</translation>
     </message>
-    <message id="value_must_be_lower_than_start_value">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="24"/>
+    <message id="common_words_value_must_be_lower_than_start_value">
+      <location filename="../../components/CommonWords.qml" line="567"/>
       <source>Value must be lower than start value</source>
       <translation>Waarde moet lager zijn dan startwaarde</translation>
     </message>
     <message id="settings_minmax_acout_max_power">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="119"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="124"/>
       <source>AC output</source>
       <translation>AC uitgang</translation>
     </message>
     <message id="ac_output">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="29"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="15"/>
       <source>AC output</source>
       <translation type="unfinished">AC uitgang</translation>
     </message>
     <message id="page_generator_ac_load_use_ac_load">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="39"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="25"/>
       <source>Use AC Load to start/stop</source>
       <translation>AC1 belasting voor Start / Stop gebruiken</translation>
     </message>
     <message id="page_generator_ac_load_measurement">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="45"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="31"/>
       <source>Measurement</source>
       <translation>Meting</translation>
     </message>
     <message id="total_consumption">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="49"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="35"/>
       <source>Total consumption</source>
       <translation>Totaal verbruik</translation>
     </message>
     <message id="total_ac_out">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="51"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="37"/>
       <source>Inverter total AC out</source>
       <translation>Totaal AC uitgangsvermogen omvormer</translation>
     </message>
     <message id="ac_out_highest_phase">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="53"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="39"/>
       <source>Inverter AC out highest phase</source>
       <translation>Hoogste fase AC uitgangsvermogen omvormer</translation>
     </message>
     <message id="start_when_power_is_higher_than">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="60"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="46"/>
       <source>Start when power is higher than</source>
       <translation>Starten als vermogen hoger is dan</translation>
     </message>
     <message id="stop_when_power_is_lower_than">
-      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="92"/>
+      <location filename="../../pages/settings/PageGeneratorAcLoad.qml" line="78"/>
       <source>Stop when power is lower than</source>
       <translation>Stoppen als vermogen lager is dan</translation>
     </message>
@@ -438,7 +454,7 @@
       <translation type="unfinished">Periodiek in bedrijf</translation>
     </message>
     <message id="settings_inverter_high_temperature">
-      <location filename="../../data/Generators.qml" line="84"/>
+      <location filename="../../data/Generators.qml" line="83"/>
       <source>Inverter high temperature</source>
       <translation>Hoge temperatuur omvormer</translation>
     </message>
@@ -453,7 +469,7 @@
       <translation>Starten bij melding overbelasting</translation>
     </message>
     <message id="generator_periodic_run">
-      <location filename="../../data/Generators.qml" line="66"/>
+      <location filename="../../data/Generators.qml" line="65"/>
       <source>Periodic run</source>
       <translation>Periodiek in bedrijf</translation>
     </message>
@@ -602,12 +618,12 @@
       <translation type="unfinished">Actieve accumonitor</translation>
     </message>
     <message id="settings_batteries_name">
-      <location filename="../../pages/settings/PageSettingsBatteryMeasurements.qml" line="100"/>
+      <location filename="../../pages/settings/PageSettingsBatteryMeasurements.qml" line="101"/>
       <source>Name</source>
       <translation type="unfinished">Naam</translation>
     </message>
     <message id="settings_batteries_enter_name">
-      <location filename="../../pages/settings/PageSettingsBatteryMeasurements.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsBatteryMeasurements.qml" line="103"/>
       <source>Enter name</source>
       <translation type="unfinished">Naam invoeren</translation>
     </message>
@@ -676,33 +692,28 @@
       <source>Disabled</source>
       <translation type="unfinished">Uitgeschakeld</translation>
     </message>
-    <message id="settings_canbus_vecan_lynx_ion_bms">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="36"/>
-      <source>VE.Can &amp; Lynx Ion BMS (250 kbit/s)</source>
-      <translation>VE.Can &amp; Lynx Ion BMS (250 kbit/s)</translation>
-    </message>
     <message id="settings_canbus_vecan_and_can_bus_bms">
       <location filename="../../pages/settings/CanbusProfile.qml" line="42"/>
       <source>VE.Can &amp; CAN-bus BMS (250 kbit/s)</source>
       <translation>VE.Can &amp; CAN-bus BMS (250 kbit/s)</translation>
     </message>
     <message id="settings_oceanvolt">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="60"/>
+      <location filename="../../pages/settings/CanbusProfile.qml" line="66"/>
       <source>Oceanvolt (250 kbit/s)</source>
       <translation>Oceanvolt (250 kbit/s)</translation>
     </message>
     <message id="settings_rvc">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="66"/>
+      <location filename="../../pages/settings/CanbusProfile.qml" line="72"/>
       <source>RV-C (250 kbit/s)</source>
       <translation>RV-C (250 kbit/s)</translation>
     </message>
     <message id="settings_up_bu_no_services">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="72"/>
+      <location filename="../../pages/settings/CanbusProfile.qml" line="78"/>
       <source>Up, but no services (250 kbit/s)</source>
       <translation>Beschikbaar, maar geen diensten (250 kbit/s)</translation>
     </message>
     <message id="common_words_devices">
-      <location filename="../../components/CommonWords.qml" line="163"/>
+      <location filename="../../components/CommonWords.qml" line="166"/>
       <source>Devices</source>
       <translation>Apparaten</translation>
     </message>
@@ -752,7 +763,7 @@
       <translation>OK: Geen ander apparaat met dit unieke nummer is verbonden.</translation>
     </message>
     <message id="common_words_network_status">
-      <location filename="../../components/CommonWords.qml" line="346"/>
+      <location filename="../../components/CommonWords.qml" line="349"/>
       <source>Network status</source>
       <translation>Netwerkstatus</translation>
     </message>
@@ -762,22 +773,22 @@
       <translation>Adaptieve helderheid</translation>
     </message>
     <message id="settings_brightness">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="27"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="28"/>
       <source>Brightness</source>
       <translation>Helderheid</translation>
     </message>
     <message id="settings_display_off_time">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="35"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="36"/>
       <source>Display off time</source>
       <translation>Uitschakeltijd scherm</translation>
     </message>
     <message id="settings_displayoff_10sec">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="41"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="42"/>
       <source>10 sec</source>
       <translation>10 sec</translation>
     </message>
     <message id="settings_displayoff_30sec">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="43"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="44"/>
       <source>30 sec</source>
       <translation>30 sec</translation>
     </message>
@@ -802,13 +813,13 @@
       <translation>Nooit</translation>
     </message>
     <message id="settings_display_dark_mode">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="63"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="65"/>
       <source>Dark</source>
       <extracomment>Dark colors mode</extracomment>
       <translation>Donker</translation>
     </message>
     <message id="settings_display_light_mode">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="66"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="68"/>
       <source>Light</source>
       <extracomment>Light colors mode</extracomment>
       <translation>Licht</translation>
@@ -824,17 +835,17 @@
       <translation>Taal wijzigen</translation>
     </message>
     <message id="settings_units_energy">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="39"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="40"/>
       <source>Electrical power display</source>
       <translation>Elektrisch vermogen weergave</translation>
     </message>
     <message id="settings_units_watts">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="43"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="44"/>
       <source>Power (Watts)</source>
       <translation>Vermogen (Watt)</translation>
     </message>
     <message id="settings_units_amps">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="46"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="47"/>
       <source>Current (Amps)</source>
       <translation>Stroom (Ampère)</translation>
     </message>
@@ -845,12 +856,12 @@
       <translation>Niveau %1</translation>
     </message>
     <message id="settings_units_celsius">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="20"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="21"/>
       <source>Celsius</source>
       <translation>Celsius</translation>
     </message>
     <message id="settings_units_fahrenheit">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="22"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="23"/>
       <source>Fahrenheit</source>
       <translation>Fahrenheit</translation>
     </message>
@@ -1030,18 +1041,18 @@
       <translation>Soort update</translation>
     </message>
     <message id="common_words_image_type">
-      <location filename="../../components/CommonWords.qml" line="251"/>
+      <location filename="../../components/CommonWords.qml" line="254"/>
       <source>Image type</source>
       <translation>Soort image</translation>
     </message>
     <message id="common_words_firmware_type_normal">
-      <location filename="../../components/CommonWords.qml" line="204"/>
+      <location filename="../../components/CommonWords.qml" line="207"/>
       <source>Normal</source>
       <extracomment>The firmware type for normal images</extracomment>
       <translation>Normaal</translation>
     </message>
     <message id="common_words_firmware_type_large">
-      <location filename="../../components/CommonWords.qml" line="208"/>
+      <location filename="../../components/CommonWords.qml" line="211"/>
       <source>Large</source>
       <extracomment>The firmware type for large images</extracomment>
       <translation>Large</translation>
@@ -1084,17 +1095,22 @@
       <translation>PV-omvormers zoeken</translation>
     </message>
     <message id="page_settings_fronius_detected_ip_addresses">
-      <location filename="../../pages/settings/PageSettingsFronius.qml" line="43"/>
+      <location filename="../../pages/settings/PageSettingsFronius.qml" line="44"/>
       <source>Detected IP addresses</source>
       <translation>Gedetecteerde IP-adressen</translation>
     </message>
     <message id="page_settings_fronius_add_ip_address_manually">
-      <location filename="../../pages/settings/PageSettingsFronius.qml" line="49"/>
+      <location filename="../../pages/settings/PageSettingsFronius.qml" line="50"/>
+      <source>Add IP address manually</source>
+      <translation type="unfinished">IP adres handmatig toevoegen</translation>
+    </message>
+    <message id="page_settings_shelly_add_ip_address_manually">
+      <location filename="../../pages/settings/PageSettingsShelly.qml" line="96"/>
       <source>Add IP address manually</source>
       <translation>IP adres handmatig toevoegen</translation>
     </message>
     <message id="page_settings_fronius_tcp_port">
-      <location filename="../../pages/settings/PageSettingsFronius.qml" line="55"/>
+      <location filename="../../pages/settings/PageSettingsFronius.qml" line="56"/>
       <source>TCP port</source>
       <translation>TCP poort</translation>
     </message>
@@ -1185,27 +1201,27 @@
       <translation>AC In2 --</translation>
     </message>
     <message id="settings_fronius_rescan_title">
-      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="34"/>
+      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="36"/>
       <source>Rescan for IP addresses?</source>
       <translation>Opnieuw IP-adressen zoeken?</translation>
     </message>
     <message id="settings_fronius_rescan">
-      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="36"/>
+      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="38"/>
       <source>Rescan</source>
       <translation>Opnieuw zoeken</translation>
     </message>
     <message id="settings_remote_support">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="289"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="299"/>
       <source>Remote support</source>
       <translation>Remote support</translation>
     </message>
     <message id="settings_remote_support_tunnel">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="295"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="305"/>
       <source>Remote support tunnel</source>
       <translation>Tunnel voor remote ondersteuning</translation>
     </message>
     <message id="settings_remote_ip_and_support">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="304"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="314"/>
       <source>Remote support IP and port</source>
       <translation>IP en poort voor remote ondersteuning</translation>
     </message>
@@ -1301,73 +1317,67 @@
       <translation>Dagelijkse bedrijfstijdtellers resetten</translation>
     </message>
     <message id="page_settings_run_time_and_service_runtime_counter_reset">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="99"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="100"/>
       <source>The daily runtime counter has been reset</source>
       <translation>De dagelijkse bedrijfstijdteller is gereset</translation>
     </message>
     <message id="page_settings_run_time_and_service_runtime_counter_cant_reset_while_running">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="102"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="103"/>
       <source>It is not possible to modify the counters while the generator is running</source>
       <translation>De tellers kunnen niet worden aangepast als het aggregaat loopt</translation>
     </message>
     <message id="page_settings_generator_service_interval">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="159"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="160"/>
       <source>Generator service interval (hours)</source>
       <translation>Aggregaat onderhoudsinterval (uren)</translation>
     </message>
     <message id="page_settings_run_time_and_service_service_time_interval">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="167"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="168"/>
       <source>Service time interval set to %1h. Use the 'Reset service timer' button to reset the service timer.</source>
       <translation>Servicetimerinterval ingesteld op %1u. Gebruik de knop 'Reset servicetimer' om de servicetimer opnieuw in te stellen.</translation>
     </message>
     <message id="page_settings_run_time_and_service_reset_service_timer">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="178"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="179"/>
       <source>Reset service timer</source>
       <translation>Onderhoudstimer herstarten</translation>
     </message>
-    <message id="components_volumeunit_volume">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="34"/>
-      <source>Volume</source>
-      <extracomment>Title for a list of units of volume (e.g. cubic metres, litres, gallons)</extracomment>
-      <translation type="unfinished">Volume</translation>
-    </message>
     <message id="settings_gps_format">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="68"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="69"/>
       <source>Format</source>
       <extracomment>Format of reported GPS data</extracomment>
       <translation>jjjj-mm-dd</translation>
     </message>
     <message id="settings_gps_format_dms_example">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="73"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="75"/>
       <source>52° 20' 41.6" N, 5° 13' 12.3" E</source>
       <extracomment>Example of GPS data in the 'Degrees, Minutes, Seconds' format</extracomment>
       <translation>52° 20' 41.6" N, 5° 13' 12.3" O</translation>
     </message>
     <message id="settings_gps_format_dd_example">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="76"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="78"/>
       <source>52.34489, 5.22008</source>
       <extracomment>Example of GPS data in the 'Decimal Degrees' format</extracomment>
       <translation>52.34489, 5.22008</translation>
     </message>
     <message id="settings_gps_format_dm_example">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="79"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="81"/>
       <source>52° 20.693 N, 5° 13.205 E</source>
       <extracomment>Example of GPS data in the 'Degrees Minutes' format</extracomment>
       <translation>52° 20.693 N, 5° 13.205 O</translation>
     </message>
     <message id="settings_gps_speed_unit">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="86"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="88"/>
       <source>Speed Unit</source>
       <extracomment>Speed unit for reported GPS data</extracomment>
       <translation>Snelheidseenheid</translation>
     </message>
     <message id="settings_gps_format_mph">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="94"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="97"/>
       <source>Miles per hour</source>
       <translation>Mijlen per uur</translation>
     </message>
     <message id="settings_gps_format_kt">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="96"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
       <source>Knots</source>
       <translation>Knopen</translation>
     </message>
@@ -1607,21 +1617,6 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Dynamic ESS</source>
       <translation type="unfinished">Dynamic ESS</translation>
     </message>
-    <message id="settings_ess_deprecated">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="319"/>
-      <source>Deprecated settings</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="settings_ess_max_charge_percentage">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="326"/>
-      <source>Battery charge limit (% of CCL)</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="settings_ess_max_discharge_percentage">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="337"/>
-      <source>Battery discharge limit (% of DCL)</source>
-      <translation type="unfinished"/>
-    </message>
     <message id="settings_rs_ess_min_soc">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="40"/>
       <source>Minimum SOC (unless grid fails)</source>
@@ -1631,11 +1626,6 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="57"/>
       <source>Active SOC limit</source>
       <translation>Huidige laadtoestand limiet</translation>
-    </message>
-    <message id="scheduled_charge_inactive">
-      <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="70"/>
-      <source>Inactive</source>
-      <translation type="unfinished">Inactief</translation>
     </message>
     <message id="settings_ess_peak_shaving">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="245"/>
@@ -1648,8 +1638,8 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Above minimum SOC only</source>
       <translation>Alleen boven de minimale laadtoestand</translation>
     </message>
-    <message id="settings_ess_always">
-      <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="60"/>
+    <message id="page_switchable_output_show_always">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="123"/>
       <source>Always</source>
       <translation>Altijd</translation>
     </message>
@@ -1729,42 +1719,42 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Beperking terugleveren actief</translation>
     </message>
     <message id="digitalinputs_type_pulsemeter">
-      <location filename="../../src/enums.cpp" line="190"/>
+      <location filename="../../src/enums.cpp" line="195"/>
       <source>Pulse meter</source>
       <translation>Impulsmeter</translation>
     </message>
     <message id="digitalinputs_type_dooralarm">
-      <location filename="../../src/enums.cpp" line="193"/>
+      <location filename="../../src/enums.cpp" line="198"/>
       <source>Door alarm</source>
       <translation>Deuralarm</translation>
     </message>
-    <message id="digitalinputs_type_bilgepump">
-      <location filename="../../src/enums.cpp" line="196"/>
+    <message id="switchable_output_bilge_pump">
+      <location filename="../../src/enums.cpp" line="424"/>
       <source>Bilge pump</source>
       <translation>Lenspomp</translation>
     </message>
     <message id="digitalinputs_type_bilgealarm">
-      <location filename="../../src/enums.cpp" line="199"/>
+      <location filename="../../src/enums.cpp" line="204"/>
       <source>Bilge alarm</source>
       <translation>Lenswateralarm</translation>
     </message>
     <message id="digitalinputs_type_burglaralarm">
-      <location filename="../../src/enums.cpp" line="202"/>
+      <location filename="../../src/enums.cpp" line="207"/>
       <source>Burglar alarm</source>
       <translation>Inbraakalarm</translation>
     </message>
     <message id="digitalinputs_type_smokealarm">
-      <location filename="../../src/enums.cpp" line="205"/>
+      <location filename="../../src/enums.cpp" line="210"/>
       <source>Smoke alarm</source>
       <translation>Rookalarm</translation>
     </message>
     <message id="digitalinputs_type_firealarm">
-      <location filename="../../src/enums.cpp" line="208"/>
+      <location filename="../../src/enums.cpp" line="213"/>
       <source>Fire alarm</source>
       <translation>Brandalarm</translation>
     </message>
     <message id="digitalinputs_type_co2alarm">
-      <location filename="../../src/enums.cpp" line="211"/>
+      <location filename="../../src/enums.cpp" line="216"/>
       <source>CO2 alarm</source>
       <translation>CO2 alarm</translation>
     </message>
@@ -1779,8 +1769,8 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Node-RED</translation>
     </message>
     <message id="settings_large_enabled_safe_mode">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="246"/>
       <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="251"/>
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="256"/>
       <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="24"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="482"/>
       <source>Enabled (safe mode)</source>
@@ -2046,15 +2036,10 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Manual</source>
       <translation type="unfinished">Handmatig</translation>
     </message>
-    <message id="settings_relay_polarity_relay1">
-      <location filename="../../pages/settings/PageSettingsRelay.qml" line="76"/>
-      <source>Polarity (Relay 1)</source>
-      <translation type="unfinished"/>
-    </message>
     <message id="settings_relay_polarity">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="78"/>
       <source>Polarity</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Polariteit</translation>
     </message>
     <message id="settings_relay_normally_open">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="83"/>
@@ -2070,11 +2055,6 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="93"/>
       <source>Function (Relay 2)</source>
       <translation>Functie (Relais 2)</translation>
-    </message>
-    <message id="settings_relay_polarity_relay2">
-      <location filename="../../pages/settings/PageSettingsRelay.qml" line="111"/>
-      <source>Polarity (Relay 2)</source>
-      <translation type="unfinished"/>
     </message>
     <message id="settings_relay_temp_control_rules">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="119"/>
@@ -2274,7 +2254,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
     </message>
     <message id="settings_tcpip_hidden">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="21"/>
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="103"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="104"/>
       <source>[Hidden]</source>
       <translation>[Verborgen]</translation>
     </message>
@@ -2329,22 +2309,22 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Vast</translation>
     </message>
     <message id="settings_tcpip_netmask">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="134"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="135"/>
       <source>Netmask</source>
       <translation>Netmask</translation>
     </message>
     <message id="settings_tcpip_gateway">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="142"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="144"/>
       <source>Gateway</source>
       <translation>Gateway</translation>
     </message>
     <message id="settings_tcpip_dns_server">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="150"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="153"/>
       <source>DNS server</source>
       <translation>DNS server</translation>
     </message>
     <message id="settings_tcpip_link_local">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="160"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="164"/>
       <source>Link-local IP address</source>
       <translation>Link lokaal IP adres</translation>
     </message>
@@ -2364,12 +2344,12 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>VE.CAN apparaten</translation>
     </message>
     <message id="settings_wifi_no_access_points">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="94"/>
       <source>No access points</source>
       <translation>Geen toegangspunten</translation>
     </message>
     <message id="settings_wifi_no_wifi_adapter_connected">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="95"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="96"/>
       <source>No Wi-Fi adapter connected</source>
       <translation>Geen WiFi-adapter aangesloten</translation>
     </message>
@@ -2379,27 +2359,17 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Access point maken</translation>
     </message>
     <message id="settings_wifi_access_point_enter_password">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="67"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="68"/>
       <source>Enter password</source>
       <translation type="unfinished">Geef wachtwoord</translation>
     </message>
-    <message id="page_settings_wifi_invalid_password">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="75"/>
-      <source>Password length must be either 0 or between 10 and 63 characters long</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="page_settings_wifi_password_updated">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="79"/>
-      <source>Password updated</source>
-      <translation type="unfinished"/>
-    </message>
     <message id="settings_wifi_networks">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="85"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="86"/>
       <source>Wi-Fi networks</source>
       <translation>WiFi netwerken</translation>
     </message>
     <message id="settings_wifi_disable_ap_are_you_sure">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="54"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="55"/>
       <source>Are you sure that you want to disable the access point?</source>
       <translation>Access Point uitzetten?</translation>
     </message>
@@ -2495,25 +2465,25 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Alarm hoge accuspanning</translation>
     </message>
     <message id="common_words_last_error">
-      <location filename="../../components/CommonWords.qml" line="620"/>
+      <location filename="../../components/CommonWords.qml" line="642"/>
       <source>Last error</source>
       <extracomment>Details of last error</extracomment>
       <translation>Laatste fout</translation>
     </message>
     <message id="common_words_2nd_last_error">
-      <location filename="../../components/CommonWords.qml" line="623"/>
+      <location filename="../../components/CommonWords.qml" line="645"/>
       <source>2nd last error</source>
       <extracomment>Details of 2nd last error</extracomment>
       <translation>1 na laatste fout</translation>
     </message>
     <message id="common_words_3rd_last_error">
-      <location filename="../../components/CommonWords.qml" line="626"/>
+      <location filename="../../components/CommonWords.qml" line="648"/>
       <source>3rd last error</source>
       <extracomment>Details of 3rd last error</extracomment>
       <translation>2 na laatste fout</translation>
     </message>
     <message id="common_words_4th_last_error">
-      <location filename="../../components/CommonWords.qml" line="629"/>
+      <location filename="../../components/CommonWords.qml" line="651"/>
       <source>4th last error</source>
       <extracomment>Details of 4th last error</extracomment>
       <translation>3 na laatste fout</translation>
@@ -2529,7 +2499,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Modusinstelling</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone">
-      <location filename="../../data/SystemSettings.qml" line="123"/>
+      <location filename="../../data/SystemSettings.qml" line="164"/>
       <source>Standalone</source>
       <extracomment>Network status: Standalone</extracomment>
       <translation>Stand-alone</translation>
@@ -2584,13 +2554,8 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Slave</source>
       <translation type="unfinished">Slave</translation>
     </message>
-    <message id="charger_charge_voltage">
-      <location filename="../../pages/solar/PageSolarParallelOperation.qml" line="105"/>
-      <source>Charge voltage</source>
-      <translation type="unfinished">Laadspanning</translation>
-    </message>
     <message id="systemsettings_networkstatus_slave">
-      <location filename="../../data/SystemSettings.qml" line="107"/>
+      <location filename="../../data/SystemSettings.qml" line="148"/>
       <source>Slave</source>
       <extracomment>Network status: Slave</extracomment>
       <translation>Slave</translation>
@@ -2610,35 +2575,41 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Group &amp; Charge master</source>
       <translation>Groeps- &amp; laadmaster</translation>
     </message>
-    <message id="genset_charge_voltage">
-      <location filename="../../components/PageGensetModel.qml" line="365"/>
+    <message id="charger_charge_voltage">
+      <location filename="../../pages/solar/PageSolarParallelOperation.qml" line="105"/>
       <source>Charge voltage</source>
       <translation>Laadspanning</translation>
     </message>
     <message id="common_words_reset">
-      <location filename="../../components/CommonWords.qml" line="445"/>
+      <location filename="../../components/CommonWords.qml" line="452"/>
       <source>Reset</source>
       <translation>Reset</translation>
     </message>
     <message id="solarcharger_load">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="235"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="233"/>
       <source>Load</source>
       <translation>Belasting</translation>
     </message>
     <message id="charger_networked_operation">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="297"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="288"/>
       <source>Networked operation</source>
       <translation>Netwerkbedrijf</translation>
     </message>
     <message id="charger_history_table_view">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="23"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="29"/>
       <source>Table view</source>
       <translation>Tabelweergave</translation>
     </message>
     <message id="charger_history_chart">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="25"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="31"/>
       <source>Chart</source>
       <translation>Grafiek</translation>
+    </message>
+    <message id="listitems_alarm_level_ok">
+      <location filename="../../components/listitems/core/ListAlarm.qml" line="17"/>
+      <source>OK</source>
+      <extracomment>Voltage alarm is at "OK" level</extracomment>
+      <translation type="unfinished">OK</translation>
     </message>
     <message id="listitems_alarm_level_warning">
       <location filename="../../components/listitems/core/ListAlarm.qml" line="21"/>
@@ -2650,12 +2621,18 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <location filename="../../components/listitems/core/ListAlarm.qml" line="25"/>
       <source>Alarm</source>
       <extracomment>Voltage alarm is at "Alarm" level</extracomment>
+      <translation type="unfinished">Alarm</translation>
+    </message>
+    <message id="digitalinputs_state_alarm">
+      <location filename="../../src/enums.cpp" line="270"/>
+      <source>Alarm</source>
+      <extracomment>Digital input state</extracomment>
       <translation>Alarm</translation>
     </message>
-    <message id="devicelist_tankshape_volume">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="190"/>
+    <message id="components_volumeunit_volume">
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="35"/>
       <source>Volume</source>
-      <extracomment>The volume (as a percentage) for this tank shape point</extracomment>
+      <extracomment>Title for a list of units of volume (e.g. cubic metres, litres, gallons)</extracomment>
       <translation>Volume</translation>
     </message>
     <message id="tank_status_short_circuited">
@@ -2672,6 +2649,11 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <location filename="../../pages/evcs/EvChargerListPage.qml" line="13"/>
       <source>EV Charging Stations</source>
       <translation>EV Charging Stations</translation>
+    </message>
+    <message id="evcs_charger_list_session">
+      <location filename="../../pages/evcs/EvChargerListPage.qml" line="32"/>
+      <source>Session</source>
+      <translation type="unfinished">Sessie</translation>
     </message>
     <message id="evcs_session">
       <location filename="../../pages/evcs/EvChargerPage.qml" line="44"/>
@@ -2690,22 +2672,22 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Laad modus</translation>
     </message>
     <message id="evcs_manual_caption">
-      <location filename="../../data/EvChargers.qml" line="50"/>
+      <location filename="../../data/EvChargers.qml" line="30"/>
       <source>Start and stop the process yourself. Use this for quick charges and close monitoring.</source>
       <translation>Start en stop het proces zelf. Gebruik dit voor snel laden en nauwgezette bewaking.</translation>
     </message>
     <message id="evcs_auto_caption">
-      <location filename="../../data/EvChargers.qml" line="56"/>
+      <location filename="../../data/EvChargers.qml" line="36"/>
       <source>Starts and stops based on the battery charge level. Optimal for overnight and extended charges to avoid overcharging.</source>
       <translation>Start en stopt op basis van het laadniveau van de accu. Optimaal voor 's nachts en langere ladingen om te veel laden te voorkomen.</translation>
     </message>
     <message id="evcs_scheduled_caption">
-      <location filename="../../data/EvChargers.qml" line="62"/>
+      <location filename="../../data/EvChargers.qml" line="42"/>
       <source>Lower electricity rates during off-peak hours or if you want to ensure that your EV is fully charged and ready to go at a specific time.</source>
       <translation>Lagere elektriciteitstarieven tijdens daluren of als ervoor gezord moet worden dat de EV volledig opgeladen is en klaar om te vertrekken op een specifiek tijdstip.</translation>
     </message>
     <message id="evcs_enable_charging">
-      <location filename="../../pages/evcs/EvChargerPage.qml" line="139"/>
+      <location filename="../../pages/evcs/EvChargerPage.qml" line="136"/>
       <source>Enable charging</source>
       <translation>Laden toestaan</translation>
     </message>
@@ -2789,7 +2771,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Niet ondersteund</translation>
     </message>
     <message id="devicelist_remove_disconnected_devices">
-      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="129"/>
+      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="125"/>
       <source>Remove disconnected devices</source>
       <translation>Verwijder niet verbonden apparaten</translation>
     </message>
@@ -2825,7 +2807,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation type="unfinished">Zekering doorgebrand</translation>
     </message>
     <message id="common_words_manual_control">
-      <location filename="../../components/CommonWords.qml" line="299"/>
+      <location filename="../../components/CommonWords.qml" line="302"/>
       <source>Manual control</source>
       <translation>Handmatige bediening</translation>
     </message>
@@ -2881,7 +2863,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Alarmvlaggen</translation>
     </message>
     <message id="common_words_switch">
-      <location filename="../../components/CommonWords.qml" line="519"/>
+      <location filename="../../components/CommonWords.qml" line="529"/>
       <source>Switch</source>
       <extracomment>Change the mode value</extracomment>
       <translation>Schakelaar</translation>
@@ -3057,7 +3039,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Hoge ontladingsstroom</translation>
     </message>
     <message id="evchargers_status_low_state_of_charge">
-      <location filename="../../data/EvChargers.qml" line="128"/>
+      <location filename="../../data/EvChargers.qml" line="70"/>
       <source>Low SOC</source>
       <translation>Lage laadstatus</translation>
     </message>
@@ -3329,7 +3311,7 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>48 Volt</translation>
     </message>
     <message id="devicelist_tanksetup_capacity">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="19"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="18"/>
       <source>Capacity</source>
       <translation>Capaciteit</translation>
     </message>
@@ -3645,94 +3627,100 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation type="unfinished">Accu sensor</translation>
     </message>
     <message id="temperature_sensor_battery">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="72"/>
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="112"/>
       <source>Sensor battery</source>
       <translation>Accu sensor</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_type">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="32"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="31"/>
       <source>Sensor type</source>
       <translation>Sensor type</translation>
     </message>
     <message id="devicelist_tanksetup_standard">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="45"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="44"/>
       <source>Standard</source>
       <translation>Standaard</translation>
     </message>
     <message id="devicelist_tanksetup_european_(0_to_180_ohm)">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="50"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="49"/>
       <source>European (0 to 180 Ohm)</source>
       <translation>Europees (0 tot 180 Ohm)</translation>
     </message>
     <message id="devicelist_tanksetup_us_(240_to_30_ohm)">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="52"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="51"/>
       <source>US (240 to 30 Ohm)</source>
       <translation>VS (240 tot 30 Ohm)</translation>
     </message>
     <message id="devicelist_tanksetup_custom">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="54"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="53"/>
       <source>Custom</source>
-      <translation type="unfinished">Aangepast</translation>
+      <translation>Aangepast</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_empty">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="60"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="59"/>
       <source>Sensor value when empty</source>
       <translation>Sensor waarde als leeg</translation>
     </message>
     <message id="devicelist_tanksetup_fluid_type">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="80"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="79"/>
       <source>Fluid type</source>
       <translation>Vloeistoftype</translation>
     </message>
     <message id="devicelist_tanksetup_butane_ratio">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="89"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="88"/>
       <source>Butane ratio</source>
       <translation>Butaan verhouding</translation>
     </message>
     <message id="devicelist_tanksetup_custom_shape">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="99"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="98"/>
       <source>Custom shape</source>
       <translation>Aangepaste vorm</translation>
     </message>
     <message id="devicelist_tanksetup_averaging_time">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="115"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="114"/>
       <source>Averaging time</source>
       <translation>Gemiddelde tijd</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="123"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="122"/>
       <source>Sensor value</source>
       <translation>Sensor waarde</translation>
     </message>
     <message id="devicelist_tankshape_empty">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="77"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="75"/>
       <source>No custom shape defined. You may define one with up to ten points. Note that 0% and 100% are implied.</source>
       <translation>Geen aangepaste vorm gedefinieerd. Er kan een gedefinieerd worden met maximaal tien punten. Let op dat 0% en 100% geïmpliceerd zijn.</translation>
     </message>
     <message id="devicelist_tankshape_point">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="91"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="89"/>
       <source>Point %1</source>
       <extracomment>%1 = the point number</extracomment>
       <translation>Punt %1</translation>
     </message>
     <message id="devicelist_tankshape_add_point">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="133"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="179"/>
       <source>Add point</source>
       <translation>Punt toevoegen</translation>
     </message>
     <message id="devicelist_tankshape_sensor_level">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="156"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="205"/>
       <source>Sensor level</source>
       <extracomment>The sensor level (as a percentage) for this tank shape point</extracomment>
       <translation>Sensorniveau</translation>
     </message>
+    <message id="devicelist_tankshape_volume">
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="239"/>
+      <source>Volume</source>
+      <extracomment>The volume (as a percentage) for this tank shape point</extracomment>
+      <translation type="unfinished">Volume</translation>
+    </message>
     <message id="devicelist_tankshape_duplicate_sensor_level">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="256"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="311"/>
       <source>Duplicate sensor level values are not allowed.</source>
       <translation>Dubbele sensor niveau waarden zijn niet toegestaan.</translation>
     </message>
     <message id="devicelist_tankshape_volume_not_increasing">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="262"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="317"/>
       <source>Volume values must be increasing.</source>
       <translation>Volume waarden moeten oplopend zijn.</translation>
     </message>
@@ -3742,53 +3730,53 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Watchdog</translation>
     </message>
     <message id="ac-in-setup_unlocked_(kvarh)">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="40"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="41"/>
       <source>Unlocked (kVARh)</source>
       <translation>Open (kVARh)</translation>
     </message>
     <message id="ac-in-setup_unlocked_(2)">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="43"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="44"/>
       <source>Unlocked (2)</source>
       <translation>Open (2)</translation>
     </message>
     <message id="ac-in-setup_unlocked_(1)">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="46"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="47"/>
       <source>Unlocked (1)</source>
       <translation>Open (1)</translation>
     </message>
     <message id="ac-in-setup_locked">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="49"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="50"/>
       <source>Locked</source>
       <translation>Op slot</translation>
     </message>
     <message id="ac-in-setup_phase_configuration">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="106"/>
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="137"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="113"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="144"/>
       <source>Phase configuration</source>
       <translation>Faseconfiguratie</translation>
     </message>
     <message id="ac-in-setup_switch_position">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="122"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="129"/>
       <source>Switch position</source>
       <translation>Stand schakelaar</translation>
     </message>
     <message id="ac-in-setup_single_phase">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="142"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="149"/>
       <source>Single phase</source>
       <translation type="unfinished">1-Fase</translation>
     </message>
     <message id="ac-in-setup_two_phase">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="144"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="151"/>
       <source>2-phase</source>
       <translation>2-Fasen</translation>
     </message>
     <message id="ac-in-setup_three_phase">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="146"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="153"/>
       <source>3-phase</source>
       <translation>3-Fasen</translation>
     </message>
     <message id="ac-in-setup_devices">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="161"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="168"/>
       <source>Devices</source>
       <translation type="unfinished">Apparaten</translation>
     </message>
@@ -3840,35 +3828,35 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Geen fout (%1)</translation>
     </message>
     <message id="ac-in-modeldefault_ac_totals">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="87"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="88"/>
       <source>AC Totals</source>
       <translation>AC totalen</translation>
     </message>
     <message id="ac-in-modeldefault_energy_x">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="121"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="122"/>
       <source>Energy L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
       <translation>Energie L%1</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="159"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="160"/>
       <source>Phase Sequence</source>
       <translation>Fasevolgorde</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence_l3_first">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="165"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="166"/>
       <source>L1-L3-L2</source>
       <extracomment>Phase sequence L1-L3-L2</extracomment>
       <translation>L1-L3-L2</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence_ordered">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="168"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="169"/>
       <source>L1-L2-L3</source>
       <extracomment>Phase sequence L1-L2-L3</extracomment>
       <translation>L1-L2-L3</translation>
     </message>
     <message id="ac-in-modeldefault_data_manager_version">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcIn.qml" line="34"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcIn.qml" line="35"/>
       <source>Data manager version</source>
       <translation>Data manager versie</translation>
     </message>
@@ -3901,23 +3889,23 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Smappee bus apparaten</translation>
     </message>
     <message id="common_words_setting_disabled_when_dmc_connected">
-      <location filename="../../components/CommonWords.qml" line="352"/>
+      <location filename="../../components/CommonWords.qml" line="355"/>
       <source>This setting is disabled when a Digital Multi Control is connected.</source>
       <translation>Deze instelling is uitgeschakeld als een Digital Multi Control is aangesloten.</translation>
     </message>
     <message id="common_words_setting_disabled_when_bms_connected">
-      <location filename="../../components/CommonWords.qml" line="355"/>
+      <location filename="../../components/CommonWords.qml" line="358"/>
       <source>This setting is disabled when a VE.Bus BMS is connected.</source>
       <translation>Deze instelling is uitgeschakeld als een VE.Bus BMS is aangesloten.</translation>
     </message>
     <message id="settings_multirs_ac_in_phase">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="155"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="150"/>
       <source>AC in %1</source>
       <extracomment>%1 = phase name (e.g. L1, L2, L3)</extracomment>
       <translation>AC In %1</translation>
     </message>
     <message id="common_words_dc">
-      <location filename="../../components/CommonWords.qml" line="152"/>
+      <location filename="../../components/CommonWords.qml" line="155"/>
       <source>DC</source>
       <translation>DC</translation>
     </message>
@@ -3971,16 +3959,6 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Wind speed</source>
       <translation>Windsnelheid</translation>
     </message>
-    <message id="page_meteo_battery_voltage">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="99"/>
-      <source>Sensor battery</source>
-      <translation type="unfinished">Accu sensor</translation>
-    </message>
-    <message id="meteo_sensor_battery_status_low">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="120"/>
-      <source>Low</source>
-      <translation type="unfinished">Laag</translation>
-    </message>
     <message id="page_meteo_settings_auto_detect">
       <location filename="../../pages/settings/devicelist/PageMeteoSettings.qml" line="17"/>
       <source>Auto-detect</source>
@@ -4011,16 +3989,6 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Reset counter</source>
       <translation>Teller resetten</translation>
     </message>
-    <message id="temperature_short_circuited">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="32"/>
-      <source>Short circuited</source>
-      <translation type="unfinished">Kortsluiting</translation>
-    </message>
-    <message id="temperature_reverse_polarity">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="35"/>
-      <source>Reverse polarity</source>
-      <translation type="unfinished">Omgekeerde polariteit</translation>
-    </message>
     <message id="temperature_sensor_battery_low">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="38"/>
       <source>Sensor battery low</source>
@@ -4036,11 +4004,6 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <source>Pressure</source>
       <translation>Druk</translation>
     </message>
-    <message id="temperature_sensor_battery_status_low">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="93"/>
-      <source>Low</source>
-      <translation type="unfinished">Laag</translation>
-    </message>
     <message id="temperature_offset">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensorSetup.qml" line="43"/>
       <source>Offset</source>
@@ -4052,17 +4015,17 @@ Gebruik tenzij verboden door de energieleverancier.</translation>
       <translation>Schaal</translation>
     </message>
     <message id="temperature_sensor_voltage">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensorSetup.qml" line="62"/>
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensorSetup.qml" line="63"/>
       <source>Sensor voltage</source>
       <translation>Spanningssensor</translation>
     </message>
     <message id="settings_multirs_total_pv_power">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="209"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="204"/>
       <source>Total PV Power</source>
       <translation>Totaal PV energie</translation>
     </message>
     <message id="common_words_product_page">
-      <location filename="../../components/CommonWords.qml" line="428"/>
+      <location filename="../../components/CommonWords.qml" line="435"/>
       <source>Product page</source>
       <translation>Productpagina</translation>
     </message>
@@ -4089,93 +4052,88 @@ OPMERKING: Het bijwerken kan het systeem tijdelijk stoppen.</translation>
       <translation>Druk om bij te werken</translation>
     </message>
     <message id="vebus_device_updating_the_mk3">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="49"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="50"/>
       <source>Updating the MK3, values will reappear after the update is complete</source>
       <translation>MK3 bijwerken, de waarden zullen na het bijwerken terug komen.</translation>
     </message>
     <message id="vebus_device_charging_to_100">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="77"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="78"/>
       <source>Charging the battery to 100%</source>
       <translation type="unfinished">De accu opladen tot 100%</translation>
     </message>
     <message id="vebus_device_charging_the_battery_to_100">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="92"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="93"/>
       <source>Charging the battery to 100%</source>
       <translation>De accu opladen tot 100%</translation>
     </message>
-    <message id="vebus_device_page_advanced">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="193"/>
-      <source>Advanced</source>
-      <translation type="unfinished">Geavanceerd</translation>
-    </message>
     <message id="vebus_device_in_progress">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="79"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="80"/>
       <source>In progress</source>
       <translation>Bezig</translation>
     </message>
     <message id="vebus_device_press_to_stop">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="86"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="87"/>
       <source>Press to stop</source>
       <translation>Klik om te stoppen</translation>
     </message>
     <message id="vebus_device_press_to_start">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="122"/>
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="89"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="90"/>
       <source>Press to start</source>
       <translation>Klik om te starten</translation>
     </message>
     <message id="vebus_device_charge_the_battery_to_100">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="95"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="96"/>
       <source>Charge the battery to 100%</source>
       <translation>Laad de accu op tot 100%</translation>
     </message>
     <message id="vebus_device_return_to_normal_operation">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="104"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="105"/>
       <source>The system will return to normal operation, prioritizing renewable energy.
 Do you want to continue?</source>
       <translation>Het systeem keert terug naar de normale werking en geeft prioriteit aan hernieuwbare energie.
 Doorgaan?</translation>
     </message>
     <message id="vebus_device_use_shore_power">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="125"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="126"/>
       <source>Shore power will be used when available and the "Solar &amp; wind priority" option will be ignored.
 Do you want to continue?</source>
       <translation>Als er walstroom beschikbaar is zal dat gebruikt worden en de zon- en windprioriteit wordt genegeerd. Doorgaan?</translation>
     </message>
     <message id="ebus_device_use_shore_power_once">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="130"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="131"/>
       <source>Shore power will be used to complete a full battery charge for one time.
 After the charging process is complete, the system will return to normal operation, prioritizing solar and wind energy.
 Do you want to continue?</source>
       <translation>Voor één keer de accu's volledig laden wordt walstroom gebruikt. Als het laden gereed is zal het systeem terugkeren naar normaal bedrijf, met de prioriteit voor zon- en windenergie. Doorgaan?</translation>
     </message>
     <message id="vebus_device_page_dc_voltage">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="158"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="159"/>
       <source>DC Voltage</source>
       <translation>DC spanning</translation>
     </message>
     <message id="vebus_device_page_dc_current">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="165"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="166"/>
       <source>DC Current</source>
       <translation>DC stroom</translation>
+    </message>
+    <message id="vebus_device_page_advanced">
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="206"/>
+      <source>Advanced</source>
+      <translation>Geavanceerd</translation>
     </message>
     <message id="common_words_alarm_setup">
       <location filename="../../components/CommonWords.qml" line="65"/>
       <source>Alarm setup</source>
       <translation>Alarm instellingen</translation>
     </message>
-    <message id="vebus_device_bms_message">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="221"/>
-      <source>A VE.Bus BMS automatically turns the system off when needed to protect the battery. Controlling the system from the Color Control is therefore not possible.</source>
-      <translation>Een VE.Bus BMS schakelt indien nodig automatisch het systeem uit om de accu te beschermen. Besturing van het systeem vanuit de Color Control is daarom niet mogelijk.</translation>
-    </message>
     <message id="vebus_device_bms_not_found">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="227"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="240"/>
       <source>A BMS assistant is installed configured for a VE.Bus BMS, but the VE.Bus BMS is not found!</source>
       <translation>Een BMS-assistent is geïnstalleerd die ingesteld is voor een VE.Bus BMS, maar de VE.Bus BMS wordt niet gevonden!</translation>
     </message>
     <message id="vebus_device_vebus_bms">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="233"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="246"/>
       <source>VE.Bus BMS</source>
       <translation>VE.Bus BMS</translation>
     </message>
@@ -4208,7 +4166,7 @@ Do you want to continue?</source>
     <message id="vebus_device_starting">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="117"/>
       <source>Starting...</source>
-      <translation type="unfinished">Starten...</translation>
+      <translation>Starten...</translation>
     </message>
     <message id="vebus_device_press_to_interrupt">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="120"/>
@@ -4291,7 +4249,7 @@ Do you want to continue?</source>
       <translation>Voltooid</translation>
     </message>
     <message id="common_words_pending">
-      <location filename="../../components/CommonWords.qml" line="399"/>
+      <location filename="../../components/CommonWords.qml" line="406"/>
       <source>Pending</source>
       <translation>In behandeling...</translation>
     </message>
@@ -4326,8 +4284,8 @@ Do you want to continue?</source>
       <translation>BMS storing</translation>
     </message>
     <message id="vebus_device_serial_numbers">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="278"/>
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="282"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="291"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="295"/>
       <source>Serial numbers</source>
       <translation>Serienummers</translation>
     </message>
@@ -4520,7 +4478,7 @@ Do you want to continue?</source>
     </message>
     <message id="ess_card_minimum_soc">
       <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="15"/>
-      <location filename="../../pages/controlcards/ESSCard.qml" line="51"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="52"/>
       <source>Minimum SOC</source>
       <translation type="unfinished">Minimum laadtoestand</translation>
     </message>
@@ -4640,10 +4598,10 @@ Do you want to continue?</source>
       <source>Charge current</source>
       <translation>Laadstroom</translation>
     </message>
-    <message id="common_words_charging">
-      <location filename="../../components/CommonWords.qml" line="125"/>
+    <message id="battery_mode_charging">
+      <location filename="../../src/enums.cpp" line="30"/>
       <source>Charging</source>
-      <extracomment>"Charging" state</extracomment>
+      <extracomment>Battery mode</extracomment>
       <translation>Opladen</translation>
     </message>
     <message id="common_words_clear_error_action">
@@ -4653,47 +4611,48 @@ Do you want to continue?</source>
       <translation>Storing wissen</translation>
     </message>
     <message id="digitalinputs_state_closed">
-      <location filename="../../src/enums.cpp" line="257"/>
+      <location filename="../../src/enums.cpp" line="262"/>
       <source>Closed</source>
       <extracomment>Digital input state</extracomment>
       <translation>Gesloten</translation>
     </message>
     <message id="evchargers_status_connected">
-      <location filename="../../data/EvChargers.qml" line="111"/>
+      <location filename="../../data/EvChargers.qml" line="53"/>
       <source>Connected</source>
       <translation>Verbonden</translation>
     </message>
-    <message id="common_words_current_amps">
-      <location filename="../../components/CommonWords.qml" line="140"/>
+    <message id="temperature_slider_current">
+      <location filename="../../components/controls/TemperatureSlider.qml" line="160"/>
       <source>Current</source>
-      <extracomment>Electric current, as measured in Amps</extracomment>
+      <extracomment>The current temperature measurement</extracomment>
       <translation>Stroom</translation>
     </message>
     <message id="common_words_current_transformers">
-      <location filename="../../components/CommonWords.qml" line="143"/>
+      <location filename="../../components/CommonWords.qml" line="146"/>
       <source>Current transformers</source>
       <translation>Stroomtransformatoren</translation>
     </message>
     <message id="common_words_custom_name">
-      <location filename="../../components/CommonWords.qml" line="146"/>
+      <location filename="../../components/CommonWords.qml" line="149"/>
       <source>Custom name</source>
       <translation>Aangepaste naam</translation>
     </message>
     <message id="common_words_debug">
-      <location filename="../../components/CommonWords.qml" line="156"/>
+      <location filename="../../components/CommonWords.qml" line="159"/>
       <source>Debug</source>
       <extracomment>Title for a menu item which displays debugging information</extracomment>
       <translation>Debuggen</translation>
     </message>
     <message id="common_words_device">
-      <location filename="../../components/CommonWords.qml" line="160"/>
+      <location filename="../../components/CommonWords.qml" line="163"/>
       <source>Device</source>
       <extracomment>Title for device information</extracomment>
       <translation>Apparaat</translation>
     </message>
-    <message id="common_words_discharging">
-      <location filename="../../components/CommonWords.qml" line="169"/>
+    <message id="battery_mode_discharging">
+      <location filename="../../src/enums.cpp" line="34"/>
       <source>Discharging</source>
+      <extracomment>Battery mode</extracomment>
       <translation>Ontladen</translation>
     </message>
     <message id="wifimodel_disconnected">
@@ -4702,173 +4661,173 @@ Do you want to continue?</source>
       <translation>Losgekoppeld</translation>
     </message>
     <message id="common_words_enable">
-      <location filename="../../components/CommonWords.qml" line="178"/>
+      <location filename="../../components/CommonWords.qml" line="181"/>
       <source>Enable</source>
       <translation>Inschakelen</translation>
     </message>
     <message id="common_words_enabled">
-      <location filename="../../components/CommonWords.qml" line="181"/>
+      <location filename="../../components/CommonWords.qml" line="184"/>
       <source>Enabled</source>
       <translation>Ingeschakeld</translation>
     </message>
     <message id="common_words_energy">
-      <location filename="../../components/CommonWords.qml" line="185"/>
+      <location filename="../../components/CommonWords.qml" line="188"/>
       <source>Energy</source>
       <extracomment>Amount of charged energy</extracomment>
       <translation>Energie</translation>
     </message>
     <message id="pvinverter_statusCode_error">
-      <location filename="../../src/enums.cpp" line="307"/>
+      <location filename="../../src/enums.cpp" line="312"/>
       <source>Error</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>Fout</translation>
     </message>
     <message id="common_words_error_colon">
-      <location filename="../../components/CommonWords.qml" line="191"/>
+      <location filename="../../components/CommonWords.qml" line="194"/>
       <source>Error:</source>
       <translation>Fout:</translation>
     </message>
     <message id="common_words_error_code">
-      <location filename="../../components/CommonWords.qml" line="194"/>
+      <location filename="../../components/CommonWords.qml" line="197"/>
       <source>Error code</source>
       <translation>Storingscode</translation>
     </message>
     <message id="common_words_firmware_version">
-      <location filename="../../components/CommonWords.qml" line="211"/>
+      <location filename="../../components/CommonWords.qml" line="214"/>
       <source>Firmware version</source>
       <translation>Firmware versie</translation>
     </message>
     <message id="digitalinputs_type_generator">
-      <location filename="../../src/enums.cpp" line="214"/>
+      <location filename="../../src/enums.cpp" line="219"/>
       <source>Generator</source>
       <translation>Aggregaat</translation>
     </message>
     <message id="common_words_high_battery_temperature">
-      <location filename="../../components/CommonWords.qml" line="223"/>
+      <location filename="../../components/CommonWords.qml" line="226"/>
       <source>High battery temperature</source>
       <translation>Hoge accutemperatuur</translation>
     </message>
     <message id="common_words_high_level_alarm">
-      <location filename="../../components/CommonWords.qml" line="230"/>
+      <location filename="../../components/CommonWords.qml" line="233"/>
       <source>High level alarm</source>
       <extracomment>An alarm that triggers when the level is too high</extracomment>
       <translation>Alarm hoog niveau</translation>
     </message>
     <message id="common_words_high_starter_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="233"/>
+      <location filename="../../components/CommonWords.qml" line="236"/>
       <source>High starter battery voltage</source>
       <translation>Hoge startaccuspanning</translation>
     </message>
     <message id="common_words_high_temperature">
-      <location filename="../../components/CommonWords.qml" line="236"/>
+      <location filename="../../components/CommonWords.qml" line="239"/>
       <source>High temperature</source>
       <translation>Hoge temperatuur</translation>
     </message>
     <message id="common_words_high_voltage_alarms">
-      <location filename="../../components/CommonWords.qml" line="239"/>
+      <location filename="../../components/CommonWords.qml" line="242"/>
       <source>High voltage alarms</source>
       <translation>Alarmen hoge spanning</translation>
     </message>
     <message id="common_words_history">
-      <location filename="../../components/CommonWords.qml" line="242"/>
+      <location filename="../../components/CommonWords.qml" line="245"/>
       <source>History</source>
       <translation>Geschiedenis</translation>
     </message>
     <message id="common_words_x_hours">
-      <location filename="../../components/CommonWords.qml" line="245"/>
+      <location filename="../../components/CommonWords.qml" line="248"/>
       <source>%1 Hour(s)</source>
       <translation>%1 Uur/uren</translation>
     </message>
-    <message id="common_words_idle">
-      <location filename="../../components/CommonWords.qml" line="248"/>
+    <message id="battery_mode_idle">
+      <location filename="../../src/enums.cpp" line="26"/>
       <source>Idle</source>
+      <extracomment>Battery mode</extracomment>
       <translation>Inactief</translation>
     </message>
-    <message id="common_words_inactive_status">
-      <location filename="../../components/CommonWords.qml" line="255"/>
+    <message id="scheduled_charge_inactive">
+      <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="70"/>
       <source>Inactive</source>
-      <extracomment>Status is 'inactive'</extracomment>
       <translation>Inactief</translation>
     </message>
     <message id="common_words_ip_address">
-      <location filename="../../components/CommonWords.qml" line="271"/>
+      <location filename="../../components/CommonWords.qml" line="274"/>
       <source>IP address</source>
       <translation>IP adres</translation>
     </message>
     <message id="common_words_low_battery_temperature">
-      <location filename="../../components/CommonWords.qml" line="274"/>
+      <location filename="../../components/CommonWords.qml" line="277"/>
       <source>Low battery temperature</source>
       <translation>Lage accutemperatuur</translation>
     </message>
     <message id="common_words_low_level_alarm">
-      <location filename="../../components/CommonWords.qml" line="281"/>
+      <location filename="../../components/CommonWords.qml" line="284"/>
       <source>Low level alarm</source>
       <extracomment>An alarm that triggers when the level is too low</extracomment>
       <translation>Alarm laag niveau</translation>
     </message>
     <message id="common_words_low_starter_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="284"/>
+      <location filename="../../components/CommonWords.qml" line="287"/>
       <source>Low starter battery voltage</source>
       <translation>Lage startaccuspanning</translation>
     </message>
     <message id="common_words_low_state_of_charge">
-      <location filename="../../components/CommonWords.qml" line="287"/>
+      <location filename="../../components/CommonWords.qml" line="290"/>
       <source>Low state-of-charge</source>
       <translation>Lage laadstatus</translation>
     </message>
     <message id="common_words_low_temperature">
-      <location filename="../../components/CommonWords.qml" line="290"/>
+      <location filename="../../components/CommonWords.qml" line="293"/>
       <source>Low temperature</source>
       <translation>Lage temperatuur</translation>
     </message>
     <message id="common_words_low_voltage_alarms">
-      <location filename="../../components/CommonWords.qml" line="293"/>
+      <location filename="../../components/CommonWords.qml" line="296"/>
       <source>Low voltage alarms</source>
       <translation>Alarmen lage spanning</translation>
     </message>
     <message id="common_words_manufacturer">
-      <location filename="../../components/CommonWords.qml" line="308"/>
+      <location filename="../../components/CommonWords.qml" line="311"/>
       <source>Manufacturer</source>
       <translation>Producent</translation>
     </message>
     <message id="common_words_maximum_temperature">
-      <location filename="../../components/CommonWords.qml" line="321"/>
+      <location filename="../../components/CommonWords.qml" line="324"/>
       <source>Maximum temperature</source>
       <translation>Maximumtemperatuur</translation>
     </message>
     <message id="common_words_maximum_voltage">
-      <location filename="../../components/CommonWords.qml" line="324"/>
+      <location filename="../../components/CommonWords.qml" line="327"/>
       <source>Maximum voltage</source>
       <translation>Maximumspanning</translation>
     </message>
     <message id="common_words_minimum_temperature">
-      <location filename="../../components/CommonWords.qml" line="334"/>
+      <location filename="../../components/CommonWords.qml" line="337"/>
       <source>Minimum temperature</source>
       <translation>Minimumtemperatuur</translation>
     </message>
     <message id="common_words_minimum_voltage">
-      <location filename="../../components/CommonWords.qml" line="337"/>
+      <location filename="../../components/CommonWords.qml" line="340"/>
       <source>Minimum voltage</source>
       <translation>Minimumspanning</translation>
     </message>
     <message id="common_words_mode">
-      <location filename="../../components/CommonWords.qml" line="340"/>
+      <location filename="../../components/CommonWords.qml" line="343"/>
       <source>Mode</source>
       <translation>Modus</translation>
     </message>
     <message id="common_words_model_name">
-      <location filename="../../components/CommonWords.qml" line="343"/>
+      <location filename="../../components/CommonWords.qml" line="346"/>
       <source>Model name</source>
       <translation>Modelnaam</translation>
     </message>
     <message id="digitalinputs_state_no">
-      <location filename="../../src/enums.cpp" line="245"/>
+      <location filename="../../src/enums.cpp" line="250"/>
       <source>No</source>
       <extracomment>Digital input state</extracomment>
       <translation>Nee</translation>
     </message>
     <message id="common_words_no_error">
-      <location filename="../../components/CommonWords.qml" line="358"/>
+      <location filename="../../components/CommonWords.qml" line="361"/>
       <source>No error</source>
       <translation>Geen fout</translation>
     </message>
@@ -4878,106 +4837,106 @@ Do you want to continue?</source>
       <translation>Niet beschikbaar</translation>
     </message>
     <message id="common_words_not_connected">
-      <location filename="../../components/CommonWords.qml" line="371"/>
+      <location filename="../../components/CommonWords.qml" line="374"/>
       <source>Not connected</source>
       <translation>Niet aangesloten</translation>
     </message>
     <message id="common_words_offline">
-      <location filename="../../components/CommonWords.qml" line="377"/>
+      <location filename="../../components/CommonWords.qml" line="384"/>
       <source>Offline</source>
       <translation>Offline</translation>
     </message>
-    <message id="listitems_alarm_level_ok">
-      <location filename="../../components/listitems/core/ListAlarm.qml" line="17"/>
+    <message id="digitalinputs_state_ok">
+      <location filename="../../src/enums.cpp" line="266"/>
       <source>OK</source>
-      <extracomment>Voltage alarm is at "OK" level</extracomment>
+      <extracomment>Digital input state</extracomment>
       <translation>OK</translation>
     </message>
     <message id="switchable_output_on">
-      <location filename="../../src/enums.cpp" line="443"/>
+      <location filename="../../src/enums.cpp" line="471"/>
       <source>On</source>
       <translation>Aan</translation>
     </message>
     <message id="common_words_online">
-      <location filename="../../components/CommonWords.qml" line="386"/>
+      <location filename="../../components/CommonWords.qml" line="393"/>
       <source>Online</source>
       <translation>Online</translation>
     </message>
     <message id="digitalinputs_state_open">
-      <location filename="../../src/enums.cpp" line="253"/>
+      <location filename="../../src/enums.cpp" line="258"/>
       <source>Open</source>
       <extracomment>Digital input open</extracomment>
       <translation>Geopend</translation>
     </message>
     <message id="common_words_password">
-      <location filename="../../components/CommonWords.qml" line="402"/>
+      <location filename="../../components/CommonWords.qml" line="409"/>
       <source>Password</source>
       <translation>Wachtwoord</translation>
     </message>
     <message id="common_words_phase">
-      <location filename="../../components/CommonWords.qml" line="409"/>
+      <location filename="../../components/CommonWords.qml" line="416"/>
       <source>Phase</source>
       <translation>Fase</translation>
     </message>
     <message id="common_words_press_to_clear">
-      <location filename="../../components/CommonWords.qml" line="419"/>
+      <location filename="../../components/CommonWords.qml" line="426"/>
       <source>Press to clear</source>
       <translation>Klikken om te wissen</translation>
     </message>
     <message id="common_words_press_to_reset">
-      <location filename="../../components/CommonWords.qml" line="422"/>
+      <location filename="../../components/CommonWords.qml" line="429"/>
       <source>Press to reset</source>
       <translation>Klik om te resetten</translation>
     </message>
     <message id="common_words_press_to_scan">
-      <location filename="../../components/CommonWords.qml" line="425"/>
+      <location filename="../../components/CommonWords.qml" line="432"/>
       <source>Press to scan</source>
       <translation>Klikken om te zoeken</translation>
     </message>
     <message id="common_words_pv_inverter">
-      <location filename="../../components/CommonWords.qml" line="431"/>
+      <location filename="../../components/CommonWords.qml" line="438"/>
       <source>PV Inverter</source>
       <translation>PV omvormer</translation>
     </message>
     <message id="common_words_pv_power">
-      <location filename="../../components/CommonWords.qml" line="435"/>
+      <location filename="../../components/CommonWords.qml" line="442"/>
       <source>PV Power</source>
       <extracomment>Photovoltaic power (for a solar charger or tracker)</extracomment>
       <translation>PV stroom</translation>
     </message>
     <message id="common_words_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="438"/>
+      <location filename="../../components/CommonWords.qml" line="445"/>
       <source>Quiet hours</source>
       <translation>Rustige uren</translation>
     </message>
     <message id="common_words_relay">
-      <location filename="../../components/CommonWords.qml" line="442"/>
+      <location filename="../../components/CommonWords.qml" line="449"/>
       <source>Relay</source>
       <extracomment>Relay switch</extracomment>
       <translation>Relais</translation>
     </message>
     <message id="common_words_reboot">
-      <location filename="../../components/CommonWords.qml" line="448"/>
+      <location filename="../../components/CommonWords.qml" line="455"/>
       <source>Reboot</source>
       <translation>Herstart</translation>
     </message>
     <message id="common_words_remove">
-      <location filename="../../components/CommonWords.qml" line="451"/>
+      <location filename="../../components/CommonWords.qml" line="458"/>
       <source>Remove</source>
       <translation>Verwijderen</translation>
     </message>
-    <message id="switch_state_running">
-      <location filename="../../src/enums.cpp" line="358"/>
+    <message id="switchable_output_running">
+      <location filename="../../src/enums.cpp" line="468"/>
       <source>Running</source>
       <translation>Loopt</translation>
     </message>
     <message id="common_words_scanning">
-      <location filename="../../components/CommonWords.qml" line="458"/>
+      <location filename="../../components/CommonWords.qml" line="465"/>
       <source>Scanning %1%</source>
       <translation>Zoeken %1%</translation>
     </message>
     <message id="common_words_serial_number">
-      <location filename="../../components/CommonWords.qml" line="461"/>
+      <location filename="../../components/CommonWords.qml" line="468"/>
       <source>Serial number</source>
       <translation>Serienummer</translation>
     </message>
@@ -4987,147 +4946,149 @@ Do you want to continue?</source>
       <translation>Instellingen</translation>
     </message>
     <message id="common_words_setup">
-      <location filename="../../components/CommonWords.qml" line="467"/>
+      <location filename="../../components/CommonWords.qml" line="474"/>
       <source>Setup</source>
       <translation>Instellingen</translation>
     </message>
     <message id="common_words_signal_strength">
-      <location filename="../../components/CommonWords.qml" line="470"/>
+      <location filename="../../components/CommonWords.qml" line="477"/>
       <source>Signal strength</source>
       <translation>Signaalsterkte</translation>
     </message>
     <message id="pvinverter_statusCode_standby">
-      <location filename="../../src/enums.cpp" line="299"/>
+      <location filename="../../src/enums.cpp" line="304"/>
       <source>Standby</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>Stand-by</translation>
     </message>
     <message id="common_words_start_after_condition_reached_for">
-      <location filename="../../components/CommonWords.qml" line="484"/>
+      <location filename="../../components/CommonWords.qml" line="494"/>
       <source>Start after the condition is reached for</source>
       <translation>Start nadat de voorwaarde is bereikt voor</translation>
     </message>
     <message id="common_words_start_time">
-      <location filename="../../components/CommonWords.qml" line="487"/>
+      <location filename="../../components/CommonWords.qml" line="497"/>
       <source>Start time</source>
       <translation>Starttijd</translation>
     </message>
     <message id="common_words_start_value_during_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="490"/>
+      <location filename="../../components/CommonWords.qml" line="500"/>
       <source>Start value during quiet hours</source>
       <translation>Startwaarde tijdens rustige uren</translation>
     </message>
     <message id="common_words_start_when_warning_is_active_for">
-      <location filename="../../components/CommonWords.qml" line="493"/>
+      <location filename="../../components/CommonWords.qml" line="503"/>
       <source>Start when warning is active for</source>
       <translation>Starten als melding actief is gedurende</translation>
     </message>
     <message id="common_words_state_of_charge">
-      <location filename="../../components/CommonWords.qml" line="499"/>
+      <location filename="../../components/CommonWords.qml" line="509"/>
       <source>State of charge</source>
       <translation>Laadstatus</translation>
     </message>
     <message id="common_words_status">
-      <location filename="../../components/CommonWords.qml" line="502"/>
+      <location filename="../../components/CommonWords.qml" line="512"/>
       <source>Status</source>
       <translation>Status</translation>
     </message>
     <message id="pvinverter_statusCode_startup">
-      <location filename="../../src/enums.cpp" line="291"/>
+      <location filename="../../src/enums.cpp" line="296"/>
       <source>Startup (%1)</source>
       <extracomment>PV inverter status code. %1 = the startup status number</extracomment>
       <translation>Opstarten (%1)</translation>
     </message>
     <message id="common_words_stop_value_during_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="509"/>
+      <location filename="../../components/CommonWords.qml" line="519"/>
       <source>Stop value during quiet hours</source>
       <translation>Stopwaarde tijdens rustige uren</translation>
     </message>
     <message id="common_words_stop_after_the_condition_is_reached_for">
-      <location filename="../../components/CommonWords.qml" line="512"/>
+      <location filename="../../components/CommonWords.qml" line="522"/>
       <source>Stop after the condition is reached for</source>
       <translation>Stop nadat de voorwaarde is bereikt voor</translation>
     </message>
     <message id="digitalinputs_state_stopped">
-      <location filename="../../src/enums.cpp" line="273"/>
+      <location filename="../../src/enums.cpp" line="278"/>
       <source>Stopped</source>
       <extracomment>Digital input state</extracomment>
       <translation>Gestopt</translation>
     </message>
     <message id="common_words_temperature">
-      <location filename="../../components/CommonWords.qml" line="522"/>
+      <location filename="../../components/CommonWords.qml" line="532"/>
       <source>Temperature</source>
       <translation>Temperatuur</translation>
     </message>
     <message id="common_words_temperature_sensor">
-      <location filename="../../components/CommonWords.qml" line="525"/>
+      <location filename="../../components/CommonWords.qml" line="535"/>
       <source>Temperature sensor</source>
       <translation>Temperatuursensor</translation>
     </message>
     <message id="common_words_today">
-      <location filename="../../components/CommonWords.qml" line="528"/>
+      <location filename="../../components/CommonWords.qml" line="538"/>
       <source>Today</source>
       <translation>Vandaag</translation>
     </message>
     <message id="common_words_total">
-      <location filename="../../components/CommonWords.qml" line="531"/>
+      <location filename="../../components/CommonWords.qml" line="541"/>
       <source>Total</source>
       <translation>Totaal</translation>
     </message>
     <message id="common_words_tracker">
-      <location filename="../../components/CommonWords.qml" line="538"/>
+      <location filename="../../components/CommonWords.qml" line="548"/>
       <source>Tracker</source>
       <extracomment>Solar tracker</extracomment>
       <translation>Tracker</translation>
     </message>
     <message id="page_switchable_output_type">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="55"/>
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="92"/>
       <source>Type</source>
       <translation>Type</translation>
     </message>
     <message id="common_words_unique_id_number">
-      <location filename="../../components/CommonWords.qml" line="544"/>
+      <location filename="../../components/CommonWords.qml" line="554"/>
       <source>Unique Identity Number</source>
       <translation>Uniek Identity nummer</translation>
     </message>
-    <message id="settings_radio_button_group_unknown">
-      <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
+    <message id="Unknown">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="40"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="109"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="128"/>
       <source>Unknown</source>
       <translation>Onbekend</translation>
     </message>
     <message id="common_words_vebus_error">
-      <location filename="../../components/CommonWords.qml" line="551"/>
+      <location filename="../../components/CommonWords.qml" line="573"/>
       <source>VE.Bus Error</source>
       <translation>VE.Bus fout</translation>
     </message>
     <message id="common_words_voltage">
-      <location filename="../../components/CommonWords.qml" line="554"/>
+      <location filename="../../components/CommonWords.qml" line="576"/>
       <source>Voltage</source>
       <translation>Spanning</translation>
     </message>
     <message id="common_words_vrm_instance">
-      <location filename="../../components/CommonWords.qml" line="557"/>
+      <location filename="../../components/CommonWords.qml" line="579"/>
       <source>VRM instance</source>
       <translation>VRM instance</translation>
     </message>
     <message id="common_words_when_warning_is_cleared_stop_after">
-      <location filename="../../components/CommonWords.qml" line="560"/>
+      <location filename="../../components/CommonWords.qml" line="582"/>
       <source>When warning is cleared stop after</source>
       <translation>Als melding is gewist, dan stoppen na</translation>
     </message>
     <message id="digitalinputs_state_yes">
-      <location filename="../../src/enums.cpp" line="249"/>
+      <location filename="../../src/enums.cpp" line="254"/>
       <source>Yes</source>
       <extracomment>Digital input state</extracomment>
       <translation>Ja</translation>
     </message>
     <message id="common_words_yesterday">
-      <location filename="../../components/CommonWords.qml" line="566"/>
+      <location filename="../../components/CommonWords.qml" line="588"/>
       <source>Yesterday</source>
       <translation>Gisteren</translation>
     </message>
     <message id="common_words_yield_kwh">
-      <location filename="../../components/CommonWords.qml" line="570"/>
+      <location filename="../../components/CommonWords.qml" line="592"/>
       <source>Yield</source>
       <extracomment>Solar charger yield, in kWh (kilowatt hours)</extracomment>
       <translation>Opbrengst</translation>
@@ -5277,68 +5238,68 @@ Do you want to continue?</source>
       <source>No firmware found</source>
       <translation>Geen firmware gevonden</translation>
     </message>
-    <message id="gauges_fuel">
-      <location filename="../../components/Gauges.js" line="25"/>
+    <message id="tank_type_fuel">
+      <location filename="../../src/enums.cpp" line="495"/>
       <source>Fuel</source>
       <translation>Brandstof</translation>
     </message>
-    <message id="gauges_fresh_water">
-      <location filename="../../components/Gauges.js" line="33"/>
+    <message id="tank_type_fresh_water">
+      <location filename="../../src/enums.cpp" line="498"/>
       <source>Fresh water</source>
       <translation>Vers water</translation>
     </message>
-    <message id="gauges_waste_water">
-      <location filename="../../components/Gauges.js" line="41"/>
+    <message id="tank_type_waste_water">
+      <location filename="../../src/enums.cpp" line="501"/>
       <source>Waste water</source>
       <translation>Afvalwater</translation>
     </message>
-    <message id="gauges_live_well">
-      <location filename="../../components/Gauges.js" line="49"/>
+    <message id="tank_type_live_well">
+      <location filename="../../src/enums.cpp" line="504"/>
       <source>Live well</source>
       <translation>Bronwater</translation>
     </message>
-    <message id="gauges_oil">
-      <location filename="../../components/Gauges.js" line="57"/>
+    <message id="tank_type_oil">
+      <location filename="../../src/enums.cpp" line="507"/>
       <source>Oil</source>
       <translation>Olie</translation>
     </message>
-    <message id="gauges_black_water">
-      <location filename="../../components/Gauges.js" line="65"/>
+    <message id="tank_type_black_water">
+      <location filename="../../src/enums.cpp" line="510"/>
       <source>Black water</source>
       <translation>Vuilwater</translation>
     </message>
-    <message id="gauges_gasoline">
-      <location filename="../../components/Gauges.js" line="73"/>
+    <message id="tank_type_gasoline">
+      <location filename="../../src/enums.cpp" line="513"/>
       <source>Gasoline</source>
       <translation>Benzine</translation>
     </message>
-    <message id="gauges_diesel">
-      <location filename="../../components/Gauges.js" line="81"/>
+    <message id="tank_type_diesel">
+      <location filename="../../src/enums.cpp" line="516"/>
       <source>Diesel</source>
       <translation>Diesel</translation>
     </message>
-    <message id="gauges_lpg">
-      <location filename="../../components/Gauges.js" line="89"/>
+    <message id="tank_type_lpg">
+      <location filename="../../src/enums.cpp" line="519"/>
       <source>LPG</source>
       <translation>LPG</translation>
     </message>
-    <message id="gauges_lng">
-      <location filename="../../components/Gauges.js" line="97"/>
+    <message id="tank_type_lng">
+      <location filename="../../src/enums.cpp" line="522"/>
       <source>LNG</source>
       <translation>LNG</translation>
     </message>
-    <message id="gauges_hydraulic_oil">
-      <location filename="../../components/Gauges.js" line="105"/>
+    <message id="tank_type_hydraulic_oil">
+      <location filename="../../src/enums.cpp" line="525"/>
       <source>Hydraulic oil</source>
       <translation>Hydraulische olie</translation>
     </message>
-    <message id="gauges_raw_water">
-      <location filename="../../components/Gauges.js" line="113"/>
+    <message id="tank_type_raw_water">
+      <location filename="../../src/enums.cpp" line="528"/>
       <source>Raw water</source>
       <translation>Vuil water</translation>
     </message>
     <message id="listItem_no_access">
-      <location filename="../../components/listitems/core/ListItem.qml" line="87"/>
+      <location filename="../../components/listitems/core/ListItem.qml" line="102"/>
       <source>Setting locked for access level</source>
       <translation>Instelling vergrendeld voor toegangsniveau</translation>
     </message>
@@ -5362,9 +5323,10 @@ Do you want to continue?</source>
       <source>Levels</source>
       <translation>Niveaus</translation>
     </message>
-    <message id="nav_notifications">
-      <location filename="../../pages/NotificationsPage.qml" line="13"/>
+    <message id="common_words_notifications">
+      <location filename="../../components/CommonWords.qml" line="378"/>
       <source>Notifications</source>
+      <extracomment>The 'Notifications' page</extracomment>
       <translation>Berichten</translation>
     </message>
     <message id="utils_formatTimestamp_now">
@@ -5451,42 +5413,42 @@ Do you want to continue?</source>
       <translation>Schema %1</translation>
     </message>
     <message id="cgwacs_battery_schedule_day">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="127"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="128"/>
       <source>Day</source>
       <translation>Dag</translation>
     </message>
     <message id="cgwacs_battery_schedule_day_not_set">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="131"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="132"/>
       <source>Not set</source>
       <translation>Niet ingesteld</translation>
     </message>
     <message id="cgwacs_battery_schedule_soc_limit">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="154"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="155"/>
       <source>SOC limit</source>
       <translation>Laadtoestand limiet</translation>
     </message>
     <message id="cgwacs_battery_schedule_self_consumption_above_limit">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="165"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="166"/>
       <source>Self-consumption above limit</source>
       <translation>Eigen verbruik boven limiet</translation>
     </message>
     <message id="cgwacs_battery_schedule_pv">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="170"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="171"/>
       <source>PV</source>
       <translation type="unfinished">Zonnepaneel</translation>
     </message>
     <message id="settings_multirs_pv">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="190"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="185"/>
       <source>PV</source>
       <translation>Zonnepaneel</translation>
     </message>
     <message id="cgwacs_battery_schedule_pv_and_battery">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="172"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="173"/>
       <source>PV &amp; Battery</source>
       <translation>Zonnepaneel &amp; Accu</translation>
     </message>
-    <message id="settings_firmware_checking">
-      <location filename="../../components/listitems/ListFirmwareCheckButton.qml" line="16"/>
+    <message id="pagesettingssupportstate_firmware_checking">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="153"/>
       <source>Checking...</source>
       <translation>Controleren...</translation>
     </message>
@@ -5647,7 +5609,7 @@ Do you want to continue?</source>
       <translation>Min. Spanning</translation>
     </message>
     <message id="charger_history_max_voltage">
-      <location filename="../../components/SolarHistoryTableView.qml" line="75"/>
+      <location filename="../../components/SolarHistoryTableView.qml" line="84"/>
       <source>Max Voltage</source>
       <translation>Max. Spanning</translation>
     </message>
@@ -5686,7 +5648,7 @@ Do you want to continue?</source>
       <translation type="unfinished">uur</translation>
     </message>
     <message id="solarchargers_state_bulk">
-      <location filename="../../src/enums.cpp" line="332"/>
+      <location filename="../../src/enums.cpp" line="337"/>
       <source>Bulk</source>
       <translation>Bulk</translation>
     </message>
@@ -5697,7 +5659,7 @@ Do you want to continue?</source>
       <translation>Abs</translation>
     </message>
     <message id="solarchargers_state_float">
-      <location filename="../../src/enums.cpp" line="338"/>
+      <location filename="../../src/enums.cpp" line="343"/>
       <source>Float</source>
       <translation>Druppellading</translation>
     </message>
@@ -5736,17 +5698,17 @@ Do you want to continue?</source>
       <translation>3 na laatste</translation>
     </message>
     <message id="charger_history_max_power">
-      <location filename="../../components/SolarHistoryTableView.qml" line="77"/>
+      <location filename="../../components/SolarHistoryTableView.qml" line="86"/>
       <source>Max Power</source>
       <translation>Max. vermogen</translation>
     </message>
     <message id="splash_view_unable_to_connect">
-      <location filename="../../components/SplashView.qml" line="283"/>
+      <location filename="../../components/SplashView.qml" line="281"/>
       <source>Unable to connect</source>
       <translation>Niet mogelijk verbinding te maken</translation>
     </message>
     <message id="splash_view_reconnecting">
-      <location filename="../../components/SplashView.qml" line="285"/>
+      <location filename="../../components/SplashView.qml" line="283"/>
       <source>Disconnected, attempting to reconnect</source>
       <translation>Verbinding verbroken, probeert de verbinding te herstellen</translation>
     </message>
@@ -5756,67 +5718,67 @@ Do you want to continue?</source>
       <translation>Verbinding wordt gemaakt</translation>
     </message>
     <message id="splash_view_connecting">
-      <location filename="../../components/SplashView.qml" line="288"/>
+      <location filename="../../components/SplashView.qml" line="286"/>
       <source>Connecting</source>
       <translation type="unfinished">Verbinding wordt gemaakt</translation>
     </message>
     <message id="splash_view_connected">
-      <location filename="../../components/SplashView.qml" line="290"/>
+      <location filename="../../components/SplashView.qml" line="288"/>
       <source>Connected, awaiting broker messages</source>
       <translation>Verbonden, wachten op brokerberichten</translation>
     </message>
     <message id="splash_view_initializing">
-      <location filename="../../components/SplashView.qml" line="292"/>
+      <location filename="../../components/SplashView.qml" line="290"/>
       <source>Connected, receiving broker messages</source>
       <translation>Verbonden, ontvangt brokerberichten</translation>
     </message>
     <message id="splash_view_ready">
-      <location filename="../../components/SplashView.qml" line="301"/>
+      <location filename="../../components/SplashView.qml" line="299"/>
       <source>Connected, loading user interface</source>
       <translation>Aangesloten, gebruikersinterface laden</translation>
     </message>
     <message id="splash_view_invalid_protocol_version">
-      <location filename="../../components/SplashView.qml" line="317"/>
+      <location filename="../../components/SplashView.qml" line="315"/>
       <source>Invalid protocol version</source>
       <translation>Ongeldige protocolversie</translation>
     </message>
     <message id="splash_view_client_id_rejected">
-      <location filename="../../components/SplashView.qml" line="319"/>
+      <location filename="../../components/SplashView.qml" line="317"/>
       <source>Client ID rejected</source>
       <translation>Klant ID afgewezen</translation>
     </message>
     <message id="splash_view_server_unavailable">
-      <location filename="../../components/SplashView.qml" line="321"/>
+      <location filename="../../components/SplashView.qml" line="319"/>
       <source>Broker service not available</source>
       <translation>Broker service niet beschikbaar</translation>
     </message>
     <message id="splash_view_bad_username_or_password">
-      <location filename="../../components/SplashView.qml" line="323"/>
+      <location filename="../../components/SplashView.qml" line="321"/>
       <source>Bad username or password</source>
       <translation>Ongeldige gebruikersnaam of wachtwoord</translation>
     </message>
     <message id="splash_view_not_authorized">
-      <location filename="../../components/SplashView.qml" line="325"/>
+      <location filename="../../components/SplashView.qml" line="323"/>
       <source>Client not authorized</source>
       <translation>Gebruiker niet geautoriseerd</translation>
     </message>
     <message id="splash_view_transport_invalid">
-      <location filename="../../components/SplashView.qml" line="327"/>
+      <location filename="../../components/SplashView.qml" line="325"/>
       <source>Transport connection error</source>
       <translation>Transport verbindingsfout</translation>
     </message>
     <message id="splash_view_protocol_violation">
-      <location filename="../../components/SplashView.qml" line="329"/>
+      <location filename="../../components/SplashView.qml" line="327"/>
       <source>Protocol violation error</source>
       <translation>Protocol fout</translation>
     </message>
     <message id="splash_view_mqtt5_error">
-      <location filename="../../components/SplashView.qml" line="333"/>
+      <location filename="../../components/SplashView.qml" line="331"/>
       <source>MQTT protocol level 5 error</source>
       <translation>MQTT protocol niveau 5 fout</translation>
     </message>
-    <message id="notifications_silence_alarm">
-      <location filename="../../components/StatusBar.qml" line="308"/>
+    <message id="common_words_silence_alarm">
+      <location filename="../../components/CommonWords.qml" line="480"/>
       <source>Silence alarm</source>
       <translation>Alarm uitzetten</translation>
     </message>
@@ -5891,7 +5853,7 @@ Do you want to continue?</source>
       <translation>AC Belastingen</translation>
     </message>
     <message id="overview_widget_dcloads_title">
-      <location filename="../../components/widgets/DcLoadsWidget.qml" line="23"/>
+      <location filename="../../components/widgets/DcLoadsWidget.qml" line="13"/>
       <source>DC Loads</source>
       <translation>DC Belastingen</translation>
     </message>
@@ -5927,7 +5889,7 @@ Do you want to continue?</source>
       <translation type="unfinished">Stoppen</translation>
     </message>
     <message id="page_generator_stopping">
-      <location filename="../../data/Generators.qml" line="45"/>
+      <location filename="../../data/Generators.qml" line="44"/>
       <source>Stopping</source>
       <translation>Stoppen</translation>
     </message>
@@ -5939,6 +5901,7 @@ Do you want to continue?</source>
     </message>
     <message id="tank_description">
       <location filename="../../data/common/TankDescription.qml" line="24"/>
+      <location filename="../../src/device.cpp" line="133"/>
       <source>%1 tank (%2)</source>
       <extracomment>Tank description. %1 = tank type (e.g. Fuel, Fresh water), %2 = tank device instance (a number)</extracomment>
       <translation>%1 tank (%2)</translation>
@@ -5974,13 +5937,13 @@ Do you want to continue?</source>
       <translation>Water Generator</translation>
     </message>
     <message id="digitalinputs_state_low">
-      <location filename="../../src/enums.cpp" line="229"/>
+      <location filename="../../src/enums.cpp" line="234"/>
       <source>Low</source>
       <extracomment>Digital input state</extracomment>
       <translation>Laag</translation>
     </message>
     <message id="digitalinputs_state_high">
-      <location filename="../../src/enums.cpp" line="233"/>
+      <location filename="../../src/enums.cpp" line="238"/>
       <source>High</source>
       <extracomment>Digital input state</extracomment>
       <translation>Hoog</translation>
@@ -5991,77 +5954,77 @@ Do you want to continue?</source>
       <translation>Houd de accu's opgeladen</translation>
     </message>
     <message id="evchargers_status_disconnected">
-      <location filename="../../data/EvChargers.qml" line="108"/>
+      <location filename="../../data/EvChargers.qml" line="50"/>
       <source>Disconnected</source>
       <translation type="unfinished">Losgekoppeld</translation>
     </message>
     <message id="evchargers_status_charged">
-      <location filename="../../data/EvChargers.qml" line="116"/>
+      <location filename="../../data/EvChargers.qml" line="58"/>
       <source>Charged</source>
       <translation>Geladen</translation>
     </message>
     <message id="evchargers_status_waiting_for_sun">
-      <location filename="../../data/EvChargers.qml" line="119"/>
+      <location filename="../../data/EvChargers.qml" line="61"/>
       <source>Waiting for sun</source>
       <translation>Wacht op zon</translation>
     </message>
     <message id="evchargers_status_waiting_for_rfid">
-      <location filename="../../data/EvChargers.qml" line="122"/>
+      <location filename="../../data/EvChargers.qml" line="64"/>
       <source>Waiting for RFID</source>
       <translation>Wacht op RFID</translation>
     </message>
     <message id="evchargers_status_waiting_for_start">
-      <location filename="../../data/EvChargers.qml" line="125"/>
+      <location filename="../../data/EvChargers.qml" line="67"/>
       <source>Waiting for start</source>
       <translation>Wacht op start</translation>
     </message>
     <message id="evchargers_status_ground_test_error">
-      <location filename="../../data/EvChargers.qml" line="131"/>
+      <location filename="../../data/EvChargers.qml" line="73"/>
       <source>Ground test error</source>
       <translation>Fout aardingstest</translation>
     </message>
     <message id="evchargers_status_cp_input_test_error">
-      <location filename="../../data/EvChargers.qml" line="137"/>
+      <location filename="../../data/EvChargers.qml" line="79"/>
       <source>CP input test error</source>
       <translation>Fout bij testen CP ingang</translation>
     </message>
     <message id="evchargers_status_residual_current_detected">
-      <location filename="../../data/EvChargers.qml" line="140"/>
+      <location filename="../../data/EvChargers.qml" line="82"/>
       <source>Residual current detected</source>
       <translation>Lekstroom gedetecteerd</translation>
     </message>
     <message id="evchargers_status_undervoltage_detected">
-      <location filename="../../data/EvChargers.qml" line="143"/>
+      <location filename="../../data/EvChargers.qml" line="85"/>
       <source>Undervoltage detected</source>
       <translation>Te lage spanning gedetecteerd</translation>
     </message>
     <message id="evchargers_status_overvoltage_detected">
-      <location filename="../../data/EvChargers.qml" line="146"/>
+      <location filename="../../data/EvChargers.qml" line="88"/>
       <source>Overvoltage detected</source>
       <translation>Te hoge spanning gedetecteerd</translation>
     </message>
     <message id="evchargers_status_overheating_detected">
-      <location filename="../../data/EvChargers.qml" line="149"/>
+      <location filename="../../data/EvChargers.qml" line="91"/>
       <source>Overheating detected</source>
       <translation>Oververhitting gedetecteerd</translation>
     </message>
     <message id="evchargers_status_charging_limit">
-      <location filename="../../data/EvChargers.qml" line="152"/>
+      <location filename="../../data/EvChargers.qml" line="94"/>
       <source>Charging limit</source>
       <translation>Laad limiet</translation>
     </message>
     <message id="evchargers_status_start_charging">
-      <location filename="../../data/EvChargers.qml" line="155"/>
+      <location filename="../../data/EvChargers.qml" line="97"/>
       <source>Start charging</source>
       <translation>Start laden</translation>
     </message>
     <message id="evchargers_status_unknown">
-      <location filename="../../data/EvChargers.qml" line="171"/>
+      <location filename="../../data/EvChargers.qml" line="113"/>
       <source>Unknown</source>
       <translation type="unfinished">Onbekend</translation>
     </message>
     <message id="evchargers_mode_scheduled">
-      <location filename="../../data/EvChargers.qml" line="184"/>
+      <location filename="../../data/EvChargers.qml" line="126"/>
       <source>Scheduled</source>
       <translation type="unfinished">Gepland</translation>
     </message>
@@ -6071,17 +6034,17 @@ Do you want to continue?</source>
       <translation>Gepland</translation>
     </message>
     <message id="page_generator_warm_up">
-      <location filename="../../data/Generators.qml" line="39"/>
+      <location filename="../../data/Generators.qml" line="38"/>
       <source>Warm-up</source>
       <translation>Opwarmen</translation>
     </message>
     <message id="page_generator_cool_down">
-      <location filename="../../data/Generators.qml" line="42"/>
+      <location filename="../../data/Generators.qml" line="41"/>
       <source>Cool-down</source>
       <translation>Afkoelen</translation>
     </message>
     <message id="generator_manually_started">
-      <location filename="../../data/Generators.qml" line="63"/>
+      <location filename="../../data/Generators.qml" line="62"/>
       <source>Manually started</source>
       <translation>Handmatig gestart</translation>
     </message>
@@ -6096,40 +6059,40 @@ Do you want to continue?</source>
       <translation>Mollitia quis est quas deleniti quibusdam explicabo quasi. Voluptatem qui quia et consequuntur.</translation>
     </message>
     <message id="pvinverters_statusCode_boot_loading">
-      <location filename="../../src/enums.cpp" line="303"/>
+      <location filename="../../src/enums.cpp" line="308"/>
       <source>Boot loading</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>Opstarten</translation>
     </message>
     <message id="pvinverter_statusCode_running_mppt">
-      <location filename="../../src/enums.cpp" line="311"/>
+      <location filename="../../src/enums.cpp" line="316"/>
       <source>Running (MPPT)</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>In bedrijf (MPPT)</translation>
     </message>
     <message id="pvinverter_running_throttled">
-      <location filename="../../src/enums.cpp" line="315"/>
+      <location filename="../../src/enums.cpp" line="320"/>
       <source>Running (Throttled)</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>In bedrijf (productie beperkt)</translation>
     </message>
     <message id="solarchargers_state_fault">
-      <location filename="../../src/enums.cpp" line="329"/>
+      <location filename="../../src/enums.cpp" line="334"/>
       <source>Fault</source>
       <translation>Fout</translation>
     </message>
     <message id="solarchargers_state_absorption">
-      <location filename="../../src/enums.cpp" line="335"/>
+      <location filename="../../src/enums.cpp" line="340"/>
       <source>Absorption</source>
       <translation>Absorptie</translation>
     </message>
     <message id="solarchargers_state_storage">
-      <location filename="../../src/enums.cpp" line="341"/>
+      <location filename="../../src/enums.cpp" line="346"/>
       <source>Storage</source>
       <translation>Opslag</translation>
     </message>
     <message id="solarchargers_state_equalize">
-      <location filename="../../src/enums.cpp" line="344"/>
+      <location filename="../../src/enums.cpp" line="349"/>
       <source>Equalize</source>
       <translation>Egaliseren</translation>
     </message>
@@ -6228,11 +6191,6 @@ Do you want to continue?</source>
       <source>Test</source>
       <translation>Test</translation>
     </message>
-    <message id="inverters_state_externalccontrol">
-      <location filename="../../data/System.qml" line="183"/>
-      <source>External control</source>
-      <translation type="unfinished">Externe besturing</translation>
-    </message>
     <message id="inverters_state_dynamic_ess">
       <location filename="../../data/System.qml" line="198"/>
       <source>Dynamic ESS</source>
@@ -6244,46 +6202,46 @@ Do you want to continue?</source>
       <translation>Dynamic ESS</translation>
     </message>
     <message id="systemsettings_networkstatus_group_master">
-      <location filename="../../data/SystemSettings.qml" line="111"/>
+      <location filename="../../data/SystemSettings.qml" line="152"/>
       <source>Group Master</source>
       <extracomment>Network status: Group Master</extracomment>
       <translation>Groep Master</translation>
     </message>
     <message id="systemsettings_networkstatus_instance_master">
-      <location filename="../../data/SystemSettings.qml" line="115"/>
+      <location filename="../../data/SystemSettings.qml" line="156"/>
       <source>Instance Master</source>
       <extracomment>Network status: Instance Master</extracomment>
       <translation>Instance Master</translation>
     </message>
     <message id="systemsettings_networkstatus_group_and_instance_master">
-      <location filename="../../data/SystemSettings.qml" line="119"/>
+      <location filename="../../data/SystemSettings.qml" line="160"/>
       <source>Group &amp; Instance Master</source>
       <extracomment>Network status: Group &amp; Instance Master</extracomment>
       <translation>Group &amp; Instance Master</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone_and_group_master">
-      <location filename="../../data/SystemSettings.qml" line="127"/>
+      <location filename="../../data/SystemSettings.qml" line="168"/>
       <source>Standalone &amp; Group Master</source>
       <extracomment>Network status: Standalone &amp; Group Master</extracomment>
       <translation>Stand-alone &amp; Groep Master</translation>
     </message>
     <message id="inverterCharger_mode_charger_only">
-      <location filename="../../data/InverterChargers.qml" line="76"/>
+      <location filename="../../data/InverterChargers.qml" line="45"/>
       <source>Charger only</source>
       <translation>Alleen lader</translation>
     </message>
     <message id="inverterCharger_mode_inverter_only">
-      <location filename="../../data/InverterChargers.qml" line="79"/>
+      <location filename="../../data/InverterChargers.qml" line="48"/>
       <source>Inverter only</source>
       <translation>Alleen omvormer</translation>
     </message>
     <message id="charger_alarms_short_circuit_alarm">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="320"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="311"/>
       <source>Short circuit alarm</source>
       <translation>Alarm kortsluiting</translation>
     </message>
     <message id="settings_wifi_disable_ap">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="52"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="53"/>
       <source>Disable Access Point</source>
       <translation>AP uitzetten</translation>
     </message>
@@ -6308,7 +6266,7 @@ Do you want to continue?</source>
       <translation>Totale looptijd aggregaat (uur)</translation>
     </message>
     <message id="settings_minmax_dc_input">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="107"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="111"/>
       <source>DC input</source>
       <translation>DC ingang</translation>
     </message>
@@ -6323,17 +6281,17 @@ Do you want to continue?</source>
       <translation type="unfinished">Automatisch starten</translation>
     </message>
     <message id="controlcard_generator_autostart_conditions">
-      <location filename="../../pages/controlcards/GeneratorCard.qml" line="69"/>
+      <location filename="../../pages/controlcards/GeneratorCard.qml" line="70"/>
       <source>Start and stop the generator based on the configured autostart conditions.</source>
       <translation>Het aggregaat starten en stoppen op basis van de ingestelde autostartvoorwaarden.</translation>
     </message>
     <message id="generator_dialog_disabled">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="102"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="103"/>
       <source>Generator start/stop disabled</source>
       <translation>Aggregaat start/stop uitgeschakeld</translation>
     </message>
     <message id="generator_dialog_remote_start_disabled">
-      <location filename="../../components/GeneratorManualControlButton.qml" line="105"/>
+      <location filename="../../components/GeneratorManualControlButton.qml" line="106"/>
       <source>The remote start functionality is disabled on the genset. The GX will not be able to start or stop the genset now. Enable it on the genset control panel.</source>
       <translation>De afstandsstartfunctie is uitgeschakeld op het aggregaat. De GX kan het aggregaat nu niet starten of stoppen. Schakel deze functie in op het bedieningspaneel van het aggregaat.</translation>
     </message>
@@ -6423,6 +6381,11 @@ Do you want to continue?</source>
       <location filename="../../components/PageGensetModel.qml" line="338"/>
       <source>DC genset settings</source>
       <translation>Instellingen DC stroomaggregaat</translation>
+    </message>
+    <message id="genset_charge_voltage">
+      <location filename="../../components/PageGensetModel.qml" line="365"/>
+      <source>Charge voltage</source>
+      <translation type="unfinished">Laadspanning</translation>
     </message>
     <message id="genset_charge_voltage_controlled_by_bms">
       <location filename="../../components/PageGensetModel.qml" line="376"/>
@@ -6586,7 +6549,7 @@ Do you want to continue?</source>
       <translation>Fout: #%1</translation>
     </message>
     <message id="devicelistpage_genset">
-      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="108"/>
+      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="104"/>
       <source>Genset</source>
       <translation>Aggregaat</translation>
     </message>
@@ -6595,18 +6558,13 @@ Do you want to continue?</source>
       <source>Wind direction</source>
       <translation>Windrichting</translation>
     </message>
-    <message id="page_meteo_installation_power">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="80"/>
-      <source>Installation Power</source>
-      <translation>Vermogen Installatie</translation>
-    </message>
     <message id="page_meteo_daily_yield">
       <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="89"/>
       <source>Today's yield</source>
       <translation>De opbrengst van vandaag</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_full">
-      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="70"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="69"/>
       <source>Sensor value when full</source>
       <translation>Sensor waarde als vol</translation>
     </message>
@@ -6627,12 +6585,12 @@ Do you want to continue?</source>
       <translation>Tankdienst niet beschikbaar, stel een andere</translation>
     </message>
     <message id="settings_generator_condition_skip_warmup">
-      <location filename="../../pages/settings/GeneratorCondition.qml" line="185"/>
+      <location filename="../../pages/settings/GeneratorCondition.qml" line="193"/>
       <source>Skip generator warm-up</source>
       <translation>Opwarmen van aggregaat overslaan</translation>
     </message>
     <message id="settings_generator_condition_tank_level_enable_warning">
-      <location filename="../../pages/settings/GeneratorCondition.qml" line="192"/>
+      <location filename="../../pages/settings/GeneratorCondition.qml" line="200"/>
       <source>Trigger warning when the generator is stopped</source>
       <translation>Triggerwaarschuwing als het aggregaat is gestopt</translation>
     </message>
@@ -6662,17 +6620,17 @@ Do you want to continue?</source>
       <translation>Stoppen op tankniveau</translation>
     </message>
     <message id="settings_page_run_time_and_service_time_to_service">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="149"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="150"/>
       <source>Runtime until service</source>
       <translation>Bedrijfstijd tot onderhoud</translation>
     </message>
     <message id="page_settings_run_time_and_service_service_time_disabled">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="171"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="172"/>
       <source>Service timer disabled.</source>
       <translation>Servicetimer uitgeschakeld.</translation>
     </message>
     <message id="page_settings_run_time_and_service_service_timer_has_been_reset">
-      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="184"/>
+      <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="185"/>
       <source>The service timer has been reset</source>
       <translation>De servicetimer is teruggezet</translation>
     </message>
@@ -6692,67 +6650,67 @@ Do you want to continue?</source>
       <translation>Continu zoeken kan de WiFi functie verstoren.</translation>
     </message>
     <message id="settings_canbus_bms">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="48"/>
+      <location filename="../../pages/settings/CanbusProfile.qml" line="54"/>
       <source>CAN-bus BMS LV (500 kbit/s)</source>
       <translation>CAN-bus BMS LV (500 kbit/s)</translation>
     </message>
     <message id="settings_canbus_high_voltage">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="54"/>
+      <location filename="../../pages/settings/CanbusProfile.qml" line="60"/>
       <source>CAN-bus BMS HV (500 kbit/s)</source>
       <translation>CAN-bus BMS HV (500 kbit/s)</translation>
     </message>
     <message id="settings_up_but_no_services_500">
-      <location filename="../../pages/settings/CanbusProfile.qml" line="78"/>
+      <location filename="../../pages/settings/CanbusProfile.qml" line="84"/>
       <source>Up, but no services (500 kbit/s)</source>
       <translation>In bedrijf, maar geen diensten (500 kbit/s)</translation>
     </message>
     <message id="pagesettingsgeneral_data_units">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="137"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="142"/>
       <source>Data units</source>
       <translation>Gegevenseenheden</translation>
     </message>
     <message id="settings_brief_page">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="123"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="127"/>
       <source>Brief page</source>
       <translation>Korte pagina</translation>
     </message>
     <message id="settings_displayoff_1min">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="45"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="46"/>
       <source>1 min</source>
       <translation type="unfinished">1 min</translation>
     </message>
     <message id="settings_displayoff_10min">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="47"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="48"/>
       <source>10 min</source>
       <translation type="unfinished">10 min</translation>
     </message>
     <message id="settings_displayoff_30min">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="49"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="50"/>
       <source>30 min</source>
       <translation type="unfinished">30 min</translation>
     </message>
     <message id="settings_displayoff_never">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="51"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="52"/>
       <source>Never</source>
       <translation type="unfinished">Nooit</translation>
     </message>
     <message id="settings_remote_console_appearance_auto">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="108"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="112"/>
       <source>Auto</source>
       <translation type="unfinished">Automatisch</translation>
     </message>
     <message id="settings_brief_view_start_page">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="115"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="119"/>
       <source>Start page</source>
       <translation type="unfinished">Startpagina</translation>
     </message>
     <message id="settings_display_boat_page">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="131"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="135"/>
       <source>Boat page</source>
       <translation type="unfinished">Bootpagina</translation>
     </message>
     <message id="settings_display_minmax">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="143"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="148"/>
       <source>Minimum and maximum gauge ranges</source>
       <translation>Minimaal en maximaal meterbereik</translation>
     </message>
@@ -6762,44 +6720,44 @@ Do you want to continue?</source>
       <translation>Startpagina</translation>
     </message>
     <message id="settings_display_onscreen_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="164"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="170"/>
       <source>User interface</source>
       <translation>Gebruikersinterface</translation>
     </message>
     <message id="settings_display_remote_console_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="166"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="172"/>
       <source>User interface (Remote Console)</source>
       <translation>Gebruikersinterface (Console op afstand)</translation>
     </message>
     <message id="settings_display_classic_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="173"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="179"/>
       <source>Classic UI</source>
       <translation>Klassieke UI</translation>
     </message>
     <message id="settings_display_new_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="178"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="184"/>
       <source>New UI</source>
       <translation>Nieuwe UI</translation>
     </message>
     <message id="settings_restarting_app">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="209"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="215"/>
       <source>Restarting application...</source>
       <translation>Applicatie opnieuw starten...</translation>
     </message>
     <message id="settings_app_restarted">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="212"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="218"/>
       <source>%1 updated</source>
       <extracomment>%1 = The name of the setting being updated</extracomment>
       <translation>%1 bijgewerkt</translation>
     </message>
     <message id="settings_switch_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="216"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="222"/>
       <source>User interface will switch to %1.</source>
       <extracomment>%1 = the UI version that the system is switching to</extracomment>
       <translation>De gebruikersinterface schakelt over naar %1.</translation>
     </message>
     <message id="settings_has_switched_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="220"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="226"/>
       <source>%1 is set to %2</source>
       <extracomment>%1 = The name of the setting being updated %2 = the UI version that the system has switched to.</extracomment>
       <translation>%1 is ingesteld op %2</translation>
@@ -6963,49 +6921,44 @@ Do you want to continue?</source>
       <translation>Voeg een PV-omvormer toe met de functie "Zoek PV-omvormer" of door handmatig een IP-adres in te voeren op de vorige pagina.</translation>
     </message>
     <message id="settings_local_network_security_profile">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="123"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="124"/>
       <source>Local network security profile</source>
       <translation>Beveiligingsprofiel voor lokaal netwerk</translation>
     </message>
     <message id="settings_security_profile_indeterminate">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="128"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="129"/>
       <source>Please select...</source>
       <translation>Selecteer...</translation>
     </message>
     <message id="settings_security_profile_secured">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="132"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="133"/>
       <source>Secured</source>
       <translation>Beveiligd</translation>
     </message>
     <message id="settings_security_profile_secured_caption">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="135"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="136"/>
       <source>Password protected and the network communication is encrypted</source>
       <translation>Wachtwoordbeveiliging en netwerkcommunicatie is versleuteld</translation>
     </message>
     <message id="settings_security_profile_weak">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="140"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="141"/>
       <source>Weak</source>
       <translation>Zwak</translation>
     </message>
     <message id="settings_security_profile_weak_caption">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="143"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="144"/>
       <source>Password protected, but the network communication is not encrypted</source>
       <translation>Wachtwoordbeveiliging, maar de netwerkcommunicatie is niet versleuteld</translation>
     </message>
     <message id="settings_security_profile_unsecured">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="148"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="149"/>
       <source>Unsecured</source>
       <translation>Niet beveiligd</translation>
     </message>
     <message id="settings_security_profile_unsecured_caption">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="151"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="152"/>
       <source>No password and the network communication is not encrypted</source>
       <translation>Geen wachtwoord en de netwerkcommunicatie is niet versleuteld</translation>
-    </message>
-    <message id="settings_logout_now">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="313"/>
-      <source>Log out now</source>
-      <translation type="unfinished">Nu uitloggen</translation>
     </message>
     <message id="settings_security_profile_password_incorrect_length">
       <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
@@ -7013,22 +6966,22 @@ Do you want to continue?</source>
       <translation>Wachtwoord moet minstens 8 tekens lang zijn</translation>
     </message>
     <message id="settings_security_profile_secured_title">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="220"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="224"/>
       <source>Select 'Secured' profile?</source>
       <translation>Profiel 'Beveiligd' selecteren?</translation>
     </message>
     <message id="settings_security_profile_weak_title">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="223"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="227"/>
       <source>Select 'Weak' profile?</source>
       <translation>Selecteer 'Zwak' profiel?</translation>
     </message>
     <message id="settings_security_profile_unsecured_title">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="226"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="230"/>
       <source>Select 'Unsecured' profile?</source>
       <translation>Selecteer 'Niet beveiligd' profiel?</translation>
     </message>
     <message id="settings_security_profile_secured_description">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="234"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="241"/>
       <source>• Local network services are password protected
 • The network communication is encrypted
 • A secure connection with VRM is enabled
@@ -7039,71 +6992,76 @@ Do you want to continue?</source>
 - Onveilige instellingen kunnen niet worden ingeschakeld</translation>
     </message>
     <message id="settings_security_profile_weak_description">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="237"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="244"/>
       <source>• Local network services are password protected
 • Unencrypted access to local websites is enabled as well (HTTP/HTTPS)</source>
       <translation>- Lokale netwerkdiensten zijn beveiligd met een wachtwoord
 - Onversleutelde toegang tot lokale websites is ook ingeschakeld (HTTP/HTTPS)</translation>
     </message>
     <message id="settings_security_profile_unsecured_description">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="240"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="247"/>
       <source>• Local network services do not need a password
 • Unencrypted access to local websites is enabled as well (HTTP/HTTPS)</source>
       <translation>- Lokale netwerkdiensten hebben geen wachtwoord nodig
 - Onversleutelde toegang tot lokale websites is ook ingeschakeld (HTTP/HTTPS)</translation>
     </message>
     <message id="access_and_security_page_will_reload">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="117"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="118"/>
       <source>Page will automatically reload in 5 seconds</source>
       <translation>Pagina wordt automatisch opnieuw geladen na 5 seconden</translation>
     </message>
     <message id="settings_security_too_short_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="158"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="159"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation type="unfinished">Wachtwoord moet minstens 8 tekens lang zijn</translation>
     </message>
     <message id="settings_root_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="259"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="269"/>
       <source>Root password</source>
       <translation>Root wachtwoord</translation>
     </message>
     <message id="settings_root_enter_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="262"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="272"/>
       <source>Enter password</source>
       <translation type="unfinished">Geef wachtwoord</translation>
     </message>
     <message id="settings_root_too_short_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="267"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="277"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation type="unfinished">Wachtwoord moet minstens 8 tekens lang zijn</translation>
     </message>
     <message id="settings_root_password_changed_to">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="273"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="283"/>
       <source>Root password changed to %1</source>
       <translation>Root wachtwoord gewijzigd in %1</translation>
     </message>
     <message id="settings_enable_ssh_on_lan">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="280"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="290"/>
       <source>Enable SSH on LAN</source>
       <translation>SSH op LAN inschakelen</translation>
     </message>
     <message id="settings_logout">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="311"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="321"/>
       <source>Logout</source>
       <translation>Uitloggen</translation>
     </message>
+    <message id="settings_logout_now">
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="323"/>
+      <source>Log out now</source>
+      <translation>Nu uitloggen</translation>
+    </message>
     <message id="settings_logout_dialog_title">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="325"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="335"/>
       <source>Log out?</source>
       <translation>Uitloggen?</translation>
     </message>
     <message id="settings_logout_dialog_description">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="327"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="337"/>
       <source>This will disconnect all local network connections.</source>
       <translation>Hierdoor worden alle lokale netwerkverbindingen verbroken.</translation>
     </message>
     <message id="settings_logout_dialog_accept_text">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="329"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="339"/>
       <source>Log out</source>
       <translation>Uitloggen</translation>
     </message>
@@ -7158,7 +7116,7 @@ Do you want to continue?</source>
       <translation>Er gaat een alarm af als de autostartfunctie meer dan 10 minuten uitgeschakeld blijft.</translation>
     </message>
     <message id="settings_units_amps_exceptions">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="49"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="50"/>
       <source>Note: If current cannot be displayed (for example, when showing a total for combined AC and DC sources) then power will be shown instead.</source>
       <translation>Opmerking: Als stroom niet kan worden weergegeven (bijvoorbeeld bij een totaal voor gecombineerde AC- en DC-bronnen), dan wordt in plaats daarvan vermogen weergegeven.</translation>
     </message>
@@ -7166,6 +7124,11 @@ Do you want to continue?</source>
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="31"/>
       <source>For Multi-RS and HS19 devices, ESS settings are available on the RS System product page.</source>
       <translation>Voor Multi RS en HS19 apparaten zijn de ESS-instellingen beschikbaar op de productpagina van het RS systeem.</translation>
+    </message>
+    <message id="settings_ess_always">
+      <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="60"/>
+      <source>Always</source>
+      <translation type="unfinished">Altijd</translation>
     </message>
     <message id="settings_ess_use_this_option_for_peak_shaving">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="63"/>
@@ -7253,37 +7216,37 @@ Do you want to continue?</source>
       <translation>Modbus apparaten</translation>
     </message>
     <message id="pagesettingsintegrations_bluetooth_sensors">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="69"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="62"/>
       <source>Bluetooth Sensors</source>
       <translation>Bluetooth sensoren</translation>
     </message>
     <message id="pagesettingsintegrations_physical_io">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="81"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="74"/>
       <source>Physical I/O</source>
       <translation>Fysieke I/O</translation>
     </message>
     <message id="pagesettingsintegrations_tank_and_temperature_sensors">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="91"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="84"/>
       <source>Tank and Temperature Sensors</source>
       <translation>Tank- en temperatuursensoren</translation>
     </message>
     <message id="pagesettingsintegrations_relays">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="125"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="118"/>
       <source>Relays</source>
       <translation>Relais</translation>
     </message>
     <message id="pagesettingsintegrations_digital_io">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="139"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="132"/>
       <source>Digital I/O</source>
       <translation>Digitale I/O</translation>
     </message>
     <message id="pagesettingsintegrations_server_applications">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="201"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="194"/>
       <source>Server Applications</source>
       <translation>Servertoepassingen</translation>
     </message>
     <message id="settings_large_victron_community">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="279"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="274"/>
       <source>Victron Community</source>
       <translation type="unfinished">Victron Community</translation>
     </message>
@@ -7293,7 +7256,7 @@ Do you want to continue?</source>
       <translation>Modbus TCP-server</translation>
     </message>
     <message id="pagesettingsintegrations_venus_os_large_features">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="223"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="217"/>
       <source>Venus OS Large Features</source>
       <translation>Venus OS Large eigenschappen</translation>
     </message>
@@ -7387,11 +7350,6 @@ Do you want to continue?</source>
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="70"/>
       <source>Switching firmware version is not possible without "Network Security Profile" in "Settings / General" being selected.</source>
       <translation>De firmwareversie kan niet worden gewijzigd als "Netwerkbeveiligingsprofiel" in "Instellingen / Algemeen" niet is geselecteerd.</translation>
-    </message>
-    <message id="pagesettingsconnectivity_ethernet">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="18"/>
-      <source>Ethernet</source>
-      <translation type="unfinished">Ethernet</translation>
     </message>
     <message id="pagesettingsconnectivity_mobile_network">
       <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="53"/>
@@ -7551,12 +7509,12 @@ Do you want to continue?</source>
     <message id="settings_integrations">
       <location filename="../../pages/SettingsPage.qml" line="73"/>
       <source>Integrations</source>
-      <translation>Integraties</translation>
+      <translation type="unfinished">Integraties</translation>
     </message>
-    <message id="settings_relays_sensors_tanks">
-      <location filename="../../pages/SettingsPage.qml" line="75"/>
-      <source>Relays, Sensors, Tanks, PV Inverters, Modbus, MQTT…</source>
-      <translation>Relais, sensoren, tanks, PV-omvormers, Modbus, MQTT...</translation>
+    <message id="pagesettingssupportstate_integrations">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="448"/>
+      <source>Integrations</source>
+      <translation>Integraties</translation>
     </message>
     <message id="settings_acdcsystem_ess_dvcc_battery">
       <location filename="../../pages/SettingsPage.qml" line="84"/>
@@ -7584,39 +7542,39 @@ Do you want to continue?</source>
       <translation>VRM apparaatinstanties</translation>
     </message>
     <message id="solarcharger_not_supported">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="68"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="67"/>
       <source>Unfortunately the connected MPPT Solar Charger is not compatible.</source>
       <translation>Helaas is de aangesloten MPPT Solar Charger niet compatibel.</translation>
     </message>
     <message id="solarcharger_not_supported_reason_70_15">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="72"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="71"/>
       <source>The 70/15 needs to be from year/week 1308 or later. MPPT 70/15's currently shipped from our warehouse are compatible.</source>
       <translation>De 70/15 moet van jaar/week 1308 of later zijn. MPPT 70/15's die momenteel vanuit ons magazijn worden verzonden, zijn compatibel.</translation>
     </message>
     <message id="solarcharger_not_supported_reason_version">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="75"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="74"/>
       <source>The firmware version in the MPPT Solar Charger must be v1.09 or later. Contact Victron Service for update instructions and files.</source>
       <translation>De firmwareversie in de MPPT Solar Charger moet v1.09 of later zijn. Neem contact op met Victron Service voor update-instructies en -bestanden.</translation>
     </message>
     <message id="solarcharger_pv">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="103"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="102"/>
       <source>PV</source>
       <extracomment>PV power for solar charger</extracomment>
       <translation type="unfinished">Zonnepaneel</translation>
     </message>
     <message id="solarcharger_total_power">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="128"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="127"/>
       <source>Total PV power</source>
       <translation>Totaal PV energie</translation>
     </message>
     <message id="solarcharger_total_yield">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="213"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="211"/>
       <source>Total yield</source>
       <extracomment>Solar charger total yield</extracomment>
       <translation type="unfinished">Totaal opbrengst</translation>
     </message>
     <message id="solarcharger_system_yield">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="222"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="220"/>
       <source>System yield</source>
       <extracomment>Solar charger system yield</extracomment>
       <translation type="unfinished">Systeem opbrengst</translation>
@@ -7632,12 +7590,12 @@ Do you want to continue?</source>
       <translation>Systeem opbrengst</translation>
     </message>
     <message id="charger_alarms_high_temperature_alarm">
-      <location filename="../../pages/solar/PageSolarCharger.qml" line="318"/>
+      <location filename="../../pages/solar/PageSolarCharger.qml" line="309"/>
       <source>High temperature alarm</source>
       <translation>Alarm hoge temperatuur</translation>
     </message>
     <message id="charger_history_last_x_days">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="65"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="71"/>
       <source>Last %1 days</source>
       <extracomment>%1 = number of days of solar history that will be shown</extracomment>
       <translation>Laatste %1 dagen</translation>
@@ -7648,7 +7606,7 @@ Do you want to continue?</source>
       <translation>BMS gestuurd</translation>
     </message>
     <message id="page_vebus_charge_battery">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="107"/>
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="108"/>
       <source>Charge battery</source>
       <translation>Accu opladen</translation>
     </message>
@@ -7673,7 +7631,7 @@ Do you want to continue?</source>
       <translation>Het herstarten van het VE.Bus-systeem zal elke omvormer op de bus resetten en resulteren in een stroomonderbreking naar hun uitgangen.</translation>
     </message>
     <message id="common_words_dynamic_power_limit">
-      <location filename="../../components/CommonWords.qml" line="577"/>
+      <location filename="../../components/CommonWords.qml" line="599"/>
       <source>Dynamic power limit</source>
       <translation>Dynamische vermogenslimiet</translation>
     </message>
@@ -7704,6 +7662,12 @@ Do you want to continue?</source>
       <extracomment>The 'Brief' page</extracomment>
       <translation type="unfinished">Kort</translation>
     </message>
+    <message id="common_words_charging">
+      <location filename="../../components/CommonWords.qml" line="125"/>
+      <source>Charging</source>
+      <extracomment>"Charging" state</extracomment>
+      <translation type="unfinished">Opladen</translation>
+    </message>
     <message id="common_words_closed_status">
       <location filename="../../components/CommonWords.qml" line="133"/>
       <source>Closed</source>
@@ -7711,211 +7675,211 @@ Do you want to continue?</source>
       <translation type="unfinished">Gesloten</translation>
     </message>
     <message id="common_words_connected">
-      <location filename="../../components/CommonWords.qml" line="136"/>
+      <location filename="../../components/CommonWords.qml" line="139"/>
       <source>Connected</source>
       <translation type="unfinished">Verbonden</translation>
     </message>
+    <message id="common_words_current_amps">
+      <location filename="../../components/CommonWords.qml" line="143"/>
+      <source>Current</source>
+      <extracomment>Electric current, as measured in Amps</extracomment>
+      <translation type="unfinished">Stroom</translation>
+    </message>
     <message id="common_words_daily_history">
-      <location filename="../../components/CommonWords.qml" line="149"/>
+      <location filename="../../components/CommonWords.qml" line="152"/>
       <source>Daily history</source>
       <translation>Dagelijkse geschiedenis</translation>
     </message>
     <message id="common_words_disabled">
-      <location filename="../../components/CommonWords.qml" line="166"/>
+      <location filename="../../components/CommonWords.qml" line="169"/>
       <source>Disabled</source>
       <translation type="unfinished">Uitgeschakeld</translation>
     </message>
-    <message id="common_words_disconnected">
+    <message id="common_words_discharging">
       <location filename="../../components/CommonWords.qml" line="172"/>
+      <source>Discharging</source>
+      <translation type="unfinished">Ontladen</translation>
+    </message>
+    <message id="common_words_disconnected">
+      <location filename="../../components/CommonWords.qml" line="175"/>
       <source>Disconnected</source>
       <translation type="unfinished">Losgekoppeld</translation>
     </message>
     <message id="common_words_error">
-      <location filename="../../components/CommonWords.qml" line="188"/>
+      <location filename="../../components/CommonWords.qml" line="191"/>
       <source>Error</source>
       <translation type="unfinished">Fout</translation>
     </message>
     <message id="common_words_error_not_a_number">
-      <location filename="../../components/CommonWords.qml" line="197"/>
+      <location filename="../../components/CommonWords.qml" line="200"/>
       <source>'%1' is not a number.</source>
       <translation>'%1' is geen getal.</translation>
     </message>
     <message id="common_words_generator">
-      <location filename="../../components/CommonWords.qml" line="214"/>
+      <location filename="../../components/CommonWords.qml" line="217"/>
       <source>Generator</source>
       <translation type="unfinished">Aggregaat</translation>
     </message>
-    <message id="common_words_input_current_limit">
+    <message id="common_words_gx_device_relays">
+      <location filename="../../components/CommonWords.qml" line="223"/>
+      <source>GX device relays</source>
+      <translation type="unfinished">GX apparaat relais</translation>
+    </message>
+    <message id="common_words_idle">
+      <location filename="../../components/CommonWords.qml" line="251"/>
+      <source>Idle</source>
+      <translation type="unfinished">Inactief</translation>
+    </message>
+    <message id="common_words_inactive_status">
       <location filename="../../components/CommonWords.qml" line="258"/>
+      <source>Inactive</source>
+      <extracomment>Status is 'inactive'</extracomment>
+      <translation type="unfinished">Inactief</translation>
+    </message>
+    <message id="common_words_input_current_limit">
+      <location filename="../../components/CommonWords.qml" line="261"/>
       <source>Input current limit</source>
       <translation>Ingangsstroomlimiet</translation>
     </message>
     <message id="common_words_inverter_charger">
-      <location filename="../../components/CommonWords.qml" line="261"/>
+      <location filename="../../components/CommonWords.qml" line="264"/>
       <source>Inverter / Charger</source>
       <translation type="unfinished">Omvormer / Lader</translation>
     </message>
     <message id="common_words_inverter_mode_eco">
-      <location filename="../../components/CommonWords.qml" line="265"/>
+      <location filename="../../components/CommonWords.qml" line="268"/>
       <source>Eco</source>
       <extracomment>Inverter 'Eco' mode</extracomment>
       <translation>Eco</translation>
     </message>
     <message id="common_words_manual_stop">
-      <location filename="../../components/CommonWords.qml" line="305"/>
+      <location filename="../../components/CommonWords.qml" line="308"/>
       <source>Manual stop</source>
       <translation>Handmatig stoppen</translation>
     </message>
-    <message id="common_words_max">
-      <location filename="../../components/CommonWords.qml" line="312"/>
-      <source>Max</source>
-      <extracomment>Short for Maximum</extracomment>
-      <translation type="unfinished"/>
-    </message>
     <message id="common_words_maximum_current">
-      <location filename="../../components/CommonWords.qml" line="315"/>
+      <location filename="../../components/CommonWords.qml" line="318"/>
       <source>Maximum current</source>
       <translation>Maximale stroom</translation>
     </message>
     <message id="common_words_maximum_power">
-      <location filename="../../components/CommonWords.qml" line="318"/>
+      <location filename="../../components/CommonWords.qml" line="321"/>
       <source>Maximum power</source>
       <translation>Maximaal vermogen</translation>
     </message>
-    <message id="common_words_min">
-      <location filename="../../components/CommonWords.qml" line="328"/>
-      <source>Min</source>
-      <extracomment>Short for Minimum</extracomment>
-      <translation type="unfinished"/>
-    </message>
     <message id="common_words_minimum_current">
-      <location filename="../../components/CommonWords.qml" line="331"/>
+      <location filename="../../components/CommonWords.qml" line="334"/>
       <source>Minimum current</source>
       <translation>Minimale stroom</translation>
     </message>
     <message id="common_words_no">
-      <location filename="../../components/CommonWords.qml" line="349"/>
+      <location filename="../../components/CommonWords.qml" line="352"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="433"/>
       <source>No</source>
       <translation type="unfinished">Nee</translation>
     </message>
     <message id="common_words_none_option">
-      <location filename="../../components/CommonWords.qml" line="361"/>
+      <location filename="../../components/CommonWords.qml" line="364"/>
       <source>None</source>
       <translation type="unfinished">Geen</translation>
     </message>
     <message id="common_words_none_errors">
-      <location filename="../../components/CommonWords.qml" line="365"/>
+      <location filename="../../components/CommonWords.qml" line="368"/>
       <source>None</source>
       <extracomment>Indicates there are no errors</extracomment>
       <translation type="unfinished">Geen</translation>
     </message>
     <message id="common_words_not_available">
-      <location filename="../../components/CommonWords.qml" line="368"/>
+      <location filename="../../components/CommonWords.qml" line="371"/>
       <source>Not available</source>
       <translation type="unfinished">Niet beschikbaar</translation>
     </message>
     <message id="common_words_off">
-      <location filename="../../components/CommonWords.qml" line="374"/>
+      <location filename="../../components/CommonWords.qml" line="381"/>
       <source>Off</source>
       <translation type="unfinished">Uit</translation>
     </message>
     <message id="common_words_ok">
-      <location filename="../../components/CommonWords.qml" line="380"/>
+      <location filename="../../components/CommonWords.qml" line="387"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="41"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="45"/>
       <source>OK</source>
       <translation type="unfinished">OK</translation>
     </message>
     <message id="common_words_on">
-      <location filename="../../components/CommonWords.qml" line="383"/>
+      <location filename="../../components/CommonWords.qml" line="390"/>
       <source>On</source>
       <translation type="unfinished">Aan</translation>
     </message>
     <message id="common_words_open_status">
-      <location filename="../../components/CommonWords.qml" line="390"/>
+      <location filename="../../components/CommonWords.qml" line="397"/>
       <source>Open</source>
       <extracomment>Status is 'open'</extracomment>
       <translation type="unfinished">Geopend</translation>
     </message>
     <message id="common_words_open_circuit">
-      <location filename="../../components/CommonWords.qml" line="393"/>
+      <location filename="../../components/CommonWords.qml" line="400"/>
       <source>Open circuit</source>
       <translation>Open circuit</translation>
     </message>
     <message id="common_words_overall_history">
-      <location filename="../../components/CommonWords.qml" line="396"/>
+      <location filename="../../components/CommonWords.qml" line="403"/>
       <source>Overall history</source>
       <translation>Complete geschiedenis</translation>
     </message>
-    <message id="common_words_press">
-      <location filename="../../components/CommonWords.qml" line="416"/>
-      <source>Press</source>
-      <translation type="unfinished">Pers</translation>
-    </message>
     <message id="common_words_running_status">
-      <location filename="../../components/CommonWords.qml" line="455"/>
+      <location filename="../../components/CommonWords.qml" line="462"/>
       <source>Running</source>
       <extracomment>Status = "running"</extracomment>
       <translation type="unfinished">Loopt</translation>
     </message>
     <message id="common_words_settings">
-      <location filename="../../components/CommonWords.qml" line="464"/>
+      <location filename="../../components/CommonWords.qml" line="471"/>
       <source>Settings</source>
       <translation type="unfinished">Instellingen</translation>
     </message>
     <message id="common_words_soc">
-      <location filename="../../components/CommonWords.qml" line="474"/>
+      <location filename="../../components/CommonWords.qml" line="484"/>
       <source>SOC %1</source>
       <extracomment>State of charge (as a percentage). %1 = the SOC value</extracomment>
       <translation>Laadtoestand %1%</translation>
     </message>
     <message id="common_words_speed">
-      <location filename="../../components/CommonWords.qml" line="478"/>
+      <location filename="../../components/CommonWords.qml" line="488"/>
       <source>Speed</source>
       <extracomment>A speed measurement value</extracomment>
       <translation type="unfinished">Snelheid</translation>
     </message>
     <message id="common_words_standby">
-      <location filename="../../components/CommonWords.qml" line="481"/>
+      <location filename="../../components/CommonWords.qml" line="491"/>
       <source>Standby</source>
       <translation type="unfinished">Stand-by</translation>
     </message>
-    <message id="common_words_state">
-      <location filename="../../components/CommonWords.qml" line="496"/>
-      <source>State</source>
-      <translation type="unfinished">Status</translation>
-    </message>
     <message id="common_words_startup_status">
-      <location filename="../../components/CommonWords.qml" line="506"/>
+      <location filename="../../components/CommonWords.qml" line="516"/>
       <source>Startup (%1)</source>
       <extracomment>Status = "start up". %1 = the startup status number</extracomment>
       <translation type="unfinished">Opstarten (%1)</translation>
     </message>
     <message id="common_words_stopped">
-      <location filename="../../components/CommonWords.qml" line="515"/>
+      <location filename="../../components/CommonWords.qml" line="525"/>
       <source>Stopped</source>
       <translation type="unfinished">Gestopt</translation>
     </message>
-    <message id="common_words_total_power">
-      <location filename="../../components/CommonWords.qml" line="534"/>
-      <source>Total power</source>
-      <translation type="unfinished"/>
-    </message>
     <message id="common_words_type">
-      <location filename="../../components/CommonWords.qml" line="541"/>
+      <location filename="../../components/CommonWords.qml" line="551"/>
       <source>Type</source>
       <translation type="unfinished">Type</translation>
     </message>
     <message id="common_words_unknown_status">
-      <location filename="../../components/CommonWords.qml" line="548"/>
+      <location filename="../../components/CommonWords.qml" line="558"/>
       <source>Unknown</source>
       <extracomment>Status = "unknown"</extracomment>
       <translation type="unfinished">Onbekend</translation>
     </message>
     <message id="common_words_yes">
-      <location filename="../../components/CommonWords.qml" line="563"/>
+      <location filename="../../components/CommonWords.qml" line="585"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="159"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="431"/>
@@ -7923,13 +7887,13 @@ Do you want to continue?</source>
       <translation type="unfinished">Ja</translation>
     </message>
     <message id="common_words_yield_today">
-      <location filename="../../components/CommonWords.qml" line="574"/>
+      <location filename="../../components/CommonWords.qml" line="596"/>
       <source>Yield Today</source>
       <extracomment>Solar charger yield for today, in kWh (kilowatt hours)</extracomment>
       <translation>Opbrengst vandaag</translation>
     </message>
     <message id="common_words_format_error">
-      <location filename="../../components/CommonWords.qml" line="614"/>
+      <location filename="../../components/CommonWords.qml" line="636"/>
       <source>#%1 %2</source>
       <extracomment>%1 = error number, %2 = text description of this error</extracomment>
       <translation>#%1 %2</translation>
@@ -7954,10 +7918,9 @@ Do you want to continue?</source>
       <source>Firmware installed, device rebooting</source>
       <translation>Firmware geïnstalleerd, apparaat start opnieuw op</translation>
     </message>
-    <message id="settings_radio_button_group_confirm">
-      <location filename="../../components/RadioButtonListPage.qml" line="119"/>
+    <message id="modaldialog_confirm">
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
       <source>Confirm</source>
-      <extracomment>Confirm password, and verify it if possible</extracomment>
       <translation>Bevestigen</translation>
     </message>
     <message id="nav_brief_close_side_panel_high_cpu">
@@ -7971,7 +7934,7 @@ Do you want to continue?</source>
       <translation>Maandelijks</translation>
     </message>
     <message id="cgwacs_battery_schedule_duration">
-      <location filename="../../components/listitems/ListChargeSchedule.qml" line="143"/>
+      <location filename="../../components/listitems/ListChargeSchedule.qml" line="144"/>
       <source>Duration</source>
       <translation>Duur</translation>
     </message>
@@ -7981,22 +7944,22 @@ Do you want to continue?</source>
       <translation>Uitschakel waarde</translation>
     </message>
     <message id="splash_view_device_disconnected">
-      <location filename="../../components/SplashView.qml" line="297"/>
+      <location filename="../../components/SplashView.qml" line="295"/>
       <source>Connection to the device has been lost, awaiting reconnection</source>
       <translation>Verbinding met het apparaat is verbroken, wacht op nieuwe verbinding</translation>
     </message>
     <message id="splash_view_awaiting_heartbeat">
-      <location filename="../../components/SplashView.qml" line="299"/>
+      <location filename="../../components/SplashView.qml" line="297"/>
       <source>Connected to VRM, awaiting device</source>
       <translation>Verbonden met VRM, wacht op apparaat</translation>
     </message>
     <message id="splash_view_heartbeat_missing">
-      <location filename="../../components/SplashView.qml" line="349"/>
+      <location filename="../../components/SplashView.qml" line="347"/>
       <source>Device may have lost connectivity to VRM</source>
       <translation>Het apparaat heeft mogelijk geen verbinding meer met VRM</translation>
     </message>
     <message id="splash_view_heartbeat_inactive">
-      <location filename="../../components/SplashView.qml" line="351"/>
+      <location filename="../../components/SplashView.qml" line="349"/>
       <source>Device is not connected to VRM</source>
       <translation>Apparaat is niet aangesloten op VRM</translation>
     </message>
@@ -8011,37 +7974,19 @@ Do you want to continue?</source>
       <translation>Warmtepomp</translation>
     </message>
     <message id="digitalinputs_touch_input_control">
-      <location filename="../../src/enums.cpp" line="217"/>
+      <location filename="../../src/enums.cpp" line="222"/>
       <source>Touch input control</source>
       <translation>Aanraakscherm besturing</translation>
     </message>
     <message id="switchable_output_over_temperature">
-      <location filename="../../src/enums.cpp" line="437"/>
+      <location filename="../../src/enums.cpp" line="461"/>
       <source>Over temperature</source>
       <translation>Te hoge temperatuur</translation>
     </message>
     <message id="switch_state_temperature_warning">
-      <location filename="../../src/enums.cpp" line="364"/>
+      <location filename="../../src/enums.cpp" line="369"/>
       <source>Temperature warning</source>
       <translation>Temperatuurwaarschuwing</translation>
-    </message>
-    <message id="battery_mode_idle">
-      <location filename="../../src/enums.cpp" line="26"/>
-      <source>Idle</source>
-      <extracomment>Battery mode</extracomment>
-      <translation type="unfinished">Inactief</translation>
-    </message>
-    <message id="battery_mode_charging">
-      <location filename="../../src/enums.cpp" line="30"/>
-      <source>Charging</source>
-      <extracomment>Battery mode</extracomment>
-      <translation type="unfinished">Opladen</translation>
-    </message>
-    <message id="battery_mode_discharging">
-      <location filename="../../src/enums.cpp" line="34"/>
-      <source>Discharging</source>
-      <extracomment>Battery mode</extracomment>
-      <translation type="unfinished">Ontladen</translation>
     </message>
     <message id="dcMeter_bilge_pump">
       <location filename="../../src/enums.cpp" line="115"/>
@@ -8049,57 +7994,62 @@ Do you want to continue?</source>
       <translation type="unfinished">Lenspomp</translation>
     </message>
     <message id="switch_state_channel_fault">
-      <location filename="../../src/enums.cpp" line="367"/>
+      <location filename="../../src/enums.cpp" line="372"/>
       <source>Channel Fault</source>
       <translation>Kanaal fout</translation>
     </message>
     <message id="switch_state_channel_Trippped">
-      <location filename="../../src/enums.cpp" line="370"/>
+      <location filename="../../src/enums.cpp" line="375"/>
       <source>Channel Tripped</source>
       <translation>Kanaal geactiveerd</translation>
     </message>
     <message id="switch_state_under_voltage">
-      <location filename="../../src/enums.cpp" line="373"/>
+      <location filename="../../src/enums.cpp" line="378"/>
       <source>Under voltage</source>
       <translation>Te lage spanning</translation>
     </message>
     <message id="switchable_output_momentary">
-      <location filename="../../src/enums.cpp" line="384"/>
+      <location filename="../../src/enums.cpp" line="389"/>
       <source>Momentary</source>
       <translation>Tijdelijk</translation>
     </message>
     <message id="switchable_output_dimmable">
-      <location filename="../../src/enums.cpp" line="390"/>
+      <location filename="../../src/enums.cpp" line="395"/>
       <source>Dimmable</source>
       <translation>Dimbaar</translation>
     </message>
     <message id="switchable_output_slave_of">
-      <location filename="../../src/enums.cpp" line="400"/>
+      <location filename="../../src/enums.cpp" line="405"/>
       <source>Slave of %1</source>
       <translation>Slaaf van %1</translation>
     </message>
+    <message id="switchable_output_not_running">
+      <location filename="../../src/enums.cpp" line="448"/>
+      <source>Not running</source>
+      <translation type="unfinished">Niet actief</translation>
+    </message>
     <message id="switchable_output_off">
-      <location filename="../../src/enums.cpp" line="428"/>
+      <location filename="../../src/enums.cpp" line="451"/>
       <source>Off</source>
       <translation type="unfinished">Uit</translation>
     </message>
     <message id="switchable_output_powered">
-      <location filename="../../src/enums.cpp" line="431"/>
+      <location filename="../../src/enums.cpp" line="455"/>
       <source>Powered</source>
       <translation>Aangedreven</translation>
     </message>
     <message id="switchable_output_tripped">
-      <location filename="../../src/enums.cpp" line="434"/>
+      <location filename="../../src/enums.cpp" line="458"/>
       <source>Tripped</source>
       <translation>Uitgeschakeld</translation>
     </message>
-    <message id="switchable_output_output_Fault">
-      <location filename="../../src/enums.cpp" line="440"/>
-      <source>Output fault</source>
-      <translation>Uitgangsfout</translation>
+    <message id="switchable_output_fault">
+      <location filename="../../src/enums.cpp" line="464"/>
+      <source>Fault</source>
+      <translation type="unfinished">Fout</translation>
     </message>
     <message id="switchable_output_short">
-      <location filename="../../src/enums.cpp" line="446"/>
+      <location filename="../../src/enums.cpp" line="475"/>
       <source>Short</source>
       <translation>Kort</translation>
     </message>
@@ -8114,67 +8064,67 @@ Do you want to continue?</source>
       <translation>Opgeladen blijven</translation>
     </message>
     <message id="evchargers_status_welded_contacts_error">
-      <location filename="../../data/EvChargers.qml" line="134"/>
+      <location filename="../../data/EvChargers.qml" line="76"/>
       <source>Welded contacts test error (shorted)</source>
       <translation>Testfout vastgesmolten contacten (kortgesloten)</translation>
     </message>
     <message id="evchargers_status_switching_to_three_phase">
-      <location filename="../../data/EvChargers.qml" line="158"/>
+      <location filename="../../data/EvChargers.qml" line="100"/>
       <source>Switching to 3 phase</source>
       <translation>Overschakelen naar 3 fasen</translation>
     </message>
     <message id="evchargers_status_switching_to_single_phase">
-      <location filename="../../data/EvChargers.qml" line="161"/>
+      <location filename="../../data/EvChargers.qml" line="103"/>
       <source>Switching to 1 phase</source>
       <translation>Overschakelen naar 1 fase</translation>
     </message>
     <message id="evchargers_status_stop_charging">
-      <location filename="../../data/EvChargers.qml" line="164"/>
+      <location filename="../../data/EvChargers.qml" line="106"/>
       <source>Stop charging</source>
       <translation>Stop met opladen</translation>
     </message>
     <message id="evchargers_status_reserved">
-      <location filename="../../data/EvChargers.qml" line="168"/>
+      <location filename="../../data/EvChargers.qml" line="110"/>
       <source>Reserved</source>
       <translation>Gereserveerd</translation>
     </message>
     <message id="page_generator_stopped_by_tank_level">
-      <location filename="../../data/Generators.qml" line="50"/>
+      <location filename="../../data/Generators.qml" line="49"/>
       <source>Stopped by tank level</source>
       <translation>Gestopt door tankniveau</translation>
     </message>
     <message id="generator_not_running">
-      <location filename="../../data/Generators.qml" line="60"/>
+      <location filename="../../data/Generators.qml" line="59"/>
       <source>Not running</source>
       <translation>Niet actief</translation>
     </message>
     <message id="settings_loss_of_communication">
-      <location filename="../../data/Generators.qml" line="69"/>
+      <location filename="../../data/Generators.qml" line="68"/>
       <source>Loss of communication</source>
       <translation>Verlies van communicatie</translation>
     </message>
     <message id="settings_soc_condition">
-      <location filename="../../data/Generators.qml" line="72"/>
+      <location filename="../../data/Generators.qml" line="71"/>
       <source>SOC condition</source>
       <translation>Laadtoestand voorwaarde</translation>
     </message>
     <message id="settings_ac_load_condition">
-      <location filename="../../data/Generators.qml" line="75"/>
+      <location filename="../../data/Generators.qml" line="74"/>
       <source>AC load condition</source>
       <translation>AC belasting voorwaarde</translation>
     </message>
     <message id="settings_battery_current_condition">
-      <location filename="../../data/Generators.qml" line="78"/>
+      <location filename="../../data/Generators.qml" line="77"/>
       <source>Battery current condition</source>
       <translation>Accu stroom voorwaarde</translation>
     </message>
     <message id="settings_battery_voltage_condition">
-      <location filename="../../data/Generators.qml" line="81"/>
+      <location filename="../../data/Generators.qml" line="80"/>
       <source>Battery voltage condition</source>
       <translation>Accuspanning voorwaarde</translation>
     </message>
     <message id="settings_inverter_overload_condition">
-      <location filename="../../data/Generators.qml" line="87"/>
+      <location filename="../../data/Generators.qml" line="86"/>
       <source>Inverter overload condition</source>
       <translation>Omvormer overbelast voorwaarde</translation>
     </message>
@@ -8200,7 +8150,7 @@ Do you want to continue?</source>
       <translation>AC uit L%1</translation>
     </message>
     <message id="notification_description_and_value">
-      <location filename="../../components/NotificationDelegate.qml" line="83"/>
+      <location filename="../../components/NotificationDelegate.qml" line="76"/>
       <source>%1 %2</source>
       <extracomment>%1 = notification description (e.g. 'High temperature'), %2 = the value that triggered the notification (e.g. '25 C')</extracomment>
       <translation>%1 %2</translation>
@@ -8269,20 +8219,14 @@ Als het aggregaat momenteel draait vanwege een autostartconditie, zal het uitsch
       <translation>Ingang</translation>
     </message>
     <message id="inverter_mode_not_adjustable">
-      <location filename="../../components/listitems/ListInverterChargerModeButton.qml" line="34"/>
+      <location filename="../../components/listitems/ListInverterChargerModeButton.qml" line="35"/>
       <source>The mode is fixed in the system configuration. It cannot be adjusted.</source>
       <translation>De modus staat vast in de systeeminstellingen en kan niet worden aangepast.</translation>
     </message>
     <message id="listlink_open_link">
-      <location filename="../../components/listitems/ListLink.qml" line="26"/>
+      <location filename="../../components/listitems/ListLink.qml" line="25"/>
       <source>Open link</source>
       <translation>Open link</translation>
-    </message>
-    <message id="listlink_scan_qr_code">
-      <location filename="../../components/listitems/ListLink.qml" line="57"/>
-      <source>Scan the QR code with your portable device.&lt;br /&gt;Or insert the link: %1</source>
-      <extracomment>%1 = url text</extracomment>
-      <translation>Scan de QR-code met een draagbaar apparaat.&lt;br /&gt;Of voeg de link in: %1</translation>
     </message>
     <message id="settings_services_mqtt_access">
       <location filename="../../components/listitems/ListMqttAccessSwitch.qml" line="11"/>
@@ -8330,22 +8274,22 @@ Als het aggregaat momenteel draait vanwege een autostartconditie, zal het uitsch
       <translation>Essentiële belastingen</translation>
     </message>
     <message id="rs_alarm_low_ac_out_voltage">
-      <location filename="../../data/InverterChargers.qml" line="61"/>
+      <location filename="../../data/InverterChargers.qml" line="30"/>
       <source>Low AC OUT voltage</source>
       <translation>Lage AC uitgangsspanning</translation>
     </message>
     <message id="rs_alarm_high_ac_out_voltage">
-      <location filename="../../data/InverterChargers.qml" line="63"/>
+      <location filename="../../data/InverterChargers.qml" line="32"/>
       <source>High AC OUT voltage</source>
       <translation>Hoge AC uitgangsspanning</translation>
     </message>
     <message id="rs_alarm_short_circuit">
-      <location filename="../../data/InverterChargers.qml" line="67"/>
+      <location filename="../../data/InverterChargers.qml" line="36"/>
       <source>Short circuit</source>
       <translation>Kortsluiting</translation>
     </message>
     <message id="inverterCharger_mode_passthrough">
-      <location filename="../../data/InverterChargers.qml" line="84"/>
+      <location filename="../../data/InverterChargers.qml" line="53"/>
       <source>Passthrough</source>
       <translation>Doorvoer</translation>
     </message>
@@ -8373,18 +8317,18 @@ Als het aggregaat momenteel draait vanwege een autostartconditie, zal het uitsch
       <extracomment>The 'Levels' page, with the "Environment" section opened</extracomment>
       <translation>Niveaus (Omgeving)</translation>
     </message>
-    <message id="startpage_option_battery list">
-      <location filename="../../data/StartPageConfiguration.qml" line="54"/>
+    <message id="startpage_option_battery_list">
+      <location filename="../../data/StartPageConfiguration.qml" line="58"/>
       <source>Battery list</source>
       <translation>Accu lijst</translation>
     </message>
     <message id="firmware_installed_build_gx_device_updated">
-      <location filename="../../pages/DialogLayer.qml" line="55"/>
+      <location filename="../../pages/DialogLayer.qml" line="56"/>
       <source>GX device has been updated</source>
       <translation>GX apparaat is bijgewerkt</translation>
     </message>
     <message id="firmware_installed_build_page_will_reload">
-      <location filename="../../pages/DialogLayer.qml" line="57"/>
+      <location filename="../../pages/DialogLayer.qml" line="58"/>
       <source>Page will automatically reload in ten seconds to load the latest version.</source>
       <translation>De pagina wordt na tien seconden automatisch opnieuw geladen om de nieuwste versie te laden.</translation>
     </message>
@@ -8415,59 +8359,59 @@ Let op: dit menu toont alleen Carlo Gavazzi-meters die zijn aangesloten via RS48
       <translation>Automatisch bereik</translation>
     </message>
     <message id="settings_minmax_autorange_desc">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="20"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="21"/>
       <source>When enabled, the minima and maxima of gauges and graphs are automatically adjusted based on past values.</source>
       <translation>Indien ingeschakeld, worden de minima en maxima van meters en grafieken automatisch aangepast op basis van waarden uit het verleden.</translation>
     </message>
     <message id="settings_minmax_reset">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="25"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="26"/>
       <source>Reset all range values to zero</source>
       <translation>Alle bereikwaarden op nul zetten</translation>
     </message>
     <message id="settings_minmax_reset_range_values">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="35"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="37"/>
       <source>Reset Range Values</source>
       <translation>Bereikwaarden resetten</translation>
     </message>
     <message id="settings_minmax_reset_are_you_sure">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="37"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="39"/>
       <source>Are you sure that you want to reset all the values to zero?</source>
       <translation>Weet je zeker dat je alle waarden op nul wilt zetten?</translation>
     </message>
     <message id="settings_minmax_ac_in_not_available">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="79"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="81"/>
       <source>%1 (not available)</source>
       <extracomment>%1 = 'AC input 1' or 'AC input 2'</extracomment>
       <translation>%1 (niet beschikbaar)</translation>
     </message>
     <message id="settings_minmax_ac_in_header_with_source">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="83"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="85"/>
       <source>%1 (%2)</source>
       <extracomment>%1 = 'AC input 1' or 'AC input 2', %2 = name of connected input (e.g. Grid, Shore)</extracomment>
       <translation>%1 (%2)</translation>
     </message>
     <message id="settings_minmax_acout_max_acin1">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="125"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="130"/>
       <source>Maximum current: AC in 1 connected</source>
       <translation>Maximale stroom: AC IN 1 aangesloten</translation>
     </message>
     <message id="settings_minmax_acout_max_acin2">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="133"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="139"/>
       <source>Maximum current: AC in 2 connected</source>
       <translation>Maximale stroom: AC IN 2 aangesloten</translation>
     </message>
     <message id="settings_minmax_acout_max">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="141"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="148"/>
       <source>Maximum current: no AC inputs</source>
       <translation>Maximale stroom: geen AC-ingangen</translation>
     </message>
     <message id="settings_minmax_dc_out">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="148"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="156"/>
       <source>DC output</source>
       <translation>DC uitgang</translation>
     </message>
     <message id="settings_minmax_solar">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="160"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="169"/>
       <source>Solar</source>
       <translation>Zon</translation>
     </message>
@@ -8490,12 +8434,12 @@ Let op: dit menu toont alleen Carlo Gavazzi-meters die zijn aangesloten via RS48
       <translation>Time-out</translation>
     </message>
     <message id="settings_startpage_timeout_description">
-      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="72"/>
+      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="73"/>
       <source>Revert to the start page when the application is inactive.</source>
       <translation>Terugkeren naar de startpagina als de toepassing inactief is.</translation>
     </message>
     <message id="settings_startpage_auto_description">
-      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="95"/>
+      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="97"/>
       <source>After one minute of inactivity, select the current page as the start page, if it is in this list.</source>
       <translation>Na één minuut inactiviteit wordt de huidige pagina als startpagina geselecteerd, als deze in deze lijst staat.</translation>
     </message>
@@ -8525,7 +8469,7 @@ Let op: dit menu toont alleen Carlo Gavazzi-meters die zijn aangesloten via RS48
       <translation>Opgeslagen apparaten</translation>
     </message>
     <message id="common_words_discovered_devices">
-      <location filename="../../components/CommonWords.qml" line="175"/>
+      <location filename="../../components/CommonWords.qml" line="178"/>
       <source>Discovered devices</source>
       <translation>Ontdekte apparaten</translation>
     </message>
@@ -8557,20 +8501,25 @@ Let op: dit menu toont alleen Carlo Gavazzi-meters die zijn aangesloten via RS48
     <message id="modbus_add_unit_invalid">
       <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="61"/>
       <source>%1 is not a valid unit number. Use a number between 1-247.</source>
+      <translation type="unfinished">%1 is geen geldig eenheidsnummer. Gebruik een getal tussen 1-247.</translation>
+    </message>
+    <message id="page_settings_fronius_unitid_invalid">
+      <location filename="../../pages/settings/PageSettingsFroniusAddLocation.qml" line="35"/>
+      <source>%1 is not a valid unit number. Use a number between 1-247.</source>
       <translation>%1 is geen geldig eenheidsnummer. Gebruik een getal tussen 1-247.</translation>
     </message>
     <message id="settings_modbus_no_devices_saved">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="38"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="39"/>
       <source>No Modbus devices saved</source>
       <translation>Geen Modbus apparaten opgeslagen</translation>
     </message>
     <message id="page_settings_modbus_device_number">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="49"/>
       <source>Device %1</source>
       <translation>Apparaat %1</translation>
     </message>
     <message id="page_settings_modbus_device_remove_device">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="115"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="110"/>
       <source>Remove Modbus device?</source>
       <translation>Modbus apparaat verwijderen?</translation>
     </message>
@@ -8743,13 +8692,13 @@ Let op: dit menu toont alleen Carlo Gavazzi-meters die zijn aangesloten via RS48
       <translation>Minimale accuspanning</translation>
     </message>
     <message id="settings_multirs_ac_out_phase">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="162"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="157"/>
       <source>AC out %1</source>
       <extracomment>%1 = phase name (e.g. L1, L2, L3)</extracomment>
       <translation>AC uit %1</translation>
     </message>
     <message id="settings_multirs_trackers">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="216"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="211"/>
       <source>Trackers</source>
       <translation>Trackers</translation>
     </message>
@@ -8825,6 +8774,11 @@ Met een gestroomlijnde navigatie en een frisse look is alles waar je van houdt n
     <message id="welcome_controls_title">
       <location filename="../../pages/welcome/WelcomeView.qml" line="98"/>
       <source>Controls</source>
+      <translation type="unfinished">Besturingen</translation>
+    </message>
+    <message id="controlcards_empty_title">
+      <location filename="../../pages/ControlCardsPage.qml" line="145"/>
+      <source>Controls</source>
       <translation>Besturingen</translation>
     </message>
     <message id="welcome_controls_text">
@@ -8861,11 +8815,6 @@ Met een gestroomlijnde navigatie en een frisse look is alles waar je van houdt n
     <message id="welcome_done">
       <location filename="../../pages/welcome/WelcomeView.qml" line="136"/>
       <source>Done</source>
-      <translation type="unfinished">Klaar</translation>
-    </message>
-    <message id="mk2vsc_state_done">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="20"/>
-      <source>Done</source>
       <translation>Klaar</translation>
     </message>
     <message id="welcome_next">
@@ -8874,42 +8823,42 @@ Met een gestroomlijnde navigatie en een frisse look is alles waar je van houdt n
       <translation>Volgende</translation>
     </message>
     <message id="direction_north">
-      <location filename="../../src/units.cpp" line="483"/>
+      <location filename="../../src/units.cpp" line="500"/>
       <source>N</source>
       <translation>N</translation>
     </message>
     <message id="direction_northeast">
-      <location filename="../../src/units.cpp" line="485"/>
+      <location filename="../../src/units.cpp" line="502"/>
       <source>NE</source>
       <translation>NO</translation>
     </message>
     <message id="direction_east">
-      <location filename="../../src/units.cpp" line="487"/>
+      <location filename="../../src/units.cpp" line="504"/>
       <source>E</source>
       <translation>O</translation>
     </message>
     <message id="direction_southeast">
-      <location filename="../../src/units.cpp" line="489"/>
+      <location filename="../../src/units.cpp" line="506"/>
       <source>SE</source>
       <translation>ZO</translation>
     </message>
     <message id="direction_south">
-      <location filename="../../src/units.cpp" line="491"/>
+      <location filename="../../src/units.cpp" line="508"/>
       <source>S</source>
       <translation>Z</translation>
     </message>
     <message id="direction_southwest">
-      <location filename="../../src/units.cpp" line="493"/>
+      <location filename="../../src/units.cpp" line="510"/>
       <source>SW</source>
       <translation>ZW</translation>
     </message>
     <message id="direction_west">
-      <location filename="../../src/units.cpp" line="495"/>
+      <location filename="../../src/units.cpp" line="512"/>
       <source>W</source>
       <translation>W</translation>
     </message>
     <message id="direction_northwest">
-      <location filename="../../src/units.cpp" line="497"/>
+      <location filename="../../src/units.cpp" line="514"/>
       <source>NW</source>
       <translation>NW</translation>
     </message>
@@ -8926,20 +8875,25 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>Andere</translation>
     </message>
     <message id="ac-in-modeldefault_energy_reverse_x">
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="140"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="141"/>
       <source>Reversed Energy L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
       <translation>Omgekeerde energie L%1</translation>
     </message>
     <message id="settings_minmax_boat_page">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="172"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="182"/>
       <source>Boat page</source>
       <translation>Bootpagina</translation>
     </message>
     <message id="switchable_output_unsupported">
-      <location filename="../../src/enums.cpp" line="419"/>
+      <location filename="../../src/enums.cpp" line="438"/>
       <source>Unsupported type: %1</source>
       <translation>Niet-ondersteund type: %1</translation>
+    </message>
+    <message id="common_words_press">
+      <location filename="../../components/CommonWords.qml" line="423"/>
+      <source>Press</source>
+      <translation>Pers</translation>
     </message>
     <message id="output_aux_battery_service_changed_dcdc">
       <location filename="../../components/listitems/ListOutputBatteryRadioButtonGroup.qml" line="27"/>
@@ -8952,22 +8906,22 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>%1 gewijzigd in dynamo bedrijf</translation>
     </message>
     <message id="settings_minmax_gauge_display">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="177"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="187"/>
       <source>Gauge Display</source>
       <translation>Meterweergave</translation>
     </message>
     <message id="settings_minmax_time_to_go">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="185"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="195"/>
       <source>Time to go</source>
       <translation>Tijd over</translation>
     </message>
     <message id="settings_minmax_max_speed">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="199"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="210"/>
       <source>Max Speed</source>
       <translation>Max. snelheid</translation>
     </message>
     <message id="settings_minmax_max_rpm">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="210"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="222"/>
       <source>Max RPM</source>
       <translation>Max. toerental</translation>
     </message>
@@ -8987,12 +8941,12 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>Module spanning</translation>
     </message>
     <message id="page_switchable_output_group">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="45"/>
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="29"/>
       <source>Group</source>
       <translation>Groep</translation>
     </message>
     <message id="page_switchable_output_fuse_rating">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="72"/>
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="83"/>
       <source>Fuse rating</source>
       <translation>Zekeringwaarde</translation>
     </message>
@@ -9035,6 +8989,11 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="18"/>
       <source>Query products</source>
       <translation>Producten opvragen</translation>
+    </message>
+    <message id="mk2vsc_state_done">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="20"/>
+      <source>Done</source>
+      <translation type="unfinished">Klaar</translation>
     </message>
     <message id="mk2vsc_state_read_setting_data">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="22"/>
@@ -9080,13 +9039,6 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="38"/>
       <source>Resetting VE.Bus products</source>
       <translation>VE.Bus producten opnieuw instellen</translation>
-    </message>
-    <message id="Unknown">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="40"/>
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="109"/>
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="128"/>
-      <source>Unknown</source>
-      <translation type="unfinished">Onbekend</translation>
     </message>
     <message id="mk2vsc_error_mk2_mk3_comm">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="47"/>
@@ -9367,12 +9319,12 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>Laadverzoeken</translation>
     </message>
     <message id="settings_security_profile_change_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="182"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="186"/>
       <source>Change password</source>
       <translation>Wachtwoord wijzigen</translation>
     </message>
     <message id="settings_security_profile_update">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="184"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="188"/>
       <source>Update</source>
       <translation>Bijwerken</translation>
     </message>
@@ -9382,7 +9334,7 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>Documentatie</translation>
     </message>
     <message id="common_words_ac_input_number">
-      <location filename="../../components/CommonWords.qml" line="586"/>
+      <location filename="../../components/CommonWords.qml" line="608"/>
       <source>AC input %1</source>
       <extracomment>%1 = number of the AC input</extracomment>
       <translation>AC ingang %1</translation>
@@ -9392,18 +9344,13 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <source>Changing the GX Password</source>
       <translation>Het GX wachtwoord wijzigen</translation>
     </message>
-    <message id="modaldialog_confirm">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
-      <source>Confirm</source>
-      <translation type="unfinished">Bevestigen</translation>
-    </message>
     <message id="settings_security_profile_change_password_description">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="79"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="83"/>
       <source>Please enter a new GX password:</source>
       <translation>Voer een nieuw GX wachtwoord in:</translation>
     </message>
     <message id="settings_security_profile_enter_new_password">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="94"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="98"/>
       <source>Enter new password</source>
       <translation>Voer nieuw wachtwoord in</translation>
     </message>
@@ -9449,7 +9396,7 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>Een andere accu opladen vanuit de hoofdaccu</translation>
     </message>
     <message id="page_switchable_show_controls">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="65"/>
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="116"/>
       <source>Show controls</source>
       <extracomment>Whether UI controls should be shown for this output</extracomment>
       <translation>Toon bedieningselementen</translation>
@@ -9465,7 +9412,7 @@ Het GX-apparaat kan slechts één aangesloten aggregaat besturen en neemt degene
       <translation>Geen cellulaire modem aangesloten</translation>
     </message>
     <message id="ess_active_soc_limit">
-      <location filename="../../pages/controlcards/ESSCard.qml" line="85"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="87"/>
       <source>Active SOC Limit: %1%</source>
       <translation>Actieve laadtoestand limiet: %1%</translation>
     </message>
@@ -9581,11 +9528,6 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <source>Installed and enabled, disables at next boot</source>
       <translation>Geïnstalleerd en ingeschakeld, wordt bij de volgende keer opstarten uitgeschakeld.</translation>
     </message>
-    <message id="pagesettingssupportstate_firmware_checking">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="153"/>
-      <source>Checking...</source>
-      <translation type="unfinished">Controleren...</translation>
-    </message>
     <message id="pagesettingssupportstate_firmware_unknown">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="166"/>
       <source>Unknown</source>
@@ -9643,11 +9585,6 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <source>Disable also custom startup scripts?</source>
       <translation>Ook aangepaste opstartscripts uitschakelen?</translation>
     </message>
-    <message id="pagesettingssupportstate_integrations">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="448"/>
-      <source>Integrations</source>
-      <translation type="unfinished">Integraties</translation>
-    </message>
     <message id="pagesettingssupportstate_orange_items_description">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="494"/>
       <source>Items colored orange are supported and provided by Victron Energy, but using them incorrectly can affect system stability. In case of troubleshooting, disable those first.</source>
@@ -9656,49 +9593,49 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
     <message id="settings_bluetooth_unavailable_message">
       <location filename="../../pages/settings/PageSettingsBluetooth.qml" line="26"/>
       <source>Connect a compatible Bluetooth USB dongle to enable Bluetooth connectivity.</source>
-      <translation>Sluit een compatibele Bluetooth USB-dongle aan om Bluetooth-connectiviteit mogelijk te maken.</translation>
+      <translation> Sluit een compatibele Bluetooth USB dongle aan om Bluetooth verbindingen mogelijk te maken.</translation>
     </message>
     <message id="settings_ess_batteryLife_state">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="140"/>
       <source>BatteryLife state</source>
-      <translation>BatteryLife-status</translation>
+      <translation>BatteryLife status</translation>
     </message>
     <message id="pagesettingsintegrations_device_integrations">
       <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="33"/>
       <source>Device Integrations</source>
-      <translation>Apparaatintegraties</translation>
+      <translation>Apparaat integraties</translation>
     </message>
     <message id="pagesettingsintegrations_modbus_tcp_server">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="208"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="201"/>
       <source>Modbus TCP Server</source>
       <translation type="unfinished">Modbus TCP-server</translation>
     </message>
     <message id="settings_large_signal_k">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="231"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="226"/>
       <location filename="../../pages/settings/PageSettingsSignalK.qml" line="18"/>
       <source>Signal K</source>
       <translation type="unfinished">Signal K</translation>
     </message>
     <message id="settings_large_node_red">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="246"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="241"/>
       <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="17"/>
       <source>Node-RED</source>
       <translation type="unfinished">Node-RED</translation>
     </message>
     <message id="settings_venusos_large_documentation">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="272"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="267"/>
       <source>Venus OS Large Documentation</source>
-      <translation>Venus OS Large-documentatie</translation>
+      <translation>Venus OS Large documentatie</translation>
     </message>
     <message id="settings_modbus_enable_modbus_tcp">
       <location filename="../../pages/settings/PageSettingsModbusTcp.qml" line="30"/>
       <source>Enable Modbus TCP Server</source>
-      <translation>Modbus TCP-server inschakelen</translation>
+      <translation>Modbus TCP server inschakelen</translation>
     </message>
     <message id="pagesettingsconnectivity_bluetooth_for_victronconnect_app">
       <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="38"/>
       <source>Bluetooth (for VictronConnect App)</source>
-      <translation>Bluetooth (voor VictronConnect-app)</translation>
+      <translation>Bluetooth (voor VictronConnect app)</translation>
     </message>
     <message id="pagesettingsconnectivity_bluetooth_not_available">
       <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="42"/>
@@ -9706,7 +9643,7 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <translation>Geen Bluetooth beschikbaar</translation>
     </message>
     <message id="switchable_output_toggle">
-      <location filename="../../src/enums.cpp" line="387"/>
+      <location filename="../../src/enums.cpp" line="392"/>
       <source>Toggle</source>
       <translation>Schakelen</translation>
     </message>
@@ -9724,6 +9661,11 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <location filename="../../data/Ess.qml" line="34"/>
       <source>Optimized without BatteryLife</source>
       <translation>Geoptimaliseerd zonder BatteryLife</translation>
+    </message>
+    <message id="ess_state_external_control">
+      <location filename="../../data/Ess.qml" line="41"/>
+      <source>External control</source>
+      <translation type="unfinished">Externe besturing</translation>
     </message>
     <message id="pagesettingssupportstate_support_state_check_below_red_orange">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="29"/>
@@ -9776,20 +9718,20 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
     <message id="pagesettingssupportstate_press_to_update">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="389"/>
       <source>Press to update to</source>
-      <translation>Druk om te updaten naar</translation>
+      <translation>Druk om bij te werken naar</translation>
     </message>
     <message id="pagesettingssupportstate_update_firmware_to_fix_modified_state_description">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="404"/>
       <source>This will download and update rootfs with the latest official firmware.&lt;br&gt;Internet connectivity is required.&lt;br&gt;Press 'OK' to continue.</source>
-      <translation>Dit zal rootfs downloaden en updaten met de laatste officiële firmware.&lt;br&gt;Een internetverbinding is vereist.&lt;br&gt;Druk op 'OK' om door te gaan.</translation>
+      <translation>Dit zal rootfs downloaden en bijwerken met de laatste officiële firmware.&lt;br&gt;Een internetverbinding is vereist.&lt;br&gt;Druk op 'OK' om door te gaan.</translation>
     </message>
     <message id="settings_gps_format_kmh">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="90"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="93"/>
       <source>Kilometres per hour</source>
       <translation>Kilometers per uur</translation>
     </message>
     <message id="settings_gps_format_ms">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="92"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="95"/>
       <source>Metres per second</source>
       <translation>Meters per seconde</translation>
     </message>
@@ -9804,29 +9746,29 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <translation>Liters</translation>
     </message>
     <message id="settings_ui_animations">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="152"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="157"/>
       <source>UI Animations</source>
-      <translation>UI-animaties</translation>
+      <translation>UI animaties</translation>
     </message>
     <message id="settings_ui_animations_description">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="154"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="159"/>
       <source>Disable to reduce CPU usage</source>
-      <translation>Uitschakelen om CPU-gebruik te verminderen</translation>
+      <translation>Uitschakelen om CPU gebruik te verminderen</translation>
     </message>
     <message id="settings_relay_manual_can_now_be_found">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="24"/>
       <source>The Relay can now be found in the devices list</source>
       <translation>Het relais is nu te vinden in de apparatenlijst</translation>
     </message>
-    <message id="common_words_gx_device_relays">
-      <location filename="../../components/CommonWords.qml" line="220"/>
+    <message id="gx_device_relays">
+      <location filename="../../src/switchableoutputgroupmodel.cpp" line="103"/>
       <source>GX device relays</source>
       <translation>GX apparaat relais</translation>
     </message>
     <message id="ess_active_soc_limit_info">
-      <location filename="../../pages/controlcards/ESSCard.qml" line="93"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="96"/>
       <source>BatteryLife dynamically adjusts the minimum battery state of charge to prevent deep discharges and ensure regular full charges, helping to prolong battery life and maintain system reliability.</source>
-      <translation>BatteryLife past de minimale laadstatus van de batterij dynamisch aan om diepe ontladingen te voorkomen en regelmatige volledige laadbeurten te garanderen, waardoor de levensduur van de batterij wordt verlengd en de betrouwbaarheid van het systeem wordt behouden.</translation>
+      <translation>BatteryLife past de minimale laadstatus van de accu dynamisch aan om diepe ontladingen te voorkomen en regelmatige volledige laadbeurten te garanderen, waardoor de levensduur van de accu wordt verlengd en de betrouwbaarheid van het systeem wordt behouden.</translation>
     </message>
     <message id="settings_canbus_rvc_reverse_current_polarity">
       <location filename="../../pages/settings/PageSettingsCanbus.qml" line="69"/>
@@ -9839,61 +9781,61 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <translation>Indien ingeschakeld, wordt de stroompolariteit in de DGN's CHARGER_AC_STATUS_1, CHARGER_STATUS_2, INVERTER_AC_STATUS_1 en SOLAR_CONTROLLER_BATTERY_STATUS omgekeerd.</translation>
     </message>
     <message id="settings_gx_display_appearance">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="58"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="59"/>
       <source>GX display appearance</source>
-      <translation>Weergave van het GX-scherm</translation>
+      <translation>Weergave van het GX scherm</translation>
     </message>
     <message id="settings_remote_console_appearance">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="72"/>
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="74"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="105"/>
       <source>Remote Console appearance</source>
       <translation>Weergave van de Remote Console</translation>
     </message>
     <message id="settings_remote_console_forced">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="76"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="78"/>
       <source>Forced by %2 to %1</source>
       <extracomment>%1 = "dark", "light" or "auto" %2 = "VRM" or "app"</extracomment>
       <translation>Geforceerd door %2 naar %1</translation>
     </message>
     <message id="settings_remote_console_forced_appearance_dark">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="80"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="82"/>
       <source>dark</source>
       <extracomment>Forced by app to %1</extracomment>
       <translation>donker</translation>
     </message>
     <message id="settings_remote_console_forced_appearance_light">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="84"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="86"/>
       <source>light</source>
       <extracomment>Forced by app to %1</extracomment>
       <translation>licht</translation>
     </message>
     <message id="settings_remote_console_forced_appearance_auto">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="87"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="89"/>
       <source>auto</source>
       <extracomment>Forced by app to %1</extracomment>
       <translation>auto</translation>
     </message>
     <message id="settings_remote_console_forced_by_vrm">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="92"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="94"/>
       <source>VRM</source>
       <extracomment>Forced by %2 to dark</extracomment>
       <translation type="unfinished">VRM</translation>
     </message>
     <message id="settings_remote_console_forced_by_app">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="95"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="97"/>
       <source>app</source>
       <extracomment>Forced by %2 to dark</extracomment>
       <translation>app</translation>
     </message>
     <message id="settings_remote_console_appearance_same_as_gx_display">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="106"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="110"/>
       <source>Same as GX display</source>
-      <translation>Hetzelfde als GX-scherm</translation>
+      <translation>Hetzelfde als GX scherm</translation>
     </message>
     <message id="page_settings_gsm_registration_status">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="136"/>
       <source>Registration status</source>
-      <translation>Registratiestatus</translation>
+      <translation>Registratie status</translation>
     </message>
     <message id="page_settings_gsm_not_registered_not_searching">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="141"/>
@@ -9941,7 +9883,7 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <translation>Toegang tot Node-RED</translation>
     </message>
     <message id="settings_wifi_access_point_password">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="65"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="66"/>
       <source>Access Point password</source>
       <translation>Wachtwoord toegangspunt</translation>
     </message>
@@ -9978,7 +9920,7 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
     <message id="dcMeter_dc_genset">
       <location filename="../../src/enums.cpp" line="142"/>
       <source>DC genset</source>
-      <translation>DC-aggregaat</translation>
+      <translation>DC aggregaat</translation>
     </message>
     <message id="dcMeter_inverter">
       <location filename="../../src/enums.cpp" line="145"/>
@@ -10006,100 +9948,93 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <translation>Windgenerator</translation>
     </message>
     <message id="digitalinputs_type_disabled">
-      <location filename="../../src/enums.cpp" line="187"/>
+      <location filename="../../src/enums.cpp" line="192"/>
       <source>Disabled</source>
       <translation type="unfinished">Uitgeschakeld</translation>
     </message>
+    <message id="digitalinputs_type_bilgepump">
+      <location filename="../../src/enums.cpp" line="201"/>
+      <source>Bilge pump</source>
+      <translation type="unfinished">Lenspomp</translation>
+    </message>
     <message id="digitalinputs_state_off">
-      <location filename="../../src/enums.cpp" line="237"/>
+      <location filename="../../src/enums.cpp" line="242"/>
       <source>Off</source>
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">Uit</translation>
     </message>
     <message id="digitalinputs_state_on">
-      <location filename="../../src/enums.cpp" line="241"/>
+      <location filename="../../src/enums.cpp" line="246"/>
       <source>On</source>
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">Aan</translation>
     </message>
-    <message id="digitalinputs_state_ok">
-      <location filename="../../src/enums.cpp" line="261"/>
-      <source>OK</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">OK</translation>
-    </message>
-    <message id="digitalinputs_state_alarm">
-      <location filename="../../src/enums.cpp" line="265"/>
-      <source>Alarm</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">Alarm</translation>
-    </message>
     <message id="digitalinputs_state_running">
-      <location filename="../../src/enums.cpp" line="269"/>
+      <location filename="../../src/enums.cpp" line="274"/>
       <source>Running</source>
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">Loopt</translation>
     </message>
     <message id="pvinverter_statusCode_running">
-      <location filename="../../src/enums.cpp" line="295"/>
+      <location filename="../../src/enums.cpp" line="300"/>
       <source>Running</source>
       <extracomment>PV inverter status code</extracomment>
       <translation type="unfinished">Loopt</translation>
     </message>
     <message id="solarchargers_state_external control">
-      <location filename="../../src/enums.cpp" line="347"/>
+      <location filename="../../src/enums.cpp" line="352"/>
       <source>External control</source>
       <translation type="unfinished">Externe besturing</translation>
     </message>
+    <message id="switch_state_running">
+      <location filename="../../src/enums.cpp" line="363"/>
+      <source>Running</source>
+      <translation type="unfinished">Loopt</translation>
+    </message>
     <message id="switch_state_over_temperature">
-      <location filename="../../src/enums.cpp" line="361"/>
+      <location filename="../../src/enums.cpp" line="366"/>
       <source>Over temperature</source>
       <translation type="unfinished">Te hoge temperatuur</translation>
     </message>
     <message id="switchable_output_temperature_setpoint">
-      <location filename="../../src/enums.cpp" line="393"/>
+      <location filename="../../src/enums.cpp" line="398"/>
       <source>Temperature setpoint</source>
       <translation>Temperatuurinstelling</translation>
     </message>
     <message id="switchable_output_Stepped_Switch">
-      <location filename="../../src/enums.cpp" line="396"/>
+      <location filename="../../src/enums.cpp" line="401"/>
       <source>Stepped switch</source>
       <translation>Gefaseerde schakelaar</translation>
     </message>
     <message id="switchable_output_slave">
-      <location filename="../../src/enums.cpp" line="403"/>
+      <location filename="../../src/enums.cpp" line="408"/>
       <source>Slave</source>
       <translation type="unfinished">Slave</translation>
     </message>
     <message id="switchable_output_dropdown">
-      <location filename="../../src/enums.cpp" line="407"/>
+      <location filename="../../src/enums.cpp" line="412"/>
       <source>Dropdown</source>
-      <translation>Dropdown</translation>
+      <translation>Keuzemenu</translation>
     </message>
     <message id="switchable_output_basic_slider">
-      <location filename="../../src/enums.cpp" line="410"/>
+      <location filename="../../src/enums.cpp" line="415"/>
       <source>Basic slider</source>
       <translation>Basis schuifregelaar</translation>
     </message>
-    <message id="switchable_output_unranged_setpoint">
-      <location filename="../../src/enums.cpp" line="413"/>
-      <source>Unranged setpoint</source>
-      <translation>Niet-bereikgebonden instelling</translation>
-    </message>
     <message id="switchable_output_three_state_switch">
-      <location filename="../../src/enums.cpp" line="416"/>
+      <location filename="../../src/enums.cpp" line="421"/>
       <source>Three-state switch</source>
       <translation>Driestanden schakelaar</translation>
     </message>
-    <message id="switchable_output_trip_low_voltage">
-      <location filename="../../src/enums.cpp" line="452"/>
+    <message id="switchable_output_disabled">
+      <location filename="../../src/enums.cpp" line="478"/>
       <source>Disabled</source>
       <translation type="unfinished">Uitgeschakeld</translation>
     </message>
     <message id="settings_modbus_tcp_unit_id_note">
       <location filename="../../pages/settings/PageSettingsModbusTcpServices.qml" line="41"/>
       <source>See the Settings → VRM → VRM device instances menu to change the Modbus-TCP unit IDs.</source>
-      <translation>Ga naar Instellingen → VRM → VRM-apparaatinstanties om de Modbus-TCP-eenheid-ID's te wijzigen.</translation>
+      <translation>Ga naar Instellingen → VRM → VRM apparaatinstanties om de Modbus TCP eenheid ID's te wijzigen.</translation>
     </message>
     <message id="device_page_switches">
       <location filename="../../components/DevicePage.qml" line="49"/>
@@ -10116,33 +10051,608 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <source>Press to refresh</source>
       <translation>Druk om te vernieuwen</translation>
     </message>
+    <message id="common_words_total_power">
+      <location filename="../../components/CommonWords.qml" line="544"/>
+      <source>Total power</source>
+      <translation>Totaal vermogen</translation>
+    </message>
+    <message id="venus_os_gui">
+      <location filename="../../Main.qml" line="17"/>
+      <source>Venus OS GUI</source>
+      <extracomment>Application title</extracomment>
+      <translation>Venus OS GUI</translation>
+      <extra-Context>only shown on desktop systems</extra-Context>
+    </message>
+    <message id="load_delegate_status">
+      <location filename="../../pages/loads/LoadListDelegate.qml" line="72"/>
+      <source>Status: %1</source>
+      <translation>Status: %1</translation>
+    </message>
+    <message id="settings_relay_polarity_relay1">
+      <location filename="../../pages/settings/PageSettingsRelay.qml" line="76"/>
+      <source>Polarity (Relay 1)</source>
+      <translation>Polariteit (Relais 1)</translation>
+    </message>
+    <message id="page_switchable_output_polarity">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="198"/>
+      <source>Polarity</source>
+      <translation>Polariteit</translation>
+    </message>
+    <message id="settings_relay_polarity_relay2">
+      <location filename="../../pages/settings/PageSettingsRelay.qml" line="111"/>
+      <source>Polarity (Relay 2)</source>
+      <translation>Polariteit (Relais 2)</translation>
+    </message>
+    <message id="page_settings_wifi_invalid_password">
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="76"/>
+      <source>Password length must be either 0 or between 10 and 63 characters long</source>
+      <translation>Wachtwoord lengte moet 0 zijn of tussen de 10 en 63 tekens lang zijn</translation>
+    </message>
+    <message id="page_settings_wifi_password_updated">
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="80"/>
+      <source>Password updated</source>
+      <translation>Wachtwoord bijgewerkt</translation>
+    </message>
+    <message id="common_words_max">
+      <location filename="../../components/CommonWords.qml" line="315"/>
+      <source>Max</source>
+      <extracomment>Short for Maximum</extracomment>
+      <translation>Max</translation>
+    </message>
+    <message id="common_words_min">
+      <location filename="../../components/CommonWords.qml" line="331"/>
+      <source>Min</source>
+      <extracomment>Short for Minimum</extracomment>
+      <translation>Min</translation>
+    </message>
+    <message id="settings_ess_deprecated">
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="319"/>
+      <source>Deprecated settings</source>
+      <translation>Verouderde instellingen</translation>
+    </message>
+    <message id="settings_ess_max_charge_percentage">
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="326"/>
+      <source>Battery charge limit (% of CCL)</source>
+      <translation>Accu laadlimiet (% van CCL)</translation>
+    </message>
+    <message id="settings_ess_max_discharge_percentage">
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="337"/>
+      <source>Battery discharge limit (% of DCL)</source>
+      <translation>Accu ontladingslimiet (% van DCL)</translation>
+    </message>
+    <message id="vebus_device_bms_message">
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="234"/>
+      <source>A VE.Bus BMS automatically turns the system off when needed to protect the battery. Controlling the system from the GX device is therefore not possible.</source>
+      <translation>Een VE.Bus BMS schakelt het systeem automatisch uit wanneer dat nodig is om de accu te beschermen. Het is daarom niet mogelijk om het systeem via het GX-apparaat te bedienen.</translation>
+    </message>
+    <message id="switchable_output_numeric_input">
+      <location filename="../../src/enums.cpp" line="418"/>
+      <source>Numeric input</source>
+      <translation>Numerieke invoer</translation>
+    </message>
+    <message id="autotoggleswitch_disable_auto_mode_info">
+      <location filename="../../components/controls/AutoToggleButton.qml" line="34"/>
+      <source>Disable Auto mode first</source>
+      <translation>Schakel eerst de automatische modus uit</translation>
+    </message>
+    <message id="pagesettingsintegrations_venus_os_enable_large_features">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="219"/>
+      <source>Enable the Venus OS Large firmware to use Node-RED or Signal-K</source>
+      <translation>Schakel de Venus OS Large firmware in om Node-RED of Signal-K te gebruiken</translation>
+    </message>
+    <message id="settings_relays_sensors_tanks">
+      <location filename="../../pages/SettingsPage.qml" line="75"/>
+      <source>Relays, Sensors, PV Inverters, Modbus, Node-RED</source>
+      <translation>Relais, Sensoren, PV-omvormers, Modbus, Node-RED</translation>
+    </message>
+    <message id="vebus_device_page_microgrid_parameters">
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="194"/>
+      <source>Microgrid parameters</source>
+      <translation>Microgrid parameters</translation>
+    </message>
+    <message id="microgrid_mode_hybrid_droop">
+      <location filename="../../src/enums.cpp" line="539"/>
+      <source>Hybrid droop</source>
+      <translation>Hybride droop</translation>
+    </message>
+    <message id="microgrid_mode_grid_following">
+      <location filename="../../src/enums.cpp" line="542"/>
+      <source>Grid-following</source>
+      <translation>Netvolgend</translation>
+    </message>
+    <message id="microgrid_mode_grid_forming">
+      <location filename="../../src/enums.cpp" line="545"/>
+      <source>Grid-forming</source>
+      <translation>Netvormend</translation>
+    </message>
+    <message id="switchable_output_trip_low_voltage">
+      <location filename="../../src/enums.cpp" line="481"/>
+      <source>Trip low voltage</source>
+      <translation>Onderspanning uitschakelen</translation>
+    </message>
+    <message id="microgrid">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="15"/>
+      <source>Microgrid</source>
+      <translation>Microgrid</translation>
+    </message>
+    <message id="page_microgrid_active_mode">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="19"/>
+      <source>Active mode</source>
+      <translation>Actieve modus</translation>
+    </message>
+    <message id="page_microgrid_hybrid_droop_parameters">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="99"/>
+      <source>Hybrid droop parameters</source>
+      <translation>Hybride droop parameters</translation>
+    </message>
+    <message id="page_microgrid_reference_active_power_p0">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="105"/>
+      <source>Reference active power (P&lt;sub&gt;0&lt;/sub&gt;)</source>
+      <translation>Referentie actief vermogen (P&lt;sub&gt;0&lt;/sub&gt;)</translation>
+    </message>
+    <message id="page_microgrid_reference_frequency_f0">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="112"/>
+      <source>Reference frequency (f&lt;sub&gt;0&lt;/sub&gt;)</source>
+      <translation>Referentie frequentie (f&lt;sub&gt;0&lt;/sub&gt;)</translation>
+    </message>
+    <message id="page_microgrid_frequency_droop_slope">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="119"/>
+      <source>Frequency droop slope (droop&lt;sub&gt;fP&lt;/sub&gt;)</source>
+      <translation>Frequentie droop helling (droop&lt;sub&gt;fP&lt;/sub&gt;)</translation>
+    </message>
+    <message id="page_microgrid_reference_reactive_power">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="126"/>
+      <source>Reference reactive power (Q&lt;sub&gt;0&lt;/sub&gt;)</source>
+      <translation>Referentie reactief vermogen (Q&lt;sub&gt;0&lt;/sub&gt;)</translation>
+    </message>
+    <message id="page_microgrid_reference_voltage">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="133"/>
+      <source>Reference Voltage (U&lt;sub&gt;0&lt;/sub&gt;)</source>
+      <translation>Referentie spanning (U&lt;sub&gt;0&lt;/sub&gt;)</translation>
+    </message>
+    <message id="page_microgrid_voltage_droop_slope">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="140"/>
+      <source>Voltage droop slope (droop&lt;sub&gt;UQ&lt;/sub&gt;)</source>
+      <translation>Spanning droop helling (droop&lt;sub&gt;UQ&lt;/sub&gt;)</translation>
+    </message>
+    <message id="page_microgrid_minimum_and_maximum_parameters">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="146"/>
+      <source>Minimum and maximum parameters</source>
+      <translation>Minimum en maximum parameters</translation>
+    </message>
+    <message id="page_microgrid_allowed_active_power_range">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="151"/>
+      <source>Allowed active power range</source>
+      <translation>Toegestaan actief vermogensbereik</translation>
+    </message>
+    <message id="page_microgrid_allowed_reactive_power_range">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="159"/>
+      <source>Allowed reactive power range</source>
+      <translation>Toegestaan reactief vermogensbereik</translation>
+    </message>
+    <message id="page_microgrid_p_q_direct_drive_settings">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="176"/>
+      <source>P-Q direct drive settings</source>
+      <translation>P-Q direct drive instellingen</translation>
+    </message>
+    <message id="page_microgrid_active_power_setpoint_p">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="181"/>
+      <source>Active power setpoint (P)</source>
+      <translation>Actief vermogen setpoint (P)</translation>
+    </message>
+    <message id="page_microgrid_reactive_power_setpoint_q">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="188"/>
+      <source>Reactive power setpoint (Q)</source>
+      <translation>Reactief vermogen setpoint (Q)</translation>
+    </message>
+    <message id="page_microgrid_allowed_frequency_range">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="195"/>
+      <source>Allowed frequency range</source>
+      <translation>Toegestaan frequentiebereik</translation>
+    </message>
+    <message id="page_microgrid_allowed_voltage_range">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="203"/>
+      <source>Allowed voltage range</source>
+      <translation>Toegestaan spanningsbereik</translation>
+    </message>
+    <message id="page_microgrid_v_f_direct_drive_settings">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="220"/>
+      <source>V-f direct drive settings</source>
+      <translation>V-f direct drive instellingen</translation>
+    </message>
+    <message id="page_microgrid_voltage_setpoint">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="225"/>
+      <source>Voltage setpoint (U)</source>
+      <translation>Spanning setpoint (U)</translation>
+    </message>
+    <message id="page_microgrid_frequency_setpoint">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="232"/>
+      <source>Frequency setpoint (f)</source>
+      <translation>Frequentie setpoint (f)</translation>
+    </message>
+    <message id="pagesettingsintegrations_canopenmotordrive">
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="173"/>
+      <source>CANopen motor drives</source>
+      <translation>CANopen-motoraandrijvingen</translation>
+    </message>
+    <message id="pagesettingsintegrations_ui_plugins">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="283"/>
+      <source>UI Plugins</source>
+      <translation>UI-plug-ins</translation>
+    </message>
+    <message id="devicelist_motordrive_motordirectioninverted">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="73"/>
+      <source>Motor Direction Inverted</source>
+      <translation>Motorrichting omgekeerd</translation>
+    </message>
+    <message id="page_settings_canopenmotordrive_scan_for_motor_drives">
+      <location filename="../../pages/settings/PageSettingsCanOpenMotordrive.qml" line="31"/>
+      <source>Scan for motor drives</source>
+      <translation>Scannen naar motoraandrijvingen</translation>
+    </message>
+    <message id="page_settings_canopenmotordrive_discovered_motor_drive_ids">
+      <location filename="../../pages/settings/PageSettingsCanOpenMotordrive.qml" line="39"/>
+      <source>Discovered motor drive IDs</source>
+      <translation>Gevonden ID's van motoraandrijvingen</translation>
+    </message>
+    <message id="temperature_short_circuited">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="32"/>
+      <source>Short circuited</source>
+      <translation type="unfinished">Kortsluiting</translation>
+    </message>
+    <message id="temperature_reverse_polarity">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="35"/>
+      <source>Reverse polarity</source>
+      <translation type="unfinished">Omgekeerde polariteit</translation>
+    </message>
+    <message id="temperature_pm25">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="70"/>
+      <source>PM2.5</source>
+      <translation>PM2.5</translation>
+    </message>
+    <message id="temperature_co2">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="78"/>
+      <source>CO₂</source>
+      <translation>CO₂</translation>
+    </message>
+    <message id="temperature_voc">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="86"/>
+      <source>VOC index</source>
+      <translation>VOC-index</translation>
+    </message>
+    <message id="temperature_nox">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="94"/>
+      <source>NOx index</source>
+      <translation>NOx-index</translation>
+    </message>
+    <message id="temperature_luminosity">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="102"/>
+      <source>Luminosity</source>
+      <translation>Luminositeit</translation>
+    </message>
+    <message id="temperature_sensor_battery_status_low">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="133"/>
+      <source>Low</source>
+      <translation type="unfinished">Laag</translation>
+    </message>
+    <message id="switchable_output_bypassed">
+      <location filename="../../src/enums.cpp" line="484"/>
+      <source>Bypassed</source>
+      <translation>Omzeild</translation>
+    </message>
+    <message id="switchableoutput_list_delegate_auto_status">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/SwitchableOutputListDelegate.qml" line="93"/>
+      <source>Auto (%1)</source>
+      <extracomment>%1 = 'On' or 'Off'</extracomment>
+      <translation>Auto (%1)</translation>
+    </message>
+    <message id="switchableoutput_list_delegate_state_forced">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/SwitchableOutputListDelegate.qml" line="109"/>
+      <source>Forced</source>
+      <translation>Geforceerd</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_settings">
+      <location filename="../../pages/settings/PageSettingsFronius.qml" line="68"/>
+      <source>Modbus port and unit ID settings</source>
+      <translation>Modbus-poort- en unit ID-instellingen</translation>
+    </message>
+    <message id="pagesettingsintegrations_uiplugin_integrates_with_devicelist">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="322"/>
+      <source>Integrates with the device list</source>
+      <translation>Integreert met de apparatenlijst</translation>
+    </message>
+    <message id="common_words_color">
+      <location filename="../../components/CommonWords.qml" line="136"/>
+      <source>Color</source>
+      <translation>Kleur</translation>
+    </message>
+    <message id="common_words_value_must_be_greater_than_start_value">
+      <location filename="../../components/CommonWords.qml" line="561"/>
+      <source>Value must be greater than start value</source>
+      <translation>Waarde moet groter zijn dan de beginwaarde</translation>
+    </message>
+    <message id="common_words_value_must_be_lower_than_stop_value">
+      <location filename="../../components/CommonWords.qml" line="570"/>
+      <source>Value must be lower than stop value</source>
+      <translation>Waarde moet lager zijn dan de eindwaarde</translation>
+    </message>
+    <message id="notifications_page_active_notifications">
+      <location filename="../../pages/NotificationsPage.qml" line="42"/>
+      <source>Active Notifications</source>
+      <extracomment>List section header, for the section which contains current/active notifications</extracomment>
+      <translation>Actieve meldingen</translation>
+    </message>
+    <message id="notifications_page_inactive_notifications">
+      <location filename="../../pages/NotificationsPage.qml" line="46"/>
+      <source>Inactive Notifications</source>
+      <extracomment>List section header, for the section which contains inactive (but unseen) notifications</extracomment>
+      <translation>Inactieve meldingen</translation>
+    </message>
+    <message id="notifications_no_active_notifications">
+      <location filename="../../pages/NotificationsPage.qml" line="105"/>
+      <source>No active notifications</source>
+      <translation>Geen actieve meldingen</translation>
+    </message>
+    <message id="switchable_output_rgb_color_wheel">
+      <location filename="../../src/enums.cpp" line="427"/>
+      <source>RGB color wheel</source>
+      <translation>RGB-kleurenwiel</translation>
+    </message>
+    <message id="switchable_output_cct_color_wheel">
+      <location filename="../../src/enums.cpp" line="431"/>
+      <source>CCT color wheel</source>
+      <extracomment>Correlated Color Temperature color wheel</extracomment>
+      <translation>CCT-kleurenwiel</translation>
+    </message>
+    <message id="switchable_output_rgbw_color_wheel">
+      <location filename="../../src/enums.cpp" line="435"/>
+      <source>RGB + W color wheel</source>
+      <extracomment>RGB + white color wheel</extracomment>
+      <translation>RGB + W kleurenwiel</translation>
+    </message>
+    <message id="listlink_show_qr_code">
+      <location filename="../../components/listitems/ListLink.qml" line="43"/>
+      <source>Show QR code</source>
+      <translation>QR-code weergeven</translation>
+    </message>
+    <message id="listlink_scan_qr_code">
+      <location filename="../../components/listitems/ListLink.qml" line="52"/>
+      <source>Open the QR code to scan it with your portable device.&lt;br /&gt;Or insert the link: %1</source>
+      <extracomment>%1 = url text</extracomment>
+      <translation>Open de QR-code om deze met uw draagbare apparaat te scannen.&lt;br /&gt;Of voer de link in: %1</translation>
+    </message>
+    <message id="color_preset">
+      <location filename="../../components/ColorPresetGrid.qml" line="33"/>
+      <source>Preset</source>
+      <translation>Voorinstelling</translation>
+    </message>
+    <message id="page_settings_fronius_add_modbus_location">
+      <location filename="../../pages/settings/PageSettingsFroniusAddLocation.qml" line="15"/>
+      <source>Add Modbus port and unit ID</source>
+      <translation>Modbus-poort en unit ID toevoegen</translation>
+    </message>
+    <message id="page_settings_fronius_add_modbus_unitid">
+      <location filename="../../pages/settings/PageSettingsFroniusAddLocation.qml" line="29"/>
+      <source>Unit ID</source>
+      <translation>Unit ID</translation>
+    </message>
+    <message id="page_settings_fronius_add_modbus_location_button">
+      <location filename="../../pages/settings/PageSettingsFroniusAddLocation.qml" line="43"/>
+      <source>Add</source>
+      <translation>Toevoegen</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_locations_note">
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="40"/>
+      <source>The default modbus port is 502 and the default unit ID is 126.
+Here you can add additional ports and unit IDs to scan for PV inverters.</source>
+      <translation>De standaard Modbus-poort is 502 en de standaard unit ID is 126.
+Hier kunt u extra poorten en unit ID's toevoegen om naar PV-omvormers te scannen.</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_location_number">
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="50"/>
+      <source>Port/Unit ID %1</source>
+      <translation>Poort/Unit ID %1</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_remove_location_description">
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="72"/>
+      <source>Port: %1 (Unit %2)</source>
+      <translation>Poort: %1 (Unit %2)</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_remove_location">
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="94"/>
+      <source>Remove Modbus port and unit ID?</source>
+      <translation>Modbus-poort en unit ID verwijderen?</translation>
+    </message>
+    <message id="devicelist_tankshape_edit_point">
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="182"/>
+      <source>Edit point %1</source>
+      <extracomment>%1 = which point is being edited, a number like "1" or "2"</extracomment>
+      <translation>Punt %1 bewerken</translation>
+    </message>
+    <message id="settings_canbus_vecan">
+      <location filename="../../pages/settings/CanbusProfile.qml" line="36"/>
+      <source>VE.Can (250 kbit/s)</source>
+      <translation>VE.Can (250 kbit/s)</translation>
+    </message>
+    <message id="settings_canopen_motordrive_250">
+      <location filename="../../pages/settings/CanbusProfile.qml" line="48"/>
+      <source>VE.Can &amp; CANopen E-drive (250 kbit/s)</source>
+      <translation>VE.Can &amp; CANopen E-drive (250 kbit/s)</translation>
+    </message>
+    <message id="settings_canopen_motordrive_500">
+      <location filename="../../pages/settings/CanbusProfile.qml" line="90"/>
+      <source>CANopen E-drive (500 kbit/s)</source>
+      <translation>CANopen E-drive (500 kbit/s)</translation>
+    </message>
+    <message id="page_microgrid_from_p1_to_p2">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="39"/>
+      <source>%1%2 to %3%4</source>
+      <extracomment>Describes a range from one quantity to another, e.g. "30W to 60W". The first argument is the first quantity, the second argument is the units of the first quantity, the third argument is the second quantity, the fourth argument is the units of the second quantity.</extracomment>
+      <translation>%1%2 tot %3%4</translation>
+    </message>
+    <message id="settings_ac-in-setup_changed_role">
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="85"/>
+      <source>%1 changed role, the devices list has been updated</source>
+      <translation>%1 heeft van rol gewisseld, de apparatenlijst is bijgewerkt</translation>
+    </message>
+    <message id="page_meteo_estimated_power">
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="80"/>
+      <source>Estimated power</source>
+      <translation>Geschat vermogen</translation>
+    </message>
+    <message id="startpage_option_device_list">
+      <location filename="../../data/StartPageConfiguration.qml" line="63"/>
+      <source>Device list</source>
+      <translation>Apparatenlijst</translation>
+    </message>
+    <message id="page_switchable_output_switch_mode">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="40"/>
+      <source>Switch mode</source>
+      <translation>Schakelmodus</translation>
+    </message>
+    <message id="page_switchable_output_switch_mode_linear">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="47"/>
+      <source>Permanent on</source>
+      <translation>Permanent aan</translation>
+    </message>
+    <message id="page_switchable_output_switch_mode_optical">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="49"/>
+      <source>Switching</source>
+      <translation>Schakelen</translation>
+    </message>
+    <message id="page_switchable_output_dim_mode">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="55"/>
+      <source>Dim mode</source>
+      <translation>Dimmodus</translation>
+    </message>
+    <message id="page_switchable_output_dim_mode_disabled">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="60"/>
+      <source>Dimming disabled</source>
+      <translation>Dimmen uitgeschakeld</translation>
+    </message>
+    <message id="page_switchable_output_dim_mode_linear">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="62"/>
+      <source>Linear</source>
+      <translation>Lineair</translation>
+    </message>
+    <message id="page_switchable_output_dim_mode_optical">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="64"/>
+      <source>Optical curve</source>
+      <translation>Optische curve</translation>
+    </message>
+    <message id="page_switchable_output_fuse_detection_mode">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="70"/>
+      <source>Fuse detection mode</source>
+      <translation>Zekeringdetectiemodus</translation>
+    </message>
+    <message id="page_switchable_output_fuse_detection_mode_only_when_off">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="77"/>
+      <source>Only when the output is off</source>
+      <translation>Alleen wanneer de uitgang uit is</translation>
+    </message>
+    <message id="page_switchable_output_startup_state">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="140"/>
+      <source>Startup switch state</source>
+      <translation>Opstartschakelstand</translation>
+    </message>
+    <message id="page_switchable_output_startup_state_restore_from_memory">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="147"/>
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="154"/>
+      <source>Restore from memory</source>
+      <translation>Herstellen vanuit geheugen</translation>
+    </message>
+    <message id="page_switchable_output_startup_dim_level">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="153"/>
+      <source>Startup dim level</source>
+      <translation type="unfinished">Opstartdimniveau</translation>
+    </message>
+    <message id="settings_dvcc_startup_dim_level">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="183"/>
+      <source>Startup dim level</source>
+      <translation>Opstartdimniveau</translation>
+    </message>
+    <message id="page_switchable_output_restore_dim_level">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="173"/>
+      <source>Restore dim level from memory</source>
+      <translation>Dimniveau herstellen vanuit geheugen</translation>
+    </message>
+    <message id="page_switchable_output_polarity_active_high">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="203"/>
+      <source>Active high / Normally open</source>
+      <translation>Actief hoog / Normaal open</translation>
+    </message>
+    <message id="page_switchable_output_polarity_active_low">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="205"/>
+      <source>Active low / Normally closed</source>
+      <translation>Actief laag / Normaal gesloten</translation>
+    </message>
+    <message id="settings_dvcc_output_limit_min">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="211"/>
+      <source>Output limit min</source>
+      <translation>Minimale uitgangslimiet</translation>
+    </message>
+    <message id="settings_dvcc_output_limit_max">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="222"/>
+      <source>Output limit max</source>
+      <translation>Maximale uitgangslimiet</translation>
+    </message>
+    <message id="ac-in-modeldefault_phase_setting">
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="174"/>
+      <source>Phase Setting</source>
+      <translation/>
+    </message>
+    <message id="page_switchable_output_show_local">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="125"/>
+      <source>Only local</source>
+      <translation/>
+    </message>
+    <message id="page_switchable_output_show_vrm">
+      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="127"/>
+      <source>Only on VRM</source>
+      <translation/>
+    </message>
+    <message id="controlcards_empty_desc1">
+      <location filename="../../pages/ControlCardsPage.qml" line="147"/>
+      <source>No compatible devices found</source>
+      <translation/>
+    </message>
+    <message id="controlcards_empty_desc2">
+      <location filename="../../pages/ControlCardsPage.qml" line="149"/>
+      <source>Connect devices that support this function</source>
+      <translation/>
+    </message>
+    <message id="settings_radio_button_group_unknown">
+      <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
+      <source>Unknown</source>
+      <translation type="unfinished">Onbekend</translation>
+    </message>
     <message id="temperature_type_unknown">
-      <location filename="../../data/EnvironmentInputs.qml" line="66"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="65"/>
       <source>Unknown</source>
       <translation type="unfinished">Onbekend</translation>
     </message>
     <message id="brief_solar_yield">
-      <location filename="../../pages/BriefSidePanel.qml" line="25"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="24"/>
       <source>Solar yield</source>
       <translation type="unfinished">Zon opbrengst</translation>
     </message>
     <message id="brief_dc_input">
-      <location filename="../../pages/BriefSidePanel.qml" line="212"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="214"/>
       <source>DC input</source>
       <translation type="unfinished">DC ingang</translation>
     </message>
     <message id="brief_ac_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="253"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="257"/>
       <source>AC Loads</source>
       <translation type="unfinished">AC Belastingen</translation>
     </message>
     <message id="brief_dc_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="280"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="284"/>
       <source>DC Loads</source>
       <translation type="unfinished">DC Belastingen</translation>
     </message>
     <message id="nav_overview">
-      <location filename="../../pages/OverviewPage.qml" line="456"/>
+      <location filename="../../pages/OverviewPage.qml" line="450"/>
       <source>Overview</source>
       <translation type="unfinished">Overzicht</translation>
     </message>
@@ -10167,7 +10677,7 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <translation type="unfinished">Systeem opbrengst</translation>
     </message>
     <message id="charger_total_pv_power">
-      <location filename="../../pages/solar/SolarDevicePage.qml" line="50"/>
+      <location filename="../../pages/solar/SolarDevicePage.qml" line="61"/>
       <source>Total PV Power</source>
       <translation type="unfinished">Totaal PV energie</translation>
     </message>
@@ -10186,22 +10696,10 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
       <source>Warning</source>
       <translation type="unfinished">Waarschuwing</translation>
     </message>
-    <message id="load_delegate_status">
-      <location filename="../../pages/loads/LoadListDelegate.qml" line="72"/>
-      <source>Status: %1</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="venus_os_gui">
-      <location filename="../../Main.qml" line="17"/>
-      <source>Venus OS GUI</source>
-      <extracomment>Application title</extracomment>
-      <translation type="unfinished"/>
-      <extra-Context>only shown on desktop systems</extra-Context>
-    </message>
-    <message id="autotoggleswitch_function_auto_mode_info">
-      <location filename="../../components/controls/AutoToggleButton.qml" line="29"/>
-      <source>Function is set on Auto Mode</source>
-      <translation type="unfinished"/>
+    <message id="switchableoutput_gx_device_relays">
+      <location filename="../../src/switchableoutput.cpp" line="464"/>
+      <source>GX device relays</source>
+      <translation type="unfinished">GX apparaat relais</translation>
     </message>
   </context>
   <context>
@@ -10795,37 +11293,37 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
   <context>
     <name>EnvironmentInputs</name>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="19"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="18"/>
       <source>Battery</source>
       <translation>Accu</translation>
     </message>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="25"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="24"/>
       <source>Fridge</source>
       <translation>Koelkast</translation>
     </message>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="31"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="30"/>
       <source>Generic</source>
       <translation>Algemeen</translation>
     </message>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="37"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="36"/>
       <source>Room</source>
       <translation>Kamer</translation>
     </message>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="43"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="42"/>
       <source>Outdoor</source>
       <translation>Buiten</translation>
     </message>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="49"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="48"/>
       <source>Water Heater</source>
       <translation>Boiler</translation>
     </message>
     <message>
-      <location filename="../../data/EnvironmentInputs.qml" line="55"/>
+      <location filename="../../data/EnvironmentInputs.qml" line="54"/>
       <source>Freezer</source>
       <translation>Diepvries</translation>
     </message>
@@ -11676,7 +12174,7 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
   <context>
     <name>PageAcInSetup</name>
     <message>
-      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="129"/>
+      <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="136"/>
       <source>Set the switch in an unlocked position to modify the settings.</source>
       <translation>Zet de schakelaar in een ontgrendelde positie om de instellingen te wijzigen.</translation>
     </message>
@@ -11684,149 +12182,149 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
   <context>
     <name>QGuiApplication</name>
     <message>
-      <location filename="../../src/main.cpp" line="119"/>
+      <location filename="../../src/main.cpp" line="120"/>
       <source>Use D-Bus data source: connect to the specified D-Bus address.</source>
       <translation>Gebruik D Bus-gegevensbron: maak verbinding met het opgegeven D Bus-adres.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="120"/>
+      <location filename="../../src/main.cpp" line="121"/>
       <source>address</source>
       <comment>D-Bus address</comment>
       <translation>Adres</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="125"/>
+      <location filename="../../src/main.cpp" line="126"/>
       <source>Use D-Bus data source: connect to the default D-Bus address</source>
       <translation>Gebruik D Bus-gegevensbron: maak verbinding met het standaard D Bus adres</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="131"/>
+      <location filename="../../src/main.cpp" line="132"/>
       <source>Use MQTT data source: connect to the specified MQTT broker address.</source>
       <translation>Gebruik MQTT gegevensbron: maak verbinding met het opgegeven MQTT-brokeradres.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="132"/>
+      <location filename="../../src/main.cpp" line="133"/>
       <source>address</source>
       <comment>MQTT broker address</comment>
       <translation>Adres</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="138"/>
+      <location filename="../../src/main.cpp" line="139"/>
       <source>MQTT data source device portal id.</source>
       <translation>Portal-ID van MQTT gegevensbronapparaat.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="139"/>
+      <location filename="../../src/main.cpp" line="140"/>
       <source>portalId</source>
       <translation>Portal ID</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="144"/>
+      <location filename="../../src/main.cpp" line="145"/>
       <source>MQTT VRM webhost shard</source>
       <translation>MQTT VRM-webhost-shard</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="145"/>
+      <location filename="../../src/main.cpp" line="146"/>
       <source>shard</source>
       <comment>MQTT VRM webhost shard</comment>
       <translation>Shard</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="150"/>
+      <location filename="../../src/main.cpp" line="151"/>
       <source>MQTT data source username</source>
       <translation>Gebruikersnaam van MQTT gegevensbron</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="151"/>
+      <location filename="../../src/main.cpp" line="152"/>
       <source>user</source>
       <comment>MQTT broker username.</comment>
       <translation>Gebruiker</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="156"/>
+      <location filename="../../src/main.cpp" line="157"/>
       <source>MQTT data source password</source>
       <translation>Wachtwoord voor MQTT gegevensbron</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="157"/>
+      <location filename="../../src/main.cpp" line="158"/>
       <source>pass</source>
       <comment>MQTT broker password.</comment>
       <translation>Wachtwoord</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="162"/>
+      <location filename="../../src/main.cpp" line="163"/>
       <source>MQTT data source token</source>
       <translation>MQTT gegevensbrontoken</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="163"/>
+      <location filename="../../src/main.cpp" line="164"/>
       <source>token</source>
       <comment>MQTT broker auth token.</comment>
       <translation>Token</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="168"/>
+      <location filename="../../src/main.cpp" line="169"/>
       <source>Enable FPS counter</source>
       <translation>Schakel FPS teller in</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="173"/>
+      <location filename="../../src/main.cpp" line="174"/>
       <source>Skip splash screen</source>
       <translation>Opstartscherm overslaan</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="178"/>
+      <location filename="../../src/main.cpp" line="179"/>
       <source>Use mock data source for testing.</source>
       <translation>Gebruik een testgegevensbron om te testen.</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="183"/>
+      <location filename="../../src/main.cpp" line="184"/>
       <source>Name of mock configuration</source>
-      <translation>Naam van de mock-configuratie</translation>
+      <translation>Naam van de proefconfiguratie</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="184"/>
+      <location filename="../../src/main.cpp" line="185"/>
       <source>mockConfig</source>
       <comment>Configuration name</comment>
       <translation>mockConfig</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="190"/>
+      <location filename="../../src/main.cpp" line="191"/>
       <source>Set to disable mock timers on startup</source>
       <translation>Instellen om mock-timers uit te schakelen bij het opstarten</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="195"/>
+      <location filename="../../src/main.cpp" line="196"/>
       <source>Node-RED URL</source>
       <translation>Node-RED URL</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="196"/>
+      <location filename="../../src/main.cpp" line="197"/>
       <source>url</source>
       <comment>Node-RED URL</comment>
       <translation>url</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="201"/>
+      <location filename="../../src/main.cpp" line="202"/>
       <source>Signal K URL</source>
-      <translation>Signal K-URL</translation>
+      <translation>Signal K URL</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="202"/>
+      <location filename="../../src/main.cpp" line="203"/>
       <source>url</source>
       <comment>Signal K URL</comment>
       <translation>url</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="207"/>
+      <location filename="../../src/main.cpp" line="208"/>
       <source>Color scheme (dark, light, auto, default)</source>
       <translation>Kleurenschema (donker, licht, auto, standaard)</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="208"/>
+      <location filename="../../src/main.cpp" line="209"/>
       <source>scheme</source>
       <comment>Color scheme value</comment>
-      <translation>scheme</translation>
+      <translation>schema</translation>
     </message>
   </context>
   <context>
@@ -12553,112 +13051,112 @@ Geïnstalleerd maar uitgeschakeld (rc.local)
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="10"/>
       <source>Device switched off</source>
-      <translation type="unfinished"/>
+      <translation>Apparaat uitgeschakeld</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="13"/>
       <source>Mixed old/new MK2</source>
-      <translation type="unfinished"/>
+      <translation>Gemengde oude/nieuwe MK2</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="16"/>
       <source>Expected devices error</source>
-      <translation type="unfinished"/>
+      <translation>Verwachte apparaten fout</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="19"/>
       <source>No other device detected</source>
-      <translation type="unfinished"/>
+      <translation>Geen ander apparaat gedetecteerd</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="22"/>
       <source>Overvoltage on AC-out</source>
-      <translation type="unfinished"/>
+      <translation>Te hoge spanning op AC uitgang</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="25"/>
       <source>DDC program error</source>
-      <translation type="unfinished"/>
+      <translation>DDC programmafout</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="28"/>
       <source>VE.Bus BMS without assistant</source>
-      <translation type="unfinished"/>
+      <translation>VE.Bus BMS zonder assistent</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="31"/>
       <source>Ground relay test failed</source>
-      <translation type="unfinished"/>
+      <translation>Aardrelais test mislukt</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="34"/>
       <source>System time sync error</source>
-      <translation type="unfinished"/>
+      <translation>Systeem tijd synchronisatiefout</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="37"/>
       <source>Grid relay test fault</source>
-      <translation type="unfinished"/>
+      <translation>Net relais test fout</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="40"/>
       <source>Config mismatch with 2nd mcu</source>
-      <translation type="unfinished"/>
+      <translation>Configuratie komt niet overeen met 2e mcu</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="43"/>
       <source>Device transmit error</source>
-      <translation type="unfinished"/>
+      <translation>Apparaat zendfout</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="46"/>
       <source>Awaiting configuration or dongle missing</source>
-      <translation type="unfinished"/>
+      <translation>Wachten op configuratie of dongle ontbreekt</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="49"/>
       <source>Phase master missing</source>
-      <translation type="unfinished"/>
+      <translation>Fase master ontbreekt</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="52"/>
       <source>Overvoltage has occurred</source>
-      <translation type="unfinished"/>
+      <translation>Te hoge spanning heeft plaatsgevonden</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="55"/>
       <source>Slave does not have AC input!</source>
-      <translation type="unfinished"/>
+      <translation>Slave heeft geen AC ingang!</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="58"/>
       <source>Device can't be slave</source>
-      <translation type="unfinished"/>
+      <translation>Apparaat kan geen slave zijn</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="61"/>
       <source>System protection initiated</source>
-      <translation type="unfinished"/>
+      <translation>Systeembescherming geactiveerd</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="64"/>
       <source>Firmware incompatibiltiy</source>
-      <translation type="unfinished"/>
+      <translation>Firmware incompatibiliteit</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="67"/>
       <source>Internal error</source>
-      <translation type="unfinished">Interne fout</translation>
+      <translation>Interne fout</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="70"/>
       <source>Failing relay test prevents connection</source>
-      <translation type="unfinished"/>
+      <translation>Mislukte relais test voorkomt verbinding</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/vebus_error.cpp" line="73"/>
       <source>VE.Bus error</source>
-      <translation type="unfinished"/>
+      <translation>VE.Bus fout</translation>
     </message>
   </context>
   <context>

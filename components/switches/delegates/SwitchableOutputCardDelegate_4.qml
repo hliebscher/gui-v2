@@ -62,19 +62,19 @@ FocusScope {
 			top: header.bottom
 		}
 		height: Theme.geometry_switchableoutput_control_height
-		checked: multiStepState.backendValue
+		checked: multiStepState.expectedValue === 1
 		onOnClicked: multiStepState.writeValue(1)
 		onOffClicked: multiStepState.writeValue(0)
 
 		// Get/set the current index. Note Dimming and DimmingMax are 1-based. E.g. if Dimming=1
 		// and DimmingMax=5, the options are 1-5 inclusive, and the first option is selected.
-		currentIndex: root.switchableOutput.hasDimming ? root.switchableOutput.dimming - 1 : -1
+		currentIndex: root.switchableOutput.dimming - 1
 		onIndexClicked: (index) => { root.switchableOutput.setDimming(index + 1) }
 
 		Connections {
 			target: root.switchableOutput
 			function onDimmingChanged() {
-				multiStep.currentIndex = root.switchableOutput.hasDimming ? root.switchableOutput.dimming - 1 : -1
+				multiStep.currentIndex = root.switchableOutput.dimming - 1
 			}
 		}
 
@@ -99,8 +99,9 @@ FocusScope {
 
 		SettingSync {
 			id: multiStepState
-			backendValue: root.switchableOutput.state
-			onUpdateToBackend: (value) => { root.switchableOutput.setState(value) }
+			dataItem: VeQuickItem {
+				uid: root.switchableOutput.uid + "/State"
+			}
 		}
 	}
 }

@@ -55,17 +55,15 @@ FocusScope {
 			top: header.bottom
 		}
 		height: Theme.geometry_switchableoutput_control_height
-		enabled: !toggleState.busy || !autoToggleState.busy
-		onChecked: toggleState.backendValue === 1
-		autoChecked: autoToggleState.backendValue
+		onChecked: toggleState.expectedValue === 1
+		autoChecked: autoToggleState.expectedValue === 1
 		onOnClicked: toggleState.writeValue(1)
 		onOffClicked: toggleState.writeValue(0)
-		onAutoClicked: autoToggleState.writeValue(autoToggleState.backendValue === 1 ? 0 : 1)
+		onAutoClicked: autoToggleState.writeValue(autoToggleState.dataItem.value === 1 ? 0 : 1)
 
 		SettingSync {
 			id: autoToggleState
-			backendValue: autoState.value
-			onUpdateToBackend: (value) => { autoState.setValue(value) }
+			dataItem: autoState
 		}
 
 		VeQuickItem {
@@ -75,8 +73,9 @@ FocusScope {
 
 		SettingSync {
 			id: toggleState
-			backendValue: root.switchableOutput.state
-			onUpdateToBackend: (value) => { root.switchableOutput.setState(value) }
+			dataItem: VeQuickItem {
+				uid: root.switchableOutput.uid + "/State"
+			}
 		}
 	}
 }

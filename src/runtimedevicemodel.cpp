@@ -190,7 +190,7 @@ void RuntimeDeviceModel::sourceDeviceAdded(const QModelIndex &parent, int first,
 							<< m_devices.at(deviceIndex).device->serviceUid();
 					emit dataChanged(createIndex(deviceIndex, 0), createIndex(deviceIndex, 0), { ConnectedRole });
 				} else {
-					QList<int> changedRoles = { ConnectedRole };
+					QList<int> changedRoles = { ConnectedRole, DeviceRole };
 					m_devices[deviceIndex].device = device;
 					if (m_devices[deviceIndex].cachedName != device->name()) {
 						m_devices[deviceIndex].cachedName = device->name();
@@ -230,7 +230,7 @@ void RuntimeDeviceModel::sourceDeviceAboutToBeRemoved(const QModelIndex &parent,
 				m_devices[deviceIndex].device->disconnect(this);
 				m_devices[deviceIndex].device = nullptr;
 			}
-			emit dataChanged(createIndex(deviceIndex, 0), createIndex(deviceIndex, 0), { ConnectedRole });
+			emit dataChanged(createIndex(deviceIndex, 0), createIndex(deviceIndex, 0), { ConnectedRole, DeviceRole });
 		}
 	}
 

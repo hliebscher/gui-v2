@@ -35,6 +35,7 @@ Page {
 				//% "Find PV inverters"
 				text: qsTrId("page_settings_fronius_find_pv_inverters")
 				secondaryText: autoDetectItem.value ? CommonWords.scanning.arg(scanProgressItem.value || 0) : CommonWords.press_to_scan
+				writeAccessLevel: VenusOS.User_AccessType_User
 				onClicked: autoDetectItem.setValue(autoDetectItem.value === 0 ? 1 : 0)
 			}
 
@@ -60,6 +61,12 @@ Page {
 			ListSwitch {
 				text: CommonWords.automatic_scanning
 				dataItem.uid: Global.systemSettings.serviceUid + "/Settings/Fronius/AutoScan"
+			}
+
+			ListNavigation {
+				//% "Modbus port and unit ID settings"
+				text: qsTrId("page_settings_fronius_modbus_settings")
+				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsFroniusModbus.qml", {"title": text})
 			}
 		}
 	}

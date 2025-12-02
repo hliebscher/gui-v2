@@ -11,7 +11,7 @@ ListItem {
 
 	readonly property alias dataItem: dataItem
 	property alias checked: switchItem.checked
-	property alias checkable: switchItem.checkable
+	property bool checkable
 	property alias secondaryText: secondaryLabel.text
 	property bool updateDataOnClick: true
 	property bool invertSourceValue
@@ -19,17 +19,16 @@ ListItem {
 	property int valueTrue: 1
 	property int valueFalse: 0
 
-	property bool _updatingValue
-
-	// Emitted when a click results in a change in the data value, or when checkable=true and the
-	// switch is toggled directly.
-	signal toggled
-
 	// Override ListItem right padding to give Switch a larger touch area for users
 	rightPadding: 0
 
 	interactive: (dataItem.uid === "" || dataItem.valid)
 	pressAreaEnabled: false
+
+	// Since pressAreaEnabled=false (to ensure only the internal Switch is clickable, rather than
+	// the whole item), the key events must be forwarded to the internal Switch so that the Space
+	// key activates the Switch onClicked() handler.
+	Keys.forwardTo: [switchItem, root]
 
 	content.spacing: 0
 	content.children: [
@@ -49,12 +48,15 @@ ListItem {
 			bottomInset: Theme.geometry_listItem_content_verticalMargin
 			leftInset: Theme.geometry_listItem_content_spacing
 			rightInset: root.flat ? Theme.geometry_listItem_flat_content_horizontalMargin : Theme.geometry_listItem_content_horizontalMargin
-			enabled: root.clickable
 			checked: invertSourceValue ? dataItem.value === valueFalse : dataItem.value === valueTrue
-			checkable: false
+			checkable: root.checkable && root.clickable
 			focusPolicy: Qt.NoFocus
+			showEnabled: root.clickable
 
 			onClicked: {
+				if (!root.checkWriteAccessLevel() || !root.clickable) {
+					return
+				}
 				if (root.updateDataOnClick) {
 					if (root.dataItem.uid.length > 0) {
 						// Note: this logic only holds so long as checkable is false so we can use
@@ -62,7 +64,6 @@ ListItem {
 						// (dataItem might not be valid until the first write so we can't simply use
 						// the comparison of dataItem.value === valueFalse) and forget invertSourceValue).
 						// Note that an malformed uid will result in it being empty when inspected.
-						root._updatingValue = true
 						if (root.invertSourceValue) {
 							root.dataItem.setValue(checked ? valueTrue : valueFalse)
 						} else {
@@ -72,17 +73,10 @@ ListItem {
 				}
 				root.clicked()
 			}
-			onToggled: root.toggled()
 		}
 	]
 
 	VeQuickItem {
 		id: dataItem
-		onValueChanged: {
-			if (root._updatingValue) {
-				root.toggled()
-			}
-			root._updatingValue = false
-		}
 	}
 }

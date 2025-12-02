@@ -19,6 +19,7 @@ RowLayout {
 	Label {
 		id: nameLabel
 		Layout.fillWidth: true
+		Layout.alignment: Qt.AlignBaseline
 		bottomPadding: Theme.geometry_switchableoutput_label_margin
 		rightPadding: Theme.geometry_switchableoutput_label_margin
 		text: root.switchableOutput.formattedName
@@ -27,8 +28,10 @@ RowLayout {
 
 	Label {
 		id: secondaryTitleLabel
+		Layout.alignment: Qt.AlignBaseline
 		bottomPadding: Theme.geometry_switchableoutput_label_margin
 		text: root.secondaryTitle
+		font.pixelSize: Theme.font_size_body2
 	}
 
 	Rectangle {
@@ -73,6 +76,7 @@ RowLayout {
 						return Theme.color_green
 					}
 				case VenusOS.SwitchableOutput_Status_Output_Fault:
+				case VenusOS.SwitchableOutput_Status_Bypassed:
 					return Theme.color_orange
 				case VenusOS.SwitchableOutput_Status_Disabled:
 				case VenusOS.SwitchableOutput_Status_TripLowVoltage:

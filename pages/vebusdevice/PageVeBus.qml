@@ -25,7 +25,7 @@ DevicePage {
 
 		ListText {
 			text: CommonWords.state
-			secondaryText: Global.system.systemStateToText(Global.system.state)
+			secondaryText: Global.system.systemStateToText(state.value)
 		}
 
 		PrimaryListLabel {
@@ -44,6 +44,7 @@ DevicePage {
 			//% "Press to update"
 			secondaryText: qsTrId("vebus_device_press_to_update")
 			preferredVisible: mk3firmware.visible
+			writeAccessLevel: VenusOS.User_AccessType_User
 			onClicked: {
 				//% "Updating the MK3, values will reappear after the update is complete"
 				Global.showToastNotification(VenusOS.Notification_Info, qsTrId("vebus_device_updating_the_mk3"), 10000)
@@ -191,12 +192,12 @@ DevicePage {
 		ListNavigation {
 			//% "Microgrid parameters"
 			text: qsTrId("vebus_device_page_microgrid_parameters")
-			visible: mode.valid && mode.value === VenusOS.MicrogridMode_HybridDroop // TODO: show this for non - hybrid droop modes when platform support is added
+			preferredVisible: mode.valid
 			onClicked: Global.pageManager.pushPage("/pages/vebusdevice/PageMicrogrid.qml", { "bindPrefix": root.bindPrefix })
 
 			VeQuickItem {
 				id: mode
-				uid: root.bindPrefix + "/Mode"
+				uid: root.bindPrefix + "/MicroGrid/Mode"
 			}
 		}
 
@@ -342,5 +343,10 @@ DevicePage {
 	VeQuickItem {
 		id: firmwareVersion
 		uid: root.bindPrefix + "/FirmwareVersion"
+	}
+
+	VeQuickItem {
+		id: state
+		uid: root.bindPrefix + "/State"
 	}
 }

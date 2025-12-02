@@ -21,9 +21,36 @@
     "geometry_barGauge_phaseLabel_leftPadding": 3,
     "geometry_barGauge_phaseLabel_rightPadding": 3,
 
+    "geometry_button_touch_size": 48,
     "geometry_button_spacing": 7,
     "geometry_button_radius": 8,
     "geometry_button_border_width": 2,
+
+    "geometry_closeButton_rightMargin": 8,
+
+    "geometry_colorWheel_width": 340,
+    "geometry_colorWheel_height": 280,
+    "geometry_colorWheel_selector_width": 216,
+    "geometry_colorWheel_selector_height": 216,
+    "geometry_colorWheel_selector_centre_cutout_diameter": 136,
+    "geometry_colorWheel_selector_swatch_diameter": 84,
+    "geometry_colorWheel_selector_swatch_borderWidth": 2,
+    "geometry_colorWheel_selector_ring_width": 38,
+    "geometry_colorWheel_slider_width": 65,
+    "geometry_colorWheel_slider_height": 216,
+    "geometry_colorWheel_slider_arc_radius": 149,
+    "geometry_colorWheel_slider_strokeWidth": 34,
+    "geometry_colorWheel_slider_borderWidth": 2,
+    "geometry_colorWheel_selector_halo_diameter": 34,
+    "geometry_colorWheel_slider_halo_diameter": 26,
+    "geometry_colorWheel_lowerSlider_width": 177,
+    "geometry_colorWheel_lowerSlider_height": 51,
+    "geometry_colorWheel_lowerSlider_padding": 5,
+    "geometry_colorWheel_component_overlap": 7,
+
+    "geometry_emptyPageItem_column_spacing": 10,
+    "geometry_emptyPageItem_title_bottomMargin": 40,
+    "geometry_emptyPageItem_primaryLabel_topPadding": 10,
 
     "geometry_focus_highlight_corner_size": 14,
     "geometry_focus_highlight_border_size": 4,
@@ -85,10 +112,10 @@
     "geometry_temperatureSlider_dot_padding": 4,
     "geometry_temperatureSlider_indicator_size": 4,
     "geometry_temperatureSlider_decorator_vertical_padding": 6,
-    "geometry_temperatureSlider_popup_padding": 20,
-    "geometry_temperatureSlider_popup_width": 90,
-    "geometry_temperatureSlider_popup_height": 53,
+    "geometry_temperatureSlider_popup_padding": 8,
     "geometry_temperatureSlider_popup_radius": 8,
+    "geometry_temperatureSlider_popup_shadow_horizontalOffset": 2,
+    "geometry_temperatureSlider_popup_shadow_verticalOffset": 6,
 
     "geometry_spinBox_indicator_minimumWidth": 64,
     "geometry_spinBox_indicator_maximumWidth": 136,
@@ -134,9 +161,7 @@
     "geometry_navigationBar_notification_counter_width_one_digit": 20,
     "geometry_navigationBar_notification_counter_width_two_digits": 30,
 
-    "geometry_notificationsPage_delegate_marker_topMargin" : 12,
-    "geometry_notificationsPage_delegate_marker_width" : 8,
-    "geometry_notificationsPage_delegate_marker_radius" : 4,
+    "geometry_notificationsPage_delegate_unacknowledged_border_width": 2,
     "geometry_notificationsPage_snoozeButton_height" : 36,
 
     "geometry_textField_height": 40,
@@ -170,7 +195,6 @@
     "geometry_modalDialog_content_horizontalMargin": 64,
 
     "geometry_modalWarningDialog_alarmIcon_topMargin": 44,
-    "geometry_modalWarningDialog_alarmIcon_width": 48,
     "geometry_modalWarningDialog_title_spacing": 16,
     "geometry_modalWarningDialog_title_horizontalMargin": "geometry_page_content_horizontalMargin",
     "geometry_modalWarningDialog_description_spacing": 12,
@@ -256,17 +280,31 @@
     "geometry_card_button_height": 48,
 
     "geometry_switchableoutput_topMargin": 24,
+    "geometry_switchableoutput_spacing": 16,
     "geometry_switchableoutput_row_count": 5,
-    "geometry_switchableoutput_label_margin": 4,
+    "geometry_switchableoutput_label_margin": 2,
     "geometry_switchableoutput_control_height": 48,
     "geometry_switchableoutput_status_verticalPadding": 2,
     "geometry_switchableoutput_status_horizontalPadding": 8,
     "geometry_switchableoutput_status_radius": 10,
     "geometry_switchableoutput_status_minimum_width": 48,
 
+    "geometry_colorWheelDialog_width": 754,
+    "geometry_colorWheelDialog_height": 448,
+    "geometry_colorWheelDialog_horizontalMargin_left": 66,
+    "geometry_colorWheelDialog_horizontalMargin_right": 24,
+    "geometry_colorWheelDialog_mode_button_verticalMargin": 18,
+    "geometry_colorWheelDialog_mode_button_width": 90,
+    "geometry_colorWheelDialog_mode_button_height": 40,
+    "geometry_colorWheelDialog_mode_button_radius": 32,
+    "geometry_colorWheelDialog_preset_trash_spacing": 16,
+    "geometry_colorWheelDialog_preset_trash_width": 48,
+    "geometry_colorWheelDialog_preset_button_width": 56,
+    "geometry_colorWheelDialog_preset_button_radius": 6,
+    "geometry_colorWheelDialog_preset_button_spacing": 40,
+
     "geometry_generatorIconLabel_icon_width": 24,
     "geometry_generatorIconLabel_icon_margin": 4,
-
 
     "geometry_overviewPage_widget_radius": 8,
     "geometry_overviewPage_widget_border_width": 2,
@@ -404,8 +442,6 @@
 
     "geometry_solarDailyHistoryDialog_minimumHeight": 222,
     "geometry_solarDailyHistoryDialog_header_height": 50,
-    "geometry_solarDailyHistoryDialog_closeButton_icon_size": 24,
-    "geometry_solarDailyHistoryDialog_closeButton_icon_margins": 12,
     "geometry_solarDailyHistoryDialog_arrow_icon_size": 72,
     "geometry_solarDailyHistoryDialog_arrow_horizontalMargin": 18,
 

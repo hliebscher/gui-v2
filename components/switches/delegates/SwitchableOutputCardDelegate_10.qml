@@ -18,7 +18,7 @@ Item {
 	Keys.onPressed: (event) => {
 		switch (event.key) {
 		case Qt.Key_Space:
-			bilgePumpState.writeValue(bilgePumpState.backendValue === 1 ? 0 : 1)
+			bilgePumpState.writeValue(bilgePumpState.dataItem.value === 1 ? 0 : 1)
 			event.accepted = true
 		}
 	}
@@ -26,6 +26,8 @@ Item {
 	SwitchableOutputCardDelegateHeader {
 		id: header
 		anchors {
+			top: parent.top
+			topMargin: Theme.geometry_switches_header_topMargin
 			left: parent.left
 			leftMargin: Theme.geometry_controlCard_button_margins
 			right: parent.right
@@ -54,8 +56,9 @@ Item {
 
 		SettingSync {
 			id: bilgePumpState
-			backendValue: root.switchableOutput.state
-			onUpdateToBackend: (value) => { root.switchableOutput.setState(value) }
+			dataItem: VeQuickItem {
+				uid: root.switchableOutput.uid + "/State"
+			}
 		}
 	}
 }

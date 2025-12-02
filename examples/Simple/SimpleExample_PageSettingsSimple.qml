@@ -11,8 +11,8 @@ Page {
 
 		model: VisibleItemModel {
 			ListSwitch {
-				text: "Switch"
 				property bool value
+				text: "Switch"
 				checked: value
 				onClicked: {
 					value = !checked

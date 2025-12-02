@@ -17,6 +17,7 @@ FocusScope {
 	readonly property bool cardsActive: cardsLoader.viewActive
 	readonly property Page currentPage: cardsActive && cardsLoader.status === Loader.Ready ? cardsLoader.item
 			: pageStack.currentPage || swipeView?.currentItem
+	readonly property alias cardsLoader: cardsLoader
 
 	property alias navBarAnimatingOut: animateNavBarOut.running
 
@@ -68,8 +69,8 @@ FocusScope {
 		switch (event.key) {
 		case Qt.Key_Escape:
 			// Escape = close current Toast notification, or close Control/Switch pane.
-			if (Global.notificationLayer.deleteLastNotification()) {
-				// Nothing else to do
+			if (ToastModel.count) {
+				ToastModel.removeFirst()
 			} else {
 				if (cardsActive) {
 					cardsLoader.hide()
@@ -169,7 +170,7 @@ FocusScope {
 			onLoaded: {
 				// If there is an active alarm, the notifications page will be shown; otherwise, show the
 				// application start page, if set.
-				if (Global.notifications?.alarms.hasActive) {
+				if (NotificationModel.activeAlarms > 0) {
 					root.goToNotificationsPage()
 				} else {
 					pageManager.goToStartPage()
@@ -252,44 +253,6 @@ FocusScope {
 
 		focus: opened
 		KeyNavigation.up: statusBar
-	}
-
-	CardViewLoader {
-		id: cardsLoader
-
-		function show(viewComponent) {
-			sourceComponent = viewComponent
-			viewActive = true
-		}
-
-		function hide() {
-			viewActive = false
-		}
-
-		anchors {
-			top: statusBar.bottom
-			left: parent.left
-			right: parent.right
-			bottom: parent.bottom
-		}
-		statusBarItem: statusBar
-		navBarItem: navBar
-		swipeViewItem : swipeView
-		backgroundColor: root.backgroundColor
-		animationEnabled: root.allowPageAnimations
-		focus: viewActive
-
-		KeyNavigation.up: statusBar
-
-		Component {
-			id: controlCardsComponent
-			ControlCardsPage {}
-		}
-
-		Component {
-			id: auxCardsComponent
-			AuxCardsPage {}
-		}
 	}
 
 	SequentialAnimation {
@@ -435,6 +398,46 @@ FocusScope {
 		KeyNavigation.down: cardsLoader.enabled ? cardsLoader
 				: pageStack.opened ? pageStack
 				: swipeViewAndNavBarContainer
+	}
+
+	// Put the CardsViewLoader z-order above the StatusBar, so that when the card view's y position
+	// changes, it is not obscured by the StatusBar.
+	CardViewLoader {
+		id: cardsLoader
+
+		function show(viewComponent) {
+			sourceComponent = viewComponent
+			viewActive = true
+		}
+
+		function hide() {
+			viewActive = false
+		}
+
+		anchors {
+			left: parent.left
+			right: parent.right
+		}
+		y: statusBar.y + statusBar.height
+		height: swipeViewAndNavBarContainer.height - statusBar.height
+		statusBarItem: statusBar
+		navBarItem: navBar
+		swipeViewItem : swipeView
+		backgroundColor: root.backgroundColor
+		animationEnabled: root.allowPageAnimations
+		focus: viewActive
+
+		KeyNavigation.up: statusBar
+
+		Component {
+			id: controlCardsComponent
+			ControlCardsPage {}
+		}
+
+		Component {
+			id: auxCardsComponent
+			AuxCardsPage {}
+		}
 	}
 
 	GlobalKeyNavigationHighlight {

@@ -1,7 +1,7 @@
 import QtQuick
 import Victron.VenusOS
 
-CustomDevicePageEntry {
+DeviceListPluginPage {
 	id: root
 
 	title: "Customisation With Errors" // No translation, just as an example.

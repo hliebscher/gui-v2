@@ -72,6 +72,8 @@ BaseListItem {
 				? VenusOS.ListItem_BottomContentSizeMode_Compact
 				: VenusOS.ListItem_BottomContentSizeMode_Stretch
 
+	property int toast
+
 	property bool interactive: false
 	property bool pressAreaEnabled: true
 	readonly property bool clickable: enabled && interactive && userHasWriteAccess
@@ -83,13 +85,22 @@ BaseListItem {
 	function activate() {
 		if (root.interactive) {
 			// Issue #1964: userHasWriteAccess is ignored for ListNavigation
-			if (root instanceof ListNavigation || root.userHasWriteAccess) {
+			if (root.__is_venus_gui_list_navigation__ === true || checkWriteAccessLevel()) {
 				root.clicked()
-			} else {
-				pressArea.toast?.close(true) // close immediately
-				//% "Setting locked for access level"
-				pressArea.toast = Global.notificationLayer.showToastNotification(VenusOS.Notification_Info, qsTrId("listItem_no_access"))
 			}
+		}
+	}
+
+	function checkWriteAccessLevel() {
+		if (root.userHasWriteAccess) {
+			return true
+		} else {
+			if (root.toast) {
+				ToastModel.requestClose(pressArea.toast)
+			}
+			//% "Setting locked for access level"
+			root.toast = Global.showToastNotification(VenusOS.Notification_Info, qsTrId("listItem_no_access"))
+			return false
 		}
 	}
 
@@ -102,8 +113,28 @@ BaseListItem {
 	Keys.onSpacePressed: activate()
 	Keys.enabled: Global.keyNavigationEnabled
 
+
+	Connections {
+		target: ToastModel
+		function onDismissRequested(modelId) {
+			if (root.toast === modelId) {
+				root.toast = 0
+			}
+		}
+		function onCloseRequested(modelId) {
+			if (root.toast === modelId) {
+				root.toast = 0
+			}
+		}
+		function onRemoved(modelId) {
+			if (root.toast === modelId) {
+				root.toast = 0
+			}
+		}
+	}
+
 	// Show thin colored indicator on left side if settings is only visible to super/service users
-	// Also show the indicator for list items from customisations.
+	// Also show the indicator for list items from gui plugins.
 	Rectangle {
 		visible: color.a > 0.0
 		height: parent.height
@@ -116,21 +147,11 @@ BaseListItem {
 
 	ListPressArea {
 		id: pressArea
-
-		property ToastNotification toast: null
-
 		anchors.fill: parent
 		radius: root.background.radius
 		enabled: root.pressAreaEnabled
 		effectEnabled: root.interactive
 		onClicked: root.activate()
-
-		Connections {
-			target: pressArea.toast
-			function onDismissed() {
-				pressArea.toast = null
-			}
-		}
 	}
 
 	GridLayout {

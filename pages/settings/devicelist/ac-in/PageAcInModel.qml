@@ -11,6 +11,7 @@ VisibleItemModel {
 
 	property string bindPrefix
 	property int productId
+	property Page deviceSettingsPage
 
 	readonly property VeQuickItem nrOfPhases: VeQuickItem {
 		uid: root.bindPrefix + "/NrOfPhases"
@@ -168,12 +169,24 @@ VisibleItemModel {
 				: qsTrId("ac-in-modeldefault_phase_sequence_ordered")
 	}
 
+	ListRadioButtonGroup {
+		//% "Phase Setting"
+		text: qsTrId("ac-in-modeldefault_phase_setting")
+		dataItem.uid: root.bindPrefix + "/PhaseSetting"
+		preferredVisible: dataItem.valid
+		optionModel: [
+			{ display: CommonWords.ac_phase_x.arg(1), value: 1 },
+			{ display: CommonWords.ac_phase_x.arg(2), value: 2 },
+			{ display: CommonWords.ac_phase_x.arg(3), value: 3 },
+		]
+	}
+
 	ListNavigation {
 		text: CommonWords.setup
 		preferredVisible: allowedRoles.valid
 		onClicked: {
 			Global.pageManager.pushPage("/pages/settings/devicelist/ac-in/PageAcInSetup.qml",
-					{ "title": text, "bindPrefix": root.bindPrefix })
+					{ "title": text, "bindPrefix": root.bindPrefix, "deviceSettingsPage": root.deviceSettingsPage })
 		}
 
 		VeQuickItem {

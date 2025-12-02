@@ -11,9 +11,9 @@ Page {
 
 		model: VisibleItemModel {
 			ListSwitch {
+				property bool value
 				//% "Battery"
 				text: qsTrId("simpletrexample_pagesettingssimple_text_battery")
-				property bool value
 				checked: value
 				onClicked: {
 					value = !checked

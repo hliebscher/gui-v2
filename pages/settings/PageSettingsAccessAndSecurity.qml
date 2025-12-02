@@ -97,7 +97,8 @@ Page {
 			ListRadioButtonGroup {
 				id: securityProfile
 
-				property int pendingProfile
+				defaultIndex: 0 // i.e. VenusOS.Security_Profile_Secured
+				property int pendingProfile: VenusOS.Security_Profile_Secured
 				property string pendingPassword
 
 				function setProfileAndPassword(profile, password, popPage) {
@@ -173,7 +174,10 @@ Page {
 				}
 
 				optionFooter: SettingsColumn {
-					preferredVisible: securityProfile.currentIndex !== VenusOS.Security_Profile_Unsecured
+					// Set visible instead of preferredVisible, since this is a footer and not a
+					// list item, so preferredVisible would have no effect.
+					visible: securityProfile.currentIndex === VenusOS.Security_Profile_Secured
+							|| securityProfile.currentIndex === VenusOS.Security_Profile_Weak
 					width: parent.width
 					topPadding: spacing
 
@@ -224,6 +228,9 @@ Page {
 							case VenusOS.Security_Profile_Unsecured:
 								//% "Select 'Unsecured' profile?"
 								return qsTrId("settings_security_profile_unsecured_title")
+							default:
+								console.warn("Invalid pending profile")
+								return ""
 							}
 						}
 
@@ -238,6 +245,9 @@ Page {
 							case VenusOS.Security_Profile_Unsecured:
 								//% "• Local network services do not need a password\n• Unencrypted access to local websites is enabled as well (HTTP/HTTPS)"
 								return  qsTrId("settings_security_profile_unsecured_description")
+							default:
+								console.warn("Invalid pending profile")
+								return ""
 							}
 						}
 						onAccepted: {
@@ -260,7 +270,7 @@ Page {
 				showAccessLevel: VenusOS.User_AccessType_SuperUser
 				//% "Enter password"
 				placeholderText: qsTrId("settings_root_enter_password")
-				textField.echoMode: TextInput.Password
+				echoMode: TextInput.Password
 				saveInput: function() {
 					if (secondaryText.length < 8) {
 						//% "Password needs to be at least 8 characters long"

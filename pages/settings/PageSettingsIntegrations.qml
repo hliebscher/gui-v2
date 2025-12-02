@@ -54,14 +54,7 @@ Page {
 			ListNavigation {
 				//% "Shelly Devices"
 				text: qsTrId("pagesettingsintegrations_shelly_devices")
-				preferredVisible: shellyDevices.rowCount > 0
 				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsShelly.qml", {"title": text})
-
-				VeQItemTableModel {
-					id: shellyDevices
-					uids: [ BackendConnection.serviceUidForType("shelly") + "/Devices" ]
-					flags: VeQItemTableModel.AddChildren | VeQItemTableModel.AddNonLeaves | VeQItemTableModel.DontAddItem
-				}
 			}
 
 			ListNavigation {
@@ -128,7 +121,7 @@ Page {
 
 				VeQuickItem {
 					id: relay0
-					uid: Global.system.serviceUid + "/Relay/0/State"
+					uid: Global.system.serviceUid + "/SwitchableOutput/0/Name"
 				}
 			}
 
@@ -284,40 +277,53 @@ Page {
 			}
 
 			SettingsListHeader {
-				id: customisationsHeader
+				id: guiPluginsHeader
 
-				//% "UI Customisations"
-				text: qsTrId("pagesettingsintegrations_ui_customisations")
-				preferredVisible: Customisations.customisations.length > 0
+				//% "UI Plugins"
+				text: qsTrId("pagesettingsintegrations_ui_plugins")
+				preferredVisible: GuiPluginLoader.plugins.length > 0
 			}
 
 			SettingsColumn {
-				id: customisationsColumn
 				width: parent ? parent.width : 0
-				preferredVisible: customisationsHeader.preferredVisible
+				preferredVisible: guiPluginsHeader.preferredVisible
 				Repeater {
-					model: CustomisationsModel { id: customisationsModel }
+					model: GuiPluginModel { id: pluginModel }
 					delegate: SettingsListNavigation {
 						id: switchNavigationItem
 
 						required property string name
 						required property color color
 						required property var integrations
-						readonly property var customisationSettingsPageIntegration: {
+						readonly property var pluginSettingsPageIntegration: {
 							if (integrations !== null && integrations.length > 0) {
 								for (let i = 0; i < integrations.length; ++i) {
-									if (integrations[i].type === Customisations.CustomisationSettingsPage) {
-										return integrations[i];
+									if (integrations[i].type === GuiPluginLoader.PluginSettingsPage) {
+										return integrations[i]
 									}
 								}
 							}
 							return null
 						}
+						readonly property bool hasDeviceListIntegration: {
+							if (integrations !== null && integrations.length > 0) {
+								for (let i = 0; i < integrations.length; ++i) {
+									if (integrations[i].type === GuiPluginLoader.DeviceListSettingsPage) {
+										return true
+									}
+								}
+							}
+							return false
+						}
 
 						text: switchNavigationItem.name
+						secondaryText: hasDeviceListIntegration
+							   //% "Integrates with the device list"
+							? qsTrId("pagesettingsintegrations_uiplugin_integrates_with_devicelist")
+							: ""
 						indicatorColor: switchNavigationItem.color
-						pageSource: switchNavigationItem.customisationSettingsPageIntegration?.url ?? ""
-						interactive: switchNavigationItem.customisationSettingsPageIntegration !== null
+						pageSource: switchNavigationItem.pluginSettingsPageIntegration?.url ?? ""
+						interactive: switchNavigationItem.pluginSettingsPageIntegration !== null
 					}
 				}
 			}

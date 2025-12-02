@@ -132,6 +132,9 @@ QtObject {
 	//% "Closed"
 	readonly property string closed_status: qsTrId("common_words_closed_status")
 
+	//% "Color"
+	readonly property string color: qsTrId("common_words_color")
+
 	//% "Connected"
 	readonly property string connected: qsTrId("common_words_connected");
 
@@ -212,6 +215,10 @@ QtObject {
 
 	//% "Generator"
 	readonly property string generator: qsTrId("common_words_generator")
+
+	//: %1 = name of the device
+	//% "If it was recently disconnected, go to Settings → Devices → %1 → Advanced, and select 'Redetect VE.Bus system'."
+	readonly property string go_to_redetect_system: qsTrId("common_words_go_to_redetect_system")
 
 	//% "Grid"
 	readonly property string grid: qsTrId("common_words_grid")
@@ -348,12 +355,6 @@ QtObject {
 	//% "No"
 	readonly property string no: qsTrId("common_words_no")
 
-	//% "This setting is disabled when a Digital Multi Control is connected."
-	readonly property string noAdjustableByDmc: qsTrId("common_words_setting_disabled_when_dmc_connected")
-
-	//% "This setting is disabled when a VE.Bus BMS is connected."
-	readonly property string noAdjustableByBms: qsTrId("common_words_setting_disabled_when_bms_connected")
-
 	//% "No error"
 	readonly property string no_error: qsTrId("common_words_no_error")
 
@@ -369,6 +370,10 @@ QtObject {
 
 	//% "Not connected"
 	readonly property string not_connected: qsTrId("common_words_not_connected")
+
+	//: The 'Notifications' page
+	//% "Notifications"
+	readonly property string notifications: qsTrId("common_words_notifications")
 
 	//% "Off"
 	readonly property string off: qsTrId("common_words_off");
@@ -469,6 +474,9 @@ QtObject {
 	//% "Signal strength"
 	readonly property string signal_strength: qsTrId("common_words_signal_strength");
 
+	//% "Silence alarm"
+	readonly property string silence_alarm: qsTrId("common_words_silence_alarm")
+
 	//: State of charge (as a percentage). %1 = the SOC value
 	//% "SOC %1"
 	readonly property string soc_with_prefix: qsTrId("common_words_soc")
@@ -546,6 +554,18 @@ QtObject {
 	//: Status = "unknown"
 	//% "Unknown"
 	readonly property string unknown_status: qsTrId("common_words_unknown_status")
+
+	//% "Value must be greater than start value"
+	readonly property string value_must_be_greater_than_start_value: qsTrId("common_words_value_must_be_greater_than_start_value")
+
+	//% "Value must be greater than stop value"
+	readonly property string value_must_be_greater_than_stop_value: qsTrId("common_words_value_must_be_greater_than_stop_value")
+
+	//% "Value must be lower than start value"
+	readonly property string value_must_be_lower_than_start_value: qsTrId("common_words_value_must_be_lower_than_start_value")
+
+	//% "Value must be lower than stop value"
+	readonly property string value_must_be_lower_than_stop_value: qsTrId("common_words_value_must_be_lower_than_stop_value")
 
 	//% "VE.Bus Error"
 	readonly property string vebus_error: qsTrId("common_words_vebus_error")
@@ -628,5 +648,27 @@ QtObject {
 			  //% "4th last error"
 			: errorIndex === 3 ? qsTrId("common_words_4th_last_error")
 			: ""
+	}
+
+	function notAdjustableDueToBms(serviceType, deviceName) {
+		//% "This setting is disabled when a VE.Bus BMS is connected."
+		const s = qsTrId("common_words_setting_disabled_when_bms_connected")
+		return serviceType === "vebus"
+			  //: %1 = the translated text of common_words_setting_disabled_when_bms_connected
+			  //: %2 = the translated text of common_words_go_to_redetect_system
+			  //% "%1 %2"
+			? qsTrId("common_words_bms_disabled_go_to_redetect").arg(s).arg(go_to_redetect_system.arg(deviceName))
+			: s
+	}
+
+	function notAdjustableDueToDmc(serviceType, deviceName) {
+		//% "This setting is disabled when a Digital Multi Control is connected."
+		const s = qsTrId("common_words_setting_disabled_when_dmc_connected")
+		return serviceType === "vebus"
+			  //: %1 = the translated text of common_words_setting_disabled_when_dmc_connected
+			  //: %2 = the translated text of common_words_go_to_redetect_system
+			  //% "%1 %2"
+			? qsTrId("common_words_dmc_disabled_go_to_redetect").arg(s).arg(go_to_redetect_system.arg(deviceName))
+			: s
 	}
 }

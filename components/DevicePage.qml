@@ -82,22 +82,23 @@ Page {
 			}
 
 			SettingsColumn {
-				id: customisationsColumn
+				id: guiPluginIntegrationsColumn
 				width: parent ? parent.width : 0
-				preferredVisible: root.device._productId.valid && integrationsModel.count
+				preferredVisible: root.device.productId > 0 && integrationsModel.count
 
 				Repeater {
-					model: CustomisationIntegrationsModel {
+					model: GuiPluginIntegrationModel {
 						id: integrationsModel
-						type: Customisations.DeviceListSettingsPage
-						productId: root.device._productId.valid ? Utils.toHexFormat(root.device._productId.value) : ""
+						type: GuiPluginLoader.DeviceListSettingsPage
+						productId: root.device.productId > 0 ? Utils.toHexFormat(root.device.productId) : ""
 					}
 					delegate: SettingsListNavigation {
-						required property string customisationName
+						required property string pluginName
+						required property color pluginColor
 						required property string url
 						required property string title
 						text: qsTrId(title)
-						indicatorColor: Customisations.customisation(customisationName).color
+						indicatorColor: pluginColor
 						pageSource: url
 						pageProperties: ({"device": root.device})
 					}

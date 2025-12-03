@@ -216,21 +216,50 @@ FocusScope {
 	}
 
 
-	Item {
-		id: centerItem
+	Row {
+		id: centerRow
 		anchors.centerIn: parent
 		visible: !breadcrumbs.visible
-		width: logoImage.width + clockLabel.width + 8
-		height: Math.max(logoImage.height, clockLabel.height)
+		spacing: 8
 
-		Image {
-			id: logoImage
-			source: "images/victronenergy.svg"
-			width: 28
-			height: 28
-			fillMode: Image.PreserveAspectFit
+		Item {
+			width: 28; height: 28
 			anchors.verticalCenter: parent.verticalCenter
-			anchors.left: parent.left
+
+			Image {
+				id: logoImage
+				source: "images/victronenergy.svg"
+				width: 28
+				height: 28
+				fillMode: Image.PreserveAspectFit
+				anchors.fill: parent
+				onStatusChanged: {
+					if (logoImage.status === Image.Error) {
+						logoImage.visible = false;
+						logoPlaceholder.visible = true;
+					} else {
+						logoImage.visible = true;
+						logoPlaceholder.visible = false;
+					}
+				}
+			}
+			Rectangle {
+				id: logoPlaceholder
+				width: 28
+				height: 28
+				color: "red"
+				radius: 6
+				anchors.fill: parent
+				visible: false
+				border.color: "black"
+				border.width: 2
+				Text {
+					anchors.centerIn: parent
+					text: "Logo"
+					color: "white"
+					font.pixelSize: 10
+				}
+			}
 		}
 
 		Label {
@@ -238,15 +267,13 @@ FocusScope {
 			font.pixelSize: 22
 			text: ClockTime.currentTime
 			anchors.verticalCenter: parent.verticalCenter
-			anchors.left: logoImage.right
-			anchors.leftMargin: 8
 		}
 	}
 
 	Row {
 		id: connectivityRow
 		anchors.verticalCenter: parent.verticalCenter
-		anchors.left: centerItem.right
+		anchors.left: centerRow.right
 		anchors.leftMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 		visible: !breadcrumbs.visible
 		spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin

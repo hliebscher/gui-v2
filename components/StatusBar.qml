@@ -216,19 +216,11 @@ FocusScope {
 	}
 
 	Label {
-		StatusBarButton {
-			id: logoButton
-			icon.source: "qrc:/images/victronenergy.svg"
-			enabled: false
-			anchors.verticalCenter: parent.verticalCenter
-		}
-		Label {
-			id: clockLabel
-			anchors.centerIn: parent
-			font.pixelSize: 22
-			visible: !breadcrumbs.visible
-			text: ClockTime.currentTime
-		}
+		id: clockLabel
+		anchors.centerIn: parent
+		font.pixelSize: 22
+		visible: !breadcrumbs.visible
+		text: ClockTime.currentTime
 	}
 
 	Row {

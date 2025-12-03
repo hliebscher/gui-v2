@@ -215,12 +215,28 @@ FocusScope {
 		}
 	}
 
-	Label {
-		id: clockLabel
+
+	Row {
+		id: centerRow
 		anchors.centerIn: parent
-		font.pixelSize: 22
 		visible: !breadcrumbs.visible
-		text: ClockTime.currentTime
+		spacing: 8
+
+		Image {
+			id: logoImage
+			source: "images/victronenergy.svg"
+			width: 28
+			height: 28
+			fillMode: Image.PreserveAspectFit
+			anchors.verticalCenter: parent.verticalCenter
+		}
+
+		Label {
+			id: clockLabel
+			font.pixelSize: 22
+			text: ClockTime.currentTime
+			anchors.verticalCenter: parent.verticalCenter
+		}
 	}
 
 	Row {

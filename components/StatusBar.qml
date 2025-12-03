@@ -216,11 +216,12 @@ FocusScope {
 	}
 
 
-	Row {
-		id: centerRow
+	Item {
+		id: centerItem
 		anchors.centerIn: parent
 		visible: !breadcrumbs.visible
-		spacing: 8
+		width: logoImage.width + clockLabel.width + 8
+		height: Math.max(logoImage.height, clockLabel.height)
 
 		Image {
 			id: logoImage
@@ -229,6 +230,7 @@ FocusScope {
 			height: 28
 			fillMode: Image.PreserveAspectFit
 			anchors.verticalCenter: parent.verticalCenter
+			anchors.left: parent.left
 		}
 
 		Label {
@@ -236,17 +238,16 @@ FocusScope {
 			font.pixelSize: 22
 			text: ClockTime.currentTime
 			anchors.verticalCenter: parent.verticalCenter
+			anchors.left: logoImage.right
+			anchors.leftMargin: 8
 		}
 	}
 
 	Row {
 		id: connectivityRow
-
-		anchors {
-			left: clockLabel.right
-			leftMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
-			verticalCenter: parent.verticalCenter
-		}
+		anchors.verticalCenter: parent.verticalCenter
+		anchors.left: centerItem.right
+		anchors.leftMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 		visible: !breadcrumbs.visible
 		spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 
@@ -271,7 +272,6 @@ FocusScope {
 
 			VeQuickItem {
 				id: signalStrength
-
 				uid: Global.venusPlatform.serviceUid +  "/Network/Wifi/SignalStrength"
 			}
 		}

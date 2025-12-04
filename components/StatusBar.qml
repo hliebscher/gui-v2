@@ -209,56 +209,61 @@ FocusScope {
 		}
 	}
 
-	Label {
-		id: clockLabel
-		anchors.centerIn: parent
-		font.pixelSize: 22
-		visible: !breadcrumbs.visible
-		text: ClockTime.currentTime
-	}
-
 	Row {
-		id: connectivityRow
-
-		anchors {
-			left: clockLabel.right
-			leftMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
-			verticalCenter: parent.verticalCenter
-		}
+		id: timeDateConnectivityRow
+		anchors.centerIn: parent
+		spacing: 8
 		visible: !breadcrumbs.visible
-		spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 
-		CP.IconImage {
+		Label {
+			id: clockLabel
+			font.pixelSize: 22
+			text: ClockTime.currentTime
+		}
+		Label {
+			id: dateLabel
+			font.pixelSize: 22
+			color: Theme.color_font_secondary
+			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
+		}
+		Row {
+			id: connectivityRow
+			spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 			anchors.verticalCenter: parent.verticalCenter
-			color: Theme.color_font_primary
-			source: {
-				if (!signalStrength.valid) {
-					return ""
-				} else if (signalStrength.value > 75) {
-					return "qrc:/images/icon_WiFi_4_32.svg"
-				} else if (signalStrength.value > 50) {
-					return "qrc:/images/icon_WiFi_3_32.svg"
-				} else if (signalStrength.value > 25) {
-					return "qrc:/images/icon_WiFi_2_32.svg"
-				} else if (signalStrength.value > 0) {
-					return "qrc:/images/icon_WiFi_1_32.svg"
-				} else {
-					return "qrc:/images/icon_WiFi_noconnection_32.svg"
+
+			CP.IconImage {
+				anchors.verticalCenter: parent.verticalCenter
+				color: Theme.color_font_primary
+				source: {
+					if (!signalStrength.valid) {
+						return ""
+					} else if (signalStrength.value > 75) {
+						return "qrc:/images/icon_WiFi_4_32.svg"
+					} else if (signalStrength.value > 50) {
+						return "qrc:/images/icon_WiFi_3_32.svg"
+					} else if (signalStrength.value > 25) {
+						return "qrc:/images/icon_WiFi_2_32.svg"
+					} else if (signalStrength.value > 0) {
+						return "qrc:/images/icon_WiFi_1_32.svg"
+					} else {
+						return "qrc:/images/icon_WiFi_noconnection_32.svg"
+					}
+				}
+
+				VeQuickItem {
+					id: signalStrength
+					uid: Global.venusPlatform.serviceUid +  "/Network/Wifi/SignalStrength"
 				}
 			}
 
-			VeQuickItem {
-				id: signalStrength
-
-				uid: Global.venusPlatform.serviceUid +  "/Network/Wifi/SignalStrength"
+			GsmStatusIcon {
+				height: Theme.geometry_status_bar_gsmModem_icon_height
+				anchors.verticalCenter: parent.verticalCenter
 			}
 		}
-
-		GsmStatusIcon {
-			height: Theme.geometry_status_bar_gsmModem_icon_height
-			anchors.verticalCenter: parent.verticalCenter
-		}
 	}
+
+	
 
 	StatusBarButton {
 		id: notificationButton

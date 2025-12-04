@@ -10604,22 +10604,22 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     </message>
     <message id="page_switchable_output_show_local">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="125"/>
-      <source>Only local</source>
+      <source>Nur local</source>
       <translation/>
     </message>
     <message id="page_switchable_output_show_vrm">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="127"/>
-      <source>Only on VRM</source>
+      <source>Nur im VRM</source>
       <translation/>
     </message>
     <message id="controlcards_empty_desc1">
       <location filename="../../pages/ControlCardsPage.qml" line="147"/>
-      <source>No compatible devices found</source>
+      <source>Keine kompatiblen Geräte gefunden</source>
       <translation/>
     </message>
     <message id="controlcards_empty_desc2">
       <location filename="../../pages/ControlCardsPage.qml" line="149"/>
-      <source>Connect devices that support this function</source>
+      <source>Verbinden Sie Geräte, die diese Funktion unterstützen</source>
       <translation/>
     </message>
     <message id="settings_radio_button_group_unknown">

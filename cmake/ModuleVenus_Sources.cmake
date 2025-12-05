@@ -687,6 +687,10 @@ endif()
 
 set(VictronVenusOS_RESOURCES
     fonts/Roboto-Regular.ttf
+    images/vm_32_mini.svg
+    images/vm_red_32.svg
+    images/vm_32.svg
+    images/victronenergy.svg
     images/acloads.svg
     images/alternator.svg
     images/breadcrumb_lhs.svg

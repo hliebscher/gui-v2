@@ -215,12 +215,11 @@ FocusScope {
 		spacing: 8
 		visible: !breadcrumbs.visible
 
-		CP.IconImage {
-			id: victronLogo
-			//color: Theme.color_font_primary
-			//anchors.verticalCenter: parent.verticalCenter
-			source: "qrc:/images/vm_32_mini.svg"
-		}
+		Image {
+    		source: "qrc:/images/victronenergy.svg"
+    		height: 32
+    		fillMode: Image.PreserveAspectFit
+	}
 		Label {
 			id: clockLabel
 			font.pixelSize: 22

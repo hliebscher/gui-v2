@@ -5269,7 +5269,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="tank_type_black_water">
       <location filename="../../src/enums.cpp" line="510"/>
       <source>Black water</source>
-      <translation>Schwarzwasser</translation>
+      <translation>WC Abwasser</translation>
     </message>
     <message id="tank_type_gasoline">
       <location filename="../../src/enums.cpp" line="513"/>

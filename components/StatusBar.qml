@@ -131,6 +131,27 @@ FocusScope {
 		enabled: root.leftButton !== VenusOS.StatusBar_LeftButton_ControlsActive
 		KeyNavigation.right: breadcrumbs
 
+		contentItem: Item {
+			Image {
+				id: auxIcon
+				source: auxButton.icon.source
+				width: auxButton.width * 0.6
+				height: auxButton.height * 0.6
+				fillMode: Image.PreserveAspectFit
+				visible: !!auxButton.icon.source
+				anchors.verticalCenter: parent.verticalCenter
+			}
+			Label {
+				text: "Schalter"
+				color: Theme.color_ok
+				visible: auxCardsOpened
+				font.pixelSize: Theme.font_size_body
+				anchors.verticalCenter: parent.verticalCenter
+				anchors.left: auxIcon.right
+				anchors.leftMargin: 4
+			}
+		}
+
 		onClicked: root.auxButtonClicked()
 	}
 
@@ -228,7 +249,7 @@ FocusScope {
 		Label {
 			id: dateLabel
 			font.pixelSize: 22
-			color: Theme.color_font_secondary
+			//color: Theme.color_font_secondary // optional: use secondary font color for date
 			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
 		}
 		Row {

@@ -7563,7 +7563,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../pages/solar/PageSolarCharger.qml" line="102"/>
       <source>PV</source>
       <extracomment>PV power for solar charger</extracomment>
-      <translation type="unfinished">PV</translation>
+      <translation type="unfinished">PV Power für Solarlader</translation>
     </message>
     <message id="solarcharger_total_power">
       <location filename="../../pages/solar/PageSolarCharger.qml" line="127"/>
@@ -7574,13 +7574,13 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../pages/solar/PageSolarCharger.qml" line="211"/>
       <source>Total yield</source>
       <extracomment>Solar charger total yield</extracomment>
-      <translation type="unfinished">Gesamtertrag</translation>
+      <translation type="unfinished">Solar Gesamtertrag</translation>
     </message>
     <message id="solarcharger_system_yield">
       <location filename="../../pages/solar/PageSolarCharger.qml" line="220"/>
       <source>System yield</source>
       <extracomment>Solar charger system yield</extracomment>
-      <translation type="unfinished">Systemertrag</translation>
+      <translation type="unfinished">Solar Systemertrag</translation>
     </message>
     <message id="settings_multirs_total_yield">
       <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="63"/>
@@ -7737,7 +7737,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../components/CommonWords.qml" line="258"/>
       <source>Inactive</source>
       <extracomment>Status is 'inactive'</extracomment>
-      <translation type="unfinished">Inaktiv</translation>
+      <translation type="unfinished">Status ist Inaktiv</translation>
     </message>
     <message id="common_words_input_current_limit">
       <location filename="../../components/CommonWords.qml" line="261"/>
@@ -7753,12 +7753,12 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../components/CommonWords.qml" line="268"/>
       <source>Eco</source>
       <extracomment>Inverter 'Eco' mode</extracomment>
-      <translation>Eco</translation>
+      <translation>Inverter Eco Mode</translation>
     </message>
     <message id="common_words_manual_stop">
       <location filename="../../components/CommonWords.qml" line="308"/>
       <source>Manual stop</source>
-      <translation>Manuelles Anhalten</translation>
+      <translation>Manuelles Angehalten</translation>
     </message>
     <message id="common_words_maximum_current">
       <location filename="../../components/CommonWords.qml" line="318"/>
@@ -7780,12 +7780,12 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="433"/>
       <source>No</source>
-      <translation type="unfinished">Nein</translation>
+      <translation type="unfinished">Kein</translation>
     </message>
     <message id="common_words_none_option">
       <location filename="../../components/CommonWords.qml" line="364"/>
       <source>None</source>
-      <translation type="unfinished">Keines</translation>
+      <translation type="unfinished">Keine(s)</translation>
     </message>
     <message id="common_words_none_errors">
       <location filename="../../components/CommonWords.qml" line="368"/>
@@ -7863,7 +7863,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../components/CommonWords.qml" line="516"/>
       <source>Startup (%1)</source>
       <extracomment>Status = "start up". %1 = the startup status number</extracomment>
-      <translation type="unfinished">Inbetriebnahme (%1)</translation>
+      <translation type="unfinished">Status = Inbetriebnahme (%1)</translation>
     </message>
     <message id="common_words_stopped">
       <location filename="../../components/CommonWords.qml" line="525"/>
@@ -7893,7 +7893,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../components/CommonWords.qml" line="596"/>
       <source>Yield Today</source>
       <extracomment>Solar charger yield for today, in kWh (kilowatt hours)</extracomment>
-      <translation>Heutiger Ertrag</translation>
+      <translation>Heutiger Solar Ertrag</translation>
     </message>
     <message id="common_words_format_error">
       <location filename="../../components/CommonWords.qml" line="636"/>
@@ -7969,7 +7969,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="acInputs_evcharger">
       <location filename="../../data/AcInputs.qml" line="48"/>
       <source>EV Charger</source>
-      <translation>EVCS</translation>
+      <translation>EV Lader </translation>
     </message>
     <message id="acInputs_heat_pump">
       <location filename="../../data/AcInputs.qml" line="50"/>
@@ -8024,7 +8024,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="switchable_output_slave_of">
       <location filename="../../src/enums.cpp" line="405"/>
       <source>Slave of %1</source>
-      <translation>Sklave von %1</translation>
+      <translation>Untergerät von %1</translation>
     </message>
     <message id="switchable_output_not_running">
       <location filename="../../src/enums.cpp" line="448"/>
@@ -8039,7 +8039,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="switchable_output_powered">
       <location filename="../../src/enums.cpp" line="455"/>
       <source>Powered</source>
-      <translation>Angetrieben</translation>
+      <translation>Angeschaltet</translation>
     </message>
     <message id="switchable_output_tripped">
       <location filename="../../src/enums.cpp" line="458"/>
@@ -8064,12 +8064,12 @@ Möchtest Sie fortfahren?</translation>
     <message id="ess_state_keep_batteries_charged_button">
       <location filename="../../data/Ess.qml" line="22"/>
       <source>Keep charged</source>
-      <translation>Batterien geladen halten</translation>
+      <translation>Batterien aufgeladen halten</translation>
     </message>
     <message id="evchargers_status_welded_contacts_error">
       <location filename="../../data/EvChargers.qml" line="76"/>
       <source>Welded contacts test error (shorted)</source>
-      <translation>Testfehler geschweißte Kontakte (Kurzschluss)</translation>
+      <translation>Testfehler verschweißte Kontakte (Kurzschluss)</translation>
     </message>
     <message id="evchargers_status_switching_to_three_phase">
       <location filename="../../data/EvChargers.qml" line="100"/>
@@ -8084,7 +8084,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="evchargers_status_stop_charging">
       <location filename="../../data/EvChargers.qml" line="106"/>
       <source>Stop charging</source>
-      <translation>Laden stoppen</translation>
+      <translation>Laden anhalten</translation>
     </message>
     <message id="evchargers_status_reserved">
       <location filename="../../data/EvChargers.qml" line="110"/>
@@ -8504,12 +8504,12 @@ Beachten Sie, dass dieses Menü nur Carlo Gavazzi Zähler anzeigt, die über RS4
     <message id="modbus_add_unit_invalid">
       <location filename="../../pages/settings/PageSettingsModbusAddDevice.qml" line="61"/>
       <source>%1 is not a valid unit number. Use a number between 1-247.</source>
-      <translation type="unfinished">%1 ist keine gültige Einheitennummer. Verwenden Sie eine Zahl zwischen 1-247.</translation>
+      <translation type="unfinished">%1 ist keine gültige Geräte ID. Verwenden Sie eine Zahl zwischen 1-247.</translation>
     </message>
     <message id="page_settings_fronius_unitid_invalid">
       <location filename="../../pages/settings/PageSettingsFroniusAddLocation.qml" line="35"/>
       <source>%1 is not a valid unit number. Use a number between 1-247.</source>
-      <translation>%1 ist keine gültige Einheitennummer. Verwenden Sie eine Zahl zwischen 1-247.</translation>
+      <translation>%1 ist keine gültige Geräte ID. Verwenden Sie eine Zahl zwischen 1-247.</translation>
     </message>
     <message id="settings_modbus_no_devices_saved">
       <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="39"/>
@@ -8570,12 +8570,12 @@ Beachten Sie, dass dieses Menü nur Carlo Gavazzi Zähler anzeigt, die über RS4
     <message id="pagesettingssupportstate_installed_image_type">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="363"/>
       <source>Installed image type</source>
-      <translation>Typ des installierten Bildes</translation>
+      <translation>Typ der installierten Software</translation>
     </message>
     <message id="pagesettingssupportstate_user_ssh_key_present">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="257"/>
       <source>User SSH key present</source>
-      <translation>SSH-Schlüssel des Benutzers vorhanden</translation>
+      <translation>SSH-Schlüssel des Benutzers ist vorhanden</translation>
     </message>
     <message id="pagesettingssupportstate_modifications">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="263"/>
@@ -10600,27 +10600,27 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="ac-in-modeldefault_phase_setting">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="174"/>
       <source>Phase Setting</source>
-      <translation/>
+      <translation>Phasen Einstellung</translation>
     </message>
     <message id="page_switchable_output_show_local">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="125"/>
       <source>Only local</source>
-      <translation/>
+      <translation>Nur local</translation> 
     </message>
     <message id="page_switchable_output_show_vrm">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="127"/>
       <source>Only on VRM</source>
-      <translation/>
+      <translation>Nur im VRM</translation>
     </message>
     <message id="controlcards_empty_desc1">
       <location filename="../../pages/ControlCardsPage.qml" line="147"/>
       <source>No compatible devices found</source>
-      <translation/>
+      <translation>Keine kompatiblen Geräte gefunden</translation>
     </message>
     <message id="controlcards_empty_desc2">
       <location filename="../../pages/ControlCardsPage.qml" line="149"/>
       <source>Connect devices that support this function</source>
-      <translation/>
+      <translation>Verbinden Sie Geräte, die diese Funktion unterstützen</translation>
     </message>
     <message id="settings_radio_button_group_unknown">
       <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>

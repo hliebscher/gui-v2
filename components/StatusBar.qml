@@ -215,24 +215,20 @@ FocusScope {
 		spacing: 8
 		visible: !breadcrumbs.visible
 
-		StatusBarButton {
-			id: victronButton
-			icon.source: "qrc:/images/victronenergy_32.svg"
-			enabled: true
-			icon.width: 32
-			icon.height: 32
-			onClicked: {
-				// Hier kann später eine eigene Seite aufgerufen werden
-			}
+		CP.IconImage {
+			id: victronLogo
+			//color: Theme.color_font_primary
+			//anchors.verticalCenter: parent.verticalCenter
+			source: "qrc:/images/vm_32_mini.svg"
 		}
 		Label {
 			id: clockLabel
-			font.pixelSize: 32
+			font.pixelSize: 22
 			text: ClockTime.currentTime
 		}
 		Label {
 			id: dateLabel
-			font.pixelSize: 32
+			font.pixelSize: 22
 			color: Theme.color_font_secondary
 			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
 		}

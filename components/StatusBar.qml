@@ -215,6 +215,14 @@ FocusScope {
 		spacing: 8
 		visible: !breadcrumbs.visible
 
+		StatusBarButton {
+			id: victronButton
+			icon.source: "qrc:/images/icon_smartswitch_on_32.svg"
+			enabled: true
+			onClicked: {
+				// Hier kann später eine eigene Seite aufgerufen werden
+			}
+		}
 		Label {
 			id: clockLabel
 			font.pixelSize: 22

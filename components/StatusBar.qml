@@ -142,7 +142,7 @@ FocusScope {
 				anchors.verticalCenter: parent.verticalCenter
 			}
 			Label {
-				text: "Schalter"
+				text: CommonWords.switch_mode
 				color: Theme.color_ok
 				visible: auxCardsOpened
 				font.pixelSize: Theme.font_size_body

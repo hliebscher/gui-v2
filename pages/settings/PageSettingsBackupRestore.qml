@@ -92,7 +92,7 @@ Page {
 				return qsTrId("tank_backup_result_restore_successful")
 			case VenusOS.Tank_Backup_Restore_Notification_Delete_Successful:
 				//% "Tank settings backup deleted successful"
-				return qsTrId("tank_backup_result_file delete_successful")
+				return qsTrId("tank_backup_result_file_delete_successful")
 			case VenusOS.Tank_Backup_Restore_Notification_Create_USB_Failed:
 				//% "Create USB failed"
 				return qsTrId("tank_backup_result_create_usb_failed")

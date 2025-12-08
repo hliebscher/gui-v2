@@ -1038,7 +1038,7 @@
     <message id="settings_update_feed">
       <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="35"/>
       <source>Update feed</source>
-      <translation>Update feed</translation>
+      <translation>Update Version</translation>
     </message>
     <message id="common_words_image_type">
       <location filename="../../components/CommonWords.qml" line="258"/>
@@ -1055,7 +1055,7 @@
       <location filename="../../components/CommonWords.qml" line="211"/>
       <source>Large</source>
       <extracomment>The firmware type for large images</extracomment>
-      <translation>Large</translation>
+      <translation>Groß</translation>
     </message>
     <message id="settings_firmware_check_for_updates">
       <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="68"/>
@@ -1203,12 +1203,12 @@
     <message id="settings_fronius_rescan_title">
       <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="36"/>
       <source>Rescan for IP addresses?</source>
-      <translation>Nach IP-Adressen scannen?</translation>
+      <translation>Nach IP-Adressen suchen?</translation>
     </message>
     <message id="settings_fronius_rescan">
       <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="38"/>
       <source>Rescan</source>
-      <translation>Erneut Scannen</translation>
+      <translation>Erneut suchen</translation>
     </message>
     <message id="settings_remote_support">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="299"/>
@@ -1243,17 +1243,17 @@
     <message id="page_settings_demo_ess">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="266"/>
       <source>ESS demo</source>
-      <translation>ESS Demo</translation>
+      <translation>ESS Demo-Modus</translation>
     </message>
     <message id="page_settings_demo_1">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="268"/>
       <source>Boat/Motorhome demo 1</source>
-      <translation>Boot/Wohnmobil Demo 1</translation>
+      <translation>Boot/Wohnmobil Demo-Modus 1</translation>
     </message>
     <message id="page_settings_demo_2">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="270"/>
       <source>Boat/Motorhome demo 2</source>
-      <translation>Boot/Wohnmobil Demo 2</translation>
+      <translation>Boot/Wohnmobil Demo-Modus 2</translation>
     </message>
     <message id="settings_demo_mode_caption">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="274"/>
@@ -1278,12 +1278,12 @@
     <message id="page_settings_generator_cool_down_time">
       <location filename="../../pages/settings/PageSettingsGenerator.qml" line="70"/>
       <source>Cool-down time</source>
-      <translation>Abklingzeit</translation>
+      <translation>Abkühlzeit</translation>
     </message>
     <message id="page_settings_generator_detect_generator_at_ac_input">
       <location filename="../../pages/settings/PageSettingsGenerator.qml" line="94"/>
       <source>Detect generator at AC input</source>
-      <translation>Generator an AC-Eingang ermitteln</translation>
+      <translation>Generator am AC-Eingang ermitteln</translation>
     </message>
     <message id="page_settings_generator_detect_generator_not_set">
       <location filename="../../pages/settings/PageSettingsGenerator.qml" line="102"/>
@@ -1298,12 +1298,12 @@
     <message id="page_settings_generator_quiet_hours_start_time">
       <location filename="../../pages/settings/PageSettingsGenerator.qml" line="162"/>
       <source>Quiet hours start time</source>
-      <translation>Beginn Ruhezeit</translation>
+      <translation>Beginn der Ruhezeit</translation>
     </message>
     <message id="page_settings_generator_quiet_hours_end_time">
       <location filename="../../pages/settings/PageSettingsGenerator.qml" line="170"/>
       <source>Quiet hours end time</source>
-      <translation>Ende Ruhezeiten</translation>
+      <translation>Ende der Ruhezeit</translation>
     </message>
     <message id="page_settings_generator_run_time_and_service">
       <location filename="../../components/PageGensetModel.qml" line="333"/>
@@ -1314,7 +1314,7 @@
     <message id="page_settings_run_time_and_service_reset_daily_run_time_counters">
       <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="90"/>
       <source>Reset daily run time counters</source>
-      <translation>Tägl. Laufzeitzähler zurücksetzen</translation>
+      <translation>tägl. Laufzeitzähler zurücksetzen</translation>
     </message>
     <message id="page_settings_run_time_and_service_runtime_counter_reset">
       <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="100"/>
@@ -1324,7 +1324,7 @@
     <message id="page_settings_run_time_and_service_runtime_counter_cant_reset_while_running">
       <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="103"/>
       <source>It is not possible to modify the counters while the generator is running</source>
-      <translation>Es ist nicht möglich, die Zähler zu modifizieren, während der Generator läuft</translation>
+      <translation>Es ist nicht möglich, die Zähler zu ändern, während der Generator läuft</translation>
     </message>
     <message id="page_settings_generator_service_interval">
       <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="160"/>
@@ -1345,41 +1345,41 @@
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="69"/>
       <source>Format</source>
       <extracomment>Format of reported GPS data</extracomment>
-      <translation>Format</translation>
+      <translation>Format der GPS-Daten</translation>
     </message>
     <message id="settings_gps_format_dms_example">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="75"/>
       <source>52° 20' 41.6" N, 5° 13' 12.3" E</source>
       <extracomment>Example of GPS data in the 'Degrees, Minutes, Seconds' format</extracomment>
-      <translation>52° 20' 41,6" N, 5° 13' 12,3" E</translation>
+      <translation>52° 20' 41,6" N, 5° 13' 12,3" O</translation>
     </message>
     <message id="settings_gps_format_dd_example">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="78"/>
       <source>52.34489, 5.22008</source>
       <extracomment>Example of GPS data in the 'Decimal Degrees' format</extracomment>
-      <translation>52,34489, 5,22008</translation>
+      <translation>52.34489, 5.22008</translation>
     </message>
     <message id="settings_gps_format_dm_example">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="81"/>
       <source>52° 20.693 N, 5° 13.205 E</source>
       <extracomment>Example of GPS data in the 'Degrees Minutes' format</extracomment>
-      <translation>52° 20,693 N, 5° 13,205 E</translation>
+      <translation>52° 20.693 N, 5° 13.205 O</translation>
     </message>
     <message id="settings_gps_speed_unit">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="88"/>
       <source>Speed Unit</source>
       <extracomment>Speed unit for reported GPS data</extracomment>
-      <translation>Geschwindigkeitseinheit</translation>
+      <translation>Geschwindigkeitseinheit der GPS-Daten</translation>
     </message>
     <message id="settings_gps_format_mph">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="97"/>
       <source>Miles per hour</source>
-      <translation>Meilen pro Stunde</translation>
+      <translation>Meilen pro Stunde (mph)</translation>
     </message>
     <message id="settings_gps_format_kt">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
       <source>Knots</source>
-      <translation>Knoten</translation>
+      <translation>Knoten (kt)</translation>
     </message>
     <message id="page_settings_gsm_internet">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="51"/>
@@ -1406,42 +1406,42 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="page_settings_gsm_sim_status">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="99"/>
       <source>Sim status</source>
-      <translation>SIM-Status</translation>
+      <translation>Status der SIM-Karte</translation>
     </message>
     <message id="page_settings_gsm_sim_not_inserted">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="104"/>
       <source>SIM not inserted</source>
-      <translation>SIM ist nicht eingelegt</translation>
+      <translation>SIM-Karte ist nicht eingelegt</translation>
     </message>
     <message id="page_settings_gsm_pin_required">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="107"/>
       <source>PIN required</source>
-      <translation>PIN erforderlich</translation>
+      <translation>PIN-Code erforderlich</translation>
     </message>
     <message id="page_settings_gsm_puk_required">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="110"/>
       <source>PUK required</source>
-      <translation>PUK erforderlich</translation>
+      <translation>PUK-Code erforderlich</translation>
     </message>
     <message id="page_settings_gsm_sim_failure">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="113"/>
       <source>SIM failure</source>
-      <translation>SIM-Fehler</translation>
+      <translation>SIM-Karte defekt</translation>
     </message>
     <message id="page_settings_gsm_sim_busy">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="116"/>
       <source>SIM busy</source>
-      <translation>SIM beschäftigt</translation>
+      <translation>SIM-Karte ist beschäftigt</translation>
     </message>
     <message id="page_settings_gsm_wrong_sim">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="119"/>
       <source>Wrong SIM</source>
-      <translation>Falsche SIM</translation>
+      <translation>Falsche SIM-Karte</translation>
     </message>
     <message id="page_settings_gsm_wrong_pin">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="122"/>
       <source>Wrong PIN</source>
-      <translation>Falscher Pin</translation>
+      <translation>Falscher PIN-Code</translation>
     </message>
     <message id="page_settings_gsm_ok">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="125"/>
@@ -1472,7 +1472,7 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="page_settings_gsm_connecting">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="176"/>
       <source>Connecting</source>
-      <translation type="unfinished">Es wird verbunden</translation>
+      <translation type="unfinished">Verbindung wird hergestellt</translation>
     </message>
     <message id="page_settings_gsm_connected">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="179"/>
@@ -1482,7 +1482,7 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="page_settings_gsm_pin">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="191"/>
       <source>PIN</source>
-      <translation>PIN</translation>
+      <translation>PIN-Code</translation>
     </message>
     <message id="page_settings_gsm_apn">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="207"/>
@@ -1492,12 +1492,12 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="page_settings_gsm_default">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="209"/>
       <source>Default</source>
-      <translation>Standard</translation>
+      <translation>Standardwert</translation>
     </message>
     <message id="page_settings_gsm_use_default_apn">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="223"/>
       <source>Use default APN</source>
-      <translation>Verwenden Sie den Standard-APN</translation>
+      <translation>Standard-APN verwenden</translation>
     </message>
     <message id="page_settings_gsm_apn_name">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="235"/>
@@ -1517,7 +1517,7 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="page_settings_gsm_imei">
       <location filename="../../pages/settings/PageSettingsGsm.qml" line="279"/>
       <source>IMEI</source>
-      <translation>IMEI</translation>
+      <translation>IMEI-Nummer</translation>
     </message>
     <message id="settings_ess_battery_life_self_consumption">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="15"/>
@@ -1532,12 +1532,12 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="settings_ess_grid_metering">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="58"/>
       <source>Grid metering</source>
-      <translation>Netz-Messung</translation>
+      <translation>Netz-Zähler</translation>
     </message>
     <message id="settings_ess_external_meter">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="63"/>
       <source>External meter</source>
-      <translation>Externer Zähler</translation>
+      <translation>Externer Netz-Zähler</translation>
     </message>
     <message id="settings_ess_inverter_charger">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="65"/>
@@ -1547,12 +1547,12 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="settings_ess_multiphase_regulation">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="84"/>
       <source>Multiphase regulation</source>
-      <translation>Mehrphasige Regulierung</translation>
+      <translation>Mehrphasige Regelung</translation>
     </message>
     <message id="settings_ess_phase_compensation">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="91"/>
       <source>Total of all phases</source>
-      <translation>Summe aller Phasen</translation>
+      <translation>Gesamtsumme aller Phasen</translation>
     </message>
     <message id="settings_ess_individual_phase">
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="93"/>
@@ -6884,12 +6884,12 @@ Möchtest Sie fortfahren?</translation>
     <message id="settings_firmware_official_release">
       <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="39"/>
       <source>Official release</source>
-      <translation>Offizielles Release</translation>
+      <translation>Offizielle Version</translation>
     </message>
     <message id="settings_firmware_beta_release">
       <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="41"/>
       <source>Beta release</source>
-      <translation>Beta-Version</translation>
+      <translation>Beta Version</translation>
     </message>
     <message id="settings_firmware_testing_internal">
       <location filename="../../pages/settings/PageSettingsFirmwareOnline.qml" line="44"/>

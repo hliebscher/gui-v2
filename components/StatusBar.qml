@@ -130,25 +130,25 @@ FocusScope {
 				: "qrc:/images/icon_smartswitch_off_32.svg"
 		enabled: root.leftButton !== VenusOS.StatusBar_LeftButton_ControlsActive
 		KeyNavigation.right: breadcrumbs
-
 		contentItem: Item {
-			Image {
-				id: auxIcon
-				source: auxButton.icon.source
-				width: auxButton.width * 0.6
-				height: auxButton.height * 0.6
-				fillMode: Image.PreserveAspectFit
-				visible: !!auxButton.icon.source
-				anchors.verticalCenter: parent.verticalCenter
-			}
-			Label {
-				text: CommonWords.switch_mode
-				color: Theme.color_ok
-				visible: auxCardsOpened
-				font.pixelSize: Theme.font_size_body
-				anchors.verticalCenter: parent.verticalCenter
-				anchors.left: auxIcon.right
-				anchors.leftMargin: 4
+		
+	Image {
+			id: auxIcon
+			source: auxButton.icon.source
+  			width: auxButton.width * 0.6
+			height: auxButton.height * 0.6
+			fillMode: Image.PreserveAspectFit
+			visible: !!auxButton.icon.source
+			anchors.verticalCenter: parent.verticalCenter
+		}
+		Label {
+			text: CommonWords.switch_mode
+			color: Theme.color_ok
+			visible: auxCardsOpened
+			font.pixelSize: Theme.font_size_body
+			anchors.verticalCenter: parent.verticalCenter
+			anchors.left: auxIcon.right
+			anchors.leftMargin: 4
 			}
 		}
 
@@ -237,10 +237,10 @@ FocusScope {
 		visible: !breadcrumbs.visible
 
 		Image {
-    		source: "qrc:/images/victronenergy.svg"
-    		height: 32
-    		fillMode: Image.PreserveAspectFit
-	}
+			source: "qrc:/images/victronenergy.svg"
+			height: 32
+			fillMode: Image.PreserveAspectFit
+		}
 		Label {
 			id: clockLabel
 			font.pixelSize: 22
@@ -254,6 +254,7 @@ FocusScope {
 		}
 		Row {
 			id: connectivityRow
+
 			spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 			anchors.verticalCenter: parent.verticalCenter
 
@@ -289,13 +290,11 @@ FocusScope {
 		}
 	}
 
-	
-
 	StatusBarButton {
 		id: notificationButton
 
 		anchors {
-			left: connectivityRow.right
+			left: timeDateConnectivityRow.right
 			leftMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 			verticalCenter: parent.verticalCenter
 		}

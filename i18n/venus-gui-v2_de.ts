@@ -5864,7 +5864,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="acInputs_shore">
       <location filename="../../data/AcInputs.qml" line="116"/>
       <source>Shore</source>
-      <translation>Land</translation>
+      <translation>Landstrom</translation>
     </message>
     <message id="acInputs_current_limit_grid">
       <location filename="../../data/AcInputs.qml" line="142"/>
@@ -12385,7 +12385,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
       <location filename="../../pages/settings/tz/TzAmericaData.qml" line="12"/>
       <location filename="../../pages/settings/tz/TzAmericaData.qml" line="13"/>
       <source>Greenland Standard Time</source>
-      <translation>Greenland Standard Time</translation>
+      <translation>Grönland Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAmericaData.qml" line="14"/>
@@ -12395,7 +12395,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAmericaData.qml" line="15"/>
       <source>Newfoundland Standard Time</source>
-      <translation>Newfoundland Standard Time</translation>
+      <translation>Neufundland Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAmericaData.qml" line="16"/>
@@ -12649,7 +12649,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="25"/>
       <source>Central Asia Standard Time</source>
-      <translation>Central Asia Standard Time</translation>
+      <translation>Zentralasiatische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="26"/>
@@ -12659,27 +12659,27 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="27"/>
       <source>Nepal Standard Time</source>
-      <translation>Nepal Standard Time</translation>
+      <translation>Nepalesische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="28"/>
       <source>Sri Lanka Standard Time</source>
-      <translation>Sri Lanka Standard Time</translation>
+      <translation>Sri Lankische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="29"/>
       <source>India Standard Time</source>
-      <translation>India Standard Time</translation>
+      <translation>Indische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="30"/>
       <source>West Asia Standard Time</source>
-      <translation>West Asia Standard Time</translation>
+      <translation>Westasiatische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="31"/>
       <source>Pakistan Standard Time</source>
-      <translation>Pakistan Standard Time</translation>
+      <translation>Pakistanische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="32"/>
@@ -12694,17 +12694,17 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="34"/>
       <source>Caucasus Standard Time</source>
-      <translation>Caucasus Standard Time</translation>
+      <translation>Kaukasus Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="35"/>
       <source>Azerbaijan Standard Time</source>
-      <translation>Azerbaijan Standard Time</translation>
+      <translation>Aserbaidschanische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="36"/>
       <source>Arabian Standard Time</source>
-      <translation>Arabian Standard Time</translation>
+      <translation>Arabische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="37"/>
@@ -12714,17 +12714,17 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="38"/>
       <source>Iran Standard Time</source>
-      <translation>Iran Standard Time</translation>
+      <translation>Iranische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="39"/>
       <source>Arabic Standard Time</source>
-      <translation>Arabic Standard Time</translation>
+      <translation>Arabische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="40"/>
       <source>Arab Standard Time</source>
-      <translation>Arab Standard Time</translation>
+      <translation>Arabische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="41"/>
@@ -12739,12 +12739,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="43"/>
       <source>Jordan Standard Time</source>
-      <translation>Jordan Standard Time</translation>
+      <translation>Jordanische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAsiaData.qml" line="44"/>
       <source>Israel Standard Time</source>
-      <translation>Israel Standard Time</translation>
+      <translation>Israelische Standardzeit</translation>
     </message>
   </context>
   <context>
@@ -12752,7 +12752,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAtlanticData.qml" line="10"/>
       <source>Greenwich Standard Time</source>
-      <translation>Greenwich Standard Time</translation>
+      <translation>Greenwichische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAtlanticData.qml" line="11"/>
@@ -12762,12 +12762,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAtlanticData.qml" line="12"/>
       <source>Cape Verde Standard Time</source>
-      <translation>Cape Verde Standard Time</translation>
+      <translation>Kapverdische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAtlanticData.qml" line="13"/>
       <source>Mid-Atlantic Standard Time</source>
-      <translation>Mid-Atlantic Standard Time</translation>
+      <translation>Mittelatlantische Standardzeit</translation>
     </message>
   </context>
   <context>
@@ -12775,7 +12775,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAustraliaData.qml" line="10"/>
       <source>Tasmania Standard Time</source>
-      <translation>Tasmania Standard Time</translation>
+      <translation>Tasmanische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAustraliaData.qml" line="11"/>
@@ -12790,12 +12790,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzAustraliaData.qml" line="13"/>
       <source>Cen. Australia Standard Time</source>
-      <translation>Cen. Australia Standard Time</translation>
+      <translation>Zentralaustralische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAustraliaData.qml" line="14"/>
       <source>AUS Central Standard Time</source>
-      <translation>AUS Central Standard Time</translation>
+      <translation>AUS Zentralstandardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzAustraliaData.qml" line="15"/>
@@ -12938,7 +12938,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzEtcData.qml" line="36"/>
       <source>UTC</source>
-      <translation>UTC</translation>
+      <translation>UTC-Zeit</translation>
     </message>
   </context>
   <context>
@@ -12946,7 +12946,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="10"/>
       <source>GMT Standard Time</source>
-      <translation>GMT Standard Time</translation>
+      <translation>GMT Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="11"/>
@@ -12966,22 +12966,22 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="14"/>
       <source>W. Europe Standard Time</source>
-      <translation>W. Europe Standard Time</translation>
+      <translation>Westeuropäische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="15"/>
       <source>E. Europe Standard Time</source>
-      <translation>E. Europe Standard Time</translation>
+      <translation>Ostereuropäische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="16"/>
       <source>FLE Standard Time</source>
-      <translation>FLE Standard Time</translation>
+      <translation>FLE Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="17"/>
       <source>GTB Standard Time</source>
-      <translation>GTB Standard Time</translation>
+      <translation>GTB Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="18"/>
@@ -12991,7 +12991,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="19"/>
       <source>Russian Standard Time</source>
-      <translation>Russian Standard Time</translation>
+      <translation>Russische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzEuropeData.qml" line="20"/>
@@ -13004,7 +13004,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzIndianData.qml" line="10"/>
       <source>Mauritius Standard Time</source>
-      <translation>Mauritius Standard Time</translation>
+      <translation>Mauritius Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzIndianData.qml" line="11"/>
@@ -13017,32 +13017,32 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="10"/>
       <source>Tonga Standard Time</source>
-      <translation>Tonga Standard Time</translation>
+      <translation>Tonga Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="11"/>
       <source>Fiji Standard Time</source>
-      <translation>Fiji Standard Time</translation>
+      <translation>Fidschi Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="12"/>
       <source>New Zealand Standard Time</source>
-      <translation>New Zealand Standard Time</translation>
+      <translation>Neuseeland Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="13"/>
       <source>Central Pacific Standard Time</source>
-      <translation>Central Pacific Standard Time</translation>
+      <translation>Zentralpazifische Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="14"/>
       <source>West Pacific Standard Time</source>
-      <translation>West Pacific Standard Time</translation>
+      <translation>Westlicher Pazifik Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="15"/>
       <source>Samoa Standard Time</source>
-      <translation>Samoa Standard Time</translation>
+      <translation>Samoa Standardzeit</translation>
     </message>
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="16"/>
@@ -13052,7 +13052,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message>
       <location filename="../../pages/settings/tz/TzPacificData.qml" line="17"/>
       <source>Easter Island Standard Time</source>
-      <translation>Osterinsel Normalzeit</translation>
+      <translation>Osterinsel Standardzeit</translation>
     </message>
   </context>
   <context>

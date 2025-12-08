@@ -237,9 +237,10 @@ FocusScope {
 		visible: !breadcrumbs.visible
 
 		Label {
-			id: clockLabel
+			id: dateLabel
 			font.pixelSize: 22
-			text: ClockTime.currentTime
+			//color: Theme.color_font_secondary // optional: use secondary font color for date
+			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
 		}
 		Image {
 			source: "qrc:/images/victronenergy.svg"
@@ -247,10 +248,9 @@ FocusScope {
 			fillMode: Image.PreserveAspectFit
 		}
 		Label {
-			id: dateLabel
+			id: clockLabel
 			font.pixelSize: 22
-			//color: Theme.color_font_secondary // optional: use secondary font color for date
-			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
+			text: ClockTime.currentTime
 		}
 		Row {
 			id: connectivityRow

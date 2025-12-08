@@ -230,33 +230,53 @@ FocusScope {
 		}
 	}
 
-	Row {
+	Item {
 		id: timeDateConnectivityRow
-		anchors.centerIn: parent
-		spacing: 8
+		anchors.fill: parent
 		visible: !breadcrumbs.visible
+
+		Image {
+			id: victronLogo
+			source: "qrc:/images/victronenergy.svg"
+			height: 32
+			fillMode: Image.PreserveAspectFit
+			anchors {
+				horizontalCenter: parent.horizontalCenter
+				verticalCenter: parent.verticalCenter
+			}
+		}
 
 		Label {
 			id: dateLabel
 			font.pixelSize: 22
 			//color: Theme.color_font_secondary // optional: use secondary font color for date
 			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
+			anchors {
+				right: victronLogo.left
+				rightMargin: 16
+				verticalCenter: parent.verticalCenter
+			}
 		}
-		Image {
-			source: "qrc:/images/victronenergy.svg"
-			height: 32
-			fillMode: Image.PreserveAspectFit
-		}
+
 		Label {
 			id: clockLabel
 			font.pixelSize: 22
 			text: ClockTime.currentTime
+			anchors {
+				left: victronLogo.right
+				leftMargin: 16
+				verticalCenter: parent.verticalCenter
+			}
 		}
 		Row {
 			id: connectivityRow
 
 			spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin
-			anchors.verticalCenter: parent.verticalCenter
+			anchors {
+				left: clockLabel.right
+				leftMargin: 8
+				verticalCenter: parent.verticalCenter
+			}
 
 			CP.IconImage {
 				anchors.verticalCenter: parent.verticalCenter

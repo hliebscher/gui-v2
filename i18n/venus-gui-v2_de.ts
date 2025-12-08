@@ -4740,7 +4740,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../src/enums.cpp" line="26"/>
       <source>Idle</source>
       <extracomment>Battery mode</extracomment>
-      <translation>Idle</translation>
+      <translation>Ruhezustand</translation>
     </message>
     <message id="scheduled_charge_inactive">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="70"/>
@@ -4761,7 +4761,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../components/CommonWords.qml" line="288"/>
       <source>Low level alarm</source>
       <extracomment>An alarm that triggers when the level is too low</extracomment>
-      <translation>Alarm Niedriger Füllstand</translation>
+      <translation>Alarm der bei niedrigem Füllstand ausgelöst wird</translation>
     </message>
     <message id="common_words_low_starter_battery_voltage">
       <location filename="../../components/CommonWords.qml" line="291"/>
@@ -4771,7 +4771,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="common_words_low_state_of_charge">
       <location filename="../../components/CommonWords.qml" line="294"/>
       <source>Low state-of-charge</source>
-      <translation>Niedriger Ladezustand</translation>
+      <translation>Niedriger Ladezustand SOC</translation>
     </message>
     <message id="common_words_low_temperature">
       <location filename="../../components/CommonWords.qml" line="297"/>
@@ -4781,7 +4781,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="common_words_low_voltage_alarms">
       <location filename="../../components/CommonWords.qml" line="300"/>
       <source>Low voltage alarms</source>
-      <translation>Spannung niedrig Alarm</translation>
+      <translation>Alarm Batteriespannung zu niedrig</translation>
     </message>
     <message id="common_words_manufacturer">
       <location filename="../../components/CommonWords.qml" line="315"/>
@@ -4791,22 +4791,22 @@ Möchtest Sie fortfahren?</translation>
     <message id="common_words_maximum_temperature">
       <location filename="../../components/CommonWords.qml" line="328"/>
       <source>Maximum temperature</source>
-      <translation>Höchste Temperatur</translation>
+      <translation>Maximale Temperatur</translation>
     </message>
     <message id="common_words_maximum_voltage">
       <location filename="../../components/CommonWords.qml" line="331"/>
       <source>Maximum voltage</source>
-      <translation>Höchstspannung</translation>
+      <translation>Maximale Spannung</translation>
     </message>
     <message id="common_words_minimum_temperature">
       <location filename="../../components/CommonWords.qml" line="341"/>
       <source>Minimum temperature</source>
-      <translation>Mindesttemperatur</translation>
+      <translation>Minimale Temperatur</translation>
     </message>
     <message id="common_words_minimum_voltage">
       <location filename="../../components/CommonWords.qml" line="344"/>
       <source>Minimum voltage</source>
-      <translation>Mindestspannung</translation>
+      <translation>Minimale Spannung</translation>
     </message>
     <message id="common_words_mode">
       <location filename="../../components/CommonWords.qml" line="347"/>
@@ -4822,7 +4822,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../src/enums.cpp" line="250"/>
       <source>No</source>
       <extracomment>Digital input state</extracomment>
-      <translation>Nein</translation>
+      <translation>Kein</translation>
     </message>
     <message id="common_words_no_error">
       <location filename="../../components/CommonWords.qml" line="359"/>
@@ -5319,7 +5319,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="nav_levels">
       <location filename="../../pages/LevelsPage.qml" line="19"/>
       <source>Levels</source>
-      <translation>Sensoren</translation>
+      <translation>Tanks/Sensoren</translation>
     </message>
     <message id="common_words_notifications">
       <location filename="../../components/CommonWords.qml" line="376"/>
@@ -5848,12 +5848,12 @@ Möchtest Sie fortfahren?</translation>
     <message id="overview_widget_acloads_title">
       <location filename="../../components/widgets/AcLoadsWidget.qml" line="17"/>
       <source>AC Loads</source>
-      <translation>AC-Lasten</translation>
+      <translation>AC-Verbraucher</translation>
     </message>
     <message id="overview_widget_dcloads_title">
       <location filename="../../components/widgets/DcLoadsWidget.qml" line="13"/>
       <source>DC Loads</source>
-      <translation>DC-Lasten</translation>
+      <translation>DC-Verbraucher</translation>
     </message>
     <message id="overview_widget_evcs_title">
       <location filename="../../components/widgets/EvcsWidget.qml" line="23"/>
@@ -7402,7 +7402,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="settings_system_ac_position">
       <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="58"/>
       <source>Position of AC loads</source>
-      <translation>Position der AC-Lasten</translation>
+      <translation>Position der AC-Verbraucher</translation>
     </message>
     <message id="settings_system_ac_input_only">
       <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="64"/>
@@ -7422,7 +7422,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="settings_system_ac_output_only_description">
       <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="73"/>
       <source>All AC loads are on the output of the Inverter/Charger.</source>
-      <translation>Alle AC-Lasten liegen am Ausgang des Wechselrichters/Ladegeräts.</translation>
+      <translation>Alle AC-Verbraucher liegen am Ausgang des Wechselrichters/Ladegeräts.</translation>
     </message>
     <message id="settings_system_ac_input_and_output">
       <location filename="../../pages/settings/PageSettingsAcSystem.qml" line="77"/>
@@ -7437,7 +7437,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="settings_system_has_dc_system">
       <location filename="../../pages/settings/PageSettingsSystem.qml" line="97"/>
       <source>Display DC Loads</source>
-      <translation>DC-Lasten anzeigen</translation>
+      <translation>DC-Verbraucher anzeigen</translation>
     </message>
     <message id="settings_system_battery_measurements">
       <location filename="../../pages/settings/PageSettingsBatteries.qml" line="65"/>
@@ -10653,12 +10653,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="brief_ac_loads">
       <location filename="../../pages/BriefSidePanel.qml" line="257"/>
       <source>AC Loads</source>
-      <translation type="unfinished">AC-Lasten</translation>
+      <translation type="unfinished">AC-Verbraucher</translation>
     </message>
     <message id="brief_dc_loads">
       <location filename="../../pages/BriefSidePanel.qml" line="284"/>
       <source>DC Loads</source>
-      <translation type="unfinished">DC-Lasten</translation>
+      <translation type="unfinished">DC-Verbraucher</translation>
     </message>
     <message id="nav_overview">
       <location filename="../../pages/OverviewPage.qml" line="450"/>

@@ -2427,7 +2427,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
       <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="88"/>
       <source>Unconnected %1</source>
       <extracomment>Name for an unconnected device. %1 = type of device</extracomment>
-      <translation>Unverbunden %1</translation>
+      <translation>Nicht angeschlossen %1</translation>
     </message>
     <message id="settings_vrm_device_instances_reboot_now">
       <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="136"/>

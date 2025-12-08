@@ -258,14 +258,26 @@ FocusScope {
 			}
 		}
 
-		Label {
-			id: clockLabel
-			font.pixelSize: 22
-			text: ClockTime.currentTime
+		PressArea {
+			id: clockPressArea
 			anchors {
 				left: victronLogo.right
 				leftMargin: 16
 				verticalCenter: parent.verticalCenter
+			}
+			width: clockLabel.implicitWidth
+			height: clockLabel.implicitHeight
+
+			onClicked: {
+				if (!!Global.screenBlanker && Global.screenBlanker.supported) {
+					Global.screenBlanker.setDisplayOff()
+				}
+			}
+
+			Label {
+				id: clockLabel
+				font.pixelSize: 22
+				text: ClockTime.currentTime
 			}
 		}
 		Row {
@@ -273,7 +285,7 @@ FocusScope {
 
 			spacing: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 			anchors {
-				left: clockLabel.right
+				left: clockPressArea.right
 				leftMargin: 8
 				verticalCenter: parent.verticalCenter
 			}

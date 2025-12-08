@@ -21,6 +21,14 @@ FocusScope {
 		Component.onCompleted: Global.mainView = mainView
 	}
 
+	Loader {
+		id: standbyPageLoader
+		anchors.fill: parent
+		z: 10
+		source: "pages/StandbyPage.qml"
+		active: !!Global.screenBlanker && Global.screenBlanker.blanked
+	}
+
 	FirmwareUpdate {
 		id: firmwareUpdate
 		Component.onCompleted: Global.firmwareUpdate = firmwareUpdate

@@ -330,6 +330,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/OverviewPage.qml
     pages/PageManager.qml
     pages/SettingsPage.qml
+    pages/StandbyPage.qml
     pages/TanksTab.qml
     pages/controlcards/ESSCard.qml
     pages/controlcards/EVCSCard.qml

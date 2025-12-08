@@ -236,15 +236,15 @@ FocusScope {
 		spacing: 8
 		visible: !breadcrumbs.visible
 
-		Image {
-			source: "qrc:/images/victronenergy.svg"
-			height: 32
-			fillMode: Image.PreserveAspectFit
-		}
 		Label {
 			id: clockLabel
 			font.pixelSize: 22
 			text: ClockTime.currentTime
+		}
+		Image {
+			source: "qrc:/images/victronenergy.svg"
+			height: 32
+			fillMode: Image.PreserveAspectFit
 		}
 		Label {
 			id: dateLabel

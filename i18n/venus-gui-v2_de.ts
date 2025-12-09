@@ -5135,7 +5135,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="modaldialog_set">
       <location filename="../../components/dialogs/ModalDialog.qml" line="35"/>
       <source>Set</source>
-      <translation>Einstellen</translation>
+      <translation>Übernehmen</translation>
     </message>
     <message id="common_words_cancel">
       <location filename="../../components/CommonWords.qml" line="118"/>

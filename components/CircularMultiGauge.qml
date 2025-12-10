@@ -37,6 +37,19 @@ Item {
 				id: loader
 				property int gaugeStatus: Theme.getValueStatus(model.level, model.valueType)
 				property real level: model.level // always draw the tank level (percentage).
+				// Tank-spezifische Farbe aus Gauges.tankProperties, fallback auf Theme.
+				readonly property color baseColor: model.color || Theme.color_darkOk
+				readonly property color progressColor: {
+					switch (gaugeStatus) {
+					case VenusOS.ValueStatus_Alarm:
+						return Theme.color_alarm
+					case VenusOS.ValueStatus_Warning:
+						return Theme.color_warning
+					default:
+						return baseColor
+					}
+				}
+				readonly property color remainderColor: Qt.rgba(progressColor.r, progressColor.g, progressColor.b, 0.25)
 				width: parent.width - (index*_stepSize)
 				height: width
 				anchors.centerIn: parent
@@ -50,8 +63,8 @@ Item {
 						startAngle: 0
 						endAngle: 270
 						value: loader.level
-						progressColor: Theme.color_darkOk,Theme.statusColorValue(loader.gaugeStatus)
-						remainderColor: Theme.color_darkOk,Theme.statusColorValue(loader.gaugeStatus, true)
+						progressColor: loader.progressColor
+						remainderColor: loader.remainderColor
 						strokeWidth: gauges.strokeWidth
 						animationEnabled: gauges.animationEnabled
 						shineAnimationEnabled: Global.system.battery.mode === VenusOS.Battery_Mode_Charging
@@ -65,8 +78,8 @@ Item {
 						startAngle: 0
 						endAngle: 270
 						value: loader.level
-						progressColor: Theme.color_darkOk,Theme.statusColorValue(loader.gaugeStatus)
-						remainderColor: Theme.color_darkOk,Theme.statusColorValue(loader.gaugeStatus, true)
+						progressColor: loader.progressColor
+						remainderColor: loader.remainderColor
 						strokeWidth: gauges.strokeWidth
 						animationEnabled: gauges.animationEnabled
 					}

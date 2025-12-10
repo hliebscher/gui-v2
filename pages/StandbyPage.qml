@@ -14,7 +14,8 @@ Item {
 
 	Rectangle {
 		anchors.fill: parent
-		color: Theme.color_background
+		// Immer dunkler Hintergrund, unabhängig vom UI-Theme.
+		color: "#000000"
 	}
 
 	Column {
@@ -26,17 +27,28 @@ Item {
 			anchors.horizontalCenter: parent.horizontalCenter
 			text: ClockTime.currentTime
 			font.family: Global.fontFamily
-			font.pixelSize: 120
+			font.pixelSize: 160
 			color: Theme.color_font_primary
+			horizontalAlignment: Text.AlignHCenter
+			verticalAlignment: Text.AlignVCenter
 		}
 
 		Label {
 			id: dateLabel
 			anchors.horizontalCenter: parent.horizontalCenter
-			text: Qt.formatDate(new Date(), "dddd, dd.MM.yyyy")
+ 			// Locale-basiert, Wochentag gemäß Systemsprache.
+			text: {
+				// Nutze die eingestellte GUI-Sprache (Language.currentLocaleName),
+				// nicht die System-Locale, damit Wochentag/Monat übersetzt werden.
+				const localeName = Language.currentLocaleName
+				const effectiveLocale = localeName && localeName.length ? Qt.locale(localeName) : Qt.locale()
+				return Qt.formatDate(new Date(), effectiveLocale, "dddd, dd.MM.yyyy")
+			}
 			font.family: Global.fontFamily
-			font.pixelSize: 32
+			font.pixelSize: 42
 			color: Theme.color_font_secondary
+			horizontalAlignment: Text.AlignHCenter
+			verticalAlignment: Text.AlignVCenter
 		}
 	}
 

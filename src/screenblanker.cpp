@@ -19,11 +19,17 @@ ScreenBlanker::ScreenBlanker(QObject *parent) : QObject(parent)
 	qInfo() << "ScreenBlanker: determining support";
 	m_blankDevice = getFeature("blank_display_device");
 	m_blanked = supported() ? readFromFile(m_blankDevice) == 1 : false;
+	m_hwBlanked = m_blanked;
 
 	if (supported()) {
 		qInfo() << "ScreenBlanker: supported.  Currently, blanked = " << m_blanked;
 		m_enabled = true;
 		connect(&m_blankingTimer, &QTimer::timeout, this, &ScreenBlanker::setDisplayOff);
+		m_finalOffTimer.setSingleShot(true);
+		connect(&m_finalOffTimer, &QTimer::timeout, this, [this]() {
+			// Nach der Gnadenfrist Backlight wirklich ausschalten.
+			setBlanked(true, true);
+		});
 	} else {
 		qWarning() << "ScreenBlanker: not supported.";
 	}
@@ -46,6 +52,7 @@ void ScreenBlanker::setEnabled(bool enabled)
 			setDisplayOn();
 		} else {
 			stopDisplayOffTimer();
+			m_finalOffTimer.stop();
 		}
 		emit enabledChanged();
 	}
@@ -62,6 +69,7 @@ void ScreenBlanker::restartDisplayOffTimer()
 void ScreenBlanker::stopDisplayOffTimer()
 {
 	m_blankingTimer.stop();
+	m_finalOffTimer.stop();
 	setBlanked(false);
 }
 
@@ -141,6 +149,7 @@ bool ScreenBlanker::eventFilter(QObject *obj, QEvent *event)
 
 void ScreenBlanker::setDisplayOn()
 {
+	m_finalOffTimer.stop();
 	setBlanked(false);
 	if (m_enabled) {
 		restartDisplayOffTimer();
@@ -151,16 +160,26 @@ void ScreenBlanker::setDisplayOff()
 {
 	if (m_enabled) {
 		m_blankingTimer.stop();
-		setBlanked(true);
+		// Sofort Standby anzeigen, Backlight aber erst nach kurzer Verzögerung aus.
+		setBlanked(true, m_finalDisplayOffDelayMs == 0);
+		if (m_finalDisplayOffDelayMs > 0) {
+			m_finalOffTimer.start(m_finalDisplayOffDelayMs);
+		}
 	}
 }
 
-void ScreenBlanker::setBlanked(bool blanked)
+void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)
 {
-	if (supported() && blanked != m_blanked) {
+	bool stateChanged = blanked != m_blanked;
+
+	if (stateChanged) {
 		m_blanked = blanked;
-		writeToFile(m_blankDevice, blanked ? 1 : 0);
 		emit blankedChanged();
+	}
+
+	if (supported() && applyHardware && blanked != m_hwBlanked) {
+		m_hwBlanked = blanked;
+		writeToFile(m_blankDevice, blanked ? 1 : 0);
 	}
 }
 

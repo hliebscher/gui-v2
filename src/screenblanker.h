@@ -56,7 +56,7 @@ private:
 	void restartDisplayOffTimer();
 	void stopDisplayOffTimer();
 
-	void setBlanked(bool blanked);
+	void setBlanked(bool blanked, bool applyHardware = true);
 
 	int readFromFile(QString filename) const;
 	bool writeToFile(QString filename, int value) const;
@@ -64,10 +64,13 @@ private:
 
 private:
 	bool m_blanked = false;
+	bool m_hwBlanked = false; // aktueller Hardware-Backlight-Zustand
 	bool m_enabled = false;
 
 	QQuickWindow *m_window;
 	QTimer m_blankingTimer;
+	QTimer m_finalOffTimer;
+	const int m_finalDisplayOffDelayMs = 28800000; // 8h Gnadenfrist für Backlight
 	QString m_blankDevice;
 };
 

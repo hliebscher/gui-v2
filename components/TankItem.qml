@@ -18,6 +18,7 @@ BaseListItem {
 	property alias gauge: loader.sourceComponent
 	property real totalCapacity
 	property real totalRemaining
+	property bool showTotals: false 
 
 	readonly property var tankProperties: Gauges.tankProperties(fluidType)
 	readonly property color backgroundColor: status === VenusOS.Tank_Status_Ok ? Theme.color_levelsPage_gauge_backgroundColor : Theme.color_levelsPage_panel_border_color
@@ -69,8 +70,8 @@ BaseListItem {
 
 		anchors {
 			horizontalCenter: parent.horizontalCenter
-			bottom: valueText.top
-			bottomMargin: Theme.geometry_levelsPage_gauge_valueText_topMargin
+			bottom: root.showTotals ? valueText.top : parent.bottom
+			bottomMargin: root.showTotals ? Theme.geometry_levelsPage_gauge_valueText_topMargin : Theme.geometry_levelsPage_panel_spacing
 		}
 		font.pixelSize: Theme.font_size_h1
 		unit: VenusOS.Units_Percentage
@@ -90,7 +91,8 @@ BaseListItem {
 		fontSizeMode: Text.HorizontalFit
 		font.pixelSize: Theme.font_size_caption
 		color: Theme.color_font_secondary
-		opacity: isNaN(root.totalCapacity) && isNaN(root.totalRemaining) ? 0.0 : 1.0
+		visible: root.showTotals && !(isNaN(root.totalCapacity) && isNaN(root.totalRemaining))
+		opacity: visible ? 1.0 : 0.0
 		text: Units.getCapacityDisplayText(Global.systemSettings.volumeUnit,
 										   root.totalCapacity,
 										   root.totalRemaining)

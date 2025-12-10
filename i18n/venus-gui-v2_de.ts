@@ -6137,7 +6137,7 @@ Möchtest Sie fortfahren?</translation>
     <message id="inverters_state_inverting">
       <location filename="../../data/System.qml" line="149"/>
       <source>Inverting</source>
-      <translation>Inverting</translation>
+      <translation>Erzeugung</translation>
     </message>
     <message id="inverters_state_assisting">
       <location filename="../../data/System.qml" line="152"/>

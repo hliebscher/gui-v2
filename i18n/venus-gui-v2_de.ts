@@ -125,7 +125,7 @@
     <message id="levels_page_tanks">
       <location filename="../../pages/LevelsPage.qml" line="61"/>
       <source>Tanks</source>
-      <translation>Tankübericht</translation>
+      <translation>Tankübersicht</translation>
     </message>
     <message id="levels_page_environment">
       <location filename="../../pages/LevelsPage.qml" line="63"/>

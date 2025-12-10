@@ -10630,6 +10630,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
       <extracomment>%1 = name of the device</extracomment>
       <translation/>
     </message>
+    <message id="common_words_go_to_redetect_system">
+      <location filename="../../components/CommonWords.qml" line="221"/>
+      <source>If it was recently disconnected, go to Settings → Devices → %1 → Advanced, and select 'Redetect VE.Bus system'.</source>
+      <extracomment>%1 = name of the device</extracomment>
+      <translation/>
+    </message>
     <message id="settings_radio_button_group_unknown">
       <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
       <source>Unknown</source>

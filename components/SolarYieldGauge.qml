@@ -19,60 +19,26 @@ Item {
 	width: parent.width
 	height: parent.height
 
-	Repeater {
-		id: gaugeRepeater
-
-		model: powerSampler.sampledAverages.length + 1
-
-		delegate: SideGauge {
-			animationEnabled: root.animationEnabled
-			width: Theme.geometry_briefPage_edgeGauge_width
-			x: index*strokeWidth
-			opacity: 1.0 - index * 0.3
-			height: root.height
-			direction: root.direction
-			startAngle: root.startAngle
-			endAngle: root.endAngle
-			horizontalAlignment: root.horizontalAlignment
-			arcVerticalCenterOffset: root.arcVerticalCenterOffset
-			valueType: VenusOS.Gauges_ValueType_NeutralPercentage
-			value: valueRange.valueAsRatio * 100
-
-			ValueRange {
-				id: valueRange
-
-				// First gauge shows the current runtime power, other gauges show historical values.
-				value: model.index === 0 ? Global.system.solar.power : powerSampler.sampledAverages[model.index - 1]
-				maximumValue: Global.system.solar.maximumPower
-			}
-		}
+	// Ein einzelner Kreisbalken für die aktuelle Solar-Summenleistung.
+	SideGauge {
+		id: gauge
+		animationEnabled: root.animationEnabled
+		width: Theme.geometry_briefPage_edgeGauge_width
+		height: root.height
+		direction: root.direction
+		startAngle: root.startAngle
+		endAngle: root.endAngle
+		horizontalAlignment: root.horizontalAlignment
+		arcVerticalCenterOffset: root.arcVerticalCenterOffset
+		valueType: VenusOS.Gauges_ValueType_NeutralPercentage
+		value: valueRange.valueAsRatio * 100
 	}
 
-	// Take 30-second samples of the solar power. Every 5 minutes, take the average of these samples
-	// and add a new gauge bar with that value.
-	Timer {
-		id: powerSampler
-
-		property var sampledAverages: []
-		property var _activeSamples: []
-
-		running: true
-		repeat: true
-		interval: 30 * 1000
-		onTriggered: {
-			_activeSamples.push(Global.system.solar.power)
-			if (_activeSamples.length < 10) {
-				return
-			}
-			const averagePower = _activeSamples.reduce((accumulator, currentValue) => accumulator + currentValue) / _activeSamples.length
-			let newAverages = sampledAverages
-			newAverages.unshift(averagePower)
-			if (newAverages.length >= Theme.geometry_briefPage_solarHistoryGauge_maximumGaugeCount) {
-				newAverages.pop()
-			}
-			_activeSamples = []
-			sampledAverages = newAverages
-		}
+	ValueRange {
+		id: valueRange
+		value: Global.system.solar.power
+		maximumValue: Global.system.solar.maximumPower
+		minimumValue: 0
 	}
 }
 

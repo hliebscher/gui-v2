@@ -381,6 +381,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsDisplayMinMax.qml
     pages/settings/PageSettingsDisplayStartPage.qml
     pages/settings/PageSettingsDisplayUnits.qml
+    pages/settings/PageSettingsStatusBar.qml
     pages/settings/PageSettingsDocumentation.qml
     pages/settings/PageSettingsDvcc.qml
     pages/settings/PageSettingsDynamicEss.qml

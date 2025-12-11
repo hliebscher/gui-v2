@@ -853,7 +853,7 @@
       <location filename="../../pages/settings/PageSettingsDisplayBrief.qml" line="176"/>
       <source>Level %1</source>
       <extracomment>Level number</extracomment>
-      <translation>Stufe %1</translation>
+      <translation>Auswahl Sensor %1</translation>
     </message>
     <message id="settings_units_celsius">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="21"/>
@@ -8217,6 +8217,16 @@ Wenn der Generator derzeit aufgrund einer Autostart-Bedingung läuft, wird er du
       <source>Temperature services</source>
       <translation>Temperatur-Dienste</translation>
     </message>
+    <message id="settings_statusbar_temperature_sensor">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="128"/>
+      <source>Status bar temperature sensor</source>
+      <translation>Statusleiste Temperatursensor</translation>
+    </message>
+    <message id="settings_statusbar_temperature_sensor_placeholder">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="137"/>
+      <source>Temperature sensor %1</source>
+      <translation>Temperatursensor %1</translation>
+    </message>
     <message id="rs_current_limit_not_adjustable">
       <location filename="../../components/listitems/ListCurrentLimitButton.qml" line="27"/>
       <source>This current limit is fixed in the system configuration. It cannot be adjusted.</source>
@@ -8307,7 +8317,7 @@ Wenn der Generator derzeit aufgrund einer Autostart-Bedingung läuft, wird er du
       <location filename="../../data/StartPageConfiguration.qml" line="31"/>
       <source>Brief (side panel open)</source>
       <extracomment>The 'Brief' page, with the side panel opened</extracomment>
-      <translation>Brief (Seitenwand offen)</translation>
+      <translation>Kurzansicht (mit Seitenleiste)</translation>
     </message>
     <message id="startpage_option_overview">
       <location filename="../../data/StartPageConfiguration.qml" line="37"/>
@@ -8319,13 +8329,13 @@ Wenn der Generator derzeit aufgrund einer Autostart-Bedingung läuft, wird er du
       <location filename="../../data/StartPageConfiguration.qml" line="43"/>
       <source>Levels (Tanks)</source>
       <extracomment>The 'Levels' page, with the "Tanks" section opened</extracomment>
-      <translation>Füllstände (Tanks)</translation>
+      <translation>Werte (Tanks)</translation>
     </message>
     <message id="startpage_option_levels_environment">
       <location filename="../../data/StartPageConfiguration.qml" line="49"/>
       <source>Levels (Environment)</source>
       <extracomment>The 'Levels' page, with the "Environment" section opened</extracomment>
-      <translation>Füllstände (Umgebung)</translation>
+      <translation>Werte (Umgebung)</translation>
     </message>
     <message id="startpage_option_battery_list">
       <location filename="../../data/StartPageConfiguration.qml" line="58"/>

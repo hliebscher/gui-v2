@@ -13,6 +13,10 @@ FocusScope {
 	required property PageStack pageStack
 	property string title
 	property alias backgroundColor: backgroundRect.color
+	// Index im EnvironmentInputs-Model für die Temperaturanzeige in der Statusbar.
+	// Standard: 0 (erster Sensor).
+	property int temperatureSensorIndex: 0
+	property alias _temperatureSettingItem: statusBarTemperatureSensorIndex
 
 	property int leftButton: VenusOS.StatusBar_LeftButton_None
 	property int rightButton: VenusOS.StatusBar_RightButton_None
@@ -34,6 +38,12 @@ FocusScope {
 	opacity: 0.0
 
 	Component.onCompleted: if (!animationEnabled) { root.opacity = 1.0 }
+
+	onTemperatureSensorIndexChanged: {
+		if (statusBarTemperatureSensorIndex.valid && statusBarTemperatureSensorIndex.value !== temperatureSensorIndex) {
+			statusBarTemperatureSensorIndex.setValue(temperatureSensorIndex)
+		}
+	}
 
 	Rectangle {
 		id: backgroundRect
@@ -235,6 +245,24 @@ FocusScope {
 		anchors.fill: parent
 		visible: !breadcrumbs.visible
 
+		VeQuickItem {
+			id: statusBarTemperatureSensorIndex
+			uid: Global.systemSettings.serviceUid + "/Settings/Gui2/StatusBar/TemperatureSensorIndex"
+			onValueChanged: updateTemperatureSensorIndex()
+			Component.onCompleted: updateTemperatureSensorIndex()
+			
+			function updateTemperatureSensorIndex() {
+				if (valid) {
+					// Auch 0 ist ein gültiger Wert (erster Sensor)
+					const idx = (value !== undefined && value !== null) ? parseInt(value) : 0
+					root.temperatureSensorIndex = idx
+				} else {
+					// Default auf 0 setzen, wenn kein Wert vorhanden ist
+					root.temperatureSensorIndex = 0
+				}
+			}
+		}
+
 		Image {
 			id: victronLogo
 			source: "qrc:/images/victronenergy.svg"
@@ -246,15 +274,44 @@ FocusScope {
 			}
 		}
 
-		Label {
-			id: dateLabel
-			font.pixelSize: 22
-			//color: Theme.color_font_secondary // optional: use secondary font color for date
-			text: Qt.formatDate(new Date(), "dd.MM.yyyy")
+		Row {
+			id: temperatureRow
+			spacing: 8
 			anchors {
 				right: victronLogo.left
 				rightMargin: 16
 				verticalCenter: parent.verticalCenter
+			}
+
+			CP.ColorImage {
+				source: "qrc:/images/icon_temp_32.svg"
+				color: Theme.color_font_primary
+				height: 20
+				width: 20
+				visible: temperatureItem.valid
+				anchors.verticalCenter: parent.verticalCenter
+			}
+
+			QuantityLabel {
+				id: temperatureLabel
+				font.pixelSize: 22
+				unit: Global.systemSettings.temperatureUnit
+				value: temperatureItem.value
+				visible: temperatureItem.valid && !isNaN(temperatureItem.value)
+			}
+
+			VeQuickItem {
+				id: temperatureItem
+				uid: {
+					if (Global.environmentInputs?.model?.count > 0) {
+						const idx = Math.min(Math.max(root.temperatureSensorIndex, 0), Global.environmentInputs.model.count - 1)
+						const dev = Global.environmentInputs.model.deviceAt ? Global.environmentInputs.model.deviceAt(idx) : Global.environmentInputs.model.get(idx)
+						return dev && dev.serviceUid ? dev.serviceUid + "/Temperature" : ""
+					}
+					return ""
+				}
+				sourceUnit: Units.unitToVeUnit(VenusOS.Units_Temperature_Celsius)
+				displayUnit: Units.unitToVeUnit(Global.systemSettings.temperatureUnit)
 			}
 		}
 

@@ -123,6 +123,14 @@ Page {
 			}
 
 			ListNavigation {
+				//% "Status bar temperature sensor"
+				text: qsTrId("settings_statusbar_temperature_sensor")
+				onClicked: {
+					Global.pageManager.pushPage("/pages/settings/PageSettingsStatusBar.qml", {"title": text})
+				}
+			}
+
+			ListNavigation {
 				//% "Brief page"
 				text: qsTrId("settings_brief_page")
 				onClicked: {

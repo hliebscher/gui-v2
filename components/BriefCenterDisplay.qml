@@ -71,6 +71,14 @@ Column {
 		maximumPixelSize: Theme.font_briefPage_battery_percentage_maximumPixelSize
 	}
 
+	CP.ColorImage {
+		id: centerIcon
+		anchors.horizontalCenter: parent.horizontalCenter
+		source: root._useTemperature ? "qrc:/images/icon_temp_32.svg" : Global.system.battery.icon
+		color: Theme.color_font_primary
+		visible: !root.showFullDetails
+	}
+
 	Loader {
 		width: parent.width
 		height: active ? implicitHeight : 0

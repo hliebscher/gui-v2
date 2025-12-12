@@ -22,7 +22,7 @@
         "/Settings/Gui2/StartPage": 0,
         "/Settings/Gui2/StartPageName": "",
         "/Settings/Gui2/StartPageTimeout": 0,
-        "/Settings/Gui2/StatusBar/TemperatureSensorIndex": 2,
+        "/Settings/Gui2/StatusBar/TemperatureSensorIndex": 0,
         "/Settings/Gui2/UIAnimations": 1,
         "/Settings/ModbusClient/tcp/AutoScan": 1,
         "/Settings/ModbusClient/tcp/Devices": "tcp:192.168.1.232:502:1,tcp:192.168.1.232:503:10",

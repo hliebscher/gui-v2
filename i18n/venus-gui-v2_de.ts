@@ -13362,5 +13362,45 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
       <source>DC/DC misconfiguration</source>
       <translation>DC/DC-Fehlkonfiguration</translation>
     </message>
+    <message id="page_contact_title">
+      <location filename="../../../components/StatusBar.qml" line="332"/>
+      <source>Contact</source>
+      <translation>Kontakt</translation>
+    </message>
+    <message id="page_contact_contact">
+      <location filename="../../../pages/PageContact.qml" line="15"/>
+      <source>Contact</source>
+      <translation>Kontakt</translation>
+    </message>
+    <message id="page_contact_address">
+      <location filename="../../../pages/PageContact.qml" line="21"/>
+      <source>Address</source>
+      <translation>Anschrift</translation>
+    </message>
+    <message id="page_contact_phone">
+      <location filename="../../../pages/PageContact.qml" line="35"/>
+      <source>Phone</source>
+      <translation>Telefon</translation>
+    </message>
+    <message id="page_contact_fax">
+      <location filename="../../../pages/PageContact.qml" line="49"/>
+      <source>Fax</source>
+      <translation>Fax</translation>
+    </message>
+    <message id="page_contact_email">
+      <location filename="../../../pages/PageContact.qml" line="63"/>
+      <source>E-Mail</source>
+      <translation>E-Mail</translation>
+    </message>
+    <message id="page_contact_opening_hours">
+      <location filename="../../../pages/PageContact.qml" line="77"/>
+      <source>Opening Hours</source>
+      <translation>Öffnungszeiten</translation>
+    </message>
+    <message id="page_contact_opening_hours_text">
+      <location filename="../../../pages/PageContact.qml" line="87"/>
+      <source>MO-FR 08:00-16:30\nAlso by appointment</source>
+      <translation>MO-FR 08:00-16:30 Uhr\nSowie nach Absprache</translation>
+    </message>
   </context>
 </TS>

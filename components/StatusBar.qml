@@ -263,14 +263,34 @@ FocusScope {
 			}
 		}
 
-		Image {
-			id: victronLogo
-			source: "qrc:/images/victronenergy.svg"
-			height: 32
-			fillMode: Image.PreserveAspectFit
+		Item {
+			id: logoContainer
 			anchors {
 				horizontalCenter: parent.horizontalCenter
 				verticalCenter: parent.verticalCenter
+			}
+			width: Math.max(victronLogo.width, 100)
+			height: Math.max(victronLogo.height, 32)
+
+			Image {
+				id: victronLogo
+				source: "qrc:/images/victronenergy.svg"
+				height: 32
+				fillMode: Image.PreserveAspectFit
+				anchors.centerIn: parent
+			}
+
+			PressArea {
+				id: logoPressArea
+				anchors.fill: parent
+				enabled: true
+
+				onClicked: {
+					Global.pageManager.pushPage("/pages/PageContact.qml", {
+						//% "Kontakt"
+						"title": qsTrId("page_contact_title")
+					})
+				}
 			}
 		}
 
@@ -278,7 +298,7 @@ FocusScope {
 			id: temperatureRow
 			spacing: 8
 			anchors {
-				right: victronLogo.left
+				right: logoContainer.left
 				rightMargin: 16
 				verticalCenter: parent.verticalCenter
 			}
@@ -318,7 +338,7 @@ FocusScope {
 		PressArea {
 			id: clockPressArea
 			anchors {
-				left: victronLogo.right
+				left: logoContainer.right
 				leftMargin: 16
 				verticalCenter: parent.verticalCenter
 			}

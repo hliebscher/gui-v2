@@ -329,6 +329,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/NotificationLayer.qml
     pages/NotificationsPage.qml
     pages/OverviewPage.qml
+    pages/PageContact.qml
     pages/PageManager.qml
     pages/SettingsPage.qml
     pages/StandbyPage.qml

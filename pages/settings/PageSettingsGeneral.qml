@@ -250,7 +250,7 @@ Page {
 				//% "Copy Settings"
 				text: qsTrId("pagesettingsgeneral_copy_settings")
 				preferredVisible: Global.systemSettings.canAccess(VenusOS.User_AccessType_Installer)
-				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsCopySettings.qml", {"title": text})
+				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsBackupRestore.qml", {"title": text})
 			}
 
 			ListNavigation {

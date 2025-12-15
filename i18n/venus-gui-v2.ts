@@ -12767,7 +12767,7 @@ With streamlined navigation and a fresh look, everything you love is now even ea
     </message>
     <message id="page_contact_opening_hours_text">
         <location filename="../../../pages/PageContact.qml" line="87"/>
-        <source>MO-FR 08:00-16:30\nAlso by appointment</source>
+        <source>MO-FR 08:00-16:30\</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

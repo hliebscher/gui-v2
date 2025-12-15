@@ -13399,8 +13399,8 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     </message>
     <message id="page_contact_opening_hours_text">
       <location filename="../../../pages/PageContact.qml" line="87"/>
-      <source>MO-FR 08:00-16:30\nAlso by appointment</source>
-      <translation>MO-FR 08:00-16:30 Uhr\nSowie nach Absprache</translation>
+      <source>MO-FR 08:00-16:30\</source>
+      <translation>MO-FR 08:00-16:30 Uhr</translation>
     </message>
   </context>
 </TS>

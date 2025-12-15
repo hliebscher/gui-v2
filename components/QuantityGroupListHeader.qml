@@ -30,7 +30,7 @@ Row {
 		color: Theme.color_solarListPage_header_text
 		elide: Text.ElideRight
 		width: isNaN(root.fixedColumnWidth)
-			   ? parent.width - parent.leftPadding - parent.rightPadding - quantityRow.width - root.spacing
+			   ? parent.width - parent.leftPadding - parent.rightPadding - quantityRow.width - root.spacing - 30
 			   : root.fixedColumnWidth
 	}
 

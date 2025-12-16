@@ -86,9 +86,9 @@ echo "=== Step 1: Extracting translation strings from source code ==="
 echo "Running lupdate to extract new translation strings..."
 
 # Run lupdate to update the TS file
-# Note: CMake copies venus-gui-v2.ts to venus-gui-v2_en.ts in the build directory
+# Note: write directly to the source TS to keep relative paths correct (../pages, ../components, ...)
 "${LUPDATE_CMD}" -no-obsolete "@${BUILD_DIR}/i18n/translation_sources.txt" \
-    -ts "${BUILD_DIR}/i18n/venus-gui-v2_en.ts" \
+    -ts "${BASE_DIR}/i18n/venus-gui-v2.ts" \
     -I "${BASE_DIR}/src/veutil/inc"
 
 if [ $? -ne 0 ]; then
@@ -96,19 +96,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Normalize location paths to the previous form (../../../...)
+perl -pi -e 's@filename="\.\./@filename="../../../@g' "${BASE_DIR}/i18n/venus-gui-v2.ts"
+
 echo "✓ Translation strings extracted successfully"
 
 echo ""
-echo "=== Step 2: Copying updated TS file back to source directory ==="
-# Copy the updated file back to the source directory (without _en suffix)
-cp "${BUILD_DIR}/i18n/venus-gui-v2_en.ts" "${BASE_DIR}/i18n/venus-gui-v2.ts"
-
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to copy TS file"
-    exit 1
-fi
-
-echo "✓ Updated venus-gui-v2.ts copied to i18n/"
+echo "=== Step 2: TS updated in-place at i18n/venus-gui-v2.ts ==="
 
 # Check if POEDITOR_TOKEN is set for downloading translations
 if [ -n "${POEDITOR_TOKEN}" ]; then

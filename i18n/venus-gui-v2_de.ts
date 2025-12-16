@@ -3594,22 +3594,22 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="devicelist_tankalarm_active_level">
       <location filename="../../pages/settings/devicelist/tank/PageTankAlarm.qml" line="24"/>
       <source>Active level</source>
-      <translation>Aktiver Füllstand</translation>
+      <translation>Bei Füllstand ausgelöst</translation>
     </message>
     <message id="devicelist_tankalarm_restore_level">
       <location filename="../../pages/settings/devicelist/tank/PageTankAlarm.qml" line="33"/>
       <source>Restore level</source>
-      <translation>Füllstand wiederherstellen</translation>
+      <translation>Bei Füllstand zurückgesetzt</translation>
     </message>
     <message id="devicelist_tankalarm_delay">
       <location filename="../../pages/settings/devicelist/tank/PageTankAlarm.qml" line="42"/>
       <source>Delay</source>
-      <translation>Verzögern</translation>
+      <translation>Alarm verzögert</translation>
     </message>
     <message id="devicelist_tanksensor_level">
       <location filename="../../pages/settings/devicelist/tank/PageTankSensor.qml" line="29"/>
       <source>Level</source>
-      <translation>Level</translation>
+      <translation>Füllstand</translation>
     </message>
     <message id="devicelist_tanksensor_remaining">
       <location filename="../../pages/settings/devicelist/tank/PageTankSensor.qml" line="36"/>
@@ -3639,12 +3639,12 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="devicelist_tanksetup_european_(0_to_180_ohm)">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="49"/>
       <source>European (0 to 180 Ohm)</source>
-      <translation>Europa (0 bis 180 Ohm)</translation>
+      <translation>Für Europa (0 bis 180 Ohm)</translation>
     </message>
     <message id="devicelist_tanksetup_us_(240_to_30_ohm)">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="51"/>
       <source>US (240 to 30 Ohm)</source>
-      <translation>USA (240 bis 30 Ohm)</translation>
+      <translation>Für USA (240 bis 30 Ohm)</translation>
     </message>
     <message id="devicelist_tanksetup_custom">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="53"/>
@@ -3684,7 +3684,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="devicelist_tankshape_empty">
       <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="75"/>
       <source>No custom shape defined. You may define one with up to ten points. Note that 0% and 100% are implied.</source>
-      <translation>Keine eigene Form definiert. Sie können eine Form mit bis zu zehn Punkten definieren. Beachten Sie, dass 0% und 100% implizit sind.</translation>
+      <translation>Keine benutzerdefinierte Form definiert. Sie können eine Form mit bis zu zehn Punkten festlegen. Beachten Sie, dass 0% und 100% automatisch berücksichtigt werden.</translation>
     </message>
     <message id="devicelist_tankshape_point">
       <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="89"/>
@@ -3836,7 +3836,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="ac-in-modeldefault_phase_sequence">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="160"/>
       <source>Phase Sequence</source>
-      <translation>Phasenfolge</translation>
+      <translation>Phasenreihenfolge</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence_l3_first">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="166"/>
@@ -3957,7 +3957,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="page_meteo_settings_auto_detect">
       <location filename="../../pages/settings/devicelist/PageMeteoSettings.qml" line="17"/>
       <source>Auto-detect</source>
-      <translation>Auto-Erkennung</translation>
+      <translation>Automatische-Erkennung</translation>
     </message>
     <message id="page_meteo_settings_wind_speed_sensor">
       <location filename="../../pages/settings/devicelist/PageMeteoSettings.qml" line="24"/>
@@ -3987,7 +3987,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="temperature_sensor_battery_low">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="38"/>
       <source>Sensor battery low</source>
-      <translation>Sensorbatterie schwach</translation>
+      <translation>Sensorbatterie ist schwach</translation>
     </message>
     <message id="temperature_humidity">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="54"/>
@@ -4064,12 +4064,12 @@ HINWEIS: Das Update kann das System vorübergehend anhalten.</translation>
     <message id="vebus_device_in_progress">
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="80"/>
       <source>In progress</source>
-      <translation>Im Gange</translation>
+      <translation>In Arbeit</translation>
     </message>
     <message id="vebus_device_press_to_stop">
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="87"/>
       <source>Press to stop</source>
-      <translation>Drücken, um zu stoppen</translation>
+      <translation>Zum Stoppen drücken</translation>
     </message>
     <message id="vebus_device_press_to_start">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="122"/>

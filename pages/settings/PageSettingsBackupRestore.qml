@@ -235,8 +235,8 @@ Page {
 			}
 
 			PrimaryListLabel {
-				//% "Note: Backup files are Venus OS firmware version specific and can only be used to restore settings on products with matching firmware versions
-				text: qsTrId("tankk_backup_firmware_version_specific_message")
+				//% "Note: Backup files are Venus OS firmware version specific and can only be used to restore settings on products with matching firmware versions"
+				text: qsTrId("tank_backup_firmware_version_specific_message")
 			}
 
 			// IDEAS:

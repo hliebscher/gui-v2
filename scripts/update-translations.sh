@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# This script is used to update the translations for the GUIv2.
+# It is used to extract the translation strings from the source code
+# and update the venus-gui-v2.ts file with the new strings.
+# It also optionally downloads the updated translations for all languages from POEditor.
+# It is typically called from the GitHub action, via the cmake build system, and only running on tagged releases.
+#
+# you find more information in the readme.md file.
+
+# example usage: cmake /path/to/CMakeLists.txt; make update_translations
+# example usage: update_translations.sh
 # This script updates all translations:
 # 1. Extracts new translation strings from source code using lupdate
 # 2. Updates venus-gui-v2.ts with new strings
@@ -36,11 +46,39 @@ if [ ! -f "${BUILD_DIR}/i18n/translation_sources.txt" ]; then
     exit 1
 fi
 
-# Check if Qt6 lupdate is available
-if ! command -v lupdate &> /dev/null; then
-    echo "Error: lupdate not found. Please ensure Qt6 is in your PATH."
-    echo "You may need to source the Qt environment or set QTDIR."
-    exit 1
+# Find lupdate - check PATH first, then common Qt6 locations
+LUPDATE_CMD=""
+if command -v lupdate &> /dev/null; then
+    LUPDATE_CMD="lupdate"
+else
+    # Try to find lupdate in common Qt6 installation paths
+    QT6_PATHS=(
+        "/opt/venus/build-gx-hostedtoolcache/Qt/6.8.3/gcc_64/bin/lupdate"
+        "$HOME/Qt/6.*/gcc_64/bin/lupdate"
+        "/opt/Qt/6.*/gcc_64/bin/lupdate"
+        "/usr/lib/qt6/bin/lupdate"
+        "/usr/bin/lupdate-qt6"
+    )
+    
+    for path in "${QT6_PATHS[@]}"; do
+        # Expand glob patterns
+        for expanded_path in $path; do
+            if [ -f "$expanded_path" ] && [ -x "$expanded_path" ]; then
+                LUPDATE_CMD="$expanded_path"
+                echo "Found lupdate at: $LUPDATE_CMD"
+                break 2
+            fi
+        done
+    done
+    
+    if [ -z "$LUPDATE_CMD" ]; then
+        echo "Error: lupdate not found. Please ensure Qt6 is installed."
+        echo "You can either:"
+        echo "  1. Add Qt6 bin directory to your PATH"
+        echo "  2. Set QTDIR environment variable"
+        echo "  3. Install Qt6 tools: sudo apt install qt6-tools-dev"
+        exit 1
+    fi
 fi
 
 echo ""
@@ -48,7 +86,8 @@ echo "=== Step 1: Extracting translation strings from source code ==="
 echo "Running lupdate to extract new translation strings..."
 
 # Run lupdate to update the TS file
-lupdate -no-obsolete "@${BUILD_DIR}/i18n/translation_sources.txt" \
+# Note: CMake copies venus-gui-v2.ts to venus-gui-v2_en.ts in the build directory
+"${LUPDATE_CMD}" -no-obsolete "@${BUILD_DIR}/i18n/translation_sources.txt" \
     -ts "${BUILD_DIR}/i18n/venus-gui-v2_en.ts" \
     -I "${BASE_DIR}/src/veutil/inc"
 
@@ -61,6 +100,7 @@ echo "✓ Translation strings extracted successfully"
 
 echo ""
 echo "=== Step 2: Copying updated TS file back to source directory ==="
+# Copy the updated file back to the source directory (without _en suffix)
 cp "${BUILD_DIR}/i18n/venus-gui-v2_en.ts" "${BASE_DIR}/i18n/venus-gui-v2.ts"
 
 if [ $? -ne 0 ]; then

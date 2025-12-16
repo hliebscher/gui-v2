@@ -52,6 +52,7 @@ Item {
 			font.pixelSize: root.font.pixelSize
 			font.weight: root.font.weight
 			font.family: Global.quantityFontFamily
+			elide: root.width < implicitWidth ? Text.ElideRight : Text.ElideNone
 		}
 
 		Label {

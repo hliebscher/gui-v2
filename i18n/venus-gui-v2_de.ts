@@ -7888,7 +7888,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../components/CommonWords.qml" line="597"/>
       <source>Yield Today</source>
       <extracomment>Solar charger yield for today, in kWh (kilowatt hours)</extracomment>
-      <translation>Heutiger Solar Ertrag</translation>
+      <translation>Solar Heute</translation>
     </message>
     <message id="common_words_format_error">
       <location filename="../../components/CommonWords.qml" line="637"/>

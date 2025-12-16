@@ -41,10 +41,11 @@ Row {
 			required property int index
 			required property QuantityObject quantityObject
 			readonly property real horizontalPadding: root._showSeparators ? Theme.geometry_listItem_content_spacing : 0
+			readonly property bool isFirstColumn: index === 0
 
 			width: !isNaN(root.fixedColumnWidth) ? root.fixedColumnWidth
 				: quantityObject.unit === VenusOS.Units_None ? implicitWidth
-				: quantityMetrics.columnWidth(quantityObject.unit) + horizontalPadding
+				: quantityMetrics.columnWidth(quantityObject.unit) + horizontalPadding - (isFirstColumn ? 30 : 0)
 
 			height: root.height
 			leftPadding: horizontalPadding

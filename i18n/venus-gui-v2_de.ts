@@ -8898,7 +8898,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="141"/>
       <source>Reversed Energy L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
-      <translation>Umgekehrte Energie L%1</translation>
+      <translation>Eingespeiste Energie L%1</translation>
     </message>
     <message id="settings_minmax_boat_page">
       <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="182"/>
@@ -9038,22 +9038,22 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="mk2vsc_state_write_settings_info">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="30"/>
       <source>Write settings info</source>
-      <translation>Einstellungsinformationen schreiben</translation>
+      <translation>Informationen sichern</translation>
     </message>
     <message id="mk2vsc_state_write_settings_data">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="32"/>
       <source>Write Settings Data</source>
-      <translation>Einstellungsdaten schreiben</translation>
+      <translation>Daten schreiben</translation>
     </message>
     <message id="mk2vsc_state_write_assistants">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="34"/>
       <source>Write assistants</source>
-      <translation>Assistenten schreiben</translation>
+      <translation>Assitenten sichern</translation>
     </message>
     <message id="mk2vsc_state_write_vebus_configuration">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="36"/>
       <source>Write VE.Bus configuration</source>
-      <translation>VE.Bus-Konfiguration schreiben</translation>
+      <translation>VE.Bus-Konfiguration sichern</translation>
     </message>
     <message id="mk2vsc_state_resetting_vebus_products">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="38"/>
@@ -9093,7 +9093,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="mk2vsc_error_wrong_pass">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="59"/>
       <source>Wrong password. (Use VeConfigure to set gridcode to None)</source>
-      <translation>Falsches Passwort. (Verwenden Sie VeConfigure, um gridcode auf None zu setzen)</translation>
+      <translation>Falsches Passwort. (Verwenden Sie VeConfigure, um den gridcode auf None zu setzen)</translation>
     </message>
     <message id="mk2vsc_error_malloc">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="61"/>
@@ -9123,37 +9123,37 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="mk2vsc_error_unit_count_mismatch">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="71"/>
       <source>The number of units in file does not match the number of units discovered</source>
-      <translation>Die Anzahl der Einheiten in der Datei stimmt nicht mit der Anzahl der entdeckten Einheiten überein</translation>
+      <translation>Die Anzahl der Geräte in der Datei stimmt nicht mit der Anzahl der gefundenen Geräte überein</translation>
     </message>
     <message id="mk2vsc_error_file_open">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="73"/>
       <source>File open error</source>
-      <translation>Dateiöffnungsfehler</translation>
+      <translation>Öffnen der Datei fehlgeschlagen</translation>
     </message>
     <message id="mk2vsc_error_file_write">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="75"/>
       <source>File write error</source>
-      <translation>Dateischreibfehler</translation>
+      <translation>Fehler beim schreiben der Datei</translation>
     </message>
     <message id="mk2vsc_error_file_read">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="77"/>
       <source>File read error</source>
-      <translation>Dateilesefehler</translation>
+      <translation>Fehler beim lesen der Datei</translation>
     </message>
     <message id="mk2vsc_error_file_checksum">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="79"/>
       <source>File checksum error</source>
-      <translation>Dateiprüfsummenfehler</translation>
+      <translation>Prüfsummenfehler der Datei</translation>
     </message>
     <message id="mk2vsc_error_file_ver_incompat">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="81"/>
       <source>File incompatible version number</source>
-      <translation>Versionsnummer der Datei nicht kompatibel</translation>
+      <translation>Versionsnummer der Datei ist nicht kompatibel</translation>
     </message>
     <message id="mk2vsc_error_file_section_not_found">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="83"/>
       <source>File section not found</source>
-      <translation>Dateiabschnitt nicht gefunden</translation>
+      <translation>Dateiabschnitt wurde nicht gefunden</translation>
     </message>
     <message id="mk2vsc_error_file_format">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="85"/>
@@ -9168,7 +9168,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="mk2vsc_error_file_expired">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="89"/>
       <source>File expired</source>
-      <translation>Datei abgelaufen</translation>
+      <translation>Datei ist abgelaufen</translation>
     </message>
     <message id="mk2vsc_error_wrong_file_format">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="91"/>
@@ -9188,12 +9188,12 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="mk2vsc_error_read_settings_fail">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="97"/>
       <source>Cannot read settings. VE.Bus system not configured</source>
-      <translation>Einstellungen können nicht gelesen werden. VE.Bus-System nicht konfiguriert</translation>
+      <translation>Einstellungen können nicht gelesen werden. VE.Bus-System ist nicht konfiguriert</translation>
     </message>
     <message id="mk2vsc_error_assist_write_fail">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="99"/>
       <source>Assistants write failed</source>
-      <translation>Assistenten schreiben gescheitert</translation>
+      <translation>Assistenten sichern gescheitert</translation>
     </message>
     <message id="mk2vsc_error_assist_read_fail">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="101"/>
@@ -9233,17 +9233,17 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="vebus_backup_result_backup_process_unexpedly_closed">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="122"/>
       <source>Backup process unexpectedly closed</source>
-      <translation>Sicherungsprozess unerwartet beendet</translation>
+      <translation>Sicherungsprozess wurde unerwartet beendet</translation>
     </message>
     <message id="vebus_backup_result_restore_process_unexpedly_closed">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="124"/>
       <source>Restore process unexpectedly closed</source>
-      <translation>Wiederherstellungsprozess unerwartet beendet</translation>
+      <translation>Wiederherstellungsprozess wurde unerwartet beendet</translation>
     </message>
     <message id="vebus_backup_result_file_delete_failed">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="126"/>
       <source>File delete failed</source>
-      <translation>Datei löschen fehlgeschlagen</translation>
+      <translation>Datei löschen ist fehlgeschlagen</translation>
     </message>
     <message id="incompatible">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="228"/>
@@ -9283,7 +9283,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="vebus_backup_backing_up">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="327"/>
       <source>Backing up...</source>
-      <translation>Sicherung wird erstellt…</translation>
+      <translation>Sicherung wird erstellt...</translation>
     </message>
     <message id="vebus_backup_restore">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="340"/>
@@ -9294,7 +9294,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="vebus_backup_select_backup_file_to_restore">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="343"/>
       <source>Select backup file to restore</source>
-      <translation>Wählen Sie die wiederherzustellende Sicherungsdatei</translation>
+      <translation>Wählen Sie die Sicherungsdatei aus</translation>
     </message>
     <message id="vebus_backup_restoring">
       <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="364"/>
@@ -9336,7 +9336,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
       <location filename="../../pages/settings/devicelist/battery/PageBatteryParameters.qml" line="49"/>
       <source>Requests Charging</source>
       <extracomment>Shows if the battery requests charging: yes or no</extracomment>
-      <translation>Fordert Ladung an</translation>
+      <translation>Anzeigen wenn die Batterie Laden möchte: ja oder nein</translation>
     </message>
     <message id="settings_security_profile_change_password">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="186"/>
@@ -9408,7 +9408,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="charge_another_battery">
       <location filename="../../components/listitems/ListOutputBatteryRadioButtonGroup.qml" line="21"/>
       <source>Charging another battery from the main battery</source>
-      <translation>Eine andere Batterie von der Hauptbatterie laden</translation>
+      <translation>Eine andere Batterie aus der Hauptbatterie aufladen</translation>
     </message>
     <message id="page_switchable_show_controls">
       <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="116"/>
@@ -9449,7 +9449,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="pagesettingsgeneral_modificationchecks_modified">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="23"/>
       <source>Modifications installed</source>
-      <translation>Modifikationen installiert</translation>
+      <translation>Änderungen wurden installiert</translation>
     </message>
     <message id="pagesettingsgeneral_modificationchecks_modbus">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="28"/>
@@ -9469,7 +9469,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="pagesettingsgeneral_modificationchecks_running_integrations">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="43"/>
       <source>%1 running integrations</source>
-      <translation>%1 laufende Integrationen</translation>
+      <translation>%1 laufende Integration(en)</translation>
     </message>
     <message id="pagesettingssupportstate_modifiedstate_clean">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="86"/>

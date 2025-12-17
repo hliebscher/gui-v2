@@ -79,7 +79,7 @@ Page {
 				interactive: false
 				content.children: [
 					SecondaryListLabel {
-						//% "MO-FR 08:00-16:30\"
+						//% "MO-FR 08:00-16:30"
 						text: qsTrId("page_contact_opening_hours_text")
 						width: Math.min(implicitWidth, hoursItem.maximumContentWidth)
 						anchors.verticalCenter: parent.verticalCenter

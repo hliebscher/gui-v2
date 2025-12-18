@@ -67,6 +67,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/LoadGraph.qml
     components/LoadGraphShapePath.qml
     components/KeyNavigationListHelper.qml
+    components/MouseAreaExtender.qml
     components/MultiStepButton.qml
     components/NavBar.qml
     components/NavButton.qml

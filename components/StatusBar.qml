@@ -121,6 +121,14 @@ FocusScope {
 		KeyNavigation.right: auxButton
 
 		onClicked: root.leftButtonClicked()
+
+		MouseAreaExtender {
+			anchors {
+				fill: parent
+				leftMargin: -parent.anchors.leftMargin
+				bottomMargin: -parent.anchors.leftMargin
+			}
+		}
 	}
 
 	StatusBarButton {
@@ -163,6 +171,14 @@ FocusScope {
 		}
 
 		onClicked: root.auxButtonClicked()
+
+		MouseAreaExtender {
+			anchors {
+				fill: parent
+				rightMargin: -Theme.geometry_statusBar_horizontalMargin
+				bottomMargin: -Theme.geometry_statusBar_horizontalMargin
+			}
+		}
 	}
 
 	Breadcrumbs {
@@ -420,6 +436,14 @@ FocusScope {
 						 "qrc:/images/icon_info_32.svg" : "qrc:/images/icon_warning_32.svg"
 		onClicked: Global.mainView.goToNotificationsPage()
 		KeyNavigation.right: alarmButton
+
+		MouseAreaExtender {
+			anchors {
+				fill: parent
+				rightMargin: -parent.anchors.leftMargin
+				bottomMargin: -parent.anchors.leftMargin
+			}
+		}
 	}
 
 	Row {
@@ -449,6 +473,14 @@ FocusScope {
 		text: CommonWords.silence_alarm
 
 		onClicked: NotificationModel.acknowledgeAll()
+
+		MouseAreaExtender {
+			anchors {
+				fill: parent
+				leftMargin: -Theme.geometry_statusBar_rightSideRow_horizontalMargin
+				bottomMargin: -Theme.geometry_statusBar_rightSideRow_horizontalMargin
+			}
+		}
 	}
 
 	Row {
@@ -477,6 +509,14 @@ FocusScope {
 			KeyNavigation.right: sleepButton
 
 			onClicked: root.rightButtonClicked()
+
+			MouseAreaExtender {
+				anchors {
+					fill: parent
+					leftMargin: -rightButtonRow.anchors.rightMargin
+					bottomMargin: -rightButtonRow.anchors.rightMargin
+				}
+			}
 		}
 
 		StatusBarButton {
@@ -487,6 +527,14 @@ FocusScope {
 					&& Global.screenBlanker?.enabled
 					&& Global.pageManager?.interactivity === VenusOS.PageManager_InteractionMode_Interactive
 			onClicked: Global.screenBlanker.setDisplayOff()
+
+			MouseAreaExtender {
+				anchors {
+					fill: parent
+					rightMargin: -rightButtonRow.anchors.rightMargin
+					bottomMargin: -rightButtonRow.anchors.rightMargin
+				}
+			}
 		}
 	}
 

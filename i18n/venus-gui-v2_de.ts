@@ -118,9 +118,9 @@
         <translation>Solarertrag</translation>
     </message>
     <message id="inverters_state_externalccontrol">
-        <location filename="../../../data/System.qml" line="188"/>
-        <source>External control</source>
-        <translation>Externe Steuerung</translation>
+      <location filename="../../data/System.qml" line="186"/>
+      <source>External control</source>
+      <translation>Externe Steuerung</translation>
     </message>
     <message id="levels_page_tanks">
         <location filename="../../../pages/LevelsPage.qml" line="61"/>
@@ -168,10 +168,10 @@
         <translation>WiFi</translation>
     </message>
     <message id="settings_units_gps">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="63"/>
-        <source>GPS</source>
-        <extracomment>GPS units</extracomment>
-        <translation>GPS</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="65"/>
+      <source>GPS</source>
+      <extracomment>GPS units</extracomment>
+      <translation>GPS</translation>
     </message>
     <message id="settings_tank_pump">
         <location filename="../../../pages/settings/devicelist/DeviceListPage.qml" line="118"/>
@@ -1353,38 +1353,38 @@
         <translation>Format der GPS-Daten</translation>
     </message>
     <message id="settings_gps_format_dms_example">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="75"/>
-        <source>52° 20&apos; 41.6&quot; N, 5° 13&apos; 12.3&quot; E</source>
-        <extracomment>Example of GPS data in the &apos;Degrees, Minutes, Seconds&apos; format</extracomment>
-        <translation>52° 20&apos; 41,6&quot; N, 5° 13&apos; 12,3&quot; O</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="77"/>
+      <source>52° 20' 41.6" N, 5° 13' 12.3" E</source>
+      <extracomment>Example of GPS data in the 'Degrees, Minutes, Seconds' format</extracomment>
+      <translation>52° 20' 41,6" N, 5° 13' 12,3" E</translation>
     </message>
     <message id="settings_gps_format_dd_example">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="78"/>
-        <source>52.34489, 5.22008</source>
-        <extracomment>Example of GPS data in the &apos;Decimal Degrees&apos; format</extracomment>
-        <translation>52.34489, 5.22008</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="80"/>
+      <source>52.34489, 5.22008</source>
+      <extracomment>Example of GPS data in the 'Decimal Degrees' format</extracomment>
+      <translation>52,34489, 5,22008</translation>
     </message>
     <message id="settings_gps_format_dm_example">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="81"/>
-        <source>52° 20.693 N, 5° 13.205 E</source>
-        <extracomment>Example of GPS data in the &apos;Degrees Minutes&apos; format</extracomment>
-        <translation>52° 20.693 N, 5° 13.205 O</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="83"/>
+      <source>52° 20.693 N, 5° 13.205 E</source>
+      <extracomment>Example of GPS data in the 'Degrees Minutes' format</extracomment>
+      <translation>52° 20,693 N, 5° 13,205 E</translation>
     </message>
     <message id="settings_gps_speed_unit">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="88"/>
-        <source>Speed Unit</source>
-        <extracomment>Speed unit for reported GPS data</extracomment>
-        <translation>Geschwindigkeitseinheit der GPS-Daten</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="90"/>
+      <source>Speed Unit</source>
+      <extracomment>Speed unit for reported GPS data</extracomment>
+      <translation>Geschwindigkeitseinheit</translation>
     </message>
     <message id="settings_gps_format_mph">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="97"/>
-        <source>Miles per hour</source>
-        <translation>Meilen pro Stunde (mph)</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
+      <source>Miles per hour</source>
+      <translation>Meilen pro Stunde</translation>
     </message>
     <message id="settings_gps_format_kt">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
-        <source>Knots</source>
-        <translation>Knoten (kt)</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="101"/>
+      <source>Knots</source>
+      <translation>Knoten</translation>
     </message>
     <message id="page_settings_gsm_internet">
         <location filename="../../../pages/settings/PageSettingsGsm.qml" line="51"/>
@@ -1659,14 +1659,14 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
         <translation>Langsames Laden</translation>
     </message>
     <message id="inverters_state_system_sustain">
-        <location filename="../../../data/System.qml" line="194"/>
-        <source>Sustain</source>
-        <translation>Erhaltung</translation>
+      <location filename="../../data/System.qml" line="192"/>
+      <source>Sustain</source>
+      <translation>Erhaltung</translation>
     </message>
     <message id="inverters_state_recharge">
-        <location filename="../../../data/System.qml" line="197"/>
-        <source>Recharge</source>
-        <translation>Aufladen</translation>
+      <location filename="../../data/System.qml" line="195"/>
+      <source>Recharge</source>
+      <translation>Aufladen</translation>
     </message>
     <message id="settings_ess_limit_charge_power">
         <location filename="../../../pages/settings/PageSettingsHub4.qml" line="165"/>
@@ -2504,10 +2504,10 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
         <translation>Einstellung Modus</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone">
-        <location filename="../../../data/SystemSettings.qml" line="164"/>
-        <source>Standalone</source>
-        <extracomment>Network status: Standalone</extracomment>
-        <translation>Stand-Alone</translation>
+      <location filename="../../data/SystemSettings.qml" line="167"/>
+      <source>Standalone</source>
+      <extracomment>Network status: Standalone</extracomment>
+      <translation>Stand-Alone</translation>
     </message>
     <message id="charger_standalone">
         <location filename="../../../pages/solar/PageSolarParallelOperation.qml" line="45"/>
@@ -2560,10 +2560,10 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
         <translation type="unfinished">Slave</translation>
     </message>
     <message id="systemsettings_networkstatus_slave">
-        <location filename="../../../data/SystemSettings.qml" line="148"/>
-        <source>Slave</source>
-        <extracomment>Network status: Slave</extracomment>
-        <translation>Slave</translation>
+      <location filename="../../data/SystemSettings.qml" line="151"/>
+      <source>Slave</source>
+      <extracomment>Network status: Slave</extracomment>
+      <translation>Slave</translation>
     </message>
     <message id="charger_group_master">
         <location filename="../../../pages/solar/PageSolarParallelOperation.qml" line="88"/>
@@ -4423,15 +4423,21 @@ Möchtest Sie fortfahren?</translation>
         <source>High DC current</source>
         <translation>DC-Strom hoch</translation>
     </message>
+    <message id="vebus_device_phase_rotation">
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="21"/>
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="19"/>
+      <source>Phase rotation</source>
+      <translation type="unfinished">Phasendrehung</translation>
+    </message>
     <message id="vebus_device_temperature_sense_error">
-        <location filename="../../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="21"/>
-        <source>Temperature sense error</source>
-        <translation>Fehler Temperatursensor</translation>
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="23"/>
+      <source>Temperature sense error</source>
+      <translation>Fehler Temperatursensor</translation>
     </message>
     <message id="vebus_device_voltage_sense_error">
-        <location filename="../../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="23"/>
-        <source>Voltage sense error</source>
-        <translation>Fehler Spannungssensor</translation>
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="25"/>
+      <source>Voltage sense error</source>
+      <translation>Fehler Spannungssensor</translation>
     </message>
     <message id="rssystemalarms_overload">
         <location filename="../../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="48"/>
@@ -4448,11 +4454,6 @@ Möchtest Sie fortfahren?</translation>
         <location filename="../../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="16"/>
         <source>Voltage Sensor</source>
         <translation>Spannungssensor</translation>
-    </message>
-    <message id="vebus_device_phase_rotation">
-        <location filename="../../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="19"/>
-        <source>Phase rotation</source>
-        <translation type="unfinished">Phasendrehung</translation>
     </message>
     <message id="rssystemalarms_phase_rotation">
         <location filename="../../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="27"/>
@@ -4861,9 +4862,9 @@ Möchtest Sie fortfahren?</translation>
         <translation>Ok</translation>
     </message>
     <message id="switchable_output_on">
-        <location filename="../../../src/enums.cpp" line="471"/>
-        <source>On</source>
-        <translation>Ein</translation>
+      <location filename="../../src/enums.cpp" line="474"/>
+      <source>On</source>
+      <translation>Ein</translation>
     </message>
     <message id="common_words_online">
         <location filename="../../../components/CommonWords.qml" line="391"/>
@@ -4934,9 +4935,9 @@ Möchtest Sie fortfahren?</translation>
         <translation>Entfernen</translation>
     </message>
     <message id="switchable_output_running">
-        <location filename="../../../src/enums.cpp" line="468"/>
-        <source>Running</source>
-        <translation>In Betrieb</translation>
+      <location filename="../../src/enums.cpp" line="471"/>
+      <source>Running</source>
+      <translation>In Betrieb</translation>
     </message>
     <message id="common_words_scanning">
         <location filename="../../../components/CommonWords.qml" line="466"/>
@@ -5471,29 +5472,29 @@ This will overwrite all current settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="tank_type_fuel">
-        <location filename="../../../src/enums.cpp" line="495"/>
-        <source>Fuel</source>
-        <translation>Treibstoff</translation>
+      <location filename="../../src/enums.cpp" line="519"/>
+      <source>Fuel</source>
+      <translation>Treibstoff</translation>
     </message>
     <message id="tank_type_fresh_water">
-        <location filename="../../../src/enums.cpp" line="498"/>
-        <source>Fresh water</source>
-        <translation>Frischwasser</translation>
+      <location filename="../../src/enums.cpp" line="522"/>
+      <source>Fresh water</source>
+      <translation>Frischwasser</translation>
     </message>
     <message id="tank_type_waste_water">
-        <location filename="../../../src/enums.cpp" line="501"/>
-        <source>Waste water</source>
-        <translation>Abwasser</translation>
+      <location filename="../../src/enums.cpp" line="525"/>
+      <source>Waste water</source>
+      <translation>Abwasser</translation>
     </message>
     <message id="tank_type_live_well">
-        <location filename="../../../src/enums.cpp" line="504"/>
-        <source>Live well</source>
-        <translation>Fischkasten</translation>
+      <location filename="../../src/enums.cpp" line="528"/>
+      <source>Live well</source>
+      <translation>Fischkasten</translation>
     </message>
     <message id="tank_type_oil">
-        <location filename="../../../src/enums.cpp" line="507"/>
-        <source>Oil</source>
-        <translation>Öl</translation>
+      <location filename="../../src/enums.cpp" line="531"/>
+      <source>Oil</source>
+      <translation>Öl</translation>
     </message>
     <message id="tank_type_black_water">
         <location filename="../../../src/enums.cpp" line="510"/>
@@ -5501,34 +5502,34 @@ This will overwrite all current settings.</source>
         <translation>Fäkalien</translation>
     </message>
     <message id="tank_type_gasoline">
-        <location filename="../../../src/enums.cpp" line="513"/>
-        <source>Gasoline</source>
-        <translation>Benzin</translation>
+      <location filename="../../src/enums.cpp" line="537"/>
+      <source>Gasoline</source>
+      <translation>Benzin</translation>
     </message>
     <message id="tank_type_diesel">
-        <location filename="../../../src/enums.cpp" line="516"/>
-        <source>Diesel</source>
-        <translation>Diesel</translation>
+      <location filename="../../src/enums.cpp" line="540"/>
+      <source>Diesel</source>
+      <translation>Diesel</translation>
     </message>
     <message id="tank_type_lpg">
-        <location filename="../../../src/enums.cpp" line="519"/>
-        <source>LPG</source>
-        <translation>LPG</translation>
+      <location filename="../../src/enums.cpp" line="543"/>
+      <source>LPG</source>
+      <translation>LPG</translation>
     </message>
     <message id="tank_type_lng">
-        <location filename="../../../src/enums.cpp" line="522"/>
-        <source>LNG</source>
-        <translation>LNG</translation>
+      <location filename="../../src/enums.cpp" line="546"/>
+      <source>LNG</source>
+      <translation>LNG</translation>
     </message>
     <message id="tank_type_hydraulic_oil">
-        <location filename="../../../src/enums.cpp" line="525"/>
-        <source>Hydraulic oil</source>
-        <translation>Hydrauliköl</translation>
+      <location filename="../../src/enums.cpp" line="549"/>
+      <source>Hydraulic oil</source>
+      <translation>Hydrauliköl</translation>
     </message>
     <message id="tank_type_raw_water">
-        <location filename="../../../src/enums.cpp" line="528"/>
-        <source>Raw water</source>
-        <translation>Rohwasser</translation>
+      <location filename="../../src/enums.cpp" line="552"/>
+      <source>Raw water</source>
+      <translation>Rohwasser</translation>
     </message>
     <message id="listItem_no_access">
         <location filename="../../../components/listitems/core/ListItem.qml" line="102"/>
@@ -6261,9 +6262,9 @@ This will overwrite all current settings.</source>
         <translation type="unfinished">Zeitgeplant</translation>
     </message>
     <message id="inverters_state_scheduledcharge">
-        <location filename="../../../data/System.qml" line="200"/>
-        <source>Scheduled</source>
-        <translation>Zeitgeplant</translation>
+      <location filename="../../data/System.qml" line="198"/>
+      <source>Scheduled</source>
+      <translation>Zeitgeplant</translation>
     </message>
     <message id="page_generator_warm_up">
         <location filename="../../../data/Generators.qml" line="38"/>
@@ -6329,44 +6330,44 @@ This will overwrite all current settings.</source>
         <translation>Ausgleichen</translation>
     </message>
     <message id="inverters_state_aes_mode">
-        <location filename="../../../data/System.qml" line="130"/>
-        <source>AES mode</source>
-        <translation>AES-Modus</translation>
+      <location filename="../../data/System.qml" line="128"/>
+      <source>AES mode</source>
+      <translation>AES-Modus</translation>
     </message>
     <message id="inverters_state_faultcondition">
-        <location filename="../../../data/System.qml" line="133"/>
-        <source>Fault condition</source>
-        <translation>Störungszustand</translation>
+      <location filename="../../data/System.qml" line="131"/>
+      <source>Fault condition</source>
+      <translation>Störungszustand</translation>
     </message>
     <message id="inverters_state_bulkcharging">
-        <location filename="../../../data/System.qml" line="136"/>
-        <source>Bulk charging</source>
-        <translation>Bulkladung</translation>
+      <location filename="../../data/System.qml" line="134"/>
+      <source>Bulk charging</source>
+      <translation>Bulkladung</translation>
     </message>
     <message id="inverters_state_absorptioncharging">
-        <location filename="../../../data/System.qml" line="139"/>
-        <source>Absorption charging</source>
-        <translation>Absorptionsladung</translation>
+      <location filename="../../data/System.qml" line="137"/>
+      <source>Absorption charging</source>
+      <translation>Absorptionsladung</translation>
     </message>
     <message id="inverters_state_floatcharging">
-        <location filename="../../../data/System.qml" line="142"/>
-        <source>Float charging</source>
-        <translation>Erhaltungsladung</translation>
+      <location filename="../../data/System.qml" line="140"/>
+      <source>Float charging</source>
+      <translation>Erhaltungsladung</translation>
     </message>
     <message id="inverters_state_storagemode">
-        <location filename="../../../data/System.qml" line="145"/>
-        <source>Storage mode</source>
-        <translation>Lagerungsmodus</translation>
+      <location filename="../../data/System.qml" line="143"/>
+      <source>Storage mode</source>
+      <translation>Lagerungsmodus</translation>
     </message>
     <message id="inverters_state_equalisationcharging">
-        <location filename="../../../data/System.qml" line="148"/>
-        <source>Equalization charging</source>
-        <translation>Ausgleichsladung</translation>
+      <location filename="../../data/System.qml" line="146"/>
+      <source>Equalization charging</source>
+      <translation>Ausgleichsladung</translation>
     </message>
     <message id="inverters_state_passthru">
-        <location filename="../../../data/System.qml" line="151"/>
-        <source>Pass-thru</source>
-        <translation>Durchleitung</translation>
+      <location filename="../../data/System.qml" line="149"/>
+      <source>Pass-thru</source>
+      <translation>Durchleitung</translation>
     </message>
     <message id="inverters_state_inverting">
         <location filename="../../../data/System.qml" line="154"/>
@@ -6374,59 +6375,59 @@ This will overwrite all current settings.</source>
         <translation>Erzeugung</translation>
     </message>
     <message id="inverters_state_assisting">
-        <location filename="../../../data/System.qml" line="157"/>
-        <source>Assisting</source>
-        <translation>Unterstützen</translation>
+      <location filename="../../data/System.qml" line="155"/>
+      <source>Assisting</source>
+      <translation>Unterstützen</translation>
     </message>
     <message id="inverters_state_powersupplymode">
-        <location filename="../../../data/System.qml" line="160"/>
-        <source>Power supply mode</source>
-        <translation>Stromversorgungsmodus</translation>
+      <location filename="../../data/System.qml" line="158"/>
+      <source>Power supply mode</source>
+      <translation>Stromversorgungsmodus</translation>
     </message>
     <message id="inverters_state_sustain">
-        <location filename="../../../data/System.qml" line="163"/>
-        <source>Sustain</source>
-        <translation type="unfinished">Erhaltung</translation>
+      <location filename="../../data/System.qml" line="161"/>
+      <source>Sustain</source>
+      <translation type="unfinished">Erhaltung</translation>
     </message>
     <message id="inverters_state_wakeup">
-        <location filename="../../../data/System.qml" line="167"/>
-        <source>Wake up</source>
-        <translation>Aufwachen</translation>
+      <location filename="../../data/System.qml" line="165"/>
+      <source>Wake up</source>
+      <translation>Aufwachen</translation>
     </message>
     <message id="inverters_state_repeatedabsorption">
-        <location filename="../../../data/System.qml" line="170"/>
-        <source>Repeated absorption</source>
-        <translation>Wiederholte Absorption</translation>
+      <location filename="../../data/System.qml" line="168"/>
+      <source>Repeated absorption</source>
+      <translation>Wiederholte Absorption</translation>
     </message>
     <message id="inverters_state_autoequalize">
-        <location filename="../../../data/System.qml" line="173"/>
-        <source>Auto equalize</source>
-        <translation>Automatisch ausgleichen</translation>
+      <location filename="../../data/System.qml" line="171"/>
+      <source>Auto equalize</source>
+      <translation>Automatisch ausgleichen</translation>
     </message>
     <message id="inverters_state_battery_safe">
-        <location filename="../../../data/System.qml" line="176"/>
-        <source>Battery safe</source>
-        <translation>BatterySafe</translation>
+      <location filename="../../data/System.qml" line="174"/>
+      <source>Battery safe</source>
+      <translation>BatterySafe</translation>
     </message>
     <message id="inverters_state_loaddetect">
-        <location filename="../../../data/System.qml" line="179"/>
-        <source>Load detect</source>
-        <translation>Last erkennen</translation>
+      <location filename="../../data/System.qml" line="177"/>
+      <source>Load detect</source>
+      <translation>Last erkennen</translation>
     </message>
     <message id="inverters_state_blocked">
-        <location filename="../../../data/System.qml" line="182"/>
-        <source>Blocked</source>
-        <translation>Blockiert</translation>
+      <location filename="../../data/System.qml" line="180"/>
+      <source>Blocked</source>
+      <translation>Blockiert</translation>
     </message>
     <message id="inverters_state_test">
-        <location filename="../../../data/System.qml" line="185"/>
-        <source>Test</source>
-        <translation>Test</translation>
+      <location filename="../../data/System.qml" line="183"/>
+      <source>Test</source>
+      <translation>Test</translation>
     </message>
     <message id="inverters_state_dynamic_ess">
-        <location filename="../../../data/System.qml" line="203"/>
-        <source>Dynamic ESS</source>
-        <translation type="unfinished">Dynamic ESS</translation>
+      <location filename="../../data/System.qml" line="201"/>
+      <source>Dynamic ESS</source>
+      <translation type="unfinished">Dynamic ESS</translation>
     </message>
     <message id="settings_rs_ess_dess">
         <location filename="../../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="97"/>
@@ -6434,28 +6435,28 @@ This will overwrite all current settings.</source>
         <translation>Dynamic ESS</translation>
     </message>
     <message id="systemsettings_networkstatus_group_master">
-        <location filename="../../../data/SystemSettings.qml" line="152"/>
-        <source>Group Master</source>
-        <extracomment>Network status: Group Master</extracomment>
-        <translation>Group Master</translation>
+      <location filename="../../data/SystemSettings.qml" line="155"/>
+      <source>Group Master</source>
+      <extracomment>Network status: Group Master</extracomment>
+      <translation>Group Master</translation>
     </message>
     <message id="systemsettings_networkstatus_instance_master">
-        <location filename="../../../data/SystemSettings.qml" line="156"/>
-        <source>Instance Master</source>
-        <extracomment>Network status: Instance Master</extracomment>
-        <translation>Master Instanz</translation>
+      <location filename="../../data/SystemSettings.qml" line="159"/>
+      <source>Instance Master</source>
+      <extracomment>Network status: Instance Master</extracomment>
+      <translation>Master Instanz</translation>
     </message>
     <message id="systemsettings_networkstatus_group_and_instance_master">
-        <location filename="../../../data/SystemSettings.qml" line="160"/>
-        <source>Group &amp; Instance Master</source>
-        <extracomment>Network status: Group &amp; Instance Master</extracomment>
-        <translation>Group &amp; Instanz Master</translation>
+      <location filename="../../data/SystemSettings.qml" line="163"/>
+      <source>Group &amp; Instance Master</source>
+      <extracomment>Network status: Group &amp; Instance Master</extracomment>
+      <translation>Group &amp; Instanz Master</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone_and_group_master">
-        <location filename="../../../data/SystemSettings.qml" line="168"/>
-        <source>Standalone &amp; Group Master</source>
-        <extracomment>Network status: Standalone &amp; Group Master</extracomment>
-        <translation>Einzel- und Gruppenmaster</translation>
+      <location filename="../../data/SystemSettings.qml" line="171"/>
+      <source>Standalone &amp; Group Master</source>
+      <extracomment>Network status: Standalone &amp; Group Master</extracomment>
+      <translation>Einzel- und Gruppenmaster</translation>
     </message>
     <message id="inverterCharger_mode_charger_only">
         <location filename="../../../data/InverterChargers.qml" line="45"/>
@@ -8179,9 +8180,9 @@ This will overwrite all current settings.</source>
         <translation>Bestätigen</translation>
     </message>
     <message id="nav_brief_close_side_panel_high_cpu">
-        <location filename="../../../pages/BriefPage.qml" line="392"/>
-        <source>System load high, closing the side panel to reduce CPU load</source>
-        <translation>Hohe Systemlast. Schließen des Seitenpanels zur Reduzierung der CPU-Last</translation>
+      <location filename="../../pages/BriefPage.qml" line="396"/>
+      <source>System load high, closing the side panel to reduce CPU load</source>
+      <translation>Hohe Systemlast. Schließen des Seitenpanels zur Reduzierung der CPU-Last</translation>
     </message>
     <message id="cgwacs_battery_schedule_monthly">
         <location filename="../../../components/listitems/ListChargeSchedule.qml" line="23"/>
@@ -8233,10 +8234,10 @@ This will overwrite all current settings.</source>
         <source>Touch input control</source>
         <translation>Touch-Eingabe-Steuerung</translation>
     </message>
-    <message id="switchable_output_over_temperature">
-        <location filename="../../../src/enums.cpp" line="461"/>
-        <source>Over temperature</source>
-        <translation>Übertemperatur</translation>
+    <message id="switchable_output_overtemperature">
+      <location filename="../../src/enums.cpp" line="461"/>
+      <source>Over temperature</source>
+      <translation>Übertemperatur</translation>
     </message>
     <message id="switch_state_temperature_warning">
         <location filename="../../../src/enums.cpp" line="369"/>
@@ -8253,10 +8254,10 @@ This will overwrite all current settings.</source>
         <source>Channel Fault</source>
         <translation>Kanalstörung</translation>
     </message>
-    <message id="switch_state_channel_Trippped">
-        <location filename="../../../src/enums.cpp" line="375"/>
-        <source>Channel Tripped</source>
-        <translation>Kanal ausgelöst</translation>
+    <message id="switch_state_channel_tripped">
+      <location filename="../../src/enums.cpp" line="375"/>
+      <source>Channel Tripped</source>
+      <translation>Kanal ausgelöst</translation>
     </message>
     <message id="switch_state_under_voltage">
         <location filename="../../../src/enums.cpp" line="378"/>
@@ -8299,14 +8300,14 @@ This will overwrite all current settings.</source>
         <translation>Ausgelöst</translation>
     </message>
     <message id="switchable_output_fault">
-        <location filename="../../../src/enums.cpp" line="464"/>
-        <source>Fault</source>
-        <translation type="unfinished">Störung</translation>
+      <location filename="../../src/enums.cpp" line="467"/>
+      <source>Fault</source>
+      <translation type="unfinished">Störung</translation>
     </message>
     <message id="switchable_output_short">
-        <location filename="../../../src/enums.cpp" line="475"/>
-        <source>Short</source>
-        <translation>Kurzschluss</translation>
+      <location filename="../../src/enums.cpp" line="478"/>
+      <source>Short</source>
+      <translation>Kurzschluss</translation>
     </message>
     <message id="ess_state_optimized_without_batterylife_button">
         <location filename="../../../data/Ess.qml" line="36"/>
@@ -9989,14 +9990,14 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
         <translation>Dies wird das Rootfs mit der neuesten offiziellen Firmware herunterladen und aktualisieren.&lt;br&gt;Internetverbindung erforderlich.&lt;br&gt;Drücken Sie „OK“, um fortzufahren.</translation>
     </message>
     <message id="settings_gps_format_kmh">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="93"/>
-        <source>Kilometres per hour</source>
-        <translation>Kilometer pro Stunde</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="95"/>
+      <source>Kilometres per hour</source>
+      <translation>Kilometer pro Stunde</translation>
     </message>
     <message id="settings_gps_format_ms">
-        <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="95"/>
-        <source>Metres per second</source>
-        <translation>Meter pro Sekunde</translation>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="97"/>
+      <source>Metres per second</source>
+      <translation>Meter pro Sekunde</translation>
     </message>
     <message id="components_volumeunit_cubic_metres">
         <location filename="../../../components/listitems/ListVolumeUnitRadioButtonGroup.qml" line="15"/>
@@ -10327,9 +10328,9 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
         <extra-Context>only shown on desktop systems</extra-Context>
     </message>
     <message id="load_delegate_status">
-        <location filename="../../../pages/loads/LoadListDelegate.qml" line="72"/>
-        <source>Status: %1</source>
-        <translation>Status: %1</translation>
+      <location filename="../../pages/loads/LoadListDelegate.qml" line="75"/>
+      <source>Status: %1</source>
+      <translation>Status: %1</translation>
     </message>
     <message id="settings_relay_polarity_relay1">
         <location filename="../../../pages/settings/PageSettingsRelay.qml" line="76"/>
@@ -10414,19 +10415,19 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
         <translation>Microgrid-Parameter</translation>
     </message>
     <message id="microgrid_mode_hybrid_droop">
-        <location filename="../../../src/enums.cpp" line="539"/>
-        <source>Hybrid droop</source>
-        <translation>Hybrider Droop</translation>
+      <location filename="../../src/enums.cpp" line="563"/>
+      <source>Hybrid droop</source>
+      <translation>Hybrider Droop</translation>
     </message>
     <message id="microgrid_mode_grid_following">
-        <location filename="../../../src/enums.cpp" line="542"/>
-        <source>Grid-following</source>
-        <translation>Netzfolgend</translation>
+      <location filename="../../src/enums.cpp" line="566"/>
+      <source>Grid-following</source>
+      <translation>Netzfolgend</translation>
     </message>
     <message id="microgrid_mode_grid_forming">
-        <location filename="../../../src/enums.cpp" line="545"/>
-        <source>Grid-forming</source>
-        <translation>Netzbildend</translation>
+      <location filename="../../src/enums.cpp" line="569"/>
+      <source>Grid-forming</source>
+      <translation>Netzbildend</translation>
     </message>
     <message id="switchable_output_trip_low_voltage">
         <location filename="../../../src/enums.cpp" line="481"/>
@@ -10599,9 +10600,9 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
         <translation type="unfinished">Niedrig</translation>
     </message>
     <message id="switchable_output_bypassed">
-        <location filename="../../../src/enums.cpp" line="484"/>
-        <source>Bypassed</source>
-        <translation>Überbrückt</translation>
+      <location filename="../../src/enums.cpp" line="493"/>
+      <source>Bypassed</source>
+      <translation>Überbrückt</translation>
     </message>
     <message id="switchableoutput_list_delegate_auto_status">
         <location filename="../../../pages/settings/devicelist/switchable-outputs/SwitchableOutputListDelegate.qml" line="93"/>
@@ -10884,36 +10885,96 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
         <source>Connect devices that support this function</source>
         <translation>Verbinden Sie Geräte, die diese Funktion unterstützen</translation>
     </message>
+    <message id="settings_vrm_device_registration">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="95"/>
+      <source>VRM device registration</source>
+      <translation>VRM Geräte-Registrierung</translation>
+    </message>
     <message id="common_words_go_to_redetect_system">
-        <location filename="../../../components/CommonWords.qml" line="221"/>
-        <source>If it was recently disconnected, go to Settings → Devices → %1 → Advanced, and select &apos;Redetect VE.Bus system&apos;.</source>
-        <extracomment>%1 = name of the device</extracomment>
-        <translation></translation>
+      <location filename="../../components/CommonWords.qml" line="221"/>
+      <source>If it was recently disconnected, go to Settings → Devices → %1 → Advanced, and select 'Redetect VE.Bus system'.</source>
+      <extracomment>%1 = name of the device</extracomment>
+      <translation>Wenn die Verbindung kürzlich getrennt wurde, gehen Sie zu Einstellungen → Geräte → %1 → Erweitert, und wählen Sie 'VE.Bus-System erneut erkennen'.</translation>
     </message>
     <message id="settings_canbus_nmea2000out_alerts">
       <location filename="../../pages/settings/PageSettingsCanbus.qml" line="76"/>
       <source>NMEA2000 outbound alerts</source>
-      <translation/>
+      <translation>NMEA2000 ausgehende Warnmeldungen</translation>
     </message>
     <message id="settings_logging_vrm_portal">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="45"/>
       <source>VRM Portal access level</source>
-      <translation/>
+      <translation>VRM Portal Zugriffslevel</translation>
     </message>
     <message id="settings_firmware_check_timed_out">
       <location filename="../../components/FirmwareUpdate.qml" line="207"/>
       <source>Firmware check timed out</source>
-      <translation/>
+      <translation>Firmware-Prüfung ist abgelaufen</translation>
     </message>
     <message id="devicelist_motordrive_motordirection">
       <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="57"/>
       <source>Motor Direction</source>
-      <translation/>
+      <translation>Motorrichtung</translation>
     </message>
     <message id="devicelist_motordrive_motortorque">
       <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="64"/>
       <source>Motor Torque</source>
-      <translation/>
+      <translation>Motordrehmoment</translation>
+    </message>
+    <message id="settings_units_mixed">
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="53"/>
+      <source>Mixed (AC in Watts, DC in Amps)</source>
+      <translation>Gemischt (AC in Watt, DC in Ampere)</translation>
+    </message>
+    <message id="switchable_output_overtemperature_tripped">
+      <location filename="../../src/enums.cpp" line="464"/>
+      <source>Over temp, tripped</source>
+      <translation>Übertemperatur, ausgelöst</translation>
+    </message>
+    <message id="switchable_output_disabled">
+      <location filename="../../src/enums.cpp" line="481"/>
+      <source>Disabled</source>
+      <translation type="unfinished">Deaktiviert</translation>
+    </message>
+    <message id="switchable_output_disabled_tripped">
+      <location filename="../../src/enums.cpp" line="484"/>
+      <source>Disabled, tripped</source>
+      <translation>Deaktiviert, ausgelöst</translation>
+    </message>
+    <message id="switchable_output_disabled_overtemperature">
+      <location filename="../../src/enums.cpp" line="487"/>
+      <source>Disabled, over temp</source>
+      <translation>Deaktiviert, Übertemperatur</translation>
+    </message>
+    <message id="switchable_output_disabled_on">
+      <location filename="../../src/enums.cpp" line="490"/>
+      <source>Disabled but on</source>
+      <translation>Deaktiviert, aber eingeschaltet</translation>
+    </message>
+    <message id="switchable_output_bypassed_tripped">
+      <location filename="../../src/enums.cpp" line="496"/>
+      <source>Bypassed, tripped</source>
+      <translation>Überbrückt, ausgelöst</translation>
+    </message>
+    <message id="switchable_output_bypassed_overtemperature">
+      <location filename="../../src/enums.cpp" line="499"/>
+      <source>Bypassed, over temp</source>
+      <translation>Überbrückt, Übertemperatur</translation>
+    </message>
+    <message id="switchable_output_externalcontrol">
+      <location filename="../../src/enums.cpp" line="502"/>
+      <source>External control</source>
+      <translation type="unfinished">Externe Steuerung</translation>
+    </message>
+    <message id="switchable_output_externalcontrol_tripped">
+      <location filename="../../src/enums.cpp" line="505"/>
+      <source>External control, tripped</source>
+      <translation>Externe Steuerung, ausgelöst</translation>
+    </message>
+    <message id="switchable_output_externalcontrol_overtemperature">
+      <location filename="../../src/enums.cpp" line="508"/>
+      <source>External control, over temp</source>
+      <translation>Externe Steuerung, Übertemperatur</translation>
     </message>
     <message id="settings_radio_button_group_unknown">
         <location filename="../../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
@@ -11240,11 +11301,11 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
 <context>
     <name>CUMMINS</name>
     <message>
-        <location filename="../../../src/veutil/src/qt/genset_error.cpp" line="1034"/>
-        <location filename="../../../src/veutil/src/qt/genset_error.cpp" line="1040"/>
-        <location filename="../../../src/veutil/src/qt/genset_error.cpp" line="1046"/>
-        <source>Unknown error: </source>
-        <translation type="unfinished">Unbekannter Fehler:</translation>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1034"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1040"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1046"/>
+      <source>Unknown error: </source>
+      <translation>Unbekannter Fehler:</translation>
     </message>
 </context>
 <context>

@@ -740,7 +740,7 @@
     <message id="settings_canbus_nmea2000out_alerts">
         <location filename="../../../pages/settings/PageSettingsCanbus.qml" line="76"/>
         <source>NMEA2000 outbound alerts</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="settings_canbus_unique_id_rvc_description">
         <location filename="../../../pages/settings/PageSettingsCanbus.qml" line="102"/>
@@ -1356,7 +1356,7 @@
         <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="75"/>
         <source>52° 20&apos; 41.6&quot; N, 5° 13&apos; 12.3&quot; E</source>
         <extracomment>Example of GPS data in the &apos;Degrees, Minutes, Seconds&apos; format</extracomment>
-        <translation>52° 20&apos; 41,6&quot; N, 5° 13&apos; 12,3&quot; O</translation>
+        <translation>52° 20' 41,6" N, 5° 13' 12,3" O</translation>
     </message>
     <message id="settings_gps_format_dd_example">
         <location filename="../../../pages/settings/PageSettingsDisplayUnits.qml" line="78"/>
@@ -1477,7 +1477,7 @@ Sollte das nicht funktionieren, überprüfen Sie die Sim-Karte in einem Telefon 
     <message id="page_settings_gsm_connecting">
         <location filename="../../../pages/settings/PageSettingsGsm.qml" line="176"/>
         <source>Connecting</source>
-        <translation type="unfinished">Verbindung wird hergestellt</translation>
+        <translation>Verbindung wird hergestellt</translation>
     </message>
     <message id="page_settings_gsm_connected">
         <location filename="../../../pages/settings/PageSettingsGsm.qml" line="179"/>
@@ -5060,122 +5060,122 @@ Möchtest Sie fortfahren?</translation>
     <message id="tank_backup_creating_usb">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="21"/>
         <source>Creating USB...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_usb_created_successfully">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="24"/>
         <source>USB created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_usb_creation_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="27"/>
         <source>USB creation failed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_press_to_create_usb">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="30"/>
         <source>Press to create USB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_backing_up">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="37"/>
         <source>Backing up...</source>
-        <translation type="unfinished">Sicherung wird erstellt...</translation>
+        <translation>Sicherung wird erstellt...</translation>
     </message>
     <message id="tank_backup_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="40"/>
         <source>Backup successful</source>
-        <translation type="unfinished">Sicherung erfolgreich</translation>
+        <translation>Sicherung erfolgreich</translation>
     </message>
     <message id="tank_backup_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="43"/>
         <source>Backup failed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_press_to_backup">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="46"/>
         <source>Press to backup</source>
-        <translation type="unfinished">Drücken zum Sichern</translation>
+        <translation>Drücken zum Sichern</translation>
     </message>
     <message id="tank_restore_restoring">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="53"/>
         <source>Restoring...</source>
-        <translation type="unfinished">Wiederherstellung...</translation>
+        <translation>Wiederherstellung...</translation>
     </message>
     <message id="tank_restore_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="56"/>
         <source>Restore successful</source>
-        <translation type="unfinished">Wiederherstellung erfolgreich</translation>
+        <translation>Wiederherstellung erfolgreich</translation>
     </message>
     <message id="tank_restore_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="59"/>
         <source>Restore failed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_restore_press_to_restore">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="62"/>
         <source>Press to restore</source>
-        <translation type="unfinished">Zum Wiederherst. drücken</translation>
+        <translation>Zum Wiederherst. drücken</translation>
     </message>
     <message id="tank_delete_deleting">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="69"/>
         <source>Deleting...</source>
-        <translation type="unfinished">Lösche...</translation>
+        <translation>Lösche...</translation>
     </message>
     <message id="tank_delete_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="72"/>
         <source>Delete successful</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_delete_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="75"/>
         <source>Delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_delete_press_to_delete">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="78"/>
         <source>Press to delete</source>
-        <translation type="unfinished">Drücken zum Löschen</translation>
+        <translation>Drücken zum Löschen</translation>
     </message>
     <message id="tank_backup_result_create_usb_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="86"/>
         <source>Create USB successful</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_result_backup_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="89"/>
         <source>Tank settings backup successful</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_result_restore_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="92"/>
         <source>Tank settings restored successful</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_result_file_delete_successful">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="95"/>
         <source>Tank settings backup deleted successful</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_result_create_usb_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="98"/>
         <source>Create USB failed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_result_backup_process_unexpedly_closed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="101"/>
         <source>Backup process unexpectedly closed</source>
-        <translation type="unfinished">Sicherungsprozess wurde unerwartet beendet</translation>
+        <translation>Sicherungsprozess wurde unerwartet beendet</translation>
     </message>
     <message id="tank_backup_result_restore_process_unexpedly_closed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="104"/>
         <source>Restore process unexpectedly closed</source>
-        <translation type="unfinished">Wiederherstellungsprozess wurde unerwartet beendet</translation>
+        <translation>Wiederherstellungsprozess wurde unerwartet beendet</translation>
     </message>
     <message id="tank_backup_result_file_delete_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="107"/>
         <source>Tank settings backup delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="Unknown">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="110"/>
@@ -5188,100 +5188,100 @@ Möchtest Sie fortfahren?</translation>
     <message id="tank_backup_error_no_usb_drive_mounted">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="127"/>
         <source>No USB drive is mounted. Please insert a USB drive and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_create_usb_exception">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="132"/>
         <source>An error occurred while creating the USB drive. Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_backup_exception">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="137"/>
         <source>An error occurred while backing up the tank settings. Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_restore_exception">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="142"/>
         <source>An error occurred while restoring the tank settings. Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_archive_file_delete_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="147"/>
         <source>Failed to delete existing archive file on USB drive. Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_backup_file_delete_failed">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="152"/>
         <source>Failed to delete existing backup file on USB drive. Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_no_backup_file_found">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="157"/>
         <source>No tank settings backup file found on USB drive. Please create a backup first.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_error_unknown_error">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="162"/>
         <source>An unknown error occurred: #%1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_vebus_settings">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="195"/>
         <source>VE.Bus Settings</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_tank_settings">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="234"/>
         <source>Tank Settings</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_backup_firmware_version_specific_message">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="239"/>
         <source>Note: Backup files are Venus OS firmware version specific and can only be used to restore settings on products with matching firmware versions</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_tank_settings_backup_to_usb">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="266"/>
         <source>Backup all tank settings to USB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_no_usb_connected">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="268"/>
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="283"/>
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="314"/>
         <source>No USB connected</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_restore_from_usb">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="281"/>
         <source>Restore all tank settings from USB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_restore_from_usb_warning">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="294"/>
         <source>Are you sure that you want to restore the tank settings from the USB?
 This will overwrite all current settings.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_delete_backup_from_usb">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="312"/>
         <source>Delete tank setting backup from USB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_delete_backup_warning">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="325"/>
         <source>Are you sure that you want to delelte the tank settings from the USB?</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="components_mount_state_eject_usb">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="343"/>
         <source>Eject USB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="pagesettingsbackuprestore_tank_settings_prevent_automatic_restore_on_usb_insert">
         <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="351"/>
         <source>Prevent automatic restore of tank settings on USB insert</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="common_words_vebus_error">
         <location filename="../../../components/CommonWords.qml" line="574"/>
@@ -5468,7 +5468,7 @@ This will overwrite all current settings.</source>
     <message id="settings_firmware_check_timed_out">
         <location filename="../../../components/FirmwareUpdate.qml" line="207"/>
         <source>Firmware check timed out</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="tank_type_fuel">
         <location filename="../../../src/enums.cpp" line="495"/>
@@ -7008,7 +7008,7 @@ This will overwrite all current settings.</source>
         <location filename="../../../pages/settings/PageSettingsGeneral.qml" line="112"/>
         <location filename="../../../pages/settings/PageSettingsGeneral.qml" line="245"/>
         <source>Backup &amp; Restore</source>
-        <translation type="unfinished">Sichern &amp; Wiederherstellen</translation>
+        <translation>Sichern &amp; Wiederherstellen</translation>
     </message>
     <message id="pagesettingsgeneral_firmware">
         <location filename="../../../pages/settings/PageSettingsGeneral.qml" line="118"/>
@@ -7799,7 +7799,7 @@ This will overwrite all current settings.</source>
         <location filename="../../../pages/solar/PageSolarCharger.qml" line="102"/>
         <source>PV</source>
         <extracomment>PV power for solar charger</extracomment>
-        <translation type="unfinished">PV Power für Solarlader</translation>
+        <translation>PV Power für Solarlader</translation>
     </message>
     <message id="solarcharger_total_power">
         <location filename="../../../pages/solar/PageSolarCharger.qml" line="127"/>
@@ -7810,13 +7810,13 @@ This will overwrite all current settings.</source>
         <location filename="../../../pages/solar/PageSolarCharger.qml" line="211"/>
         <source>Total yield</source>
         <extracomment>Solar charger total yield</extracomment>
-        <translation type="unfinished">Solar Gesamtertrag</translation>
+        <translation>Solar Gesamtertrag</translation>
     </message>
     <message id="solarcharger_system_yield">
         <location filename="../../../pages/solar/PageSolarCharger.qml" line="220"/>
         <source>System yield</source>
         <extracomment>Solar charger system yield</extracomment>
-        <translation type="unfinished">Solar Systemertrag</translation>
+        <translation>Solar Systemertrag</translation>
     </message>
     <message id="settings_multirs_total_yield">
         <location filename="../../../pages/settings/devicelist/rs/PageMultiRs.qml" line="63"/>
@@ -7973,7 +7973,7 @@ This will overwrite all current settings.</source>
         <location filename="../../../components/CommonWords.qml" line="262"/>
         <source>Inactive</source>
         <extracomment>Status is &apos;inactive&apos;</extracomment>
-        <translation type="unfinished">Status ist Inaktiv</translation>
+        <translation>Status ist Inaktiv</translation>
     </message>
     <message id="common_words_input_current_limit">
         <location filename="../../../components/CommonWords.qml" line="265"/>
@@ -8018,12 +8018,12 @@ This will overwrite all current settings.</source>
         <location filename="../../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
         <location filename="../../../pages/settings/PageSettingsSupportStatus.qml" line="433"/>
         <source>No</source>
-        <translation type="unfinished">Kein</translation>
+        <translation>Kein</translation>
     </message>
     <message id="common_words_none_option">
         <location filename="../../../components/CommonWords.qml" line="362"/>
         <source>None</source>
-        <translation type="unfinished">Keine(s)</translation>
+        <translation>Keine(s)</translation>
     </message>
     <message id="common_words_none_errors">
         <location filename="../../../components/CommonWords.qml" line="366"/>
@@ -8101,7 +8101,7 @@ This will overwrite all current settings.</source>
         <location filename="../../../components/CommonWords.qml" line="517"/>
         <source>Startup (%1)</source>
         <extracomment>Status = &quot;start up&quot;. %1 = the startup status number</extracomment>
-        <translation type="unfinished">Status = Inbetriebnahme (%1)</translation>
+        <translation>Status = Inbetriebnahme (%1)</translation>
     </message>
     <message id="common_words_stopped">
         <location filename="../../../components/CommonWords.qml" line="526"/>
@@ -8761,7 +8761,7 @@ Beachten Sie, dass dieses Menü nur Carlo Gavazzi Zähler anzeigt, die über RS4
     <message id="modbus_add_unit_invalid">
         <location filename="../../../pages/settings/PageSettingsModbusAddDevice.qml" line="61"/>
         <source>%1 is not a valid unit number. Use a number between 1-247.</source>
-        <translation type="unfinished">%1 ist keine gültige Geräte ID. Verwenden Sie eine Zahl zwischen 1-247.</translation>
+        <translation>%1 ist keine gültige Geräte ID. Verwenden Sie eine Zahl zwischen 1-247.</translation>
     </message>
     <message id="page_settings_fronius_unitid_invalid">
         <location filename="../../../pages/settings/PageSettingsFroniusAddLocation.qml" line="35"/>
@@ -8873,12 +8873,12 @@ Beachten Sie, dass dieses Menü nur Carlo Gavazzi Zähler anzeigt, die über RS4
     <message id="devicelist_motordrive_motordirection">
         <location filename="../../../pages/settings/devicelist/PageMotorDrive.qml" line="57"/>
         <source>Motor Direction</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="devicelist_motordrive_motortorque">
         <location filename="../../../pages/settings/devicelist/PageMotorDrive.qml" line="64"/>
         <source>Motor Torque</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message id="devicelist_motordrive_motortemperature">
         <location filename="../../../pages/settings/devicelist/PageMotorDrive.qml" line="72"/>
@@ -10913,12 +10913,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="brief_ac_loads">
         <location filename="../../../pages/BriefSidePanel.qml" line="257"/>
         <source>AC Loads</source>
-        <translation type="unfinished">AC-Verbraucher</translation>
+        <translation>AC-Verbraucher</translation>
     </message>
     <message id="brief_dc_loads">
         <location filename="../../../pages/BriefSidePanel.qml" line="285"/>
         <source>DC Loads</source>
-        <translation type="unfinished">DC-Verbraucher</translation>
+        <translation>DC-Verbraucher</translation>
     </message>
     <message id="nav_overview">
         <location filename="../../../pages/OverviewPage.qml" line="490"/>
@@ -10974,46 +10974,46 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
         <location filename="../../../components/StatusBar.qml" line="291"/>
         <source>Kontakt</source>
         <oldsource>Contact</oldsource>
-        <translation type="unfinished">Kontakt</translation>
+        <translation>Kontakt</translation>
     </message>
     <message id="page_contact_contact">
         <location filename="../../../pages/PageContact.qml" line="16"/>
         <source>Kontakt</source>
         <oldsource>Contact</oldsource>
-        <translation type="unfinished">Kontakt</translation>
+        <translation>Kontakt</translation>
     </message>
     <message id="page_contact_address">
         <location filename="../../../pages/PageContact.qml" line="22"/>
         <source>Anschrift</source>
         <oldsource>Address</oldsource>
-        <translation type="unfinished">Anschrift</translation>
+        <translation>Anschrift</translation>
     </message>
     <message id="page_contact_phone">
         <location filename="../../../pages/PageContact.qml" line="36"/>
         <source>Telefon</source>
         <oldsource>Phone</oldsource>
-        <translation type="unfinished">Telefon</translation>
+        <translation>Telefon</translation>
     </message>
     <message id="page_contact_fax">
         <location filename="../../../pages/PageContact.qml" line="50"/>
         <source>Fax</source>
-        <translation type="unfinished">Fax</translation>
+        <translation>Fax</translation>
     </message>
     <message id="page_contact_email">
         <location filename="../../../pages/PageContact.qml" line="64"/>
         <source>E-Mail</source>
-        <translation type="unfinished">E-Mail</translation>
+        <translation>E-Mail</translation>
     </message>
     <message id="page_contact_opening_hours">
         <location filename="../../../pages/PageContact.qml" line="78"/>
         <source>Öffnungszeiten</source>
         <oldsource>Opening Hours</oldsource>
-        <translation type="unfinished">Öffnungszeiten</translation>
+        <translation>Öffnungszeiten</translation>
     </message>
     <message id="page_contact_opening_hours_text">
         <location filename="../../../pages/PageContact.qml" line="83"/>
         <source>MO-FR 08:00-16:30</source>
-        <translation type="unfinished">MO-FR 08:00-16:30 Uhr</translation>
+        <translation>MO-FR 08:00-16:30 Uhr</translation>
     </message>
 </context>
 <context>
@@ -11219,7 +11219,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
         <location filename="../../../src/veutil/src/qt/genset_error.cpp" line="1040"/>
         <location filename="../../../src/veutil/src/qt/genset_error.cpp" line="1046"/>
         <source>Unknown error: </source>
-        <translation type="unfinished">Unbekannter Fehler:</translation>
+        <translation>Unbekannter Fehler:</translation>
     </message>
 </context>
 <context>

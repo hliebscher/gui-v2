@@ -1800,7 +1800,7 @@ Verwendung, sofern nicht vom Energieversorger untersagt.</translation>
     <message id="settings_vrm_device_registration">
         <location filename="../../../pages/settings/PageSettingsLogger.qml" line="95"/>
         <source>VRM device registration</source>
-        <translation type="unfinished"></translation>
+        <translation>VRM Geräte-Registrierung</translation>
     </message>
     <message id="settings_log_interval">
         <location filename="../../../pages/settings/PageSettingsLogger.qml" line="112"/>
@@ -8242,25 +8242,25 @@ This will overwrite all current settings.</source>
       <location filename="../../src/enums.cpp" line="69"/>
       <source>N</source>
       <extracomment>Abbreviation of "North" direction</extracomment>
-      <translation type="unfinished">N</translation>
+      <translation>N</translation>
     </message>
     <message id="cardinalDirection_short_south">
       <location filename="../../src/enums.cpp" line="73"/>
       <source>S</source>
       <extracomment>Abbreviation of "South" direction</extracomment>
-      <translation type="unfinished">mit einer</translation>
+      <translation>mit einer</translation>
     </message>
     <message id="cardinalDirection_short_east">
       <location filename="../../src/enums.cpp" line="77"/>
       <source>E</source>
       <extracomment>Abbreviation of "East" direction</extracomment>
-      <translation type="unfinished">E-Mail</translation>
+      <translation>E-Mail</translation>
     </message>
     <message id="cardinalDirection_short_west">
       <location filename="../../src/enums.cpp" line="81"/>
       <source>W</source>
       <extracomment>Abbreviation of "West" direction</extracomment>
-      <translation type="unfinished">W</translation>
+      <translation>W</translation>
     </message>
     <message id="dcMeter_bilge_pump">
       <location filename="../../src/enums.cpp" line="137"/>
@@ -10972,7 +10972,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="switchable_output_externalcontrol">
       <location filename="../../src/enums.cpp" line="524"/>
       <source>External control</source>
-      <translation type="unfinished">Externe Steuerung</translation>
+      <translation>Externe Steuerung</translation>
     </message>
     <message id="switchable_output_externalcontrol_tripped">
       <location filename="../../src/enums.cpp" line="527"/>
@@ -11022,97 +11022,97 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="ev_target_soc">
       <location filename="../../pages/ev/EvPage.qml" line="25"/>
       <source>Target state of charge</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_range">
       <location filename="../../pages/ev/EvPage.qml" line="32"/>
       <source>Range</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_battery_capacity">
       <location filename="../../pages/ev/EvPage.qml" line="40"/>
       <source>Battery capacity</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_power">
       <location filename="../../pages/ev/EvPage.qml" line="47"/>
       <source>Power</source>
-      <translation type="unfinished">Leistung</translation>
+      <translation>Leistung</translation>
     </message>
     <message id="ev_charging_state">
       <location filename="../../pages/ev/EvPage.qml" line="56"/>
       <source>Charging state</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_charging_state_not_charging">
       <location filename="../../pages/ev/EvPage.qml" line="62"/>
       <source>Not charging</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_charging_state_low_power">
       <location filename="../../pages/ev/EvPage.qml" line="65"/>
       <source>Low power mode</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_charging_state_charging">
       <location filename="../../pages/ev/EvPage.qml" line="68"/>
       <source>Charging</source>
-      <translation type="unfinished">Aufladen</translation>
+      <translation>Aufladen</translation>
     </message>
     <message id="ev_charging_state_sustain">
       <location filename="../../pages/ev/EvPage.qml" line="71"/>
       <source>Sustain</source>
-      <translation type="unfinished">Erhaltung</translation>
+      <translation>Erhaltung</translation>
     </message>
     <message id="ev_charging_state_wake_up">
       <location filename="../../pages/ev/EvPage.qml" line="74"/>
       <source>Wake up</source>
-      <translation type="unfinished">Aufwachen</translation>
+      <translation>Aufwachen</translation>
     </message>
     <message id="ev_charging_state_discharging">
       <location filename="../../pages/ev/EvPage.qml" line="77"/>
       <source>Discharging</source>
-      <translation type="unfinished">Entladen</translation>
+      <translation>Entladen</translation>
     </message>
     <message id="ev_charging_state_scheduled_charging">
       <location filename="../../pages/ev/EvPage.qml" line="80"/>
       <source>Scheduled charging</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_charging_state_unknown">
       <location filename="../../pages/ev/EvPage.qml" line="83"/>
       <source>Unknown</source>
-      <translation type="unfinished">Unbekannt</translation>
+      <translation>Unbekannt</translation>
     </message>
     <message id="ev_at_site">
       <location filename="../../pages/ev/EvPage.qml" line="91"/>
       <source>At site</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_last_contact">
       <location filename="../../pages/ev/EvPage.qml" line="98"/>
       <source>Last contact</source>
-      <translation type="unfinished">Letzter Kontakt</translation>
+      <translation>Letzter Kontakt</translation>
     </message>
     <message id="ev_vin">
       <location filename="../../pages/ev/EvPage.qml" line="106"/>
       <source>VIN</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_odometer">
       <location filename="../../pages/ev/EvPage.qml" line="113"/>
       <source>Odometer</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="ev_position">
       <location filename="../../pages/ev/EvPage.qml" line="122"/>
       <source>Position</source>
-      <translation type="unfinished">Position</translation>
+      <translation>Position</translation>
     </message>
     <message id="ev_nr_phases">
       <location filename="../../pages/ev/EvPage.qml" line="139"/>
       <source>Number of phases</source>
-      <translation type="unfinished"/>
+      <translation/>
     </message>
     <message id="settings_state">
         <location filename="../../../pages/settings/PageCanbusStatus.qml" line="116"/>

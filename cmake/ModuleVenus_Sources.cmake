@@ -67,7 +67,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/LoadGraph.qml
     components/LoadGraphShapePath.qml
     components/KeyNavigationListHelper.qml
-    components/MouseAreaExtender.qml
     components/MultiStepButton.qml
     components/NavBar.qml
     components/NavButton.qml
@@ -339,6 +338,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/controlcards/EVCSCard.qml
     pages/controlcards/GeneratorCard.qml
     pages/controlcards/InverterChargerCard.qml
+    pages/ev/EvPage.qml
     pages/evcs/EvChargerListPage.qml
     pages/evcs/EvChargerPage.qml
     pages/evcs/EvChargerSetupPage.qml
@@ -372,6 +372,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsBatteryMeasurements.qml
     pages/settings/PageSettingsBleSensors.qml
     pages/settings/PageSettingsBluetooth.qml
+    pages/settings/PageSettingsBoatPage.qml
     pages/settings/PageSettingsCanbus.qml
     pages/settings/PageSettingsCanOpenMotordrive.qml
     pages/settings/PageSettingsCGwacs.qml
@@ -462,6 +463,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/devicelist/battery/PageBatterySettings.qml
     pages/settings/devicelist/battery/PageBatterySettingsBattery.qml
     pages/settings/devicelist/battery/PageLynxDistributorList.qml
+    pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml
     pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml
     pages/settings/devicelist/battery/PageLynxIonIo.qml
     pages/settings/devicelist/battery/PageLynxIonSystem.qml
@@ -488,6 +490,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/devicelist/delegates/DeviceListDelegate_dcsource.qml
     pages/settings/devicelist/delegates/DeviceListDelegate_dcsystem.qml
     pages/settings/devicelist/delegates/DeviceListDelegate_digitalinput.qml
+    pages/settings/devicelist/delegates/DeviceListDelegate_ev.qml
     pages/settings/devicelist/delegates/DeviceListDelegate_evcharger.qml
     pages/settings/devicelist/delegates/DeviceListDelegate_fuelcell.qml
     pages/settings/devicelist/delegates/DeviceListDelegate_genset.qml

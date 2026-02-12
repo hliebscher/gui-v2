@@ -34,15 +34,18 @@ FocusScope {
 		Component.onCompleted: Global.firmwareUpdate = firmwareUpdate
 	}
 
-	ScreenBlanker {
+	QtObject {
 		id: screenBlanker
-		enabled: !Global.splashScreenVisible && !mainView.statusBar.notificationButtonVisible
-		displayOffTime: displayOffItem.valid ? 1000*displayOffItem.value : 0.0
-		window: root.Window.window
+
 		property VeQuickItem displayOffItem: VeQuickItem {
 			uid: !!Global.systemSettings ? Global.systemSettings.serviceUid + "/Settings/Gui/DisplayOff" : ""
 		}
-		Component.onCompleted: Global.screenBlanker = screenBlanker
+
+		Component.onCompleted: {
+			ScreenBlanker.enabled = Qt.binding(function() { return !Global.splashScreenVisible && !mainView.statusBar.notificationButtonVisible })
+			ScreenBlanker.displayOffTime = Qt.binding(function() { return screenBlanker.displayOffItem.valid ? 1000*screenBlanker.displayOffItem.value : 0 })
+			ScreenBlanker.window = root.Window.window
+		}
 	}
 
 	MouseArea {
@@ -120,8 +123,11 @@ FocusScope {
 	//
 	// Note this Loader is the top-most layer, to allow the idleModeMouseArea beneath to call
 	// acceptMouseEvent() when clicking outside of the focused text field, to auto-close the Qt VKB.
-	Loader {
+	property Loader _vkbLoader: Loader {
 		id: keyboardHandlerLoader
+
+		parent: root.Overlay.overlay
+		z: 1
 
 		asynchronous: true
 		active: Global.isGxDevice || BackendConnection.needsWasmKeyboardHandler
@@ -135,8 +141,25 @@ FocusScope {
 		source: Global.isGxDevice
 				? "qrc:/qt/qml/Victron/VenusOS/components/InputPanel.qml"
 				: "qrc:/qt/qml/Victron/VenusOS/components/WasmVirtualKeyboardHandler.qml"
-		parent: Overlay.overlay
-		z: 1
+
+		property Rotation requiredRotation: Rotation {
+			origin.x: width / 2
+			origin.y: height / 2
+			angle: 90
+		}
+
+		Component.onCompleted: {
+			if (Global.main && Global.main.requiresRotation) {
+				// See issue #2702.
+				// Our workaround is the rotate the overlay layer so that it isn't
+				// clipped by the render geometry, and then counter-rotate the
+				// children (VKB, dialogs), and reposition children to account
+				// for the coordinate system transformations.
+				// We will remove all of this once we get EGLFS working and can
+				// simply rotate the entire surface directly.
+				root.Overlay.overlay.transform = keyboardHandlerLoader.requiredRotation
+			}
+		}
 	}
 
 	// Sometimes, the wasm code may crash. Use a watchdog to detect this and reload the page when necessary.

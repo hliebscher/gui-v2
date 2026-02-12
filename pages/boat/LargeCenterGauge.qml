@@ -10,11 +10,11 @@ Item {
 	id: root
 
 	required property VeQuickItemsQuotient gps
-	required property MotorDrive motorDrive
+	required property MotorDrives motorDrives
 
 	property bool animationEnabled: false
 
-	readonly property VeQuickItemsQuotient motorDriveDcConsumption: root.motorDrive ? root.motorDrive.dcConsumption.quotient : null
+	readonly property VeQuickItemsQuotient motorDriveDcConsumption: root.motorDrives.dcConsumption.quotient
 	readonly property VeQuickItemsQuotient activeDataSource: root.gps.valid ? root.gps
 			: root.motorDriveDcConsumption.valid ? root.motorDriveDcConsumption
 			: null
@@ -34,9 +34,11 @@ Item {
 		height: width
 		radius: width/2
 		endAngle: Theme.geometry_boatPage_centerGauge_angularRange
-		value: root.activeDataSource ? root.activeDataSource.percentage : 0
+		value: root.activeDataSource ? Math.abs(root.activeDataSource.percentage) : 0
 		strokeWidth: Theme.geometry_boatPage_centerGauge_strokeWidth
 		animationEnabled: root.animationEnabled
+		progressColor: root.activeDataSource === root.motorDriveDcConsumption && root.motorDrives.isRegenerating ? Theme.color_boatPage_regenProgress : Theme.color_ok
+		remainderColor: root.activeDataSource === root.motorDriveDcConsumption && root.motorDrives.isRegenerating ? Theme.color_boatPage_regenRemainder : Theme.color_darkOk
 		objectName: "centerGauge"
 		visible: root.activeDataSource === root.gps || root.activeDataSource === root.motorDriveDcConsumption
 
@@ -131,10 +133,10 @@ Item {
 			id: motorDriveGauges
 
 			topPadding: Theme.geometry_boatPage_motorDriveGauges_topPadding
-			motorDrive: root.motorDrive
+			motorDrives: root.motorDrives
 			showDcConsumption: !root.gps.valid
 			visible: root.activeDataSource === root.motorDriveDcConsumption ||
-					 (root.activeDataSource === null && root.motorDrive.rpm.valid)
+					 (root.activeDataSource === null && root.motorDrives.singleMotorDrive.rpm.valid)
 		}
 
 		Label {
@@ -144,8 +146,8 @@ Item {
 			verticalAlignment: Text.AlignVCenter
 			topPadding: Theme.geometry_boatPage_rpmLabel_topPadding
 			font.pixelSize: Theme.font_size_h1
-			text: Units.formatNumber(Math.abs(root.motorDrive.rpm._numerator.value))
-			visible: root.motorDrive && root.motorDrive.rpm.numeratorUid && !isNaN(root.motorDrive.rpm.numerator)
+			text: Units.formatNumber(Math.abs(root.motorDrives.singleMotorDrive.rpm._numerator.value))
+			visible: root.motorDrives.singleMotorDrive.rpm.valid
 		}
 
 		Label {
@@ -175,14 +177,129 @@ Item {
 		radius: width/2
 		startAngle: outerGauge.startAngle
 		endAngle: outerGauge.endAngle
-		value: root.motorDrive ? root.motorDrive.rpm.percentage : 0
+		value: root.motorDrives.singleMotorDrive.rpm.percentage
 		strokeWidth: Theme.geometry_boatPage_rpmGauge_strokeWidth
 		animationEnabled: root.animationEnabled
-		visible: root.motorDrive.rpm.valid
+		visible: root.motorDrives.singleMotorDrive.rpm.valid
 
 		layer.enabled: !BackendConnection.msaaEnabled
 		layer.textureSize: Qt.size(2*width, 2*height)
 		layer.smooth: true
+	}
+
+	ProgressArc {
+		id: leftRpmGauge
+
+		anchors {
+			top: parent.top
+			topMargin: Theme.geometry_boatPage_rpmGauge_topMargin
+			horizontalCenter: parent.horizontalCenter
+		}
+		rotation: outerGauge.rotation
+		width: Theme.geometry_boatPage_rpmGauge_width
+		height: width
+		radius: width/2
+		startAngle: outerGauge.startAngle
+		endAngle: outerGauge.startAngle + Theme.geometry_boatPage_dualRpmGauge_spanAngle
+		value: root.motorDrives.leftMotorDrive.rpm.percentage
+		strokeWidth: Theme.geometry_boatPage_rpmGauge_strokeWidth
+		animationEnabled: root.animationEnabled
+		visible: root.motorDrives.leftMotorDrive.rpm.valid
+
+		layer.enabled: !BackendConnection.msaaEnabled
+		layer.textureSize: Qt.size(2*width, 2*height)
+		layer.smooth: true
+	}
+
+	ProgressArc {
+		id: rightRpmGauge
+
+		anchors {
+			top: parent.top
+			topMargin: Theme.geometry_boatPage_rpmGauge_topMargin
+			horizontalCenter: parent.horizontalCenter
+		}
+		rotation: outerGauge.rotation
+		direction: PathArc.Counterclockwise
+		width: Theme.geometry_boatPage_rpmGauge_width
+		height: width
+		radius: width/2
+		startAngle: outerGauge.endAngle
+		endAngle: outerGauge.endAngle - Theme.geometry_boatPage_dualRpmGauge_spanAngle
+		value: root.motorDrives.rightMotorDrive.rpm.percentage
+		strokeWidth: Theme.geometry_boatPage_rpmGauge_strokeWidth
+		animationEnabled: root.animationEnabled
+		visible: root.motorDrives.rightMotorDrive.rpm.valid
+
+		layer.enabled: !BackendConnection.msaaEnabled
+		layer.textureSize: Qt.size(2*width, 2*height)
+		layer.smooth: true
+	}
+
+	Item {
+		id: dualRpmLabels
+
+		anchors {
+			horizontalCenter: leftRpmGauge.horizontalCenter
+			bottom: leftRpmGauge.bottom
+			bottomMargin: Theme.geometry_boatPage_dualRpmLabels_bottomMargin
+		}
+		width: 2 * leftRpmGauge.radius * Math.sin(((outerGauge.endAngle - outerGauge.startAngle) * Math.PI / 180) / 2)
+		implicitHeight: leftRpmLabel.height
+		visible: leftRpmGauge.visible && rightRpmGauge.visible
+
+		Label {
+			id: leftRpmLabel
+
+			anchors {
+				right: parent.horizontalCenter
+				rightMargin: Theme.geometry_boatPage_dualRpmLabel_margin
+			}
+			verticalAlignment: Text.AlignVCenter
+			font.pixelSize: Theme.font_size_body3
+			text: Math.abs(root.motorDrives.leftMotorDrive.rpm._numerator.value)
+		}
+
+		Rectangle {
+			id: separator
+
+			anchors {
+				top: parent.top
+				topMargin: Theme.geometry_boatPage_dualRpmSeparator_margin
+				bottom: parent.bottom
+				bottomMargin:  Theme.geometry_boatPage_dualRpmSeparator_margin
+				horizontalCenter: parent.horizontalCenter
+			}
+			width: Theme.geometry_boatPage_dualRpmSeparator_width
+			color: Theme.color_font_secondary
+			visible: Theme.screenSize === Theme.FiveInch
+		}
+
+		Label {
+			id: rightRpmLabel
+
+			anchors {
+				left: parent.horizontalCenter
+				leftMargin: Theme.geometry_boatPage_dualRpmLabel_margin
+			}
+			verticalAlignment: Text.AlignVCenter
+			font.pixelSize: Theme.font_size_body3
+			text: Math.abs(root.motorDrives.rightMotorDrive.rpm._numerator.value)
+		}
+	}
+
+	Label {
+		id: dualRpmLabel
+
+		anchors {
+			horizontalCenter: dualRpmLabels.horizontalCenter
+			bottom: Theme.screenSize === Theme.SevenInch ? dualRpmLabels.bottom : outerGaugeMin.bottom
+		}
+		verticalAlignment: Text.AlignVCenter
+		font.pixelSize: Theme.font_size_body2
+		color: Theme.color_font_secondary
+		text: qsTrId("boat_page_rpm")
+		visible: leftRpmGauge.visible && rightRpmGauge.visible
 	}
 
 	Label {

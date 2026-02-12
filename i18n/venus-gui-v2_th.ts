@@ -20,7 +20,7 @@
       <translation>พลังงาน</translation>
     </message>
     <message id="solarchargers_state_off">
-      <location filename="../../src/enums.cpp" line="331"/>
+      <location filename="../../src/enums.cpp" line="353"/>
       <source>Off</source>
       <translation>ปิด</translation>
     </message>
@@ -71,7 +71,7 @@
       <translation>สถานะ</translation>
     </message>
     <message id="settings_firmware_installing">
-      <location filename="../../components/FirmwareUpdate.qml" line="67"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="77"/>
       <source>Installing %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>กำลังติดตั้ง %1...</translation>
@@ -118,7 +118,7 @@
       <translation>ผลผลิตพลังงานแสงอาทิตย์</translation>
     </message>
     <message id="inverters_state_externalccontrol">
-      <location filename="../../data/System.qml" line="183"/>
+      <location filename="../../data/System.qml" line="186"/>
       <source>External control</source>
       <translation>การควบคุมภายนอก</translation>
     </message>
@@ -168,7 +168,7 @@
       <translation>Wi-Fi</translation>
     </message>
     <message id="settings_units_gps">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="63"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="65"/>
       <source>GPS</source>
       <extracomment>GPS units</extracomment>
       <translation>จีพีเอส</translation>
@@ -509,66 +509,66 @@
       <translation>ใช้งานจนกว่าแบตเตอรี่จะชาร์จจนเต็ม</translation>
     </message>
     <message id="settings_gps_ok_fix">
-      <location filename="../../pages/settings/PageGps.qml" line="49"/>
+      <location filename="../../pages/settings/PageGps.qml" line="26"/>
       <source>GPS OK (fix)</source>
       <translation>GPS ตกลง (แก้ไข)</translation>
     </message>
     <message id="settings_gps_ok_no_fix">
-      <location filename="../../pages/settings/PageGps.qml" line="52"/>
+      <location filename="../../pages/settings/PageGps.qml" line="29"/>
       <source>GPS connected, but no GPS fix</source>
       <translation>เชื่อมต่อ GPS แล้ว แต่ไม่มีการซ่อม GPS</translation>
     </message>
     <message id="settings_gps_not_connected">
-      <location filename="../../pages/settings/PageGps.qml" line="55"/>
+      <location filename="../../pages/settings/PageGps.qml" line="32"/>
       <source>No GPS connected</source>
       <translation>ไม่ได้เชื่อมต่อ GPS</translation>
     </message>
     <message id="settings_gps_latitude">
-      <location filename="../../pages/settings/PageGps.qml" line="61"/>
+      <location filename="../../pages/settings/PageGps.qml" line="38"/>
       <source>Latitude</source>
       <translation>ละติจูด</translation>
     </message>
     <message id="settings_gps_longitude">
-      <location filename="../../pages/settings/PageGps.qml" line="68"/>
+      <location filename="../../pages/settings/PageGps.qml" line="45"/>
       <source>Longitude</source>
       <translation>ลองจิจูด</translation>
     </message>
     <message id="settings_gps_speed_kmh">
-      <location filename="../../pages/settings/PageGps.qml" line="83"/>
+      <location filename="../../pages/settings/PageGps.qml" line="60"/>
       <source>%1 km/h</source>
       <extracomment>GPS speed data, in kilometres per hour</extracomment>
       <translation>%1 กม./ชม</translation>
     </message>
     <message id="settings_gps_speed_mph">
-      <location filename="../../pages/settings/PageGps.qml" line="87"/>
+      <location filename="../../pages/settings/PageGps.qml" line="64"/>
       <source>%1 mph</source>
       <extracomment>GPS speed data, in miles per hour</extracomment>
       <translation>%1 ไมล์ต่อชั่วโมง</translation>
     </message>
     <message id="settings_gps_speed_kt">
-      <location filename="../../pages/settings/PageGps.qml" line="91"/>
+      <location filename="../../pages/settings/PageGps.qml" line="68"/>
       <source>%1 kt</source>
       <extracomment>GPS speed data, in knots</extracomment>
       <translation>%1 กิโลตัน</translation>
     </message>
     <message id="settings_gps_speed_ms">
-      <location filename="../../pages/settings/PageGps.qml" line="95"/>
+      <location filename="../../pages/settings/PageGps.qml" line="72"/>
       <source>%1 m/s</source>
       <extracomment>GPS speed data, in metres per second</extracomment>
       <translation>%1 เมตร/วินาที</translation>
     </message>
     <message id="settings_gps_course">
-      <location filename="../../pages/settings/PageGps.qml" line="102"/>
+      <location filename="../../pages/settings/PageGps.qml" line="79"/>
       <source>Course</source>
       <translation>คอร์ส</translation>
     </message>
     <message id="settings_gps_altitude">
-      <location filename="../../pages/settings/PageGps.qml" line="110"/>
+      <location filename="../../pages/settings/PageGps.qml" line="87"/>
       <source>Altitude</source>
       <translation>ระดับความสูง</translation>
     </message>
     <message id="settings_gps_num_satellites">
-      <location filename="../../pages/settings/PageGps.qml" line="119"/>
+      <location filename="../../pages/settings/PageGps.qml" line="96"/>
       <source>Number of satellites</source>
       <translation>จำนวนดาวเทียม</translation>
     </message>
@@ -683,7 +683,7 @@
       <translation>อินเวอร์เตอร์ PV ในเฟส 2 ตำแหน่ง</translation>
     </message>
     <message id="settings_canbus_profile">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="41"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="46"/>
       <source>CAN-bus profile</source>
       <translation>โปรไฟล์ CAN บัส</translation>
     </message>
@@ -718,47 +718,47 @@
       <translation>อุปกรณ์</translation>
     </message>
     <message id="settings_canbus_nmea2000out">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="62"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="67"/>
       <source>NMEA2000-out</source>
       <translation>NMEA2000 ออก</translation>
     </message>
     <message id="settings_canbus_unique_id_select">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="78"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="94"/>
       <source>Unique identity number selector</source>
       <translation>ตัวเลือกหมายเลขประจำตัวที่ไม่ซ้ำ</translation>
     </message>
     <message id="settings_canbus_unique_id_wait">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="90"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="106"/>
       <source>Please wait, changing and checking the unique number takes a while</source>
       <translation>โปรดรอสักครู่ การเปลี่ยนและตรวจสอบหมายเลขเฉพาะจะใช้เวลาสักครู่</translation>
     </message>
     <message id="settings_canbus_unique_id_vecan_description">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="83"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="99"/>
       <source>Above selector sets which block of unique identity numbers to use for the NAME Unique Identity Numbers in the PGN 60928 NAME field. Change only when using multiple GX Devices in one VE.Can network.</source>
       <translation>ตัวเลือกด้านบนจะกำหนดว่าบล็อกใดของหมายเลขประจำตัวที่ไม่ซ้ำกันที่จะใช้สำหรับหมายเลขประจำตัวที่ไม่ซ้ำของ NAME ในฟิลด์ PGN 60928 NAME เปลี่ยนเมื่อใช้อุปกรณ์ GX หลายเครื่องในเครือข่าย VE.Can เดียวเท่านั้น</translation>
     </message>
     <message id="settings_canbus_unique_id_rvc_description">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="86"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="102"/>
       <source>Above selector sets which block of unique identity numbers to use for the Serial number in the DGN 60928 ADDRESS_CLAIM field. Change only when using multiple GX Devices in one RV-C network.</source>
       <translation>ตัวเลือกด้านบนจะกำหนดว่าบล็อกใดของหมายเลขประจำตัวที่ไม่ซ้ำกันที่จะใช้สำหรับหมายเลขซีเรียลในฟิลด์ DGN 60928 ADDRESS_CLAIM เปลี่ยนเมื่อใช้อุปกรณ์ GX หลายเครื่องในเครือข่าย RV-C เดียวเท่านั้น</translation>
     </message>
     <message id="settings_canbus_unique_id_choose">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="107"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="123"/>
       <source>Check Unique id numbers</source>
       <translation>ตรวจสอบหมายเลขประจำตัวที่ไม่ซ้ำ</translation>
     </message>
     <message id="settings_canbus_unique_id_press_to_check">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="112"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="128"/>
       <source>Press to check</source>
       <translation type="unfinished">กดเพื่อตรวจสอบ</translation>
     </message>
     <message id="settings_canbus_unique_id_conflict">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="125"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="141"/>
       <source>There is another device connected with this unique number, please select a new number.</source>
       <translation>มีอุปกรณ์อื่นเชื่อมต่อกับหมายเลขเฉพาะนี้ โปรดเลือกหมายเลขใหม่</translation>
     </message>
     <message id="settings_canbus_unique_id_ok">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="133"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="149"/>
       <source>OK: No other device is connected with this unique number.</source>
       <translation>ตกลง: ไม่มีอุปกรณ์อื่นเชื่อมต่อกับหมายเลขเฉพาะนี้</translation>
     </message>
@@ -1342,42 +1342,42 @@
       <translation>รีเซ็ตตัวจับเวลาบริการ</translation>
     </message>
     <message id="settings_gps_format">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="69"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="71"/>
       <source>Format</source>
       <extracomment>Format of reported GPS data</extracomment>
       <translation>รูปแบบ</translation>
     </message>
     <message id="settings_gps_format_dms_example">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="75"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="77"/>
       <source>52° 20' 41.6" N, 5° 13' 12.3" E</source>
       <extracomment>Example of GPS data in the 'Degrees, Minutes, Seconds' format</extracomment>
       <translation>52° 20' 41.6" N, 5° 13' 12.3" E</translation>
     </message>
     <message id="settings_gps_format_dd_example">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="78"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="80"/>
       <source>52.34489, 5.22008</source>
       <extracomment>Example of GPS data in the 'Decimal Degrees' format</extracomment>
       <translation>52.34489, 5.22008</translation>
     </message>
     <message id="settings_gps_format_dm_example">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="81"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="83"/>
       <source>52° 20.693 N, 5° 13.205 E</source>
       <extracomment>Example of GPS data in the 'Degrees Minutes' format</extracomment>
       <translation>52° 20.693 N, 5° 13.205 E</translation>
     </message>
     <message id="settings_gps_speed_unit">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="88"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="90"/>
       <source>Speed Unit</source>
       <extracomment>Speed unit for reported GPS data</extracomment>
       <translation>หน่วยความเร็ว</translation>
     </message>
     <message id="settings_gps_format_mph">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="97"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
       <source>Miles per hour</source>
       <translation>ไมล์ต่อชั่วโมง</translation>
     </message>
     <message id="settings_gps_format_kt">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="101"/>
       <source>Knots</source>
       <translation>นอต</translation>
     </message>
@@ -1654,12 +1654,12 @@ Use unless prohibited by the utility provider.</source>
       <translation>ชาร์จช้า</translation>
     </message>
     <message id="inverters_state_system_sustain">
-      <location filename="../../data/System.qml" line="189"/>
+      <location filename="../../data/System.qml" line="192"/>
       <source>Sustain</source>
       <translation>ยังชีพประคับประคอง</translation>
     </message>
     <message id="inverters_state_recharge">
-      <location filename="../../data/System.qml" line="192"/>
+      <location filename="../../data/System.qml" line="195"/>
       <source>Recharge</source>
       <translation>เติมเงิน</translation>
     </message>
@@ -1719,42 +1719,42 @@ Use unless prohibited by the utility provider.</source>
       <translation>เปิดใช้งานการจำกัดการป้อนเข้า</translation>
     </message>
     <message id="digitalinputs_type_pulsemeter">
-      <location filename="../../src/enums.cpp" line="195"/>
+      <location filename="../../src/enums.cpp" line="217"/>
       <source>Pulse meter</source>
       <translation>เครื่องวัดชีพจร</translation>
     </message>
     <message id="digitalinputs_type_dooralarm">
-      <location filename="../../src/enums.cpp" line="198"/>
+      <location filename="../../src/enums.cpp" line="220"/>
       <source>Door alarm</source>
       <translation>สัญญาณเตือนประตู</translation>
     </message>
     <message id="switchable_output_bilge_pump">
-      <location filename="../../src/enums.cpp" line="424"/>
+      <location filename="../../src/enums.cpp" line="446"/>
       <source>Bilge pump</source>
       <translation>ปั๊มน้ำท้องเรือ</translation>
     </message>
     <message id="digitalinputs_type_bilgealarm">
-      <location filename="../../src/enums.cpp" line="204"/>
+      <location filename="../../src/enums.cpp" line="226"/>
       <source>Bilge alarm</source>
       <translation>สัญญาณเตือนท้องเรือ</translation>
     </message>
     <message id="digitalinputs_type_burglaralarm">
-      <location filename="../../src/enums.cpp" line="207"/>
+      <location filename="../../src/enums.cpp" line="229"/>
       <source>Burglar alarm</source>
       <translation>สัญญาณกันขโมย</translation>
     </message>
     <message id="digitalinputs_type_smokealarm">
-      <location filename="../../src/enums.cpp" line="210"/>
+      <location filename="../../src/enums.cpp" line="232"/>
       <source>Smoke alarm</source>
       <translation>เครื่องตรวจจับควัน</translation>
     </message>
     <message id="digitalinputs_type_firealarm">
-      <location filename="../../src/enums.cpp" line="213"/>
+      <location filename="../../src/enums.cpp" line="235"/>
       <source>Fire alarm</source>
       <translation>สัญญาณเตือนไฟไหม้</translation>
     </message>
     <message id="digitalinputs_type_co2alarm">
-      <location filename="../../src/enums.cpp" line="216"/>
+      <location filename="../../src/enums.cpp" line="238"/>
       <source>CO2 alarm</source>
       <translation>สัญญาณเตือน CO2</translation>
     </message>
@@ -2329,12 +2329,12 @@ Use unless prohibited by the utility provider.</source>
       <translation>ที่อยู่ IP ของลิงก์ในเครื่อง</translation>
     </message>
     <message id="settings_vecan_instance_zero_warning">
-      <location filename="../../pages/settings/PageSettingsVecanDevice.qml" line="29"/>
+      <location filename="../../pages/settings/PageSettingsVecanDevice.qml" line="36"/>
       <source>Careful, for ESS systems, as well as systems with a managed battery, the CAN-bus device instance must remain configured to 0. See GX manual for more information.</source>
       <translation>ระวัง สำหรับระบบ ESS เช่นเดียวกับระบบที่มีแบตเตอรี่ที่มีการจัดการ อินสแตนซ์อุปกรณ์ CAN-bus จะต้องยังคงกำหนดค่าเป็น 0 ดูข้อมูลเพิ่มเติมในคู่มือ GX</translation>
     </message>
     <message id="settings_vecan_nad">
-      <location filename="../../pages/settings/PageSettingsVecanDevice.qml" line="45"/>
+      <location filename="../../pages/settings/PageSettingsVecanDevice.qml" line="53"/>
       <source>Network Address</source>
       <translation>ที่อยู่เครือข่าย</translation>
     </message>
@@ -2430,22 +2430,22 @@ Use unless prohibited by the utility provider.</source>
       <translation>ไม่ได้เชื่อมต่อ %1</translation>
     </message>
     <message id="settings_vrm_device_instances_reboot_now">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="136"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="138"/>
       <source>Reboot now?</source>
       <translation>รีบูทเดี๋ยวนี้?</translation>
     </message>
     <message id="settings_vrm_device_instances_reboot_now_description">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="139"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="141"/>
       <source>VRM instance changes will not be applied until the device is rebooted.</source>
       <translation>การเปลี่ยนแปลงอินสแตนซ์ VRM จะไม่มีผลจนกว่าจะรีบูตอุปกรณ์</translation>
     </message>
     <message id="settings_vrm_device_instances_rebooting">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="159"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="161"/>
       <source>Device is rebooting...</source>
       <translation>อุปกรณ์กำลังรีบูต...</translation>
     </message>
     <message id="settings_vrm_device_instances_rebooted">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="162"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="164"/>
       <source>Device has been rebooted.</source>
       <translation>อุปกรณ์ได้รับการรีบูตแล้ว</translation>
     </message>
@@ -2460,25 +2460,25 @@ Use unless prohibited by the utility provider.</source>
       <translation>สัญญาณเตือนแรงดันแบตเตอรี่สูง</translation>
     </message>
     <message id="common_words_last_error">
-      <location filename="../../components/CommonWords.qml" line="643"/>
+      <location filename="../../components/CommonWords.qml" line="647"/>
       <source>Last error</source>
       <extracomment>Details of last error</extracomment>
       <translation>ข้อผิดพลาดล่าสุด</translation>
     </message>
     <message id="common_words_2nd_last_error">
-      <location filename="../../components/CommonWords.qml" line="646"/>
+      <location filename="../../components/CommonWords.qml" line="650"/>
       <source>2nd last error</source>
       <extracomment>Details of 2nd last error</extracomment>
       <translation>ผิดพลาดครั้งที่ 2</translation>
     </message>
     <message id="common_words_3rd_last_error">
-      <location filename="../../components/CommonWords.qml" line="649"/>
+      <location filename="../../components/CommonWords.qml" line="653"/>
       <source>3rd last error</source>
       <extracomment>Details of 3rd last error</extracomment>
       <translation>ผิดพลาดครั้งที่ 3</translation>
     </message>
     <message id="common_words_4th_last_error">
-      <location filename="../../components/CommonWords.qml" line="652"/>
+      <location filename="../../components/CommonWords.qml" line="656"/>
       <source>4th last error</source>
       <extracomment>Details of 4th last error</extracomment>
       <translation>ผิดพลาดครั้งที่ 4</translation>
@@ -2494,7 +2494,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>การตั้งค่าโหมด</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone">
-      <location filename="../../data/SystemSettings.qml" line="164"/>
+      <location filename="../../data/SystemSettings.qml" line="175"/>
       <source>Standalone</source>
       <extracomment>Network status: Standalone</extracomment>
       <translation>สแตนด์อโลน</translation>
@@ -2550,7 +2550,7 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">ตัวรอง</translation>
     </message>
     <message id="systemsettings_networkstatus_slave">
-      <location filename="../../data/SystemSettings.qml" line="148"/>
+      <location filename="../../data/SystemSettings.qml" line="159"/>
       <source>Slave</source>
       <extracomment>Network status: Slave</extracomment>
       <translation>ตัวรอง</translation>
@@ -2619,7 +2619,7 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">เตือน</translation>
     </message>
     <message id="digitalinputs_state_alarm">
-      <location filename="../../src/enums.cpp" line="270"/>
+      <location filename="../../src/enums.cpp" line="292"/>
       <source>Alarm</source>
       <extracomment>Digital input state</extracomment>
       <translation>เตือน</translation>
@@ -3883,12 +3883,12 @@ Use unless prohibited by the utility provider.</source>
       <translation>อุปกรณ์ Smappee bus</translation>
     </message>
     <message id="common_words_setting_disabled_when_dmc_connected">
-      <location filename="../../components/CommonWords.qml" line="669"/>
+      <location filename="../../components/CommonWords.qml" line="673"/>
       <source>This setting is disabled when a Digital Multi Control is connected.</source>
       <translation>การตั้งค่านี้จะถูกปิดใช้งานเมื่อเชื่อมต่อ Digital Multi Control</translation>
     </message>
     <message id="common_words_setting_disabled_when_bms_connected">
-      <location filename="../../components/CommonWords.qml" line="658"/>
+      <location filename="../../components/CommonWords.qml" line="662"/>
       <source>This setting is disabled when a VE.Bus BMS is connected.</source>
       <translation>การตั้งค่านี้ถูกปิดใช้งานเมื่อมีการเชื่อมต่อ VE.Bus BMS</translation>
     </message>
@@ -4412,13 +4412,19 @@ Do you want to continue?</source>
       <source>High DC current</source>
       <translation>กระแสตรงสูง</translation>
     </message>
-    <message id="vebus_device_temperature_sense_error">
+    <message id="vebus_device_phase_rotation">
       <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="21"/>
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="19"/>
+      <source>Phase rotation</source>
+      <translation type="unfinished">การหมุนเฟส</translation>
+    </message>
+    <message id="vebus_device_temperature_sense_error">
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="23"/>
       <source>Temperature sense error</source>
       <translation>ข้อผิดพลาดในการวัดอุณหภูมิ</translation>
     </message>
     <message id="vebus_device_voltage_sense_error">
-      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="23"/>
+      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="25"/>
       <source>Voltage sense error</source>
       <translation>ข้อผิดพลาดในการรับรู้แรงดันไฟฟ้า</translation>
     </message>
@@ -4437,11 +4443,6 @@ Do you want to continue?</source>
       <location filename="../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="16"/>
       <source>Voltage Sensor</source>
       <translation>เซ็นเซอร์แรงดันไฟฟ้า</translation>
-    </message>
-    <message id="vebus_device_phase_rotation">
-      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="19"/>
-      <source>Phase rotation</source>
-      <translation type="unfinished">การหมุนเฟส</translation>
     </message>
     <message id="rssystemalarms_phase_rotation">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="27"/>
@@ -4608,7 +4609,7 @@ Do you want to continue?</source>
       <translation>ล้างข้อผิดพลาด</translation>
     </message>
     <message id="digitalinputs_state_closed">
-      <location filename="../../src/enums.cpp" line="262"/>
+      <location filename="../../src/enums.cpp" line="284"/>
       <source>Closed</source>
       <extracomment>Digital input state</extracomment>
       <translation>ปิด</translation>
@@ -4674,7 +4675,7 @@ Do you want to continue?</source>
       <translation>พลังงาน</translation>
     </message>
     <message id="pvinverter_statusCode_error">
-      <location filename="../../src/enums.cpp" line="312"/>
+      <location filename="../../src/enums.cpp" line="334"/>
       <source>Error</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>ข้อผิดพลาด</translation>
@@ -4695,7 +4696,7 @@ Do you want to continue?</source>
       <translation>เวอร์ชั่นเฟิร์มแวร์</translation>
     </message>
     <message id="digitalinputs_type_generator">
-      <location filename="../../src/enums.cpp" line="219"/>
+      <location filename="../../src/enums.cpp" line="241"/>
       <source>Generator</source>
       <translation>เครื่องกำเนิดไฟฟ้า</translation>
     </message>
@@ -4818,7 +4819,7 @@ Do you want to continue?</source>
       <translation>ชื่อรุ่น</translation>
     </message>
     <message id="digitalinputs_state_no">
-      <location filename="../../src/enums.cpp" line="250"/>
+      <location filename="../../src/enums.cpp" line="272"/>
       <source>No</source>
       <extracomment>Digital input state</extracomment>
       <translation>ไม่</translation>
@@ -4844,13 +4845,13 @@ Do you want to continue?</source>
       <translation>ออฟไลน์</translation>
     </message>
     <message id="digitalinputs_state_ok">
-      <location filename="../../src/enums.cpp" line="266"/>
+      <location filename="../../src/enums.cpp" line="288"/>
       <source>OK</source>
       <extracomment>Digital input state</extracomment>
       <translation>ตกลง</translation>
     </message>
     <message id="switchable_output_on">
-      <location filename="../../src/enums.cpp" line="471"/>
+      <location filename="../../src/enums.cpp" line="496"/>
       <source>On</source>
       <translation>เปิด</translation>
     </message>
@@ -4860,7 +4861,7 @@ Do you want to continue?</source>
       <translation>ออนไลน์</translation>
     </message>
     <message id="digitalinputs_state_open">
-      <location filename="../../src/enums.cpp" line="258"/>
+      <location filename="../../src/enums.cpp" line="280"/>
       <source>Open</source>
       <extracomment>Digital input open</extracomment>
       <translation>เปิด</translation>
@@ -4923,7 +4924,7 @@ Do you want to continue?</source>
       <translation>ลบ</translation>
     </message>
     <message id="switchable_output_running">
-      <location filename="../../src/enums.cpp" line="468"/>
+      <location filename="../../src/enums.cpp" line="493"/>
       <source>Running</source>
       <translation>ทำงาน</translation>
     </message>
@@ -4953,7 +4954,7 @@ Do you want to continue?</source>
       <translation>ความแรงของสัญญาณ</translation>
     </message>
     <message id="pvinverter_statusCode_standby">
-      <location filename="../../src/enums.cpp" line="304"/>
+      <location filename="../../src/enums.cpp" line="326"/>
       <source>Standby</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>สแตนด์บาย</translation>
@@ -4989,7 +4990,7 @@ Do you want to continue?</source>
       <translation>สถานะ</translation>
     </message>
     <message id="pvinverter_statusCode_startup">
-      <location filename="../../src/enums.cpp" line="296"/>
+      <location filename="../../src/enums.cpp" line="318"/>
       <source>Startup (%1)</source>
       <extracomment>PV inverter status code. %1 = the startup status number</extracomment>
       <translation>การเริ่มต้น (%1)</translation>
@@ -5005,7 +5006,7 @@ Do you want to continue?</source>
       <translation>หยุดเมื่อถึงเงื่อนไขสำหรับ</translation>
     </message>
     <message id="digitalinputs_state_stopped">
-      <location filename="../../src/enums.cpp" line="278"/>
+      <location filename="../../src/enums.cpp" line="300"/>
       <source>Stopped</source>
       <extracomment>Digital input state</extracomment>
       <translation>หยุด</translation>
@@ -5074,7 +5075,7 @@ Do you want to continue?</source>
       <translation>ให้หยุดหลังจากคำเตือนถูกลบออก</translation>
     </message>
     <message id="digitalinputs_state_yes">
-      <location filename="../../src/enums.cpp" line="254"/>
+      <location filename="../../src/enums.cpp" line="276"/>
       <source>Yes</source>
       <extracomment>Digital input state</extracomment>
       <translation>ใช่</translation>
@@ -5142,7 +5143,7 @@ Do you want to continue?</source>
       <translation>ยกเลิก</translation>
     </message>
     <message id="settings_vrm_device_instances_close">
-      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="145"/>
+      <location filename="../../pages/settings/PageVrmDeviceInstances.qml" line="147"/>
       <source>Close</source>
       <translation>ปิด</translation>
     </message>
@@ -5205,93 +5206,93 @@ Do you want to continue?</source>
       <translation>เกิดข้อผิดพลาดขณะตรวจสอบการอัปเดตเฟิร์มแวร์</translation>
     </message>
     <message id="settings_firmware_error_during_checking_for_updates">
-      <location filename="../../components/FirmwareUpdate.qml" line="55"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="60"/>
       <source>Error while checking for firmware updates</source>
       <translation type="unfinished">เกิดข้อผิดพลาดขณะตรวจสอบการอัปเดตเฟิร์มแวร์</translation>
     </message>
     <message id="settings_firmware_downloading_and_installing">
-      <location filename="../../components/FirmwareUpdate.qml" line="63"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="73"/>
       <source>Downloading and installing firmware %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>กำลังดาวน์โหลดและติดตั้งเฟิร์มแวร์ %1...</translation>
     </message>
     <message id="settings_firmware_installing_firmware">
-      <location filename="../../components/FirmwareUpdate.qml" line="70"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="80"/>
       <source>Installing firmware...</source>
       <translation>กำลังติดตั้งเฟิร์มแวร์...</translation>
     </message>
     <message id="settings_firmware_error_during_installation">
-      <location filename="../../components/FirmwareUpdate.qml" line="75"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="85"/>
       <source>Error during firmware installation</source>
       <translation>เกิดข้อผิดพลาดระหว่างการติดตั้งเฟิร์มแวร์</translation>
     </message>
     <message id="settings_firmware_no_newer_version_available">
-      <location filename="../../components/FirmwareUpdate.qml" line="185"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="195"/>
       <source>No newer version available</source>
       <translation>ไม่มีเวอร์ชันใหม่กว่าที่มีอยู่</translation>
     </message>
     <message id="settings_firmware_no_firmware_found">
-      <location filename="../../components/FirmwareUpdate.qml" line="188"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="198"/>
       <source>No firmware found</source>
       <translation>ไม่พบเฟิร์มแวร์</translation>
     </message>
     <message id="tank_type_fuel">
-      <location filename="../../src/enums.cpp" line="495"/>
+      <location filename="../../src/enums.cpp" line="541"/>
       <source>Fuel</source>
       <translation>เชื้อเพลิง</translation>
     </message>
     <message id="tank_type_fresh_water">
-      <location filename="../../src/enums.cpp" line="498"/>
+      <location filename="../../src/enums.cpp" line="544"/>
       <source>Fresh water</source>
       <translation>น้ำจืด</translation>
     </message>
     <message id="tank_type_waste_water">
-      <location filename="../../src/enums.cpp" line="501"/>
+      <location filename="../../src/enums.cpp" line="547"/>
       <source>Waste water</source>
       <translation>น้ำเสีย</translation>
     </message>
     <message id="tank_type_live_well">
-      <location filename="../../src/enums.cpp" line="504"/>
+      <location filename="../../src/enums.cpp" line="550"/>
       <source>Live well</source>
       <translation>อยู่ดีมีสุข</translation>
     </message>
     <message id="tank_type_oil">
-      <location filename="../../src/enums.cpp" line="507"/>
+      <location filename="../../src/enums.cpp" line="553"/>
       <source>Oil</source>
       <translation>น้ำมัน</translation>
     </message>
     <message id="tank_type_black_water">
-      <location filename="../../src/enums.cpp" line="510"/>
+      <location filename="../../src/enums.cpp" line="556"/>
       <source>Black water</source>
       <translation>น้ำดำ</translation>
     </message>
     <message id="tank_type_gasoline">
-      <location filename="../../src/enums.cpp" line="513"/>
+      <location filename="../../src/enums.cpp" line="559"/>
       <source>Gasoline</source>
       <translation>น้ำมันเบนซิน</translation>
     </message>
     <message id="tank_type_diesel">
-      <location filename="../../src/enums.cpp" line="516"/>
+      <location filename="../../src/enums.cpp" line="562"/>
       <source>Diesel</source>
       <translation>ดีเซล</translation>
     </message>
     <message id="tank_type_lpg">
-      <location filename="../../src/enums.cpp" line="519"/>
+      <location filename="../../src/enums.cpp" line="565"/>
       <source>LPG</source>
       <translation>แอลพีจี</translation>
     </message>
     <message id="tank_type_lng">
-      <location filename="../../src/enums.cpp" line="522"/>
+      <location filename="../../src/enums.cpp" line="568"/>
       <source>LNG</source>
       <translation>LNG</translation>
     </message>
     <message id="tank_type_hydraulic_oil">
-      <location filename="../../src/enums.cpp" line="525"/>
+      <location filename="../../src/enums.cpp" line="571"/>
       <source>Hydraulic oil</source>
       <translation>น้ำมันไฮดรอลิก</translation>
     </message>
     <message id="tank_type_raw_water">
-      <location filename="../../src/enums.cpp" line="528"/>
+      <location filename="../../src/enums.cpp" line="574"/>
       <source>Raw water</source>
       <translation>น้ำดิบ</translation>
     </message>
@@ -5645,7 +5646,7 @@ Do you want to continue?</source>
       <translation type="unfinished">ชม</translation>
     </message>
     <message id="solarchargers_state_bulk">
-      <location filename="../../src/enums.cpp" line="337"/>
+      <location filename="../../src/enums.cpp" line="359"/>
       <source>Bulk</source>
       <translation>จำนวนมาก</translation>
     </message>
@@ -5656,7 +5657,7 @@ Do you want to continue?</source>
       <translation>หน้าท้อง</translation>
     </message>
     <message id="solarchargers_state_float">
-      <location filename="../../src/enums.cpp" line="343"/>
+      <location filename="../../src/enums.cpp" line="365"/>
       <source>Float</source>
       <translation>ลอย</translation>
     </message>
@@ -5710,7 +5711,7 @@ Do you want to continue?</source>
       <translation>ถูกตัดการเชื่อมต่อ กำลังพยายามเชื่อมต่อใหม่</translation>
     </message>
     <message id="utils_connman_connecting">
-      <location filename="../../components/Utils.js" line="285"/>
+      <location filename="../../components/Utils.js" line="288"/>
       <source>Connecting</source>
       <translation>กำลังเชื่อมต่อ</translation>
     </message>
@@ -5820,27 +5821,27 @@ Do you want to continue?</source>
       <translation>0m</translation>
     </message>
     <message id="utils_connman_failure">
-      <location filename="../../components/Utils.js" line="282"/>
+      <location filename="../../components/Utils.js" line="285"/>
       <source>Failure</source>
       <translation>ความล้มเหลว</translation>
     </message>
     <message id="utils_connman_retrieving_ip_address">
-      <location filename="../../components/Utils.js" line="288"/>
+      <location filename="../../components/Utils.js" line="291"/>
       <source>Retrieving IP address</source>
       <translation>กำลังเรียกที่อยู่ IP</translation>
     </message>
     <message id="utils_connman_connected">
-      <location filename="../../components/Utils.js" line="292"/>
+      <location filename="../../components/Utils.js" line="295"/>
       <source>Connected</source>
       <translation type="unfinished">เชื่อมต่อแล้ว</translation>
     </message>
     <message id="utils_connman_disconnect">
-      <location filename="../../components/Utils.js" line="295"/>
+      <location filename="../../components/Utils.js" line="298"/>
       <source>Disconnect</source>
       <translation>ตัดการเชื่อมต่อ</translation>
     </message>
     <message id="utils_connman_disconnected">
-      <location filename="../../components/Utils.js" line="299"/>
+      <location filename="../../components/Utils.js" line="302"/>
       <source>Disconnected</source>
       <translation type="unfinished">ตัดการเชื่อมต่อ</translation>
     </message>
@@ -5904,43 +5905,43 @@ Do you want to continue?</source>
       <translation>%1 รถถัง (%2)</translation>
     </message>
     <message id="dcMeter_ac_charger">
-      <location filename="../../src/enums.cpp" line="109"/>
+      <location filename="../../src/enums.cpp" line="131"/>
       <source>AC charger</source>
       <translation>เครื่องชาร์จไฟฟ้ากระแสสลับ</translation>
     </message>
     <message id="dcMeter_alternator">
-      <location filename="../../src/enums.cpp" line="112"/>
+      <location filename="../../src/enums.cpp" line="134"/>
       <source>Alternator</source>
       <translation>เครื่องกำเนิดไฟฟ้า</translation>
     </message>
     <message id="dcMeter_dc_system">
-      <location filename="../../src/enums.cpp" line="121"/>
+      <location filename="../../src/enums.cpp" line="143"/>
       <source>DC system</source>
       <translation>ระบบ DC</translation>
     </message>
     <message id="dcMeter_fuelcell">
-      <location filename="../../src/enums.cpp" line="130"/>
+      <location filename="../../src/enums.cpp" line="152"/>
       <source>Fuel cell</source>
       <translation>เซลล์เชื้อเพลิง</translation>
     </message>
     <message id="dcMeter_shaft_generator">
-      <location filename="../../src/enums.cpp" line="148"/>
+      <location filename="../../src/enums.cpp" line="170"/>
       <source>Shaft generator</source>
       <translation>เครื่องกำเนิดเพลา</translation>
     </message>
     <message id="dcMeter_water_generator">
-      <location filename="../../src/enums.cpp" line="154"/>
+      <location filename="../../src/enums.cpp" line="176"/>
       <source>Water generator</source>
       <translation>เครื่องกำเนิดน้ำ</translation>
     </message>
     <message id="digitalinputs_state_low">
-      <location filename="../../src/enums.cpp" line="234"/>
+      <location filename="../../src/enums.cpp" line="256"/>
       <source>Low</source>
       <extracomment>Digital input state</extracomment>
       <translation>ต่ำ</translation>
     </message>
     <message id="digitalinputs_state_high">
-      <location filename="../../src/enums.cpp" line="238"/>
+      <location filename="../../src/enums.cpp" line="260"/>
       <source>High</source>
       <extracomment>Digital input state</extracomment>
       <translation>สูง</translation>
@@ -6026,7 +6027,7 @@ Do you want to continue?</source>
       <translation type="unfinished">กำหนดการ</translation>
     </message>
     <message id="inverters_state_scheduledcharge">
-      <location filename="../../data/System.qml" line="195"/>
+      <location filename="../../data/System.qml" line="198"/>
       <source>Scheduled</source>
       <translation>กำหนดการ</translation>
     </message>
@@ -6056,140 +6057,140 @@ Do you want to continue?</source>
       <translation>Mollitia quis est quas deleniti quibusdam explicabo quasi. Voluptatem qui quia et consequuntur.</translation>
     </message>
     <message id="pvinverters_statusCode_boot_loading">
-      <location filename="../../src/enums.cpp" line="308"/>
+      <location filename="../../src/enums.cpp" line="330"/>
       <source>Boot loading</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>กำลังโหลดบูต</translation>
     </message>
     <message id="pvinverter_statusCode_running_mppt">
-      <location filename="../../src/enums.cpp" line="316"/>
+      <location filename="../../src/enums.cpp" line="338"/>
       <source>Running (MPPT)</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>ทำงาน (MPPT)</translation>
     </message>
     <message id="pvinverter_running_throttled">
-      <location filename="../../src/enums.cpp" line="320"/>
+      <location filename="../../src/enums.cpp" line="342"/>
       <source>Running (Throttled)</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>ทำงาน (จำกัด)</translation>
     </message>
     <message id="solarchargers_state_fault">
-      <location filename="../../src/enums.cpp" line="334"/>
+      <location filename="../../src/enums.cpp" line="356"/>
       <source>Fault</source>
       <translation>ความผิดพลาด</translation>
     </message>
     <message id="solarchargers_state_absorption">
-      <location filename="../../src/enums.cpp" line="340"/>
+      <location filename="../../src/enums.cpp" line="362"/>
       <source>Absorption</source>
       <translation>การดูดซึม</translation>
     </message>
     <message id="solarchargers_state_storage">
-      <location filename="../../src/enums.cpp" line="346"/>
+      <location filename="../../src/enums.cpp" line="368"/>
       <source>Storage</source>
       <translation>พื้นที่จัดเก็บ</translation>
     </message>
     <message id="solarchargers_state_equalize">
-      <location filename="../../src/enums.cpp" line="349"/>
+      <location filename="../../src/enums.cpp" line="371"/>
       <source>Equalize</source>
       <translation>Equalize</translation>
     </message>
     <message id="inverters_state_aes_mode">
-      <location filename="../../data/System.qml" line="125"/>
+      <location filename="../../data/System.qml" line="128"/>
       <source>AES mode</source>
       <translation>พลังงานต่ำ</translation>
     </message>
     <message id="inverters_state_faultcondition">
-      <location filename="../../data/System.qml" line="128"/>
+      <location filename="../../data/System.qml" line="131"/>
       <source>Fault condition</source>
       <translation>สภาพข้อบกพร่อง</translation>
     </message>
     <message id="inverters_state_bulkcharging">
-      <location filename="../../data/System.qml" line="131"/>
+      <location filename="../../data/System.qml" line="134"/>
       <source>Bulk charging</source>
       <translation>การชาร์จจำนวนมาก</translation>
     </message>
     <message id="inverters_state_absorptioncharging">
-      <location filename="../../data/System.qml" line="134"/>
+      <location filename="../../data/System.qml" line="137"/>
       <source>Absorption charging</source>
       <translation>การชาร์จแบบดูดซับ</translation>
     </message>
     <message id="inverters_state_floatcharging">
-      <location filename="../../data/System.qml" line="137"/>
+      <location filename="../../data/System.qml" line="140"/>
       <source>Float charging</source>
       <translation>การชาร์จแบบลอยตัว</translation>
     </message>
     <message id="inverters_state_storagemode">
-      <location filename="../../data/System.qml" line="140"/>
+      <location filename="../../data/System.qml" line="143"/>
       <source>Storage mode</source>
       <translation>โหมดการจัดเก็บข้อมูล</translation>
     </message>
     <message id="inverters_state_equalisationcharging">
-      <location filename="../../data/System.qml" line="143"/>
+      <location filename="../../data/System.qml" line="146"/>
       <source>Equalization charging</source>
       <translation>การชาร์จที่เท่าเทียมกัน</translation>
     </message>
     <message id="inverters_state_passthru">
-      <location filename="../../data/System.qml" line="146"/>
+      <location filename="../../data/System.qml" line="149"/>
       <source>Pass-thru</source>
       <translation>ผ่าน</translation>
     </message>
     <message id="inverters_state_inverting">
-      <location filename="../../data/System.qml" line="149"/>
+      <location filename="../../data/System.qml" line="152"/>
       <source>Inverting</source>
       <translation>สลับด้าน</translation>
     </message>
     <message id="inverters_state_assisting">
-      <location filename="../../data/System.qml" line="152"/>
+      <location filename="../../data/System.qml" line="155"/>
       <source>Assisting</source>
       <translation>ช่วยเหลือ</translation>
     </message>
     <message id="inverters_state_powersupplymode">
-      <location filename="../../data/System.qml" line="155"/>
+      <location filename="../../data/System.qml" line="158"/>
       <source>Power supply mode</source>
       <translation>โหมดพาวเวอร์ซัพพลาย</translation>
     </message>
     <message id="inverters_state_sustain">
-      <location filename="../../data/System.qml" line="158"/>
+      <location filename="../../data/System.qml" line="161"/>
       <source>Sustain</source>
       <translation type="unfinished">ยังชีพประคับประคอง</translation>
     </message>
     <message id="inverters_state_wakeup">
-      <location filename="../../data/System.qml" line="162"/>
+      <location filename="../../data/System.qml" line="165"/>
       <source>Wake up</source>
       <translation>ตื่น</translation>
     </message>
     <message id="inverters_state_repeatedabsorption">
-      <location filename="../../data/System.qml" line="165"/>
+      <location filename="../../data/System.qml" line="168"/>
       <source>Repeated absorption</source>
       <translation>การดูดซึมซ้ำ</translation>
     </message>
     <message id="inverters_state_autoequalize">
-      <location filename="../../data/System.qml" line="168"/>
+      <location filename="../../data/System.qml" line="171"/>
       <source>Auto equalize</source>
       <translation>ปรับสมดุลอัตโนมัติ</translation>
     </message>
     <message id="inverters_state_battery_safe">
-      <location filename="../../data/System.qml" line="171"/>
+      <location filename="../../data/System.qml" line="174"/>
       <source>Battery safe</source>
       <translation>แบตเตอรี่ปลอดภัย</translation>
     </message>
     <message id="inverters_state_loaddetect">
-      <location filename="../../data/System.qml" line="174"/>
+      <location filename="../../data/System.qml" line="177"/>
       <source>Load detect</source>
       <translation>โหลดตรวจจับ</translation>
     </message>
     <message id="inverters_state_blocked">
-      <location filename="../../data/System.qml" line="177"/>
+      <location filename="../../data/System.qml" line="180"/>
       <source>Blocked</source>
       <translation>ถูกบล็อค</translation>
     </message>
     <message id="inverters_state_test">
-      <location filename="../../data/System.qml" line="180"/>
+      <location filename="../../data/System.qml" line="183"/>
       <source>Test</source>
       <translation>ทดสอบ</translation>
     </message>
     <message id="inverters_state_dynamic_ess">
-      <location filename="../../data/System.qml" line="198"/>
+      <location filename="../../data/System.qml" line="201"/>
       <source>Dynamic ESS</source>
       <translation type="unfinished">ไดนามิก ESS</translation>
     </message>
@@ -6199,25 +6200,25 @@ Do you want to continue?</source>
       <translation>ไดนามิก ESS</translation>
     </message>
     <message id="systemsettings_networkstatus_group_master">
-      <location filename="../../data/SystemSettings.qml" line="152"/>
+      <location filename="../../data/SystemSettings.qml" line="163"/>
       <source>Group Master</source>
       <extracomment>Network status: Group Master</extracomment>
       <translation>กลุ่มตัวหลัก</translation>
     </message>
     <message id="systemsettings_networkstatus_instance_master">
-      <location filename="../../data/SystemSettings.qml" line="156"/>
+      <location filename="../../data/SystemSettings.qml" line="167"/>
       <source>Instance Master</source>
       <extracomment>Network status: Instance Master</extracomment>
       <translation>อินสแตนซ์มาสเตอร์</translation>
     </message>
     <message id="systemsettings_networkstatus_group_and_instance_master">
-      <location filename="../../data/SystemSettings.qml" line="160"/>
+      <location filename="../../data/SystemSettings.qml" line="171"/>
       <source>Group &amp; Instance Master</source>
       <extracomment>Network status: Group &amp; Instance Master</extracomment>
       <translation>ต้นแบบกลุ่มและอินสแตนซ์</translation>
     </message>
     <message id="systemsettings_networkstatus_standalone_and_group_master">
-      <location filename="../../data/SystemSettings.qml" line="168"/>
+      <location filename="../../data/SystemSettings.qml" line="179"/>
       <source>Standalone &amp; Group Master</source>
       <extracomment>Network status: Standalone &amp; Group Master</extracomment>
       <translation>สแตนด์อโลน &amp; หัวหน้ากลุ่ม</translation>
@@ -7268,11 +7269,6 @@ Do you want to continue?</source>
       <source>Are you sure that you want to reset Node-RED to factory defaults? This will delete all of your flows.</source>
       <translation>คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ต Node-RED เป็นค่าเริ่มต้นจากโรงงาน การดำเนินการนี้จะลบโฟลว์ทั้งหมดของคุณ</translation>
     </message>
-    <message id="settings_logging_vrm_portal">
-      <location filename="../../pages/settings/PageSettingsLogger.qml" line="45"/>
-      <source>VRM Portal</source>
-      <translation>พอร์ทัล VRM</translation>
-    </message>
     <message id="settings_vrm_portal_readonly">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="53"/>
       <source>Read-only</source>
@@ -7454,12 +7450,12 @@ Do you want to continue?</source>
       <translation>แบบมีสาย</translation>
     </message>
     <message id="settings_vecan_device_instance">
-      <location filename="../../pages/settings/PageSettingsVecanDevice.qml" line="34"/>
+      <location filename="../../pages/settings/PageSettingsVecanDevice.qml" line="41"/>
       <source>VE.Can Device Instance</source>
       <translation>อินสแตนซ์อุปกรณ์ VE.Can</translation>
     </message>
     <message id="settings_vecan_device_number">
-      <location filename="../../pages/settings/PageSettingsVecanDevices.qml" line="32"/>
+      <location filename="../../pages/settings/PageSettingsVecanDevices.qml" line="43"/>
       <source>VE.Can Instance# %1</source>
       <translation>VE.Can อินสแตนซ์# %1</translation>
     </message>
@@ -7890,19 +7886,19 @@ Do you want to continue?</source>
       <translation>ผลผลิตวันนี้</translation>
     </message>
     <message id="common_words_format_error">
-      <location filename="../../components/CommonWords.qml" line="637"/>
+      <location filename="../../components/CommonWords.qml" line="641"/>
       <source>#%1 %2</source>
       <extracomment>%1 = error number, %2 = text description of this error</extracomment>
       <translation>#%1 %2</translation>
     </message>
     <message id="common_words_bms_disabled_go_to_redetect">
-      <location filename="../../components/CommonWords.qml" line="663"/>
+      <location filename="../../components/CommonWords.qml" line="667"/>
       <source>%1 %2</source>
       <extracomment>%1 = the translated text of common_words_setting_disabled_when_bms_connected %2 = the translated text of common_words_go_to_redetect_system</extracomment>
       <translation type="unfinished">%1 %2</translation>
     </message>
     <message id="common_words_dmc_disabled_go_to_redetect">
-      <location filename="../../components/CommonWords.qml" line="674"/>
+      <location filename="../../components/CommonWords.qml" line="678"/>
       <source>%1 %2</source>
       <extracomment>%1 = the translated text of common_words_setting_disabled_when_dmc_connected %2 = the translated text of common_words_go_to_redetect_system</extracomment>
       <translation type="unfinished">%1 %2</translation>
@@ -7923,7 +7919,7 @@ Do you want to continue?</source>
       <translation>โหมดอินเวอร์เตอร์</translation>
     </message>
     <message id="settings_firmware_installed_rebooting">
-      <location filename="../../components/FirmwareUpdate.qml" line="79"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="89"/>
       <source>Firmware installed, device rebooting</source>
       <translation>ติดตั้งเฟิร์มแวร์แล้ว กำลังรีบูตอุปกรณ์</translation>
     </message>
@@ -7933,7 +7929,7 @@ Do you want to continue?</source>
       <translation>ยืนยัน</translation>
     </message>
     <message id="nav_brief_close_side_panel_high_cpu">
-      <location filename="../../pages/BriefPage.qml" line="391"/>
+      <location filename="../../pages/BriefPage.qml" line="396"/>
       <source>System load high, closing the side panel to reduce CPU load</source>
       <translation>โหลดของระบบสูง ปิดแผงด้านข้างเพื่อลดภาระของ CPU</translation>
     </message>
@@ -7983,82 +7979,106 @@ Do you want to continue?</source>
       <translation>ปั๊มความร้อน</translation>
     </message>
     <message id="digitalinputs_touch_input_control">
-      <location filename="../../src/enums.cpp" line="222"/>
+      <location filename="../../src/enums.cpp" line="244"/>
       <source>Touch input control</source>
       <translation>การควบคุมแบบสัมผัส</translation>
     </message>
-    <message id="switchable_output_over_temperature">
-      <location filename="../../src/enums.cpp" line="461"/>
+    <message id="switchable_output_overtemperature">
+      <location filename="../../src/enums.cpp" line="483"/>
       <source>Over temperature</source>
       <translation>อุณหภูมิสูง</translation>
     </message>
     <message id="switch_state_temperature_warning">
-      <location filename="../../src/enums.cpp" line="369"/>
+      <location filename="../../src/enums.cpp" line="391"/>
       <source>Temperature warning</source>
       <translation>การเตือนอุณหภูมิ</translation>
     </message>
+    <message id="cardinalDirection_short_north">
+      <location filename="../../src/enums.cpp" line="69"/>
+      <source>N</source>
+      <extracomment>Abbreviation of "North" direction</extracomment>
+      <translation type="unfinished">เอ็น</translation>
+    </message>
+    <message id="cardinalDirection_short_south">
+      <location filename="../../src/enums.cpp" line="73"/>
+      <source>S</source>
+      <extracomment>Abbreviation of "South" direction</extracomment>
+      <translation type="unfinished">เอ็น</translation>
+    </message>
+    <message id="cardinalDirection_short_east">
+      <location filename="../../src/enums.cpp" line="77"/>
+      <source>E</source>
+      <extracomment>Abbreviation of "East" direction</extracomment>
+      <translation type="unfinished">อี</translation>
+    </message>
+    <message id="cardinalDirection_short_west">
+      <location filename="../../src/enums.cpp" line="81"/>
+      <source>W</source>
+      <extracomment>Abbreviation of "West" direction</extracomment>
+      <translation type="unfinished">ว.</translation>
+    </message>
     <message id="dcMeter_bilge_pump">
-      <location filename="../../src/enums.cpp" line="115"/>
+      <location filename="../../src/enums.cpp" line="137"/>
       <source>Bilge pump</source>
       <translation type="unfinished">ปั๊มน้ำท้องเรือ</translation>
     </message>
     <message id="switch_state_channel_fault">
-      <location filename="../../src/enums.cpp" line="372"/>
+      <location filename="../../src/enums.cpp" line="394"/>
       <source>Channel Fault</source>
       <translation>ความผิดพลาดของช่องสัญญาณ</translation>
     </message>
-    <message id="switch_state_channel_Trippped">
-      <location filename="../../src/enums.cpp" line="375"/>
+    <message id="switch_state_channel_tripped">
+      <location filename="../../src/enums.cpp" line="397"/>
       <source>Channel Tripped</source>
       <translation>ช่องสะดุด</translation>
     </message>
     <message id="switch_state_under_voltage">
-      <location filename="../../src/enums.cpp" line="378"/>
+      <location filename="../../src/enums.cpp" line="400"/>
       <source>Under voltage</source>
       <translation>ภายใต้แรงดันไฟฟ้า</translation>
     </message>
     <message id="switchable_output_momentary">
-      <location filename="../../src/enums.cpp" line="389"/>
+      <location filename="../../src/enums.cpp" line="411"/>
       <source>Momentary</source>
       <translation>ชั่วขณะหนึ่ง</translation>
     </message>
     <message id="switchable_output_dimmable">
-      <location filename="../../src/enums.cpp" line="395"/>
+      <location filename="../../src/enums.cpp" line="417"/>
       <source>Dimmable</source>
       <translation>หรี่แสงได้</translation>
     </message>
     <message id="switchable_output_slave_of">
-      <location filename="../../src/enums.cpp" line="405"/>
+      <location filename="../../src/enums.cpp" line="427"/>
       <source>Slave of %1</source>
       <translation>ทาสของ %1</translation>
     </message>
     <message id="switchable_output_not_running">
-      <location filename="../../src/enums.cpp" line="448"/>
+      <location filename="../../src/enums.cpp" line="470"/>
       <source>Not running</source>
       <translation type="unfinished">ไม่ได้ทำงาน</translation>
     </message>
     <message id="switchable_output_off">
-      <location filename="../../src/enums.cpp" line="451"/>
+      <location filename="../../src/enums.cpp" line="473"/>
       <source>Off</source>
       <translation type="unfinished">ปิด</translation>
     </message>
     <message id="switchable_output_powered">
-      <location filename="../../src/enums.cpp" line="455"/>
+      <location filename="../../src/enums.cpp" line="477"/>
       <source>Powered</source>
       <translation>ขับเคลื่อนด้วยพลังงาน</translation>
     </message>
     <message id="switchable_output_tripped">
-      <location filename="../../src/enums.cpp" line="458"/>
+      <location filename="../../src/enums.cpp" line="480"/>
       <source>Tripped</source>
       <translation>สะดุดล้ม</translation>
     </message>
     <message id="switchable_output_fault">
-      <location filename="../../src/enums.cpp" line="464"/>
+      <location filename="../../src/enums.cpp" line="489"/>
       <source>Fault</source>
       <translation type="unfinished">ความผิดพลาด</translation>
     </message>
     <message id="switchable_output_short">
-      <location filename="../../src/enums.cpp" line="475"/>
+      <location filename="../../src/enums.cpp" line="500"/>
       <source>Short</source>
       <translation>สั้น</translation>
     </message>
@@ -8614,17 +8634,17 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <translation>กระแสสลับ</translation>
     </message>
     <message id="devicelist_motordrive_motorrpm">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="22"/>
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="49"/>
       <source>Motor RPM</source>
       <translation>มอเตอร์ RPM</translation>
     </message>
     <message id="devicelist_motordrive_motortemperature">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="30"/>
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="72"/>
       <source>Motor Temperature</source>
       <translation>อุณหภูมิมอเตอร์</translation>
     </message>
     <message id="devicelist_motordrive_controllertemperature">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="66"/>
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="86"/>
       <source>Controller Temperature</source>
       <translation>อุณหภูมิตัวควบคุม</translation>
     </message>
@@ -8831,42 +8851,42 @@ With streamlined navigation and a fresh look, everything you love is now even ea
       <translation>ต่อไป</translation>
     </message>
     <message id="direction_north">
-      <location filename="../../src/units.cpp" line="500"/>
+      <location filename="../../src/units.cpp" line="546"/>
       <source>N</source>
       <translation>เอ็น</translation>
     </message>
     <message id="direction_northeast">
-      <location filename="../../src/units.cpp" line="502"/>
+      <location filename="../../src/units.cpp" line="548"/>
       <source>NE</source>
       <translation>ไม่</translation>
     </message>
     <message id="direction_east">
-      <location filename="../../src/units.cpp" line="504"/>
+      <location filename="../../src/units.cpp" line="550"/>
       <source>E</source>
       <translation>อี</translation>
     </message>
     <message id="direction_southeast">
-      <location filename="../../src/units.cpp" line="506"/>
+      <location filename="../../src/units.cpp" line="552"/>
       <source>SE</source>
       <translation>เอสอี</translation>
     </message>
     <message id="direction_south">
-      <location filename="../../src/units.cpp" line="508"/>
+      <location filename="../../src/units.cpp" line="554"/>
       <source>S</source>
       <translation>เอ็น</translation>
     </message>
     <message id="direction_southwest">
-      <location filename="../../src/units.cpp" line="510"/>
+      <location filename="../../src/units.cpp" line="556"/>
       <source>SW</source>
       <translation>สว.</translation>
     </message>
     <message id="direction_west">
-      <location filename="../../src/units.cpp" line="512"/>
+      <location filename="../../src/units.cpp" line="558"/>
       <source>W</source>
       <translation>ว.</translation>
     </message>
     <message id="direction_northwest">
-      <location filename="../../src/units.cpp" line="514"/>
+      <location filename="../../src/units.cpp" line="560"/>
       <source>NW</source>
       <translation>ตะวันตกเฉียงเหนือ</translation>
     </message>
@@ -8894,7 +8914,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>หน้าเรือ</translation>
     </message>
     <message id="switchable_output_unsupported">
-      <location filename="../../src/enums.cpp" line="438"/>
+      <location filename="../../src/enums.cpp" line="460"/>
       <source>Unsupported type: %1</source>
       <translation>ประเภทที่ไม่รองรับ: %1</translation>
     </message>
@@ -8934,7 +8954,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>รอบต่อนาทีสูงสุด</translation>
     </message>
     <message id="devicelist_motordrive_coolanttemperature">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="59"/>
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="79"/>
       <source>Coolant Temperature</source>
       <translation>อุณหภูมิน้ำหล่อเย็น</translation>
     </message>
@@ -9644,7 +9664,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>ไม่มี Bluetooth</translation>
     </message>
     <message id="switchable_output_toggle">
-      <location filename="../../src/enums.cpp" line="392"/>
+      <location filename="../../src/enums.cpp" line="414"/>
       <source>Toggle</source>
       <translation>สลับ</translation>
     </message>
@@ -9727,12 +9747,12 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>การดำเนินการนี้จะดาวน์โหลดและอัปเดต rootfs ด้วยเฟิร์มแวร์อย่างเป็นทางการล่าสุด&lt;br&gt;จำเป็นต้องเชื่อมต่ออินเทอร์เน็ต&lt;br&gt;กด 'ตกลง' เพื่อดำเนินการต่อ</translation>
     </message>
     <message id="settings_gps_format_kmh">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="95"/>
       <source>Kilometres per hour</source>
       <translation>กิโลเมตรต่อชั่วโมง</translation>
     </message>
     <message id="settings_gps_format_ms">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="95"/>
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="97"/>
       <source>Metres per second</source>
       <translation>เมตรต่อวินาที</translation>
     </message>
@@ -9772,12 +9792,12 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>BatteryLife ปรับสถานะการชาร์จแบตเตอรี่ขั้นต่ำแบบไดนามิก เพื่อป้องกันการคายประจุที่มากเกินไป และรับประกันการชาร์จเต็มเป็นประจำ ซึ่งจะช่วยยืดอายุการใช้งานแบตเตอรี่และรักษาระบบให้มีความน่าเชื่อถือ</translation>
     </message>
     <message id="settings_canbus_rvc_reverse_current_polarity">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="69"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="85"/>
       <source>Reverse current polarity</source>
       <translation>ขั้วกระแสไฟฟ้าย้อนกลับ</translation>
     </message>
     <message id="settings_canbus_rvc_reverse_current_polarity_description">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="73"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="89"/>
       <source>When enabled, the current polarity in the CHARGER_AC_STATUS_1, CHARGER_STATUS_2, INVERTER_AC_STATUS_1, and SOLAR_CONTROLLER_BATTERY_STATUS DGNs is reversed.</source>
       <translation>เมื่อเปิดใช้งาน ขั้วกระแสไฟฟ้าใน DGNs CHARGER_AC_STATUS_1, CHARGER_STATUS_2, INVERTER_AC_STATUS_1 และ SOLAR_CONTROLLER_BATTERY_STATUS จะกลับด้าน</translation>
     </message>
@@ -9889,148 +9909,143 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>รหัสผ่าน Access Point</translation>
     </message>
     <message id="dcMeter_dccharger">
-      <location filename="../../src/enums.cpp" line="118"/>
+      <location filename="../../src/enums.cpp" line="140"/>
       <source>DC/DC charger</source>
       <translation>เครื่องชาร์จ DC/DC</translation>
     </message>
     <message id="dcMeter_electric_drive">
-      <location filename="../../src/enums.cpp" line="124"/>
+      <location filename="../../src/enums.cpp" line="146"/>
       <source>Electric drive</source>
       <translation>ระบบขับเคลื่อนไฟฟ้า</translation>
     </message>
     <message id="dcMeter_fridge">
-      <location filename="../../src/enums.cpp" line="127"/>
+      <location filename="../../src/enums.cpp" line="149"/>
       <source>Fridge</source>
       <translation>ตู้เย็น</translation>
     </message>
     <message id="dcMeter_generic_load">
-      <location filename="../../src/enums.cpp" line="133"/>
+      <location filename="../../src/enums.cpp" line="155"/>
       <source>Generic load</source>
       <translation>โหลดทั่วไป</translation>
     </message>
     <message id="dcMeter_generic_meter">
-      <location filename="../../src/enums.cpp" line="136"/>
+      <location filename="../../src/enums.cpp" line="158"/>
       <source>Generic meter</source>
       <translation>มิเตอร์ทั่วไป</translation>
     </message>
     <message id="dcMeter_generic_source">
-      <location filename="../../src/enums.cpp" line="139"/>
+      <location filename="../../src/enums.cpp" line="161"/>
       <source>Generic source</source>
       <translation>แหล่งพลังงานทั่วไป</translation>
     </message>
     <message id="dcMeter_dc_genset">
-      <location filename="../../src/enums.cpp" line="142"/>
+      <location filename="../../src/enums.cpp" line="164"/>
       <source>DC genset</source>
       <translation>เครื่องกำเนิดไฟฟ้า DC</translation>
     </message>
     <message id="dcMeter_inverter">
-      <location filename="../../src/enums.cpp" line="145"/>
+      <location filename="../../src/enums.cpp" line="167"/>
       <source>Inverter</source>
       <translation>อินเวอร์เตอร์</translation>
     </message>
     <message id="dcMeter_solar_charger">
-      <location filename="../../src/enums.cpp" line="151"/>
+      <location filename="../../src/enums.cpp" line="173"/>
       <source>Solar charger</source>
       <translation>เครื่องชาร์จพลังงานแสงอาทิตย์</translation>
     </message>
     <message id="dcMeter_water_heater">
-      <location filename="../../src/enums.cpp" line="157"/>
+      <location filename="../../src/enums.cpp" line="179"/>
       <source>Water heater</source>
       <translation>เครื่องทำน้ำอุ่น</translation>
     </message>
     <message id="dcMeter_water_pump">
-      <location filename="../../src/enums.cpp" line="160"/>
+      <location filename="../../src/enums.cpp" line="182"/>
       <source>Water pump</source>
       <translation>ปั๊มน้ำ</translation>
     </message>
     <message id="dcMeter_wind_charger">
-      <location filename="../../src/enums.cpp" line="163"/>
+      <location filename="../../src/enums.cpp" line="185"/>
       <source>Wind charger</source>
       <translation>เครื่องชาร์จพลังงานลม</translation>
     </message>
     <message id="digitalinputs_type_disabled">
-      <location filename="../../src/enums.cpp" line="192"/>
+      <location filename="../../src/enums.cpp" line="214"/>
       <source>Disabled</source>
       <translation type="unfinished">พิการ</translation>
     </message>
     <message id="digitalinputs_type_bilgepump">
-      <location filename="../../src/enums.cpp" line="201"/>
+      <location filename="../../src/enums.cpp" line="223"/>
       <source>Bilge pump</source>
       <translation type="unfinished">ปั๊มน้ำท้องเรือ</translation>
     </message>
     <message id="digitalinputs_state_off">
-      <location filename="../../src/enums.cpp" line="242"/>
+      <location filename="../../src/enums.cpp" line="264"/>
       <source>Off</source>
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">ปิด</translation>
     </message>
     <message id="digitalinputs_state_on">
-      <location filename="../../src/enums.cpp" line="246"/>
+      <location filename="../../src/enums.cpp" line="268"/>
       <source>On</source>
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">เปิด</translation>
     </message>
     <message id="digitalinputs_state_running">
-      <location filename="../../src/enums.cpp" line="274"/>
+      <location filename="../../src/enums.cpp" line="296"/>
       <source>Running</source>
       <extracomment>Digital input state</extracomment>
       <translation type="unfinished">ทำงาน</translation>
     </message>
     <message id="pvinverter_statusCode_running">
-      <location filename="../../src/enums.cpp" line="300"/>
+      <location filename="../../src/enums.cpp" line="322"/>
       <source>Running</source>
       <extracomment>PV inverter status code</extracomment>
       <translation type="unfinished">ทำงาน</translation>
     </message>
     <message id="solarchargers_state_external control">
-      <location filename="../../src/enums.cpp" line="352"/>
+      <location filename="../../src/enums.cpp" line="374"/>
       <source>External control</source>
       <translation type="unfinished">การควบคุมภายนอก</translation>
     </message>
     <message id="switch_state_running">
-      <location filename="../../src/enums.cpp" line="363"/>
+      <location filename="../../src/enums.cpp" line="385"/>
       <source>Running</source>
       <translation type="unfinished">ทำงาน</translation>
     </message>
     <message id="switch_state_over_temperature">
-      <location filename="../../src/enums.cpp" line="366"/>
+      <location filename="../../src/enums.cpp" line="388"/>
       <source>Over temperature</source>
       <translation type="unfinished">อุณหภูมิสูง</translation>
     </message>
     <message id="switchable_output_temperature_setpoint">
-      <location filename="../../src/enums.cpp" line="398"/>
+      <location filename="../../src/enums.cpp" line="420"/>
       <source>Temperature setpoint</source>
       <translation>จุดตั้งอุณหภูมิ</translation>
     </message>
     <message id="switchable_output_Stepped_Switch">
-      <location filename="../../src/enums.cpp" line="401"/>
+      <location filename="../../src/enums.cpp" line="423"/>
       <source>Stepped switch</source>
       <translation>สวิตช์แบบขั้น</translation>
     </message>
     <message id="switchable_output_slave">
-      <location filename="../../src/enums.cpp" line="408"/>
+      <location filename="../../src/enums.cpp" line="430"/>
       <source>Slave</source>
       <translation type="unfinished">ตัวรอง</translation>
     </message>
     <message id="switchable_output_dropdown">
-      <location filename="../../src/enums.cpp" line="412"/>
+      <location filename="../../src/enums.cpp" line="434"/>
       <source>Dropdown</source>
       <translation>ดรอปดาวน์</translation>
     </message>
     <message id="switchable_output_basic_slider">
-      <location filename="../../src/enums.cpp" line="415"/>
+      <location filename="../../src/enums.cpp" line="437"/>
       <source>Basic slider</source>
       <translation>แถบเลื่อนพื้นฐาน</translation>
     </message>
     <message id="switchable_output_three_state_switch">
-      <location filename="../../src/enums.cpp" line="421"/>
+      <location filename="../../src/enums.cpp" line="443"/>
       <source>Three-state switch</source>
       <translation>สวิตช์สามสถานะ</translation>
-    </message>
-    <message id="switchable_output_disabled">
-      <location filename="../../src/enums.cpp" line="478"/>
-      <source>Disabled</source>
-      <translation type="unfinished">พิการ</translation>
     </message>
     <message id="settings_modbus_tcp_unit_id_note">
       <location filename="../../pages/settings/PageSettingsModbusTcpServices.qml" line="41"/>
@@ -10065,7 +10080,7 @@ The GX device can only control one connected genset and takes the one with the l
       <extra-Context>only shown on desktop systems</extra-Context>
     </message>
     <message id="load_delegate_status">
-      <location filename="../../pages/loads/LoadListDelegate.qml" line="72"/>
+      <location filename="../../pages/loads/LoadListDelegate.qml" line="75"/>
       <source>Status: %1</source>
       <translation>สถานะ: %1</translation>
     </message>
@@ -10127,7 +10142,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>VE.Bus BMS จะปิดระบบโดยอัตโนมัติเมื่อจำเป็นเพื่อป้องกันแบตเตอรี่ ดังนั้นจึงไม่สามารถควบคุมระบบจากอุปกรณ์ GX ได้</translation>
     </message>
     <message id="switchable_output_numeric_input">
-      <location filename="../../src/enums.cpp" line="418"/>
+      <location filename="../../src/enums.cpp" line="440"/>
       <source>Numeric input</source>
       <translation>ป้อนข้อมูลตัวเลข</translation>
     </message>
@@ -10152,24 +10167,19 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>พารามิเตอร์ Microgrid</translation>
     </message>
     <message id="microgrid_mode_hybrid_droop">
-      <location filename="../../src/enums.cpp" line="539"/>
+      <location filename="../../src/enums.cpp" line="585"/>
       <source>Hybrid droop</source>
       <translation>Hybrid droop</translation>
     </message>
     <message id="microgrid_mode_grid_following">
-      <location filename="../../src/enums.cpp" line="542"/>
+      <location filename="../../src/enums.cpp" line="588"/>
       <source>Grid-following</source>
       <translation>Grid-following</translation>
     </message>
     <message id="microgrid_mode_grid_forming">
-      <location filename="../../src/enums.cpp" line="545"/>
+      <location filename="../../src/enums.cpp" line="591"/>
       <source>Grid-forming</source>
       <translation>Grid-forming</translation>
-    </message>
-    <message id="switchable_output_trip_low_voltage">
-      <location filename="../../src/enums.cpp" line="481"/>
-      <source>Trip low voltage</source>
-      <translation>ตัดการทำงานเมื่อแรงดันไฟฟ้าต่ำ</translation>
     </message>
     <message id="microgrid">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="15"/>
@@ -10182,97 +10192,97 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>โหมด Active</translation>
     </message>
     <message id="page_microgrid_hybrid_droop_parameters">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="99"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="102"/>
       <source>Hybrid droop parameters</source>
       <translation>พารามิเตอร์ Hybrid droop</translation>
     </message>
     <message id="page_microgrid_reference_active_power_p0">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="105"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="108"/>
       <source>Reference active power (P&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>กำลังไฟฟ้าแอคทีฟอ้างอิง (P&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_reference_frequency_f0">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="112"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="115"/>
       <source>Reference frequency (f&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>ความถี่อ้างอิง (f&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_frequency_droop_slope">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="119"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="122"/>
       <source>Frequency droop slope (droop&lt;sub&gt;fP&lt;/sub&gt;)</source>
       <translation>ความชัน Frequency droop (droop&lt;sub&gt;fP&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_reference_reactive_power">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="126"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="129"/>
       <source>Reference reactive power (Q&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>กำลังไฟฟ้ารีแอกทีฟอ้างอิง (Q&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_reference_voltage">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="133"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="136"/>
       <source>Reference Voltage (U&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>แรงดันไฟฟ้าอ้างอิง (U&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_voltage_droop_slope">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="140"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="143"/>
       <source>Voltage droop slope (droop&lt;sub&gt;UQ&lt;/sub&gt;)</source>
       <translation>ความชัน Voltage droop (droop&lt;sub&gt;UQ&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_minimum_and_maximum_parameters">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="146"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="149"/>
       <source>Minimum and maximum parameters</source>
       <translation>พารามิเตอร์ต่ำสุดและสูงสุด</translation>
     </message>
     <message id="page_microgrid_allowed_active_power_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="151"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="154"/>
       <source>Allowed active power range</source>
       <translation>ช่วงกำลังไฟฟ้าแอคทีฟที่อนุญาต</translation>
     </message>
     <message id="page_microgrid_allowed_reactive_power_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="159"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="162"/>
       <source>Allowed reactive power range</source>
       <translation>ช่วงกำลังไฟฟ้ารีแอกทีฟที่อนุญาต</translation>
     </message>
     <message id="page_microgrid_p_q_direct_drive_settings">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="176"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="179"/>
       <source>P-Q direct drive settings</source>
       <translation>การตั้งค่า P-Q direct drive</translation>
     </message>
     <message id="page_microgrid_active_power_setpoint_p">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="181"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="184"/>
       <source>Active power setpoint (P)</source>
       <translation>จุดตั้งค่ากำลังไฟฟ้าแอคทีฟ (P)</translation>
     </message>
     <message id="page_microgrid_reactive_power_setpoint_q">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="188"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="191"/>
       <source>Reactive power setpoint (Q)</source>
       <translation>จุดตั้งค่ากำลังไฟฟ้ารีแอกทีฟ (Q)</translation>
     </message>
     <message id="page_microgrid_allowed_frequency_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="195"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="198"/>
       <source>Allowed frequency range</source>
       <translation>ช่วงความถี่ที่อนุญาต</translation>
     </message>
     <message id="page_microgrid_allowed_voltage_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="203"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="206"/>
       <source>Allowed voltage range</source>
       <translation>ช่วงแรงดันไฟฟ้าที่อนุญาต</translation>
     </message>
     <message id="page_microgrid_v_f_direct_drive_settings">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="220"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="223"/>
       <source>V-f direct drive settings</source>
       <translation>การตั้งค่า V-f direct drive</translation>
     </message>
     <message id="page_microgrid_voltage_setpoint">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="225"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="228"/>
       <source>Voltage setpoint (U)</source>
       <translation>จุดตั้งค่าแรงดันไฟฟ้า (U)</translation>
     </message>
     <message id="page_microgrid_frequency_setpoint">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="232"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="235"/>
       <source>Frequency setpoint (f)</source>
       <translation>จุดตั้งค่าความถี่ (f)</translation>
     </message>
     <message id="pagesettingsintegrations_canopenmotordrive">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="173"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="189"/>
       <source>CANopen motor drives</source>
       <translation>CANopen motor drives</translation>
     </message>
@@ -10282,7 +10292,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>UI Plugins</translation>
     </message>
     <message id="devicelist_motordrive_motordirectioninverted">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="73"/>
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="93"/>
       <source>Motor Direction Inverted</source>
       <translation>ทิศทางมอเตอร์กลับด้าน</translation>
     </message>
@@ -10337,7 +10347,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation type="unfinished">ต่ำ</translation>
     </message>
     <message id="switchable_output_bypassed">
-      <location filename="../../src/enums.cpp" line="484"/>
+      <location filename="../../src/enums.cpp" line="515"/>
       <source>Bypassed</source>
       <translation>ข้าม</translation>
     </message>
@@ -10395,18 +10405,18 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>ไม่มีการแจ้งเตือนที่เปิดใช้งาน</translation>
     </message>
     <message id="switchable_output_rgb_color_wheel">
-      <location filename="../../src/enums.cpp" line="427"/>
+      <location filename="../../src/enums.cpp" line="449"/>
       <source>RGB color wheel</source>
       <translation>วงล้อสี RGB</translation>
     </message>
     <message id="switchable_output_cct_color_wheel">
-      <location filename="../../src/enums.cpp" line="431"/>
+      <location filename="../../src/enums.cpp" line="453"/>
       <source>CCT color wheel</source>
       <extracomment>Correlated Color Temperature color wheel</extracomment>
       <translation>วงล้อสี CCT</translation>
     </message>
     <message id="switchable_output_rgbw_color_wheel">
-      <location filename="../../src/enums.cpp" line="435"/>
+      <location filename="../../src/enums.cpp" line="457"/>
       <source>RGB + W color wheel</source>
       <extracomment>RGB + white color wheel</extracomment>
       <translation>วงล้อสี RGB + W</translation>
@@ -10486,7 +10496,7 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>CANopen E-drive (500 กิโลบิต/วินาที)</translation>
     </message>
     <message id="page_microgrid_from_p1_to_p2">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="39"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="40"/>
       <source>%1%2 to %3%4</source>
       <extracomment>Describes a range from one quantity to another, e.g. "30W to 60W". The first argument is the first quantity, the second argument is the units of the first quantity, the third argument is the second quantity, the fourth argument is the units of the second quantity.</extracomment>
       <translation>%1%2 ถึง %3%4</translation>
@@ -10625,13 +10635,93 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
     <message id="settings_vrm_device_registration">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="95"/>
       <source>VRM device registration</source>
-      <translation/>
+      <translation>การลงทะเบียนอุปกรณ์ VRM</translation>
     </message>
     <message id="common_words_go_to_redetect_system">
       <location filename="../../components/CommonWords.qml" line="221"/>
       <source>If it was recently disconnected, go to Settings → Devices → %1 → Advanced, and select 'Redetect VE.Bus system'.</source>
       <extracomment>%1 = name of the device</extracomment>
-      <translation/>
+      <translation>หากเพิ่งยกเลิกการเชื่อมต่อ ให้ไปที่ การตั้งค่า → อุปกรณ์ → %1 → ขั้นสูง แล้วเลือก 'ตรวจจับระบบ VE.Bus อีกครั้ง'</translation>
+    </message>
+    <message id="settings_canbus_nmea2000out_alerts">
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="76"/>
+      <source>NMEA2000 outbound alerts</source>
+      <translation>การแจ้งเตือนขาออก NMEA2000</translation>
+    </message>
+    <message id="settings_logging_vrm_portal">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="45"/>
+      <source>VRM Portal access level</source>
+      <translation>ระดับการเข้าถึง VRM Portal</translation>
+    </message>
+    <message id="settings_firmware_check_timed_out">
+      <location filename="../../components/FirmwareUpdate.qml" line="207"/>
+      <source>Firmware check timed out</source>
+      <translation>การตรวจสอบเฟิร์มแวร์หมดเวลา</translation>
+    </message>
+    <message id="devicelist_motordrive_motordirection">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="57"/>
+      <source>Motor Direction</source>
+      <translation>ทิศทางมอเตอร์</translation>
+    </message>
+    <message id="devicelist_motordrive_motortorque">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="64"/>
+      <source>Motor Torque</source>
+      <translation>แรงบิดมอเตอร์</translation>
+    </message>
+    <message id="settings_units_mixed">
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="53"/>
+      <source>Mixed (AC in Watts, DC in Amps)</source>
+      <translation>ผสม (AC เป็นวัตต์, DC เป็นแอมป์)</translation>
+    </message>
+    <message id="switchable_output_overtemperature_tripped">
+      <location filename="../../src/enums.cpp" line="486"/>
+      <source>Over temp, tripped</source>
+      <translation>อุณหภูมิสูงเกิน, ตัด</translation>
+    </message>
+    <message id="switchable_output_disabled">
+      <location filename="../../src/enums.cpp" line="503"/>
+      <source>Disabled</source>
+      <translation type="unfinished">พิการ</translation>
+    </message>
+    <message id="switchable_output_disabled_tripped">
+      <location filename="../../src/enums.cpp" line="506"/>
+      <source>Disabled, tripped</source>
+      <translation>ปิดใช้งาน, ตัด</translation>
+    </message>
+    <message id="switchable_output_disabled_overtemperature">
+      <location filename="../../src/enums.cpp" line="509"/>
+      <source>Disabled, over temp</source>
+      <translation>ปิดใช้งาน, อุณหภูมิสูงเกิน</translation>
+    </message>
+    <message id="switchable_output_disabled_on">
+      <location filename="../../src/enums.cpp" line="512"/>
+      <source>Disabled but on</source>
+      <translation>ปิดใช้งานแต่เปิดอยู่</translation>
+    </message>
+    <message id="switchable_output_bypassed_tripped">
+      <location filename="../../src/enums.cpp" line="518"/>
+      <source>Bypassed, tripped</source>
+      <translation>บายพาส, ตัด</translation>
+    </message>
+    <message id="switchable_output_bypassed_overtemperature">
+      <location filename="../../src/enums.cpp" line="521"/>
+      <source>Bypassed, over temp</source>
+      <translation>บายพาส, อุณหภูมิสูงเกิน</translation>
+    </message>
+    <message id="switchable_output_externalcontrol">
+      <location filename="../../src/enums.cpp" line="524"/>
+      <source>External control</source>
+      <translation type="unfinished">การควบคุมภายนอก</translation>
+    </message>
+    <message id="switchable_output_externalcontrol_tripped">
+      <location filename="../../src/enums.cpp" line="527"/>
+      <source>External control, tripped</source>
+      <translation>ควบคุมภายนอก, ตัด</translation>
+    </message>
+    <message id="switchable_output_externalcontrol_overtemperature">
+      <location filename="../../src/enums.cpp" line="530"/>
+      <source>External control, over temp</source>
+      <translation>ควบคุมภายนอก, อุณหภูมิสูงเกิน</translation>
     </message>
     <message id="settings_radio_button_group_unknown">
       <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
@@ -10654,19 +10744,114 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation type="unfinished">อินพุตกระแสตรง</translation>
     </message>
     <message id="brief_ac_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="257"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="258"/>
       <source>AC Loads</source>
       <translation type="unfinished">โหลด AC</translation>
     </message>
     <message id="brief_dc_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="284"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="287"/>
       <source>DC Loads</source>
       <translation type="unfinished">โหลดไฟฟ้ากระแสตรง</translation>
     </message>
     <message id="nav_overview">
-      <location filename="../../pages/OverviewPage.qml" line="450"/>
+      <location filename="../../pages/OverviewPage.qml" line="490"/>
       <source>Overview</source>
       <translation type="unfinished">ภาพรวม</translation>
+    </message>
+    <message id="ev_target_soc">
+      <location filename="../../pages/ev/EvPage.qml" line="25"/>
+      <source>Target state of charge</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_range">
+      <location filename="../../pages/ev/EvPage.qml" line="32"/>
+      <source>Range</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_battery_capacity">
+      <location filename="../../pages/ev/EvPage.qml" line="40"/>
+      <source>Battery capacity</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_power">
+      <location filename="../../pages/ev/EvPage.qml" line="47"/>
+      <source>Power</source>
+      <translation type="unfinished">พลังงาน</translation>
+    </message>
+    <message id="ev_charging_state">
+      <location filename="../../pages/ev/EvPage.qml" line="56"/>
+      <source>Charging state</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_charging_state_not_charging">
+      <location filename="../../pages/ev/EvPage.qml" line="62"/>
+      <source>Not charging</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_charging_state_low_power">
+      <location filename="../../pages/ev/EvPage.qml" line="65"/>
+      <source>Low power mode</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_charging_state_charging">
+      <location filename="../../pages/ev/EvPage.qml" line="68"/>
+      <source>Charging</source>
+      <translation type="unfinished">กำลังชาร์จ</translation>
+    </message>
+    <message id="ev_charging_state_sustain">
+      <location filename="../../pages/ev/EvPage.qml" line="71"/>
+      <source>Sustain</source>
+      <translation type="unfinished">ยังชีพประคับประคอง</translation>
+    </message>
+    <message id="ev_charging_state_wake_up">
+      <location filename="../../pages/ev/EvPage.qml" line="74"/>
+      <source>Wake up</source>
+      <translation type="unfinished">ตื่น</translation>
+    </message>
+    <message id="ev_charging_state_discharging">
+      <location filename="../../pages/ev/EvPage.qml" line="77"/>
+      <source>Discharging</source>
+      <translation type="unfinished">การคายประจุ</translation>
+    </message>
+    <message id="ev_charging_state_scheduled_charging">
+      <location filename="../../pages/ev/EvPage.qml" line="80"/>
+      <source>Scheduled charging</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_charging_state_unknown">
+      <location filename="../../pages/ev/EvPage.qml" line="83"/>
+      <source>Unknown</source>
+      <translation type="unfinished">ไม่รู้จัก</translation>
+    </message>
+    <message id="ev_at_site">
+      <location filename="../../pages/ev/EvPage.qml" line="91"/>
+      <source>At site</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_last_contact">
+      <location filename="../../pages/ev/EvPage.qml" line="98"/>
+      <source>Last contact</source>
+      <translation type="unfinished">ผู้ติดต่อล่าสุด</translation>
+    </message>
+    <message id="ev_vin">
+      <location filename="../../pages/ev/EvPage.qml" line="106"/>
+      <source>VIN</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_odometer">
+      <location filename="../../pages/ev/EvPage.qml" line="113"/>
+      <source>Odometer</source>
+      <translation type="unfinished"/>
+    </message>
+    <message id="ev_position">
+      <location filename="../../pages/ev/EvPage.qml" line="122"/>
+      <source>Position</source>
+      <translation type="unfinished">ตำแหน่ง</translation>
+    </message>
+    <message id="ev_nr_phases">
+      <location filename="../../pages/ev/EvPage.qml" line="139"/>
+      <source>Number of phases</source>
+      <translation type="unfinished"/>
     </message>
     <message id="settings_state">
       <location filename="../../pages/settings/PageCanbusStatus.qml" line="116"/>
@@ -10904,8 +11089,18 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>CRE</name>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="838"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="843"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="855"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="860"/>
+      <source>Unknown error: </source>
+      <translation>ข้อผิดพลาดที่ไม่รู้จัก:</translation>
+    </message>
+  </context>
+  <context>
+    <name>CUMMINS</name>
+    <message>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1034"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1040"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1046"/>
       <source>Unknown error: </source>
       <translation>ข้อผิดพลาดที่ไม่รู้จัก:</translation>
     </message>
@@ -11287,8 +11482,8 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>DEIF</name>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="857"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="862"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="874"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="879"/>
       <source>Unknown error: </source>
       <translation>ข้อผิดพลาดที่ไม่รู้จัก:</translation>
     </message>
@@ -11296,8 +11491,8 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>DSE</name>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="242"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="247"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="259"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="264"/>
       <source>Unknown error: </source>
       <translation>ข้อผิดพลาดที่ไม่รู้จัก:</translation>
     </message>
@@ -11343,679 +11538,679 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>FischerPanda</name>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="87"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="92"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="104"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="109"/>
       <source>Unknown error: </source>
       <translation>ข้อผิดพลาดที่ไม่รู้จัก:</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="98"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="115"/>
       <source>No error</source>
       <translation>ไม่มีข้อผิดพลาด</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="101"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="118"/>
       <source>AC voltage L1 too low</source>
       <translation>แรงดันไฟฟ้ากระแสสลับ L1 ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="101"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="118"/>
       <source>AC voltage too low</source>
       <translation>แรงดันไฟฟ้ากระแสสลับต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="102"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="119"/>
       <source>AC voltage L1 too high</source>
       <translation>แรงดันไฟฟ้ากระแสสลับ L1 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="102"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="119"/>
       <source>AC voltage too high</source>
       <translation>แรงดันไฟฟ้ากระแสสลับสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="103"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="120"/>
       <source>AC frequency L1 too low</source>
       <translation>ความถี่ AC L1 ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="103"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="120"/>
       <source>AC frequency too low</source>
       <translation>ความถี่ AC ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="104"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="121"/>
       <source>AC frequency L1 too high</source>
       <translation>ความถี่ AC L1 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="104"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="121"/>
       <source>AC frequency too high</source>
       <translation>ความถี่ไฟฟ้ากระแสสลับสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="105"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="122"/>
       <source>AC current L1 too high</source>
       <translation>กระแสไฟ AC L1 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="105"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="122"/>
       <source>AC current too high</source>
       <translation>กระแสไฟ AC สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="106"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="123"/>
       <source>AC power L1 too high</source>
       <translation>ไฟ AC L1 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="106"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="123"/>
       <source>AC power too high</source>
       <translation>ไฟ AC สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="107"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="231"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="124"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="248"/>
       <source>Emergency stop</source>
       <translation>หยุดฉุกเฉิน</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="108"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="125"/>
       <source>Servo current too high</source>
       <translation>กระแสเซอร์โวสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="109"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="126"/>
       <source>Oil pressure too low</source>
       <translation>แรงดันน้ำมันเครื่องต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="110"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="127"/>
       <source>Oil pressure too high</source>
       <translation>แรงดันน้ำมันเครื่องสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="111"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="128"/>
       <source>Engine temperature too low</source>
       <translation>อุณหภูมิเครื่องยนต์ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="112"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="129"/>
       <source>Engine temperature too high</source>
       <translation>อุณหภูมิเครื่องยนต์สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="113"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="130"/>
       <source>Winding temperature too low</source>
       <translation>ไขลานอุณหภูมิต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="114"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="131"/>
       <source>Winding temperature too high</source>
       <translation>อุณหภูมิของขดลวดสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="115"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="132"/>
       <source>Exhaust temperature too low</source>
       <translation>อุณหภูมิไอเสียต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="116"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="133"/>
       <source>Exhaust temperature too high</source>
       <translation>อุณหภูมิไอเสียสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="117"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="134"/>
       <source>Electronic temperature low</source>
       <translation>อุณหภูมิอิเล็กทรอนิกส์ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="118"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="135"/>
       <source>Electronic temperature high</source>
       <translation>อุณหภูมิอิเล็คทรอนิกส์สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="119"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="136"/>
       <source>Starter voltage too low</source>
       <translation>แรงดันไฟสตาร์ทต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="120"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="137"/>
       <source>Starter current too high</source>
       <translation>กระแสไฟสตาร์ทสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="121"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="138"/>
       <source>Glow voltage too low</source>
       <translation>แรงดันไฟเรืองแสงต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="122"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="139"/>
       <source>Glow current too high</source>
       <translation>กระแสไฟเรืองแสงสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="123"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="140"/>
       <source>Cold-Start-Aid voltage too high</source>
       <translation>แรงดันไฟช่วยสตาร์ทเครื่องเย็นสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="124"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="141"/>
       <source>Cold-Start-Aid current too high</source>
       <translation>กระแสไฟช่วยสตาร์ทเย็นสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="125"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="142"/>
       <source>Fuel holding magnet voltage too low</source>
       <translation>แรงดันไฟแม่เหล็กยึดเชื้อเพลิงต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="126"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="143"/>
       <source>Fuel holding magnet current too high</source>
       <translation>กระแสแม่เหล็กดูดเชื้อเพลิงสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="127"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="144"/>
       <source>Stop solenoid hold coil voltage too low</source>
       <translation>หยุดขดลวดโซลินอยด์ยึดแรงดันไฟฟ้าต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="128"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="145"/>
       <source>Stop solenoid hold coil current too high</source>
       <translation>หยุดโซลินอยด์ถือกระแสคอยล์สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="129"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="146"/>
       <source>Stop solenoid pull coil voltage too low </source>
       <translation>หยุดขดลวดดึงโซลินอยด์แรงดันไฟฟ้าต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="130"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="147"/>
       <source>Stop solenoid pull coil current too high</source>
       <translation>หยุดกระแสดึงขดลวดโซลินอยด์สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="131"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="148"/>
       <source>Fan/water pump voltage too low</source>
       <translation>แรงดันไฟพัดลม/ปั๊มน้ำต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="132"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="149"/>
       <source>Fan/water pump current too high</source>
       <translation>กระแสไฟพัดลม/ปั๊มน้ำสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="133"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="150"/>
       <source>Current sensor voltage low</source>
       <translation>แรงดันไฟเซ็นเซอร์ปัจจุบันต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="134"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="151"/>
       <source>Current sensor current high</source>
       <translation>เซ็นเซอร์กระแสไฟกระแสสูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="135"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="152"/>
       <source>Boost output voltage too low</source>
       <translation>แรงดันเอาท์พุตบูสต์ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="136"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="153"/>
       <source>Boost output current too high</source>
       <translation>การเพิ่มกระแสไฟขาออกสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="137"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="154"/>
       <source>Bus supply voltage too low</source>
       <translation>แรงดันไฟจ่ายบัสต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="138"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="155"/>
       <source>Bus supply current too high</source>
       <translation>กระแสไฟจ่ายบัสสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="139"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="156"/>
       <source>Starter battery voltage too low</source>
       <translation>แรงดันแบตเตอรี่สตาร์ทต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="140"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="157"/>
       <source>Starter battery voltage too high</source>
       <translation>แรงดันไฟแบตเตอรี่สตาร์ทสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="141"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="158"/>
       <source>Rotation too low</source>
       <translation>การหมุนต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="142"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="159"/>
       <source>Rotation too high</source>
       <translation>หมุนสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="143"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="160"/>
       <source>Unexpected stop/problem with fuel supply</source>
       <translation>การหยุดกะทันหัน/ปัญหาการจ่ายน้ำมัน</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="144"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="161"/>
       <source>Power contactor voltage too low</source>
       <translation>แรงดันไฟคอนแทคเตอร์ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="145"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="162"/>
       <source>Power contactor current too high</source>
       <translation>กระแสไฟคอนแทคสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="146"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="163"/>
       <source>AC voltage L2 too low</source>
       <translation>แรงดันไฟฟ้ากระแสสลับ L2 ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="147"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="164"/>
       <source>AC voltage L2 too high</source>
       <translation>แรงดันไฟฟ้ากระแสสลับ L2 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="148"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="165"/>
       <source>AC frequency L2 too low</source>
       <translation>ความถี่ AC L2 ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="149"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="166"/>
       <source>AC frequency L2 too high</source>
       <translation>ความถี่ AC L2 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="150"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="167"/>
       <source>AC current L2 too high</source>
       <translation>กระแสไฟ AC L2 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="151"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="168"/>
       <source>AC power L2 too high</source>
       <translation>ไฟ AC L2 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="152"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="169"/>
       <source>AC voltage L3 too low</source>
       <translation>แรงดันไฟฟ้ากระแสสลับ L3 ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="153"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="170"/>
       <source>AC voltage L3 too high</source>
       <translation>แรงดันไฟฟ้ากระแสสลับ L3 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="154"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="171"/>
       <source>AC frequency L3 too low</source>
       <translation>ความถี่ AC L3 ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="155"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="172"/>
       <source>AC frequency L3 too high</source>
       <translation>ความถี่ AC L3 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="156"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="173"/>
       <source>AC current L3 too high</source>
       <translation>กระแสไฟ AC L3 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="157"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="174"/>
       <source>AC power L3 too high</source>
       <translation>ไฟ AC L3 สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="158"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="175"/>
       <source>Output Inverter voltage too low</source>
       <translation>แรงดันไฟเอาท์พุตของอินเวอร์เตอร์ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="159"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="176"/>
       <source>Output Inverter current too  high</source>
       <translation>กระแสอินเวอร์เตอร์เอาท์พุตสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="160"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="177"/>
       <source>Universal output (1A) voltage too low</source>
       <translation>แรงดันไฟขาออกสากล (1A) ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="161"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="178"/>
       <source>Universal output (1A) current too high</source>
       <translation>กระแสไฟขาออกสากล (1A) สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="162"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="179"/>
       <source>Universal output (5A) voltage too low</source>
       <translation>แรงดันไฟขาออกสากล (5A) ต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="163"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="180"/>
       <source>Universal output (5A) current too high</source>
       <translation>กระแสไฟขาออกสากล (5A) สูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="164"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="181"/>
       <source>AGT DC voltage 1 low</source>
       <translation>AGT แรงดันไฟ DC 1 ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="165"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="182"/>
       <source>AGT DC voltage 1 high</source>
       <translation>แรงดันไฟ DC AGT 1 สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="166"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="183"/>
       <source>AGT DC current 1 low</source>
       <translation>AGT กระแสไฟ DC 1 ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="167"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="184"/>
       <source>AGT DC current 1 high</source>
       <translation>AGT กระแสไฟ DC 1 สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="168"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="185"/>
       <source>AGT DC voltage 2 low</source>
       <translation>AGT แรงดันไฟ DC 2 ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="169"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="186"/>
       <source>AGT DC voltage 2 high</source>
       <translation>แรงดันไฟ DC AGT 2 สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="170"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="187"/>
       <source>AGT DC current 2 low</source>
       <translation>กระแสไฟ DC AGT 2 ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="171"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="188"/>
       <source>AGT DC current 2 high</source>
       <translation>AGT กระแสไฟ DC 2 สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="172"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="189"/>
       <source>AGT B6 cooler low</source>
       <translation>AGT B6 คูลเลอร์ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="173"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="190"/>
       <source>AGT B6 cooler high</source>
       <translation>AGT B6 คูลเลอร์สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="174"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="191"/>
       <source>AGT B6 rail (-) low</source>
       <translation>ราง AGT B6 (-) ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="175"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="192"/>
       <source>AGT B6 rail (-) high</source>
       <translation>ราง AGT B6 (-) สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="176"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="193"/>
       <source>AGT B6 rail (+) low</source>
       <translation>ราง AGT B6 (+) ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="177"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="194"/>
       <source>AGT B6 rail (+) high</source>
       <translation>ราง AGT B6 (+) สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="178"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="195"/>
       <source>Fuel temperature too low</source>
       <translation>อุณหภูมิน้ำมันเชื้อเพลิงต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="179"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="196"/>
       <source>Fuel temperature too high</source>
       <translation>อุณหภูมิน้ำมันเชื้อเพลิงสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="180"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="197"/>
       <source>Fuel level too low</source>
       <translation>ระดับน้ำมันเชื้อเพลิงต่ำเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="183"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="200"/>
       <source>Lost control unit</source>
       <translation>หน่วยควบคุมหาย</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="184"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="201"/>
       <source>Lost panel</source>
       <translation>แผงหายไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="185"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="202"/>
       <source>Service needed</source>
       <translation>ต้องรับการตรวจเช็ค</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="186"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="203"/>
       <source>Lost 3-phase module</source>
       <translation>โมดูล 3 เฟสหาย</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="187"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="204"/>
       <source>Lost AGT module</source>
       <translation>โมดูล AGT ที่หายไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="188"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="205"/>
       <source>Synchronization failure</source>
       <translation>การซิงโครไนซ์ล้มเหลว</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="189"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="206"/>
       <source>Lost external ECU</source>
       <translation>สูญเสีย ECU ภายนอก</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="190"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="207"/>
       <source>Intake airfilter</source>
       <translation>กรองอากาศเข้า</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="191"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="208"/>
       <source>Diagnostic message (ECU)</source>
       <translation>ข้อความวินิจฉัย (ECU)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="192"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="209"/>
       <source>Lost sync. module</source>
       <translation>การซิงค์ที่หายไป โมดูล</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="193"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="210"/>
       <source>Load-balance failed</source>
       <translation>โหลดบาลานซ์ล้มเหลว</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="194"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="211"/>
       <source>Sync-mode deactivated</source>
       <translation>ปิดใช้งานโหมดซิงค์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="195"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="212"/>
       <source>Red Stop Lamp (RSL)</source>
       <translation>ไฟเบรกสีแดง (RSL)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="196"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="213"/>
       <source>Amber Warning Lamp (AWL)</source>
       <translation>ไฟเตือนสีเหลืองอำพัน (AWL)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="197"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="214"/>
       <source>Malfunction Indicator Lamp (MIL)</source>
       <translation>ไฟแสดงการทำงานผิดปกติ (MIL)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="198"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="215"/>
       <source>Protect Lamp (PL)</source>
       <translation>โคมไฟป้องกัน (PL)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="199"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="216"/>
       <source>Rotating field wrong</source>
       <translation>การหมุนผิด</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="200"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="217"/>
       <source>Fuel level sensor lost</source>
       <translation>เซ็นเซอร์ระดับน้ำมันเชื้อเพลิงหาย</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="201"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="218"/>
       <source>Starting without inverter</source>
       <translation>การสตาร์ทโดยไม่ต้องใช้อินเวอร์เตอร์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="202"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="219"/>
       <source>Bus #1 dead</source>
       <translation>รถบัสหมายเลข 1 เสีย</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="203"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="220"/>
       <source>Start request denied</source>
       <translation>คำขอเริ่มต้นถูกปฏิเสธ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="204"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="221"/>
       <source>Remote start denied</source>
       <translation>การเริ่มต้นระยะไกลถูกปฏิเสธ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="205"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="222"/>
       <source>Forced switch off load relay</source>
       <translation>รีเลย์ปิดโหลดแบบบังคับ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="206"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="223"/>
       <source>Synchronization Module is offline</source>
       <translation>โมดูลการซิงโครไนซ์ออฟไลน์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="207"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="224"/>
       <source>Lost BMS</source>
       <translation>BMS หาย</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="208"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="225"/>
       <source>Converter DC Link Voltage Low/Reverse</source>
       <translation>ตัวแปลง DC Link แรงดันไฟต่ำ/ย้อนกลับ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="209"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="226"/>
       <source>Converter DC Link Current Low</source>
       <translation>ตัวแปลงกระแสตรงเชื่อมต่อกระแสต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="210"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="227"/>
       <source>Converter DC Precharge Voltage Low</source>
       <translation>ตัวแปลง DC แรงดันไฟชาร์จล่วงหน้าต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="211"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="228"/>
       <source>Converter DC Precharge Voltage High</source>
       <translation>ตัวแปลง DC แรงดันไฟชาร์จล่วงหน้าสูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="212"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="229"/>
       <source>Converter IGBT/MOSFET Driver Error</source>
       <translation>ข้อผิดพลาดไดรเวอร์ตัวแปลง IGBT/MOSFET</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="213"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="230"/>
       <source>Converter Error Power Control Loop</source>
       <translation>วงจรควบคุมพลังงานผิดพลาดของตัวแปลง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="214"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="231"/>
       <source>Converter AC Frequency Detection</source>
       <translation>การตรวจจับความถี่ตัวแปลงไฟฟ้ากระแสสลับ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="215"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="232"/>
       <source>Converter Control Value Fail</source>
       <translation>ค่าควบคุมตัวแปลงล้มเหลว</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="216"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="233"/>
       <source>Factory setting changed</source>
       <translation>การตั้งค่าจากโรงงานมีการเปลี่ยนแปลง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="217"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="234"/>
       <source>Parameter changed in admin mode</source>
       <translation>พารามิเตอร์เปลี่ยนแปลงในโหมดผู้ดูแลระบบ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="218"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="235"/>
       <source>Manual Intervention (ext. System)</source>
       <translation>การแทรกแซงด้วยตนเอง (ระบบภายนอก)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="221"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="238"/>
       <source>Init failed</source>
       <translation>การเริ่มต้นล้มเหลว</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="222"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="239"/>
       <source>Watchdog</source>
       <translation>สุนัขเฝ้าบ้าน</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="223"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="240"/>
       <source>Inverter temperature high L1</source>
       <translation>อุณหภูมิอินเวอร์เตอร์สูง L1</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="224"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="241"/>
       <source>Inverter temperature high L2</source>
       <translation>อุณหภูมิอินเวอร์เตอร์สูง L2</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="225"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="242"/>
       <source>Inverter temperature high L3</source>
       <translation>อุณหภูมิอินเวอร์เตอร์สูง L3</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="226"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="243"/>
       <source>Inverter temperature high DC link</source>
       <translation>อินเวอร์เตอร์อุณหภูมิสูง DC ลิงค์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="227"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="244"/>
       <source>Inverter overload</source>
       <translation>โอเวอร์โหลดอินเวอร์เตอร์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="228"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="245"/>
       <source>Inverter communication lost</source>
       <translation>การสื่อสารของอินเวอร์เตอร์สูญหาย</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="229"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="246"/>
       <source>DC overload</source>
       <translation>DC โอเวอร์โหลด</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="230"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="247"/>
       <source>DC overvoltage</source>
       <translation>DC แรงดันไฟเกิน</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="232"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="249"/>
       <source>No connection</source>
       <translation>ไม่มีการเชื่อมต่อ</translation>
     </message>
@@ -12023,12 +12218,12 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>GensetError</name>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="68"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="83"/>
       <source>No error</source>
       <translation>ไม่มีข้อผิดพลาด</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="79"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="96"/>
       <source>Unknown error: %1</source>
       <translation>ข้อผิดพลาดที่ไม่รู้จัก: %1</translation>
     </message>
@@ -12036,149 +12231,149 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>Hatz</name>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="778"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="784"/>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="790"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="795"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="801"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="807"/>
       <source>Unknown error: </source>
       <translation>ข้อผิดพลาดที่ไม่รู้จัก:</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="797"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="814"/>
       <source>Oil pressure</source>
       <translation>แรงดันน้ำมัน</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="798"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="815"/>
       <source>Cylinder head overtemperature</source>
       <translation>หัวกระบอกสูบมีอุณหภูมิสูงเกินไป</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="799"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="816"/>
       <source>Charge control</source>
       <translation>การควบคุมการชาร์จ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="800"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="817"/>
       <source>Speed higher than expected</source>
       <translation>ความเร็วสูงเกินความคาดหวัง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="801"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="818"/>
       <source>Overspeed</source>
       <translation>ความเร็วเกินกำหนด</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="803"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="820"/>
       <source>Oiltemperature higher than expected</source>
       <translation>อุณหภูมิน้ำมันสูงเกินกว่าที่คาดไว้</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="804"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="821"/>
       <source>Oiltemperature open circuit / short to power</source>
       <translation>อุณหภูมิของน้ำมันวงจรเปิด / ไฟฟ้าลัดวงจร</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="805"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="822"/>
       <source>Oiltemperature short to ground</source>
       <translation>อุณหภูมิของน้ำมันสั้นลงถึงพื้น</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="806"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="823"/>
       <source>Analog setpoint high / short to power</source>
       <translation>เซ็ตพอยต์อนาล็อกสูง/ลัดวงจร</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="807"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="824"/>
       <source>Analog setpoint low / short to ground</source>
       <translation>เซ็ตพอยต์อนาล็อกต่ำ/ลัดวงจรลงกราวด์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="808"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="825"/>
       <source>TSC1 message receive timeout</source>
       <translation>หมดเวลารับข้อความ TSC1</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="809"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="826"/>
       <source>CM1 message receive timeout</source>
       <translation>CM1 หมดเวลารับข้อความ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="810"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="827"/>
       <source>Battery voltage high</source>
       <translation>แรงดันไฟแบตเตอรี่สูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="811"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="828"/>
       <source>Battery voltage low</source>
       <translation>แรงดันไฟแบตเตอรี่ต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="812"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="829"/>
       <source>Speed signal distorted</source>
       <translation>สัญญาณความเร็วผิดเพี้ยน</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="813"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="830"/>
       <source>Internal 5V sensor supply high</source>
       <translation>เซ็นเซอร์ภายใน 5V จ่ายไฟสูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="814"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="831"/>
       <source>Internal 5V sensor supply low</source>
       <translation>เซ็นเซอร์ภายใน 5V จ่ายไฟต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="815"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="832"/>
       <source>Barometric pressure high</source>
       <translation>ความกดอากาศสูง</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="816"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="833"/>
       <source>Barometric pressure low</source>
       <translation>ความกดอากาศต่ำ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="817"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="834"/>
       <source>Output fuelpump short to power</source>
       <translation>ปั๊มเชื้อเพลิงเอาท์พุตลัดวงจร</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="818"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="835"/>
       <source>Output fuelpump short to ground</source>
       <translation>ปั๊มเชื้อเพลิงเอาท์พุตลัดวงจรลงกราวด์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="819"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="836"/>
       <source>Output glow plug short to power</source>
       <translation>หัวเทียนร้อนออกลัดวงจรต่อไฟ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="820"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="837"/>
       <source>Output glow plug short to ground</source>
       <translation>หัวเทียนร้อนออกลัดวงจรลงกราวด์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="821"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="838"/>
       <source>Injector open circuit/low side short to ground</source>
       <translation>หัวฉีดเปิดวงจร/ด้านต่ำลัดวงจรลงกราวด์</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="822"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="839"/>
       <source>Injector coil internal short circuit</source>
       <translation>วงจรภายในของคอยล์หัวฉีดลัดวงจร</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="823"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="840"/>
       <source>Injector low side short to power</source>
       <translation>หัวฉีดด้านต่ำลัดวงจรไฟฟ้า</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="824"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="841"/>
       <source>Service hours expired</source>
       <translation>ชั่วโมงบริการหมดเขตแล้ว</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="828"/>
+      <location filename="../../src/veutil/src/qt/genset_error.cpp" line="845"/>
       <source>Processor failure</source>
       <translation>โปรเซสเซอร์ขัดข้อง</translation>
     </message>

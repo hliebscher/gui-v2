@@ -66,8 +66,8 @@ FocusScope {
 
 	component StatusBarButton : Button {
 		radius: 0
-		width: Theme.geometry_statusBar_button_height
-		height: Theme.geometry_statusBar_button_height
+		defaultBackgroundWidth: Theme.geometry_statusBar_button_height
+		defaultBackgroundHeight: Theme.geometry_statusBar_button_height
 		backgroundColor: "transparent"  // don't show background when disabled
 		display: Button.IconOnly
 		color: Theme.color_ok
@@ -77,6 +77,14 @@ FocusScope {
 				breadcrumbs.updateFocusEdgeHint()
 			}
 		}
+
+		// For convenience, bind the paddings to the offsets that are used to expand the clickable
+		// area. If the button only contains an icon, no additional padding is required as the icon
+		// fits within the default defaultBackgroundWidth/Height.
+		leftPadding: leftInset
+		rightPadding: rightInset
+		topPadding: topInset
+		bottomPadding: bottomInset
 
 		Behavior on opacity {
 			enabled: root.animationEnabled
@@ -89,10 +97,6 @@ FocusScope {
 	component NotificationButton : Button {
 		readonly property bool animating: animator.running
 
-		leftPadding: Theme.geometry_silenceAlarmButton_horizontalPadding
-		rightPadding: Theme.geometry_silenceAlarmButton_horizontalPadding
-		height: Theme.geometry_notificationsPage_snoozeButton_height
-		radius: Theme.geometry_button_radius
 		opacity: enabled ? 1 : 0
 		font.family: Global.fontFamily
 		font.pixelSize: Theme.font_size_caption
@@ -108,11 +112,10 @@ FocusScope {
 	StatusBarButton {
 		id: leftButton
 
-		anchors {
-			left: parent.left
-			leftMargin: Theme.geometry_statusBar_horizontalMargin
-			verticalCenter: parent.verticalCenter
-		}
+		// Expand clickable area on left and bottom edges.
+		leftInset: Theme.geometry_statusBar_horizontalMargin
+		bottomInset: Theme.geometry_statusBar_spacing
+
 		icon.source: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsInactive ? "qrc:/images/icon_controls_off_32.svg"
 			: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? "qrc:/images/icon_controls_on_32.svg"
 			: root.leftButton === VenusOS.StatusBar_LeftButton_Back ? "qrc:/images/icon_back_32.svg"
@@ -121,14 +124,6 @@ FocusScope {
 		KeyNavigation.right: auxButton
 
 		onClicked: root.leftButtonClicked()
-
-		MouseAreaExtender {
-			anchors {
-				fill: parent
-				leftMargin: -parent.anchors.leftMargin
-				bottomMargin: -parent.anchors.leftMargin
-			}
-		}
 	}
 
 	StatusBarButton {
@@ -137,10 +132,15 @@ FocusScope {
 		readonly property bool auxCardsOpened: Global.mainView.cardsActive
 				&& root.leftButton !== VenusOS.StatusBar_LeftButton_ControlsActive
 
+		// Expand clickable area on right and bottom edges, and on left if leftButton is hidden.
 		anchors {
 			left: leftButton.right
-			verticalCenter: parent.verticalCenter
+			leftMargin: -leftInset
 		}
+		leftInset: leftButton.enabled ? 0 : Theme.geometry_statusBar_spacing
+		rightInset: Theme.geometry_statusBar_spacing
+		bottomInset: Theme.geometry_statusBar_spacing
+
 		visible: (!root.pageStack.opened && Global.switches.groups.count > 0)
 				|| auxCardsOpened // allow cards to be closed if all switches are disconnected while opened
 		icon.source: root.leftButton === VenusOS.StatusBar_LeftButton_ControlsActive ? ""
@@ -171,14 +171,6 @@ FocusScope {
 		}
 
 		onClicked: root.auxButtonClicked()
-
-		MouseAreaExtender {
-			anchors {
-				fill: parent
-				rightMargin: -Theme.geometry_statusBar_horizontalMargin
-				bottomMargin: -Theme.geometry_statusBar_horizontalMargin
-			}
-		}
 	}
 
 	Breadcrumbs {
@@ -205,7 +197,6 @@ FocusScope {
 			left: leftButton.right
 			leftMargin: Theme.geometry_settings_breadcrumb_horizontalMargin
 			right: rightButtonRow.left
-			verticalCenter: leftButton.verticalCenter
 		}
 		height: Theme.geometry_settings_breadcrumb_height
 		model: root.pageStack.opened ? root.pageStack.depth + 1 : null // '+ 1' because we insert a dummy breadcrumb with the text "Settings"
@@ -423,6 +414,10 @@ FocusScope {
 			leftMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
 			verticalCenter: parent.verticalCenter
 		}
+		// Expand clickable area on right and bottom edges.
+		rightInset: Theme.geometry_statusBar_spacing / 2
+		bottomInset: Theme.geometry_statusBar_spacing
+
 		// The notificationButton should always be shown, even when the page is not interactive
 		opacity: 1
 		visible: !breadcrumbs.visible && (Global.notifications?.statusBarNotificationIconVisible ?? false)
@@ -436,33 +431,23 @@ FocusScope {
 						 "qrc:/images/icon_info_32.svg" : "qrc:/images/icon_warning_32.svg"
 		onClicked: Global.mainView.goToNotificationsPage()
 		KeyNavigation.right: alarmButton
-
-		MouseAreaExtender {
-			anchors {
-				fill: parent
-				rightMargin: -parent.anchors.leftMargin
-				bottomMargin: -parent.anchors.leftMargin
-			}
-		}
-	}
-
-	Row {
-		id: rightSideRow
-		anchors {
-			right: rightButtonRow.left
-			rightMargin: Theme.geometry_statusBar_rightSideRow_horizontalMargin
-			verticalCenter: parent.verticalCenter
-		}
-		width: Math.max(20, implicitWidth)
 	}
 
 	NotificationButton {
 		id: alarmButton
 
 		anchors {
-			right: rightSideRow.right
+			left: notificationButton.right
 			verticalCenter: parent.verticalCenter
 		}
+		// Expand clickable area on horizontal and bottom edges.
+		leftInset: Theme.geometry_statusBar_spacing / 2
+		leftPadding: leftInset + Theme.geometry_silenceAlarmButton_horizontalPadding
+		rightInset: Theme.geometry_statusBar_spacing / 2
+		rightPadding: rightInset + Theme.geometry_silenceAlarmButton_horizontalPadding
+		topInset: Theme.geometry_statusBar_spacing
+		bottomInset: Theme.geometry_statusBar_spacing
+
 		enabled: notificationButtonsEnabled && (Global.notifications?.silenceAlarmVisible ?? false)
 		flat: false
 		backgroundColor: down ? Theme.color_critical : Theme.color_critical_background
@@ -473,27 +458,21 @@ FocusScope {
 		text: CommonWords.silence_alarm
 
 		onClicked: NotificationModel.acknowledgeAll()
-
-		MouseAreaExtender {
-			anchors {
-				fill: parent
-				leftMargin: -Theme.geometry_statusBar_rightSideRow_horizontalMargin
-				bottomMargin: -Theme.geometry_statusBar_rightSideRow_horizontalMargin
-			}
-		}
 	}
 
 	Row {
 		id: rightButtonRow
 
 		height: parent.height
-		anchors {
-			right: parent.right
-			rightMargin: Theme.geometry_statusBar_horizontalMargin
-		}
+		anchors.right: parent.right
 
 		StatusBarButton {
 			id: rightButton
+
+			// Expand clickable area on left and bottom edges.
+			leftInset: Theme.geometry_statusBar_spacing
+			bottomInset: Theme.geometry_statusBar_spacing
+
 			enabled: root.rightButton != VenusOS.StatusBar_RightButton_None
 			visible: enabled
 			icon.source: root.rightButton === VenusOS.StatusBar_RightButton_SidePanelActive
@@ -509,32 +488,24 @@ FocusScope {
 			KeyNavigation.right: sleepButton
 
 			onClicked: root.rightButtonClicked()
-
-			MouseAreaExtender {
-				anchors {
-					fill: parent
-					leftMargin: -rightButtonRow.anchors.rightMargin
-					bottomMargin: -rightButtonRow.anchors.rightMargin
-				}
-			}
 		}
 
 		StatusBarButton {
 			id: sleepButton
+
+			// Expand clickable area on right and bottom edges, and on left edge if right button is
+			// hidden. This is the right-most button in the row, so on the right edge, use
+			// Theme.geometry_statusBar_horizontalMargin instead of Theme.geometry_statusBar_spacing.
+			leftInset: rightButton.visible ? 0 : Theme.geometry_statusBar_spacing
+			rightInset: Theme.geometry_statusBar_horizontalMargin
+			bottomInset: Theme.geometry_statusBar_spacing
+
 			icon.source: "qrc:/images/icon_screen_sleep_32.svg"
 			visible: enabled
-			enabled: Global.screenBlanker?.supported
-					&& Global.screenBlanker?.enabled
+			enabled: ScreenBlanker.supported
+					&& ScreenBlanker.enabled
 					&& Global.pageManager?.interactivity === VenusOS.PageManager_InteractionMode_Interactive
-			onClicked: Global.screenBlanker.setDisplayOff()
-
-			MouseAreaExtender {
-				anchors {
-					fill: parent
-					rightMargin: -rightButtonRow.anchors.rightMargin
-					bottomMargin: -rightButtonRow.anchors.rightMargin
-				}
-			}
+			onClicked: ScreenBlanker.setDisplayOff()
 		}
 	}
 

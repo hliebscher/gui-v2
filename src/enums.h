@@ -279,6 +279,27 @@ public:
 	};
 	Q_ENUM(Battery_Balancer_Status)
 
+	enum Battery_Status {
+		Battery_Status_Balanced = (1ul << 0),
+		Battery_Status_Imbalance = (1ul << 1),
+		Battery_Status_Balancing = (1ul << 2),
+		Battery_Status_Overvoltage = (1ul << 3),
+		Battery_Status_Undervoltage = (1ul << 4),
+		Battery_Status_Low_Temperature_ATC = (1ul << 5),
+		Battery_Status_High_Temperature_ATC = (1ul << 6),
+		Battery_Status_Cell_Error = (1ul << 7),
+		Battery_Status_High_Temperature_ATD = (1ul << 8),
+		Battery_Status_High_Cell_Voltage = (1ul << 9),
+		Battery_Status_Update_Failure = (1ul << 10),
+		Battery_Status_Charge_Overcurrent_Warning = (1ul << 11),
+		Battery_Status_Charge_Overcurrent_Alarm = (1ul << 12),
+		Battery_Status_Discharge_Overcurrent_Warning = (1ul << 13),
+		Battery_Status_Discharge_Overcurrent_Alarm = (1ul << 14),
+		Battery_Status_Low_Cell_Voltage = (1ul << 15),
+		Battery_Status_Low_Temperature_ATD = (1ul << 16)
+	};
+	Q_ENUM(Battery_Status)
+
 	enum Ess_State {
 		Ess_State_OptimizedWithBatteryLife,
 		Ess_State_OptimizedWithoutBatteryLife,
@@ -564,16 +585,24 @@ public:
 	Q_ENUM(SwitchableOutput_Type)
 
 	enum SwitchableOutput_Status {
-		SwitchableOutput_Status_Off,
-		SwitchableOutput_Status_Powered,
-		SwitchableOutput_Status_Tripped,
-		SwitchableOutput_Status_Over_Temperature = 0x04,
-		SwitchableOutput_Status_Output_Fault =0x08,
-		SwitchableOutput_Status_On = 0x09,  //inputActive + active
-		SwitchableOutput_Status_Short_Fault = 0x10,
-		SwitchableOutput_Status_Disabled = 0x20,
-		SwitchableOutput_Status_TripLowVoltage = 0x22,
-		SwitchableOutput_Status_Bypassed = 0x40
+		SwitchableOutput_Status_Off                 = 0x00,
+		SwitchableOutput_Status_Powered             = 0x01,
+		SwitchableOutput_Status_Tripped             = 0x02,
+		SwitchableOutput_Status_OverTemperature     = 0x04,
+		SwitchableOutput_Status_OverTemperature_Tripped = 0x06,
+		SwitchableOutput_Status_OutputFault         = 0x08,
+		SwitchableOutput_Status_On                  = 0x09, // inputActive + active
+		SwitchableOutput_Status_ShortFault          = 0x10,
+		SwitchableOutput_Status_Disabled            = 0x20,
+		SwitchableOutput_Status_Disabled_Tripped    = 0x22, // TripLowVoltage
+		SwitchableOutput_Status_Disabled_OverTemperature = 0x24,
+		SwitchableOutput_Status_Disabled_On         = 0x29, // user control disallowed, but on
+		SwitchableOutput_Status_Bypassed            = 0x40,
+		SwitchableOutput_Status_Bypassed_Tripped    = 0x42,
+		SwitchableOutput_Status_Bypassed_OverTemperature = 0x44,
+		SwitchableOutput_Status_ExternalControl     = 0x80,
+		SwitchableOutput_Status_ExternalControl_Tripped = 0x82,
+		SwitchableOutput_Status_ExternalControl_OverTemperature = 0x84
 	};
 	Q_ENUM(SwitchableOutput_Status)
 
@@ -718,12 +747,21 @@ public:
 	};
 	Q_ENUM(DigitalInput_State)
 
+	// Latitude/Longitude string format, as saved to localsettings /Settings/Gps/Format.
 	enum GpsData_Format {
 		GpsData_Format_DegreesMinutesSeconds,
 		GpsData_Format_DecimalDegrees,
 		GpsData_Format_DegreesMinutes
 	};
 	Q_ENUM(GpsData_Format)
+
+	enum CardinalDirection {
+		CardinalDirection_North,
+		CardinalDirection_South,
+		CardinalDirection_East,
+		CardinalDirection_West,
+	};
+	Q_ENUM(CardinalDirection)
 
 	// These values are defined on the cerbo in /usr/sbin/resolv-watch script
 	// that monitors which connection is the one active from all the avaiable ones.
@@ -961,9 +999,27 @@ public:
 	};
 	Q_ENUM(MicrogridMode)
 
+	enum ElectricalPowerDisplay {
+		ElectricalPowerDisplay_PreferWatts,
+		ElectricalPowerDisplay_PreferAmps,
+		ElectricalPowerDisplay_Mixed,
+	};
+	Q_ENUM(ElectricalPowerDisplay)
+
+	enum ElectricalQuantity_Source {
+		ElectricalQuantity_Source_Any,
+		ElectricalQuantity_Source_Ac,
+		ElectricalQuantity_Source_AcInputOnly,
+		ElectricalQuantity_Source_Dc,
+	};
+	Q_ENUM(ElectricalQuantity_Source)
+
 	Q_INVOKABLE QString battery_modeToText(Battery_Mode mode) const;
 	Q_INVOKABLE Battery_Mode battery_modeFromPower(qreal power) const;
 	Q_INVOKABLE QString battery_iconFromMode(Battery_Mode mode) const;
+	Q_INVOKABLE QString battery_statusToText(Battery_Status status) const;
+
+	Q_INVOKABLE QString cardinalDirectionToShortText(CardinalDirection direction) const;
 
 	Q_INVOKABLE DcMeter_Type dcMeter_type(const QString &serviceType, int monitorMode) const;
 	Q_INVOKABLE QString dcMeter_typeToText(DcMeter_Type type) const;

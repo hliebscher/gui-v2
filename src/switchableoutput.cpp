@@ -82,21 +82,19 @@ void SwitchableOutput::initialize(VeQItem *outputItem)
 		m_showUIControlItem = showUIControlItem;
 		connect(showUIControlItem, &VeQItem::valueChanged, this, &SwitchableOutput::updateAllowedInGroupModel);
 	}
-
-	// Optional values - call itemGet() instead of itemGetOrCreate().
-	if (VeQItem *unitItem = m_outputItem->itemGet(QStringLiteral("Settings/Unit"))) {
+	if (VeQItem *unitItem = m_outputItem->itemGetOrCreate(QStringLiteral("Settings/Unit"))) {
 		connect(unitItem, &VeQItem::valueChanged, this, &SwitchableOutput::setUnit);
 		setUnit(unitItem->getValue());
 	} else {
 		setUnit(QVariant());
 	}
-	if (VeQItem *decimalsItem = m_outputItem->itemGet(QStringLiteral("Settings/Decimals"))) {
+	if (VeQItem *decimalsItem = m_outputItem->itemGetOrCreate(QStringLiteral("Settings/Decimals"))) {
 		connect(decimalsItem, &VeQItem::valueChanged, this, &SwitchableOutput::setDecimals);
 		setDecimals(decimalsItem->getValue());
 	} else {
 		setDecimals(QVariant());
 	}
-	if (VeQItem *stepSizeItem = m_outputItem->itemGet(QStringLiteral("Settings/StepSize"))) {
+	if (VeQItem *stepSizeItem = m_outputItem->itemGetOrCreate(QStringLiteral("Settings/StepSize"))) {
 		connect(stepSizeItem, &VeQItem::valueChanged, this, &SwitchableOutput::updateDecimalsFromStepSize);
 		updateDecimalsFromStepSize(stepSizeItem->getValue());
 	} else {
@@ -334,11 +332,11 @@ void SwitchableOutput::setUnit(const QVariant &unitValue)
 	int unitType = Enums::Units_None;
 
 	// get the base unit
-	if (unitText == QStringLiteral("\\S")) {
+	if (unitText == QStringLiteral("/Speed")) {
 		unitType = Enums::Units_Speed_MetresPerSecond;
-	} else if (unitText == QStringLiteral("\\T")) {
+	} else if (unitText == QStringLiteral("/Temperature")) {
 		unitType = Enums::Units_Temperature_Celsius;
-	} else if (unitText == QStringLiteral("\\V")) {
+	} else if (unitText == QStringLiteral("/Volume")) {
 		unitType = Enums::Units_Volume_CubicMetre;
 	}
 

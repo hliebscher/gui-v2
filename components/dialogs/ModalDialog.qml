@@ -88,12 +88,18 @@ T.Dialog {
 	// would be received. So, just enable it when the dialog is opened, if key nav is enabled.
 	focus: Global.keyNavigationEnabled
 
-	enter: Transition {
-		enabled: Global.animationEnabled
+	// Only provide transitions if animations are enabled. Ideally the transitions would always be
+	// set but with 'enabled' set to only run when needed, but due to QTBUG-142410 the enabled value
+	// is not respected.
+	enter: Global.animationEnabled ? enterTransition : null
+	exit: Global.animationEnabled ? exitTransition : null
+
+	Transition {
+		id: enterTransition
 		NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; duration: Theme.animation_page_fade_duration }
 	}
-	exit: Transition {
-		enabled: Global.animationEnabled
+	Transition {
+		id: exitTransition
 		NumberAnimation {
 			loops: Qt.platform.os == "wasm" ? 0 : 1 // workaround wasm crash, see https://bugreports.qt.io/browse/QTBUG-121382
 			property: "opacity"; from: 1.0; to: 0.0; duration: Theme.animation_page_fade_duration
@@ -288,6 +294,16 @@ T.Dialog {
 		z: -1
 		enabled: !!stateManager.inputItem
 		onClicked: focus = true
+	}
+
+	Component.onCompleted: {
+		if (Global.main && Global.main.requiresRotation) {
+			// we cannot manually position the header or footer.
+			// just reject the dialog for now.
+			// TODO: use eglfs and rotate the entire surface.
+			// See: issue #2702.
+			Qt.callLater(reject)
+		}
 	}
 }
 

@@ -16,7 +16,7 @@ QtObject {
 			// It's hard to skip onboarding without touch, so disable onboarding if touch is disabled.
 			&& _touchEnabled.valid && _touchEnabled.value !== 0
 
-	property int electricalQuantity: VenusOS.Units_None
+	property int electricalPowerDisplay: VenusOS.ElectricalPowerDisplay_PreferWatts
 	property int temperatureUnit: VenusOS.Units_None
 	property string temperatureUnitSuffix
 	property int volumeUnit: VenusOS.Units_None
@@ -71,13 +71,16 @@ QtObject {
 		return accessLevel.valid && accessLevel.value >= level
 	}
 
-	function setElectricalQuantity(value) {
+	function setElectricalPowerDisplay(value) {
 		switch (value) {
-			case VenusOS.Units_Watt:
+			case VenusOS.ElectricalPowerDisplay_PreferWatts:
 				_electricalQuantity.setValue(_electricalQuantity.ve_watt)
 				break
-			case VenusOS.Units_Amp:
+			case VenusOS.ElectricalPowerDisplay_PreferAmps:
 				_electricalQuantity.setValue(_electricalQuantity.ve_amp)
+				break
+			case VenusOS.ElectricalPowerDisplay_Mixed:
+				_electricalQuantity.setValue(_electricalQuantity.ve_mixed)
 				break
 			default:
 				console.warn("setElectricalQuantity() unknown value:", value)
@@ -138,6 +141,14 @@ QtObject {
 				console.warn("setSpeedUnit() unknown value:", value)
 				break
 		}
+	}
+
+	function formatLatitude(latitude) {
+		return Units.formatLatitude(latitude, _gpsPositionFormat.value ?? 0)
+	}
+
+	function formatLongitude(longitude) {
+		return Units.formatLongitude(longitude, _gpsPositionFormat.value ?? 0)
 	}
 
 	function networkStatusToText(status) {
@@ -339,19 +350,23 @@ QtObject {
 	property VeQuickItem _electricalQuantity: VeQuickItem {
 		readonly property int ve_watt: 0
 		readonly property int ve_amp: 1
+		readonly property int ve_mixed: 2
 
 		uid: root.serviceUid + "/Settings/Gui/ElectricalPowerIndicator"
 		onValueChanged: {
 			switch (value) {
 			case ve_watt:
-				root.electricalQuantity = VenusOS.Units_Watt
+				root.electricalPowerDisplay = VenusOS.ElectricalPowerDisplay_PreferWatts
 				break
 			case ve_amp:
-				root.electricalQuantity = VenusOS.Units_Amp
+				root.electricalPowerDisplay = VenusOS.ElectricalPowerDisplay_PreferAmps
+				break
+			case ve_mixed:
+				root.electricalPowerDisplay = VenusOS.ElectricalPowerDisplay_Mixed
 				break
 			default:
 				console.warn("Cannot load electrical quantity,", uid, "has unsupported value:", value, "default to watts")
-				root.electricalQuantity = VenusOS.Units_Watt
+				root.electricalPowerDisplay = VenusOS.ElectricalPowerDisplay_PreferWatts
 				break
 			}
 		}
@@ -467,6 +482,10 @@ QtObject {
 	// 0 = disabled, 1 = enabled; value is 1 by default.
 	readonly property VeQuickItem _animationEnabled: VeQuickItem {
 		uid: root.serviceUid + "/Settings/Gui2/UIAnimations"
+	}
+
+	readonly property VeQuickItem _gpsPositionFormat: VeQuickItem {
+		uid: Global.systemSettings.serviceUid + "/Settings/Gps/Format"
 	}
 
 	function reset() {

@@ -4,6 +4,7 @@
 */
 
 #include "enums.h"
+#include <QLocale>
 
 namespace Victron {
 namespace VenusOS {
@@ -57,6 +58,104 @@ QString Enums::battery_iconFromMode(Battery_Mode mode) const
 		return "qrc:/images/icon_battery_discharging_24.svg";
 	default:
 		return "qrc:/images/icon_battery_24.svg";
+	}
+}
+
+QString Enums::battery_statusToText(Battery_Status status) const
+{
+	QStringList result;
+
+	if (status & Battery_Status_Balanced) {
+		//% "Balanced"
+		result << qtTrId("battery_status_balanced");
+	}
+	if (status & Battery_Status_Imbalance) {
+		//% "Imbalance"
+		result << qtTrId("battery_status_imbalance");
+	}
+	if (status & Battery_Status_Balancing) {
+		//% "Balancing"
+		result << qtTrId("battery_status_balancing");
+	}
+	if (status & Battery_Status_Overvoltage) {
+		//% "Overvoltage"
+		result << qtTrId("battery_status_overvoltage");
+	}
+	if (status & Battery_Status_Undervoltage) {
+		//% "Undervoltage"
+		result << qtTrId("battery_status_undervoltage");
+	}
+	if (status & Battery_Status_Low_Temperature_ATC) {
+		//% "Low Temperature (ATC)"
+		result << qtTrId("battery_status_low_temperature_atc");
+	}
+	if (status & Battery_Status_High_Temperature_ATC) {
+		//% "High Temperature (ATC)"
+		result << qtTrId("battery_status_high_temperature_atc");
+	}
+	if (status & Battery_Status_Cell_Error) {
+		//% "Cell Error"
+		result << qtTrId("battery_status_cell_error");
+	}
+	if (status & Battery_Status_High_Temperature_ATD) {
+		//% "High Temperature (ATD)"
+		result << qtTrId("battery_status_high_temperature_atd");
+	}
+	if (status & Battery_Status_High_Cell_Voltage) {
+		//% "High Cell Voltage"
+		result << qtTrId("battery_status_high_cell_voltage");
+	}
+	if (status & Battery_Status_Update_Failure) {
+		//% "Update Failure"
+		result << qtTrId("battery_status_update_failure");
+	}
+	if (status & Battery_Status_Charge_Overcurrent_Warning) {
+		//% "Charge Overcurrent Warning"
+		result << qtTrId("battery_status_charge_overcurrent_warning");
+	}
+	if (status & Battery_Status_Charge_Overcurrent_Alarm) {
+		//% "Charge Overcurrent Alarm"
+		result << qtTrId("battery_status_charge_overcurrent_alarm");
+	}
+	if (status & Battery_Status_Discharge_Overcurrent_Warning) {
+		//% "Discharge Overcurrent Warning"
+		result << qtTrId("battery_status_discharge_overcurrent_warning");
+	}
+	if (status & Battery_Status_Discharge_Overcurrent_Alarm) {
+		//% "Discharge Overcurrent Alarm"
+		result << qtTrId("battery_status_discharge_overcurrent_alarm");
+	}
+	if (status & Battery_Status_Low_Cell_Voltage) {
+		//% "Low Cell Voltage"
+		result << qtTrId("battery_status_low_cell_voltage");
+	}
+	if (status & Battery_Status_Low_Temperature_ATD) {
+		//% "Low Temperature (ATD)"
+		result << qtTrId("battery_status_low_temperature_atd");
+	}
+
+	return QLocale().createSeparatedList(result);
+}
+
+QString Enums::cardinalDirectionToShortText(CardinalDirection direction) const
+{
+	switch (direction) {
+	case CardinalDirection_North:
+		//: Abbreviation of "North" direction
+		//% "N"
+		return qtTrId("cardinalDirection_short_north");
+	case CardinalDirection_South:
+		//: Abbreviation of "South" direction
+		//% "S"
+		return qtTrId("cardinalDirection_short_south");
+	case CardinalDirection_East:
+		//: Abbreviation of "East" direction
+		//% "E"
+		return qtTrId("cardinalDirection_short_east");
+	case CardinalDirection_West:
+		//: Abbreviation of "West" direction
+		//% "W"
+		return qtTrId("cardinalDirection_short_west");
 	}
 }
 
@@ -372,7 +471,7 @@ QString Enums::switch_deviceStateToText(Switch_DeviceState value) const
 		return qtTrId("switch_state_channel_fault");
 	case Switch_DeviceState_Channel_Tripped:
 		//% "Channel Tripped"
-		return qtTrId("switch_state_channel_Trippped");
+		return qtTrId("switch_state_channel_tripped");
 	case Switch_DeviceState_Under_Voltage:
 		//% "Under voltage"
 		return qtTrId("switch_state_under_voltage");
@@ -456,10 +555,13 @@ QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, Swit
 	case SwitchableOutput_Status_Tripped:
 		//% "Tripped"
 		return qtTrId("switchable_output_tripped");
-	case SwitchableOutput_Status_Over_Temperature:
+	case SwitchableOutput_Status_OverTemperature:
 		//% "Over temperature"
-		return qtTrId("switchable_output_over_temperature");
-	case SwitchableOutput_Status_Output_Fault:
+		return qtTrId("switchable_output_overtemperature");
+	case SwitchableOutput_Status_OverTemperature_Tripped:
+		//% "Over temp, tripped"
+		return qtTrId("switchable_output_overtemperature_tripped");
+	case SwitchableOutput_Status_OutputFault:
 		//% "Fault"
 		return qtTrId("switchable_output_fault");
 	case SwitchableOutput_Status_On:
@@ -470,18 +572,39 @@ QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, Swit
 			//% "On"
 			return qtTrId("switchable_output_on");
 		}
-	case SwitchableOutput_Status_Short_Fault:
+	case SwitchableOutput_Status_ShortFault:
 		//% "Short"
 		return qtTrId("switchable_output_short");
 	case SwitchableOutput_Status_Disabled:
 		//% "Disabled"
 		return qtTrId("switchable_output_disabled");
-	case SwitchableOutput_Status_TripLowVoltage:
-		//% "Trip low voltage"
-		return qtTrId("switchable_output_trip_low_voltage");
+	case SwitchableOutput_Status_Disabled_Tripped:
+		//% "Disabled, tripped"
+		return qtTrId("switchable_output_disabled_tripped");
+	case SwitchableOutput_Status_Disabled_OverTemperature:
+		//% "Disabled, over temp"
+		return qtTrId("switchable_output_disabled_overtemperature");
+	case SwitchableOutput_Status_Disabled_On:
+		//% "Disabled but on"
+		return qtTrId("switchable_output_disabled_on");
 	case SwitchableOutput_Status_Bypassed:
 		//% "Bypassed"
 		return qtTrId("switchable_output_bypassed");
+	case SwitchableOutput_Status_Bypassed_Tripped:
+		//% "Bypassed, tripped"
+		return qtTrId("switchable_output_bypassed_tripped");
+	case SwitchableOutput_Status_Bypassed_OverTemperature:
+		//% "Bypassed, over temp"
+		return qtTrId("switchable_output_bypassed_overtemperature");
+	case SwitchableOutput_Status_ExternalControl:
+		//% "External control"
+		return qtTrId("switchable_output_externalcontrol");
+	case SwitchableOutput_Status_ExternalControl_Tripped:
+		//% "External control, tripped"
+		return qtTrId("switchable_output_externalcontrol_tripped");
+	case SwitchableOutput_Status_ExternalControl_OverTemperature:
+		//% "External control, over temp"
+		return qtTrId("switchable_output_externalcontrol_overtemperature");
 	default:
 		return QString::number(static_cast<int>(value));
 	}

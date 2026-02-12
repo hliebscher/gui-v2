@@ -1350,41 +1350,41 @@
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="71"/>
       <source>Format</source>
       <extracomment>Format of reported GPS data</extracomment>
-      <translation>Format</translation>
+      <translation>Format der GPS-Daten</translation>
     </message>
     <message id="settings_gps_format_dms_example">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="77"/>
       <source>52° 20' 41.6" N, 5° 13' 12.3" E</source>
       <extracomment>Example of GPS data in the 'Degrees, Minutes, Seconds' format</extracomment>
-      <translation>52° 20' 41,6" N, 5° 13' 12,3" E</translation>
+      <translation>52° 20' 41,6" N, 5° 13' 12,3" O</translation>
     </message>
     <message id="settings_gps_format_dd_example">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="80"/>
       <source>52.34489, 5.22008</source>
       <extracomment>Example of GPS data in the 'Decimal Degrees' format</extracomment>
-      <translation>52,34489, 5,22008</translation>
+      <translation>52.34489, 5.22008</translation>
     </message>
     <message id="settings_gps_format_dm_example">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="83"/>
       <source>52° 20.693 N, 5° 13.205 E</source>
       <extracomment>Example of GPS data in the 'Degrees Minutes' format</extracomment>
-      <translation>52° 20,693 N, 5° 13,205 E</translation>
+      <translation>52° 20.693 N, 5° 13.205 O</translation>
     </message>
     <message id="settings_gps_speed_unit">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="90"/>
       <source>Speed Unit</source>
       <extracomment>Speed unit for reported GPS data</extracomment>
-      <translation>Geschwindigkeitseinheit</translation>
+      <translation>Geschwindigkeitseinheit der GPS-Daten</translation>
     </message>
     <message id="settings_gps_format_mph">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="99"/>
       <source>Miles per hour</source>
-      <translation>Meilen pro Stunde</translation>
+      <translation>Meilen pro Stunde (mph)</translation>
     </message>
     <message id="settings_gps_format_kt">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="101"/>
       <source>Knots</source>
-      <translation>Knoten</translation>
+      <translation>Knoten (kt)</translation>
     </message>
     <message id="page_settings_gsm_internet">
         <location filename="../../../pages/settings/PageSettingsGsm.qml" line="51"/>
@@ -4833,7 +4833,7 @@ Möchtest Sie fortfahren?</translation>
       <location filename="../../src/enums.cpp" line="272"/>
       <source>No</source>
       <extracomment>Digital input state</extracomment>
-      <translation>Nein</translation>
+      <translation>Kein</translation>
     </message>
     <message id="common_words_no_error">
         <location filename="../../../components/CommonWords.qml" line="359"/>
@@ -5499,7 +5499,7 @@ This will overwrite all current settings.</source>
     <message id="tank_type_black_water">
       <location filename="../../src/enums.cpp" line="556"/>
       <source>Black water</source>
-      <translation>Schwarzwasser</translation>
+      <translation>Fäkalien</translation>
     </message>
     <message id="tank_type_gasoline">
       <location filename="../../src/enums.cpp" line="559"/>
@@ -6372,7 +6372,7 @@ This will overwrite all current settings.</source>
     <message id="inverters_state_inverting">
       <location filename="../../data/System.qml" line="152"/>
       <source>Inverting</source>
-      <translation>Inverting</translation>
+      <translation>Erzeugung</translation>
     </message>
     <message id="inverters_state_assisting">
       <location filename="../../data/System.qml" line="155"/>
@@ -8295,7 +8295,7 @@ This will overwrite all current settings.</source>
     <message id="switchable_output_slave_of">
       <location filename="../../src/enums.cpp" line="427"/>
       <source>Slave of %1</source>
-      <translation>Sklave von %1</translation>
+      <translation>Untergerät von %1</translation>
     </message>
     <message id="switchable_output_not_running">
       <location filename="../../src/enums.cpp" line="470"/>
@@ -8310,7 +8310,7 @@ This will overwrite all current settings.</source>
     <message id="switchable_output_powered">
       <location filename="../../src/enums.cpp" line="477"/>
       <source>Powered</source>
-      <translation>Angetrieben</translation>
+      <translation>Angeschaltet</translation>
     </message>
     <message id="switchable_output_tripped">
       <location filename="../../src/enums.cpp" line="480"/>
@@ -10907,7 +10907,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="settings_canbus_nmea2000out_alerts">
       <location filename="../../pages/settings/PageSettingsCanbus.qml" line="76"/>
       <source>NMEA2000 outbound alerts</source>
-      <translation>NMEA 2000 ausgehende Warnmeldungen</translation>
+      <translation></translation>
     </message>
     <message id="settings_logging_vrm_portal">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="45"/>
@@ -10917,17 +10917,17 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="settings_firmware_check_timed_out">
       <location filename="../../components/FirmwareUpdate.qml" line="207"/>
       <source>Firmware check timed out</source>
-      <translation>Firmware-Prüfung ist abgelaufen</translation>
+      <translation></translation>
     </message>
     <message id="devicelist_motordrive_motordirection">
       <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="57"/>
       <source>Motor Direction</source>
-      <translation>Motorrichtung</translation>
+      <translation></translation>
     </message>
     <message id="devicelist_motordrive_motortorque">
       <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="64"/>
       <source>Motor Torque</source>
-      <translation>Motordrehmoment</translation>
+      <translation></translation>
     </message>
     <message id="settings_units_mixed">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="53"/>
@@ -11007,12 +11007,12 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
     <message id="brief_ac_loads">
       <location filename="../../pages/BriefSidePanel.qml" line="258"/>
       <source>AC Loads</source>
-      <translation type="unfinished">AC-Lasten</translation>
+      <translation>AC-Verbraucher</translation>
     </message>
     <message id="brief_dc_loads">
       <location filename="../../pages/BriefSidePanel.qml" line="287"/>
       <source>DC Loads</source>
-      <translation type="unfinished">DC-Lasten</translation>
+      <translation>DC-Verbraucher</translation>
     </message>
     <message id="nav_overview">
       <location filename="../../pages/OverviewPage.qml" line="490"/>
@@ -11408,7 +11408,7 @@ Hier können Sie zusätzliche Anschlüsse und Geräte-IDs hinzufügen, um nach P
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1040"/>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="1046"/>
       <source>Unknown error: </source>
-      <translation>Unbekannter Fehler: </translation>
+      <translation>Unbekannter Fehler:</translation>
     </message>
   </context>
   <context>

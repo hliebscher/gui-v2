@@ -70,6 +70,11 @@ FocusScope {
 		defaultBackgroundHeight: Theme.geometry_statusBar_button_height
 		backgroundColor: "transparent"  // don't show background when disabled
 		display: Button.IconOnly
+		// Einheitliche Icon-Größe, damit SVGs (mit unterschiedlichem ViewBox/Padding) in der
+		// Statusbar optisch gleich groß wirken.
+		readonly property int _statusBarIconSize: Math.round(Theme.geometry_statusBar_button_height * 0.375)
+		icon.width: _statusBarIconSize
+		icon.height: _statusBarIconSize
 		color: Theme.color_ok
 		opacity: enabled && Global.pageManager?.interactivity === VenusOS.PageManager_InteractionMode_Interactive ? 1.0 : 0.0
 		onActiveFocusChanged: {
@@ -153,8 +158,9 @@ FocusScope {
 	Image {
 			id: auxIcon
 			source: auxButton.icon.source
-  			width: auxButton.width * 0.6
-			height: auxButton.height * 0.6
+			width: auxButton.icon.width
+			height: auxButton.icon.height
+			sourceSize: Qt.size(width, height)
 			fillMode: Image.PreserveAspectFit
 			visible: !!auxButton.icon.source
 			anchors.verticalCenter: parent.verticalCenter

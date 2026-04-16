@@ -10,7 +10,7 @@ Item {
 	id: root
 
 	anchors.fill: parent
-	visible: !!Global.screenBlanker && Global.screenBlanker.blanked
+	visible: ScreenBlanker.supported && ScreenBlanker.blanked
 
 	Rectangle {
 		anchors.fill: parent

@@ -26,7 +26,7 @@ FocusScope {
 		anchors.fill: parent
 		z: 10
 		source: "pages/StandbyPage.qml"
-		active: !!Global.screenBlanker && Global.screenBlanker.blanked
+		active: ScreenBlanker.supported && ScreenBlanker.blanked
 	}
 
 	FirmwareUpdate {

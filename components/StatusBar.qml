@@ -359,8 +359,8 @@ FocusScope {
 			height: clockLabel.implicitHeight
 
 			onClicked: {
-				if (!!Global.screenBlanker && Global.screenBlanker.supported) {
-					Global.screenBlanker.setDisplayOff()
+				if (ScreenBlanker.supported && ScreenBlanker.enabled) {
+					ScreenBlanker.setDisplayOff()
 				}
 			}
 

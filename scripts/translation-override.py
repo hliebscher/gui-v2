@@ -38,6 +38,24 @@ REPO_ROOT = SCRIPT_DIR.parent
 DEFAULT_TS_FILE = REPO_ROOT / "i18n" / "venus-gui-v2_de.ts"
 DEFAULT_JSON_FILE = REPO_ROOT / "i18n" / "translation-overrides.json"
 
+def _default_compare_branch() -> str:
+    """
+    Prefer comparing against the remote-tracking branch if available.
+
+    Note: This script uses `git show <ref>:<path>`, so both `origin/main` and `main`
+    are valid refs if they exist locally.
+    """
+    for ref in ("origin/main", "main"):
+        r = subprocess.run(
+            ["git", "rev-parse", "--verify", "--quiet", ref],
+            cwd=REPO_ROOT,
+            capture_output=True,
+            text=True,
+        )
+        if r.returncode == 0:
+            return ref
+    return "main"
+
 
 def parse_ts_file(filepath: Path) -> dict[str, tuple[str, str]]:
     """
@@ -75,8 +93,8 @@ def parse_ts_file(filepath: Path) -> dict[str, tuple[str, str]]:
     return result
 
 
-def get_branch_version(ts_path: Path, branch: str = "main") -> str:
-    """Holt die de.ts vom angegebenen Branch."""
+def get_branch_version(ts_path: Path, branch: str) -> str:
+    """Holt die de.ts vom angegebenen Git-Ref (z.B. origin/main oder main)."""
     resolved = (REPO_ROOT / ts_path).resolve()
     git_path = resolved.relative_to(REPO_ROOT)
     result = subprocess.run(
@@ -94,8 +112,8 @@ def get_branch_version(ts_path: Path, branch: str = "main") -> str:
     return result.stdout
 
 
-def extract_overrides(ts_file: Path, json_file: Path, compare_branch: str = "main") -> None:
-    """Extrahiert Übersetzungsänderungen gegenüber main in eine JSON-Datei."""
+def extract_overrides(ts_file: Path, json_file: Path, compare_branch: str) -> None:
+    """Extrahiert Übersetzungsänderungen gegenüber dem angegebenen Ref in eine JSON-Datei."""
     if not ts_file.exists():
         sys.stderr.write(f"Fehler: {ts_file} nicht gefunden.\n")
         sys.exit(1)
@@ -219,14 +237,19 @@ def apply_overrides(ts_file: Path, json_file: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Übersetzungs-Overrides: extrahieren (vs. main) oder anwenden."
+        description="Übersetzungs-Overrides: extrahieren (vs. origin/main oder main) oder anwenden."
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
     ext = sub.add_parser("extract", help="Änderungen vs. main extrahieren und in JSON speichern")
     ext.add_argument("-t", "--ts-file", type=Path, default=DEFAULT_TS_FILE, help="Pfad zur de.ts")
     ext.add_argument("-o", "--output", type=Path, default=DEFAULT_JSON_FILE, help="Ausgabe-JSON")
-    ext.add_argument("-b", "--branch", default="main", help="Vergleichs-Branch (default: main)")
+    ext.add_argument(
+        "-b",
+        "--branch",
+        default=_default_compare_branch(),
+        help="Vergleichs-Ref (default: origin/main falls vorhanden, sonst main)",
+    )
 
     app = sub.add_parser("apply", help="JSON-Overrides auf de.ts anwenden")
     app.add_argument("-t", "--ts-file", type=Path, default=DEFAULT_TS_FILE, help="Pfad zur de.ts")

@@ -1,5 +1,12 @@
 set(REQUIRED_QT_VERSION 6.8.3)
 
+# Workaround: Qt 6.8.3 Wasm SDK incorrectly requires WrapRt (librt), which does not
+# exist in Emscripten. clock_gettime is provided directly by Emscripten's libc.
+if(EMSCRIPTEN AND NOT TARGET WrapRt::WrapRt)
+    add_library(WrapRt::WrapRt INTERFACE IMPORTED)
+    set(WrapRt_FOUND ON)
+endif()
+
 find_package(Qt6 ${REQUIRED_QT_VERSION}
     COMPONENTS
         Core Gui Qml Quick QuickControls2 Svg Xml Mqtt LinguistTools ShaderTools

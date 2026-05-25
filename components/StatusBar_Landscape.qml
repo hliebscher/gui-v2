@@ -117,8 +117,8 @@ FocusScope {
 		opacity: enabled ? 1.0 : 0.0
 		KeyNavigation.right: breadcrumbs
 
-		display: auxCardsOpened ? Button.TextBesideIcon : Button.IconOnly
-		text: auxCardsOpened ? CommonWords.switch_mode : ""
+		display: Button.TextBesideIcon
+		text: CommonWords.switch_mode
 		font.pixelSize: Theme.font_size_body
 
 		onClicked: {

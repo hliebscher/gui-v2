@@ -22,68 +22,80 @@ Page {
 		}
 	}
 
-	GradientListView {
-		header: BaseListItem {
-			readonly property alias columnWidth: loadSummary.fixedColumnWidth
-			readonly property alias columnSpacing: loadSummary.columnSpacing
+	Component {
+		id: headerComponent
 
-			visible: root.systemModel.count > 1
-			width: parent?.width ?? 0
-			height: visible ? dcsystemTable.y + dcsystemTable.height + bottomInset : 0
+		ListItem {
+			id: tableListItem
+
 			bottomInset: Theme.geometry_gradientList_spacing
+			topPadding: 0
+			bottomPadding: bottomInset
+			leftPadding: leftInset
+			rightPadding: rightInset
 
-			QuantityTableSummary {
-				id: loadSummary
+			contentItem: HorizontalFlickable {
+				readonly property real columnWidth: loadSummary.fixedColumnWidth
+				readonly property real columnSpacing: loadSummary.columnSpacing
 
-				width: parent.width
-				equalWidthColumns: true
+				implicitHeight: dcsystemTable.y + dcsystemTable.height
+				contentWidth: Math.max(Theme.geometry_quantityTable_maximumWidth_small, tableListItem.availableWidth)
 
-				// rightPadding = 32px width of the sub-menu arrow icon in each list delegate, plus
-				// margin, to align with the columns in the delegates.
-				rightPadding: 32 + Theme.geometry_listItem_content_horizontalMargin
-				summaryModel: [
-					{ text: "", unit: VenusOS.Units_None },
-					{ text: "", unit: VenusOS.Units_None },
-					{ text: CommonWords.total_power, unit: VenusOS.Units_None },
-				]
-				bodyHeaderText: CommonWords.total
-				bodyModel: QuantityObjectModel {
-					// Add empty columns for volts/amps so that these columns align with those
-					// in the QuantityTable.
-					QuantityObject { unit: VenusOS.Units_Volt_DC; hidden: true }
-					QuantityObject { unit: VenusOS.Units_Amp; hidden: true }
-					QuantityObject { object: Global.system.dc; key: "power"; unit: VenusOS.Units_Watt }
-				}
-			}
+				QuantityTableSummary {
+					id: loadSummary
 
-			QuantityTable {
-				id: dcsystemTable
+					width: parent.width
+					equalWidthColumns: true
 
-				anchors.top: loadSummary.bottom
-				rightPadding: loadSummary.rightPadding
-				width: parent.width
-				equalWidthColumns: true
-				model: root.systemModel.count > 1 ? root.systemModel : null
-				delegate: QuantityTable.TableRow {
-					id: dcsystemTableRow
-
-					required property Device device
-
-					headerText: dcSystemDevice.name
-					model: QuantityObjectModel {
-						QuantityObject { object: dcSystemDevice; key: "voltage"; unit: VenusOS.Units_Volt_DC }
-						QuantityObject { object: dcSystemDevice; key: "current"; unit: VenusOS.Units_Amp }
-						QuantityObject { object: dcSystemDevice; key: "power"; unit: VenusOS.Units_Watt }
+					// Set rightPadding to align with the columns in the delegates.
+					rightPadding: Theme.geometry_icon_size_medium + tableListItem.rightPadding
+					summaryModel: [
+						{ text: "", unit: VenusOS.Units_None },
+						{ text: "", unit: VenusOS.Units_None },
+						{ text: CommonWords.power_watts, unit: VenusOS.Units_None },
+					]
+					bodyHeaderText: CommonWords.total
+					bodyModel: QuantityObjectModel {
+						// Add empty columns for volts/amps so that these columns align with those
+						// in the QuantityTable.
+						QuantityObject { unit: VenusOS.Units_Volt_DC; hidden: true }
+						QuantityObject { unit: VenusOS.Units_Amp; hidden: true }
+						QuantityObject { object: Global.system.dc; key: "power"; unit: VenusOS.Units_Watt }
 					}
+				}
 
-					DcDevice {
-						id: dcSystemDevice
-						serviceUid: dcsystemTableRow.device.serviceUid
+				QuantityTable {
+					id: dcsystemTable
+
+					anchors.top: loadSummary.bottom
+					width: parent.width
+					rightPadding: loadSummary.rightPadding
+					equalWidthColumns: true
+					model: root.systemModel.count > 1 ? root.systemModel : null
+					delegate: QuantityTable.TableRow {
+						id: dcsystemTableRow
+
+						required property Device device
+
+						headerText: dcSystemDevice.name
+						model: QuantityObjectModel {
+							QuantityObject { object: dcSystemDevice; key: "voltage"; unit: VenusOS.Units_Volt_DC }
+							QuantityObject { object: dcSystemDevice; key: "current"; unit: VenusOS.Units_Amp }
+							QuantityObject { object: dcSystemDevice; key: "power"; unit: VenusOS.Units_Watt }
+						}
+
+						DcDevice {
+							id: dcSystemDevice
+							serviceUid: dcsystemTableRow.device.serviceUid
+						}
 					}
 				}
 			}
 		}
+	}
 
+	GradientListView {
+		header: root.systemModel.count > 1 ? headerComponent: null
 		model: root.nonSystemModel
 		delegate: LoadListDelegate {
 			id: deviceDelegate
@@ -94,8 +106,8 @@ Page {
 			power: dcDevice.power ?? NaN
 			current: dcDevice.current ?? NaN
 			temperature: temperatureItem.value ?? NaN
-			columnWidth: ListView.view.headerItem?.columnWidth ?? NaN
-			columnSpacing: ListView.view.headerItem?.columnSpacing ?? 0
+			columnWidth: ListView.view.headerItem?.contentItem?.columnWidth ?? NaN
+			columnSpacing: ListView.view.headerItem?.contentItem?.columnSpacing ?? 0
 
 			// this is a DC device, so prefer Amps in Mixed display mode,
 			// but only if we are not displaying the multiple-dcsystems table above
@@ -108,7 +120,7 @@ Page {
 			// Status depends on the service:
 			// - dcdc: /State
 			statusText: !statusItem.valid ? ""
-				: device.serviceType === "dcdc" ? Global.system.systemStateToText(statusItem.value)
+				: device.serviceType === "dcdc" ? VenusOS.system_stateToText(statusItem.value)
 				: ""
 
 			onClicked: root._showSettingsPage(device)

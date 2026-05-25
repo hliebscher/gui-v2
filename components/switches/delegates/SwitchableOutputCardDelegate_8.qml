@@ -14,7 +14,6 @@ FocusScope {
 
 	required property SwitchableOutput switchableOutput
 
-	enabled: root.switchableOutput.status !== VenusOS.SwitchableOutput_Status_Disabled
 	focus: true
 	KeyNavigationHighlight.active: activeFocus
 
@@ -60,7 +59,7 @@ FocusScope {
 			rightMargin: Theme.geometry_controlCard_button_margins
 			top: header.bottom
 		}
-		height: Theme.geometry_switchableoutput_control_height
+		height: Theme.geometry_iochannel_control_height
 		suffix: Units.defaultUnitString(Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
 				|| root.switchableOutput.unitText
 		from: decimalConverter.intFrom
@@ -86,18 +85,19 @@ FocusScope {
 			uid: root.switchableOutput.uid + "/Settings/DimmingMin"
 			sourceUnit: Units.unitToVeUnit(root.switchableOutput.unitType)
 			displayUnit: Units.unitToVeUnit(Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
+			onValueChanged: spinBox.reload()
 		}
 		VeQuickItem {
 			id: numericInputMax
 			uid: root.switchableOutput.uid + "/Settings/DimmingMax"
 			sourceUnit: Units.unitToVeUnit(root.switchableOutput.unitType)
 			displayUnit: Units.unitToVeUnit(Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
+			onValueChanged: spinBox.reload()
 		}
 		VeQuickItem {
 			id: numericInputStepSize
 			uid: root.switchableOutput.uid + "/Settings/StepSize"
-			sourceUnit: Units.unitToVeUnit(root.switchableOutput.unitType)
-			displayUnit: Units.unitToVeUnit(Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
+			// Do not set sourceUnit and displayUnit, as unit conversion is not applied to stepSize.
 		}
 
 		MouseArea {
@@ -112,9 +112,15 @@ FocusScope {
 			id: decimalConverter
 
 			decimals: root.switchableOutput.decimals
-			from: numericInputMin.valid ? numericInputMin.value : 0
-			to: numericInputMax.valid ? numericInputMax.value : 100
-			stepSize: numericInputStepSize.valid ? numericInputStepSize.value : 1
+			from: numericInputMin.valid
+				? numericInputMin.value
+				: Units.convert(0, root.switchableOutput.unitType, Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
+			to: numericInputMax.valid
+				? numericInputMax.value
+				: Units.convert(100, root.switchableOutput.unitType, Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
+			stepSize: numericInputStepSize.valid
+				? numericInputStepSize.value
+				: 1 // Unit conversion is not applied to stepSize.
 
 			// If the from/to is not available immediately from DimmingMin/Max, the SpinBox value is
 			// clamped to the default 0-100 range, so be sure to refresh the spinBox value when the
@@ -129,6 +135,7 @@ FocusScope {
 				uid: root.switchableOutput.uid + "/Dimming"
 				sourceUnit: Units.unitToVeUnit(root.switchableOutput.unitType)
 				displayUnit: Units.unitToVeUnit(Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType))
+				onValueChanged: spinBox.reload()
 			}
 			onTimeout: spinBox.reload()
 		}

@@ -16,6 +16,7 @@ ControlCard {
 	readonly property bool userHasWriteAccess: Global.systemSettings.canAccess(writeAccessLevel)
 	readonly property bool vebusInverterOnlyModel: serviceType === "vebus" && numberOfAcInputs.value === 0 // for a vebus inverter-only model, such as a "Phoenix Inverter Compact 12/1200"
 
+	implicitHeight: contentLayout.y + contentLayout.implicitHeight
 	icon.source: "qrc:/images/inverter_charger.svg"
 	title.text: (serviceType === "inverter" && isInverterChargerItem.value !== 1 ) || vebusInverterOnlyModel
 		  //: %1 = the inverter name
@@ -25,7 +26,7 @@ ControlCard {
 		  //% "Inverter / Charger (%1)"
 		: qsTrId("controlcard_inverter_charger").arg(name)
 
-	status.text: Global.system.systemStateToText(stateItem.value)
+	status.text: VenusOS.system_stateToText(stateItem.value)
 
 	VeQuickItem {
 		id: stateItem
@@ -52,13 +53,21 @@ ControlCard {
 		uid: root.serviceUid + "/Ac/NumberOfAcInputs"
 	}
 
+	Device {
+		id: device
+		serviceUid: root.serviceUid
+	}
+
 	SettingsColumn {
+		id: contentLayout
+
 		anchors {
 			top: parent.status.bottom
 			topMargin: Theme.geometry_controlCard_status_bottomMargin
 			left: parent.left
 			right: parent.right
 		}
+		bottomPadding: Theme.geometry_controlCard_contentMargins
 
 		Repeater {
 			model: AcInputSettingsModel {
@@ -85,7 +94,7 @@ ControlCard {
 			flat: true
 		}
 
-		FlatListItemSeparator {}
+		FlatListItemSeparator { visible: essStateButton.visible }
 
 		ListButton {
 			id: essStateButton
@@ -94,14 +103,15 @@ ControlCard {
 			preferredVisible: essModeItem.valid
 			writeAccessLevel: VenusOS.User_AccessType_User
 			secondaryText: Global.systemSettings.ess.essStateToButtonText(essModeItem.value)
-			// change the font size for the child button
-			button.font.pixelSize: Theme.font_size_body1
 			onClicked: {
 				Global.dialogLayer.open(essModeDialogComponent, { essMode: essModeItem.value })
 			}
 		}
 
+		FlatListItemSeparator { visible: minSocButton.visible }
+
 		ListButton {
+			id: minSocButton
 			//% "Minimum SOC"
 			text: qsTrId("controlcard_inverter_charger_ess_minimum_soc")
 			flat: true
@@ -118,6 +128,7 @@ ControlCard {
 		id: essModeDialogComponent
 
 		InverterChargerEssModeDialog {
+			secondaryTitle: device.name
 			onAccepted: essModeItem.setValue(essMode)
 		}
 	}
@@ -126,6 +137,7 @@ ControlCard {
 		id: essMinSocDialogComponent
 
 		ESSMinimumSOCDialog {
+			secondaryTitle: device.name
 			minimumStateOfCharge: essMinSocItem.value
 			onAccepted: essMinSocItem.setValue(minimumStateOfCharge)
 		}

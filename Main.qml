@@ -26,6 +26,11 @@ Window {
 	property real scaleFactor: 1.0
 	onIsDesktopChanged: Global.isDesktop = root.isDesktop
 
+	readonly property bool runTests: UiTest.status === UiTest.Ready
+			&& !Global.splashScreenVisible
+			&& Global.allPagesLoaded && !!Global.mainView && !Global.mainView.animating
+	onRunTestsChanged: if (runTests) UiTest.start()
+
 	// Uncomment for key navigation debugging
 	// onActiveFocusItemChanged: console.info("** Active focused:", activeFocusItem, activeFocusItem?.title ?? activeFocusItem?.text ?? "")
 
@@ -38,19 +43,23 @@ Window {
 		if (Global.mainView) {
 			Global.mainView.clearUi()
 		}
-		const demoModeChange = dataManagerLoader.active && dataManagerLoader.connectionReady
-		if (demoModeChange) {
+		const requiresReloadData = dataManagerLoader.active && dataManagerLoader.connectionReady
+		if (requiresReloadData) {
 			// we haven't lost backend connection.
-			// we must be rebuilding UI due to demo mode change.
+			// we must be rebuilding UI due to demo mode change,
+			// gui plugin reload,
+			// or detected crash in localsettings/venus-platform.
 			// manually cycle the data manager loader.
-			console.info("Main: resetting data manager due to demo mode change")
+			console.info("Main: resetting data manager due to change requiring data reload")
 			dataManagerLoader.active = false
+		} else {
+			console.info("Main: data reload not required")
 		}
 		Global.reset()
-		if (demoModeChange) {
+		gc()
+		if (requiresReloadData) {
 			dataManagerLoader.active = true
 		}
-		gc()
 		console.info("Main: UI rebuild started successfully")
 	}
 
@@ -69,6 +78,31 @@ Window {
 		}
 	}
 
+	onWidthChanged: {
+		if (!Global.isGxDevice) {
+			if (width < height) {
+				Theme.screenSize = Theme.Portrait
+			} else if (Theme.screenSize === Theme.Portrait) {
+				Theme.screenSize = Qt.platform.os === "wasm" ? Theme.SevenInch : Theme.FiveInch
+			}
+			if (Theme.screenSize === Theme.Portrait) {
+				Theme.geometry_screen_width = root.width * root.scaleFactor
+			}
+		}
+	}
+	onHeightChanged: {
+		if (!Global.isGxDevice) {
+			if (width < height) {
+				Theme.screenSize = Theme.Portrait
+			} else if (Theme.screenSize === Theme.Portrait) {
+				Theme.screenSize = Qt.platform.os === "wasm" ? Theme.SevenInch : Theme.FiveInch
+			}
+			if (Theme.screenSize === Theme.Portrait) {
+				Theme.geometry_screen_height = root.height * root.scaleFactor
+			}
+		}
+	}
+
 	Component.onCompleted: Global.main = root
 
 	Loader {
@@ -76,8 +110,10 @@ Window {
 		readonly property bool connectionReady: Global.backendReady
 		onConnectionReadyChanged: {
 			if (connectionReady) {
+				console.info("Main: data backend ready has changed to true")
 				active = true
 			} else if (active && !Global.needPageReload) {
+				console.info("Main: data backend ready has changed to false")
 				root.rebuildUi()
 				active = false
 			}
@@ -118,6 +154,25 @@ Window {
 		onScaleChanged: Global.scalingRatio = contentItem.scale
 
 		Keys.onPressed: function(event) {
+			// Show or hide the console if necessary
+			if ((Global.isGxDevice || Global.isDesktop)
+					&& Global.systemSettings
+					&& Global.systemSettings.canAccess(VenusOS.User_AccessType_SuperUser)) {
+				if (event.key === Qt.Key_F1
+						&& (event.modifiers & Qt.AltModifier
+							|| event.modifiers & Qt.MetaModifier)) {
+					consoleLoader.active = false
+					event.accepted = true
+					return
+				} else if (event.key === Qt.Key_F2
+						&& (event.modifiers & Qt.AltModifier
+							|| event.modifiers & Qt.MetaModifier)) {
+					consoleLoader.active = true
+					event.accepted = true
+					return
+				}
+			}
+
 			// If a key press is not handled by an item higher up in the hierarchy:
 			// Enable key navigation when an arrow or tab/backtab key is pressed.
 			if (!Global.keyNavigationEnabled) {
@@ -142,7 +197,8 @@ Window {
 		id: guiLoader
 
 		// Receive key events if key navigation is enabled.
-		focus: Global.keyNavigationEnabled
+		focus: !consoleLoader.active
+				&& Global.keyNavigationEnabled
 				// Do not receive focus while a dialog is open, as the key events will cause the
 				// focus item to change in the main UI.
 				&& !Global.dialogLayer?.currentDialog
@@ -153,6 +209,7 @@ Window {
 		anchors.centerIn: parent
 
 		asynchronous: true
+		visible: !consoleLoader.active
 		active: Global.dataManagerLoaded
 		onActiveChanged: if (active) console.info("Main: data manager finished loading; now loading application content")
 		sourceComponent: ApplicationContent {
@@ -175,13 +232,106 @@ Window {
 		}
 	}
 
+	Loader {
+		id: consoleLoader
+
+		anchors.centerIn: parent
+		width: Theme.geometry_screen_width
+		height: Theme.geometry_screen_height
+
+		asynchronous: true
+		active: false
+		focus: active
+
+		source: Global.isGxDevice ? "qrc:/qt/qml/Victron/VenusOS/components/ConsoleTerminal.qml"
+			: "qrc:/qt/qml/Victron/VenusOS/components/MockTerminal.qml"
+
+		onStatusChanged: {
+			if (status === Loader.Error) {
+				console.error("Main: failed to load console:", source)
+				consoleLoader.active = false
+			}
+		}
+
+		Connections {
+			target: consoleLoader.item
+			function onFinished(ret) {
+				consoleLoader.active = false
+			}
+		}
+	}
+
 	Timer {
 		id: appIdleTimer
-		running: !Global.splashScreenVisible
+		running: !Global.splashScreenVisible && Global.timersEnabled
 		interval: 60000
 		onTriggered: {
 			Global.applicationActive = false
 			root.keyNavigationTimeout()
+		}
+	}
+
+	// Detect when localsettings or venus-platform crashes
+	// and trigger a rebuildUi() in those cases, as we
+	// need to tear down all of our data models and rebuild them.
+	Connections {
+		id: systemServiceConnections
+		target: SystemServiceListener
+		property bool needReload: false
+		property var toastId: null
+		function onSettingsOnlineChanged() {
+			if (Global.backendReady && !SystemServiceListener.settingsOnline) {
+				console.info("Main: settings service is now unavailable!")
+				if (!systemServiceConnections.needReload) {
+					systemServiceConnections.needReload = true
+					//% "Warning: detected localsettings service offline; reloading UI when it becomes available again..."
+					systemServiceConnections.toastId = Global.showToastNotification(VenusOS.Notification_Warning, qsTrId("main_system_service_settings_offline_warning"))
+				}
+			}
+
+			if (SystemServiceListener.settingsOnline) {
+				console.info("Main: settings service is available again")
+				if (SystemServiceListener.platformOnline && systemServiceConnections.needReload) {
+					console.info("Main: all required services are available, reloading UI")
+					systemServiceConnections.needReload = false
+					ToastModel.requestDismiss(systemServiceConnections.toastId)
+					systemServiceConnections.toastId = null
+					root.rebuildUi()
+				}
+			}
+		}
+		function onPlatformOnlineChanged() {
+			if (Global.backendReady && !SystemServiceListener.platformOnline) {
+				console.info("Main: platform service is now unavailable!")
+				if (!systemServiceConnections.needReload) {
+					systemServiceConnections.needReload = true
+					//% "Warning: detected venus-platform service offline; reloading UI when it becomes available again..."
+					systemServiceConnections.toastId = Global.showToastNotification(VenusOS.Notification_Warning, qsTrId("main_system_service_platform_offline_warning"))
+				}
+			}
+
+			if (SystemServiceListener.platformOnline) {
+				console.info("Main: platform service is available again")
+				if (SystemServiceListener.settingsOnline && systemServiceConnections.needReload) {
+					console.info("Main: all required services are available, reloading UI")
+					systemServiceConnections.needReload = false
+					ToastModel.requestDismiss(systemServiceConnections.toastId)
+					systemServiceConnections.toastId = null
+					root.rebuildUi()
+				}
+			}
+		}
+	}
+
+	Connections {
+		target: GuiPluginLoader
+		// When plugins reload, rebuild the entire UI so that plugin
+		// components will be freshly compiled from the new .rcc data.
+		function onBusyChanged() {
+			if (GuiPluginLoader.busy) {
+				console.info("Main: gui plugins unloading, reloading UI")
+				root.rebuildUi()
+			}
 		}
 	}
 

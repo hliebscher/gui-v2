@@ -10,11 +10,18 @@ import Victron.VenusOS
 FocusScope {
 	id: root
 
-	property int fontPixelSize: Theme.font_size_body3
+	property int fontPixelSize: Theme.font_buttonRow_size
 	property alias model: buttonRepeater.model
 	property int currentIndex
 
 	signal buttonClicked(buttonIndex: int)
+
+	function clickButton(index) {
+		const button = buttonRepeater.itemAt(index)
+		if (button) {
+			button.click()
+		}
+	}
 
 	implicitWidth: parent.width
 	implicitHeight: Theme.geometry_segmentedButtonRow_height
@@ -73,7 +80,6 @@ FocusScope {
 
 				}
 				contentItem: Label {
-					anchors.centerIn: mouseArea
 					font.pixelSize: root.fontPixelSize
 					horizontalAlignment: Text.AlignHCenter
 					verticalAlignment: Text.AlignVCenter

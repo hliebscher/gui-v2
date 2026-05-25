@@ -58,6 +58,8 @@ int FastUtils::fittedPixelSize(const QString &text, const qreal maxWidth, int mi
 			theme->font_size_body2(),
 			theme->font_size_body1(),
 			theme->font_size_caption(),
+			theme->font_size_tiny(),
+			theme->font_size_micro(),
 			theme->font_size_phase_medium(),
 			theme->font_size_phase_small(),
 			theme->font_size_phase_number(),
@@ -100,6 +102,47 @@ FastUtils* FastUtils::create(QQmlEngine *, QJSEngine *)
 {
 	static FastUtils *instance = new FastUtils;
 	return instance;
+}
+
+
+void ValueRange::setMinimumValue(qreal v)
+{
+	if (m_minimumValue != v) {
+		m_minimumValue = v;
+		updateValueAsRatio();
+		Q_EMIT minimumValueChanged();
+	}
+}
+
+void ValueRange::setMaximumValue(qreal v)
+{
+	if (m_maximumValue != v) {
+		m_maximumValue = v;
+		updateValueAsRatio();
+		Q_EMIT maximumValueChanged();
+	}
+}
+
+void ValueRange::setValue(qreal v)
+{
+	if (m_value != v) {
+		m_value = v;
+		updateValueAsRatio();
+		Q_EMIT valueChanged();
+	}
+}
+
+void ValueRange::updateValueAsRatio()
+{
+	// Scale the value from the min-max range to a [0.0 - 1.0] range.
+	const qreal v = (qIsNaN(m_value) || qIsNaN(m_minimumValue) || qIsNaN(m_maximumValue))
+		? 0.0
+		: FastUtils::scale(m_value, m_minimumValue, m_maximumValue, 0, 1);
+
+	if (m_valueAsRatio != v) {
+		m_valueAsRatio = v;
+		Q_EMIT valueAsRatioChanged();
+	}
 }
 
 }

@@ -4,6 +4,8 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
 Page {
@@ -148,12 +150,10 @@ Page {
 				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsAlarmsAndFeedback.qml", {"title": text})
 			}
 
-			SettingsListHeader { }
-
 			ListRadioButtonGroup {
+				topInset: Theme.geometry_listItem_itemSeparator_height
 				//% "Language"
 				text: qsTrId("settings_language")
-
 				writeAccessLevel: VenusOS.User_AccessType_User
 				optionModel: languageModel
 				currentIndex: optionModel.currentIndex
@@ -228,13 +228,12 @@ Page {
 				onClicked: Global.pageManager.pushPage("/pages/settings/PageTzInfo.qml", {"title": text})
 			}
 
-			SettingsListHeader { }
-
-			ListRebootButton { }
-
-			SettingsListHeader { }
+			ListRebootButton {
+				topInset: Theme.geometry_listItem_itemSeparator_height
+			}
 
 			ListNavigation {
+				topInset: Theme.geometry_listItem_itemSeparator_height
 				//% "Documentation"
 				text: qsTrId("pagesettingsgeneral_documentation")
 				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsDocumentation.qml", {"title": text})
@@ -246,13 +245,54 @@ Page {
 				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsBackupRestore.qml", {"title": text})
 			}
 
-			
 			ListNavigation {
-				//% "Support status (modifications checks)"
-				text: qsTrId("pagesettingsgeneral_support_status_modification_checks")
-				secondaryText: supportStateText()
-				secondaryLabel.color: supportStateColor()
+				id: supportStatus
+
+				//% "Support status"
+				text: qsTrId("pagesettingsgeneral_support_status")
 				preferredVisible: fsModifiedStateItem.valid && systemHooksStateItem.valid
+				contentItem: Item {
+					implicitWidth: Theme.geometry_listItem_width
+					implicitHeight: supportStatusLayout.implicitHeight
+
+					ThreeLabelLayout {
+						id: supportStatusLayout
+
+						anchors {
+							left: parent.left
+							right: supportStatusIcon.left
+							rightMargin: supportStatus.spacing
+							verticalCenter: parent.verticalCenter
+						}
+
+						primaryText: supportStatus.text
+						primaryLabel.font: supportStatus.font
+						secondaryText: root.supportStateText()
+					}
+
+					CP.ColorImage {
+						id: supportStatusIcon
+
+						anchors {
+							verticalCenter: parent.verticalCenter
+							right: supportStatusForwardIcon.left
+							rightMargin: supportStatus.spacing
+						}
+						source: root.supportStateColor() === Theme.color_green ? "qrc:/images/icon_checkmark_32.svg"
+								: root.supportStateColor() === Theme.color_orange ? "qrc:/images/icon_warning_32.svg"
+								: "qrc:/images/icon_alarm_32.svg"
+						color: supportStateColor()
+					}
+
+					ForwardIcon {
+						id: supportStatusForwardIcon
+						anchors {
+							right: parent.right
+							verticalCenter: parent.verticalCenter
+						}
+					}
+				}
+
 				onClicked: Global.pageManager.pushPage("/pages/settings/PageSettingsSupportStatus.qml", {"title": text})
 
 				VeQuickItem {
@@ -265,9 +305,8 @@ Page {
 				}
 			}
 
-			SettingsListHeader { }
-
 			ListRadioButtonGroup {
+				topInset: Theme.geometry_listItem_itemSeparator_height
 				//% "Demo mode"
 				text: qsTrId("settings_demo_mode")
 				dataItem.uid: Global.systemSettings.serviceUid + "/Settings/Gui/DemoMode"

@@ -23,12 +23,25 @@ Page {
 	property alias settingsModel: settingsListView.model
 	property alias settingsDelegate: settingsListView.delegate
 
-	// True if a "Switches" item should be shown in the footer (if /SwitchableOutput entries are
-	// present on the service).
-	property bool showSwitches: true
-
 	// Additional settings to be loaded by PageDeviceInfo.
 	property Component extraDeviceInfo
+
+	property bool showInputs: genericInputModel.count > 0
+	property bool showOutputs: switchableOutputModel.count > 0
+
+	readonly property IOChannelProxyModel switchableOutputModel: IOChannelProxyModel {
+		sourceModel: VeQItemTableModel {
+			uids: [ root.serviceUid + "/SwitchableOutput" ]
+			flags: VeQItemTableModel.AddChildren | VeQItemTableModel.AddNonLeaves | VeQItemTableModel.DontAddItem
+		}
+	}
+
+	readonly property IOChannelProxyModel genericInputModel: IOChannelProxyModel {
+		sourceModel: VeQItemTableModel {
+			uids: [ root.serviceUid + "/GenericInput" ]
+			flags: VeQItemTableModel.AddChildren | VeQItemTableModel.AddNonLeaves | VeQItemTableModel.DontAddItem
+		}
+	}
 
 	title: _device.name
 
@@ -45,19 +58,12 @@ Page {
 			topPadding: ListView.view.count > 0 ? spacing : 0
 
 			ListNavigation {
-				//% "Switches"
-				text: qsTrId("device_page_switches")
-				preferredVisible: root.showSwitches && switchableOutputModel.count > 0
+				//: Settings page for switchable outputs
+				//% "Outputs"
+				text: qsTrId("device_page_outputs")
+				preferredVisible: root.showOutputs
 				onClicked: {
 					Global.pageManager.pushPage(switchableOutputPageComponent, { title: text })
-				}
-
-				SwitchableOutputModel {
-					id: switchableOutputModel
-					sourceModel: VeQItemTableModel {
-						uids: root.showSwitches ? [ root.serviceUid + "/SwitchableOutput" ] : []
-						flags: VeQItemTableModel.AddChildren | VeQItemTableModel.AddNonLeaves | VeQItemTableModel.DontAddItem
-					}
 				}
 
 				Component {
@@ -66,6 +72,25 @@ Page {
 						GradientListView {
 							model: switchableOutputModel
 							delegate: SwitchableOutputListDelegate {}
+						}
+					}
+				}
+			}
+
+			ListNavigation {
+				//% "Inputs"
+				text: qsTrId("device_page_inputs")
+				preferredVisible: root.showInputs
+				onClicked: {
+					Global.pageManager.pushPage(genericInputPageComponent, { title: text })
+				}
+
+				Component {
+					id: genericInputPageComponent
+					Page {
+						GradientListView {
+							model: genericInputModel
+							delegate: GenericInputListDelegate {}
 						}
 					}
 				}

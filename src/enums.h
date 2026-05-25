@@ -62,42 +62,46 @@ public:
 
 	enum Units_Type {
 		Units_None = 0,
-		Units_Volume_CubicMetre,
-		Units_Volume_Litre,
-		Units_Volume_GallonImperial,
-		Units_Volume_GallonUS,
-		Units_Percentage,
-		Units_Volt_AC,
-		Units_Volt_DC,
-		Units_VoltAmpere,
-		Units_VoltAmpereReactive,
-		Units_Watt,
 		Units_Amp,
-		Units_Hertz,
-		Units_Energy_KiloWattHour,
 		Units_AmpHour,
-		Units_WattsPerSquareMetre,
-		Units_Temperature_Kelvin,
+		Units_CardinalDirection,
+		Units_Energy_KiloWattHour,
+		Units_Foot,
+		Units_Hectopascal,
+		Units_Hertz,
+		Units_Kilometre,
+		Units_Kilopascal,
+		Units_Lux,
+		Units_Metre,
+		Units_MicrogramPerCubicMeter,
+		Units_Mile,
+		Units_Nautical_Mile,
+		Units_NewtonMeter,
+		Units_PartsPerMillion,
+		Units_Percentage,
+		Units_PowerFactor,
+		Units_RevolutionsPerMinute,
+		Units_Speed_KilometresPerHour,
+		Units_Speed_Knots,
+		Units_Speed_MetresPerSecond,
+		Units_Speed_MilesPerHour,
 		Units_Temperature_Celsius,
 		Units_Temperature_Fahrenheit,
-		Units_RevolutionsPerMinute,
-		Units_Speed_MetresPerSecond,
-		Units_Speed_KilometresPerHour,
-		Units_Speed_MilesPerHour,
-		Units_Speed_Knots,
-		Units_Hectopascal,
-		Units_Kilopascal,
-		Units_CardinalDirection,
-		Units_PowerFactor,
+		Units_Temperature_Kelvin,
 		Units_Time_Day,
 		Units_Time_Hour,
 		Units_Time_Minute,
-		Units_Altitude_Metre,
-		Units_Altitude_Foot,
-		Units_PartsPerMillion,
-		Units_MicrogramPerCubicMeter,
-		Units_Lux,
-		Units_NewtonMeter,
+		Units_Time_Second,
+		Units_VoltAmpere,
+		Units_VoltAmpereReactive,
+		Units_Volt_AC,
+		Units_Volt_DC,
+		Units_Volume_CubicMetre,
+		Units_Volume_GallonImperial,
+		Units_Volume_GallonUS,
+		Units_Volume_Litre,
+		Units_Watt,
+		Units_WattsPerSquareMetre,
 	};
 	Q_ENUM(Units_Type)
 
@@ -531,6 +535,7 @@ public:
 
 	enum ModalDialog_DoneOptions {
 		ModalDialog_DoneOptions_NoOptions,
+		ModalDialog_DoneOptions_CancelOnly,
 		ModalDialog_DoneOptions_OkOnly,
 		ModalDialog_DoneOptions_OkAndCancel,
 		ModalDialog_DoneOptions_SetAndCancel
@@ -563,6 +568,24 @@ public:
 	};
 	Q_ENUM(Switch_DeviceState)
 
+	enum GenericInput_Type {
+		GenericInput_Type_Discrete = 0,
+		GenericInput_Type_UnrangedValue = 1,
+		GenericInput_Type_RangedValue = 2,
+		GenericInput_Type_Temperature = 3,
+
+		// Update this value whenever new types are added.
+		GenericInput_Type_MaxSupportedType = GenericInput_Type_Temperature
+	};
+	Q_ENUM(GenericInput_Type)
+
+	enum GenericInput_Status {
+		GenericInput_Status_On = 0x00,
+		GenericInput_Status_Fault = 0x01,
+		GenericInput_Status_SensorBatteryLow = 0x02,
+	};
+	Q_ENUM(GenericInput_Status)
+
 	enum SwitchableOutput_Type {
 		SwitchableOutput_Type_Momentary,
 		SwitchableOutput_Type_Toggle,
@@ -583,6 +606,21 @@ public:
 		SwitchableOutput_Type_MaxSupportedType = SwitchableOutput_Type_ColorDimmerRgbW
 	};
 	Q_ENUM(SwitchableOutput_Type)
+
+	enum SwitchableOutput_Function {
+		SwitchableOutput_Function_Disabled = -1,
+		SwitchableOutput_Function_Alarm = 0,
+		SwitchableOutput_Function_GeneratorStartStop,
+		SwitchableOutput_Function_Manual,
+		SwitchableOutput_Function_Tank_Pump,
+		SwitchableOutput_Function_Temperature,
+		SwitchableOutput_Function_GensetHelperRelay,
+		SwitchableOutput_Function_OpportunityLoad,
+
+		SwitchableOutput_Function_MaxSupportedType = SwitchableOutput_Function_OpportunityLoad
+	};
+	Q_ENUM(SwitchableOutput_Function)
+
 
 	enum SwitchableOutput_Status {
 		SwitchableOutput_Status_Off                 = 0x00,
@@ -606,13 +644,13 @@ public:
 	};
 	Q_ENUM(SwitchableOutput_Status)
 
-	enum SwitchableOutput_ShowUiControl {
-		SwitchableOutput_ShowUiControl_Off = 0x0,
-		SwitchableOutput_ShowUiControl_Always = 0x1,
-		SwitchableOutput_ShowUiControl_Local = 0x2,
-		SwitchableOutput_ShowUiControl_Remote = 0x4,
+	enum IOChannel_ShowUI {
+		IOChannel_ShowUI_Off = 0x0,
+		IOChannel_ShowUI_Always = 0x1,
+		IOChannel_ShowUI_Local = 0x2,
+		IOChannel_ShowUI_Remote = 0x4,
 	};
-	Q_ENUM(SwitchableOutput_ShowUiControl)
+	Q_ENUM(IOChannel_ShowUI)
 
 	enum Notification_Type {
 		Notification_Warning,
@@ -657,17 +695,6 @@ public:
 		CanBusConfig_AnyBusAndHv
 	};
 	Q_ENUM(CanBusConfig_Type)
-
-	enum Relay_Function {
-		Relay_Function_Disabled = -1,
-		Relay_Function_Alarm = 0,
-		Relay_Function_GeneratorStartStop,
-		Relay_Function_Manual,
-		Relay_Function_Tank_Pump,
-		Relay_Function_Temperature,
-		Relay_Function_GensetHelperRelay
-	};
-	Q_ENUM(Relay_Function)
 
 	enum Temperature_DeviceType {
 		Temperature_DeviceType_Battery = 0,
@@ -999,6 +1026,35 @@ public:
 	};
 	Q_ENUM(MicrogridMode)
 
+	enum MicrogridExternalControl {
+		MicrogridExternalControl_Standalone = 0,
+		MicrogridExternalControl_EmsControl = 1,
+	};
+	Q_ENUM(MicrogridExternalControl)
+
+	enum MicrogridError {
+		MicrogridError_NoError = 0,
+		MicrogridError_OutOfSync = 1,
+		MicrogridError_WriteFailed = 2,
+		MicrogridError_FminGreaterThanFmax = 3,
+		MicrogridError_PminGreaterThanPmax = 4,
+		MicrogridError_UminGreaterThanUmax = 5,
+		MicrogridError_QminGreaterThanQmax = 6,
+		MicrogridError_Q0OutOfRange = 7,
+		MicrogridError_QMinOutOfRange = 8,
+		MicrogridError_QMaxOutOfRange = 9,
+		MicrogridError_UDroopOutOfRange = 10,
+		MicrogridError_U0OutOfRange = 11,
+		MicrogridError_P0OutOfRange = 12,
+		MicrogridError_PMinOutOfRange = 13,
+		MicrogridError_PMaxOutOfRange = 14,
+		MicrogridError_F0OutOfRange = 15,
+		MicrogridError_FDroopOutOfRange = 16,
+		MicrogridError_PfFpMismatch = 17,
+		MicrogridError_QuUqMismatch = 18,
+	};
+	Q_ENUM(MicrogridError)
+
 	enum ElectricalPowerDisplay {
 		ElectricalPowerDisplay_PreferWatts,
 		ElectricalPowerDisplay_PreferAmps,
@@ -1013,6 +1069,9 @@ public:
 		ElectricalQuantity_Source_Dc,
 	};
 	Q_ENUM(ElectricalQuantity_Source)
+
+	Q_INVOKABLE QString statusText_off() const;
+	Q_INVOKABLE QString statusText_unknown() const;
 
 	Q_INVOKABLE QString battery_modeToText(Battery_Mode mode) const;
 	Q_INVOKABLE Battery_Mode battery_modeFromPower(qreal power) const;
@@ -1029,15 +1088,21 @@ public:
 	Q_INVOKABLE QString digitalInput_typeToText(DigitalInput_Type type) const;
 	Q_INVOKABLE QString digitalInput_stateToText(DigitalInput_State state) const;
 
+	Q_INVOKABLE QString inverter_stateToText(System_State state) const;
 	Q_INVOKABLE QString pvInverter_statusCodeToText(PvInverter_StatusCode statusCode) const;
-
 	Q_INVOKABLE QString solarCharger_stateToText(SolarCharger_State state) const;
 
 	Q_INVOKABLE QString switch_deviceStateToText(Switch_DeviceState value) const;
+	Q_INVOKABLE QString genericInput_typeToText(GenericInput_Type value) const;
+	Q_INVOKABLE QString genericInput_statusToText(GenericInput_Status value) const;
 	Q_INVOKABLE QString switchableOutput_typeToText(SwitchableOutput_Type value, const QString &channelId = QString()) const;
+	Q_INVOKABLE QString switchableOutput_functionToText(SwitchableOutput_Function value) const;
 	Q_INVOKABLE QString switchableOutput_statusToText(SwitchableOutput_Status value, SwitchableOutput_Type type) const;
 
-	Q_INVOKABLE QString microgridModeToText(MicrogridMode mode) const;
+	Q_INVOKABLE QString microgridModeToText(MicrogridMode mode, MicrogridExternalControl control) const;
+	Q_INVOKABLE QString microgrid_errorToText(MicrogridError error) const;
+
+	Q_INVOKABLE QString system_stateToText(System_State state) const;
 
 	Q_INVOKABLE QString tank_fluidTypeToText(Tank_Type type) const;
 

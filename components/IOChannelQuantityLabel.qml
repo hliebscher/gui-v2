@@ -1,0 +1,18 @@
+/*
+** Copyright (C) 2026 Victron Energy B.V.
+** See LICENSE.txt for license information.
+*/
+
+import QtQuick
+import Victron.VenusOS
+
+QuantityLabel {
+	required property IOChannel ioChannel
+
+	valueText: quantityInfo.number
+	unit: Global.systemSettings.toPreferredUnit(ioChannel.unitType)
+	unitText: quantityInfo.unitType === VenusOS.Units_None ? ioChannel.unitText : quantityInfo.unit
+	decimals: ioChannel.decimals
+	font.pixelSize: Theme.font_size_body2
+	formatHints: Units.NoDecimalAdjustment // Always respect the decimals setting
+}

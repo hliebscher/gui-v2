@@ -10,17 +10,14 @@ import Victron.VenusOS
 Page {
 	id: root
 
-	property int cardWidth: cardsView.count > 2
-			? Theme.geometry_controlCard_minimumWidth
-			: Theme.geometry_controlCard_maximumWidth
+	readonly property int cardWidth: Theme.screenSize === Theme.Portrait
+		? Theme.geometry_screen_width - (2 * Theme.geometry_page_content_horizontalMargin)
+		: (cardsView.count > 2 ? Theme.geometry_controlCard_minimumWidth : Theme.geometry_controlCard_maximumWidth)
 
 	topLeftButton: VenusOS.StatusBar_LeftButton_ControlsActive
-	width: parent.width
-	anchors {
-		top: parent.top
-		bottom: parent.bottom
-		bottomMargin: Theme.geometry_controlCardsPage_bottomMargin
-	}
+
+	//% "Controls"
+	title: qsTrId("control_cards_title")
 
 	// The cards list view is made up of:
 	// - Header - ESS card
@@ -32,9 +29,10 @@ Page {
 			fill: parent
 			leftMargin: Theme.geometry_controlCardsPage_horizontalMargin
 			rightMargin: Theme.geometry_controlCardsPage_horizontalMargin
+			bottomMargin: Theme.geometry_controlCardsPage_bottomMargin
 		}
 		spacing: Theme.geometry_controlCardsPage_spacing
-		orientation: ListView.Horizontal
+		orientation: Theme.screenSize === Theme.Portrait ? ListView.Vertical : ListView.Horizontal
 
 		// When using key navigation to scroll through the control cards, use a velocity that
 		// roughly matches the velocity produced by AuxCardsPage scrollToControl() when it scrolls
@@ -45,17 +43,17 @@ Page {
 		highlightMoveVelocity: Theme.animation_cards_highlightMoveVelocity
 		highlightMoveDuration: -1
 
-		header: BaseListLoader {
+		header: ListItemLoader {
 			active: systemType.value === "ESS" || systemType.value === "Hub-4"
-			sourceComponent: BaseListItem {
-				width: root.cardWidth + cardsView.spacing
-				height: cardsView.height
-				background.visible: false
-				KeyNavigationHighlight.active: false
+			sourceComponent: FocusScope {
+				width: essCard.width + cardsView.spacing
+				height: essCard.height + cardsView.spacing
+				focus: true
 
 				ESSCard {
+					id: essCard
 					width: root.cardWidth
-					height: cardsView.height
+					height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
 				}
 			}
 
@@ -66,13 +64,13 @@ Page {
 		}
 
 		model: controlCardModel
-		delegate: BaseListLoader {
+		delegate: ListItemLoader {
 			id: deviceDelegate
 
 			required property Device device
 
 			width: root.cardWidth
-			height: cardsView.height
+			height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
 			sourceComponent: {
 				if (device.serviceType === "evcharger") {
 					return evcsComponent
@@ -108,6 +106,17 @@ Page {
 					serviceUid: deviceDelegate.device.serviceUid
 					name: deviceDelegate.device.name
 				}
+			}
+		}
+		WheelHandler {
+			enabled: Qt.platform.os === "wasm" || Global.isDesktop
+			onWheel: (wheel) => {
+				// each "click" of the wheel is 120 degrees
+				// each "click" of the wheel results in 2/3rds of a second of flick velocity
+				// accumulate that with the horizontalVelocity of the view
+				// note the sign of that view velocity is opposite to the flick velocity, hence minus.
+				cardsView.flick((cardsView.flickDeceleration * 2.0*wheel.angleDelta.y/360) - cardsView.horizontalVelocity, 0)
+				wheel.accepted = true
 			}
 		}
 	}

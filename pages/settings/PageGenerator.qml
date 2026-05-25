@@ -4,6 +4,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import Victron.VenusOS
 
 Page {
@@ -56,14 +57,21 @@ Page {
 		}
 
 		ListItem {
-			text: CommonWords.manual_control
+			id: manualControl
+
 			preferredVisible: root.startStopBindPrefix === root.generator0ServiceUid
-			content.children: [
+			contentItem: RowLayout {
+				Label {
+					text: CommonWords.manual_control
+					font: manualControl.font
+					Layout.fillWidth: true
+				}
+
 				GeneratorManualControlButton {
 					generatorUid: root.startStopBindPrefix
 					gensetUid: ""
 				}
-			]
+			}
 		}
 
 		ListText {

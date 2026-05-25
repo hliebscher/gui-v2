@@ -14,6 +14,7 @@ ControlCard {
 	readonly property int writeAccessLevel: VenusOS.User_AccessType_Installer
 	readonly property bool userHasWriteAccess: Global.systemSettings.canAccess(writeAccessLevel)
 
+	implicitHeight: contentLayout.y + contentLayout.implicitHeight
 	icon.source: "qrc:/images/icon_charging_station_24.svg"
 
 	//: %1 = the EVCS name
@@ -37,12 +38,15 @@ ControlCard {
 	}
 
 	SettingsColumn {
+		id: contentLayout
+
 		anchors {
 			top: root.status.bottom
 			topMargin: Theme.geometry_controlCard_status_bottomMargin
 			left: parent.left
 			right: parent.right
 		}
+		bottomPadding: Theme.geometry_controlCard_contentMargins
 
 		ListButton {
 			id: modeListButton
@@ -71,6 +75,7 @@ ControlCard {
 		}
 
 		ListSwitch {
+			width: parent.width
 			text: CommonWords.charging
 			flat: true
 			dataItem.uid: root.serviceUid + "/StartStop"
@@ -83,6 +88,7 @@ ControlCard {
 		id: modeDialogComponent
 
 		EvcsChargerModeDialog {
+			secondaryTitle: device.name
 			onAccepted: modeItem.setValue(mode)
 		}
 	}

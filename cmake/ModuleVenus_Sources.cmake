@@ -27,6 +27,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/Breadcrumbs.qml
     components/BriefSidePanelWidget.qml
     components/BriefCenterDisplay.qml
+    components/CaptionLabel.qml
     components/CardViewLoader.qml
     components/CircularMultiGauge.qml
     components/CircularSingleGauge.qml
@@ -35,6 +36,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/ColorPresetGrid.qml
     components/ColorSelector.qml
     components/ColorWheelModeButton.qml
+    components/ConsoleTerminal.qml
     components/ControlCard.qml
     components/CpuMonitor.qml
     components/CustomDevicePageEntry.qml
@@ -42,6 +44,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/DeviceListDelegate.qml
     components/DeviceListPluginPage.qml
     components/DevicePage.qml
+    components/DroopGraph.qml
+    components/DialogDragger.qml
     components/DynamicValueRange.qml
     components/ElectricalQuantityLabel.qml
     components/EmptyPageItem.qml
@@ -51,23 +55,28 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/FirmwareUpdate.qml
     components/FittedQuantityLabel.qml
     components/FixedWidthLabel.qml
+    components/ForwardIcon.qml
     components/GaugeModel.qml
-    components/GaugeHeader.qml
     components/GeneratorManualControlButton.qml
     components/GensetStartStop1Finder.qml
     components/FlatListItemSeparator.qml
     components/GeneratorIconLabel.qml
     components/GradientListView.qml
     components/GsmStatusIcon.qml
+    components/HorizontalFlickable.qml
     components/ColorButton.qml
     components/IconButton.qml
     components/InputPanel.qml
     components/InverterAcOutSettings.qml
+    components/IOChannelQuantityLabel.qml
     components/Led.qml
+    components/LevelsGaugeOutline.qml
     components/LoadGraph.qml
     components/LoadGraphShapePath.qml
     components/KeyNavigationListHelper.qml
+    components/MockTerminal.qml
     components/MultiStepButton.qml
+    components/TwoLabelQuantityRowLayout.qml
     components/NavBar.qml
     components/NavButton.qml
     components/NetworkServices.qml
@@ -75,6 +84,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/NotificationDelegate.qml
     components/ObjectAcConnection.qml
     components/ObjectModelMonitor.qml
+    components/OverviewEnergyIndicator.qml
+    components/OverviewLayoutConditions.qml
     components/Page.qml
     components/PageGensetModel.qml
     components/PageStack.qml
@@ -87,12 +98,11 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/QuantityTableMetrics.qml
     components/QuantityTableSummary.qml
     components/RadioButtonListPage.qml
+    components/RotateDevicePrompt.qml
     components/RsSystemAcIODisplay.qml
     components/SegmentedButtonRow.qml
     components/SeparatorBar.qml
     components/SettingsColumn.qml
-    components/SettingsRangeSlider.qml
-    components/SettingsSlider.qml
     components/SettingSync.qml
     components/SliderSettingSync.qml
     components/ShinyProgressArc.qml
@@ -107,23 +117,26 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/SplashView.qml
     components/SpinBoxDecimalConverter.qml
     components/StatusBar.qml
+    components/StatusBar_Landscape.qml
+    components/StatusBar_Portrait.qml
     components/SwipePageModel.qml
     components/SwipeViewPage.qml
     components/SystemBatteryDelegate.qml
     components/SystemBatteryDeviceModel.qml
     components/SystemReason.qml
     components/TabBar.qml
-    components/TankItem.qml
     components/TankGauge.qml
+    components/TankGaugePanel.qml
     components/TemperatureRelaySettings.qml
+    components/ThreeLabelLayout.qml
     components/ThreePhaseBarGauge.qml
     components/ThreePhaseDisplay.qml
     components/ThreePhaseIOTable.qml
     components/ThreePhaseQuantityTable.qml
+    components/TwoLabelItemLayout.qml
     components/TimeSelector.qml
     components/ToastNotification.qml
     components/Utils.js
-    components/ValueRange.qml
     components/VeBusAcIODisplay.qml
     components/VeQItemFilteredServiceModel.qml
     components/ViewGradient.qml
@@ -131,6 +144,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/WifiModel.qml
     components/controls/AutoToggleButton.qml
     components/controls/Button.qml
+    components/controls/CaptionLabel.qml
     components/controls/CloseButton.qml
     components/controls/ComboBox.qml
     components/controls/EditFrame.qml
@@ -148,20 +162,25 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/controls/RadioButton.qml
     components/controls/RangeSlider.qml
     components/controls/RemoveButton.qml
+    components/controls/RoundCloseButton.qml
     components/controls/ScrollBar.qml
+    components/controls/SilenceAlarmButton.qml
     components/controls/Slider.qml
     components/controls/SliderIndicator.qml
     components/controls/SpinBox.qml
     components/controls/SpinBoxInputArea.qml
+    components/controls/StatusBarButton.qml
     components/controls/SwipeView.qml
     components/controls/Switch.qml
     components/controls/TemperatureSlider.qml
     components/controls/TextField.qml
     components/controls/ToggleButtonRow.qml
+    components/controls/TextValidationField.qml
 
     components/dialogs/ColorWheelDialog.qml
     components/dialogs/CurrentLimitDialog.qml
     components/dialogs/DateSelectorDialog.qml
+    components/dialogs/DialogHeader_Portrait.qml
     components/dialogs/DialogShadow.qml
     components/dialogs/VrmInstanceSwapDialog.qml
     components/dialogs/ESSMinimumSOCDialog.qml
@@ -175,6 +194,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/dialogs/ModalDialog.qml
     components/dialogs/ModalRebootingDialog.qml
     components/dialogs/ModalWarningDialog.qml
+    components/dialogs/NavBarMoreDialog.qml
     components/dialogs/NumberSelectorDialog.qml
     components/dialogs/SecurityProfilePasswordDialog.qml
     components/dialogs/SolarDailyHistoryDialog.qml
@@ -190,6 +210,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/ListCurrentLimitButton.qml
     components/listitems/ListDcInputQuantityGroup.qml
     components/listitems/ListDcOutputQuantityGroup.qml
+    components/listitems/ListDevicePriority.qml
+    components/listitems/ListDroopGraph.qml
     components/listitems/ListEvcsSetCurrentSpinBox.qml
     components/listitems/ListFirmwareCheckButton.qml
     components/listitems/ListFirmwareImageTypeInstalled.qml
@@ -197,21 +219,24 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/ListGeneratorError.qml
     components/listitems/ListInfoLabel.qml
     components/listitems/ListInverterChargerModeButton.qml
+    components/listitems/ListIOChannelGroupField.qml
+    components/listitems/ListIOChannelNameField.qml
+    components/listitems/ListIOChannelShowRadioButtonGroup.qml
+    components/listitems/ListIOChannelTypeRadioButtonGroup.qml
     components/listitems/ListLink.qml
     components/listitems/ListMotorDriveGear.qml
     components/listitems/ListMqttAccessSwitch.qml
     components/listitems/ListMountStateButton.qml
     components/listitems/ListAcInPositionRadioButtonGroup.qml
     components/listitems/ListOutputBatteryRadioButtonGroup.qml
-    components/listitems/ListPasswordField.qml
     components/listitems/ListPvInverterPositionRadioButtonGroup.qml
     components/listitems/ListRebootButton.qml
     components/listitems/ListRelayState.qml
+    components/listitems/ListSpinBoxRange.qml
     components/listitems/ListTemperatureRelay.qml
+    components/listitems/ListTextStatus.qml
     components/listitems/ListVolumeUnitRadioButtonGroup.qml
 
-    components/listitems/core/BaseListItem.qml
-    components/listitems/core/BaseListLoader.qml
     components/listitems/core/ListAlarm.qml
     components/listitems/core/ListButton.qml
     components/listitems/core/ListDateSelector.qml
@@ -219,6 +244,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/core/ListIpAddressField.qml
     components/listitems/core/ListItem.qml
     components/listitems/core/ListItemBackground.qml
+    components/listitems/core/ListItemLoader.qml
     components/listitems/core/ListNavigation.qml
     components/listitems/core/ListPortField.qml
     components/listitems/core/ListQuantityField.qml
@@ -228,6 +254,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/core/ListRadioButton.qml
     components/listitems/core/ListRadioButtonGroup.qml
     components/listitems/core/ListRangeSlider.qml
+    components/listitems/core/ListSetting.qml
     components/listitems/core/ListSlider.qml
     components/listitems/core/ListSpinBox.qml
     components/listitems/core/ListSwitch.qml
@@ -239,14 +266,22 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/core/PrimaryListLabel.qml
     components/listitems/core/SecondaryListLabel.qml
     components/listitems/core/SectionHeader.qml
+    components/listitems/core/ListSettingBackground.qml
     components/listitems/core/SettingsListHeader.qml
     components/listitems/core/SettingsListNavigation.qml
     components/listitems/core/SliderHandleHighlight.qml
 
+    components/switches/GenericInputCardDelegateBackground.qml
+    components/switches/GenericInputCardDelegateHeader.qml
+    components/switches/IOChannelCardDelegateHeader.qml
+    components/switches/IOChannelGroupCard.qml
     components/switches/SwitchableOutputCardDelegateHeader.qml
-    components/switches/SwitchableOutputGroupCard.qml
     components/switches/SwitchableOutputDimmableSlider.qml
     components/switches/SwitchableOutputSlider.qml
+    components/switches/delegates/GenericInputCardDelegate_0.qml
+    components/switches/delegates/GenericInputCardDelegate_1.qml
+    components/switches/delegates/GenericInputCardDelegate_2.qml
+    components/switches/delegates/GenericInputCardDelegate_3.qml
     components/switches/delegates/SwitchableOutputCardDelegate_0.qml
     components/switches/delegates/SwitchableOutputCardDelegate_1.qml
     components/switches/delegates/SwitchableOutputCardDelegate_2.qml
@@ -260,6 +295,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/switches/delegates/SwitchableOutputCardDelegate_color.qml
 
     components/widgets/AcWidget.qml
+    components/widgets/AcWidgetContent.qml
     components/widgets/AcInputWidget.qml
     components/widgets/AcLoadsWidget.qml
     components/widgets/BatteryWidget.qml
@@ -269,6 +305,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/widgets/EvcsWidget.qml
     components/widgets/InverterChargerWidget.qml
     components/widgets/OverviewWidget.qml
+    components/widgets/OverviewElectricalQuantityLabel.qml
     components/widgets/SolarYieldWidget.qml
     components/widgets/WidgetConnector.qml
     components/widgets/WidgetConnectorAnchor.qml
@@ -319,6 +356,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
 
     pages/AuxCardsPage.qml
     pages/BriefSidePanel.qml
+    pages/BriefPage_Landscape.qml
+    pages/BriefPage_Portrait.qml
     pages/BriefPage.qml
     pages/ControlCardsPage.qml
     pages/DialogLayer.qml
@@ -329,6 +368,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/NotificationLayer.qml
     pages/NotificationsPage.qml
     pages/OverviewPage.qml
+    pages/OverviewPage_Landscape.qml
+    pages/OverviewPage_Portrait.qml
     pages/PageContact.qml
     pages/PageManager.qml
     pages/SettingsPage.qml
@@ -355,6 +396,11 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/NetworkSettingsPageModel.qml
     pages/settings/PageCanbusStatus.qml
     pages/settings/PageChargeCurrentLimits.qml
+    pages/settings/PageControllableLoads.qml
+    pages/settings/PageControllableLoadsBattery.qml
+    pages/settings/PageControllableLoadsEVCS.qml
+    pages/settings/PageControllableLoadsS2Rm.qml
+    pages/settings/PageControllableLoadsPreferences.qml
     pages/settings/PageDeviceInfo.qml
     pages/settings/PageGenerator.qml
     pages/settings/PageGeneratorAcLoad.qml
@@ -387,6 +433,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsDocumentation.qml
     pages/settings/PageSettingsDvcc.qml
     pages/settings/PageSettingsDynamicEss.qml
+    pages/settings/PageSettingsEebus.qml
+    pages/settings/PageSettingsEebusDevice.qml
     pages/settings/PageSettingsEthernet.qml
     pages/settings/PageSettingsFirmware.qml
     pages/settings/PageSettingsFirmwareOffline.qml
@@ -413,6 +461,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/PageSettingsModbusDiscovered.qml
     pages/settings/PageSettingsModbusTcp.qml
     pages/settings/PageSettingsModbusTcpServices.qml
+    pages/settings/PageSettingsMqttDevices.qml
     pages/settings/PageSettingsNodeRed.qml
     pages/settings/PageSettingsRelay.qml
     pages/settings/PageSettingsRelayTempSensors.qml
@@ -532,8 +581,10 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/devicelist/ac-in/PageSmappeeDeviceList.qml
     pages/settings/devicelist/pulsemeter/PagePulseCounter.qml
     pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml
-    pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml
-    pages/settings/devicelist/switchable-outputs/SwitchableOutputListDelegate.qml
+    pages/settings/devicelist/iochannel/GenericInputListDelegate.qml
+    pages/settings/devicelist/iochannel/PageGenericInput.qml
+    pages/settings/devicelist/iochannel/PageSwitchableOutput.qml
+    pages/settings/devicelist/iochannel/SwitchableOutputListDelegate.qml
     pages/settings/devicelist/temperature/PageTemperatureSensor.qml
     pages/settings/devicelist/temperature/PageTemperatureSensorSetup.qml
     pages/settings/tz/TzAfricaData.qml
@@ -572,7 +623,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/vebusdevice/VeBusAcSensorModel.qml
     pages/vebusdevice/PageVeBus.qml
     pages/vebusdevice/VeBusAlarm.qml
-    pages/vebusdevice/VeBusDeviceAlarmGroup.qml
     pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml
     pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml
     pages/vebusdevice/VeBusDeviceInfoModel.qml
@@ -582,6 +632,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
 )
 
 list(APPEND VictronVenusOS_CPP_SOURCES
+    src/abstractlistitem.h
+    src/abstractlistitem.cpp
     src/alldevicesmodel.h
     src/alldevicesmodel.cpp
     src/allservicesmodel.h
@@ -629,6 +681,8 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/backendconnection.cpp
     src/language.h
     src/language.cpp
+    src/logging.h
+    src/logging.cpp
     src/enums.h
     src/enums.cpp
     src/fastutils.h
@@ -643,6 +697,14 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/cpuinfo.cpp
     src/frameratemodel.h
     src/frameratemodel.cpp
+    src/genericinput.h
+    src/genericinput.cpp
+    src/iochannel.h
+    src/iochannel.cpp
+    src/iochannelgroupmodel.h
+    src/iochannelgroupmodel.cpp
+    src/iochannelproxymodel.h
+    src/iochannelproxymodel.cpp
     src/keyeventfilter.h
     src/keyeventfilter.cpp
     src/keynavigationhighlight.cpp
@@ -666,6 +728,12 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/qrangemodel_p.h
     src/qrangemodel.h
     src/qrangemodel.cpp
+    src/uitest.h
+    src/uitest.cpp
+    src/uitestcase.h
+    src/uitestcase.cpp
+    src/uiteststep.h
+    src/uiteststep.cpp
     src/units.h
     src/units.cpp
     src/screenblanker.h
@@ -676,12 +744,12 @@ list(APPEND VictronVenusOS_CPP_SOURCES
     src/solarinputmodel.cpp
     src/solaryieldmodel.h
     src/solaryieldmodel.cpp
+    src/systemservicelistener.h
+    src/systemservicelistener.cpp
     src/switchableoutput.h
     src/switchableoutput.cpp
-    src/switchableoutputmodel.h
-    src/switchableoutputmodel.cpp
-    src/switchableoutputgroupmodel.h
-    src/switchableoutputgroupmodel.cpp
+    src/veqitemmockproducer.h
+    src/veqitemmockproducer.cpp
     src/widgetconnectorpathupdater.h
     src/widgetconnectorpathupdater.cpp
 )
@@ -702,18 +770,25 @@ set(VictronVenusOS_RESOURCES
     images/alternator.svg
     images/breadcrumb_lhs.svg
     images/breadcrumb_rhs.svg
+    images/icon_arrow.svg
     images/icon_battery_24.svg
     images/icon_battery_charging_24.svg
     images/icon_battery_discharging_24.svg
-    images/icon_connectivity_32.png
-    images/icon_debug_32.png
-    images/icon_devices_32.png
-    images/icon_general_32.png
-    images/icon_integration_32.png
+    images/icon_chevron_right_32.svg
+    images/icon_chevron_up_32.svg
+    images/icon_connectivity_32.svg
+    images/icon_debug_32.svg
+    images/icon_devices_32.svg
+    images/icon_energymeter_1f_32.svg
+    images/icon_energymeter_3f_32.svg
+    images/icon_general_32.svg
+    images/icon_integration_32.svg
+    images/icon_more_dots.svg
     images/icon_smartswitch_off_32.svg
     images/icon_smartswitch_on_32.svg
-    images/icon_system_32.png
-    images/icon_vrm_32.png
+    images/icon_switchdev_32.svg
+    images/icon_system_32.svg
+    images/icon_vrm_32.svg
     images/brief.svg
     images/cloud.svg
     images/color_wheel_rgb.png
@@ -729,23 +804,24 @@ set(VictronVenusOS_RESOURCES
     images/freshWater.svg
     images/key_navigation_highlight_dark.svg
     images/key_navigation_highlight_light.svg
-    images/icon_black_water_24.svg
+    images/overview_lightning_bolts.svg
+    images/icon_black_water_32.svg
     images/icon_charging_generator.svg
     images/icon_charging_grid.svg
     images/icon_charging_renewables.svg
     images/icon_charging_shore.svg
     images/icon_CL_24.svg
     images/icon_trash_32.svg
-    images/icon_fresh_water_24.svg
-    images/icon_raw_water_24.svg
-    images/icon_waste_water_24.svg
-    images/icon_livewell_24.svg
-    images/icon_fuel_24.svg
+    images/icon_fresh_water_32.svg
+    images/icon_raw_water_32.svg
+    images/icon_waste_water_32.svg
+    images/icon_livewell_32.svg
+    images/icon_fuel_32.svg
     images/icon_from_grid.svg
-    images/icon_oil_24.svg
-    images/icon_hydraulic_oil_24.svg
-    images/icon_lng_24.svg
-    images/icon_lpg_24.svg
+    images/icon_oil_32.svg
+    images/icon_hydraulic_oil_32.svg
+    images/icon_lng_32.svg
+    images/icon_lpg_32.svg
     images/icon_open_link_32.svg
     images/icon_to_grid.svg
     images/fueltank.svg
@@ -773,6 +849,7 @@ set(VictronVenusOS_RESOURCES
     images/icon_manualstart_24.svg
     images/icon_manualstart_timer_24.svg
     images/icon_minus.svg
+    images/icon_minus_32.svg
     images/icon_minus_bordered.svg
     images/icon_plus.svg
     images/icon_plus_32.svg
@@ -789,6 +866,7 @@ set(VictronVenusOS_RESOURCES
     images/notifications.svg
     images/notifications_subtract.svg
     images/overview.svg
+    images/prompt_device_rotation.svg
     images/rain.svg
     images/scatteredcloud.svg
     images/selection_dot.svg
@@ -806,6 +884,7 @@ set(VictronVenusOS_RESOURCES
     images/icon_warning_32.svg
     images/icon_checkmark_32.svg
     images/icon_close_32.svg
+    images/icon_close_small.svg
     images/icon_info_32.svg
     images/icon_info_48.svg
     images/icon_WiFi_1_32.svg
@@ -831,7 +910,9 @@ set(VictronVenusOS_RESOURCES
     themes/color/Light.json
     themes/geometry/FiveInch.json
     themes/geometry/SevenInch.json
+    themes/geometry/Portrait.json
     themes/typography/FiveInch.json
     themes/typography/SevenInch.json
+    themes/typography/Portrait.json
     themes/typography/TypographyDesign.json
 )

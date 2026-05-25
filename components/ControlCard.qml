@@ -7,21 +7,25 @@ import QtQuick
 import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
-BaseListItem {
+FocusScope {
 	property alias icon: icon
 	property alias title: title
 	property alias status: status
 
 	implicitWidth: Theme.geometry_controlCard_maximumWidth
-	implicitHeight: parent ? parent.height : 0
-	KeyNavigationHighlight.active: false
+	implicitHeight: Theme.geometry_controlCard_height
+	focus: true
+	focusPolicy: Qt.TabFocus
+
+	ListItemBackground {
+		anchors.fill: parent
+	}
 
 	CP.ColorImage {
 		id: icon
 
 		anchors {
-			top: parent.top
-			topMargin: Theme.geometry_controlCard_title_topMargin
+			verticalCenter: title.verticalCenter
 			left: parent.left
 			leftMargin: Theme.geometry_controlCard_contentMargins
 		}
@@ -39,7 +43,7 @@ BaseListItem {
 			right: parent.right
 			rightMargin: Theme.geometry_controlCard_title_spacing
 		}
-		font.pixelSize: Theme.font_size_body1
+		font.pixelSize: Theme.font_control_title
 		color: Theme.color_font_primary
 		elide: Text.ElideRight
 	}
@@ -55,7 +59,7 @@ BaseListItem {
 			right: parent.right
 			rightMargin: Theme.geometry_controlCard_contentMargins
 		}
-		font.pixelSize: Theme.font_size_body3
+		font.pixelSize: Theme.font_controlCard_status
 		wrapMode: Text.Wrap
 	}
 }

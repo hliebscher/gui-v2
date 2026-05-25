@@ -4,6 +4,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import Victron.VenusOS
 
 Page {
@@ -75,7 +76,7 @@ Page {
 		interval: 10000
 		repeat: true
 		triggeredOnStart: true
-		running: BackendConnection.applicationVisible
+		running: BackendConnection.applicationVisible // even if !Global.timersEnabled
 		onTriggered: Global.systemSettings.time.getValue(true)
 	}
 
@@ -88,34 +89,55 @@ Page {
 				secondaryText: ClockTime.currentDateTimeUtc
 			}
 
-			ListItem {
+			ListSetting {
 				id: timeZoneButton
 				// Qt for WebAssembly doesn't support timezones,
 				// so we can't display the device-local date/time,
 				// as we don't know what it is.  Just hide the setting.
 				preferredVisible: Qt.platform.os != "wasm"
 
-				//% "Date/Time local"
-				text: qsTrId("settings_tz_date_time_local")
 				writeAccessLevel: VenusOS.User_AccessType_User
 				interactive: Global.systemSettings.time.valid
 
-				content.children: Row {
-					spacing: Theme.geometry_listItem_content_spacing
-					ListItemButton {
-						id: localDateButton
-						text: ClockTime.currentDate
-						enabled: timeZoneButton.clickable
-						focus: enabled
-						KeyNavigation.right: localTimeButton
-						onClicked: root._openDateSelector()
-					}
-					ListItemButton {
-						id: localTimeButton
-						text: ClockTime.currentTime
-						enabled: timeZoneButton.clickable
-						focus: enabled
-						onClicked: root._openTimeSelector()
+				contentItem: Item {
+					implicitWidth: Theme.geometry_listItem_width
+					implicitHeight: Theme.screenSize === Theme.Portrait ? localTimeZoneLayout.implicitHeight : 0
+
+					GridLayout {
+						id: localTimeZoneLayout
+						anchors {
+							left: parent.left
+							right: parent.right
+							verticalCenter: parent.verticalCenter
+						}
+						columnSpacing: timeZoneButton.spacing
+						rowSpacing: Theme.geometry_listItem_content_verticalSpacing
+						columns: Theme.screenSize === Theme.Portrait ? 2 : 3
+
+						Label {
+							//% "Date/Time local"
+							text: qsTrId("settings_tz_date_time_local")
+							font: timeZoneButton.font
+
+							Layout.fillWidth: true
+							Layout.columnSpan: Theme.screenSize === Theme.Portrait ? 2 : 1
+						}
+
+						ListItemButton {
+							text: ClockTime.currentDate
+							enabled: timeZoneButton.clickable
+							focus: enabled
+							KeyNavigation.right: localTimeButton
+							onClicked: root._openDateSelector()
+						}
+
+						ListItemButton {
+							id: localTimeButton
+							text: ClockTime.currentTime
+							enabled: timeZoneButton.clickable
+							focus: enabled
+							onClicked: root._openTimeSelector()
+						}
 					}
 				}
 			}

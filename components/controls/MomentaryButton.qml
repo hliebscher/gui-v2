@@ -41,7 +41,7 @@ CT.Button {
 	background: Rectangle {
 		id: backgroundRect
 
-		implicitHeight: Theme.geometry_switchableoutput_control_height
+		implicitHeight: Theme.geometry_iochannel_control_height
 		color: root.enabled ? (root.down ? Theme.color_ok : Theme.color_darkOk) : Theme.color_background_disabled
 		border.width: Theme.geometry_button_border_width
 		border.color: root.enabled ? Theme.color_ok : Theme.color_font_disabled
@@ -89,6 +89,7 @@ CT.Button {
 		verticalAlignment: Text.AlignVCenter
 		text: root.text
 		color: enabled ? (root.down ? Theme.color_button_down_text : Theme.color_font_primary) : Theme.color_font_disabled
+		font.pixelSize: Theme.font_button_size
 	}
 
 	KeyNavigationHighlight.active: root.activeFocus

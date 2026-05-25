@@ -69,7 +69,7 @@ private:
 	bool m_hwBlanked = false; // aktueller Hardware-Backlight-Zustand
 	bool m_enabled = false;
 
-	QQuickWindow *m_window;
+	QQuickWindow *m_window = nullptr;
 	QTimer m_blankingTimer;
 	QTimer m_finalOffTimer;
 	const int m_finalDisplayOffDelayMs = 28800000; // 8h Gnadenfrist für Backlight

@@ -108,13 +108,13 @@ Item {
 			verticalAlignment: Text.AlignVCenter
 			horizontalAlignment: Text.AlignHCenter
 			color: Theme.color_font_primary
-			font.pixelSize: motorDriveGauges.visible || rpmLabel.visible
+			font.pixelSize: motorDriveGauges.visible || rpmLabel.visible || dualRpmLabels.visible
 							? Theme.font_boatPage_speed_pixelSize
 							: Theme.font_boatPage_speed_pixelSize_large
 			font.weight: Font.Medium
 			fontSizeMode: Text.HorizontalFit
 			visible: root.activeDataSource === root.gps
-			text: root.gps.numerator >= 10.0 ? Math.round(root.gps.numerator) : Units.formatNumber(root.gps.numerator, 1)
+			text: Units.formatNumber(root.gps.numerator, Math.round(root.gps.numerator * 10) >= 100 ? 0 : 1)
 			height: font.pixelSize
 		}
 
@@ -132,6 +132,7 @@ Item {
 		MotorDriveGauges {
 			id: motorDriveGauges
 
+			width: rpmGauge.width - (2 * Theme.geometry_boatPage_motorDriveGauges_horizontalMargin)
 			topPadding: Theme.geometry_boatPage_motorDriveGauges_topPadding
 			motorDrives: root.motorDrives
 			showDcConsumption: !root.gps.valid
@@ -257,7 +258,7 @@ Item {
 			}
 			verticalAlignment: Text.AlignVCenter
 			font.pixelSize: Theme.font_size_body3
-			text: Math.abs(root.motorDrives.leftMotorDrive.rpm._numerator.value)
+			text: Units.formatNumber(Math.abs(root.motorDrives.leftMotorDrive.rpm._numerator.value))
 		}
 
 		Rectangle {
@@ -284,7 +285,7 @@ Item {
 			}
 			verticalAlignment: Text.AlignVCenter
 			font.pixelSize: Theme.font_size_body3
-			text: Math.abs(root.motorDrives.rightMotorDrive.rpm._numerator.value)
+			text: Units.formatNumber(Math.abs(root.motorDrives.rightMotorDrive.rpm._numerator.value))
 		}
 	}
 
@@ -333,6 +334,6 @@ Item {
 		value: root.activeDataSource ? root.activeDataSource.denominator : 0
 		unit: root.activeDataSource ? root.activeDataSource.displayUnit : 0
 		unitText: ""
-		precision: 0
+		decimals: 0
 	}
 }

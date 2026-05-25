@@ -16,7 +16,11 @@ static Victron::VenusOS::Theme *g_themeInstance = nullptr;
 #include <emscripten/val.h>
 
 EM_JS(int, getScreenWidth, (), {
-	return Math.min(screen.width, screen.height);
+	return screen.width;
+});
+
+EM_JS(int, getScreenHeight, (), {
+	return screen.height;
 });
 
 EM_JS(int, getWindowWidth, (), {
@@ -33,9 +37,13 @@ Theme::Theme(QObject *parent) : QObject(parent)
 {
 #if defined(VENUS_WEBASSEMBLY_BUILD)
 	// 5"-6" Smartphones have 320 - 480 CSS independent pixel wide screens.
-	setScreenSize(getScreenWidth() >= 480
-		? Victron::VenusOS::Theme::SevenInch
-		: Victron::VenusOS::Theme::FiveInch);
+	if (getScreenHeight() > getScreenWidth()) {
+		setScreenSize(Victron::VenusOS::Theme::Portrait);
+	} else {
+		setScreenSize(getScreenWidth() >= 480
+			? Victron::VenusOS::Theme::SevenInch
+			: Victron::VenusOS::Theme::FiveInch);
+	}
 
 	// Assign global instance for callbacks
 	g_themeInstance = this;
@@ -77,9 +85,27 @@ Victron::VenusOS::Theme::ScreenSize Theme::screenSize() const
 void Theme::setScreenSize(Victron::VenusOS::Theme::ScreenSize size)
 {
 	if (m_screenSize != size) {
+		setAdjustingGeometry(true);
 		m_screenSize = size;
+
+		switch (size) {
+		case FiveInch:
+			setGeometry_screen_width(800);
+			setGeometry_screen_height(480);
+			break;
+		case SevenInch:
+			setGeometry_screen_width(1024);
+			setGeometry_screen_height(600);
+			break;
+		case Portrait:
+			setGeometry_screen_width(383);
+			setGeometry_screen_height(793);
+			break;
+		}
+
 		Q_EMIT screenSizeChanged(size);
 		Q_EMIT screenSizeChanged_parameterless(); // work around moc limitation.
+		setAdjustingGeometry(false);
 	}
 }
 
@@ -132,6 +158,51 @@ void Theme::setForcedColorScheme(Victron::VenusOS::Theme::ForcedColorScheme forc
 				? Victron::VenusOS::Theme::Dark
 				: Victron::VenusOS::Theme::Light);
 		}
+	}
+}
+
+int Theme::geometry_screen_width() const
+{
+	return m_screenWidth;
+}
+
+void Theme::setGeometry_screen_width(int width)
+{
+	if (m_screenWidth != width) {
+		const bool wasAdjusting = adjustingGeometry();
+		setAdjustingGeometry(true);
+		m_screenWidth = width;
+		Q_EMIT geometry_screen_widthChanged();
+		setAdjustingGeometry(wasAdjusting);
+	}
+}
+
+int Theme::geometry_screen_height() const
+{
+	return m_screenHeight;
+}
+
+void Theme::setGeometry_screen_height(int height)
+{
+	if (m_screenHeight != height) {
+		const bool wasAdjusting = adjustingGeometry();
+		setAdjustingGeometry(true);
+		m_screenHeight = height;
+		Q_EMIT geometry_screen_heightChanged();
+		setAdjustingGeometry(wasAdjusting);
+	}
+}
+
+bool Theme::adjustingGeometry() const
+{
+	return m_adjustingGeometry;
+}
+
+void Theme::setAdjustingGeometry(bool adjusting)
+{
+	if (m_adjustingGeometry != adjusting) {
+		m_adjustingGeometry = adjusting;
+		Q_EMIT adjustingGeometryChanged();
 	}
 }
 

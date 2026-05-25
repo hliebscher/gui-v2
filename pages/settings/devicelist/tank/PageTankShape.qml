@@ -4,6 +4,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
@@ -14,23 +15,6 @@ Page {
 
 	property var _editPointDialog
 	readonly property bool _canEditPoints: Global.systemSettings.canAccess(VenusOS.User_AccessType_Installer)
-
-	topRightButton: _canEditPoints && pointsListView.count < 10
-			? VenusOS.StatusBar_RightButton_Add
-			: VenusOS.StatusBar_RightButton_None
-
-	Connections {
-		target: Global.mainView?.statusBar ?? null
-		enabled: root._canEditPoints && root.isCurrentPage
-
-		function onRightButtonClicked() {
-			Global.dialogLayer.open(editPointDialogComponent, {
-					"sensorLevel": 1,
-					"volume": 1,
-					"modelIndex": -1
-				})
-		}
-	}
 
 	VeQuickItem {
 		id: points
@@ -70,13 +54,39 @@ Page {
 	GradientListView {
 		id: pointsListView
 
-		header: PrimaryListLabel {
-			//% "No custom shape defined. You may define one with up to ten points. Note that 0% and 100% are implied."
-			text: qsTrId("devicelist_tankshape_empty")
-			preferredVisible: pointsListView.count === 0
+		header: SettingsColumn {
+			width: parent?.width ?? 0
+			bottomPadding: addPoint.effectiveVisible || placeholderLabel.effectiveVisible ? Theme.geometry_listItem_itemSeparator_height : 0
+
+			ListNavigation {
+				id: addPoint
+
+				//% "Add shape point"
+				text: qsTrId("devicelist_tankshape_add_shape_point")
+				iconSource: "qrc:/images/icon_plus_32.svg"
+				iconColor: Theme.color_ok
+				showAccessLevel: VenusOS.User_AccessType_Installer
+				preferredVisible: _canEditPoints && pointsListView.count < 10
+				hasSubMenu: false
+				onClicked: {
+					Global.dialogLayer.open(editPointDialogComponent, {
+						"sensorLevel": 1,
+						"volume": 1,
+						"modelIndex": -1
+					})
+				}
+			}
+
+			PrimaryListLabel {
+				id: placeholderLabel
+
+				//% "No custom shape defined. You may define one with up to ten points. Note that 0% and 100% are implied."
+				text: qsTrId("devicelist_tankshape_empty")
+				preferredVisible: pointsListView.count === 0
+			}
 		}
 
-		delegate: ListItem {
+		delegate: ListSetting {
 			id: pointDelegate
 
 			required property int index
@@ -84,39 +94,50 @@ Page {
 			readonly property real sensorLevel: !!modelData ? modelData[0] : NaN
 			readonly property real volume: !!modelData ? modelData[1] : NaN
 
-			//: %1 = the point number
-			//% "Point %1"
-			text: qsTrId("devicelist_tankshape_point").arg(index + 1)
-			content.children: [
+			contentItem: RowLayout {
+				spacing: pointDelegate.spacing
+
+				Label {
+					//: %1 = the point number
+					//% "Point %1"
+					text: qsTrId("devicelist_tankshape_point").arg(index + 1)
+					font: pointDelegate.font
+					Layout.fillWidth: true
+				}
+
 				QuantityRow {
 					model: QuantityObjectModel {
 						QuantityObject { object: pointDelegate; key: "sensorLevel"; unit: VenusOS.Units_Percentage }
 						QuantityObject { object: pointDelegate; key: "volume"; unit: VenusOS.Units_Percentage }
 					}
-				},
+				}
 
-				CP.ColorImage {
-					anchors.verticalCenter: parent.verticalCenter
-					source: "qrc:/images/icon_minus.svg"
-					color: Theme.color_ok
+				RemoveButton {
+					source: "qrc:/images/icon_minus_32.svg"
 					visible: root._canEditPoints
-
-					MouseArea {
-						anchors.centerIn: parent
-						height: pointDelegate.height
-						width: height
-						onClicked: {
-							let pointList = pointsListView.model
-							let pointsItem = points
-							pointList.splice(pointDelegate.index, 1)
-							pointsItem.savePoints(pointList)
-						}
+					onClicked: {
+						let pointList = pointsListView.model
+						let pointsItem = points
+						pointList.splice(pointDelegate.index, 1)
+						pointsItem.savePoints(pointList)
 					}
 				}
-			]
+			}
+
+			background: ListSettingBackground {
+				indicatorColor: pointDelegate.backgroundIndicatorColor
+
+				ListPressArea {
+					anchors.fill: parent
+					enabled: pointDelegate.interactive
+					onClicked: pointDelegate.editPoints()
+				}
+			}
 
 			interactive: root._canEditPoints
-			onClicked: {
+			Keys.onSpacePressed: editPoints()
+
+			function editPoints() {
 				let sensorLevelMax = 0
 				let sensorLevelMin = 0
 				let volumeMax = 0
@@ -182,27 +203,39 @@ Page {
 				: qsTrId("devicelist_tankshape_edit_point").arg(modelIndex+1)
 
 			contentItem: ModalDialog.FocusableContentItem {
-				Row {
-					id: spinBoxRow
+				implicitHeight: spinBoxLayout.implicitHeight
+
+				GridLayout {
+					id: spinBoxLayout
 
 					anchors {
-						centerIn: parent
-						verticalCenterOffset: -Theme.geometry_modalDialog_content_margins
+						left: parent.left
+						leftMargin: Theme.geometry_page_content_horizontalMargin
+						right: parent.right
+						rightMargin: Theme.geometry_page_content_horizontalMargin
+						verticalCenter: parent.verticalCenter
+						verticalCenterOffset: -(Theme.geometry_modalDialog_content_spacing / 2)
 					}
-					spacing: Theme.geometry_modalDialog_content_spacing
+					columnSpacing: Theme.geometry_modalDialog_content_spacing
+					rowSpacing: 0
+					columns: Theme.screenSize === Theme.Portrait ? 1 : 2
 
-					Column {
-						width: sensorLevelSpinBox.width
-						spacing: Theme.geometry_modalDialog_content_margins
+					ColumnLayout {
+						spacing: Theme.geometry_modalDialog_content_spacing
+
+						Layout.preferredWidth: sensorLevelSpinBox.width
+						Layout.alignment: Qt.AlignHCenter
+						Layout.bottomMargin: Theme.screenSize === Theme.Portrait ? Theme.geometry_modalDialog_content_spacing : 0
 
 						Label {
-							width: parent.width
-							wrapMode: Text.Wrap
+							elide: Text.ElideRight
 							horizontalAlignment: Text.AlignHCenter
 							color: Theme.color_font_secondary
 							//: The sensor level (as a percentage) for this tank shape point
 							//% "Sensor level"
 							text: qsTrId("devicelist_tankshape_sensor_level")
+
+							Layout.fillWidth: true
 						}
 
 						SpinBox {
@@ -212,7 +245,7 @@ Page {
 							spacing: Theme.geometry_spinBox_wide_spacing
 							from: 1
 							to: 99
-							textFromValue: function(value, locale) { return value + "%" }
+							suffix: Units.defaultUnitString(VenusOS.Units_Percentage)
 							onValueModified: errorLabel.text = ""
 
 							// Use BeforeItem priority to override the default key Spinbox event handling, else
@@ -222,21 +255,26 @@ Page {
 							KeyNavigation.up: sensorLevelSpinBox
 							KeyNavigation.down: root.footer
 							KeyNavigation.right: volumeSpinBox
+
+							Layout.alignment: Qt.AlignHCenter
 						}
 					}
 
-					Column {
-						width: volumeSpinBox.width
-						spacing: Theme.geometry_modalDialog_content_margins
+					ColumnLayout {
+						spacing: Theme.geometry_modalDialog_content_spacing
+
+						Layout.preferredWidth: volumeSpinBox.width
+						Layout.alignment: Qt.AlignHCenter
 
 						Label {
-							width: parent.width
-							wrapMode: Text.Wrap
+							elide: Text.ElideRight
 							horizontalAlignment: Text.AlignHCenter
 							color: Theme.color_font_secondary
 							//: The volume (as a percentage) for this tank shape point
 							//% "Volume"
 							text: qsTrId("devicelist_tankshape_volume")
+
+							Layout.fillWidth: true
 						}
 
 						SpinBox {
@@ -247,39 +285,41 @@ Page {
 							spacing: Theme.geometry_spinBox_wide_spacing
 							from: 1
 							to: 99
-							textFromValue: function(value, locale) { return value + "%" }
+							suffix: Units.defaultUnitString(VenusOS.Units_Percentage)
 							onValueModified: errorLabel.text = ""
 
 							KeyNavigation.priority: KeyNavigation.BeforeItem
 							KeyNavigation.up: volumeSpinBox
 							KeyNavigation.down: root.footer
 							KeyNavigation.left: sensorLevelSpinBox
+
+							Layout.alignment: Qt.AlignHCenter
 						}
 					}
-				}
 
-				Row {
-					anchors {
-						top: spinBoxRow.bottom
-						topMargin: Theme.geometry_modalDialog_content_margins
-						horizontalCenter: parent.horizontalCenter
-					}
-					spacing: Theme.geometry_listItem_content_spacing
-					visible: errorLabel.text.length > 0
+					RowLayout {
+						spacing: Theme.geometry_listItem_content_spacing
+						opacity: errorLabel.text.length > 0 ? 1 : 0
 
-					CP.ColorImage {
-						id: alarmIcon
+						Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+						Layout.maximumWidth: spinBoxLayout.parent.width
+						Layout.minimumHeight: Theme.geometry_spinBox_indicator_height // minimize resizing when error text is set
+						Layout.columnSpan: Theme.screenSize === Theme.Portrait ? 1 : 2
 
-						source: "qrc:/images/icon_warning_24.svg"
-						color: Theme.color_red
-					}
+						CP.ColorImage {
+							source: "qrc:/images/icon_warning_24.svg"
+							color: Theme.color_red
+						}
 
-					Label {
-						id: errorLabel
+						Label {
+							id: errorLabel
 
-						width: Math.min(implicitWidth, spinBoxRow.width - alarmIcon.width - parent.spacing)
-						wrapMode: Text.Wrap
-						color: Theme.color_font_secondary
+							wrapMode: Text.Wrap
+							color: Theme.color_font_secondary
+							font.pixelSize: Theme.font_dialog_body_secondary_size
+
+							Layout.fillWidth: true
+						}
 					}
 				}
 			}

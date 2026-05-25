@@ -6,7 +6,7 @@
 import QtQuick
 import Victron.VenusOS
 
-BaseListLoader {
+ListItemLoader {
 	id: root
 
 	property string serviceUid
@@ -52,7 +52,7 @@ BaseListLoader {
 			outputPhaseUidPrefix: root.serviceUid + "/Ac/Out"
 			totalInputPowerUid: root.serviceUid + "/Ac/ActiveIn/P"
 			totalOutputPowerUid: root.serviceUid + "/Ac/Out/P"
-			voltPrecision: 2
+			voltDecimals: 2
 		}
 	}
 }

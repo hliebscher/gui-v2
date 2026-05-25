@@ -14,16 +14,42 @@ Page {
 	//% "Microgrid"
 	title: qsTrId("microgrid")
 
+	function _generatePreset(size, median, lowerBound, upperBound, stepSize, decimals) {
+		// Creates a set of values, close to the median value, within two stepSize to use as SpinBox presets.
+		// It defines the functions bounds, compensates for median values at boundary edges and uses these
+		// values to generate the specified neighbourhood values and outputs the values with decimal places.
+		const from = Math.min(Math.max(lowerBound, median - (stepSize * Math.floor(size/2))), upperBound - (stepSize * (size - 1)))
+		const to = Math.max(Math.min(upperBound, median + (stepSize * Math.floor(size/2))), lowerBound + (stepSize * (size - 1)))
+		const array = Array.from({ length: ((to - from) / stepSize) + 1 }, (_, i) => (from + i * stepSize) )
+		return array.map(function(v) { return { value: v.toFixed(decimals) } } )
+	}
+
 	component MicrogridModeListText: ListText {
 		//% "Active mode"
 		text: qsTrId("page_microgrid_active_mode")
-		secondaryText: VenusOS.microgridModeToText(mode.value)
+		secondaryText: VenusOS.microgridModeToText(mode.value, externalControl.value)
+	}
+
+	component MicrogridListSpinBox: ListSpinBox {
+		property alias dataItemModified: parameterModified
+
+		textFormat: Text.RichText // for super/sub support
+		readOnly: !externalControl.valid || externalControl.value !== VenusOS.MicrogridExternalControl_Standalone
+
+		decimals: 2
+		stepSize: 0.01
+		presets: Array.from({ length: 5 }, (_, i) => from + i * (to - from)/4).map(function(v) { return { value: v.toFixed(decimals) } })
+		buttonBorderColor: parameterModified.value === 1 ? Theme.color_button_on_border_modified : FastUtils.invalidColor()
+
+		VeQuickItem {
+			id: parameterModified
+		}
 	}
 
 	component MicrogridListQuantity: ListQuantity {
 		textFormat: Text.RichText
-		precision: 2
-		precisionAdjustmentAllowed: false
+		decimals: 2
+		formatHints: Units.NoDecimalAdjustment
 	}
 
 	component ListValueRange: ListText {
@@ -44,8 +70,8 @@ Page {
 
 			unitType: parent && parent.unitType ? parent.unitType : VenusOS.Units_None
 			value: dataItemFrom.valid ? dataItemFrom.value : NaN
-			precision: 2
-			precisionAdjustmentAllowed: false
+			decimals: 2
+			formatHints: Units.NoDecimalAdjustment
 		}
 
 		QuantityInfo {
@@ -53,8 +79,8 @@ Page {
 
 			unitType: parent && parent.unitType ? parent.unitType : VenusOS.Units_None
 			value: dataItemTo.valid ? dataItemTo.value : NaN
-			precision: 2
-			precisionAdjustmentAllowed: false
+			decimals: 2
+			formatHints: Units.NoDecimalAdjustment
 		}
 
 		VeQuickItem {
@@ -94,54 +120,133 @@ Page {
 			id: hybridDroopModel
 
 			VisibleItemModel {
+				readonly property bool _showApplyAllParameters:  externalControl.valid && externalControl.value === VenusOS.MicrogridExternalControl_Standalone
+									&& (p0.dataItemModified.value === 1
+									|| f0.dataItemModified.value === 1
+									|| fpDroop.dataItemModified.value === 1
+									|| q0.dataItemModified.value === 1
+									|| u0.dataItemModified.value === 1
+									|| uqDroop.dataItemModified.value === 1
+									|| p0Range.dataItemModifiedFrom.value === 1
+									|| p0Range.dataItemModifiedTo.value === 1
+									|| q0Range.dataItemModifiedFrom.value === 1
+									|| q0Range.dataItemModifiedTo.value === 1)
 
 				MicrogridModeListText {}
+
+				ListDroopGraph {
+					// reference values
+					p0Value: p0.value
+					p0LowerValue: p0Range.dataItemFrom.value
+					p0UpperValue: p0Range.dataItemTo.value
+					f0Value: f0.value
+					fpDroop: fpDroop.value
+
+					q0Value: q0.value
+					q0LowerValue: q0Range.dataItemFrom.value
+					q0UpperValue: q0Range.dataItemTo.value
+					u0Value: u0.value
+					uqDroop: uqDroop.value
+
+					// operational values
+					frequency: activeFrequency.value
+					voltage: activeVoltage.value
+
+					VeQuickItem {
+						id: activeFrequency
+						uid: root.bindPrefix + "/Ac/ActiveIn/L1/F"
+					}
+					VeQuickItem {
+						id: activeVoltage
+						uid: root.bindPrefix + "/Ac/ActiveIn/L1/V"
+					}
+				}
 
 				SettingsListHeader {
 					//% "Hybrid droop parameters"
 					text: qsTrId("page_microgrid_hybrid_droop_parameters")
 				}
 
-				MicrogridListQuantity {
-					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/P0/Value"
+				MicrogridListSpinBox {
+					id: p0
 					//% "Reference active power (P<sub>0</sub>)"
 					text: qsTrId("page_microgrid_reference_active_power_p0")
-					unit: VenusOS.Units_Percentage
+					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/P0/Value"
+					dataItemModified.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/P0/Modified"
+
+					from: p0Range.dataItemFrom.value
+					to: p0Range.dataItemTo.value
+
+					suffix: Units.defaultUnitString(VenusOS.Units_Percentage)
 				}
 
-				MicrogridListQuantity {
-					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/F0/Value"
+				MicrogridListSpinBox {
+					id: f0
 					//% "Reference frequency (f<sub>0</sub>)"
 					text: qsTrId("page_microgrid_reference_frequency_f0")
-					unit: VenusOS.Units_Hertz
+					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/F0/Value"
+					dataItemModified.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/F0/Modified"
+
+					from: 45
+					to: 65
+					presets: root._generatePreset(5, value, from, to, stepSize * 10, decimals)
+
+					suffix: Units.defaultUnitString(VenusOS.Units_Hertz)
 				}
 
-				MicrogridListQuantity {
-					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/FPDroop/Value"
+				MicrogridListSpinBox {
+					id: fpDroop
 					//% "Frequency droop slope (droop<sub>fP</sub>)"
 					text: qsTrId("page_microgrid_frequency_droop_slope")
-					unit: VenusOS.Units_Percentage
+					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/FPDroop/Value"
+					dataItemModified.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/FPDroop/Modified"
+
+					from: 1
+					to: 20
+					presets: root._generatePreset(5, value, from, to, stepSize * 50, decimals)
+
+					suffix: Units.defaultUnitString(VenusOS.Units_Percentage)
 				}
 
-				MicrogridListQuantity {
-					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Q0/Value"
+				MicrogridListSpinBox {
+					id: q0
 					//% "Reference reactive power (Q<sub>0</sub>)"
 					text: qsTrId("page_microgrid_reference_reactive_power")
-					unit: VenusOS.Units_Percentage
+					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Q0/Value"
+					dataItemModified.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Q0/Modified"
+
+					from: q0Range.dataItemFrom.value
+					to: q0Range.dataItemTo.value
+
+					suffix: Units.defaultUnitString(VenusOS.Units_Percentage)
 				}
 
-				MicrogridListQuantity {
-					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/U0/Value"
+				MicrogridListSpinBox {
+					id: u0
 					//% "Reference Voltage (U<sub>0</sub>)"
 					text: qsTrId("page_microgrid_reference_voltage")
-					unit: VenusOS.Units_Volt_AC
+					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/U0/Value"
+					dataItemModified.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/U0/Modified"
+
+					from: 220
+					to: 270
+					presets: root._generatePreset(5, value, from, to, stepSize * 500, decimals)
+
+					suffix: Units.defaultUnitString(VenusOS.Units_Volt_AC)
 				}
 
-				MicrogridListQuantity {
-					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/UQDroop/Value"
+				MicrogridListSpinBox {
+					id: uqDroop
 					//% "Voltage droop slope (droop<sub>UQ</sub>)"
 					text: qsTrId("page_microgrid_voltage_droop_slope")
-					unit: VenusOS.Units_Percentage
+					dataItem.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/UQDroop/Value"
+					dataItemModified.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/UQDroop/Modified"
+
+					from: 1
+					to: 20
+					presets: root._generatePreset(5, value, from, to, stepSize * 50, decimals)
+
+					suffix: Units.defaultUnitString(VenusOS.Units_Percentage)
 				}
 
 				SettingsListHeader {
@@ -149,20 +254,71 @@ Page {
 					text: qsTrId("page_microgrid_minimum_and_maximum_parameters")
 				}
 
-				ListValueRange {
+				ListSpinBoxRange {
+					id: p0Range
 					//% "Allowed active power range"
 					text: qsTrId("page_microgrid_allowed_active_power_range")
-					unitType: VenusOS.Units_Percentage
+					readOnly: !externalControl.valid || externalControl.value !== VenusOS.MicrogridExternalControl_Standalone
+
 					dataItemFrom.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Pmin/Value"
+					dataItemModifiedFrom.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Pmin/Modified"
+					rangeModelFrom.minimumValue: -200
+					rangeModelFrom.maximumValue: 200
+					rangeModelFrom.stepSize: 0.01
+
 					dataItemTo.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Pmax/Value"
+					dataItemModifiedTo.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/Pmax/Modified"
+					rangeModelTo.minimumValue: -200
+					rangeModelTo.maximumValue: 200
+					rangeModelTo.stepSize: 0.01
+
+					unit: VenusOS.Units_Percentage
+					decimals: 2
 				}
 
-				ListValueRange {
+				ListSpinBoxRange {
+					id: q0Range
 					//% "Allowed reactive power range"
 					text: qsTrId("page_microgrid_allowed_reactive_power_range")
-					unitType: VenusOS.Units_Percentage
+					readOnly: !externalControl.valid || externalControl.value !== VenusOS.MicrogridExternalControl_Standalone
+
 					dataItemFrom.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/QMin/Value"
+					dataItemModifiedFrom.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/QMin/Modified"
+					rangeModelFrom.minimumValue: -70
+					rangeModelFrom.maximumValue: 70
+					rangeModelFrom.stepSize: 0.01
+
 					dataItemTo.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/QMax/Value"
+					dataItemModifiedTo.uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/QMax/Modified"
+					rangeModelTo.minimumValue: -70
+					rangeModelTo.maximumValue: 70
+					rangeModelTo.stepSize: 0.01
+
+					unit: VenusOS.Units_Percentage
+					decimals: 2
+				}
+
+				SettingsListHeader {
+					text: "" // Blank section padding
+					preferredVisible: _showApplyAllParameters
+				}
+
+				ListButton {
+					//% "Apply all parameters"
+					text: qsTrId("page_microgrid_apply_all_parameters")
+					//% "Apply"
+					secondaryText: qsTrId("page_microgrid_apply")
+					preferredVisible: _showApplyAllParameters
+
+					buttonBorderColor: Theme.color_button_on_border_modified
+					buttonBackgroundColor: Theme.color_button_on_background_modified
+
+					onClicked: applyAll.setValue(1)
+
+					VeQuickItem {
+						id: applyAll
+						uid: root.bindPrefix + "/MicroGrid/DroopModeParameters/ActivateAndStore"
+					}
 				}
 			}
 		}
@@ -243,6 +399,23 @@ Page {
 			id: mode
 
 			uid: root.bindPrefix + "/MicroGrid/Mode"
+		}
+
+		VeQuickItem {
+			id: externalControl
+
+			uid: root.bindPrefix + "/MicroGrid/ExternalControl"
+		}
+
+		VeQuickItem {
+			id: microgridError
+
+			uid: root.bindPrefix + "/MicroGrid/Error"
+			onValueChanged: {
+				if (valid && value !== 0) {
+					Global.showToastNotification(VenusOS.Notification_Warning, VenusOS.microgrid_errorToText(value), 10000)
+				}
+			}
 		}
 	}
 }

@@ -158,7 +158,7 @@ Page {
 
 				Timer {
 					interval: 1000
-					running: parent.visible && root.animationEnabled
+					running: parent.visible && Global.timersEnabled
 					repeat: true
 					triggeredOnStart: true
 					onTriggered: parent.secondaryText = root.timeAgo(parent.dataItem.value)
@@ -244,7 +244,7 @@ Page {
 				preferredVisible: !connectionStatus.preferredVisible
 			}
 
-			ListItem {
+			ListText {
 				//% "Error message: \n%1"
 				text: qsTrId("settings_vrm_error_message").arg(errorMessage.value)
 				preferredVisible: !!errorMessage.value
@@ -356,7 +356,7 @@ Page {
 
 				Timer {
 					interval: 1000
-					running: !!parent.dataItem.value && root.animationEnabled
+					running: !!parent.dataItem.value && Global.timersEnabled
 					repeat: true
 					triggeredOnStart: true
 					onTriggered: parent.secondaryText = root.timeAgo(parent.dataItem.value)

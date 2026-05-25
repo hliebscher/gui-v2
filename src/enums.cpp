@@ -18,6 +18,19 @@ Enums::~Enums()
 {
 }
 
+QString Enums::statusText_off() const
+{
+	//: An "off" state
+	//% "Off"
+	return qtTrId("status_text_off");
+}
+
+QString Enums::statusText_unknown() const
+{
+	//% "Unknown status"
+	return qtTrId("status_text_unknown");
+}
+
 QString Enums::battery_modeToText(Battery_Mode mode) const
 {
 	switch (mode) {
@@ -157,6 +170,7 @@ QString Enums::cardinalDirectionToShortText(CardinalDirection direction) const
 		//% "W"
 		return qtTrId("cardinalDirection_short_west");
 	}
+	return QString();
 }
 
 Enums::DcMeter_Type Enums::dcMeter_type(const QString &serviceType, int monitorMode) const
@@ -336,9 +350,7 @@ QString Enums::digitalInput_stateToText(DigitalInput_State state) const
 		//% "High"
 		return qtTrId("digitalinputs_state_high");
 	case DigitalInput_State_Off:
-		//: Digital input state
-		//% "Off"
-		return qtTrId("digitalinputs_state_off");
+		return statusText_off();
 	case DigitalInput_State_On:
 		//: Digital input state
 		//% "On"
@@ -375,6 +387,21 @@ QString Enums::digitalInput_stateToText(DigitalInput_State state) const
 		//: Digital input state
 		//% "Stopped"
 		return qtTrId("digitalinputs_state_stopped");
+	default:
+		return QString();
+	}
+}
+
+QString Enums::inverter_stateToText(System_State state) const
+{
+	// For inverter services (vedirect inverters & Inverter RS), a subset of the generic system
+	// state enum values is supported.
+	switch (state) {
+	case System_State_Off:
+	case System_State_LowPower:
+	case System_State_FaultCondition:
+	case System_State_Inverting:
+		return system_stateToText(state);
 	default:
 		return QString();
 	}
@@ -426,8 +453,7 @@ QString Enums::solarCharger_stateToText(SolarCharger_State state) const
 {
 	switch (state) {
 	case SolarCharger_State_Off:
-		//% "Off"
-		return qtTrId("solarchargers_state_off");
+		return statusText_off();
 	case SolarCharger_State_Fault:
 		//% "Fault"
 		return qtTrId("solarchargers_state_fault");
@@ -448,7 +474,7 @@ QString Enums::solarCharger_stateToText(SolarCharger_State state) const
 		return qtTrId("solarchargers_state_equalize");
 	case SolarCharger_State_ExternalControl:
 		//% "External control"
-		return qtTrId("solarchargers_state_external control");
+		return qtTrId("solarchargers_state_external_control");
 	default:
 		return QString();
 	}
@@ -478,6 +504,42 @@ QString Enums::switch_deviceStateToText(Switch_DeviceState value) const
 	default:
 		return QString::number(static_cast<int>(value));
 	}
+}
+
+QString Enums::genericInput_typeToText(GenericInput_Type value) const
+{
+	switch (value) {
+	case GenericInput_Type_Discrete:
+		//% "Discrete value indicator"
+		return qtTrId("generic_input_discrete");
+	case GenericInput_Type_UnrangedValue:
+		//% "Value indicator (unranged)"
+		return qtTrId("generic_input_value_unranged");
+	case GenericInput_Type_RangedValue:
+		//% "Value indicator (ranged)"
+		return qtTrId("generic_input_value_ranged");
+	case GenericInput_Type_Temperature:
+		//% "Temperature indicator"
+		return qtTrId("generic_input_temperature");
+	}
+	return QString();
+}
+
+QString Enums::genericInput_statusToText(GenericInput_Status value) const
+{
+	switch (value) {
+	case GenericInput_Status_On:
+		//% "On"
+		return qtTrId("generic_input_status_on");
+	case GenericInput_Status_Fault:
+		//% "Fault"
+		return qtTrId("generic_input_status_fault");
+	case GenericInput_Status_SensorBatteryLow:
+		//% "Sensor battery low"
+		return qtTrId("generic_input_status_sensor_battery_low");
+	}
+
+	return statusText_unknown();
 }
 
 QString Enums::switchableOutput_typeToText(SwitchableOutput_Type value, const QString &channelId) const
@@ -538,17 +600,75 @@ QString Enums::switchableOutput_typeToText(SwitchableOutput_Type value, const QS
 	}
 }
 
-QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, SwitchableOutput_Type type) const
+QString Enums::switchableOutput_functionToText(SwitchableOutput_Function value) const
 {
 	switch (value) {
-	case SwitchableOutput_Status_Off:
-		if (type == SwitchableOutput_Type_BilgePump) {
+	case SwitchableOutput_Function_Disabled:
+		//% "Disabled"
+		return qtTrId("switchable_output_function_disabled");
+	case SwitchableOutput_Function_Alarm:
+		//% "Alarm"
+		return qtTrId("switchable_output_function_alarm");
+	case SwitchableOutput_Function_GeneratorStartStop:
+		//% "Generator start/stop"
+		return qtTrId("switchable_output_function_generator_startstop");
+	case SwitchableOutput_Function_Manual:
+		//% "Manual"
+		return qtTrId("switchable_output_function_manual");
+	case SwitchableOutput_Function_Tank_Pump:
+		//% "Tank pump"
+		return qtTrId("switchable_output_function_tankpump");
+	case SwitchableOutput_Function_Temperature:
+		//% "Temperature"
+		return qtTrId("switchable_output_function_temperature");
+	case SwitchableOutput_Function_GensetHelperRelay:
+		//% "Genset Helper"
+		return qtTrId("switchable_output_function_genset_helper");
+	case SwitchableOutput_Function_OpportunityLoad:
+		//% "Opportunity load"
+		return qtTrId("switchable_output_function_opportunity_load");
+	default:
+		//% "Unsupported function: %1"
+		return qtTrId("switchable_output_unsupported").arg(value);
+	}
+}
+
+QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, SwitchableOutput_Type type) const
+{
+	// For bilge pumps, always display 'Running' when status includes 0x09.
+	if (type == SwitchableOutput_Type_BilgePump) {
+		if ((value & SwitchableOutput_Status_On) == SwitchableOutput_Status_On) {
+			if (value & SwitchableOutput_Status_OverTemperature) {
+				//% "Running, over temperature"
+				return qtTrId("switchable_output_running_over_temperature");
+			} else if (value & SwitchableOutput_Status_Disabled) {
+				//% "Running, disabled"
+				return qtTrId("switchable_output_running_disabled");
+			} else {
+				//% "Running"
+				return qtTrId("switchable_output_running");
+			}
+		} else if (value == SwitchableOutput_Status_Disabled) {
+			//% "Not running, disabled"
+			return qtTrId("switchable_output_not_running_disabled");
+		} else if (value == SwitchableOutput_Status_Off) {
 			//% "Not running"
 			return qtTrId("switchable_output_not_running");
-		} else {
-			//% "Off"
-			return qtTrId("switchable_output_off");
 		}
+	}
+
+	// For all types except for Bilge Pump, mask out the 'output on' value (0x09) if the device
+	// has set a status even when the output is on. E.g. an output might be both 'on' and
+	// 'over temperature' set, so a combined status of (0x09 | 0x04) = 0x0D = 13. In this case we
+	// want to show 'over temperature' instead of just '13'.
+	const int maskedValue = type == SwitchableOutput_Type_BilgePump ? value
+			: (((value & SwitchableOutput_Status_On) == SwitchableOutput_Status_On)
+				&& value != SwitchableOutput_Status_On) ? value & ~SwitchableOutput_Status_On
+			: value;
+
+	switch (maskedValue) {
+	case SwitchableOutput_Status_Off:
+		return statusText_off();
 	case SwitchableOutput_Status_Powered:
 		//% "Powered"
 		return qtTrId("switchable_output_powered");
@@ -565,13 +685,8 @@ QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, Swit
 		//% "Fault"
 		return qtTrId("switchable_output_fault");
 	case SwitchableOutput_Status_On:
-		if (type == SwitchableOutput_Type_BilgePump) {
-			//% "Running"
-			return qtTrId("switchable_output_running");
-		} else {
-			//% "On"
-			return qtTrId("switchable_output_on");
-		}
+		//% "On"
+		return qtTrId("switchable_output_on");
 	case SwitchableOutput_Status_ShortFault:
 		//% "Short"
 		return qtTrId("switchable_output_short");
@@ -606,7 +721,99 @@ QString Enums::switchableOutput_statusToText(SwitchableOutput_Status value, Swit
 		//% "External control, over temp"
 		return qtTrId("switchable_output_externalcontrol_overtemperature");
 	default:
-		return QString::number(static_cast<int>(value));
+		if (maskedValue > 0) {
+			qWarning() << "Unhandled switchable output status combination: " << value << " for type " << type;
+		}
+		break;
+	}
+
+	return statusText_unknown();
+}
+
+QString Enums::system_stateToText(System_State state) const
+{
+	switch (state) {
+	case System_State_Off:
+		return statusText_off();
+	case System_State_LowPower:
+		//% "AES mode"
+		return qtTrId("system_state_aes_mode");
+	case System_State_FaultCondition:
+		//% "Fault condition"
+		return qtTrId("system_state_faultcondition");
+	case System_State_BulkCharging:
+		//% "Bulk charging"
+		return qtTrId("system_state_bulkcharging");
+	case System_State_AbsorptionCharging:
+		//% "Absorption charging"
+		return qtTrId("system_state_absorptioncharging");
+	case System_State_FloatCharging:
+		//% "Float charging"
+		return qtTrId("system_state_floatcharging");
+	case System_State_StorageMode:
+		//% "Storage mode"
+		return qtTrId("system_state_storagemode");
+	case System_State_EqualizationCharging:
+		//% "Equalization charging"
+		return qtTrId("system_state_equalisationcharging");
+	case System_State_PassThrough:
+		//% "Pass-thru"
+		return qtTrId("system_state_passthru");
+	case System_State_Inverting:
+		//% "Inverting"
+		return qtTrId("system_state_inverting");
+	case System_State_Assisting:
+		//% "Assisting"
+		return qtTrId("system_state_assisting");
+	case System_State_PowerSupplyMode:
+		//% "Power supply mode"
+		return qtTrId("system_state_powersupplymode");
+	case System_State_Sustain:
+		//% "Sustain"
+		return qtTrId("system_state_sustain");
+
+	case System_State_Wakeup:
+		//% "Wake up"
+		return qtTrId("system_state_wakeup");
+	case System_State_RepeatedAbsorption:
+		//% "Repeated absorption"
+		return qtTrId("system_state_repeatedabsorption");
+	case System_State_AutoEqualize:
+		//% "Auto equalize"
+		return qtTrId("system_state_autoequalize");
+	case System_State_BatterySafe:
+		//% "Battery safe"
+		return qtTrId("system_state_battery_safe");
+	case System_State_LoadDetect:
+		//% "Load detect"
+		return qtTrId("system_state_loaddetect");
+	case System_State_Blocked:
+		//% "Blocked"
+		return qtTrId("system_state_blocked");
+	case System_State_Test:
+		//% "Test"
+		return qtTrId("system_state_test");
+	case System_State_ExternalControl:
+		//% "External control"
+		return qtTrId("system_state_externalccontrol");
+
+	case System_State_Discharging:
+		//% "Discharging"
+		return qtTrId("system_state_discharging");
+	case System_State_SystemSustain:
+		//% "Sustain"
+		return qtTrId("system_state_system_sustain");
+	case System_State_Recharge:
+		//% "Recharge"
+		return qtTrId("system_state_recharge");
+	case System_State_ScheduledCharge:
+		//% "Scheduled"
+		return qtTrId("system_state_scheduledcharge");
+	case System_State_DynamicESS:
+		//% "Dynamic ESS"
+		return qtTrId("system_state_dynamic_ess");
+	default:
+		return statusText_unknown();
 	}
 }
 
@@ -654,21 +861,91 @@ QString Enums::tank_fluidTypeToText(Tank_Type type) const
 	}
 }
 
-QString Enums::microgridModeToText(MicrogridMode mode) const
+QString Enums::microgridModeToText(MicrogridMode mode, MicrogridExternalControl control) const
 {
 	switch (mode) {
 	case MicrogridMode_HybridDroop:
-		//% "Hybrid droop"
-		return qtTrId("microgrid_mode_hybrid_droop");
+		if (control == MicrogridExternalControl_Standalone) {
+			//% "Hybrid droop"
+			return qtTrId("microgrid_mode_hybrid_droop");
+		} else {
+			//% "EMS Control: Hybrid droop"
+			return qtTrId("microgrid_mode_ems_hybrid_droop");
+		}
 	case MicrogridMode_GridFollowing:
-		//% "Grid-following"
-		return qtTrId("microgrid_mode_grid_following");
+		//% "EMS Control: Grid-following"
+		return qtTrId("microgrid_mode_ems_grid_following");
 	case MicrogridMode_GridForming:
-		//% "Grid-forming"
-		return qtTrId("microgrid_mode_grid_forming");
+		//% "EMS Control: Grid-forming"
+		return qtTrId("microgrid_mode_ems_grid_forming");
 	default:
 		return QString();
 	}
+}
+
+QString Enums::microgrid_errorToText(MicrogridError error) const
+{
+	switch (error) {
+	case MicrogridError_NoError:
+		//% "No error"
+		return qtTrId("microgrid_error_none");
+	case MicrogridError_OutOfSync:
+		//% "Different fallback hybrid droop values in phase masters"
+		return qtTrId("microgrid_error_hybrid_droop_values_out_of_sync");
+	case MicrogridError_WriteFailed:
+		//% "Hybrid droop parameter write failed"
+		return qtTrId("microgrid_error_write_failed");
+	case MicrogridError_FminGreaterThanFmax:
+		//% "Parameter error Fmin > Fmax"
+		return qtTrId("microgrid_error_param_fmin_greater_than_fmax");
+	case MicrogridError_PminGreaterThanPmax:
+		//% "Parameter error Pmin > Pmax"
+		return qtTrId("microgrid_error_param_pmin_greater_than_pmaxv");
+	case MicrogridError_UminGreaterThanUmax:
+		//% "Parameter error Umin > Umax"
+		return qtTrId("microgrid_error_param_umin_greater_than_umax");
+	case MicrogridError_QminGreaterThanQmax:
+		//% "Parameter error Qmin > Qmax"
+		return qtTrId("microgrid_error_param_qmin_greater_than_qmax");
+	case MicrogridError_Q0OutOfRange:
+		//% "Parameter error Q0 out of range"
+		return qtTrId("microgrid_error_param_q0_out_of_range");
+	case MicrogridError_QMinOutOfRange:
+		//% "Parameter error Qmin out of range"
+		return qtTrId("microgrid_error_param_qmin_out_of_range");
+	case MicrogridError_QMaxOutOfRange:
+		//% "Parameter error Qmax out of range"
+		return qtTrId("microgrid_error_param_qmax_out_of_range");
+	case MicrogridError_UDroopOutOfRange:
+		//% "Parameter error U0 out of range"
+		return qtTrId("microgrid_error_param_u0_out_of_range");
+	case MicrogridError_U0OutOfRange:
+		//% "Parameter error U droop out of range"
+		return qtTrId("microgrid_error_param_u_droop_out_of_range");
+	case MicrogridError_P0OutOfRange:
+		//% "Parameter error P0 out of range"
+		return qtTrId("microgrid_error_param_p0_out_of_range");
+	case MicrogridError_PMinOutOfRange:
+		//% "Parameter error Pmin out of range"
+		return qtTrId("microgrid_error_param_pmin_out_of_range");
+	case MicrogridError_PMaxOutOfRange:
+		//% "Parameter error Pmax out of range"
+		return qtTrId("microgrid_error_param_pmax_out_of_range");
+	case MicrogridError_F0OutOfRange:
+		//% "Parameter error F0 out of range"
+		return qtTrId("microgrid_error_param_f0_out_of_range");
+	case MicrogridError_FDroopOutOfRange:
+		//% "Parameter error freq droop out of range"
+		return qtTrId("microgrid_error_param_freq_droop_out_of_range");
+	case MicrogridError_PfFpMismatch:
+		//% "Ve.Bus internal error PF vs FP data mismatch"
+		return qtTrId("microgrid_error_pf_fp_mismatch");
+	case MicrogridError_QuUqMismatch:
+		//% "Ve.Bus internal error QU vs UQ data mismatch"
+		return qtTrId("microgrid_error_qu_uq_mismatch");
+	default:
+		return qtTrId("common_words_unknown_status");
+}
 }
 
 Enums* Enums::create(QQmlEngine *engine, QJSEngine *jsEngine)

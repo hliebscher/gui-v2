@@ -3,8 +3,9 @@
  * See LICENSE.txt for license information.
 */
 
-import QtTest
 import QtQuick
+import Victron.VenusOS
+import QtTest
 
 TestCase {
 	id: root
@@ -31,16 +32,16 @@ TestCase {
 	function test_simple_properties_data() {
 		return [
 			{
-				tag: "outputId - numeric",
+				tag: "channelId - numeric",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: { "State": 0 },
-				expected: { outputId: "1" },
+				expected: { channelId: "1" },
 			},
 			{
-				tag: "outputId - letter",
+				tag: "channelId - letter",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/A",
 				outputProperties: { "State": 0 },
-				expected: { outputId: "A" },
+				expected: { channelId: "A" },
 			},
 
 			{
@@ -79,7 +80,7 @@ TestCase {
 				tag: "status - invalid",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
 				outputProperties: { "State": 0 }, // status not set
-				expected: { status: 0 },
+				expected: { status: -1 },
 			},
 			{
 				tag: "status - 0",
@@ -180,11 +181,11 @@ TestCase {
 	function test_simple_properties(data) {
 		// Test defaults
 		compare(output.uid, "")
-		compare(output.outputId, "")
+		compare(output.channelId, "")
 		compare(output.serviceUid, "")
 		compare(output.formattedName, "")
 		compare(output.state, 0)
-		compare(output.status, 0)
+		compare(output.status, -1)
 		compare(output.dimming, 0)
 		compare(output.type, -1)
 		compare(output.group, "")
@@ -204,11 +205,11 @@ TestCase {
 
 		// Test defaults again
 		compare(output.uid, "")
-		compare(output.outputId, "")
+		compare(output.channelId, "")
 		compare(output.serviceUid, "")
 		compare(output.formattedName, "")
 		compare(output.state, 0)
-		compare(output.status, 0)
+		compare(output.status, -1)
 		compare(output.dimming, 0)
 		compare(output.type, -1)
 		compare(output.group, "")
@@ -220,16 +221,23 @@ TestCase {
 			{
 				tag: "State valid, invalid type",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "State": 0, "Settings/Type": -1, },
+				outputProperties: { "State": 0, "Settings/Type": -1, "Name": "A" },
 				hasValidType: false,
 				allowedInGroupModel: false,
 			},
 			{
 				tag: "State valid, ValidTypes matched",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				outputProperties: { "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: true,
+			},
+			{
+				tag: "State valid, ValidTypes matched, but no Name",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
+				outputProperties: { "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				hasValidType: true,
+				allowedInGroupModel: false,
 			},
 			{
 				tag: "State valid, ValidTypes matched, but Type is out of bounds",
@@ -238,6 +246,7 @@ TestCase {
 					"State": 0,
 					"Settings/Type": VenusOS.SwitchableOutput_Type_MaxSupportedType + 1,
 					"Settings/ValidTypes": 1 << (VenusOS.SwitchableOutput_Type_MaxSupportedType + 1),
+					"Name": "A",
 				},
 				hasValidType: false,
 				allowedInGroupModel: false,
@@ -245,14 +254,14 @@ TestCase {
 			{
 				tag: "Dimming valid but no State, ValidTypes matched",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "Dimming": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				outputProperties: { "Dimming": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: true,
 			},
 			{
 				tag: "Neither State nor Dimming valid, ValidTypes matched",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				outputProperties: { "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: false,
 			},
@@ -260,21 +269,21 @@ TestCase {
 			{
 				tag: "ValidTypes matches 1st type",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "State": 0, "Settings/Type": 1, "Settings/ValidTypes": ((1 << 1) | (1 << 2)) },
+				outputProperties: { "State": 0, "Settings/Type": 1, "Settings/ValidTypes": ((1 << 1) | (1 << 2)), "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: true,
 			},
 			{
 				tag: "ValidTypes matches 2nd type",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "State": 0, "Settings/Type": 2, "Settings/ValidTypes": ((1 << 1) | (1 << 2)) },
+				outputProperties: { "State": 0, "Settings/Type": 2, "Settings/ValidTypes": ((1 << 1) | (1 << 2)), "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: true,
 			},
 			{
 				tag: "ValidTypes not matched for either type",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "State": 0, "Settings/Type": 0, "Settings/ValidTypes": ((1 << 1) | (1 << 2)) },
+				outputProperties: { "State": 0, "Settings/Type": 0, "Settings/ValidTypes": ((1 << 1) | (1 << 2)), "Name": "A" },
 				hasValidType: false,
 				allowedInGroupModel: false,
 			},
@@ -282,21 +291,21 @@ TestCase {
 			{
 				tag: "ShowUIControl=1, other params valid",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "Settings/ShowUIControl": 1, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				outputProperties: { "Settings/ShowUIControl": 1, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: true,
 			},
 			{
 				tag: "ShowUIControl=0, other params valid",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "Settings/ShowUIControl": 0, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				outputProperties: { "Settings/ShowUIControl": 0, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: false,
 			},
 			{
 				tag: "ShowUIControl=1, ValidTypes not matched",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
-				outputProperties: { "Settings/ShowUIControl": 1, "State": 0, "Settings/Type": 0 },
+				outputProperties: { "Settings/ShowUIControl": 1, "State": 0, "Settings/Type": 0, "Name": "A" },
 				hasValidType: false,
 				allowedInGroupModel: false,
 			},
@@ -304,14 +313,14 @@ TestCase {
 			{
 				tag: "Relay function = manual, other params valid",
 				uid: "mock/com.victronenergy.system/SwitchableOutput/1",
-				outputProperties: { "Settings/Function": 2, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0 },
+				outputProperties: { "Settings/Function": 2, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: true,
 			},
 			{
 				tag: "Relay function = start/stop, other params valid",
 				uid: "mock/com.victronenergy.system/SwitchableOutput/1",
-				outputProperties: { "Settings/Function": 1, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0},
+				outputProperties: { "Settings/Function": 1, "State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A" },
 				hasValidType: true,
 				allowedInGroupModel: false,
 			},
@@ -339,7 +348,7 @@ TestCase {
 				tag: "ShowUIControl not set",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				allowedInGroupModel: true,
 			},
@@ -348,7 +357,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 0, // Off=0
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				allowedInGroupModel: false,
 			},
@@ -357,7 +366,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 1, // Always=1
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				allowedInGroupModel: true,
 			},
@@ -366,7 +375,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 2, // Local=0x2
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				vrm: false,
 				allowedInGroupModel: true,
@@ -376,7 +385,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 4, // Remote=0x4
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				vrm: true,
 				allowedInGroupModel: true,
@@ -386,7 +395,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 6, // Local+Remote = 0x2 | 0x4
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				vrm: false,
 				allowedInGroupModel: true,
@@ -396,7 +405,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 6, // Local+Remote = 0x2 | 0x4
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				vrm: true,
 				allowedInGroupModel: true,
@@ -407,7 +416,7 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/1",
 				outputProperties: {
 					"Settings/ShowUIControl": 5,
-					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0
+					"State": 0, "Settings/Type": 0, "Settings/ValidTypes": 1 << 0, "Name": "A"
 				},
 				allowedInGroupModel: true,
 			},
@@ -559,43 +568,55 @@ TestCase {
 			{
 				tag: "Decimals=0",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/Decimals": 0 },
+				outputProperties: { "Settings/Decimals": 0 },
 				decimals: 0,
 			},
 			{
 				tag: "StepSize=0",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/StepSize": 0 },
+				outputProperties: { "Settings/StepSize": 0 },
 				decimals: 0,
 			},
 			{
 				tag: "Decimals=1",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/Decimals": 1 },
+				outputProperties: { "Settings/Decimals": 1 },
 				decimals: 1,
 			},
 			{
 				tag: "StepSize=1",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/StepSize": 1 },
+				outputProperties: { "Settings/StepSize": 1 },
+				decimals: 0,
+			},
+			{
+				tag: "StepSize=0.1",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: { "Settings/StepSize": 0.1 },
 				decimals: 1,
+			},
+			{
+				tag: "StepSize=1.23",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: { "Settings/StepSize": 1.23 },
+				decimals: 2,
 			},
 			{
 				tag: "Decimals=0, StepSize=0",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/Decimals": 0, "/Settings/StepSize": 0 },
+				outputProperties: { "Settings/Decimals": 0, "Settings/StepSize": 0 },
 				decimals: 0,
 			},
 			{
-				tag: "Decimals=0, StepSize=1",
+				tag: "Decimals=0, StepSize=1.23",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/Decimals": 0, "/Settings/StepSize": 1 },
-				decimals: 0, // Decimals override
+				outputProperties: { "Settings/Decimals": 1, "Settings/StepSize": 1.23 },
+				decimals: 1, // Decimals override
 			},
 			{
 				tag: "Decimals=1, StepSize=0",
 				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
-				outputProperties: { "/Settings/Decimals": 1, "/Settings/StepSize": 0 },
+				outputProperties: { "Settings/Decimals": 1, "Settings/StepSize": 0 },
 				decimals: 1, // Decimals override
 			},
 		]
@@ -606,7 +627,150 @@ TestCase {
 
 		setOutputProperties(data.uid, data.outputProperties)
 		output.uid = data.uid
-		compare(output.decimals, output.decimals)
+		compare(output.decimals, data.decimals)
+
+		// Clean up
+		output.uid = ""
+		MockManager.removeValue(data.uid)
+	}
+
+	function test_status_masking_data() {
+		return [
+			{
+				tag: "toggle, off",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": VenusOS.SwitchableOutput_Status_Off
+				},
+				expected: qsTrId("status_text_off")
+			},
+			{
+				tag: "toggle, on",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": VenusOS.SwitchableOutput_Status_On
+				},
+				expected: qsTrId("switchable_output_on")
+			},
+			{
+				tag: "toggle, on + overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": (VenusOS.SwitchableOutput_Status_On | VenusOS.SwitchableOutput_Status_OverTemperature)
+				},
+				expected: qsTrId("switchable_output_overtemperature")
+			},
+			{
+				tag: "toggle, fault",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": VenusOS.SwitchableOutput_Status_OutputFault
+				},
+				expected: qsTrId("switchable_output_fault")
+			},
+			{
+				tag: "toggle, bypassed overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": VenusOS.SwitchableOutput_Status_Bypassed_OverTemperature
+				},
+				expected: qsTrId("switchable_output_bypassed_overtemperature")
+			},
+			{
+				tag: "toggle, on + bypassed overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": (VenusOS.SwitchableOutput_Status_On | VenusOS.SwitchableOutput_Status_Bypassed_OverTemperature)
+				},
+				expected: qsTrId("switchable_output_bypassed_overtemperature")
+			},
+			{
+				tag: "toggle, disabled + overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_Toggle,
+					"Status": (VenusOS.SwitchableOutput_Status_Disabled | VenusOS.SwitchableOutput_Status_OverTemperature)
+				},
+				expected: qsTrId("switchable_output_disabled_overtemperature")
+			},
+			{
+				tag: "bilgepump, off",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": VenusOS.SwitchableOutput_Status_Off
+				},
+				expected: qsTrId("switchable_output_not_running")
+			},
+			{
+				tag: "bilgepump, on",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": VenusOS.SwitchableOutput_Status_On
+				},
+				expected: qsTrId("switchable_output_running")
+			},
+			{
+				tag: "bilgepump, on + overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": (VenusOS.SwitchableOutput_Status_On | VenusOS.SwitchableOutput_Status_OverTemperature)
+				},
+				expected: qsTrId("switchable_output_running_over_temperature")
+			},
+			{
+				tag: "bilgepump, fault",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": VenusOS.SwitchableOutput_Status_OutputFault
+				},
+				expected: qsTrId("switchable_output_fault")
+			},
+			{
+				tag: "bilgepump, bypassed overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": VenusOS.SwitchableOutput_Status_Bypassed_OverTemperature
+				},
+				expected: qsTrId("switchable_output_bypassed_overtemperature")
+			},
+			{
+				tag: "bilgepump, on + bypassed overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": (VenusOS.SwitchableOutput_Status_On | VenusOS.SwitchableOutput_Status_Bypassed_OverTemperature)
+				},
+				expected: qsTrId("switchable_output_running_over_temperature") // should this display "Bypassed" also?
+			},
+			{
+				tag: "bilgepump, disabled + overtemp",
+				uid: "mock/com.victronenergy.test.a/SwitchableOutput/0",
+				outputProperties: {
+					"Settings/Type": VenusOS.SwitchableOutput_Type_BilgePump,
+					"Status": (VenusOS.SwitchableOutput_Status_Disabled | VenusOS.SwitchableOutput_Status_OverTemperature)
+				},
+				expected: qsTrId("switchable_output_disabled_overtemperature") // should this display "Not running" also?
+			}
+		]
+	}
+
+	function test_status_masking(data) {
+		// Set test values and verify the output of switchableOutput_statusToText() is correct.
+		setOutputProperties(data.uid, data.outputProperties)
+		output.uid = data.uid
+		compare(output.uid, data.uid, data.tag + " UID")
+		compare(VenusOS.switchableOutput_statusToText(output.status, output.type), data.expected, data.tag)
 
 		// Clean up
 		output.uid = ""

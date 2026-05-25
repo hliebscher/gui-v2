@@ -9,7 +9,8 @@ import Victron.VenusOS
 StackView {
 	id: root
 
-	readonly property bool opened: state === "opened" && !fakePushTransition.running
+	// True when fully opened (i.e. opened, and not animating in or out of the opened state).
+	readonly property bool opened: _fullyOpened
 	readonly property Page currentPage: opened ? currentItem : null
 
 	readonly property int animationDuration: Global.mainView && Global.mainView.allowPageAnimations ? Theme.animation_page_slide_duration : 0
@@ -22,6 +23,7 @@ StackView {
 	property var _pageUrls: []
 	property Page _poppedPage
 	property var _topPageUrl
+	property bool _fullyOpened
 
 	// Slide new drill-down pages in from the right
 	pushEnter: Transition {
@@ -72,7 +74,7 @@ StackView {
 
 	function pushPage(obj, properties, operation) {
 		if (root.animating) {
-			return
+			return null
 		}
 		if (state === "hidden") {
 			// If the stack was hidden, it now contains pages that are no longer relevant. Clear all
@@ -89,7 +91,7 @@ StackView {
 			let checkComponent = Qt.createComponent(objectOrUrl)
 			if (checkComponent.status !== Component.Ready) {
 				console.warn("Aborted attempt to push page with errors: " + obj + ": " + checkComponent.errorString())
-				return
+				return null
 			}
 			objectOrUrl = checkComponent.createObject(null, properties)
 			root._pageUrls.push(obj)
@@ -101,11 +103,12 @@ StackView {
 
 		if (root.depth === 0) {
 			// When the first page is added to the stack, move the stack into view.
-			root.push(objectOrUrl, properties, StackView.Immediate)
+			const newPage = root.push(objectOrUrl, properties, StackView.Immediate)
 			fakePushAnimation.duration = _animationDuration(operation)
 			root.state = "opened"
+			return newPage
 		} else {
-			root.push(objectOrUrl, properties, _adjustedStackOperation(operation))
+			return root.push(objectOrUrl, properties, _adjustedStackOperation(operation))
 		}
 	}
 
@@ -217,10 +220,16 @@ StackView {
 
 			to: "opened"
 
-			NumberAnimation {   // Cannot use XAnimator, it will abruptly reset the StackView x.
-				id: fakePushAnimation
-				property: "x"
-				easing.type: Easing.InOutQuad
+			SequentialAnimation {
+				NumberAnimation {   // Cannot use XAnimator, it will abruptly reset the StackView x.
+					id: fakePushAnimation
+
+					property: "x"
+					easing.type: Easing.InOutQuad
+				}
+				ScriptAction {
+					script: root._fullyOpened = true
+				}
 			}
 		},
 		Transition {
@@ -229,6 +238,9 @@ StackView {
 			from: "opened"
 
 			SequentialAnimation {
+				ScriptAction {
+					script: root._fullyOpened = false
+				}
 				NumberAnimation {   // Cannot use XAnimator, it will abruptly reset the StackView x.
 					id: fakePopAnimation
 					property: "x"

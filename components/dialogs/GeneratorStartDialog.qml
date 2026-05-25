@@ -26,34 +26,41 @@ GeneratorDialog {
 	}
 
 	contentItem: ModalDialog.FocusableContentItem {
-		anchors {
-			top: root.header.bottom
-			topMargin: Theme.geometry_modalDialog_content_margins
-			left: parent.left
-			right: parent.right
-			bottom: parent.footer.top
-		}
-		height: contentColumn.height
+		implicitHeight: contentColumn.implicitHeight
 
 		Column {
 			id: contentColumn
-			width: parent.width
-			spacing: Theme.geometry_modalDialog_content_margins
+			x: Theme.geometry_modalDialog_content_horizontalMargin
+			width: parent.width - (2 * Theme.geometry_modalDialog_content_horizontalMargin)
+			spacing: Theme.geometry_modalDialog_content_spacing
 
-			Switch {
-				id: timedRunSwitch
-
+			Row {
 				anchors {
 					left: timeSelector.left
 					right: timeSelector.right
 				}
-				//% "Timed run"
-				text: qsTrId("controlcard_generator_startdialog_timed_run")
-				checked: root.generator.manualStartTimer > 0
-				checkable: true
-				focus: true
+				topPadding: Theme.geometry_modalDialog_content_spacing
 
-				KeyNavigation.down: timeSelector
+				Label {
+					id: timedRunLabel
+					//% "Timed run"
+					text: qsTrId("controlcard_generator_startdialog_timed_run")
+					width: parent.width - timedRunSwitch.width
+					rightPadding: Theme.geometry_listItem_content_spacing
+					elide: Text.ElideRight
+				}
+
+				Switch {
+					id: timedRunSwitch
+
+					checked: root.generator.manualStartTimer > 0
+					checkable: true
+					focus: true
+
+					// Include label in the navigation highlight
+					KeyNavigationHighlight.leftMargin: -timedRunLabel.width - Theme.geometry_listItem_content_spacing
+					KeyNavigation.down: timeSelector
+				}
 			}
 
 			TimeSelector {
@@ -68,12 +75,13 @@ GeneratorDialog {
 
 			Label {
 				anchors {
-					left: timeSelector.left
-					right: timeSelector.right
+					left: parent.left
+					right: parent.right
 				}
 				wrapMode: Text.Wrap
 				color: Theme.color_font_primary
 				horizontalAlignment: Text.AlignHCenter
+				font.pixelSize: Theme.font_dialog_body_size
 				text: timedRunSwitch.checked && (timeSelector.hour || timeSelector.minute)
 					  ? //% "Generator will stop in %1 unless autostart conditions are enabled that keep it running."
 						qsTrId("generator_start_dialog_will_stop_in_x").arg(Utils.formatHoursMinutes(timeSelector.hour, timeSelector.minute))

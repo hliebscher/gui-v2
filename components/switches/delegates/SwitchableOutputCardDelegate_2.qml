@@ -14,7 +14,6 @@ FocusScope {
 
 	required property SwitchableOutput switchableOutput
 
-	enabled: root.switchableOutput.status !== VenusOS.SwitchableOutput_Status_Disabled
 	focus: true
 	KeyNavigationHighlight.active: activeFocus && !slider.activeFocus
 
@@ -43,6 +42,8 @@ FocusScope {
 			rightMargin: Theme.geometry_controlCard_button_margins
 		}
 		switchableOutput: root.switchableOutput
+		quantityValue: slider.value
+		quantityUnit: VenusOS.Units_Percentage
 	}
 
 	SwitchableOutputDimmableSlider {

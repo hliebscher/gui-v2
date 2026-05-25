@@ -313,7 +313,7 @@ QtObject {
 			interval: 60000
 			repeat: true
 			triggeredOnStart: true
-			running: BackendConnection.applicationVisible
+			running: BackendConnection.applicationVisible // even if !Global.timersEnabled, in case screen blank duration is short
 			onTriggered: root.time.getValue(true)   // force value refresh
 		}
 	}
@@ -388,7 +388,9 @@ QtObject {
 				root.temperatureUnitSuffix = "°F"
 				break
 			default:
-				console.warn("Cannot load temperature unit,", uid, "has unsupported value:", value, "default to celsius")
+				if (Global.dataManagerLoaded) {
+					console.warn("Cannot load temperature unit,", uid, "has unsupported value:", value, "default to celsius")
+				}
 				root.temperatureUnit = VenusOS.Units_Temperature_Celsius
 				root.temperatureUnitSuffix = "°C"
 				break
@@ -413,14 +415,16 @@ QtObject {
 		onValueChanged: {
 			switch (value) {
 			case ve_metre:
-				root.altitudeUnit = VenusOS.Units_Altitude_Metre
+				root.altitudeUnit = VenusOS.Units_Metre
 				break
 			case ve_foot:
-				root.altitudeUnit = VenusOS.Units_Altitude_Foot
+				root.altitudeUnit = VenusOS.Units_Foot
 				break
 			default:
-				console.warn("Cannot load altitude unit,", uid, "has unsupported value:", value, "default to metre")
-				root.altitudeUnit = VenusOS.Units_Altitude_Metre
+				if (Global.dataManagerLoaded) {
+					console.warn("Cannot load altitude unit,", uid, "has unsupported value:", value, "default to metre")
+				}
+				root.altitudeUnit = VenusOS.Units_Metre
 				break
 			}
 		}

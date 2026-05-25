@@ -11,6 +11,7 @@ ControlCard {
 
 	property alias serviceUid: generator.serviceUid
 
+	implicitHeight: controlButton.y + controlButton.height + Theme.geometry_controlCard_contentMargins
 	icon.source: "qrc:/images/generator.svg"
 	title.text: CommonWords.generator
 	status.text: generator.stateText
@@ -25,8 +26,7 @@ ControlCard {
 		anchors {
 			right: parent.right
 			rightMargin: Theme.geometry_controlCard_contentMargins
-			top: parent.status.top
-			topMargin: parent.status.font.pixelSize - fontSize
+			baseline: parent.status.baseline
 		}
 		generator: generator
 	}
@@ -64,17 +64,8 @@ ControlCard {
 		checked: generator.autoStart
 		writeAccessLevel: VenusOS.User_AccessType_User
 		flat: true
-		bottomContent.children: [
-			PrimaryListLabel {
-				//% "Start and stop the generator based on the configured autostart conditions."
-				text: qsTrId("controlcard_generator_autostart_conditions")
-				color: Theme.color_font_secondary
-				font.pixelSize: Theme.font_size_caption
-				topPadding: 0
-				leftPadding: autostartSwitch.leftPadding
-				rightPadding: autostartSwitch.rightPadding
-			}
-		]
+		//% "Start and stop the generator based on the configured autostart conditions."
+		caption: qsTrId("controlcard_generator_autostart_conditions")
 
 		onClicked: {
 			if (!checked) {
@@ -100,13 +91,14 @@ ControlCard {
 		id: controlButton
 		anchors {
 			margins: Theme.geometry_controlCard_button_margins
-			bottom: parent.bottom
+			top: Theme.screenSize === Theme.Portrait ? autostartSwitch.bottom : undefined
+			bottom: Theme.screenSize === Theme.Portrait ? undefined : parent.bottom
 			left: parent.left
 			right: parent.right
 		}
 		height: Theme.geometry_card_button_height
 		radius: Theme.geometry_button_radius
-		font.pixelSize: Theme.font_size_body1
+		font.pixelSize: Theme.font_button_size
 		generatorUid: generator.serviceUid
 	}
 }

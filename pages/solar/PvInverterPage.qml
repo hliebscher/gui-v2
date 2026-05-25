@@ -19,26 +19,31 @@ Page {
 	}
 
 	GradientListView {
-		model: VisibleItemModel {
-			BaseListItem {
-				width: parent ? parent.width : 0
-				height: phaseTable.y + phaseTable.height
+		header: ListItem {
+			id: tableListItem
+
+			bottomInset: Theme.geometry_gradientList_spacing
+			topPadding: 0
+			bottomPadding: bottomInset
+			leftPadding: leftInset
+			rightPadding: rightInset
+			contentItem: HorizontalFlickable {
+				implicitHeight: phaseTable.y + phaseTable.height
+				contentWidth: Math.max(Theme.geometry_quantityTable_maximumWidth_small, tableListItem.availableWidth)
 
 				QuantityTableSummary {
 					id: phaseSummary
 
 					width: parent.width
 					columnSpacing: Theme.geometry_quantityTable_horizontalSpacing_small
-					summaryHeaderText: pvInverter.statusCode >= 0 ? CommonWords.status : ""
+					summaryHeaderText: CommonWords.status
 					summaryModel: [
-						{ text: CommonWords.energy, unit: VenusOS.Units_Energy_KiloWattHour },
 						{ text: CommonWords.voltage, unit: VenusOS.Units_Volt_AC },
 						{ text: CommonWords.current_amps, unit: VenusOS.Units_Amp },
 						{ text: CommonWords.power_watts, unit: VenusOS.Units_Watt }
 					]
 					bodyHeaderText: VenusOS.pvInverter_statusCodeToText(pvInverter.statusCode)
 					bodyModel: QuantityObjectModel {
-						QuantityObject { object: pvInverter; key: "energy"; unit: VenusOS.Units_Energy_KiloWattHour }
 						QuantityObject { object: pvInverter; key: "voltage"; unit: VenusOS.Units_Volt_AC }
 						QuantityObject { object: pvInverter; key: "current"; unit: VenusOS.Units_Amp }
 						QuantityObject { object: pvInverter; key: "power"; unit: VenusOS.Units_Watt }
@@ -52,7 +57,7 @@ Page {
 						top: phaseSummary.bottom
 						topMargin: Theme.geometry_gradientList_spacing
 					}
-					width: phaseSummary.width
+					width: parent.width
 					visible: pvInverter.phases.count > 1
 					metricsFontSize: phaseSummary.metricsFontSize
 					columnSpacing: phaseSummary.columnSpacing
@@ -69,7 +74,6 @@ Page {
 
 						headerText: name
 						model: QuantityObjectModel {
-							QuantityObject { object: tableRow; key: "energy"; unit: VenusOS.Units_Energy_KiloWattHour }
 							QuantityObject { object: tableRow; key: "voltage"; unit: VenusOS.Units_Volt_AC }
 							QuantityObject { object: tableRow; key: "current"; unit: VenusOS.Units_Amp }
 							QuantityObject { object: tableRow; key: "power"; unit: VenusOS.Units_Watt }
@@ -77,7 +81,9 @@ Page {
 					}
 				}
 			}
+		}
 
+		model: VisibleItemModel {
 			ListPvInverterPositionRadioButtonGroup {
 				dataItem.uid: pvInverter.serviceUid + "/Position"
 				preferredVisible: (!positionIsAdjustable.valid || positionIsAdjustable.value === 1) ? dataItem.valid : false
@@ -101,7 +107,7 @@ Page {
 			ListAcInError {
 				text: CommonWords.error
 				bindPrefix: pvInverter.serviceUid
-				secondaryLabel.color: pvInverter.errorCode > 0 ? Theme.color_critical : Theme.color_font_secondary
+				secondaryTextColor: pvInverter.errorCode > 0 ? Theme.color_critical : Theme.color_font_secondary
 			}
 
 			ListNavigation {

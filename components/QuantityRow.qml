@@ -10,8 +10,7 @@ Row {
 	id: root
 
 	property QuantityObjectModel model
-	property bool showFirstSeparator
-	property int fontSize: Theme.font_size_body2
+	property int fontSize: Theme.font_listItem_secondary_size
 	property color valueColor: Theme.color_quantityTable_quantityValue
 	readonly property int count: quantityRepeater.count
 
@@ -21,15 +20,14 @@ Row {
 	property real fixedColumnWidth: NaN // if set, use this for column widths, instead of QuantityTableMetrics
 	property int labelAlignment: tableMode ? Qt.AlignLeft : Qt.AlignHCenter
 
+	// If true and not using fixed column widths, the spacing is added as padding after the last
+	// item, not just between items, to even out the header column sizes. Use this when this is
+	// part of a table with headers.
+	property bool padLastColumn
+
 	readonly property bool _showSeparators: !tableMode
 
-	height: Theme.geometry_listItem_height
 	spacing: Theme.geometry_quantityGroupRow_spacing
-
-	FontMetrics {
-		id: fontMetrics
-		font.pixelSize: root.fontSize
-	}
 
 	Repeater {
 		id: quantityRepeater
@@ -40,24 +38,19 @@ Row {
 
 			required property int index
 			required property QuantityObject quantityObject
-			readonly property real horizontalPadding: root._showSeparators ? Theme.geometry_listItem_content_spacing : 0
-			readonly property bool isFirstColumn: index === 0
 
-			width: !isNaN(root.fixedColumnWidth) ? root.fixedColumnWidth
+			width: root.fixedColumnWidth > 0 ? root.fixedColumnWidth
 				: quantityObject.unit === VenusOS.Units_None ? implicitWidth
-				: quantityMetrics.columnWidth(quantityObject.unit) + horizontalPadding - (isFirstColumn ? 30 : 0)
-
-			height: root.height
-			leftPadding: horizontalPadding
-					+ (verticalSeparator.visible ? verticalSeparator.width : 0)
+				: quantityMetrics.columnWidth(quantityObject.unit)
+						+ (root.padLastColumn && index === root.model.count - 1 ? root.spacing : 0)
+			leftPadding: (verticalSeparator.visible ? Theme.geometry_listItem_separator_width : 0)
 					+ (root._showSeparators ? root.spacing : 0) // offset the space to the previous item
-			rightPadding: horizontalPadding
 			alignment: root.labelAlignment
 			opacity: quantityObject.hidden ? 0 : 1
 			font.pixelSize: root.fontSize
 			value: quantityObject.numberValue
 			unit: quantityObject.unit
-			precision: quantityObject.precision
+			decimals: quantityObject.decimals
 			valueText: unit === VenusOS.Units_PowerFactor ? "PF" : (quantityObject.textValue || quantityInfo.number)
 			unitText: unit === VenusOS.Units_PowerFactor ? (quantityObject.textValue || quantityInfo.number) : quantityInfo.unit
 			valueColor: unit === VenusOS.Units_PowerFactor ? Theme.color_quantityTable_quantityUnit
@@ -71,9 +64,8 @@ Row {
 				id: verticalSeparator
 				anchors.verticalCenter: parent.verticalCenter
 				width: Theme.geometry_listItem_separator_width
-				height: fontMetrics.height
-				visible: root._showSeparators
-						 && (quantityDelegate.index > 0 || root.showFirstSeparator)
+				height: quantityMetrics.height
+				visible: root._showSeparators && quantityDelegate.index > 0
 				color: Theme.color_listItem_separator
 			}
 		}

@@ -1,211 +1,73 @@
 /*
-** Copyright (C) 2023 Victron Energy B.V.
+** Copyright (C) 2026 Victron Energy B.V.
 ** See LICENSE.txt for license information.
 */
 
 import QtQuick
-import QtQuick.Layouts
 import Victron.VenusOS
 
-/* ListItem Visual and Behavioural Rules
-   -------------------------------------
-
-	ListItem provides its own clicked() signal which is emitted by its own ListPressArea.
-	All ListItems and its derivatives are therefore potentially clickable by default and
-	must follow these rules consistently:
-
-	- ListItems shall NEVER have enabled: false; it should always be true.
-	- ListItems may set interactive: true (false by default)
-	- ListItems should set showAccessLevel and/or writeAccessLevel where necessary
-	- ListItems should always activate the default action for the child item when clicked() emitted
-
-	- The internal ListPressArea shall always be clickable, however whether it goes on to
-	  emit ListItem's own clicked() signal depends on the following logic:
-
-	if interactive: true
-
-		if the system is readonly:
-
-			Show a toast saying system is readonly
-			No clicked() signal is emitted on the ListItem
-			The ListPressArea press effect DOES occur
-
-		else if userHasWriteAccess is false:
-
-			Show toast saying you can’t edit it
-			Mo clicked() signal is emitted on the ListItem
-			The ListPressArea press effect DOES occur
-
-		else
-			emit ListItem clicked()
-			The ListPressArea press effect DOES occur
-
-	else // interactive: false
-
-		No clicked() signal is emitted on the ListItem
-		The  ListPressArea press effect DOES NOT occur
+/*
+	A focusable list items, with a background rectangle and key navigation support.
 */
-
-BaseListItem {
+AbstractListItem {
 	id: root
 
-	property alias text: primaryLabel.text
-	property alias textFormat: primaryLabel.textFormat
-	property alias content: content
-	property alias bottomContent: bottomContent
-	property alias bottomContentChildren: bottomContent.children
-	property string caption
-	readonly property alias down: pressArea.containsPress
-	property bool flat: false
-	property int leftPadding: flat ? Theme.geometry_listItem_flat_content_horizontalMargin : Theme.geometry_listItem_content_horizontalMargin
-	property int rightPadding: flat ? Theme.geometry_listItem_flat_content_horizontalMargin : Theme.geometry_listItem_content_horizontalMargin
+	readonly property real horizontalContentPadding: flat
+			? Theme.geometry_listItem_flat_content_horizontalMargin
+			: Theme.geometry_listItem_content_horizontalMargin
 
-	property int showAccessLevel: VenusOS.User_AccessType_User
-	property int writeAccessLevel: VenusOS.User_AccessType_Installer
-	readonly property bool userHasWriteAccess: Global.systemSettings.canAccess(writeAccessLevel)
-	readonly property bool userHasReadAccess: Global.systemSettings.canAccess(showAccessLevel)
+	// The default format for text in the item. Defaults to AutoText, same as for QtQuick Text.
+	property int textFormat: Text.AutoText
 
-	readonly property alias primaryLabel: primaryLabel
-	readonly property int availableWidth: width - leftPadding - rightPadding - content.spacing
-	property int maximumContentWidth: availableWidth * 0.7
-	property int bottomContentSizeMode: content.height > primaryLabel.height
-				? VenusOS.ListItem_BottomContentSizeMode_Compact
-				: VenusOS.ListItem_BottomContentSizeMode_Stretch
+	// If true, the default background is hidden.
+	property bool flat
 
-	property int toast
+	// True if this item leads to a sub-page when clicked.
+	property bool hasSubMenu
 
-	property bool interactive: false
-	property bool pressAreaEnabled: true
-	readonly property bool clickable: enabled && interactive && userHasWriteAccess
+	// Use left/rightInset to provide a gap between the page edge and the list item. Ideally would
+	// use the parent Flickable left/rightMargin to do this, but the gap changes when switching
+	// between portrait/landscape, and due to QTBUG-144841, dynamic left/rightMargin changes have no
+	// effect on list item geometries.
+	// Use zero inset when flat=true and the background is hidden (e.g. in control cards).
+	leftInset: flat ? 0 : Theme.geometry_page_content_horizontalMargin
+	rightInset: flat ? 0 : Theme.geometry_page_content_horizontalMargin
+	leftPadding: leftInset + horizontalContentPadding
+	rightPadding: rightInset + horizontalContentPadding
+	topPadding: topInset + Theme.geometry_listItem_content_verticalMargin
+	bottomPadding: bottomInset + Theme.geometry_listItem_content_verticalMargin
 
-	property color indicatorColor: Qt.rgba(0,0,0,0) // fully transparent by default.
+	implicitWidth: parent?.width ?? Theme.geometry_listItem_width
+	implicitHeight: effectiveVisible ? Math.max(
+			implicitBackgroundHeight + topInset + bottomInset,
+			implicitContentHeight + topPadding + bottomPadding) : 0
+	spacing: Theme.geometry_listItem_content_spacing
 
-	signal clicked()
-
-	function activate() {
-		if (root.interactive) {
-			// Issue #1964: userHasWriteAccess is ignored for ListNavigation
-			if (root.__is_venus_gui_list_navigation__ === true || checkWriteAccessLevel()) {
-				root.clicked()
-			}
-		}
-	}
-
-	function checkWriteAccessLevel() {
-		if (root.userHasWriteAccess) {
-			return true
-		} else {
-			if (root.toast) {
-				ToastModel.requestClose(pressArea.toast)
-			}
-			//% "Setting locked for access level"
-			root.toast = Global.showToastNotification(VenusOS.Notification_Info, qsTrId("listItem_no_access"))
-			return false
-		}
-	}
-
-	effectiveVisible: preferredVisible && userHasReadAccess
+	// By default, the item is visible if preferredVisible=true.
+	effectiveVisible: preferredVisible
 	visible: effectiveVisible
-	implicitHeight: effectiveVisible ? contentLayout.implicitHeight : 0
-	implicitWidth: parent ? parent.width : 0
-	background.visible: !root.flat
 
-	Keys.onSpacePressed: activate()
+	// Allow item to receive focus within its focus scope.
+	focus: true
+
+	// Allow Utils.acceptsKeyNavigation() to accept moving focus to this item.
+	focusPolicy: effectiveVisible ? Qt.TabFocus : Qt.NoFocus
+
+	// Set the default font for control text.
+	font.pixelSize: flat ? Theme.font_listItem_flat_primary_size_flat : Theme.font_listItem_primary_size
+	font.family: Global.fontFamily
+
+	// Provide key navigation between list items.
+	KeyNavigationHighlight.active: root.activeFocus
+	KeyNavigationHighlight.topMargin: topInset
+	KeyNavigationHighlight.bottomMargin: bottomInset
+	KeyNavigationHighlight.leftMargin: leftInset
+	KeyNavigationHighlight.rightMargin: rightInset
 	Keys.enabled: Global.keyNavigationEnabled
 
-
-	Connections {
-		target: ToastModel
-		function onDismissRequested(modelId) {
-			if (root.toast === modelId) {
-				root.toast = 0
-			}
-		}
-		function onCloseRequested(modelId) {
-			if (root.toast === modelId) {
-				root.toast = 0
-			}
-		}
-		function onRemoved(modelId) {
-			if (root.toast === modelId) {
-				root.toast = 0
-			}
-		}
-	}
-
-	// Show thin colored indicator on left side if settings is only visible to super/service users
-	// Also show the indicator for list items from gui plugins.
-	Rectangle {
-		visible: color.a > 0.0
-		height: parent.height
-		width: Theme.geometry_listItem_radius
-		topLeftRadius: Theme.geometry_listItem_radius
-		bottomLeftRadius: Theme.geometry_listItem_radius
-		color: root.showAccessLevel >= VenusOS.User_AccessType_SuperUser
-			? Theme.color_listItem_highAccessLevel : root.indicatorColor
-	}
-
-	ListPressArea {
-		id: pressArea
-		anchors.fill: parent
-		radius: root.background.radius
-		enabled: root.pressAreaEnabled
-		effectEnabled: root.interactive
-		onClicked: root.activate()
-	}
-
-	GridLayout {
-		id: contentLayout
-
-		width: parent.width
-		anchors.verticalCenter: parent.verticalCenter
-		columns: 2
-		columnSpacing: Theme.geometry_listItem_content_spacing
-		rowSpacing: 0
-
-		Label {
-			id: primaryLabel
-
-			Layout.topMargin: Theme.geometry_listItem_content_verticalMargin
-			Layout.leftMargin: root.leftPadding
-			Layout.fillWidth: true
-			Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-			font.pixelSize: flat ? Theme.font_size_body1 : Theme.font_size_body2
-			wrapMode: Text.Wrap
-		}
-
-		Row {
-			id: content
-
-			// The topMargin ensures the content is vertically aligned with primaryLabel when the
-			// content height is small and there is no bottom content.
-			Layout.topMargin: height <= primaryLabel.height ? Theme.geometry_listItem_content_verticalMargin : 0
-			Layout.rightMargin: root.rightPadding
-			Layout.maximumWidth: root.maximumContentWidth
-			Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-			Layout.rowSpan: root.bottomContentSizeMode === VenusOS.ListItem_BottomContentSizeMode_Stretch ? 1 : 2
-			spacing: Theme.geometry_listItem_content_spacing
-		}
-
-		Column {
-			id: bottomContent
-
-			Layout.fillWidth: true
-			Layout.columnSpan: root.bottomContentSizeMode === VenusOS.ListItem_BottomContentSizeMode_Stretch ? 2 : 1
-			Layout.topMargin: height > 0 ? Theme.geometry_listItem_content_verticalMargin / 2 : 0
-			Layout.bottomMargin: Theme.geometry_listItem_content_verticalMargin
-
-			Label {
-				width: parent.width
-				visible: text !== ""
-				topPadding: 0
-				bottomPadding: 0
-				leftPadding: Theme.geometry_listItem_content_horizontalMargin
-				rightPadding: Theme.geometry_listItem_content_horizontalMargin
-				wrapMode: Text.Wrap
-				color: Theme.color_font_secondary
-				text: root.caption
-			}
-		}
+	background: ListItemBackground {
+		implicitWidth: Theme.geometry_listItem_width
+		implicitHeight: Theme.geometry_listItem_height
+		visible: !root.flat
 	}
 }

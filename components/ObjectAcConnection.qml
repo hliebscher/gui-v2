@@ -12,6 +12,7 @@ QtObject {
 	property string bindPrefix
 	property string powerKey: "Power"
 	property string currentKey: "Current"
+	property bool updateOnLoad
 	readonly property alias phaseCount: _phases.phaseCount
 
 	readonly property VeQuickItem powerL1: VeQuickItem {
@@ -65,10 +66,11 @@ QtObject {
 	// changes too often on system with more than one phase
 	readonly property Timer _totalPowerTimer: Timer {
 		interval: 1000
-		running: BackendConnection.applicationVisible && root.hasPower
+		running: root.hasPower && Global.timersEnabled
 		repeat: true
+		triggeredOnStart: root.updateOnLoad
 		onTriggered: {
-			_power = (powerL1.value || 0) + (powerL2.value || 0) + (powerL3.value || 0)
+			root._power = (root.powerL1.value || 0) + (root.powerL2.value || 0) + (root.powerL3.value || 0)
 		}
 	}
 

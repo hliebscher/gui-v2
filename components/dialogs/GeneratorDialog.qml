@@ -36,13 +36,11 @@ ModalDialog {
 
 	title: CommonWords.generator
 
-	acceptButton.background: AcceptButtonBackground {
+	acceptButtonBackground: AcceptButtonBackground {
 		id: acceptButtonBackground
 
-		width: root.acceptButton.width
-		height: root.acceptButton.height
-		color: root.finalGeneratorState === VenusOS.Generators_State_Stopped ? Theme.color_dimRed : Theme.color_dimGreen
-		secondaryColor: root.finalGeneratorState === VenusOS.Generators_State_Stopped ? Theme.color_red : Theme.color_green
+		color: root.generatorState === VenusOS.Generators_State_Stopped ? Theme.color_dimGreen : Theme.color_dimRed
+		secondaryColor: root.generatorState === VenusOS.Generators_State_Stopped ? Theme.color_green : Theme.color_red
 
 		states: [
 			// The state where Start/Stop has not been clicked, or it was clicked and then the
@@ -56,6 +54,9 @@ ModalDialog {
 						return true
 					}
 					tryAccept: function() {
+						// Break the binding so that the color does not change later.
+						acceptButtonBackground.color = acceptButtonBackground.color
+
 						// Instead of accepting and closing the dialog, start the color animation
 						// and see if user wants to cancel the start/stop action.
 						acceptButtonBackground.state = "acceptAnimationRunning"
@@ -82,13 +83,14 @@ ModalDialog {
 				}
 				PropertyChanges {
 					target: root
-					canAccept: false
+					tryAccept: function() {
+						return false
+					}
 					tryReject: function() {
 						// If user clicks reject button, restore the default dialog state, instead
 						// of closing the dialog.
 						acceptButtonBackground.animating = false
 						acceptButtonBackground.state = "default"
-						root.rejectButton.focus = true // accept button is now disabled, so focus a different button.
 						return false
 					}
 				}
@@ -110,7 +112,9 @@ ModalDialog {
 				// should be almost immediate.)
 				PropertyChanges {
 					target: root
-					canAccept: false
+					tryAccept: function() {
+						return false
+					}
 					tryReject: function() {
 						return true
 					}

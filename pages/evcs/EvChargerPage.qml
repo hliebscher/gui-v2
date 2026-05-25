@@ -17,10 +17,17 @@ DevicePage {
 
 	serviceUid: bindPrefix
 
-	settingsModel: VisibleItemModel {
-		BaseListItem {
-			width: parent ? parent.width : 0
-			height: phaseTable.y + phaseTable.height
+	settingsHeader: ListItem {
+		id: tableListItem
+
+		bottomInset: Theme.geometry_gradientList_spacing
+		topPadding: 0
+		bottomPadding: bottomInset
+		leftPadding: leftInset
+		rightPadding: rightInset
+		contentItem: HorizontalFlickable {
+			implicitHeight: phaseTable.y + phaseTable.height
+			contentWidth: Math.max(Theme.geometry_quantityTable_maximumWidth_large, tableListItem.availableWidth)
 
 			QuantityTableSummary {
 				id: chargerSummary
@@ -63,7 +70,7 @@ DevicePage {
 				id: phaseTable
 
 				anchors.top: chargerSummary.bottom
-				width: chargerSummary.width
+				width: parent.width
 				columnSpacing: chargerSummary.columnSpacing
 				equalWidthColumns: true
 				model: phaseModel.count > 1 ? phaseModel : null
@@ -114,7 +121,9 @@ DevicePage {
 				}
 			}
 		}
+	}
 
+	settingsModel: VisibleItemModel {
 		ListRadioButtonGroup {
 			id: chargeMode
 			//% "Charge mode"

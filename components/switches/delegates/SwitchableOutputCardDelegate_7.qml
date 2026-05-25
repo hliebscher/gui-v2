@@ -14,7 +14,6 @@ FocusScope {
 
 	required property SwitchableOutput switchableOutput
 
-	enabled: root.switchableOutput.status !== VenusOS.SwitchableOutput_Status_Disabled
 	focus: true
 	KeyNavigationHighlight.active: activeFocus
 
@@ -49,14 +48,7 @@ FocusScope {
 			rightMargin: Theme.geometry_controlCard_button_margins
 		}
 		switchableOutput: root.switchableOutput
-		secondaryTitle: quantityInfo.number + (quantityInfo.unit || root.switchableOutput.unitText)
-
-		QuantityInfo {
-			id: quantityInfo
-			value: slider.value // already in the display unit
-			unitType: Global.systemSettings.toPreferredUnit(root.switchableOutput.unitType)
-			precision: root.switchableOutput.decimals
-		}
+		quantityValue: slider.value // already in the display unit
 	}
 
 	SwitchableOutputSlider {

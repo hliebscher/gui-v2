@@ -41,8 +41,13 @@
     "color_button_off_background": "color_dimBlue",
     "color_button_on_background_disabled": "color_gray3",
     "color_button_off_background_disabled": "#333333",
+    "color_button_on_background_modified": "#482D0E",
+    "color_button_on_border_modified": "color_orange",
     "color_button_on_text_disabled": "color_gray6",
     "color_button_off_text_disabled": "color_gray4",
+
+    "color_roundCloseButton_background": "color_gray3",
+    "color_roundCloseButton_foreground": "color_gray7",
 
     "color_switch_status_disabled": "#333333",
 
@@ -51,6 +56,7 @@
     "color_card_separator": "color_gray2",
 
     "color_modalDialog_border": "color_gray2",
+    "color_modalDialog_grabber_background": "#333333",
 
     "color_colorWheelDialog_preset_empty_button_border": "#504F4B",
     "color_colorWheelDialog_preset_empty_button_border_disabled": "color_gray2",
@@ -58,6 +64,11 @@
     "color_colorWheelDialog_preset_empty_button_background": "#1D1D1B",
     "color_colorWheelDialog_mode_button_background": "#1D1D1B",
     "color_colorWheelDialog_mode_button_separator": "color_gray2",
+
+    "color_droopGraph_axis_line": "color_gray5",
+    "color_droopGraph_gradient_centre": "color_blue",
+    "color_droopGraph_gradient_edge": "color_orange",
+    "color_droopGraph_operationPoint_guidelines": "color_white",
 
     "color_radioButton_indicator_on": "color_ok",
     "color_radioButton_indicator_off": "color_gray3",
@@ -70,6 +81,10 @@
     "color_listItem_separator": "color_gray4",
     "color_listItem_secondaryText": "color_gray5",
     "color_listItem_highAccessLevel": "color_darkOrange",
+
+    "color_valueIndicator_background": "#1D1D1B",
+    "color_valueIndicator_slider_handle": "#1D1D1B",
+    "color_valueIndicator_slider_handle_border": "#FAF9F5",
 
     "color_scrollBar_bar": "color_gray2",
 
@@ -137,8 +152,11 @@
     "color_briefPage_circularGauge_shine": "#BBFFFFFF",
     "color_briefPage_sidePanel_loadGraph_dotColor": "color_gray3",
 
+    "color_environmentGaugePanel_header": "#1D1D1B",
+    "color_environmentGaugePanel_background": "color_gray1",
+
     "color_levelsPage_tankIcon": "color_white",
-    "color_levelsPage_tank_title": "color_black",
+    "color_levelsPage_tank_title": "color_gray1",
     "color_levelsPage_fallingGauge_alarmIcon": "color_red",
     "color_levelsPage_risingGauge_alarmIcon": "color_white",
     "color_levelsPage_gauge_backgroundColor": "color_gray1",

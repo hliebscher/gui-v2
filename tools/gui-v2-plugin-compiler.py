@@ -148,7 +148,7 @@ if __name__ == '__main__':
         description='Compiles plugins for gui-v2 into json files')
 
     parser.add_argument('--rcc', nargs='?', default='') # debugging only...
-    parser.add_argument('-n', '--name', required=True, help='The name of your plugin')
+    parser.add_argument('-n', '--name', default=os.path.basename(os.getcwd()), help='The name of your plugin')
     parser.add_argument('-v', '--version', default='1.0', help='The version of your plugin')
     parser.add_argument('-z', '--min-required-version', default='', help='The minimum gui-v2 version required for the plugin')
     parser.add_argument('-x', '--max-required-version', default='', help='The maximum gui-v2 version compatible with this plugin')
@@ -160,6 +160,10 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--filter-empty-sources', action='store_true', help='Strip empty source entries from .ts files')
 
     args = parser.parse_args()
+
+    if args.name != os.path.basename(os.getcwd()):
+        print("\n\nERROR: plugin name does not match working directory name!")
+        sys.exit(1)
 
     imageFiles = collect_filenames('.', '.svg')
     imageFiles += collect_filenames('.', '.png')
@@ -195,7 +199,10 @@ if __name__ == '__main__':
     integrations = []
     if len(args.settings) > 0:
         if not args.settings.endswith('.qml'):
-            print("Invalid settings page specified, must be a .qml file")
+            print("\n\nERROR: Invalid settings page specified, must be a .qml file")
+            sys.exit(1)
+        if not os.path.exists(args.settings):
+            print(f"\n\nERROR: Settings page \"{args.settings}\" not found in current directory ({os.path.dirname(os.path.abspath(args.settings))})")
             sys.exit(1)
         settingsIntegration = {
             "type": 1,
@@ -206,13 +213,16 @@ if __name__ == '__main__':
         if len(args.devicelist) > 0:
             for integration in args.devicelist:
                 if len(integration) != 3:
-                    print("Invalid devicelist triplet!")
+                    print("\n\nERROR: Invalid devicelist triplet!")
                     sys.exit(1)
                 if not integration[0].startswith(('0x', '0X')):
-                    print("Invalid product id specified in devicelist triplet, must be a hex string starting with 0x")
+                    print("\n\nERROR: Invalid product id specified in devicelist triplet, must be a hex string starting with 0x")
                     sys.exit(1)
                 if not integration[1].endswith('.qml'):
-                    print("Invalid settings page specified in devicelist triplet, must be a .qml file")
+                    print("\n\nERROR: Invalid settings page specified in devicelist triplet, must be a .qml file")
+                    sys.exit(1)
+                if not os.path.exists(integration[1]):
+                    print(f"\n\nERROR: Settings page \"{integration[1]}\" not found in current directory ({os.path.dirname(os.path.abspath(integration[1]))})")
                     sys.exit(1)
                 devicelistIntegration = {
                     "type": 2,
@@ -233,4 +243,3 @@ if __name__ == '__main__':
 
     print("--- done!")
     sys.exit(0)
-

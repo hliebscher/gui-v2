@@ -57,7 +57,7 @@ Page {
 
 			ListText {
 				text: CommonWords.state
-				secondaryText: Global.system.systemStateToText(dataItem.value)
+				secondaryText: VenusOS.system_stateToText(dataItem.value)
 				dataItem.uid: root.serviceUid + "/State"
 			}
 
@@ -80,7 +80,7 @@ Page {
 				}
 			}
 
-			BaseListLoader {
+			ListItemLoader {
 				width: parent ? parent.width : 0
 				sourceComponent: root.serviceType === "inverter" ? inverterAcOutQuantityGroup
 						: root.serviceType === "vebus" ? veBusAcIODisplay
@@ -139,6 +139,17 @@ Page {
 				onClicked: {
 					Global.pageManager.pushPage("/pages/settings/devicelist/rs/PageRsSystemEss.qml",
 							{ "title": text, "bindPrefix": root.serviceUid })
+				}
+			}
+
+			ListNavigation {
+				text: qsTrId("vebus_device_page_microgrid_parameters")
+				preferredVisible: mode.valid
+				onClicked: Global.pageManager.pushPage("/pages/vebusdevice/PageMicrogrid.qml", { "bindPrefix": root.serviceUid })
+
+				VeQuickItem {
+					id: mode
+					uid: root.serviceUid + "/MicroGrid/Mode"
 				}
 			}
 

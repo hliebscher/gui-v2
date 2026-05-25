@@ -10,6 +10,7 @@ set(VictronMock_QML_MODULE_SOURCES
     data/mock/MotorDrivesImpl.qml
     data/mock/MockNotification.qml
     data/mock/NotificationsImpl.qml
+    data/mock/PlatformImpl.qml
     data/mock/SolarInputsImpl.qml
     data/mock/SystemAcImpl.qml
     data/mock/SystemDcImpl.qml
@@ -34,6 +35,7 @@ SET(VictronMock_QML_MODULE_RESOURCES
     data/mock/conf/services/dcsystem2.json
     data/mock/conf/services/dse-genset.json
     data/mock/conf/services/digitalinput-alarm.json
+    data/mock/conf/services/eebus.json
     data/mock/conf/services/em-acload.json
     data/mock/conf/services/em-evcharger-input.json
     data/mock/conf/services/em-evcharger-output.json
@@ -63,6 +65,7 @@ SET(VictronMock_QML_MODULE_RESOURCES
     data/mock/conf/services/network-wifi-and-ethernet.json
     data/mock/conf/services/notifications-alarm.json
     data/mock/conf/services/notifications-no-alarm.json
+    data/mock/conf/services/opportunityloads.json
     data/mock/conf/services/orionxs-alternator.json
     data/mock/conf/services/orionxs-dcdc.json
     data/mock/conf/services/phoenix-smart-charger.json

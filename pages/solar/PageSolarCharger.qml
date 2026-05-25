@@ -83,7 +83,7 @@ DevicePage {
 
 		ListText {
 			text: CommonWords.state
-			secondaryText: Global.system.systemStateToText(dataItem.value)
+			secondaryText: VenusOS.system_stateToText(dataItem.value)
 			dataItem.uid: root.bindPrefix + "/State"
 		}
 
@@ -130,14 +130,14 @@ DevicePage {
 			unit: VenusOS.Units_Watt
 		}
 
-		BaseListItem {
-			width: parent ? parent.width : 0
-			height: trackerTable.y + trackerTable.height
+		ListItem {
+			topPadding: 0
+			bottomPadding: bottomInset
+			leftPadding: leftInset
+			rightPadding: rightInset
 			preferredVisible: root.trackerCount > 1
 
-			QuantityTable {
-				id: trackerTable
-				width: parent.width
+			contentItem: QuantityTable {
 				model: root.trackerCount > 1 ? root.trackerCount : 0
 				header: count > 0 ? tableHeaderComponent : null
 				delegate: QuantityTable.TableRow {

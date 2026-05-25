@@ -15,9 +15,7 @@ FocusScope {
 	required property SwitchableOutput switchableOutput
 	property QtObject _selectorDialog
 
-	enabled: root.switchableOutput.status !== VenusOS.SwitchableOutput_Status_Disabled
 	focus: true
-
 	KeyNavigationHighlight.active: activeFocus && !sliderScope.activeFocus && !slider.activeFocus && !colorButton.activeFocus
 
 	// When Space is pressed: focus the slider. From there, user can press Space again to enter
@@ -51,6 +49,8 @@ FocusScope {
 			rightMargin: Theme.geometry_controlCard_button_margins
 		}
 		switchableOutput: root.switchableOutput
+		quantityValue: currentColorDimmerData.color.hsvValue * 100 // convert from 0-1 range to 0-100%
+		quantityUnit: VenusOS.Units_Percentage
 	}
 
 	FocusScope {
@@ -134,7 +134,7 @@ FocusScope {
 			topInset: Theme.geometry_button_touch_verticalMargin
 			bottomInset: Theme.geometry_button_touch_verticalMargin
 			leftInset: Theme.geometry_controlCard_button_margins
-			rightInset: Theme.geometry_switchableoutput_spacing / 2
+			rightInset: Theme.geometry_iochannel_spacing / 2
 			topPadding: topInset
 			bottomPadding: bottomInset
 			rightPadding: rightInset
@@ -172,7 +172,7 @@ FocusScope {
 					   1.0, 1.0)
 
 		topInset: Theme.geometry_button_touch_verticalMargin
-		leftInset: Theme.geometry_switchableoutput_spacing / 2
+		leftInset: Theme.geometry_iochannel_spacing / 2
 		rightInset: Theme.geometry_controlCard_button_margins
 		bottomInset: Theme.geometry_button_touch_verticalMargin
 

@@ -4,6 +4,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
@@ -66,22 +67,67 @@ Page {
 				}
 			}
 
-			ListPasswordField {
-				//% "Access Point password"
-				text: qsTrId("settings_wifi_access_point_password")
-				writeAccessLevel: VenusOS.User_AccessType_User
+			ListSetting {
+				id: accessPointPassword
+
+				topPadding: Theme.screenSize === Theme.Portrait ? topInset + Theme.geometry_listItem_content_verticalMargin : 0
+				bottomPadding: Theme.screenSize === Theme.Portrait ? topInset + Theme.geometry_listItem_content_verticalMargin : 0
 				preferredVisible: accessPoint.valid
-				echoMode: TextInput.Normal // password is shown on entry, but server will return it as obfuscated asterisks
-				dataItem.uid: Global.systemSettings.serviceUid + "/Settings/Services/AccessPointPassword"
-				validateInput: function() {
-					const length = textField.text.length
-					if ((length > 0 && length < 10) || length > 63) {
-						//% "Password length must be either 0 or between 10 and 63 characters long"
-						return Utils.validationResult(VenusOS.InputValidation_Result_Error, qsTrId("page_settings_wifi_invalid_password"))
+
+				contentItem: GridLayout {
+					columns: Theme.screenSize === Theme.Portrait ? 2 : 3
+					rows: Theme.screenSize === Theme.Portrait ? 2 : 1
+					columnSpacing: accessPointPassword.spacing
+					rowSpacing: Theme.geometry_listItem_content_verticalMargin // not needed, there is padding below the primary label already
+
+					Label {
+						//% "Access Point password"
+						text: qsTrId("settings_wifi_access_point_password")
+						textFormat: accessPointPassword.textFormat
+						font: accessPointPassword.font
+						wrapMode: Text.Wrap
+
+						Layout.fillWidth: true
+						Layout.columnSpan: Theme.screenSize === Theme.Portrait ? 2 : 1
 					}
-					//% "Password updated"
-					return Utils.validationResult(VenusOS.Notification_Info, qsTrId("page_settings_wifi_password_updated"))
+
+					TextValidationField {
+						id: accessPointPasswordField
+
+						text: accessPointDataItem.value ?? ""
+						validateOnFocusLost: false // don't validate until 'Confirm' is clicked
+						placeholderText: CommonWords.enter_password
+						flickable: settingsListView
+						validateInput: function() {
+							const length = text.length
+							if ((length > 0 && length < 10) || length > 63) {
+								//% "Password length must be either 0 or between 10 and 63 characters long"
+								return Utils.validationResult(VenusOS.InputValidation_Result_Error, qsTrId("page_settings_wifi_invalid_password"))
+							}
+							//% "Password updated"
+							return Utils.validationResult(VenusOS.Notification_Info, qsTrId("page_settings_wifi_password_updated"))
+						}
+						onInputValidated: {
+							accessPointDataItem.setValue(text)
+						}
+
+						Layout.fillWidth: true
+						Layout.minimumWidth: Theme.geometry_listItem_textField_minimumWidth
+						Layout.maximumWidth: Theme.screenSize === Theme.Portrait ? -1 : Theme.geometry_listItem_textField_maximumWidth
+
+						VeQuickItem {
+							id: accessPointDataItem
+						}
+					}
+
+					ListItemButton {
+						text: CommonWords.confirm
+						focusPolicy: Qt.NoFocus
+						onClicked: accessPointPasswordField.runValidation(VenusOS.InputValidation_ValidateAndSave)
+					}
 				}
+
+				Keys.onSpacePressed: accessPointPasswordField.focus = true
 			}
 
 			SettingsListHeader {
@@ -119,12 +165,14 @@ Page {
 			//% "[Hidden]"
 			text: model.network ? model.network : qsTrId("settings_tcpip_hidden")
 			secondaryText: Utils.connmanServiceState(model.state)
-			primaryLabel.leftPadding: Theme.geometry_icon_size_medium + Theme.geometry_listItem_content_spacing
+
+			// Move the text and arrow icon to the right of the checkmark icon space
+			leftPadding: leftInset + 2*spacing + Theme.geometry_icon_size_medium
 
 			CP.ColorImage {
-				parent: accessPointDelegate.primaryLabel
 				anchors {
 					left: parent.left
+					leftMargin: accessPointDelegate.leftInset + accessPointDelegate.spacing
 					verticalCenter: parent.verticalCenter
 				}
 				source: "qrc:/images/icon_checkmark_32.svg"
@@ -150,7 +198,7 @@ Page {
 	Timer {
 		id: scanTimer
 		interval: 10000
-		running: root.animationEnabled
+		running: Global.timersEnabled
 		repeat: true
 		triggeredOnStart: true
 		onTriggered: scanItem.setValue(1)

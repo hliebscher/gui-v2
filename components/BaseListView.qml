@@ -20,6 +20,30 @@ import Victron.VenusOS
 ListView {
 	id: root
 
+	readonly property KeyNavigationListHelper __keyNavHelper: keyNavHelper
+
+	function pageDown() {
+		if ((orientation === Qt.Vertical && atYEnd) || (orientation === Qt.Horizontal && atXEnd)) {
+			return false
+		}
+
+		forceLayout()
+		const prevContentPos = _contentPos()
+		if (orientation === Qt.Vertical) {
+			contentY += height
+		} else {
+			contentX += width
+		}
+		returnToBounds()
+		forceLayout()
+
+		return prevContentPos !== _contentPos()
+	}
+
+	function _contentPos() {
+		return orientation === Qt.Vertical ? contentY : contentX
+	}
+
 	width: parent?.width ?? 0
 	height: parent?.height ?? 0
 	boundsBehavior: Flickable.StopAtBounds

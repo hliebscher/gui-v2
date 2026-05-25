@@ -5,10 +5,9 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
-BaseListItem {
+ListItem {
 	id: root
 
 	required property string name
@@ -22,10 +21,11 @@ BaseListItem {
 
 	property bool unitAmps: false
 
-	signal clicked
+	readonly property string _statusLabelText: statusText.length === 0 ? ""
+			//% "Status: %1"
+			: qsTrId("load_delegate_status").arg(statusText)
 
-	width: parent?.width ?? 0
-	height: Theme.geometry_loadListPage_item_height
+	signal clicked
 
 	component QuantityColumn : Column {
 		property alias title: quantityTitle.text
@@ -49,68 +49,101 @@ BaseListItem {
 		}
 	}
 
-	RowLayout {
-		width: parent.width
-		height: parent.height
-		spacing: 0
+	hasSubMenu: true
 
-		Column {
-			Layout.fillWidth: true
-			Layout.leftMargin: Theme.geometry_listItem_content_horizontalMargin
-			Layout.rightMargin: root.columnSpacing
-			spacing: Theme.geometry_batteryListPage_item_verticalSpacing
-
-			Label {
-				elide: Text.ElideRight
-				width: parent.width
-				text: root.name
-				font.pixelSize: Theme.font_size_body2
-			}
-
-			Label {
-				font.pixelSize: Theme.font_size_body1
-				color: Theme.color_listItem_secondaryText
-				text: root.statusText.length > 0
-					//% "Status: %1"
-					? qsTrId("load_delegate_status").arg(root.statusText)
-					: ""
-			}
-		}
+	// Landscape layout:
+	// | Name            | "Temperature" | "Total power" | Forward |
+	// | Status          | Temperature   | Power         |   icon  |
+	//
+	// Portrait layout:
+	// | Name       | Temperature | Power | Forward |
+	// | Status                           |   icon  |
+	contentItem: Item {
+		implicitWidth: Theme.geometry_listItem_width
+		implicitHeight: layoutLoader.height
 
 		Loader {
-			Layout.rightMargin: root.columnSpacing
-			active: !isNaN(root.temperature)
-			sourceComponent: QuantityColumn {
-				title: CommonWords.temperature
-				value: root.temperature
-				unit: Global.systemSettings.temperatureUnit
+			id: layoutLoader
+			width: parent.width - forwardIcon.width
+			sourceComponent: Theme.screenSize === Theme.Portrait ? portraitLayoutComponent : landscapeLayoutComponent
+		}
+
+		ForwardIcon {
+			id: forwardIcon
+			anchors {
+				verticalCenter: parent.verticalCenter
+				right: parent.right
 			}
 		}
 
-		QuantityColumn {
-			title: root._unitAmps ? CommonWords.current_amps : CommonWords.total_power
-			value: root._unitAmps ? root.current : root.power
-			unit:  root._unitAmps ? VenusOS.Units_Amp : VenusOS.Units_Watt
+		// In portrait, just show the quantity values, without headers.
+		Component {
+			id: portraitLayoutComponent
+
+			TwoLabelQuantityRowLayout {
+				primaryText: root.name
+				primaryLabel.textFormat: root.textFormat
+				primaryLabel.font: root.font
+				model: QuantityObjectModel {
+					filterType: QuantityObjectModel.HasValue
+					QuantityObject { object: root; key: "temperature"; unit: Global.systemSettings.temperatureUnit }
+					QuantityObject { object: root; key: root._unitAmps ? "current" : "power"; unit: root._unitAmps ? VenusOS.Units_Amp : VenusOS.Units_Watt }
+				}
+				captionText: root._statusLabelText
+			}
 		}
 
-		CP.ColorImage {
-			Layout.rightMargin: Theme.geometry_listItem_content_horizontalMargin
-			source: "qrc:/images/icon_arrow_32.svg"
-			rotation: 180
-			color: pressArea.containsPress ? Theme.color_listItem_down_forwardIcon : Theme.color_listItem_forwardIcon
-			opacity: pressArea.enabled ? 1 : 0
+		// In landscape, show headers above each quantity.
+		Component {
+			id: landscapeLayoutComponent
+
+			RowLayout {
+				spacing: 0
+
+				Column {
+					Layout.fillWidth: true
+					Layout.rightMargin: root.columnSpacing
+					spacing: Theme.geometry_batteryListPage_item_verticalSpacing
+
+					Label {
+						elide: Text.ElideRight
+						width: parent.width
+						text: root.name
+						font.pixelSize: Theme.font_size_body2
+					}
+
+					Label {
+						font.pixelSize: Theme.font_size_body1
+						color: Theme.color_listItem_secondaryText
+						text: root._statusLabelText
+					}
+				}
+
+				QuantityColumn {
+					visible: !isNaN(root.temperature)
+					title: CommonWords.temperature
+					value: root.temperature
+					unit: Global.systemSettings.temperatureUnit
+
+					Layout.rightMargin: root.columnSpacing
+				}
+
+				QuantityColumn {
+					title: root._unitAmps ? CommonWords.current_amps : CommonWords.total_power
+					value: root._unitAmps ? root.current : root.power
+					unit:  root._unitAmps ? VenusOS.Units_Amp : VenusOS.Units_Watt
+				}
+			}
 		}
 	}
 
-	Keys.onSpacePressed: pressArea.clicked(null)
-	Keys.onRightPressed: pressArea.clicked(null)
-	Keys.enabled: Global.keyNavigationEnabled
-
-	ListPressArea {
-		id: pressArea
-
-		anchors.fill: parent
-		radius: parent.background.radius
-		onClicked: root.clicked()
+	background: ListItemBackground {
+		ListPressArea {
+			anchors.fill: parent
+			onClicked: root.clicked()
+		}
 	}
+
+	Keys.onSpacePressed: clicked()
+	Keys.onRightPressed: clicked()
 }

@@ -4,74 +4,72 @@
   <context>
     <name/>
     <message id="page_switchable_output_switch_mode_disabled">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="45"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="36"/>
       <source>Disabled</source>
       <translation>已禁用</translation>
     </message>
     <message id="common_words_inverter_overload">
-      <location filename="../../components/CommonWords.qml" line="275"/>
+      <location filename="../../components/CommonWords.qml" line="287"/>
       <source>Inverter overload</source>
       <translation>逆变器过载</translation>
     </message>
-    <message id="common_words_power_watts">
-      <location filename="../../components/CommonWords.qml" line="411"/>
+    <message id="ev_power">
+      <location filename="../../pages/ev/EvPage.qml" line="64"/>
       <source>Power</source>
-      <extracomment>Electric power, as measured in Watts</extracomment>
       <translation>功率</translation>
     </message>
-    <message id="solarchargers_state_off">
-      <location filename="../../src/enums.cpp" line="353"/>
+    <message id="generic_input_label_off">
+      <location filename="../../src/genericinput.cpp" line="112"/>
       <source>Off</source>
       <translation>关</translation>
     </message>
     <message id="common_words_auto">
-      <location filename="../../components/CommonWords.qml" line="80"/>
+      <location filename="../../components/CommonWords.qml" line="83"/>
       <source>Auto</source>
       <translation>自动</translation>
     </message>
     <message id="common_words_high_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="233"/>
+      <location filename="../../components/CommonWords.qml" line="245"/>
       <source>High battery voltage</source>
       <translation>电池电压高</translation>
     </message>
     <message id="overview_widget_inverter_title">
-      <location filename="../../components/widgets/InverterChargerWidget.qml" line="32"/>
+      <location filename="../../components/widgets/InverterChargerWidget.qml" line="33"/>
       <source>Inverter / Charger</source>
       <translation>逆变器/充电器</translation>
     </message>
     <message id="common_words_low_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="284"/>
+      <location filename="../../components/CommonWords.qml" line="296"/>
       <source>Low battery voltage</source>
       <translation>电池电压低</translation>
     </message>
-    <message id="common_words_manual">
-      <location filename="../../components/CommonWords.qml" line="303"/>
+    <message id="switchable_output_function_manual">
+      <location filename="../../src/enums.cpp" line="593"/>
       <source>Manual</source>
       <translation>手动</translation>
     </message>
-    <message id="settings_startpage_none">
-      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="53"/>
+    <message id="pagesettingsboatpage_none">
+      <location filename="../../pages/settings/PageSettingsBoatPage.qml" line="35"/>
       <source>None</source>
       <translation>无</translation>
     </message>
-    <message id="common_words_position_ac">
-      <location filename="../../components/CommonWords.qml" line="418"/>
+    <message id="ev_position">
+      <location filename="../../pages/ev/EvPage.qml" line="141"/>
       <source>Position</source>
-      <extracomment>AC input or output position</extracomment>
       <translation>位置</translation>
     </message>
-    <message id="settings_minmax_speed">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="193"/>
+    <message id="generic_input_primaryLabel_speed">
+      <location filename="../../src/genericinput.cpp" line="173"/>
       <source>Speed</source>
       <translation>速度</translation>
     </message>
     <message id="common_words_state">
-      <location filename="../../components/CommonWords.qml" line="507"/>
+      <location filename="../../components/CommonWords.qml" line="519"/>
       <source>State</source>
       <translation>状态</translation>
     </message>
     <message id="settings_firmware_installing">
-      <location filename="../../components/FirmwareUpdate.qml" line="77"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="114"/>
       <source>Installing %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>正在安装 %1...</translation>
@@ -82,18 +80,12 @@
       <translation>未知错误</translation>
     </message>
     <message id="controlcard_inverter_charger_ess_minimum_soc">
-      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="106"/>
+      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="116"/>
       <source>Minimum SOC</source>
       <translation>最小SOC</translation>
     </message>
-    <message id="settings_radio_button_group_confirm">
-      <location filename="../../components/listitems/ListPasswordField.qml" line="20"/>
-      <source>Confirm</source>
-      <extracomment>Confirm password, and verify it if possible</extracomment>
-      <translation type="unfinished">是的，退订</translation>
-    </message>
-    <message id="settings_radio_button_enter_password">
-      <location filename="../../components/listitems/ListPasswordField.qml" line="27"/>
+    <message id="common_words_enter_password">
+      <location filename="../../components/CommonWords.qml" line="197"/>
       <source>Enter password</source>
       <translation>输入密码</translation>
     </message>
@@ -108,12 +100,12 @@
       <translation>按下查看</translation>
     </message>
     <message id="common_words_grid">
-      <location filename="../../components/CommonWords.qml" line="224"/>
+      <location filename="../../components/CommonWords.qml" line="236"/>
       <source>Grid</source>
       <translation>电网</translation>
     </message>
     <message id="overview_widget_solaryield_title">
-      <location filename="../../components/widgets/SolarYieldWidget.qml" line="26"/>
+      <location filename="../../components/widgets/SolarYieldWidget.qml" line="31"/>
       <source>Solar yield</source>
       <translation>太阳能发电量</translation>
     </message>
@@ -123,22 +115,22 @@
       <translation>外部控制</translation>
     </message>
     <message id="levels_page_tanks">
-      <location filename="../../pages/LevelsPage.qml" line="61"/>
+      <location filename="../../pages/LevelsPage.qml" line="75"/>
       <source>Tanks</source>
       <translation>水箱</translation>
     </message>
     <message id="levels_page_environment">
-      <location filename="../../pages/LevelsPage.qml" line="63"/>
+      <location filename="../../pages/LevelsPage.qml" line="77"/>
       <source>Environment</source>
       <translation>环境</translation>
     </message>
-    <message id="settings_general">
-      <location filename="../../pages/SettingsPage.qml" line="41"/>
+    <message id="page_controllable_loads_preferences_general">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="18"/>
       <source>General</source>
       <translation>通用</translation>
     </message>
     <message id="pagesettingssupportstate_firmware">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="352"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="342"/>
       <source>Firmware</source>
       <translation>固件</translation>
     </message>
@@ -153,17 +145,17 @@
       <translation>DVCC</translation>
     </message>
     <message id="common_words_ess">
-      <location filename="../../components/CommonWords.qml" line="203"/>
+      <location filename="../../components/CommonWords.qml" line="212"/>
       <source>ESS</source>
       <translation>ESS储能系统</translation>
     </message>
     <message id="pagesettingsconnectivity_ethernet">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="18"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="32"/>
       <source>Ethernet</source>
       <translation>以太网</translation>
     </message>
     <message id="pagesettingsconnectivity_wifi">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="28"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="44"/>
       <source>Wi-Fi</source>
       <translation>Wi-Fi</translation>
     </message>
@@ -173,8 +165,8 @@
       <extracomment>GPS units</extracomment>
       <translation>GPS</translation>
     </message>
-    <message id="settings_tank_pump">
-      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="118"/>
+    <message id="switchable_output_function_tankpump">
+      <location filename="../../src/enums.cpp" line="596"/>
       <source>Tank pump</source>
       <translation>水箱泵</translation>
     </message>
@@ -259,7 +251,7 @@
       <translation>当 %1 低于时停止</translation>
     </message>
     <message id="settings_fronius_remove_ip_address">
-      <location filename="../../pages/settings/IpAddressListView.qml" line="53"/>
+      <location filename="../../pages/settings/IpAddressListView.qml" line="85"/>
       <source>Remove IP address?</source>
       <translation>删除 IP 地址？</translation>
     </message>
@@ -278,8 +270,8 @@
       <source>Product</source>
       <translation>产品</translation>
     </message>
-    <message id="page_switchable_output_name">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="18"/>
+    <message id="iochannel_name">
+      <location filename="../../components/listitems/ListIOChannelNameField.qml" line="11"/>
       <source>Name</source>
       <translation>名字</translation>
     </message>
@@ -334,7 +326,7 @@
       <translation>现在运行</translation>
     </message>
     <message id="common_words_manual_start">
-      <location filename="../../components/CommonWords.qml" line="309"/>
+      <location filename="../../components/CommonWords.qml" line="321"/>
       <source>Manual start</source>
       <translation>手动启动</translation>
     </message>
@@ -349,12 +341,12 @@
       <translation>每日运行时间</translation>
     </message>
     <message id="common_words_value_must_be_greater_than_stop_value">
-      <location filename="../../components/CommonWords.qml" line="565"/>
+      <location filename="../../components/CommonWords.qml" line="580"/>
       <source>Value must be greater than stop value</source>
       <translation>数值必须大于停止值</translation>
     </message>
     <message id="common_words_value_must_be_lower_than_start_value">
-      <location filename="../../components/CommonWords.qml" line="568"/>
+      <location filename="../../components/CommonWords.qml" line="583"/>
       <source>Value must be lower than start value</source>
       <translation>数值必须低于启动值</translation>
     </message>
@@ -578,17 +570,17 @@
       <translation>电网设定点</translation>
     </message>
     <message id="settings_ess_debug_ac_in_setpoint">
-      <location filename="../../pages/settings/PageHub4Debug.qml" line="49"/>
+      <location filename="../../pages/settings/PageHub4Debug.qml" line="48"/>
       <source>AC-In setpoint</source>
       <translation>交流输入设定点</translation>
     </message>
     <message id="settings_ess_debug_limits_i">
-      <location filename="../../pages/settings/PageHub4Debug.qml" line="77"/>
+      <location filename="../../pages/settings/PageHub4Debug.qml" line="76"/>
       <source>Limits (I)</source>
       <translation>限值 (I)</translation>
     </message>
     <message id="settings_ess_debug_limits_p">
-      <location filename="../../pages/settings/PageHub4Debug.qml" line="101"/>
+      <location filename="../../pages/settings/PageHub4Debug.qml" line="100"/>
       <source>Limits (P)</source>
       <translation>限值 (P)</translation>
     </message>
@@ -713,7 +705,7 @@
       <translation>正常运行，但无服务（250 kbit/s）</translation>
     </message>
     <message id="common_words_devices">
-      <location filename="../../components/CommonWords.qml" line="166"/>
+      <location filename="../../components/CommonWords.qml" line="172"/>
       <source>Devices</source>
       <translation>设备</translation>
     </message>
@@ -753,17 +745,17 @@
       <translation type="unfinished">按下查看</translation>
     </message>
     <message id="settings_canbus_unique_id_conflict">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="141"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="132"/>
       <source>There is another device connected with this unique number, please select a new number.</source>
       <translation>此唯一号码已连接了其他设备，请选择新号码。</translation>
     </message>
     <message id="settings_canbus_unique_id_ok">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="149"/>
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="135"/>
       <source>OK: No other device is connected with this unique number.</source>
       <translation>可以：没有其他设备与此唯一编号连接。</translation>
     </message>
     <message id="common_words_network_status">
-      <location filename="../../components/CommonWords.qml" line="353"/>
+      <location filename="../../components/CommonWords.qml" line="365"/>
       <source>Network status</source>
       <translation>网络状态</translation>
     </message>
@@ -825,7 +817,7 @@
       <translation>浅色</translation>
     </message>
     <message id="settings_language">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="149"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="150"/>
       <source>Language</source>
       <translation>语言</translation>
     </message>
@@ -1041,18 +1033,17 @@
       <translation>更新feed信息源</translation>
     </message>
     <message id="common_words_image_type">
-      <location filename="../../components/CommonWords.qml" line="258"/>
+      <location filename="../../components/CommonWords.qml" line="270"/>
       <source>Image type</source>
       <translation>固件类型</translation>
     </message>
-    <message id="common_words_firmware_type_normal">
-      <location filename="../../components/CommonWords.qml" line="207"/>
+    <message id="iochannel_invert_normal">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="40"/>
       <source>Normal</source>
-      <extracomment>The firmware type for normal images</extracomment>
       <translation>正常</translation>
     </message>
     <message id="common_words_firmware_type_large">
-      <location filename="../../components/CommonWords.qml" line="211"/>
+      <location filename="../../components/CommonWords.qml" line="220"/>
       <source>Large</source>
       <extracomment>The firmware type for large images</extracomment>
       <translation>大版本</translation>
@@ -1105,7 +1096,7 @@
       <translation type="unfinished">手动添加IP地址</translation>
     </message>
     <message id="page_settings_shelly_add_ip_address_manually">
-      <location filename="../../pages/settings/PageSettingsShelly.qml" line="96"/>
+      <location filename="../../pages/settings/PageSettingsShelly.qml" line="111"/>
       <source>Add IP address manually</source>
       <translation>手动添加IP地址</translation>
     </message>
@@ -1200,28 +1191,18 @@
       <source>AC-In2 --</source>
       <translation>AC-In2 --</translation>
     </message>
-    <message id="settings_fronius_rescan_title">
-      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="36"/>
-      <source>Rescan for IP addresses?</source>
-      <translation>重新扫描 IP 地址？</translation>
-    </message>
-    <message id="settings_fronius_rescan">
-      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="38"/>
-      <source>Rescan</source>
-      <translation>重新扫描</translation>
-    </message>
     <message id="settings_remote_support">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="299"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="296"/>
       <source>Remote support</source>
       <translation>远程支持</translation>
     </message>
     <message id="settings_remote_support_tunnel">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="305"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="302"/>
       <source>Remote support tunnel</source>
       <translation>远程支持通道</translation>
     </message>
     <message id="settings_remote_ip_and_support">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="314"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="311"/>
       <source>Remote support IP and port</source>
       <translation>远程支持IP和端口</translation>
     </message>
@@ -1235,28 +1216,58 @@
       <source>Audible alarm</source>
       <translation>声音报警</translation>
     </message>
+    <message id="pagesettingsgeneral_modificationchecks_unsupported_device">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="52"/>
+      <source>Unsupported GX device</source>
+      <translation type="unfinished">不支持的GX 设备</translation>
+    </message>
+    <message id="pagesettingsgeneral_modificationchecks_clean">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="57"/>
+      <source>Clean</source>
+      <translation type="unfinished">清洁</translation>
+    </message>
+    <message id="pagesettingsgeneral_firmware">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="114"/>
+      <source>Firmware</source>
+      <translation type="unfinished">固件</translation>
+    </message>
+    <message id="pagesettingsgeneral_preferences">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="132"/>
+      <source>Preferences</source>
+      <translation type="unfinished">偏好</translation>
+    </message>
+    <message id="pagesettingsgeneral_documentation">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="232"/>
+      <source>Documentation</source>
+      <translation type="unfinished">文档</translation>
+    </message>
+    <message id="pagesettingsgeneral_support_status">
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="240"/>
+      <source>Support status</source>
+      <translation type="unfinished">支持状态</translation>
+    </message>
     <message id="settings_demo_mode">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="259"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="299"/>
       <source>Demo mode</source>
       <translation>演示模式</translation>
     </message>
     <message id="page_settings_demo_ess">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="266"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="306"/>
       <source>ESS demo</source>
       <translation>ESS演示</translation>
     </message>
     <message id="page_settings_demo_1">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="268"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="308"/>
       <source>Boat/Motorhome demo 1</source>
       <translation>船/房车演示1</translation>
     </message>
     <message id="page_settings_demo_2">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="270"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="310"/>
       <source>Boat/Motorhome demo 2</source>
       <translation>船/房车演示2</translation>
     </message>
     <message id="settings_demo_mode_caption">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="274"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="314"/>
       <source>Starting demo mode will change some settings and the user interface will be unresponsive for a moment.</source>
       <translation>开始演示模式会更改某些设置，用户界面短时间没有反应。</translation>
     </message>
@@ -1271,43 +1282,43 @@
       <translation>最小运行时间</translation>
     </message>
     <message id="page_settings_generator_warm_up_time">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="61"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="66"/>
       <source>Warm-up time</source>
       <translation>预热时间</translation>
     </message>
     <message id="page_settings_generator_cool_down_time">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="70"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="77"/>
       <source>Cool-down time</source>
       <translation>冷却时间</translation>
     </message>
     <message id="page_settings_generator_detect_generator_at_ac_input">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="94"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="105"/>
       <source>Detect generator at AC input</source>
       <translation>交流输入检测发电机</translation>
     </message>
     <message id="page_settings_generator_detect_generator_not_set">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="113"/>
       <source>None of the AC inputs is set to generator. Go to the system setup page and set the correct AC input to generator in order to enable this functionality.</source>
       <translation>没有在任何交流输入上设置发电机。前往系统设置页，设置正确的发电机交流输入，以便启用该功能。</translation>
     </message>
     <message id="page_settings_generator_detect_generator_set">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="106"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="117"/>
       <source>An alarm will be triggered when no power from the generator is detected at the inverter AC input. Make sure that the correct AC input is set to generator on the system setup page.</source>
       <translation>如果在逆变器交流输入，检测不到发电机功率，就会触发警报。确保在系统设置页面设置正确的发电机交流输入。</translation>
     </message>
     <message id="page_settings_generator_quiet_hours_start_time">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="162"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="173"/>
       <source>Quiet hours start time</source>
       <translation>安静时间之起始时间</translation>
     </message>
     <message id="page_settings_generator_quiet_hours_end_time">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="170"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="181"/>
       <source>Quiet hours end time</source>
       <translation>安静时间之终止时间</translation>
     </message>
     <message id="page_settings_generator_run_time_and_service">
-      <location filename="../../components/PageGensetModel.qml" line="333"/>
-      <location filename="../../pages/settings/PageGenerator.qml" line="110"/>
+      <location filename="../../components/PageGensetModel.qml" line="418"/>
+      <location filename="../../pages/settings/PageGenerator.qml" line="118"/>
       <source>Run time and service</source>
       <translation>运行时和服务</translation>
     </message>
@@ -1340,6 +1351,12 @@
       <location filename="../../pages/settings/PageGeneratorRuntimeService.qml" line="179"/>
       <source>Reset service timer</source>
       <translation>重置服务计时器</translation>
+    </message>
+    <message id="components_volumeunit_volume">
+      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="35"/>
+      <source>Volume</source>
+      <extracomment>Title for a list of units of volume (e.g. cubic metres, litres, gallons)</extracomment>
+      <translation type="unfinished">容积</translation>
     </message>
     <message id="settings_gps_format">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="71"/>
@@ -1382,140 +1399,140 @@
       <translation>节</translation>
     </message>
     <message id="page_settings_gsm_internet">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="51"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="52"/>
       <source>Internet</source>
       <translation>互联网</translation>
     </message>
     <message id="page_settings_gsm_carrier">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="60"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="61"/>
       <source>Carrier</source>
       <translation>手机运营商</translation>
     </message>
     <message id="page_settings_gsm_error_message">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="86"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="93"/>
       <source>It may be necessary to configure the APN settings below in this page, contact your operator for details.
 If that doesn't work, check sim-card in a phone to make sure that there is credit and/or it is registered to be used for data.</source>
       <translation>可能需要配置本页下面的APN设置，详情请联系运营商。
 如果不行的话，请检查手机中的SIM卡，确保有话费和/或已注册，可用于数据业务。</translation>
     </message>
     <message id="page_settings_gsm_allow_roaming">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="92"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="99"/>
       <source>Allow roaming</source>
       <translation>允许漫游</translation>
     </message>
     <message id="page_settings_gsm_sim_status">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="99"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="106"/>
       <source>Sim status</source>
       <translation>SIM卡状态</translation>
     </message>
     <message id="page_settings_gsm_sim_not_inserted">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="104"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="111"/>
       <source>SIM not inserted</source>
       <translation>未插入SIM卡</translation>
     </message>
     <message id="page_settings_gsm_pin_required">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="107"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="114"/>
       <source>PIN required</source>
       <translation>需要PIN码</translation>
     </message>
     <message id="page_settings_gsm_puk_required">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="110"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="117"/>
       <source>PUK required</source>
       <translation>需要PUK码</translation>
     </message>
     <message id="page_settings_gsm_sim_failure">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="113"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="120"/>
       <source>SIM failure</source>
       <translation>SIM卡故障</translation>
     </message>
     <message id="page_settings_gsm_sim_busy">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="116"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="123"/>
       <source>SIM busy</source>
       <translation>SIM忙</translation>
     </message>
     <message id="page_settings_gsm_wrong_sim">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="119"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="126"/>
       <source>Wrong SIM</source>
       <translation>错误的SIM卡</translation>
     </message>
     <message id="page_settings_gsm_wrong_pin">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="122"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="129"/>
       <source>Wrong PIN</source>
       <translation>密码错误</translation>
     </message>
     <message id="page_settings_gsm_ok">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="125"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="132"/>
       <source>OK</source>
       <translation type="unfinished">正常</translation>
     </message>
     <message id="page_settings_gsm_unknown_error">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="128"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="135"/>
       <source>Unknown error</source>
       <translation type="unfinished">未知错误</translation>
     </message>
     <message id="page_settings_gsm_unknown_state">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="153"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="160"/>
       <source>Unknown</source>
       <translation type="unfinished">未知</translation>
     </message>
     <message id="page_settings_gsm_unknown_value">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="159"/>
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="182"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="166"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="189"/>
       <source>Unknown</source>
       <translation type="unfinished">未知</translation>
     </message>
     <message id="page_settings_gsm_offline">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="173"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="180"/>
       <source>Offline</source>
       <translation type="unfinished">离线</translation>
     </message>
     <message id="page_settings_gsm_connecting">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="176"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="183"/>
       <source>Connecting</source>
       <translation type="unfinished">正在连接</translation>
     </message>
     <message id="page_settings_gsm_connected">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="179"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="186"/>
       <source>Connected</source>
       <translation type="unfinished">已连接</translation>
     </message>
     <message id="page_settings_gsm_pin">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="191"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="198"/>
       <source>PIN</source>
       <translation>PIN</translation>
     </message>
     <message id="page_settings_gsm_apn">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="207"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="214"/>
       <source>APN</source>
       <translation>APN</translation>
     </message>
     <message id="page_settings_gsm_default">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="209"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="216"/>
       <source>Default</source>
       <translation>默认</translation>
     </message>
     <message id="page_settings_gsm_use_default_apn">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="223"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="230"/>
       <source>Use default APN</source>
       <translation>使用默认APN</translation>
     </message>
     <message id="page_settings_gsm_apn_name">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="235"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="242"/>
       <source>APN name</source>
       <translation>APN名称</translation>
     </message>
     <message id="page_settings_gsm_use_authentication">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="249"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="256"/>
       <source>Use authentication</source>
       <translation>使用身份验证</translation>
     </message>
     <message id="page_settings_gsm_user_name">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="264"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="271"/>
       <source>User name</source>
       <translation>用户名</translation>
     </message>
     <message id="page_settings_gsm_imei">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="279"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="286"/>
       <source>IMEI</source>
       <translation>IMEI</translation>
     </message>
@@ -1545,22 +1562,22 @@ If that doesn't work, check sim-card in a phone to make sure that there is credi
       <translation>逆变器/充电器</translation>
     </message>
     <message id="settings_ess_multiphase_regulation">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="84"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="106"/>
       <source>Multiphase regulation</source>
       <translation>多相调节</translation>
     </message>
     <message id="settings_ess_phase_compensation">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="91"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="113"/>
       <source>Total of all phases</source>
       <translation>所有相位总计</translation>
     </message>
     <message id="settings_ess_individual_phase">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="115"/>
       <source>Individual phase</source>
       <translation>每个相位</translation>
     </message>
     <message id="settings_ess_multiphase_split_notif">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="99"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="121"/>
       <source>Each phase is regulated to individually achieve the grid setpoint (system efficiency is decreased).
 
 CAUTION: Use only if required by the utility provider.</source>
@@ -1569,7 +1586,7 @@ CAUTION: Use only if required by the utility provider.</source>
 注意：仅在电力公司要求时使用。</translation>
     </message>
     <message id="settings_ess_multiphase_total_notif">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="124"/>
       <source>The total of all phases is intelligently regulated to achieve the grid setpoint (system efficiency is optimised).
 
 Use unless prohibited by the utility provider.</source>
@@ -1578,42 +1595,42 @@ Use unless prohibited by the utility provider.</source>
 除非电力公司禁止，否则请使用。</translation>
     </message>
     <message id="settings_ess_min_soc">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="111"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="133"/>
       <source>Minimum SOC (unless grid fails)</source>
       <translation type="unfinished">最低放电量（除非电网故障）</translation>
     </message>
     <message id="settings_ess_active_soc_limit">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="129"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="151"/>
       <source>Active SOC limit</source>
       <translation type="unfinished">实际充电状态限制</translation>
     </message>
     <message id="settings_ess_battery_life_sustain">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="155"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="177"/>
       <source>Sustain</source>
       <translation type="unfinished">维持</translation>
     </message>
     <message id="settings_ess_battery_life_recharge">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="157"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="179"/>
       <source>Recharge</source>
       <translation type="unfinished">重新充电</translation>
     </message>
     <message id="settings_ess_scheduled_charge_levels">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="254"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="276"/>
       <source>Scheduled charge levels</source>
       <translation type="unfinished">预定的充电水平</translation>
     </message>
     <message id="settings_ess_active">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="257"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="279"/>
       <source>Active (%1)</source>
       <translation type="unfinished">活动 (%1)</translation>
     </message>
     <message id="settings_ess_inactive">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="259"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="281"/>
       <source>Inactive</source>
       <translation type="unfinished">不激活</translation>
     </message>
     <message id="settings_ess_dynamic">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="293"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="315"/>
       <source>Dynamic ESS</source>
       <translation type="unfinished">动态ESS</translation>
     </message>
@@ -1628,7 +1645,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>实际充电状态限制</translation>
     </message>
     <message id="settings_ess_peak_shaving">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="245"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="267"/>
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="48"/>
       <source>Peak shaving</source>
       <translation>削峰</translation>
@@ -1638,23 +1655,23 @@ Use unless prohibited by the utility provider.</source>
       <source>Above minimum SOC only</source>
       <translation>只在最小SOC以上</translation>
     </message>
-    <message id="page_switchable_output_show_always">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="123"/>
+    <message id="iochannel_showui_always">
+      <location filename="../../components/listitems/ListIOChannelShowRadioButtonGroup.qml" line="18"/>
       <source>Always</source>
       <translation>总是</translation>
     </message>
     <message id="settings_ess_battery_life_discharge_disabled">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="151"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="173"/>
       <source>Discharge disabled</source>
       <translation>放电已禁用</translation>
     </message>
     <message id="settings_ess_battery_life_slow_charge">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="153"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="175"/>
       <source>Slow charge</source>
       <translation>慢冲</translation>
     </message>
-    <message id="inverters_state_system_sustain">
-      <location filename="../../data/System.qml" line="192"/>
+    <message id="ev_charging_state_sustain">
+      <location filename="../../pages/ev/EvPage.qml" line="88"/>
       <source>Sustain</source>
       <translation>维持</translation>
     </message>
@@ -1664,32 +1681,32 @@ Use unless prohibited by the utility provider.</source>
       <translation>重新充电</translation>
     </message>
     <message id="settings_ess_limit_charge_power">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="165"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="187"/>
       <source>Limit charge power</source>
       <translation>限制充电功率</translation>
     </message>
     <message id="settings_ess_max_charge_power">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="183"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="205"/>
       <source>Maximum charge power</source>
       <translation>最大充电功率</translation>
     </message>
     <message id="settings_ess_limit_inverter_power">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="196"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="218"/>
       <source>Limit inverter power</source>
       <translation>限制逆变器功率</translation>
     </message>
     <message id="settings_ess_max_inverter_power">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="214"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="236"/>
       <source>Maximum inverter power</source>
       <translation>最大逆变器功率</translation>
     </message>
     <message id="settings_ess_grid_setpoint">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="225"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="247"/>
       <source>Grid setpoint</source>
       <translation>电网设定点</translation>
     </message>
     <message id="settings_ess_grid_feed_in">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="234"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="256"/>
       <source>Grid feed-in</source>
       <translation>上网</translation>
     </message>
@@ -1719,60 +1736,60 @@ Use unless prohibited by the utility provider.</source>
       <translation>上网电量限制已激活</translation>
     </message>
     <message id="digitalinputs_type_pulsemeter">
-      <location filename="../../src/enums.cpp" line="217"/>
+      <location filename="../../src/enums.cpp" line="295"/>
       <source>Pulse meter</source>
       <translation>脉冲计</translation>
     </message>
     <message id="digitalinputs_type_dooralarm">
-      <location filename="../../src/enums.cpp" line="220"/>
+      <location filename="../../src/enums.cpp" line="298"/>
       <source>Door alarm</source>
       <translation>门铃</translation>
     </message>
     <message id="switchable_output_bilge_pump">
-      <location filename="../../src/enums.cpp" line="446"/>
+      <location filename="../../src/enums.cpp" line="561"/>
       <source>Bilge pump</source>
       <translation>舱底泵</translation>
     </message>
     <message id="digitalinputs_type_bilgealarm">
-      <location filename="../../src/enums.cpp" line="226"/>
+      <location filename="../../src/enums.cpp" line="304"/>
       <source>Bilge alarm</source>
       <translation>舱底报警</translation>
     </message>
     <message id="digitalinputs_type_burglaralarm">
-      <location filename="../../src/enums.cpp" line="229"/>
+      <location filename="../../src/enums.cpp" line="307"/>
       <source>Burglar alarm</source>
       <translation>防盗报警</translation>
     </message>
     <message id="digitalinputs_type_smokealarm">
-      <location filename="../../src/enums.cpp" line="232"/>
+      <location filename="../../src/enums.cpp" line="310"/>
       <source>Smoke alarm</source>
       <translation>烟雾报警</translation>
     </message>
     <message id="digitalinputs_type_firealarm">
-      <location filename="../../src/enums.cpp" line="235"/>
+      <location filename="../../src/enums.cpp" line="313"/>
       <source>Fire alarm</source>
       <translation>火警</translation>
     </message>
     <message id="digitalinputs_type_co2alarm">
-      <location filename="../../src/enums.cpp" line="238"/>
+      <location filename="../../src/enums.cpp" line="316"/>
       <source>CO2 alarm</source>
       <translation>二氧化碳报警</translation>
     </message>
     <message id="pagesettingssupportstate_signal_k">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="465"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="457"/>
       <source>Signal K</source>
       <translation>Signal K</translation>
     </message>
     <message id="pagesettingssupportstate_node_red">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="478"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="471"/>
       <source>Node-RED</source>
       <translation>Node-RED</translation>
     </message>
     <message id="settings_large_enabled_safe_mode">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="246"/>
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="251"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="243"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="248"/>
       <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="24"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="482"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="475"/>
       <source>Enabled (safe mode)</source>
       <translation>启用（安全模式）</translation>
     </message>
@@ -1837,8 +1854,8 @@ Use unless prohibited by the utility provider.</source>
       <source>Use secure connection (HTTPS)</source>
       <translation>使用安全连接(HTTPS)</translation>
     </message>
-    <message id="settings_last_contact">
-      <location filename="../../pages/settings/PageSettingsLogger.qml" line="155"/>
+    <message id="ev_last_contact">
+      <location filename="../../pages/ev/EvPage.qml" line="115"/>
       <source>Last contact</source>
       <translation>上次联系</translation>
     </message>
@@ -2009,10 +2026,15 @@ Use unless prohibited by the utility provider.</source>
       <source>Function (Relay 1)</source>
       <translation>功能（继电器1）</translation>
     </message>
+    <message id="page_switchable_output_function">
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="91"/>
+      <source>Function</source>
+      <translation>功能</translation>
+    </message>
     <message id="settings_relay_function">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="50"/>
       <source>Function</source>
-      <translation>功能</translation>
+      <translation type="unfinished">功能</translation>
     </message>
     <message id="settings_relay_disabled">
       <location filename="../../pages/settings/PageSettingsRelay.qml" line="54"/>
@@ -2110,7 +2132,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>备份固件不可用</translation>
     </message>
     <message id="settings_services_canbus_over_tcpip_debug">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="119"/>
       <source>CAN-bus over TCP/IP (Debug)</source>
       <translation>通过 TCP/IP 连接 CAN 总线（调试）</translation>
     </message>
@@ -2200,7 +2222,7 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">BMS控制</translation>
     </message>
     <message id="common_words_bms_control">
-      <location filename="../../components/CommonWords.qml" line="101"/>
+      <location filename="../../components/CommonWords.qml" line="104"/>
       <source>BMS control</source>
       <translation>BMS控制</translation>
     </message>
@@ -2241,7 +2263,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>连接丢失</translation>
     </message>
     <message id="settings_tcpip_connection_unplugged">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="22"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="36"/>
       <location filename="../../pages/settings/PageSettingsEthernet.qml" line="26"/>
       <location filename="../../pages/settings/PageSettingsTcpIp.qml" line="35"/>
       <source>Unplugged</source>
@@ -2254,7 +2276,7 @@ Use unless prohibited by the utility provider.</source>
     </message>
     <message id="settings_tcpip_hidden">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="21"/>
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="166"/>
       <source>[Hidden]</source>
       <translation>[隐藏]</translation>
     </message>
@@ -2309,22 +2331,22 @@ Use unless prohibited by the utility provider.</source>
       <translation>固定</translation>
     </message>
     <message id="settings_tcpip_netmask">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="135"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="147"/>
       <source>Netmask</source>
       <translation>网络掩码</translation>
     </message>
     <message id="settings_tcpip_gateway">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="144"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="156"/>
       <source>Gateway</source>
       <translation>网关</translation>
     </message>
     <message id="settings_tcpip_dns_server">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="153"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="166"/>
       <source>DNS server</source>
       <translation>DNS服务器</translation>
     </message>
     <message id="settings_tcpip_link_local">
-      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="164"/>
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="185"/>
       <source>Link-local IP address</source>
       <translation>链路本地IP地址</translation>
     </message>
@@ -2344,82 +2366,82 @@ Use unless prohibited by the utility provider.</source>
       <translation>VE.CAN 设备</translation>
     </message>
     <message id="settings_wifi_no_access_points">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="92"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="156"/>
       <source>No access points</source>
       <translation>无接入点</translation>
     </message>
     <message id="settings_wifi_no_wifi_adapter_connected">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="94"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="158"/>
       <source>No Wi-Fi adapter connected</source>
       <translation>无Wi-Fi适配器连接</translation>
     </message>
     <message id="settings_wifi_create_ap">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="30"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="36"/>
       <source>Create access point</source>
       <translation>创建接入点</translation>
     </message>
     <message id="settings_wifi_networks">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="84"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="148"/>
       <source>Wi-Fi networks</source>
       <translation>Wi-Fi网络</translation>
     </message>
     <message id="settings_wifi_disable_ap_are_you_sure">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="55"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="61"/>
       <source>Are you sure that you want to disable the access point?</source>
       <translation>你确定要取消连接热点吗？</translation>
     </message>
     <message id="settings_tz_date_time_utc">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="87"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="88"/>
       <source>Date/Time UTC</source>
       <translation>日期/时间 UTC</translation>
     </message>
     <message id="settings_tz_date_time_local">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="99"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="119"/>
       <source>Date/Time local</source>
       <translation>日期/时间 本地</translation>
     </message>
     <message id="settings_tz_time_zone">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="125"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="147"/>
       <source>Time zone</source>
       <translation>时区</translation>
     </message>
     <message id="settings_tz_africa">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="220"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="242"/>
       <source>Africa</source>
       <translation>非洲</translation>
     </message>
     <message id="settings_tz_america">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="226"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="248"/>
       <source>America</source>
       <translation>美洲</translation>
     </message>
     <message id="settings_tz_asia">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="244"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="266"/>
       <source>Asia</source>
       <translation>亚洲</translation>
     </message>
     <message id="settings_tz_atlantic">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="250"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="272"/>
       <source>Atlantic</source>
       <translation>大西洋</translation>
     </message>
     <message id="settings_tz_ustralia">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="256"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="278"/>
       <source>Australia</source>
       <translation>澳洲</translation>
     </message>
     <message id="settings_tz_europe">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="262"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="284"/>
       <source>Europe</source>
       <translation>欧洲</translation>
     </message>
     <message id="settings_tz_indian">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="268"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="290"/>
       <source>Indian</source>
       <translation>印度</translation>
     </message>
     <message id="settings_tz_pacific">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="274"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="296"/>
       <source>Pacific</source>
       <translation>太平洋</translation>
     </message>
@@ -2460,25 +2482,25 @@ Use unless prohibited by the utility provider.</source>
       <translation>高电池电压报警</translation>
     </message>
     <message id="common_words_last_error">
-      <location filename="../../components/CommonWords.qml" line="647"/>
+      <location filename="../../components/CommonWords.qml" line="666"/>
       <source>Last error</source>
       <extracomment>Details of last error</extracomment>
       <translation>上次出错</translation>
     </message>
     <message id="common_words_2nd_last_error">
-      <location filename="../../components/CommonWords.qml" line="650"/>
+      <location filename="../../components/CommonWords.qml" line="669"/>
       <source>2nd last error</source>
       <extracomment>Details of 2nd last error</extracomment>
       <translation>第二次出错</translation>
     </message>
     <message id="common_words_3rd_last_error">
-      <location filename="../../components/CommonWords.qml" line="653"/>
+      <location filename="../../components/CommonWords.qml" line="672"/>
       <source>3rd last error</source>
       <extracomment>Details of 3rd last error</extracomment>
       <translation>第三次出错</translation>
     </message>
     <message id="common_words_4th_last_error">
-      <location filename="../../components/CommonWords.qml" line="656"/>
+      <location filename="../../components/CommonWords.qml" line="675"/>
       <source>4th last error</source>
       <extracomment>Details of 4th last error</extracomment>
       <translation>第四次出错</translation>
@@ -2576,7 +2598,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>充电电压</translation>
     </message>
     <message id="common_words_reset">
-      <location filename="../../components/CommonWords.qml" line="450"/>
+      <location filename="../../components/CommonWords.qml" line="462"/>
       <source>Reset</source>
       <translation>重置</translation>
     </message>
@@ -2591,12 +2613,12 @@ Use unless prohibited by the utility provider.</source>
       <translation>网络操作</translation>
     </message>
     <message id="charger_history_table_view">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="29"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="31"/>
       <source>Table view</source>
       <translation>表格视图</translation>
     </message>
     <message id="charger_history_chart">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="31"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="33"/>
       <source>Chart</source>
       <translation>图表</translation>
     </message>
@@ -2618,16 +2640,14 @@ Use unless prohibited by the utility provider.</source>
       <extracomment>Voltage alarm is at "Alarm" level</extracomment>
       <translation type="unfinished">报警</translation>
     </message>
-    <message id="digitalinputs_state_alarm">
-      <location filename="../../src/enums.cpp" line="292"/>
+    <message id="generic_input_label_alarm">
+      <location filename="../../src/genericinput.cpp" line="126"/>
       <source>Alarm</source>
-      <extracomment>Digital input state</extracomment>
       <translation>报警</translation>
     </message>
-    <message id="components_volumeunit_volume">
-      <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="35"/>
+    <message id="generic_input_primaryLabel_volume">
+      <location filename="../../src/genericinput.cpp" line="181"/>
       <source>Volume</source>
-      <extracomment>Title for a list of units of volume (e.g. cubic metres, litres, gallons)</extracomment>
       <translation>容积</translation>
     </message>
     <message id="tank_status_short_circuited">
@@ -2646,23 +2666,23 @@ Use unless prohibited by the utility provider.</source>
       <translation>电动汽车充电站</translation>
     </message>
     <message id="evcs_charger_list_session">
-      <location filename="../../pages/evcs/EvChargerListPage.qml" line="32"/>
+      <location filename="../../pages/evcs/EvChargerListPage.qml" line="24"/>
       <source>Session</source>
       <translation type="unfinished">进程</translation>
     </message>
     <message id="evcs_session">
-      <location filename="../../pages/evcs/EvChargerPage.qml" line="44"/>
+      <location filename="../../pages/evcs/EvChargerPage.qml" line="51"/>
       <source>Session</source>
       <translation>进程</translation>
     </message>
     <message id="evcs_charging_time">
-      <location filename="../../pages/evcs/EvChargerPage.qml" line="51"/>
+      <location filename="../../pages/evcs/EvChargerPage.qml" line="58"/>
       <source>Time</source>
       <extracomment>Charging time for the EV charger</extracomment>
       <translation>时间</translation>
     </message>
     <message id="evcs_charge_mode">
-      <location filename="../../pages/evcs/EvChargerPage.qml" line="121"/>
+      <location filename="../../pages/evcs/EvChargerPage.qml" line="130"/>
       <source>Charge mode</source>
       <translation>充电模式</translation>
     </message>
@@ -2682,7 +2702,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>在非高峰时段或如果您想确保您的电动汽车在特定时间充满电并准备就绪，则可降低电费。</translation>
     </message>
     <message id="evcs_enable_charging">
-      <location filename="../../pages/evcs/EvChargerPage.qml" line="136"/>
+      <location filename="../../pages/evcs/EvChargerPage.qml" line="145"/>
       <source>Enable charging</source>
       <translation>激活充电</translation>
     </message>
@@ -2755,7 +2775,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>RV-C 设备</translation>
     </message>
     <message id="settings_page_debug_enable_fps_visualizer">
-      <location filename="../../pages/settings/debug/PageDebug.qml" line="61"/>
+      <location filename="../../pages/settings/debug/PageDebug.qml" line="49"/>
       <source>Enable frame-rate visualizer</source>
       <translation>启用帧速率可视化器</translation>
     </message>
@@ -2764,6 +2784,11 @@ Use unless prohibited by the utility provider.</source>
       <source>Unsupported</source>
       <extracomment>Device is not supported</extracomment>
       <translation>不支持</translation>
+    </message>
+    <message id="settings_tank_pump">
+      <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="118"/>
+      <source>Tank pump</source>
+      <translation type="unfinished">水箱泵</translation>
     </message>
     <message id="devicelist_remove_disconnected_devices">
       <location filename="../../pages/settings/devicelist/DeviceListPage.qml" line="125"/>
@@ -2802,7 +2827,7 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">保险熔断</translation>
     </message>
     <message id="common_words_manual_control">
-      <location filename="../../components/CommonWords.qml" line="306"/>
+      <location filename="../../components/CommonWords.qml" line="318"/>
       <source>Manual control</source>
       <translation>手动控制</translation>
     </message>
@@ -2822,43 +2847,43 @@ Use unless prohibited by the utility provider.</source>
       <translation>保险熔断</translation>
     </message>
     <message id="batterydiagnostics_status_leds">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="18"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="25"/>
       <source>Status LEDs</source>
       <translation>状态指示灯</translation>
     </message>
     <message id="batterydiagnostics_none">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="42"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="51"/>
       <source>None</source>
       <extracomment>Indicates no alarm is set</extracomment>
       <translation type="unfinished">无</translation>
     </message>
     <message id="batterydiagnostics_main_switch">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="48"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="57"/>
       <source>Main Switch</source>
       <translation>主开关</translation>
     </message>
     <message id="batterydiagnostics_heater">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="55"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="64"/>
       <source>Heater</source>
       <translation>加热器</translation>
     </message>
     <message id="batterydiagnostics_internal_fan">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="62"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="71"/>
       <source>Internal Fan</source>
       <translation>内部风扇</translation>
     </message>
     <message id="batterydiagnostics_warning_flags">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="69"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="78"/>
       <source>Warning Flags</source>
       <translation>警告标志</translation>
     </message>
     <message id="batterydiagnostics_alarm_flags">
-      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="75"/>
+      <location filename="../../pages/settings/devicelist/battery/Page48TlDiagnostics.qml" line="84"/>
       <source>Alarm Flags</source>
       <translation>报警标志</translation>
     </message>
     <message id="common_words_switch">
-      <location filename="../../components/CommonWords.qml" line="530"/>
+      <location filename="../../components/CommonWords.qml" line="542"/>
       <source>Switch</source>
       <extracomment>Change the mode value</extracomment>
       <translation>开关</translation>
@@ -2904,7 +2929,7 @@ Use unless prohibited by the utility provider.</source>
       <translation>健康状态</translation>
     </message>
     <message id="common_words_battery_temperature">
-      <location filename="../../components/CommonWords.qml" line="95"/>
+      <location filename="../../components/CommonWords.qml" line="98"/>
       <source>Battery temperature</source>
       <translation>电池温度</translation>
     </message>
@@ -2964,62 +2989,62 @@ Use unless prohibited by the utility provider.</source>
       <translation>剩余时间</translation>
     </message>
     <message id="battery_details">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="276"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="291"/>
       <source>Details</source>
       <translation>细节</translation>
     </message>
     <message id="battery_module_level_alarms">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="300"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="315"/>
       <source>Module level alarms</source>
       <translation>模块级报警</translation>
     </message>
     <message id="battery_settings_diagnostics">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="335"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="350"/>
       <source>Diagnostics</source>
       <translation>诊断</translation>
     </message>
     <message id="battery_settings_fuses">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="360"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="375"/>
       <source>Fuses</source>
       <translation>保险</translation>
     </message>
     <message id="battery_settings_io">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="376"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="391"/>
       <source>IO</source>
       <translation>IO</translation>
     </message>
     <message id="battery_settings_system">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="391"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="406"/>
       <source>System</source>
       <translation type="unfinished">系统</translation>
     </message>
     <message id="battery_press_to_redetect">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="433"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="448"/>
       <source>Press to redetect</source>
       <translation type="unfinished">按下重新检测</translation>
     </message>
     <message id="pagesettingsgeneral_system">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="107"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="109"/>
       <source>System</source>
       <translation>系统</translation>
     </message>
     <message id="battery_settings_parameters">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="406"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="421"/>
       <source>Parameters</source>
       <translation>参数</translation>
     </message>
     <message id="battery_redetect_battery">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="431"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="446"/>
       <source>Redetect Battery</source>
       <translation>重新检测电池</translation>
     </message>
     <message id="vebus_device_press_to_redetect">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="212"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="217"/>
       <source>Press to redetect</source>
       <translation>按下重新检测</translation>
     </message>
     <message id="battery_redetecting_the_battery_note">
-      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="440"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="455"/>
       <source>Redetecting the battery may take up time 60 seconds. Meanwhile the name of the battery may be incorrect.</source>
       <translation>重新检测电池可能要花60秒。期间电池名称可能有误。</translation>
     </message>
@@ -3271,7 +3296,7 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">按下恢复</translation>
     </message>
     <message id="vebus_backup_press_to_restore">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="362"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="391"/>
       <source>Press to restore</source>
       <translation>按下恢复</translation>
     </message>
@@ -3465,14 +3490,9 @@ Use unless prohibited by the utility provider.</source>
       <translation>可编程继电器</translation>
     </message>
     <message id="common_words_batteries">
-      <location filename="../../components/CommonWords.qml" line="54"/>
+      <location filename="../../components/CommonWords.qml" line="57"/>
       <source>Batteries</source>
       <translation>电池</translation>
-    </message>
-    <message id="lynxionsystem_capacity">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="18"/>
-      <source>Capacity</source>
-      <translation type="unfinished">容量</translation>
     </message>
     <message id="lynxionsystem_parallel">
       <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="30"/>
@@ -3494,25 +3514,35 @@ Use unless prohibited by the utility provider.</source>
       <source>Min/max cell temperature</source>
       <translation>最低/最高电芯温度</translation>
     </message>
-    <message id="lynxionsystem_balancing">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="92"/>
-      <source>Balancing</source>
-      <translation type="unfinished">均衡中</translation>
+    <message id="lynxionsystem_balancer_balanced">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="107"/>
+      <source>Balanced</source>
+      <translation type="unfinished">已均衡</translation>
     </message>
     <message id="lynxionsystem_balancer_balancing">
       <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="110"/>
       <source>Balancing</source>
-      <translation>均衡中</translation>
+      <translation type="unfinished">均衡中</translation>
+    </message>
+    <message id="lynxionsystem_balancer_imbalance">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="113"/>
+      <source>Imbalance</source>
+      <translation type="unfinished">不均衡</translation>
     </message>
     <message id="lynxionsystem_balancer_unknown">
       <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="117"/>
       <source>Unknown</source>
       <translation type="unfinished">未知</translation>
     </message>
-    <message id="dc_output">
-      <location filename="../../components/listitems/ListDcOutputQuantityGroup.qml" line="16"/>
+    <message id="battery_status_balancing">
+      <location filename="../../src/enums.cpp" line="78"/>
+      <source>Balancing</source>
+      <translation>均衡中</translation>
+    </message>
+    <message id="settings_switch_channel_output">
+      <location filename="../../pages/settings/devicelist/PageSwitch.qml" line="82"/>
       <source>Output</source>
-      <extracomment>DC output measurement values</extracomment>
+      <extracomment>Configure channel to use "output" direction</extracomment>
       <translation>输出</translation>
     </message>
     <message id="alternator_wakespeed_field_drive">
@@ -3681,40 +3711,40 @@ Use unless prohibited by the utility provider.</source>
       <translation>感应器数值</translation>
     </message>
     <message id="devicelist_tankshape_empty">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="75"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="84"/>
       <source>No custom shape defined. You may define one with up to ten points. Note that 0% and 100% are implied.</source>
       <translation>未定义自定义形状。您最多可以定义 10 个点。请注意，0% 和 100% 是隐含的。</translation>
     </message>
     <message id="devicelist_tankshape_point">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="89"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="103"/>
       <source>Point %1</source>
       <extracomment>%1 = the point number</extracomment>
       <translation>点 %1</translation>
     </message>
     <message id="devicelist_tankshape_add_point">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="179"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="200"/>
       <source>Add point</source>
       <translation>添加点</translation>
     </message>
     <message id="devicelist_tankshape_sensor_level">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="205"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="236"/>
       <source>Sensor level</source>
       <extracomment>The sensor level (as a percentage) for this tank shape point</extracomment>
       <translation>传感器液位</translation>
     </message>
     <message id="devicelist_tankshape_volume">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="239"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="275"/>
       <source>Volume</source>
       <extracomment>The volume (as a percentage) for this tank shape point</extracomment>
       <translation type="unfinished">容积</translation>
     </message>
     <message id="devicelist_tankshape_duplicate_sensor_level">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="311"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="351"/>
       <source>Duplicate sensor level values are not allowed.</source>
       <translation>不允许重复传感器数值。</translation>
     </message>
     <message id="devicelist_tankshape_volume_not_increasing">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="317"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="357"/>
       <source>Volume values must be increasing.</source>
       <translation>体积值必须不断增加。</translation>
     </message>
@@ -3775,37 +3805,37 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">设备</translation>
     </message>
     <message id="ac-in-genset_ac">
-      <location filename="../../components/PageGensetModel.qml" line="202"/>
+      <location filename="../../components/PageGensetModel.qml" line="249"/>
       <source>AC</source>
       <translation>交流</translation>
     </message>
     <message id="ac-in-genset_engine">
-      <location filename="../../components/PageGensetModel.qml" line="240"/>
+      <location filename="../../components/PageGensetModel.qml" line="325"/>
       <source>Engine</source>
       <translation>引擎</translation>
     </message>
-    <message id="ac-in-genset_coolant_temperature">
-      <location filename="../../components/PageGensetModel.qml" line="284"/>
+    <message id="devicelist_motordrive_coolanttemperature">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="79"/>
       <source>Coolant temperature</source>
       <translation>冷却剂温度</translation>
     </message>
     <message id="ac-in-genset_exhaust_temperature">
-      <location filename="../../components/PageGensetModel.qml" line="292"/>
+      <location filename="../../components/PageGensetModel.qml" line="377"/>
       <source>Exhaust temperature</source>
       <translation>排气温度</translation>
     </message>
     <message id="ac-in-genset_winding_temperature">
-      <location filename="../../components/PageGensetModel.qml" line="299"/>
+      <location filename="../../components/PageGensetModel.qml" line="384"/>
       <source>Winding temperature</source>
       <translation>线圈温度</translation>
     </message>
     <message id="ac-in-genset_starter_battery_voltage">
-      <location filename="../../components/PageGensetModel.qml" line="313"/>
+      <location filename="../../components/PageGensetModel.qml" line="398"/>
       <source>Starter battery voltage</source>
       <translation>启动电池电压</translation>
     </message>
     <message id="ac-in-genset_number_of_starts">
-      <location filename="../../components/PageGensetModel.qml" line="321"/>
+      <location filename="../../components/PageGensetModel.qml" line="406"/>
       <source>Number of starts</source>
       <translation>启动次数</translation>
     </message>
@@ -3883,28 +3913,28 @@ Use unless prohibited by the utility provider.</source>
       <translation>Smappee总线设备</translation>
     </message>
     <message id="common_words_setting_disabled_when_dmc_connected">
-      <location filename="../../components/CommonWords.qml" line="673"/>
+      <location filename="../../components/CommonWords.qml" line="692"/>
       <source>This setting is disabled when a Digital Multi Control is connected.</source>
       <translation>连接数字多功能控制器时，此设置将被禁用。</translation>
     </message>
     <message id="common_words_setting_disabled_when_bms_connected">
-      <location filename="../../components/CommonWords.qml" line="662"/>
+      <location filename="../../components/CommonWords.qml" line="681"/>
       <source>This setting is disabled when a VE.Bus BMS is connected.</source>
       <translation>连接 VE.Bus BMS 时，此设置将被禁用。</translation>
     </message>
     <message id="settings_multirs_ac_in_phase">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="150"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="151"/>
       <source>AC in %1</source>
       <extracomment>%1 = phase name (e.g. L1, L2, L3)</extracomment>
       <translation>交流电在 %1</translation>
     </message>
     <message id="common_words_dc">
-      <location filename="../../components/CommonWords.qml" line="155"/>
+      <location filename="../../components/CommonWords.qml" line="161"/>
       <source>DC</source>
       <translation>直流</translation>
     </message>
-    <message id="pulsecounter_setup_inverted">
-      <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="21"/>
+    <message id="iochannel_invert_inverted">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="42"/>
       <source>Inverted</source>
       <translation>倒置</translation>
     </message>
@@ -3924,32 +3954,32 @@ Use unless prohibited by the utility provider.</source>
       <translation>警报逻辑倒置</translation>
     </message>
     <message id="page_meteo_irradiance">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="24"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="42"/>
       <source>Irradiance</source>
       <translation>辐照度</translation>
     </message>
     <message id="page_meteo_cell_temperature">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="33"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="51"/>
       <source>Cell temperature</source>
       <translation>电池温度</translation>
     </message>
     <message id="page_meteo_external_temperature_1">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="42"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="60"/>
       <source>External temperature (1)</source>
       <translation>外部温度 (1)</translation>
     </message>
     <message id="page_meteo_external_temperature">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="44"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="62"/>
       <source>External temperature</source>
       <translation>外部温度</translation>
     </message>
     <message id="page_meteo_external_temperature_2">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="55"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="73"/>
       <source>External temperature (2)</source>
       <translation>外部温度 (2)</translation>
     </message>
     <message id="page_meteo_wind_speed">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="63"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="81"/>
       <source>Wind speed</source>
       <translation>风速</translation>
     </message>
@@ -3973,6 +4003,11 @@ Use unless prohibited by the utility provider.</source>
       <source>Aggregate</source>
       <translation>合计</translation>
     </message>
+    <message id="pulsecounter_setup_inverted">
+      <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="21"/>
+      <source>Inverted</source>
+      <translation type="unfinished">倒置</translation>
+    </message>
     <message id="pulsecounter_setup_multiplier">
       <location filename="../../pages/settings/devicelist/pulsemeter/PagePulseCounterSetup.qml" line="27"/>
       <source>Multiplier</source>
@@ -3983,8 +4018,8 @@ Use unless prohibited by the utility provider.</source>
       <source>Reset counter</source>
       <translation>复位计数器</translation>
     </message>
-    <message id="temperature_sensor_battery_low">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="38"/>
+    <message id="generic_input_status_sensor_battery_low">
+      <location filename="../../src/enums.cpp" line="514"/>
       <source>Sensor battery low</source>
       <translation>感应器电量低</translation>
     </message>
@@ -4014,12 +4049,12 @@ Use unless prohibited by the utility provider.</source>
       <translation>传感器电压</translation>
     </message>
     <message id="settings_multirs_total_pv_power">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="204"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="205"/>
       <source>Total PV Power</source>
       <translation>总的光伏功率</translation>
     </message>
     <message id="common_words_product_page">
-      <location filename="../../components/CommonWords.qml" line="433"/>
+      <location filename="../../components/CommonWords.qml" line="445"/>
       <source>Product page</source>
       <translation>产品页面</translation>
     </message>
@@ -4060,6 +4095,11 @@ NOTE: The update might temporarily stop the system.</source>
       <source>Charging the battery to 100%</source>
       <translation>电池充满到100%</translation>
     </message>
+    <message id="vebus_device_page_advanced">
+      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="206"/>
+      <source>Advanced</source>
+      <translation type="unfinished">高级</translation>
+    </message>
     <message id="vebus_device_in_progress">
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="80"/>
       <source>In progress</source>
@@ -4071,7 +4111,7 @@ NOTE: The update might temporarily stop the system.</source>
       <translation>按键停止</translation>
     </message>
     <message id="vebus_device_press_to_start">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="122"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="127"/>
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="90"/>
       <source>Press to start</source>
       <translation>按下启动</translation>
@@ -4114,13 +4154,13 @@ Do you want to continue?</source>
       <source>DC Current</source>
       <translation>直流电流</translation>
     </message>
-    <message id="vebus_device_page_advanced">
-      <location filename="../../pages/vebusdevice/PageVeBus.qml" line="206"/>
+    <message id="pagecontrollableloads_battery_advanced">
+      <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="29"/>
       <source>Advanced</source>
       <translation>高级</translation>
     </message>
     <message id="common_words_alarm_setup">
-      <location filename="../../components/CommonWords.qml" line="65"/>
+      <location filename="../../components/CommonWords.qml" line="68"/>
       <source>Alarm setup</source>
       <translation>报警设置</translation>
     </message>
@@ -4135,108 +4175,108 @@ Do you want to continue?</source>
       <translation>VE.Bus BMS</translation>
     </message>
     <message id="vebus_device_warning">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="97"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="102"/>
       <source>Warning: Activating equalization in an ESS system with solar chargers can cause charging the battery at high voltage with a too high current.</source>
       <translation>警告：在带有太阳能充电器的 ESS 系统中激活均衡可能会导致电池在高电压下以过高的电流充电。</translation>
     </message>
     <message id="vebus_device_switch_to_float">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="101"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="106"/>
       <source>The system will automatically switch over to float once the Equalization charge has been completed.</source>
       <translation>均衡充电完成后，系统将自动切换到浮充状态.</translation>
     </message>
     <message id="vebus_device_interrupt_equalization">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="108"/>
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="160"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="113"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="165"/>
       <source>Interrupt equalization</source>
       <translation>断开均衡充电</translation>
     </message>
     <message id="vebus_device_equalization">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="110"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="115"/>
       <source>Equalization</source>
       <translation>均衡</translation>
     </message>
     <message id="vebus_device_interrupting">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="114"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="119"/>
       <source>Interrupting...</source>
       <translation>正在断开...</translation>
     </message>
     <message id="vebus_device_starting">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="117"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="122"/>
       <source>Starting...</source>
       <translation>正在启动...</translation>
     </message>
     <message id="vebus_device_press_to_interrupt">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="120"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="125"/>
       <source>Press to interrupt</source>
       <translation>按下断开</translation>
     </message>
     <message id="vebus_device_interrupt_and_restart_absorption">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="164"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="169"/>
       <source>Interrupt and restart absorption</source>
       <translation>断开并重新开始均充</translation>
     </message>
     <message id="vebus_device_interrupt_and_go_to_float">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="170"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="175"/>
       <source>Interrupt and go to float</source>
       <translation>断开并启动浮充</translation>
     </message>
     <message id="vebus_device_interrupt">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="176"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="181"/>
       <source>Interrupt</source>
       <translation>断开</translation>
     </message>
     <message id="vebus_device_do_not_interrupt">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="182"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="187"/>
       <source>Do not interrupt</source>
       <translation>不要断开</translation>
     </message>
     <message id="vebus_device_redectect_vebus_system">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="207"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="212"/>
       <source>Redetect VE.Bus system</source>
       <translation>重新检测VE.Bus系统</translation>
     </message>
     <message id="vebus_device_redetecting">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="210"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="215"/>
       <source>Redetecting...</source>
       <translation>重新检测...</translation>
     </message>
     <message id="vebus_device_restart_vebus_system">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="219"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="224"/>
       <source>Restart VE.Bus system</source>
       <translation>重启 VE.Bus 系统</translation>
     </message>
     <message id="vebus_device_restarting">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="222"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="227"/>
       <source>Restarting...</source>
       <translation>重新启动...</translation>
     </message>
     <message id="vebus_device_press_to_restart">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="224"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="229"/>
       <source>Press to restart</source>
       <translation>按重新启动</translation>
     </message>
     <message id="vebus_device_ac_input_1_ignored">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="244"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="249"/>
       <source>AC input 1 ignored</source>
       <translation>交流输入1已忽略</translation>
     </message>
     <message id="vebus_device_ac_input_2_ignored">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="252"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="257"/>
       <source>AC input 2 ignored</source>
       <translation>交流输入2已忽略</translation>
     </message>
     <message id="vebus_device_ess_relay_test">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="260"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="265"/>
       <source>ESS Relay test</source>
       <translation>ESS继电器测试</translation>
     </message>
     <message id="vebus_device_ess_relay_test_completed">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="266"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="269"/>
       <source>Completed</source>
       <translation type="unfinished">已完成</translation>
     </message>
     <message id="vebus_device_ess_relay_test_pending">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="268"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="271"/>
       <source>Pending</source>
       <translation type="unfinished">等待中</translation>
     </message>
@@ -4246,17 +4286,17 @@ Do you want to continue?</source>
       <translation>已完成</translation>
     </message>
     <message id="common_words_pending">
-      <location filename="../../components/CommonWords.qml" line="404"/>
+      <location filename="../../components/CommonWords.qml" line="416"/>
       <source>Pending</source>
       <translation>等待中</translation>
     </message>
     <message id="vebus_diagnostics">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="284"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="317"/>
       <source>VE.Bus diagnostics</source>
       <translation>VE.Bus诊断</translation>
     </message>
     <message id="vebus_veice_network_quality_counter">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="303"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="336"/>
       <source>Network quality counter Phase L%1, device %2 (%3)</source>
       <translation>网络质量计数器相位 L%1，设备 %2 (%3)</translation>
     </message>
@@ -4346,8 +4386,8 @@ Do you want to continue?</source>
       <source>Failing step: %1</source>
       <translation>失败步骤：%1</translation>
     </message>
-    <message id="vebus_device_phase_x_device_x_index_x">
-      <location filename="../../pages/vebusdevice/PageVeBusError11Menu.qml" line="34"/>
+    <message id="common_words_vebus_device_phase_x_device_x_index_x">
+      <location filename="../../components/CommonWords.qml" line="593"/>
       <source>Phase L%1, device %2 (%3)</source>
       <extracomment>eg. 'Phase L1, device 3 (6)', where '(6)' is the index into the list of reported values</extracomment>
       <translation>相位 L%1，设备 %2 (%3)</translation>
@@ -4434,7 +4474,7 @@ Do you want to continue?</source>
       <translation>过载</translation>
     </message>
     <message id="common_words_alarm_setting_dc_ripple">
-      <location filename="../../components/CommonWords.qml" line="62"/>
+      <location filename="../../components/CommonWords.qml" line="65"/>
       <source>DC ripple</source>
       <extracomment>Alarm configuration when 'DC ripple' state is triggered</extracomment>
       <translation>直流纹波</translation>
@@ -4476,12 +4516,12 @@ Do you want to continue?</source>
     </message>
     <message id="ess_card_minimum_soc">
       <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="15"/>
-      <location filename="../../pages/controlcards/ESSCard.qml" line="52"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="56"/>
       <source>Minimum SOC</source>
       <translation type="unfinished">最小SOC</translation>
     </message>
     <message id="ess_unless_grid_fails">
-      <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="32"/>
+      <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="37"/>
       <source>Unless grid fails</source>
       <extracomment>Shown below the minimum state of charge, as configured by the user</extracomment>
       <translation>除非电网丢失</translation>
@@ -4496,83 +4536,88 @@ Do you want to continue?</source>
       <source>AC Input</source>
       <translation>交流输入</translation>
     </message>
+    <message id="common_words_add_modbus_device">
+      <location filename="../../components/CommonWords.qml" line="23"/>
+      <source>Add Modbus TCP/UDP device</source>
+      <translation type="unfinished">添加 Modbus TCP/UDP 设备</translation>
+    </message>
     <message id="common_words_ac_input_role">
-      <location filename="../../components/CommonWords.qml" line="24"/>
+      <location filename="../../components/CommonWords.qml" line="27"/>
       <source>Role</source>
       <extracomment>The role for an AC input (grid, genset, acload, etc.)</extracomment>
       <translation>作用</translation>
     </message>
     <message id="common_words_ac_load">
-      <location filename="../../components/CommonWords.qml" line="27"/>
+      <location filename="../../components/CommonWords.qml" line="30"/>
       <source>AC load</source>
       <translation>交流负载</translation>
     </message>
     <message id="common_words_ac_out">
-      <location filename="../../components/CommonWords.qml" line="30"/>
+      <location filename="../../components/CommonWords.qml" line="33"/>
       <source>AC Out</source>
       <translation>交流输出</translation>
     </message>
     <message id="common_words_ac_output">
-      <location filename="../../components/CommonWords.qml" line="33"/>
+      <location filename="../../components/CommonWords.qml" line="36"/>
       <source>AC Output</source>
       <translation>交流输出</translation>
     </message>
     <message id="common_words_ac_phase_x">
-      <location filename="../../components/CommonWords.qml" line="37"/>
+      <location filename="../../components/CommonWords.qml" line="40"/>
       <source>AC Phase L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
       <translation>交流相 L%1</translation>
     </message>
     <message id="common_words_ac_sensor_x">
-      <location filename="../../components/CommonWords.qml" line="40"/>
+      <location filename="../../components/CommonWords.qml" line="43"/>
       <source>AC Sensor %1</source>
       <translation>交流传感器%1</translation>
     </message>
     <message id="common_words_ac_sensor">
-      <location filename="../../components/CommonWords.qml" line="43"/>
+      <location filename="../../components/CommonWords.qml" line="46"/>
       <source>AC Sensors</source>
       <translation>交流传感器</translation>
     </message>
     <message id="common_words_active">
-      <location filename="../../components/CommonWords.qml" line="47"/>
+      <location filename="../../components/CommonWords.qml" line="50"/>
       <source>Active</source>
       <extracomment>Status is 'active'</extracomment>
       <translation>激活</translation>
     </message>
     <message id="common_words_alarm">
-      <location filename="../../components/CommonWords.qml" line="51"/>
+      <location filename="../../components/CommonWords.qml" line="54"/>
       <source>Alarm</source>
       <extracomment>Voltage alarm is at "Alarm" level</extracomment>
       <translation type="unfinished">报警</translation>
     </message>
     <message id="common_words_alarm_setting_overload">
-      <location filename="../../components/CommonWords.qml" line="58"/>
+      <location filename="../../components/CommonWords.qml" line="61"/>
       <source>Overload</source>
       <extracomment>Alarm configuration when 'overload' state is triggered</extracomment>
       <translation type="unfinished">过载</translation>
     </message>
     <message id="common_words_alarm_status">
-      <location filename="../../components/CommonWords.qml" line="68"/>
+      <location filename="../../components/CommonWords.qml" line="71"/>
       <source>Alarm status</source>
       <translation>报警状态</translation>
     </message>
     <message id="common_words_alarms">
-      <location filename="../../components/CommonWords.qml" line="71"/>
+      <location filename="../../components/CommonWords.qml" line="74"/>
       <source>Alarms</source>
       <translation>报警</translation>
     </message>
     <message id="common_words_allow_to_charge">
-      <location filename="../../components/CommonWords.qml" line="74"/>
+      <location filename="../../components/CommonWords.qml" line="77"/>
       <source>Allow to charge</source>
       <translation>允许充电</translation>
     </message>
     <message id="common_words_allow_to_discharge">
-      <location filename="../../components/CommonWords.qml" line="77"/>
+      <location filename="../../components/CommonWords.qml" line="80"/>
       <source>Allow to discharge</source>
       <translation>允许放电</translation>
     </message>
     <message id="common_words_automatic_scanning">
-      <location filename="../../components/CommonWords.qml" line="83"/>
+      <location filename="../../components/CommonWords.qml" line="86"/>
       <source>Automatic scanning</source>
       <translation>正在自动扫描</translation>
     </message>
@@ -4582,36 +4627,34 @@ Do you want to continue?</source>
       <translation>电池</translation>
     </message>
     <message id="common_words_battery_current">
-      <location filename="../../components/CommonWords.qml" line="92"/>
+      <location filename="../../components/CommonWords.qml" line="95"/>
       <source>Battery current</source>
       <translation>电池电流</translation>
     </message>
     <message id="common_words_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="98"/>
+      <location filename="../../components/CommonWords.qml" line="101"/>
       <source>Battery voltage</source>
       <translation>电池电压</translation>
     </message>
     <message id="common_words_charge_current">
-      <location filename="../../components/CommonWords.qml" line="121"/>
+      <location filename="../../components/CommonWords.qml" line="124"/>
       <source>Charge current</source>
       <translation>充电电流</translation>
     </message>
-    <message id="battery_mode_charging">
-      <location filename="../../src/enums.cpp" line="30"/>
+    <message id="ev_charging_state_charging">
+      <location filename="../../pages/ev/EvPage.qml" line="85"/>
       <source>Charging</source>
-      <extracomment>Battery mode</extracomment>
       <translation>充电</translation>
     </message>
     <message id="common_words_clear_error_action">
-      <location filename="../../components/CommonWords.qml" line="129"/>
+      <location filename="../../components/CommonWords.qml" line="132"/>
       <source>Clear error</source>
       <extracomment>Action to clear an error state</extracomment>
       <translation>清除错误</translation>
     </message>
-    <message id="digitalinputs_state_closed">
-      <location filename="../../src/enums.cpp" line="284"/>
+    <message id="generic_input_label_closed">
+      <location filename="../../src/genericinput.cpp" line="122"/>
       <source>Closed</source>
-      <extracomment>Digital input state</extracomment>
       <translation>已关闭</translation>
     </message>
     <message id="evchargers_status_connected">
@@ -4620,37 +4663,36 @@ Do you want to continue?</source>
       <translation>已连接</translation>
     </message>
     <message id="temperature_slider_current">
-      <location filename="../../components/controls/TemperatureSlider.qml" line="160"/>
+      <location filename="../../components/controls/TemperatureSlider.qml" line="164"/>
       <source>Current</source>
       <extracomment>The current temperature measurement</extracomment>
       <translation>电流</translation>
     </message>
     <message id="common_words_current_transformers">
-      <location filename="../../components/CommonWords.qml" line="146"/>
+      <location filename="../../components/CommonWords.qml" line="152"/>
       <source>Current transformers</source>
       <translation>电流互感器</translation>
     </message>
     <message id="common_words_custom_name">
-      <location filename="../../components/CommonWords.qml" line="149"/>
+      <location filename="../../components/CommonWords.qml" line="155"/>
       <source>Custom name</source>
       <translation>自定义名称</translation>
     </message>
     <message id="common_words_debug">
-      <location filename="../../components/CommonWords.qml" line="159"/>
+      <location filename="../../components/CommonWords.qml" line="165"/>
       <source>Debug</source>
       <extracomment>Title for a menu item which displays debugging information</extracomment>
       <translation>调试</translation>
     </message>
     <message id="common_words_device">
-      <location filename="../../components/CommonWords.qml" line="163"/>
+      <location filename="../../components/CommonWords.qml" line="169"/>
       <source>Device</source>
       <extracomment>Title for device information</extracomment>
       <translation>设备</translation>
     </message>
-    <message id="battery_mode_discharging">
-      <location filename="../../src/enums.cpp" line="34"/>
+    <message id="ev_charging_state_discharging">
+      <location filename="../../pages/ev/EvPage.qml" line="94"/>
       <source>Discharging</source>
-      <extracomment>Battery mode</extracomment>
       <translation>放电</translation>
     </message>
     <message id="wifimodel_disconnected">
@@ -4659,85 +4701,85 @@ Do you want to continue?</source>
       <translation>已断开连接</translation>
     </message>
     <message id="common_words_enable">
-      <location filename="../../components/CommonWords.qml" line="181"/>
+      <location filename="../../components/CommonWords.qml" line="187"/>
       <source>Enable</source>
       <translation>启用</translation>
     </message>
     <message id="common_words_enabled">
-      <location filename="../../components/CommonWords.qml" line="184"/>
+      <location filename="../../components/CommonWords.qml" line="190"/>
       <source>Enabled</source>
       <translation>已启用</translation>
     </message>
     <message id="common_words_energy">
-      <location filename="../../components/CommonWords.qml" line="188"/>
+      <location filename="../../components/CommonWords.qml" line="194"/>
       <source>Energy</source>
       <extracomment>Amount of charged energy</extracomment>
       <translation>能源</translation>
     </message>
     <message id="pvinverter_statusCode_error">
-      <location filename="../../src/enums.cpp" line="334"/>
+      <location filename="../../src/enums.cpp" line="412"/>
       <source>Error</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>错误</translation>
     </message>
     <message id="common_words_error_colon">
-      <location filename="../../components/CommonWords.qml" line="194"/>
+      <location filename="../../components/CommonWords.qml" line="203"/>
       <source>Error:</source>
       <translation>错误：</translation>
     </message>
     <message id="common_words_error_code">
-      <location filename="../../components/CommonWords.qml" line="197"/>
+      <location filename="../../components/CommonWords.qml" line="206"/>
       <source>Error code</source>
       <translation>错误代码</translation>
     </message>
     <message id="common_words_firmware_version">
-      <location filename="../../components/CommonWords.qml" line="214"/>
+      <location filename="../../components/CommonWords.qml" line="223"/>
       <source>Firmware version</source>
       <translation>固件版本</translation>
     </message>
     <message id="digitalinputs_type_generator">
-      <location filename="../../src/enums.cpp" line="241"/>
+      <location filename="../../src/enums.cpp" line="319"/>
       <source>Generator</source>
       <translation>发电机</translation>
     </message>
     <message id="common_words_high_battery_temperature">
-      <location filename="../../components/CommonWords.qml" line="230"/>
+      <location filename="../../components/CommonWords.qml" line="242"/>
       <source>High battery temperature</source>
       <translation>电池温度高</translation>
     </message>
     <message id="common_words_high_level_alarm">
-      <location filename="../../components/CommonWords.qml" line="237"/>
+      <location filename="../../components/CommonWords.qml" line="249"/>
       <source>High level alarm</source>
       <extracomment>An alarm that triggers when the level is too high</extracomment>
       <translation>高液位报警</translation>
     </message>
     <message id="common_words_high_starter_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="240"/>
+      <location filename="../../components/CommonWords.qml" line="252"/>
       <source>High starter battery voltage</source>
       <translation>启动电池电压高</translation>
     </message>
     <message id="common_words_high_temperature">
-      <location filename="../../components/CommonWords.qml" line="243"/>
+      <location filename="../../components/CommonWords.qml" line="255"/>
       <source>High temperature</source>
       <translation>温度高</translation>
     </message>
     <message id="common_words_high_voltage_alarms">
-      <location filename="../../components/CommonWords.qml" line="246"/>
+      <location filename="../../components/CommonWords.qml" line="258"/>
       <source>High voltage alarms</source>
       <translation>高电压报警</translation>
     </message>
     <message id="common_words_history">
-      <location filename="../../components/CommonWords.qml" line="249"/>
+      <location filename="../../components/CommonWords.qml" line="261"/>
       <source>History</source>
       <translation>历史</translation>
     </message>
     <message id="common_words_x_hours">
-      <location filename="../../components/CommonWords.qml" line="252"/>
+      <location filename="../../components/CommonWords.qml" line="264"/>
       <source>%1 Hour(s)</source>
       <translation>%1 小时</translation>
     </message>
     <message id="battery_mode_idle">
-      <location filename="../../src/enums.cpp" line="26"/>
+      <location filename="../../src/enums.cpp" line="27"/>
       <source>Idle</source>
       <extracomment>Battery mode</extracomment>
       <translation>空闲</translation>
@@ -4748,84 +4790,83 @@ Do you want to continue?</source>
       <translation>不激活</translation>
     </message>
     <message id="common_words_ip_address">
-      <location filename="../../components/CommonWords.qml" line="278"/>
+      <location filename="../../components/CommonWords.qml" line="290"/>
       <source>IP address</source>
       <translation>IP地址</translation>
     </message>
     <message id="common_words_low_battery_temperature">
-      <location filename="../../components/CommonWords.qml" line="281"/>
+      <location filename="../../components/CommonWords.qml" line="293"/>
       <source>Low battery temperature</source>
       <translation>电池温度低</translation>
     </message>
     <message id="common_words_low_level_alarm">
-      <location filename="../../components/CommonWords.qml" line="288"/>
+      <location filename="../../components/CommonWords.qml" line="300"/>
       <source>Low level alarm</source>
       <extracomment>An alarm that triggers when the level is too low</extracomment>
       <translation>低液位报警</translation>
     </message>
     <message id="common_words_low_starter_battery_voltage">
-      <location filename="../../components/CommonWords.qml" line="291"/>
+      <location filename="../../components/CommonWords.qml" line="303"/>
       <source>Low starter battery voltage</source>
       <translation>启动电池电压低</translation>
     </message>
     <message id="common_words_low_state_of_charge">
-      <location filename="../../components/CommonWords.qml" line="294"/>
+      <location filename="../../components/CommonWords.qml" line="306"/>
       <source>Low state-of-charge</source>
       <translation>电量低</translation>
     </message>
     <message id="common_words_low_temperature">
-      <location filename="../../components/CommonWords.qml" line="297"/>
+      <location filename="../../components/CommonWords.qml" line="309"/>
       <source>Low temperature</source>
       <translation>温度低</translation>
     </message>
     <message id="common_words_low_voltage_alarms">
-      <location filename="../../components/CommonWords.qml" line="300"/>
+      <location filename="../../components/CommonWords.qml" line="312"/>
       <source>Low voltage alarms</source>
       <translation>低电压报警</translation>
     </message>
     <message id="common_words_manufacturer">
-      <location filename="../../components/CommonWords.qml" line="315"/>
+      <location filename="../../components/CommonWords.qml" line="327"/>
       <source>Manufacturer</source>
       <translation>制造商</translation>
     </message>
     <message id="common_words_maximum_temperature">
-      <location filename="../../components/CommonWords.qml" line="328"/>
+      <location filename="../../components/CommonWords.qml" line="340"/>
       <source>Maximum temperature</source>
       <translation>最高温度</translation>
     </message>
     <message id="common_words_maximum_voltage">
-      <location filename="../../components/CommonWords.qml" line="331"/>
+      <location filename="../../components/CommonWords.qml" line="343"/>
       <source>Maximum voltage</source>
       <translation>最高电压</translation>
     </message>
     <message id="common_words_minimum_temperature">
-      <location filename="../../components/CommonWords.qml" line="341"/>
+      <location filename="../../components/CommonWords.qml" line="353"/>
       <source>Minimum temperature</source>
       <translation>最低温度</translation>
     </message>
     <message id="common_words_minimum_voltage">
-      <location filename="../../components/CommonWords.qml" line="344"/>
+      <location filename="../../components/CommonWords.qml" line="356"/>
       <source>Minimum voltage</source>
       <translation>最低电压</translation>
     </message>
     <message id="common_words_mode">
-      <location filename="../../components/CommonWords.qml" line="347"/>
+      <location filename="../../components/CommonWords.qml" line="359"/>
       <source>Mode</source>
       <translation>模式</translation>
     </message>
     <message id="common_words_model_name">
-      <location filename="../../components/CommonWords.qml" line="350"/>
+      <location filename="../../components/CommonWords.qml" line="362"/>
       <source>Model name</source>
       <translation>型号名称</translation>
     </message>
-    <message id="digitalinputs_state_no">
-      <location filename="../../src/enums.cpp" line="272"/>
+    <message id="generic_input_label_no">
+      <location filename="../../src/genericinput.cpp" line="116"/>
       <source>No</source>
-      <extracomment>Digital input state</extracomment>
       <translation>不</translation>
     </message>
-    <message id="common_words_no_error">
-      <location filename="../../components/CommonWords.qml" line="359"/>
+    <message id="microgrid_error_none">
+      <location filename="../../src/enums.cpp" line="782"/>
       <source>No error</source>
       <translation>无错误</translation>
     </message>
@@ -4835,106 +4876,104 @@ Do you want to continue?</source>
       <translation>不可用</translation>
     </message>
     <message id="common_words_not_connected">
-      <location filename="../../components/CommonWords.qml" line="372"/>
+      <location filename="../../components/CommonWords.qml" line="384"/>
       <source>Not connected</source>
       <translation>未连接</translation>
     </message>
     <message id="common_words_offline">
-      <location filename="../../components/CommonWords.qml" line="382"/>
+      <location filename="../../components/CommonWords.qml" line="394"/>
       <source>Offline</source>
       <translation>离线</translation>
     </message>
-    <message id="digitalinputs_state_ok">
-      <location filename="../../src/enums.cpp" line="288"/>
+    <message id="generic_input_label_ok">
+      <location filename="../../src/genericinput.cpp" line="124"/>
       <source>OK</source>
-      <extracomment>Digital input state</extracomment>
       <translation>正常</translation>
     </message>
-    <message id="switchable_output_on">
-      <location filename="../../src/enums.cpp" line="496"/>
+    <message id="generic_input_label_on">
+      <location filename="../../src/genericinput.cpp" line="114"/>
       <source>On</source>
       <translation>开</translation>
     </message>
     <message id="common_words_online">
-      <location filename="../../components/CommonWords.qml" line="391"/>
+      <location filename="../../components/CommonWords.qml" line="403"/>
       <source>Online</source>
       <translation>在线</translation>
     </message>
-    <message id="digitalinputs_state_open">
-      <location filename="../../src/enums.cpp" line="280"/>
+    <message id="generic_input_label_open">
+      <location filename="../../src/genericinput.cpp" line="120"/>
       <source>Open</source>
-      <extracomment>Digital input open</extracomment>
       <translation>打开</translation>
     </message>
     <message id="common_words_password">
-      <location filename="../../components/CommonWords.qml" line="407"/>
+      <location filename="../../components/CommonWords.qml" line="419"/>
       <source>Password</source>
       <translation>密码</translation>
     </message>
     <message id="common_words_phase">
-      <location filename="../../components/CommonWords.qml" line="414"/>
+      <location filename="../../components/CommonWords.qml" line="426"/>
       <source>Phase</source>
       <translation>相位</translation>
     </message>
     <message id="common_words_press_to_clear">
-      <location filename="../../components/CommonWords.qml" line="424"/>
+      <location filename="../../components/CommonWords.qml" line="436"/>
       <source>Press to clear</source>
       <translation>按下清除</translation>
     </message>
     <message id="common_words_press_to_reset">
-      <location filename="../../components/CommonWords.qml" line="427"/>
+      <location filename="../../components/CommonWords.qml" line="439"/>
       <source>Press to reset</source>
       <translation>按下复位</translation>
     </message>
     <message id="common_words_press_to_scan">
-      <location filename="../../components/CommonWords.qml" line="430"/>
+      <location filename="../../components/CommonWords.qml" line="442"/>
       <source>Press to scan</source>
       <translation>按下即可扫描</translation>
     </message>
     <message id="common_words_pv_inverter">
-      <location filename="../../components/CommonWords.qml" line="436"/>
+      <location filename="../../components/CommonWords.qml" line="448"/>
       <source>PV Inverter</source>
       <translation>光伏逆变器</translation>
     </message>
     <message id="common_words_pv_power">
-      <location filename="../../components/CommonWords.qml" line="440"/>
+      <location filename="../../components/CommonWords.qml" line="452"/>
       <source>PV Power</source>
       <extracomment>Photovoltaic power (for a solar charger or tracker)</extracomment>
       <translation>PV功率</translation>
     </message>
     <message id="common_words_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="443"/>
+      <location filename="../../components/CommonWords.qml" line="455"/>
       <source>Quiet hours</source>
       <translation>安静时间</translation>
     </message>
     <message id="common_words_relay">
-      <location filename="../../components/CommonWords.qml" line="447"/>
+      <location filename="../../components/CommonWords.qml" line="459"/>
       <source>Relay</source>
       <extracomment>Relay switch</extracomment>
       <translation>继电器</translation>
     </message>
     <message id="common_words_reboot">
-      <location filename="../../components/CommonWords.qml" line="456"/>
+      <location filename="../../components/CommonWords.qml" line="468"/>
       <source>Reboot</source>
       <translation>重启</translation>
     </message>
     <message id="common_words_remove">
-      <location filename="../../components/CommonWords.qml" line="459"/>
+      <location filename="../../components/CommonWords.qml" line="471"/>
       <source>Remove</source>
       <translation>删除</translation>
     </message>
-    <message id="switchable_output_running">
-      <location filename="../../src/enums.cpp" line="493"/>
+    <message id="generic_input_label_running">
+      <location filename="../../src/genericinput.cpp" line="130"/>
       <source>Running</source>
       <translation>运行</translation>
     </message>
     <message id="common_words_scanning">
-      <location filename="../../components/CommonWords.qml" line="466"/>
+      <location filename="../../components/CommonWords.qml" line="478"/>
       <source>Scanning %1%</source>
       <translation>正在扫描%1%</translation>
     </message>
     <message id="common_words_serial_number">
-      <location filename="../../components/CommonWords.qml" line="469"/>
+      <location filename="../../components/CommonWords.qml" line="481"/>
       <source>Serial number</source>
       <translation>序列号</translation>
     </message>
@@ -4944,149 +4983,145 @@ Do you want to continue?</source>
       <translation>设置</translation>
     </message>
     <message id="common_words_setup">
-      <location filename="../../components/CommonWords.qml" line="475"/>
+      <location filename="../../components/CommonWords.qml" line="487"/>
       <source>Setup</source>
       <translation>设置</translation>
     </message>
     <message id="common_words_signal_strength">
-      <location filename="../../components/CommonWords.qml" line="478"/>
+      <location filename="../../components/CommonWords.qml" line="490"/>
       <source>Signal strength</source>
       <translation>信号强度</translation>
     </message>
     <message id="pvinverter_statusCode_standby">
-      <location filename="../../src/enums.cpp" line="326"/>
+      <location filename="../../src/enums.cpp" line="404"/>
       <source>Standby</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>待机</translation>
     </message>
     <message id="common_words_start_after_condition_reached_for">
-      <location filename="../../components/CommonWords.qml" line="495"/>
+      <location filename="../../components/CommonWords.qml" line="507"/>
       <source>Start after the condition is reached for</source>
       <translation>在达到条件后启动</translation>
     </message>
     <message id="common_words_start_time">
-      <location filename="../../components/CommonWords.qml" line="498"/>
+      <location filename="../../components/CommonWords.qml" line="510"/>
       <source>Start time</source>
       <translation>启动时间</translation>
     </message>
     <message id="common_words_start_value_during_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="501"/>
+      <location filename="../../components/CommonWords.qml" line="513"/>
       <source>Start value during quiet hours</source>
       <translation>安静时间内的启动值</translation>
     </message>
     <message id="common_words_start_when_warning_is_active_for">
-      <location filename="../../components/CommonWords.qml" line="504"/>
+      <location filename="../../components/CommonWords.qml" line="516"/>
       <source>Start when warning is active for</source>
       <translation>在警报下启动</translation>
     </message>
     <message id="common_words_state_of_charge">
-      <location filename="../../components/CommonWords.qml" line="510"/>
+      <location filename="../../components/CommonWords.qml" line="522"/>
       <source>State of charge</source>
       <translation>充电状态</translation>
     </message>
     <message id="common_words_status">
-      <location filename="../../components/CommonWords.qml" line="513"/>
+      <location filename="../../components/CommonWords.qml" line="525"/>
       <source>Status</source>
       <translation>状态</translation>
     </message>
     <message id="pvinverter_statusCode_startup">
-      <location filename="../../src/enums.cpp" line="318"/>
+      <location filename="../../src/enums.cpp" line="396"/>
       <source>Startup (%1)</source>
       <extracomment>PV inverter status code. %1 = the startup status number</extracomment>
       <translation>启动（%1）</translation>
     </message>
     <message id="common_words_stop_value_during_quiet_hours">
-      <location filename="../../components/CommonWords.qml" line="520"/>
+      <location filename="../../components/CommonWords.qml" line="532"/>
       <source>Stop value during quiet hours</source>
       <translation>安静时间内的停止值</translation>
     </message>
     <message id="common_words_stop_after_the_condition_is_reached_for">
-      <location filename="../../components/CommonWords.qml" line="523"/>
+      <location filename="../../components/CommonWords.qml" line="535"/>
       <source>Stop after the condition is reached for</source>
       <translation>在达到条件后停止</translation>
     </message>
-    <message id="digitalinputs_state_stopped">
-      <location filename="../../src/enums.cpp" line="300"/>
+    <message id="generic_input_label_stopped">
+      <location filename="../../src/genericinput.cpp" line="128"/>
       <source>Stopped</source>
-      <extracomment>Digital input state</extracomment>
       <translation>已停止</translation>
     </message>
-    <message id="common_words_temperature">
-      <location filename="../../components/CommonWords.qml" line="533"/>
+    <message id="generic_input_primaryLabel_temperature">
+      <location filename="../../src/genericinput.cpp" line="177"/>
       <source>Temperature</source>
       <translation>温度</translation>
     </message>
     <message id="common_words_temperature_sensor">
-      <location filename="../../components/CommonWords.qml" line="536"/>
+      <location filename="../../components/CommonWords.qml" line="548"/>
       <source>Temperature sensor</source>
       <translation>温度传感器</translation>
     </message>
     <message id="common_words_today">
-      <location filename="../../components/CommonWords.qml" line="539"/>
+      <location filename="../../components/CommonWords.qml" line="554"/>
       <source>Today</source>
       <translation>今天</translation>
     </message>
     <message id="common_words_total">
-      <location filename="../../components/CommonWords.qml" line="542"/>
+      <location filename="../../components/CommonWords.qml" line="557"/>
       <source>Total</source>
       <translation>合计</translation>
     </message>
     <message id="common_words_tracker">
-      <location filename="../../components/CommonWords.qml" line="549"/>
+      <location filename="../../components/CommonWords.qml" line="564"/>
       <source>Tracker</source>
       <extracomment>Solar tracker</extracomment>
       <translation>跟踪器</translation>
     </message>
-    <message id="page_switchable_output_type">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="92"/>
+    <message id="iochannel_type_buttongroup_type">
+      <location filename="../../components/listitems/ListIOChannelTypeRadioButtonGroup.qml" line="15"/>
       <source>Type</source>
       <translation>类型</translation>
     </message>
     <message id="common_words_unique_id_number">
-      <location filename="../../components/CommonWords.qml" line="555"/>
+      <location filename="../../components/CommonWords.qml" line="570"/>
       <source>Unique Identity Number</source>
       <translation>唯一身份号码</translation>
     </message>
-    <message id="Unknown">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="40"/>
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="109"/>
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="128"/>
+    <message id="ev_charging_state_unknown">
+      <location filename="../../pages/ev/EvPage.qml" line="100"/>
       <source>Unknown</source>
       <translation>未知</translation>
     </message>
     <message id="common_words_vebus_error">
-      <location filename="../../components/CommonWords.qml" line="574"/>
+      <location filename="../../components/CommonWords.qml" line="589"/>
       <source>VE.Bus Error</source>
       <translation>VE.Bus错误</translation>
     </message>
     <message id="common_words_voltage">
-      <location filename="../../components/CommonWords.qml" line="577"/>
+      <location filename="../../components/CommonWords.qml" line="596"/>
       <source>Voltage</source>
       <translation>电压</translation>
     </message>
     <message id="common_words_vrm_instance">
-      <location filename="../../components/CommonWords.qml" line="580"/>
+      <location filename="../../components/CommonWords.qml" line="599"/>
       <source>VRM instance</source>
       <translation>VRM实例</translation>
     </message>
     <message id="common_words_when_warning_is_cleared_stop_after">
-      <location filename="../../components/CommonWords.qml" line="583"/>
+      <location filename="../../components/CommonWords.qml" line="602"/>
       <source>When warning is cleared stop after</source>
       <translation>当警报清除，之后停止</translation>
     </message>
-    <message id="digitalinputs_state_yes">
-      <location filename="../../src/enums.cpp" line="276"/>
+    <message id="generic_input_label_yes">
+      <location filename="../../src/genericinput.cpp" line="118"/>
       <source>Yes</source>
-      <extracomment>Digital input state</extracomment>
       <translation>是</translation>
     </message>
     <message id="common_words_yesterday">
-      <location filename="../../components/CommonWords.qml" line="589"/>
+      <location filename="../../components/CommonWords.qml" line="608"/>
       <source>Yesterday</source>
       <translation>昨天</translation>
     </message>
     <message id="common_words_yield_kwh">
-      <location filename="../../components/CommonWords.qml" line="593"/>
+      <location filename="../../components/CommonWords.qml" line="612"/>
       <source>Yield</source>
       <extracomment>Solar charger yield, in kWh (kilowatt hours)</extracomment>
       <translation>发电</translation>
@@ -5102,7 +5137,7 @@ Do you want to continue?</source>
       <translation>现在开始</translation>
     </message>
     <message id="controlcard_generator_startdialog_timed_run">
-      <location filename="../../components/dialogs/GeneratorStartDialog.qml" line="51"/>
+      <location filename="../../components/dialogs/GeneratorStartDialog.qml" line="47"/>
       <source>Timed run</source>
       <translation>定时运行</translation>
     </message>
@@ -5112,33 +5147,28 @@ Do you want to continue?</source>
       <translation>立即停止</translation>
     </message>
     <message id="controlcard_generator_stopdialog_total_run_time">
-      <location filename="../../components/dialogs/GeneratorStopDialog.qml" line="62"/>
+      <location filename="../../components/dialogs/GeneratorStopDialog.qml" line="56"/>
       <source>Total Run Time</source>
       <translation>总运行时间</translation>
     </message>
     <message id="controlcard_generator_stopdialog_set_time">
-      <location filename="../../components/dialogs/GeneratorStopDialog.qml" line="81"/>
+      <location filename="../../components/dialogs/GeneratorStopDialog.qml" line="75"/>
       <source>Set Time %1</source>
       <extracomment>%1 = the total time (in hours, minutes, seconds) that the generator will run for, as set by the user</extracomment>
       <translation>设置时间%1</translation>
     </message>
     <message id="controlcard_generator_stopdialog_description">
-      <location filename="../../components/dialogs/GeneratorStopDialog.qml" line="97"/>
+      <location filename="../../components/dialogs/GeneratorStopDialog.qml" line="87"/>
       <source>Generator will keep running if an autostart condition is met.</source>
       <translation>如果满足自动启动条件，发电机将继续运行。</translation>
     </message>
-    <message id="controlcard_inverter_charger_mode">
-      <location filename="../../components/dialogs/InverterChargerModeDialog.qml" line="32"/>
-      <source>Inverter / Charger mode</source>
-      <translation>逆变/充电模式</translation>
-    </message>
     <message id="modaldialog_set">
-      <location filename="../../components/dialogs/ModalDialog.qml" line="35"/>
+      <location filename="../../components/dialogs/ModalDialog.qml" line="43"/>
       <source>Set</source>
       <translation>设置</translation>
     </message>
     <message id="common_words_cancel">
-      <location filename="../../components/CommonWords.qml" line="118"/>
+      <location filename="../../components/CommonWords.qml" line="121"/>
       <source>Cancel</source>
       <translation>取消</translation>
     </message>
@@ -5201,103 +5231,103 @@ Do you want to continue?</source>
       <translation>交换</translation>
     </message>
     <message id="pagesettingssupportstate_firmware_online_check_failed">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="156"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="145"/>
       <source>Error while checking for firmware updates</source>
       <translation>检查固件更新时出错</translation>
     </message>
     <message id="settings_firmware_error_during_checking_for_updates">
-      <location filename="../../components/FirmwareUpdate.qml" line="60"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="96"/>
       <source>Error while checking for firmware updates</source>
       <translation type="unfinished">检查固件更新时出错</translation>
     </message>
     <message id="settings_firmware_downloading_and_installing">
-      <location filename="../../components/FirmwareUpdate.qml" line="73"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="110"/>
       <source>Downloading and installing firmware %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>正在下载和安装固件 %1...</translation>
     </message>
     <message id="settings_firmware_installing_firmware">
-      <location filename="../../components/FirmwareUpdate.qml" line="80"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="117"/>
       <source>Installing firmware...</source>
       <translation>正在安装固件...</translation>
     </message>
     <message id="settings_firmware_error_during_installation">
-      <location filename="../../components/FirmwareUpdate.qml" line="85"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="123"/>
       <source>Error during firmware installation</source>
       <translation>固件安装期间出错</translation>
     </message>
     <message id="settings_firmware_no_newer_version_available">
-      <location filename="../../components/FirmwareUpdate.qml" line="195"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="240"/>
       <source>No newer version available</source>
       <translation>无可用新版本</translation>
     </message>
     <message id="settings_firmware_no_firmware_found">
-      <location filename="../../components/FirmwareUpdate.qml" line="198"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="243"/>
       <source>No firmware found</source>
       <translation>未找到固件</translation>
     </message>
     <message id="tank_type_fuel">
-      <location filename="../../src/enums.cpp" line="541"/>
+      <location filename="../../src/enums.cpp" line="716"/>
       <source>Fuel</source>
       <translation>燃料</translation>
     </message>
     <message id="tank_type_fresh_water">
-      <location filename="../../src/enums.cpp" line="544"/>
+      <location filename="../../src/enums.cpp" line="719"/>
       <source>Fresh water</source>
       <translation>清水</translation>
     </message>
     <message id="tank_type_waste_water">
-      <location filename="../../src/enums.cpp" line="547"/>
+      <location filename="../../src/enums.cpp" line="722"/>
       <source>Waste water</source>
       <translation>废水</translation>
     </message>
     <message id="tank_type_live_well">
-      <location filename="../../src/enums.cpp" line="550"/>
+      <location filename="../../src/enums.cpp" line="725"/>
       <source>Live well</source>
       <translation>活鱼池</translation>
     </message>
     <message id="tank_type_oil">
-      <location filename="../../src/enums.cpp" line="553"/>
+      <location filename="../../src/enums.cpp" line="728"/>
       <source>Oil</source>
       <translation>石油</translation>
     </message>
     <message id="tank_type_black_water">
-      <location filename="../../src/enums.cpp" line="556"/>
+      <location filename="../../src/enums.cpp" line="731"/>
       <source>Black water</source>
       <translation>黑水</translation>
     </message>
     <message id="tank_type_gasoline">
-      <location filename="../../src/enums.cpp" line="559"/>
+      <location filename="../../src/enums.cpp" line="734"/>
       <source>Gasoline</source>
       <translation>汽油</translation>
     </message>
     <message id="tank_type_diesel">
-      <location filename="../../src/enums.cpp" line="562"/>
+      <location filename="../../src/enums.cpp" line="737"/>
       <source>Diesel</source>
       <translation>柴油</translation>
     </message>
     <message id="tank_type_lpg">
-      <location filename="../../src/enums.cpp" line="565"/>
+      <location filename="../../src/enums.cpp" line="740"/>
       <source>LPG</source>
       <translation>LPG</translation>
     </message>
     <message id="tank_type_lng">
-      <location filename="../../src/enums.cpp" line="568"/>
+      <location filename="../../src/enums.cpp" line="743"/>
       <source>LNG</source>
       <translation>LNG</translation>
     </message>
     <message id="tank_type_hydraulic_oil">
-      <location filename="../../src/enums.cpp" line="571"/>
+      <location filename="../../src/enums.cpp" line="746"/>
       <source>Hydraulic oil</source>
       <translation>液压油</translation>
     </message>
     <message id="tank_type_raw_water">
-      <location filename="../../src/enums.cpp" line="574"/>
+      <location filename="../../src/enums.cpp" line="749"/>
       <source>Raw water</source>
       <translation>生水</translation>
     </message>
     <message id="listItem_no_access">
-      <location filename="../../components/listitems/core/ListItem.qml" line="102"/>
+      <location filename="../../components/listitems/core/ListSetting.qml" line="78"/>
       <source>Setting locked for access level</source>
       <translation>设置锁定访问级别</translation>
     </message>
@@ -5317,12 +5347,12 @@ Do you want to continue?</source>
       <translation>总览</translation>
     </message>
     <message id="nav_levels">
-      <location filename="../../pages/LevelsPage.qml" line="19"/>
+      <location filename="../../pages/LevelsPage.qml" line="21"/>
       <source>Levels</source>
       <translation>液位</translation>
     </message>
     <message id="common_words_notifications">
-      <location filename="../../components/CommonWords.qml" line="376"/>
+      <location filename="../../components/CommonWords.qml" line="388"/>
       <source>Notifications</source>
       <extracomment>The 'Notifications' page</extracomment>
       <translation>通知</translation>
@@ -5436,7 +5466,7 @@ Do you want to continue?</source>
       <translation type="unfinished">光伏</translation>
     </message>
     <message id="settings_multirs_pv">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="185"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="186"/>
       <source>PV</source>
       <translation>光伏</translation>
     </message>
@@ -5446,7 +5476,7 @@ Do you want to continue?</source>
       <translation>光伏&amp;电池</translation>
     </message>
     <message id="pagesettingssupportstate_firmware_checking">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="153"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="142"/>
       <source>Checking...</source>
       <translation>检查...</translation>
     </message>
@@ -5487,7 +5517,7 @@ Do you want to continue?</source>
       <translation>继电器状态</translation>
     </message>
     <message id="common_words_batteryhistory_reset_history_on_the_monitor_itself">
-      <location filename="../../components/CommonWords.qml" line="453"/>
+      <location filename="../../components/CommonWords.qml" line="465"/>
       <source>Reset history on the monitor itself</source>
       <translation>重置显示器本身的历史记录</translation>
     </message>
@@ -5602,101 +5632,101 @@ Do you want to continue?</source>
       <translation>加仑（英制）</translation>
     </message>
     <message id="charger_history_box_min_voltage">
-      <location filename="../../components/SolarDetailBox.qml" line="58"/>
+      <location filename="../../components/SolarDetailBox.qml" line="72"/>
       <source>Min Voltage</source>
       <translation>最小电压</translation>
     </message>
     <message id="charger_history_max_voltage">
-      <location filename="../../components/SolarHistoryTableView.qml" line="84"/>
+      <location filename="../../components/SolarHistoryTableView.qml" line="96"/>
       <source>Max Voltage</source>
       <translation>最大电压</translation>
     </message>
     <message id="charger_history_box_max_voltage">
-      <location filename="../../components/SolarDetailBox.qml" line="64"/>
+      <location filename="../../components/SolarDetailBox.qml" line="79"/>
       <source>Max Voltage</source>
       <translation type="unfinished">最大电压</translation>
     </message>
     <message id="charger_history_box_max_current">
-      <location filename="../../components/SolarDetailBox.qml" line="70"/>
+      <location filename="../../components/SolarDetailBox.qml" line="86"/>
       <source>Max Current</source>
       <translation>最大电流</translation>
     </message>
     <message id="charger_history_charge_time">
-      <location filename="../../components/SolarDetailBox.qml" line="121"/>
+      <location filename="../../components/SolarDetailBox.qml" line="108"/>
       <source>Charge time</source>
       <extracomment>Statistics for battery charging time</extracomment>
       <translation>充电时间</translation>
     </message>
     <message id="charger_history_box_bulk">
-      <location filename="../../components/SolarDetailBox.qml" line="136"/>
+      <location filename="../../components/SolarDetailBox.qml" line="114"/>
       <source>Bulk</source>
       <extracomment>Battery: time spent in 'Bulk' mode</extracomment>
       <translation type="unfinished">快充</translation>
     </message>
     <message id="charger_history_box_float">
-      <location filename="../../components/SolarDetailBox.qml" line="148"/>
+      <location filename="../../components/SolarDetailBox.qml" line="128"/>
       <source>Float</source>
       <extracomment>Battery: time spent in 'Float' mode</extracomment>
       <translation type="unfinished">浮充</translation>
     </message>
     <message id="charger_history_hr">
-      <location filename="../../components/SolarDetailBox.qml" line="174"/>
+      <location filename="../../components/SolarDetailBox.qml" line="194"/>
       <source>hr</source>
       <extracomment>Abbreviation of "hour"</extracomment>
       <translation type="unfinished">小时</translation>
     </message>
     <message id="solarchargers_state_bulk">
-      <location filename="../../src/enums.cpp" line="359"/>
+      <location filename="../../src/enums.cpp" line="437"/>
       <source>Bulk</source>
       <translation>快充</translation>
     </message>
     <message id="charger_history_box_abs">
-      <location filename="../../components/SolarDetailBox.qml" line="142"/>
+      <location filename="../../components/SolarDetailBox.qml" line="121"/>
       <source>Abs</source>
       <extracomment>Battery: time spent in 'Absorption' mode</extracomment>
       <translation>均充</translation>
     </message>
     <message id="solarchargers_state_float">
-      <location filename="../../src/enums.cpp" line="365"/>
+      <location filename="../../src/enums.cpp" line="443"/>
       <source>Float</source>
       <translation>浮充</translation>
     </message>
     <message id="timeselector_hr">
-      <location filename="../../components/TimeSelector.qml" line="33"/>
+      <location filename="../../components/TimeSelector.qml" line="46"/>
       <source>hr</source>
       <translation>小时</translation>
     </message>
     <message id="charger_history_errors_occurred">
-      <location filename="../../components/SolarHistoryErrorView.qml" line="96"/>
+      <location filename="../../components/SolarHistoryErrorView.qml" line="97"/>
       <source>%1 error(s) occurred</source>
       <translation>发生 %1 个错误</translation>
     </message>
     <message id="charger_history_errors_last">
-      <location filename="../../components/SolarHistoryErrorView.qml" line="120"/>
+      <location filename="../../components/SolarHistoryErrorView.qml" line="121"/>
       <source>Last</source>
       <extracomment>Details of last error</extracomment>
       <translation>最后一个</translation>
     </message>
     <message id="charger_history_errors_2nd_last">
-      <location filename="../../components/SolarHistoryErrorView.qml" line="123"/>
+      <location filename="../../components/SolarHistoryErrorView.qml" line="124"/>
       <source>2nd last</source>
       <extracomment>Details of 2nd last error</extracomment>
       <translation>最后第二个</translation>
     </message>
     <message id="charger_history_errors_3rd_last">
-      <location filename="../../components/SolarHistoryErrorView.qml" line="126"/>
+      <location filename="../../components/SolarHistoryErrorView.qml" line="127"/>
       <source>3rd last</source>
       <extracomment>Details of 3rd last error</extracomment>
       <translation>最后第三个</translation>
     </message>
     <message id="charger_history_errors_4th_last">
-      <location filename="../../components/SolarHistoryErrorView.qml" line="129"/>
+      <location filename="../../components/SolarHistoryErrorView.qml" line="130"/>
       <source>4th last</source>
       <extracomment>Details of 4th last error</extracomment>
       <translation>最后第四个</translation>
     </message>
     <message id="charger_history_max_power">
-      <location filename="../../components/SolarHistoryTableView.qml" line="86"/>
+      <location filename="../../components/SolarHistoryTableView.qml" line="98"/>
       <source>Max Power</source>
       <translation>最大功率</translation>
     </message>
@@ -5776,17 +5806,17 @@ Do you want to continue?</source>
       <translation>MQTT 协议 5 级错误</translation>
     </message>
     <message id="common_words_silence_alarm">
-      <location filename="../../components/CommonWords.qml" line="481"/>
+      <location filename="../../components/CommonWords.qml" line="493"/>
       <source>Silence alarm</source>
       <translation>静音警报</translation>
     </message>
     <message id="vebus_device_page_total_power">
-      <location filename="../../components/ThreePhaseQuantityTable.qml" line="47"/>
+      <location filename="../../components/ThreePhaseQuantityTable.qml" line="53"/>
       <source>Total Power</source>
       <translation>总电力</translation>
     </message>
     <message id="timeselector_min">
-      <location filename="../../components/TimeSelector.qml" line="69"/>
+      <location filename="../../components/TimeSelector.qml" line="72"/>
       <source>min</source>
       <translation>最小</translation>
     </message>
@@ -5846,17 +5876,17 @@ Do you want to continue?</source>
       <translation type="unfinished">已断开连接</translation>
     </message>
     <message id="overview_widget_acloads_title">
-      <location filename="../../components/widgets/AcLoadsWidget.qml" line="17"/>
+      <location filename="../../components/widgets/AcLoadsWidget.qml" line="18"/>
       <source>AC Loads</source>
       <translation>交流负载</translation>
     </message>
     <message id="overview_widget_dcloads_title">
-      <location filename="../../components/widgets/DcLoadsWidget.qml" line="13"/>
+      <location filename="../../components/widgets/DcLoadsWidget.qml" line="14"/>
       <source>DC Loads</source>
       <translation>直流负载</translation>
     </message>
     <message id="overview_widget_evcs_title">
-      <location filename="../../components/widgets/EvcsWidget.qml" line="23"/>
+      <location filename="../../components/widgets/EvcsWidget.qml" line="26"/>
       <source>EVCS</source>
       <extracomment>Abbreviation of Electric Vehicle Charging Station</extracomment>
       <translation>电动汽车充电器</translation>
@@ -5899,51 +5929,49 @@ Do you want to continue?</source>
     </message>
     <message id="tank_description">
       <location filename="../../data/common/TankDescription.qml" line="24"/>
-      <location filename="../../src/device.cpp" line="133"/>
+      <location filename="../../src/device.cpp" line="134"/>
       <source>%1 tank (%2)</source>
       <extracomment>Tank description. %1 = tank type (e.g. Fuel, Fresh water), %2 = tank device instance (a number)</extracomment>
       <translation>%1 箱 (%2)</translation>
     </message>
     <message id="dcMeter_ac_charger">
-      <location filename="../../src/enums.cpp" line="131"/>
+      <location filename="../../src/enums.cpp" line="209"/>
       <source>AC charger</source>
       <translation>交流充电器</translation>
     </message>
     <message id="dcMeter_alternator">
-      <location filename="../../src/enums.cpp" line="134"/>
+      <location filename="../../src/enums.cpp" line="212"/>
       <source>Alternator</source>
       <translation>底盘发电机</translation>
     </message>
     <message id="dcMeter_dc_system">
-      <location filename="../../src/enums.cpp" line="143"/>
+      <location filename="../../src/enums.cpp" line="221"/>
       <source>DC system</source>
       <translation>直流系统</translation>
     </message>
     <message id="dcMeter_fuelcell">
-      <location filename="../../src/enums.cpp" line="152"/>
+      <location filename="../../src/enums.cpp" line="230"/>
       <source>Fuel cell</source>
       <translation>燃料电池</translation>
     </message>
     <message id="dcMeter_shaft_generator">
-      <location filename="../../src/enums.cpp" line="170"/>
+      <location filename="../../src/enums.cpp" line="248"/>
       <source>Shaft generator</source>
       <translation>轴发电机</translation>
     </message>
     <message id="dcMeter_water_generator">
-      <location filename="../../src/enums.cpp" line="176"/>
+      <location filename="../../src/enums.cpp" line="254"/>
       <source>Water generator</source>
       <translation>水力发电机</translation>
     </message>
-    <message id="digitalinputs_state_low">
-      <location filename="../../src/enums.cpp" line="256"/>
+    <message id="generic_input_label_low">
+      <location filename="../../src/genericinput.cpp" line="108"/>
       <source>Low</source>
-      <extracomment>Digital input state</extracomment>
       <translation>低</translation>
     </message>
-    <message id="digitalinputs_state_high">
-      <location filename="../../src/enums.cpp" line="260"/>
+    <message id="generic_input_label_high">
+      <location filename="../../src/genericinput.cpp" line="110"/>
       <source>High</source>
-      <extracomment>Digital input state</extracomment>
       <translation>高</translation>
     </message>
     <message id="ess_state_keep_batteries_charged">
@@ -6047,50 +6075,50 @@ Do you want to continue?</source>
       <translation>手动启动</translation>
     </message>
     <message id="notifications_toast_short_text">
-      <location filename="../../data/mock/MockShortcuts.qml" line="66"/>
+      <location filename="../../data/mock/MockShortcuts.qml" line="65"/>
       <source>Mollitia quis est quas deleniti quibusdam explicabo quasi.</source>
       <translation>Mollitia quis est quas deleniti quibusdam explicabo quasi。</translation>
     </message>
     <message id="notifications_toast_long_text">
-      <location filename="../../data/mock/MockShortcuts.qml" line="68"/>
+      <location filename="../../data/mock/MockShortcuts.qml" line="67"/>
       <source>Mollitia quis est quas deleniti quibusdam explicabo quasi. Voluptatem qui quia et consequuntur.</source>
       <translation>Mollitia quis est quas deleniti quibusdam explicabo quasi。 Voluptatem qui quia et consequuntur。</translation>
     </message>
     <message id="pvinverters_statusCode_boot_loading">
-      <location filename="../../src/enums.cpp" line="330"/>
+      <location filename="../../src/enums.cpp" line="408"/>
       <source>Boot loading</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>启动加载</translation>
     </message>
     <message id="pvinverter_statusCode_running_mppt">
-      <location filename="../../src/enums.cpp" line="338"/>
+      <location filename="../../src/enums.cpp" line="416"/>
       <source>Running (MPPT)</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>运行中(MPPT)</translation>
     </message>
     <message id="pvinverter_running_throttled">
-      <location filename="../../src/enums.cpp" line="342"/>
+      <location filename="../../src/enums.cpp" line="420"/>
       <source>Running (Throttled)</source>
       <extracomment>PV inverter status code</extracomment>
       <translation>运行中（限制）</translation>
     </message>
     <message id="solarchargers_state_fault">
-      <location filename="../../src/enums.cpp" line="356"/>
+      <location filename="../../src/enums.cpp" line="434"/>
       <source>Fault</source>
       <translation>错误</translation>
     </message>
     <message id="solarchargers_state_absorption">
-      <location filename="../../src/enums.cpp" line="362"/>
+      <location filename="../../src/enums.cpp" line="440"/>
       <source>Absorption</source>
       <translation>均充</translation>
     </message>
     <message id="solarchargers_state_storage">
-      <location filename="../../src/enums.cpp" line="368"/>
+      <location filename="../../src/enums.cpp" line="446"/>
       <source>Storage</source>
       <translation>存储</translation>
     </message>
     <message id="solarchargers_state_equalize">
-      <location filename="../../src/enums.cpp" line="371"/>
+      <location filename="../../src/enums.cpp" line="449"/>
       <source>Equalize</source>
       <translation>均衡</translation>
     </message>
@@ -6157,6 +6185,21 @@ Do you want to continue?</source>
     <message id="inverters_state_wakeup">
       <location filename="../../data/System.qml" line="165"/>
       <source>Wake up</source>
+      <translation type="unfinished">唤醒</translation>
+    </message>
+    <message id="inverters_state_system_sustain">
+      <location filename="../../data/System.qml" line="192"/>
+      <source>Sustain</source>
+      <translation type="unfinished">维持</translation>
+    </message>
+    <message id="inverters_state_dynamic_ess">
+      <location filename="../../data/System.qml" line="201"/>
+      <source>Dynamic ESS</source>
+      <translation type="unfinished">动态ESS</translation>
+    </message>
+    <message id="ev_charging_state_wake_up">
+      <location filename="../../pages/ev/EvPage.qml" line="91"/>
+      <source>Wake up</source>
       <translation>唤醒</translation>
     </message>
     <message id="inverters_state_repeatedabsorption">
@@ -6188,11 +6231,6 @@ Do you want to continue?</source>
       <location filename="../../data/System.qml" line="183"/>
       <source>Test</source>
       <translation>测试</translation>
-    </message>
-    <message id="inverters_state_dynamic_ess">
-      <location filename="../../data/System.qml" line="201"/>
-      <source>Dynamic ESS</source>
-      <translation type="unfinished">动态ESS</translation>
     </message>
     <message id="settings_rs_ess_dess">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemEss.qml" line="97"/>
@@ -6239,7 +6277,7 @@ Do you want to continue?</source>
       <translation>短路报警</translation>
     </message>
     <message id="settings_wifi_disable_ap">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="59"/>
       <source>Disable Access Point</source>
       <translation>取消连接热点</translation>
     </message>
@@ -6249,7 +6287,7 @@ Do you want to continue?</source>
       <translation>在不执行调峰的系统中使用此选项。</translation>
     </message>
     <message id="ac-in-genset_auto_start_functionality">
-      <location filename="../../components/PageGensetModel.qml" line="74"/>
+      <location filename="../../components/PageGensetModel.qml" line="75"/>
       <source>Auto start functionality</source>
       <translation>自动启动功能</translation>
     </message>
@@ -6269,7 +6307,7 @@ Do you want to continue?</source>
       <translation>直流输入</translation>
     </message>
     <message id="ess_recommended">
-      <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="73"/>
+      <location filename="../../components/dialogs/ESSMinimumSOCDialog.qml" line="69"/>
       <source>For Lithium batteries, below 10% charge is not recommended. For other battery types, check the datasheet for the minimum level recommended by the manufacturer.</source>
       <translation>对于锂电池，不建议充电低于 10%。对于其他类型的电池，请查看数据表，了解制造商建议的最低电量。</translation>
     </message>
@@ -6279,7 +6317,7 @@ Do you want to continue?</source>
       <translation type="unfinished">自动启动</translation>
     </message>
     <message id="controlcard_generator_autostart_conditions">
-      <location filename="../../pages/controlcards/GeneratorCard.qml" line="70"/>
+      <location filename="../../pages/controlcards/GeneratorCard.qml" line="68"/>
       <source>Start and stop the generator based on the configured autostart conditions.</source>
       <translation>根据配置的自动启动条件启动和停止发电机。</translation>
     </message>
@@ -6294,109 +6332,119 @@ Do you want to continue?</source>
       <translation>发电机组上的远程启动功能被禁用。GX 现在将无法启动或停止发电机组。在发电机组控制面板上启用它。</translation>
     </message>
     <message id="controlcard_inverter">
-      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="23"/>
+      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="24"/>
       <source>Inverter (%1)</source>
       <extracomment>%1 = the inverter name</extracomment>
       <translation>逆变器(%1)</translation>
     </message>
     <message id="controlcard_inverter_charger">
-      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="26"/>
+      <location filename="../../pages/controlcards/InverterChargerCard.qml" line="27"/>
       <source>Inverter / Charger (%1)</source>
       <extracomment>%1 = the inverter/charger name</extracomment>
       <translation>逆变器/充电器 (%1)</translation>
     </message>
     <message id="settings_page_debug_quit_application">
-      <location filename="../../pages/settings/debug/PageDebug.qml" line="36"/>
+      <location filename="../../pages/settings/debug/PageDebug.qml" line="24"/>
       <source>Quit application</source>
       <translation>退出应用程序</translation>
     </message>
     <message id="genset_controller_requires_helper_relay">
-      <location filename="../../components/PageGensetModel.qml" line="61"/>
+      <location filename="../../components/PageGensetModel.qml" line="62"/>
       <source>This genset controller requires a helper relay to be controlled but the helper relay is not configured. Please configure Relay 1 under Settings → Relay to "Connected genset helper relay".</source>
       <translation>该发电机组控制器需要一个辅助继电器来控制，但未配置辅助继电器。请在设置 → 继电器下将继电器 1 配置为 "已连接的发电机组辅助继电器"。</translation>
     </message>
     <message id="settings_page_relay_generator_run_time">
-      <location filename="../../pages/settings/PageGenerator.qml" line="71"/>
+      <location filename="../../pages/settings/PageGenerator.qml" line="79"/>
       <source>Current run time</source>
       <translation>当前运行时间</translation>
     </message>
     <message id="settings_page_genset_generator_run_time">
-      <location filename="../../components/PageGensetModel.qml" line="110"/>
+      <location filename="../../components/PageGensetModel.qml" line="126"/>
       <source>Current run time</source>
       <translation type="unfinished">当前运行时间</translation>
     </message>
     <message id="ac-in-genset_auto_control_status">
-      <location filename="../../components/PageGensetModel.qml" line="118"/>
+      <location filename="../../components/PageGensetModel.qml" line="134"/>
       <source>Control status</source>
       <translation>控制状态</translation>
     </message>
     <message id="ac-in-genset_control_error_code">
-      <location filename="../../components/PageGensetModel.qml" line="138"/>
+      <location filename="../../components/PageGensetModel.qml" line="154"/>
       <source>Control error code</source>
       <translation>控制错误代码</translation>
     </message>
     <message id="ac-in-genset_status">
-      <location filename="../../components/PageGensetModel.qml" line="145"/>
+      <location filename="../../components/PageGensetModel.qml" line="161"/>
       <source>Genset status</source>
       <translation>发电机状态</translation>
     </message>
     <message id="ac-in-genset_error">
-      <location filename="../../components/PageGensetModel.qml" line="156"/>
+      <location filename="../../components/PageGensetModel.qml" line="172"/>
       <source>Genset error codes</source>
       <translation>发电机组错误代码</translation>
     </message>
+    <message id="press-to-clear">
+      <location filename="../../components/PageGensetModel.qml" line="213"/>
+      <source>Press to clear</source>
+      <translation type="unfinished">按下清除</translation>
+    </message>
     <message id="ac-in-genset_remote_start_mode">
-      <location filename="../../components/PageGensetModel.qml" line="228"/>
+      <location filename="../../components/PageGensetModel.qml" line="292"/>
       <source>Remote start mode</source>
       <translation>远程启动模式</translation>
     </message>
     <message id="ac-in-genset_speed">
-      <location filename="../../components/PageGensetModel.qml" line="253"/>
+      <location filename="../../components/PageGensetModel.qml" line="338"/>
       <source>Speed</source>
       <translation type="unfinished">速度</translation>
     </message>
     <message id="ac-in-genset_load">
-      <location filename="../../components/PageGensetModel.qml" line="260"/>
+      <location filename="../../components/PageGensetModel.qml" line="345"/>
       <source>Load</source>
       <translation type="unfinished">负载</translation>
     </message>
     <message id="ac-in-genset_oil_pressure">
-      <location filename="../../components/PageGensetModel.qml" line="268"/>
+      <location filename="../../components/PageGensetModel.qml" line="353"/>
       <source>Oil pressure</source>
       <translation>油压</translation>
     </message>
     <message id="ac-in-genset_oil_temperature">
-      <location filename="../../components/PageGensetModel.qml" line="276"/>
+      <location filename="../../components/PageGensetModel.qml" line="361"/>
       <source>Oil temperature</source>
       <translation>油温</translation>
     </message>
+    <message id="ac-in-genset_coolant_temperature">
+      <location filename="../../components/PageGensetModel.qml" line="369"/>
+      <source>Coolant temperature</source>
+      <translation type="unfinished">冷却剂温度</translation>
+    </message>
     <message id="genset_heatsink_temperature">
-      <location filename="../../components/PageGensetModel.qml" line="306"/>
+      <location filename="../../components/PageGensetModel.qml" line="391"/>
       <source>Heatsink temperature</source>
       <translation>散热器温度</translation>
     </message>
     <message id="page_genset_model_dc_genset_settings">
-      <location filename="../../components/PageGensetModel.qml" line="346"/>
+      <location filename="../../components/PageGensetModel.qml" line="431"/>
       <source>DC genset settings</source>
       <translation>直流发电机组设置</translation>
     </message>
     <message id="genset_charge_voltage">
-      <location filename="../../components/PageGensetModel.qml" line="373"/>
+      <location filename="../../components/PageGensetModel.qml" line="458"/>
       <source>Charge voltage</source>
       <translation type="unfinished">充电电压</translation>
     </message>
     <message id="genset_charge_voltage_controlled_by_bms">
-      <location filename="../../components/PageGensetModel.qml" line="384"/>
+      <location filename="../../components/PageGensetModel.qml" line="469"/>
       <source>The charge voltage is currently controlled by the BMS.</source>
       <translation>充电电压目前由 BMS 控制。</translation>
     </message>
     <message id="genset_charge_current_limit">
-      <location filename="../../components/PageGensetModel.qml" line="390"/>
+      <location filename="../../components/PageGensetModel.qml" line="475"/>
       <source>Charge current limit</source>
       <translation>充电电流限制</translation>
     </message>
     <message id="common_words_bms_control_info">
-      <location filename="../../components/CommonWords.qml" line="104"/>
+      <location filename="../../components/CommonWords.qml" line="107"/>
       <source>BMS control is enabled automatically when a BMS is present. Reset it if the system configuration changed or if there is no BMS present.</source>
       <translation>如果有BMS，BMS控制将自动启用。如果系统配置已更改或没有BMS，则进行重置。</translation>
     </message>
@@ -6475,18 +6523,23 @@ Do you want to continue?</source>
       <source>Cells per battery</source>
       <translation>每个电池单元</translation>
     </message>
+    <message id="lynxionsystem_balancing">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="92"/>
+      <source>Balancing</source>
+      <translation type="unfinished">均衡中</translation>
+    </message>
     <message id="lynxionsystem_balancer_status">
       <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="100"/>
       <source>Balancer status</source>
       <translation>均衡器状态</translation>
     </message>
-    <message id="lynxionsystem_balancer_balanced">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="107"/>
+    <message id="battery_status_balanced">
+      <location filename="../../src/enums.cpp" line="70"/>
       <source>Balanced</source>
       <translation>已均衡</translation>
     </message>
-    <message id="lynxionsystem_balancer_imbalance">
-      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="113"/>
+    <message id="battery_status_imbalance">
+      <location filename="../../src/enums.cpp" line="74"/>
       <source>Imbalance</source>
       <translation>不均衡</translation>
     </message>
@@ -6552,12 +6605,12 @@ Do you want to continue?</source>
       <translation>发电机</translation>
     </message>
     <message id="page_meteo_wind_direction">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="72"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="90"/>
       <source>Wind direction</source>
       <translation>风向</translation>
     </message>
     <message id="page_meteo_daily_yield">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="89"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="107"/>
       <source>Today's yield</source>
       <translation>今日发电</translation>
     </message>
@@ -6593,7 +6646,7 @@ Do you want to continue?</source>
       <translation>发电机停止时触发警告</translation>
     </message>
     <message id="settings_page_relay_generator_auto_start_enabled">
-      <location filename="../../pages/settings/PageGenerator.qml" line="53"/>
+      <location filename="../../pages/settings/PageGenerator.qml" line="54"/>
       <source>Autostart functionality</source>
       <translation>自动启动功能</translation>
     </message>
@@ -6633,7 +6686,7 @@ Do you want to continue?</source>
       <translation>服务计时器已重置</translation>
     </message>
     <message id="settings_generator_function_not_enabled">
-      <location filename="../../pages/settings/PageRelayGenerator.qml" line="25"/>
+      <location filename="../../pages/settings/PageRelayGenerator.qml" line="24"/>
       <source>Generator start/stop function is not enabled, go to relay settings and set function to "Genset start/stop"</source>
       <translation>发电机启动/停止功能未启用，进入继电器设置，将功能设置为 "发电机组启动/停止"。</translation>
     </message>
@@ -6663,7 +6716,7 @@ Do you want to continue?</source>
       <translation>正常运行，但无服务（500 kbit/s）</translation>
     </message>
     <message id="pagesettingsgeneral_data_units">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="142"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="141"/>
       <source>Data units</source>
       <translation>数据单位</translation>
     </message>
@@ -6702,13 +6755,13 @@ Do you want to continue?</source>
       <source>Start page</source>
       <translation type="unfinished">启动页</translation>
     </message>
-    <message id="settings_display_boat_page">
+    <message id="pagesettingsgeneral_boat_page">
       <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="135"/>
       <source>Boat page</source>
       <translation type="unfinished">船只页面</translation>
     </message>
     <message id="settings_display_minmax">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="148"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="147"/>
       <source>Minimum and maximum gauge ranges</source>
       <translation>最小和最大量程</translation>
     </message>
@@ -6718,80 +6771,65 @@ Do you want to continue?</source>
       <translation>启动页</translation>
     </message>
     <message id="settings_display_onscreen_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="170"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="169"/>
       <source>User interface</source>
       <translation>用户界面</translation>
     </message>
     <message id="settings_display_remote_console_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="172"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="171"/>
       <source>User interface (Remote Console)</source>
       <translation>用户界面（远程控制台）</translation>
     </message>
     <message id="settings_display_classic_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="179"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="178"/>
       <source>Classic UI</source>
       <translation>传统界面</translation>
     </message>
     <message id="settings_display_new_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="184"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="183"/>
       <source>New UI</source>
       <translation>新的用户界面</translation>
     </message>
     <message id="settings_restarting_app">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="215"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="214"/>
       <source>Restarting application...</source>
       <translation>正在重新启动应用程序...</translation>
     </message>
     <message id="settings_app_restarted">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="218"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="217"/>
       <source>%1 updated</source>
       <extracomment>%1 = The name of the setting being updated</extracomment>
       <translation>%1 已更新</translation>
     </message>
     <message id="settings_switch_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="222"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="221"/>
       <source>User interface will switch to %1.</source>
       <extracomment>%1 = the UI version that the system is switching to</extracomment>
       <translation>用户界面将切换到 %1。</translation>
     </message>
     <message id="settings_has_switched_ui">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="226"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="225"/>
       <source>%1 is set to %2</source>
       <extracomment>%1 = The name of the setting being updated %2 = the UI version that the system has switched to.</extracomment>
       <translation>%1 设置为 %2</translation>
     </message>
-    <message id="pagesettingsgeneral_modificationchecks_unsupported_device">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="50"/>
-      <source>Unsupported GX device</source>
-      <translation type="unfinished">不支持的GX 设备</translation>
-    </message>
-    <message id="pagesettingsgeneral_modificationchecks_clean">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="55"/>
-      <source>Clean</source>
-      <translation type="unfinished">清洁</translation>
-    </message>
-    <message id="pagesettingsgeneral_firmware">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="112"/>
-      <source>Firmware</source>
-      <translation type="unfinished">固件</translation>
-    </message>
     <message id="pagesettingsgeneral_access_and_security">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="124"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="126"/>
       <source>Access &amp; Security</source>
       <translation>访问与安全</translation>
     </message>
-    <message id="pagesettingsgeneral_preferences">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="130"/>
+    <message id="pagecontrollableloads_preferences">
+      <location filename="../../pages/settings/PageControllableLoads.qml" line="103"/>
       <source>Preferences</source>
       <translation>偏好</translation>
     </message>
     <message id="pagesettingsgeneral_display_and_appearance">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="135"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="137"/>
       <source>Display &amp; Appearance</source>
       <translation>展示与外观</translation>
     </message>
     <message id="pagesettingsgeneral_alarms_and_feedback">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="141"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="143"/>
       <source>Alarms &amp; Feedback</source>
       <translation>警报和反馈</translation>
     </message>
@@ -7014,52 +7052,52 @@ Do you want to continue?</source>
       <translation type="unfinished">密码长度至少为 8 个字符</translation>
     </message>
     <message id="settings_root_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="269"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="266"/>
       <source>Root password</source>
       <translation>根密码</translation>
     </message>
     <message id="settings_root_enter_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="272"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="269"/>
       <source>Enter password</source>
       <translation type="unfinished">输入密码</translation>
     </message>
     <message id="settings_root_too_short_password">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="277"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="274"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation type="unfinished">密码长度至少为 8 个字符</translation>
     </message>
     <message id="settings_root_password_changed_to">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="283"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="280"/>
       <source>Root password changed to %1</source>
       <translation>根密码更改为 %1</translation>
     </message>
     <message id="settings_enable_ssh_on_lan">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="290"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="287"/>
       <source>Enable SSH on LAN</source>
       <translation>在局域网上启用 SSH</translation>
     </message>
     <message id="settings_logout">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="321"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="318"/>
       <source>Logout</source>
       <translation>登出</translation>
     </message>
     <message id="settings_logout_now">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="323"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="320"/>
       <source>Log out now</source>
       <translation>立即退出</translation>
     </message>
     <message id="settings_logout_dialog_title">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="335"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="332"/>
       <source>Log out?</source>
       <translation>注销？</translation>
     </message>
     <message id="settings_logout_dialog_description">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="337"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="334"/>
       <source>This will disconnect all local network connections.</source>
       <translation>这将断开所有本地网络连接。</translation>
     </message>
     <message id="settings_logout_dialog_accept_text">
-      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="339"/>
+      <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="336"/>
       <source>Log out</source>
       <translation>登出</translation>
     </message>
@@ -7069,17 +7107,17 @@ Do you want to continue?</source>
       <translation>启用状态 LED</translation>
     </message>
     <message id="settings_page_debug_application_version">
-      <location filename="../../pages/settings/debug/PageDebug.qml" line="28"/>
+      <location filename="../../pages/settings/debug/PageDebug.qml" line="16"/>
       <source>Application version</source>
       <translation>应用版本</translation>
     </message>
     <message id="settings_page_debug_quit">
-      <location filename="../../pages/settings/debug/PageDebug.qml" line="39"/>
+      <location filename="../../pages/settings/debug/PageDebug.qml" line="27"/>
       <source>Quit</source>
       <translation>退出</translation>
     </message>
     <message id="settings_page_debug_display_cpu_usage">
-      <location filename="../../pages/settings/debug/PageDebug.qml" line="68"/>
+      <location filename="../../pages/settings/debug/PageDebug.qml" line="56"/>
       <source>Display CPU usage</source>
       <translation>显示 CPU 使用率</translation>
     </message>
@@ -7089,27 +7127,27 @@ Do you want to continue?</source>
       <translation>热身和降温</translation>
     </message>
     <message id="page_settings_generator_stop_time">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="79"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="88"/>
       <source>Generator stop time</source>
       <translation>发电机停止时间</translation>
     </message>
     <message id="page_settings_generator_detect_generator_at_dc">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="127"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="138"/>
       <source>Alarm if DC generator is not providing power</source>
       <translation>直流发电机不供电时发出警报</translation>
     </message>
     <message id="page_settings_generator_detect_at_dc_in_generator_set">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="133"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="144"/>
       <source>An alarm will be triggered when the DC genset does not reach at least 5A within the first 5 minutes after starting</source>
       <translation>当直流发电机组在启动后的最初 5 分钟内电流未达到至少 5A 时将触发警报</translation>
     </message>
     <message id="page_settings_generator_alarm_when_not_in_auto_start">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="141"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="152"/>
       <source>Alarm when generator is not in autostart mode</source>
       <translation>发电机未进入自动启动模式时报警</translation>
     </message>
     <message id="page_settings_generator_alarm_info">
-      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="147"/>
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="158"/>
       <source>An alarm will be triggered when autostart function is left disabled for more than 10 minutes</source>
       <translation>如果自动启动功能被禁用超过 10 分钟，则会触发警报</translation>
     </message>
@@ -7174,17 +7212,17 @@ Do you want to continue?</source>
       <translation>最大系统输出电流（每相）</translation>
     </message>
     <message id="settings_ess_self_consumption_battery">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="71"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="93"/>
       <source>Self-consumption from battery</source>
       <translation>从电池自消耗</translation>
     </message>
     <message id="settings_ess_all_system_loads">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="76"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="98"/>
       <source>All system loads</source>
       <translation>所有系统负载</translation>
     </message>
     <message id="settings_ess_only_critical_loads">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="78"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="100"/>
       <source>Only critical loads</source>
       <translation>只限关键负载</translation>
     </message>
@@ -7199,62 +7237,62 @@ Do you want to continue?</source>
       <translation>活动 (%1)</translation>
     </message>
     <message id="pagesettingsintegrations_pv_inverters">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="38"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="23"/>
       <source>PV Inverters</source>
       <translation>光伏逆变器</translation>
     </message>
     <message id="pagesettingsintegrations_energy_meters">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="44"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="29"/>
       <source>Energy meters via RS485</source>
       <translation>通过 RS485 连接的电能表</translation>
     </message>
     <message id="pagesettingsintegrations_modbus_devices">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="50"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="35"/>
       <source>Modbus Devices</source>
       <translation>Modbus 设备</translation>
     </message>
     <message id="pagesettingsintegrations_bluetooth_sensors">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="62"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="59"/>
       <source>Bluetooth Sensors</source>
       <translation>蓝牙感应</translation>
     </message>
     <message id="pagesettingsintegrations_physical_io">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="74"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="71"/>
       <source>Physical I/O</source>
       <translation>物理输入/输出</translation>
     </message>
     <message id="pagesettingsintegrations_tank_and_temperature_sensors">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="84"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="81"/>
       <source>Tank and Temperature Sensors</source>
       <translation>水箱和温度传感器</translation>
     </message>
     <message id="pagesettingsintegrations_relays">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="118"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="115"/>
       <source>Relays</source>
       <translation>继电器</translation>
     </message>
     <message id="pagesettingsintegrations_digital_io">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="132"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="129"/>
       <source>Digital I/O</source>
       <translation>数字输入/输出</translation>
     </message>
     <message id="pagesettingsintegrations_server_applications">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="194"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="191"/>
       <source>Server Applications</source>
       <translation>服务器应用</translation>
     </message>
     <message id="settings_large_victron_community">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="274"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="271"/>
       <source>Victron Community</source>
       <translation type="unfinished">Victron社区</translation>
     </message>
     <message id="pagesettingssupportstate_modbus_tcp_server">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="453"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="444"/>
       <source>Modbus TCP Server</source>
       <translation>Modbus TCP 服务器</translation>
     </message>
     <message id="pagesettingsintegrations_venus_os_large_features">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="217"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="214"/>
       <source>Venus OS Large Features</source>
       <translation>Venus OS 大版本功能</translation>
     </message>
@@ -7280,7 +7318,7 @@ Do you want to continue?</source>
       <translation>全部</translation>
     </message>
     <message id="vebus_device_restart_vebus_system_restart_confirmation_title">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="233"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="238"/>
       <source>Are you sure?</source>
       <translation>你确定吗？</translation>
     </message>
@@ -7288,6 +7326,11 @@ Do you want to continue?</source>
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="77"/>
       <source>Changing this setting to Read-only or Off will lock you out.</source>
       <translation>将此设置更改为只读或关闭将锁定您。</translation>
+    </message>
+    <message id="settings_last_contact">
+      <location filename="../../pages/settings/PageSettingsLogger.qml" line="155"/>
+      <source>Last contact</source>
+      <translation type="unfinished">上次联系</translation>
     </message>
     <message id="settings_connection_status">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="199"/>
@@ -7345,7 +7388,7 @@ Do you want to continue?</source>
       <translation>如果没有选择 "设置/常规 "中的 "网络安全配置文件"，则无法切换固件版本。</translation>
     </message>
     <message id="pagesettingsconnectivity_mobile_network">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="71"/>
       <source>Mobile Network</source>
       <translation>移动网络</translation>
     </message>
@@ -7360,32 +7403,32 @@ Do you want to continue?</source>
       <translation type="unfinished">自动</translation>
     </message>
     <message id="pagesettingssystem_ac_system">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="60"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="75"/>
       <source>AC System</source>
       <translation>空调系统</translation>
     </message>
     <message id="pagesettingssystem_inputs_and_monitoring">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="62"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="77"/>
       <source>Inputs and Monitoring</source>
       <translation>输入和监测</translation>
     </message>
     <message id="pagesettingssystem_energy_storage_System">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="69"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="84"/>
       <source>Energy Storage System</source>
       <translation>储能系统</translation>
     </message>
     <message id="pagesettingssystem_batteries_and_bms">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="81"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="96"/>
       <source>Batteries and Battery Management Systems (BMS)</source>
       <translation>电池和电池管理系统 (BMS)</translation>
     </message>
     <message id="settings_system_charge_control">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="87"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="102"/>
       <source>Charge Control</source>
       <translation>充电控制</translation>
     </message>
     <message id="pagesettingssystem_distributed_voltage_and_current_control">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="89"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="104"/>
       <source>Distributed Voltage and Current Control (DVCC)</source>
       <translation>分布式电压和电流控制 (DVCC)</translation>
     </message>
@@ -7430,7 +7473,7 @@ Do you want to continue?</source>
       <translation>如果有电网表，系统将自动显示逆变器/充电器输入端的负载。输出端负载始终显示。</translation>
     </message>
     <message id="settings_system_has_dc_system">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="97"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="111"/>
       <source>Display DC Loads</source>
       <translation>显示直流负载</translation>
     </message>
@@ -7440,7 +7483,7 @@ Do you want to continue?</source>
       <translation>电池测量</translation>
     </message>
     <message id="settings_system_system_status">
-      <location filename="../../pages/settings/PageSettingsSystem.qml" line="102"/>
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="116"/>
       <source>System status</source>
       <translation>系统状态</translation>
     </message>
@@ -7460,72 +7503,77 @@ Do you want to continue?</source>
       <translation>VE.Can示例# %1</translation>
     </message>
     <message id="settings_tz_antarctica">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="232"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="254"/>
       <source>Antarctica</source>
       <translation>南极洲</translation>
     </message>
     <message id="settings_tz_arctic">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="238"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="260"/>
       <source>Arctic</source>
       <translation>北极洲</translation>
     </message>
     <message id="settings_all_connected_devices">
-      <location filename="../../pages/SettingsPage.qml" line="32"/>
+      <location filename="../../pages/SettingsPage.qml" line="40"/>
       <source>All connected devices</source>
       <translation>所有连接设备</translation>
     </message>
+    <message id="settings_general">
+      <location filename="../../pages/SettingsPage.qml" line="48"/>
+      <source>General</source>
+      <translation type="unfinished">通用</translation>
+    </message>
     <message id="settings_connectivity">
-      <location filename="../../pages/SettingsPage.qml" line="50"/>
+      <location filename="../../pages/SettingsPage.qml" line="59"/>
       <source>Connectivity</source>
       <translation>连接性</translation>
     </message>
     <message id="settings_ethernet_wifi_bluetooth_vecan">
-      <location filename="../../pages/SettingsPage.qml" line="52"/>
+      <location filename="../../pages/SettingsPage.qml" line="61"/>
       <source>Ethernet, Wi-Fi, Bluetooth, VE.Can</source>
       <translation>以太网、Wi-Fi、蓝牙、VE.Can</translation>
     </message>
     <message id="settings_vrm">
-      <location filename="../../pages/SettingsPage.qml" line="59"/>
+      <location filename="../../pages/SettingsPage.qml" line="68"/>
       <source>VRM</source>
       <translation>VRM</translation>
     </message>
     <message id="settings_remote_monitoring_portal">
-      <location filename="../../pages/SettingsPage.qml" line="61"/>
+      <location filename="../../pages/SettingsPage.qml" line="70"/>
       <source>Remote monitoring portal</source>
       <translation>远程监控门户</translation>
     </message>
     <message id="settings_advanced">
-      <location filename="../../pages/SettingsPage.qml" line="68"/>
+      <location filename="../../pages/SettingsPage.qml" line="77"/>
       <source>Advanced</source>
       <translation type="unfinished">高级</translation>
     </message>
     <message id="settings_integrations">
-      <location filename="../../pages/SettingsPage.qml" line="73"/>
+      <location filename="../../pages/SettingsPage.qml" line="82"/>
       <source>Integrations</source>
       <translation type="unfinished">集成</translation>
     </message>
     <message id="pagesettingssupportstate_integrations">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="448"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="438"/>
       <source>Integrations</source>
       <translation>集成</translation>
     </message>
     <message id="settings_acdcsystem_ess_dvcc_battery">
-      <location filename="../../pages/SettingsPage.qml" line="84"/>
+      <location filename="../../pages/SettingsPage.qml" line="93"/>
       <source>AC/DC system, ESS, DVCC, Battery...</source>
       <translation>交流/直流系统、ESS、DVCC、电池...</translation>
     </message>
     <message id="settings_debug_and_develop">
-      <location filename="../../pages/SettingsPage.qml" line="91"/>
+      <location filename="../../pages/SettingsPage.qml" line="100"/>
       <source>Debug &amp; Develop</source>
       <translation>调试和开发</translation>
     </message>
     <message id="settings_profilingtools_debugstatistics_appversion">
-      <location filename="../../pages/SettingsPage.qml" line="93"/>
+      <location filename="../../pages/SettingsPage.qml" line="102"/>
       <source>Profiling tools, debug statistics, app version...</source>
       <translation>剖析工具、调试统计、应用程序版本...</translation>
     </message>
     <message id="settings_system_setup">
-      <location filename="../../pages/SettingsPage.qml" line="82"/>
+      <location filename="../../pages/SettingsPage.qml" line="91"/>
       <source>System Setup</source>
       <translation>系统设置</translation>
     </message>
@@ -7573,12 +7621,12 @@ Do you want to continue?</source>
       <translation type="unfinished">系统发电</translation>
     </message>
     <message id="settings_multirs_total_yield">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="63"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="64"/>
       <source>Total yield</source>
       <translation>总计发电</translation>
     </message>
     <message id="settings_multirs_system_yield">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="71"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="72"/>
       <source>System yield</source>
       <translation>系统发电</translation>
     </message>
@@ -7588,13 +7636,13 @@ Do you want to continue?</source>
       <translation>高温报警</translation>
     </message>
     <message id="charger_history_last_x_days">
-      <location filename="../../pages/solar/SolarHistoryPage.qml" line="71"/>
+      <location filename="../../pages/solar/SolarHistoryPage.qml" line="73"/>
       <source>Last %1 days</source>
       <extracomment>%1 = number of days of solar history that will be shown</extracomment>
       <translation>最近 %1 天</translation>
     </message>
     <message id="common_words_bms_controlled">
-      <location filename="../../components/CommonWords.qml" line="107"/>
+      <location filename="../../components/CommonWords.qml" line="110"/>
       <source>BMS controlled</source>
       <translation>BMS控制</translation>
     </message>
@@ -7604,27 +7652,27 @@ Do you want to continue?</source>
       <translation>充电电池</translation>
     </message>
     <message id="vebus_device_update_firmware">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="133"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="138"/>
       <source>This feature requires firmware version 400 or higher. Contact your installer to update your Multi/Quattro.</source>
       <translation>该功能需要 400 或更高版本的固件。请联系安装人员更新 Multi/Quattro。</translation>
     </message>
     <message id="vebus_device_charger_not_ready">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="139"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="144"/>
       <source>Charger not ready, equalization cannot be started</source>
       <translation>充电器未准备就绪，均衡无法启动</translation>
     </message>
     <message id="vebus_device_no_equalisation_during_bulk">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="143"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="148"/>
       <source>Equalization cannot be triggered during bulk charge state</source>
       <translation>在快充状态下无法触发均衡功能</translation>
     </message>
     <message id="vebus_device_restart_vebus_system_restart_confirmation_description">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="235"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="240"/>
       <source>Restarting the VE.Bus system will reset any inverter on the bus, and result in a loss of power to their outputs.</source>
       <translation>重启 VE.Bus 系统将重置总线上的任何逆变器，并导致其输出功率损失。</translation>
     </message>
     <message id="common_words_dynamic_power_limit">
-      <location filename="../../components/CommonWords.qml" line="600"/>
+      <location filename="../../components/CommonWords.qml" line="619"/>
       <source>Dynamic power limit</source>
       <translation>动态功率限制</translation>
     </message>
@@ -7634,292 +7682,326 @@ Do you want to continue?</source>
       <translation>添加设备</translation>
     </message>
     <message id="controlcard_generator_autostarted">
-      <location filename="../../components/CommonWords.qml" line="86"/>
+      <location filename="../../components/CommonWords.qml" line="89"/>
       <source>Auto-started • %1</source>
       <translation>自动启动 - %1</translation>
     </message>
     <message id="common_words_battery">
-      <location filename="../../components/CommonWords.qml" line="89"/>
+      <location filename="../../components/CommonWords.qml" line="92"/>
       <source>Battery</source>
       <translation type="unfinished">电池</translation>
     </message>
     <message id="common_words_boat_page">
-      <location filename="../../components/CommonWords.qml" line="111"/>
+      <location filename="../../components/CommonWords.qml" line="114"/>
       <source>Boat</source>
       <extracomment>The 'Boat' page</extracomment>
       <translation type="unfinished">船</translation>
     </message>
     <message id="common_words_brief_page">
-      <location filename="../../components/CommonWords.qml" line="115"/>
+      <location filename="../../components/CommonWords.qml" line="118"/>
       <source>Brief</source>
       <extracomment>The 'Brief' page</extracomment>
       <translation type="unfinished">概要</translation>
     </message>
     <message id="common_words_charging">
-      <location filename="../../components/CommonWords.qml" line="125"/>
+      <location filename="../../components/CommonWords.qml" line="128"/>
       <source>Charging</source>
       <extracomment>"Charging" state</extracomment>
       <translation type="unfinished">充电</translation>
     </message>
     <message id="common_words_closed_status">
-      <location filename="../../components/CommonWords.qml" line="133"/>
+      <location filename="../../components/CommonWords.qml" line="136"/>
       <source>Closed</source>
       <extracomment>Status is 'closed'</extracomment>
       <translation type="unfinished">已关闭</translation>
     </message>
     <message id="common_words_connected">
-      <location filename="../../components/CommonWords.qml" line="139"/>
+      <location filename="../../components/CommonWords.qml" line="142"/>
       <source>Connected</source>
       <translation type="unfinished">已连接</translation>
     </message>
+    <message id="common_words_confirm">
+      <location filename="../../components/CommonWords.qml" line="145"/>
+      <source>Confirm</source>
+      <translation type="unfinished">是的，退订</translation>
+    </message>
     <message id="common_words_current_amps">
-      <location filename="../../components/CommonWords.qml" line="143"/>
+      <location filename="../../components/CommonWords.qml" line="149"/>
       <source>Current</source>
       <extracomment>Electric current, as measured in Amps</extracomment>
       <translation type="unfinished">电流</translation>
     </message>
     <message id="common_words_daily_history">
-      <location filename="../../components/CommonWords.qml" line="152"/>
+      <location filename="../../components/CommonWords.qml" line="158"/>
       <source>Daily history</source>
       <translation>每日历史记录</translation>
     </message>
     <message id="common_words_disabled">
-      <location filename="../../components/CommonWords.qml" line="169"/>
+      <location filename="../../components/CommonWords.qml" line="175"/>
       <source>Disabled</source>
       <translation type="unfinished">已禁用</translation>
     </message>
     <message id="common_words_discharging">
-      <location filename="../../components/CommonWords.qml" line="172"/>
+      <location filename="../../components/CommonWords.qml" line="178"/>
       <source>Discharging</source>
       <translation type="unfinished">放电</translation>
     </message>
     <message id="common_words_disconnected">
-      <location filename="../../components/CommonWords.qml" line="175"/>
+      <location filename="../../components/CommonWords.qml" line="181"/>
       <source>Disconnected</source>
       <translation type="unfinished">已断开连接</translation>
     </message>
     <message id="common_words_error">
-      <location filename="../../components/CommonWords.qml" line="191"/>
+      <location filename="../../components/CommonWords.qml" line="200"/>
       <source>Error</source>
       <translation type="unfinished">错误</translation>
     </message>
     <message id="common_words_error_not_a_number">
-      <location filename="../../components/CommonWords.qml" line="200"/>
+      <location filename="../../components/CommonWords.qml" line="209"/>
       <source>'%1' is not a number.</source>
       <translation>%1 "不是数字。</translation>
     </message>
+    <message id="common_words_firmware_type_normal">
+      <location filename="../../components/CommonWords.qml" line="216"/>
+      <source>Normal</source>
+      <extracomment>The firmware type for normal images</extracomment>
+      <translation type="unfinished">正常</translation>
+    </message>
     <message id="common_words_generator">
-      <location filename="../../components/CommonWords.qml" line="217"/>
+      <location filename="../../components/CommonWords.qml" line="229"/>
       <source>Generator</source>
       <translation type="unfinished">发电机</translation>
     </message>
     <message id="common_words_gx_device_relays">
-      <location filename="../../components/CommonWords.qml" line="227"/>
+      <location filename="../../components/CommonWords.qml" line="239"/>
       <source>GX device relays</source>
       <translation type="unfinished">GX 设备继电器</translation>
     </message>
     <message id="common_words_idle">
-      <location filename="../../components/CommonWords.qml" line="255"/>
+      <location filename="../../components/CommonWords.qml" line="267"/>
       <source>Idle</source>
       <translation type="unfinished">空闲</translation>
     </message>
     <message id="common_words_inactive_status">
-      <location filename="../../components/CommonWords.qml" line="262"/>
+      <location filename="../../components/CommonWords.qml" line="274"/>
       <source>Inactive</source>
       <extracomment>Status is 'inactive'</extracomment>
       <translation type="unfinished">不激活</translation>
     </message>
     <message id="common_words_input_current_limit">
-      <location filename="../../components/CommonWords.qml" line="265"/>
+      <location filename="../../components/CommonWords.qml" line="277"/>
       <source>Input current limit</source>
       <translation>输入限制电流</translation>
     </message>
     <message id="common_words_inverter_charger">
-      <location filename="../../components/CommonWords.qml" line="268"/>
+      <location filename="../../components/CommonWords.qml" line="280"/>
       <source>Inverter / Charger</source>
       <translation type="unfinished">逆变器/充电器</translation>
     </message>
     <message id="common_words_inverter_mode_eco">
-      <location filename="../../components/CommonWords.qml" line="272"/>
+      <location filename="../../components/CommonWords.qml" line="284"/>
       <source>Eco</source>
       <extracomment>Inverter 'Eco' mode</extracomment>
       <translation>节能</translation>
     </message>
+    <message id="common_words_manual">
+      <location filename="../../components/CommonWords.qml" line="315"/>
+      <source>Manual</source>
+      <translation type="unfinished">手动</translation>
+    </message>
     <message id="common_words_manual_stop">
-      <location filename="../../components/CommonWords.qml" line="312"/>
+      <location filename="../../components/CommonWords.qml" line="324"/>
       <source>Manual stop</source>
       <translation>手动停止</translation>
     </message>
     <message id="common_words_maximum_current">
-      <location filename="../../components/CommonWords.qml" line="322"/>
+      <location filename="../../components/CommonWords.qml" line="334"/>
       <source>Maximum current</source>
       <translation>最大电流</translation>
     </message>
     <message id="common_words_maximum_power">
-      <location filename="../../components/CommonWords.qml" line="325"/>
+      <location filename="../../components/CommonWords.qml" line="337"/>
       <source>Maximum power</source>
       <translation>最大功率</translation>
     </message>
     <message id="common_words_minimum_current">
-      <location filename="../../components/CommonWords.qml" line="338"/>
+      <location filename="../../components/CommonWords.qml" line="350"/>
       <source>Minimum current</source>
       <translation>最小电流</translation>
     </message>
     <message id="common_words_no">
-      <location filename="../../components/CommonWords.qml" line="356"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="433"/>
+      <location filename="../../components/CommonWords.qml" line="368"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="248"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="423"/>
       <source>No</source>
       <translation type="unfinished">不</translation>
     </message>
+    <message id="common_words_no_error">
+      <location filename="../../components/CommonWords.qml" line="371"/>
+      <source>No error</source>
+      <translation type="unfinished">无错误</translation>
+    </message>
     <message id="common_words_none_option">
-      <location filename="../../components/CommonWords.qml" line="362"/>
+      <location filename="../../components/CommonWords.qml" line="374"/>
       <source>None</source>
       <translation type="unfinished">无</translation>
     </message>
     <message id="common_words_none_errors">
-      <location filename="../../components/CommonWords.qml" line="366"/>
+      <location filename="../../components/CommonWords.qml" line="378"/>
       <source>None</source>
       <extracomment>Indicates there are no errors</extracomment>
       <translation type="unfinished">无</translation>
     </message>
     <message id="common_words_not_available">
-      <location filename="../../components/CommonWords.qml" line="369"/>
+      <location filename="../../components/CommonWords.qml" line="381"/>
       <source>Not available</source>
       <translation type="unfinished">不可用</translation>
     </message>
     <message id="common_words_off">
-      <location filename="../../components/CommonWords.qml" line="379"/>
+      <location filename="../../components/CommonWords.qml" line="391"/>
       <source>Off</source>
       <translation type="unfinished">关</translation>
     </message>
     <message id="common_words_ok">
-      <location filename="../../components/CommonWords.qml" line="385"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="41"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="45"/>
+      <location filename="../../components/CommonWords.qml" line="397"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="36"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="40"/>
       <source>OK</source>
       <translation type="unfinished">正常</translation>
     </message>
     <message id="common_words_on">
-      <location filename="../../components/CommonWords.qml" line="388"/>
+      <location filename="../../components/CommonWords.qml" line="400"/>
       <source>On</source>
       <translation type="unfinished">开</translation>
     </message>
     <message id="common_words_open_status">
-      <location filename="../../components/CommonWords.qml" line="395"/>
+      <location filename="../../components/CommonWords.qml" line="407"/>
       <source>Open</source>
       <extracomment>Status is 'open'</extracomment>
       <translation type="unfinished">打开</translation>
     </message>
     <message id="common_words_open_circuit">
-      <location filename="../../components/CommonWords.qml" line="398"/>
+      <location filename="../../components/CommonWords.qml" line="410"/>
       <source>Open circuit</source>
       <translation>开路</translation>
     </message>
     <message id="common_words_overall_history">
-      <location filename="../../components/CommonWords.qml" line="401"/>
+      <location filename="../../components/CommonWords.qml" line="413"/>
       <source>Overall history</source>
       <translation>总体历史记录</translation>
     </message>
+    <message id="common_words_power_watts">
+      <location filename="../../components/CommonWords.qml" line="423"/>
+      <source>Power</source>
+      <extracomment>Electric power, as measured in Watts</extracomment>
+      <translation type="unfinished">功率</translation>
+    </message>
+    <message id="common_words_position_ac">
+      <location filename="../../components/CommonWords.qml" line="430"/>
+      <source>Position</source>
+      <extracomment>AC input or output position</extracomment>
+      <translation type="unfinished">位置</translation>
+    </message>
     <message id="common_words_running_status">
-      <location filename="../../components/CommonWords.qml" line="463"/>
+      <location filename="../../components/CommonWords.qml" line="475"/>
       <source>Running</source>
       <extracomment>Status = "running"</extracomment>
       <translation type="unfinished">运行</translation>
     </message>
     <message id="common_words_settings">
-      <location filename="../../components/CommonWords.qml" line="472"/>
+      <location filename="../../components/CommonWords.qml" line="484"/>
       <source>Settings</source>
       <translation type="unfinished">设置</translation>
     </message>
     <message id="common_words_soc">
-      <location filename="../../components/CommonWords.qml" line="485"/>
+      <location filename="../../components/CommonWords.qml" line="497"/>
       <source>SOC %1</source>
       <extracomment>State of charge (as a percentage). %1 = the SOC value</extracomment>
       <translation>SOC %1%</translation>
     </message>
     <message id="common_words_speed">
-      <location filename="../../components/CommonWords.qml" line="489"/>
+      <location filename="../../components/CommonWords.qml" line="501"/>
       <source>Speed</source>
       <extracomment>A speed measurement value</extracomment>
       <translation type="unfinished">速度</translation>
     </message>
     <message id="common_words_standby">
-      <location filename="../../components/CommonWords.qml" line="492"/>
+      <location filename="../../components/CommonWords.qml" line="504"/>
       <source>Standby</source>
       <translation type="unfinished">待机</translation>
     </message>
     <message id="common_words_startup_status">
-      <location filename="../../components/CommonWords.qml" line="517"/>
+      <location filename="../../components/CommonWords.qml" line="529"/>
       <source>Startup (%1)</source>
       <extracomment>Status = "start up". %1 = the startup status number</extracomment>
       <translation type="unfinished">启动（%1）</translation>
     </message>
     <message id="common_words_stopped">
-      <location filename="../../components/CommonWords.qml" line="526"/>
+      <location filename="../../components/CommonWords.qml" line="538"/>
       <source>Stopped</source>
       <translation type="unfinished">已停止</translation>
     </message>
+    <message id="common_words_temperature">
+      <location filename="../../components/CommonWords.qml" line="545"/>
+      <source>Temperature</source>
+      <translation type="unfinished">温度</translation>
+    </message>
     <message id="common_words_type">
-      <location filename="../../components/CommonWords.qml" line="552"/>
+      <location filename="../../components/CommonWords.qml" line="567"/>
       <source>Type</source>
       <translation type="unfinished">类型</translation>
     </message>
     <message id="common_words_unknown_status">
-      <location filename="../../components/CommonWords.qml" line="559"/>
+      <location filename="../../components/CommonWords.qml" line="574"/>
+      <location filename="../../src/enums.cpp" line="838"/>
       <source>Unknown</source>
       <extracomment>Status = "unknown"</extracomment>
       <translation type="unfinished">未知</translation>
     </message>
     <message id="common_words_yes">
-      <location filename="../../components/CommonWords.qml" line="586"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="159"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="431"/>
+      <location filename="../../components/CommonWords.qml" line="605"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="148"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="248"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="421"/>
       <source>Yes</source>
       <translation type="unfinished">是</translation>
     </message>
     <message id="common_words_yield_today">
-      <location filename="../../components/CommonWords.qml" line="597"/>
+      <location filename="../../components/CommonWords.qml" line="616"/>
       <source>Yield Today</source>
       <extracomment>Solar charger yield for today, in kWh (kilowatt hours)</extracomment>
       <translation>今日发电量</translation>
     </message>
     <message id="common_words_format_error">
-      <location filename="../../components/CommonWords.qml" line="641"/>
+      <location filename="../../components/CommonWords.qml" line="660"/>
       <source>#%1 %2</source>
       <extracomment>%1 = error number, %2 = text description of this error</extracomment>
       <translation>#%1 %2</translation>
     </message>
     <message id="common_words_bms_disabled_go_to_redetect">
-      <location filename="../../components/CommonWords.qml" line="667"/>
+      <location filename="../../components/CommonWords.qml" line="686"/>
       <source>%1 %2</source>
       <extracomment>%1 = the translated text of common_words_setting_disabled_when_bms_connected %2 = the translated text of common_words_go_to_redetect_system</extracomment>
       <translation type="unfinished">%1 %2</translation>
     </message>
     <message id="common_words_dmc_disabled_go_to_redetect">
-      <location filename="../../components/CommonWords.qml" line="678"/>
+      <location filename="../../components/CommonWords.qml" line="697"/>
       <source>%1 %2</source>
       <extracomment>%1 = the translated text of common_words_setting_disabled_when_dmc_connected %2 = the translated text of common_words_go_to_redetect_system</extracomment>
       <translation type="unfinished">%1 %2</translation>
     </message>
     <message id="generator_start_dialog_will_stop_in_x">
-      <location filename="../../components/dialogs/GeneratorStartDialog.qml" line="79"/>
+      <location filename="../../components/dialogs/GeneratorStartDialog.qml" line="87"/>
       <source>Generator will stop in %1 unless autostart conditions are enabled that keep it running.</source>
       <translation>发电机将在 %1 时停止，除非启用了自动启动条件，使其继续运行。</translation>
     </message>
     <message id="generator_start_dialog_will_run_until_manually_stopped">
-      <location filename="../../components/dialogs/GeneratorStartDialog.qml" line="81"/>
+      <location filename="../../components/dialogs/GeneratorStartDialog.qml" line="89"/>
       <source>Generator will run until manually stopped, unless autostart conditions are enabled that keep it running.</source>
       <translation>发电机将一直运行，直到手动停止，除非启用了自动启动条件使其继续运行。</translation>
     </message>
-    <message id="controlcard_inverter_mode">
-      <location filename="../../components/dialogs/InverterChargerModeDialog.qml" line="30"/>
-      <source>Inverter mode</source>
-      <translation>逆变模式</translation>
-    </message>
     <message id="settings_firmware_installed_rebooting">
-      <location filename="../../components/FirmwareUpdate.qml" line="89"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="128"/>
       <source>Firmware installed, device rebooting</source>
       <translation>固件已安装，设备正在重启</translation>
     </message>
@@ -7927,11 +8009,6 @@ Do you want to continue?</source>
       <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
       <source>Confirm</source>
       <translation>是的，退订</translation>
-    </message>
-    <message id="nav_brief_close_side_panel_high_cpu">
-      <location filename="../../pages/BriefPage.qml" line="396"/>
-      <source>System load high, closing the side panel to reduce CPU load</source>
-      <translation>系统负载高，关闭侧板以减少 CPU 负载</translation>
     </message>
     <message id="cgwacs_battery_schedule_monthly">
       <location filename="../../components/listitems/ListChargeSchedule.qml" line="23"/>
@@ -7979,108 +8056,273 @@ Do you want to continue?</source>
       <translation>热泵</translation>
     </message>
     <message id="digitalinputs_touch_input_control">
-      <location filename="../../src/enums.cpp" line="244"/>
+      <location filename="../../src/enums.cpp" line="322"/>
       <source>Touch input control</source>
       <translation>触摸输入控制</translation>
     </message>
     <message id="switchable_output_overtemperature">
-      <location filename="../../src/enums.cpp" line="483"/>
+      <location filename="../../src/enums.cpp" line="657"/>
       <source>Over temperature</source>
       <translation>温度过高</translation>
     </message>
     <message id="switch_state_temperature_warning">
-      <location filename="../../src/enums.cpp" line="391"/>
+      <location filename="../../src/enums.cpp" line="469"/>
       <source>Temperature warning</source>
       <translation>温度警告</translation>
     </message>
+    <message id="battery_mode_charging">
+      <location filename="../../src/enums.cpp" line="31"/>
+      <source>Charging</source>
+      <extracomment>Battery mode</extracomment>
+      <translation type="unfinished">充电</translation>
+    </message>
+    <message id="battery_mode_discharging">
+      <location filename="../../src/enums.cpp" line="35"/>
+      <source>Discharging</source>
+      <extracomment>Battery mode</extracomment>
+      <translation type="unfinished">放电</translation>
+    </message>
     <message id="cardinalDirection_short_north">
-      <location filename="../../src/enums.cpp" line="69"/>
+      <location filename="../../src/enums.cpp" line="146"/>
       <source>N</source>
       <extracomment>Abbreviation of "North" direction</extracomment>
       <translation type="unfinished">北</translation>
     </message>
     <message id="cardinalDirection_short_south">
-      <location filename="../../src/enums.cpp" line="73"/>
+      <location filename="../../src/enums.cpp" line="150"/>
       <source>S</source>
       <extracomment>Abbreviation of "South" direction</extracomment>
-      <translation type="unfinished">用</translation>
+      <translation type="unfinished">南</translation>
     </message>
     <message id="cardinalDirection_short_east">
-      <location filename="../../src/enums.cpp" line="77"/>
+      <location filename="../../src/enums.cpp" line="154"/>
       <source>E</source>
       <extracomment>Abbreviation of "East" direction</extracomment>
-      <translation type="unfinished">邮箱</translation>
+      <translation type="unfinished">东</translation>
     </message>
     <message id="cardinalDirection_short_west">
-      <location filename="../../src/enums.cpp" line="81"/>
+      <location filename="../../src/enums.cpp" line="158"/>
       <source>W</source>
       <extracomment>Abbreviation of "West" direction</extracomment>
       <translation type="unfinished">西</translation>
     </message>
     <message id="dcMeter_bilge_pump">
-      <location filename="../../src/enums.cpp" line="137"/>
+      <location filename="../../src/enums.cpp" line="215"/>
       <source>Bilge pump</source>
       <translation type="unfinished">舱底泵</translation>
     </message>
+    <message id="digitalinputs_type_disabled">
+      <location filename="../../src/enums.cpp" line="292"/>
+      <source>Disabled</source>
+      <translation type="unfinished">已禁用</translation>
+    </message>
+    <message id="digitalinputs_type_bilgepump">
+      <location filename="../../src/enums.cpp" line="301"/>
+      <source>Bilge pump</source>
+      <translation type="unfinished">舱底泵</translation>
+    </message>
+    <message id="digitalinputs_state_low">
+      <location filename="../../src/enums.cpp" line="334"/>
+      <source>Low</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">低</translation>
+    </message>
+    <message id="digitalinputs_state_high">
+      <location filename="../../src/enums.cpp" line="338"/>
+      <source>High</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">高</translation>
+    </message>
+    <message id="digitalinputs_state_off">
+      <location filename="../../src/enums.cpp" line="342"/>
+      <source>Off</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">关</translation>
+    </message>
+    <message id="digitalinputs_state_on">
+      <location filename="../../src/enums.cpp" line="346"/>
+      <source>On</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">开</translation>
+    </message>
+    <message id="digitalinputs_state_no">
+      <location filename="../../src/enums.cpp" line="350"/>
+      <source>No</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">不</translation>
+    </message>
+    <message id="digitalinputs_state_yes">
+      <location filename="../../src/enums.cpp" line="354"/>
+      <source>Yes</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">是</translation>
+    </message>
+    <message id="digitalinputs_state_open">
+      <location filename="../../src/enums.cpp" line="358"/>
+      <source>Open</source>
+      <extracomment>Digital input open</extracomment>
+      <translation type="unfinished">打开</translation>
+    </message>
+    <message id="digitalinputs_state_closed">
+      <location filename="../../src/enums.cpp" line="362"/>
+      <source>Closed</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">已关闭</translation>
+    </message>
+    <message id="digitalinputs_state_ok">
+      <location filename="../../src/enums.cpp" line="366"/>
+      <source>OK</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">正常</translation>
+    </message>
+    <message id="digitalinputs_state_alarm">
+      <location filename="../../src/enums.cpp" line="370"/>
+      <source>Alarm</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">报警</translation>
+    </message>
+    <message id="digitalinputs_state_running">
+      <location filename="../../src/enums.cpp" line="374"/>
+      <source>Running</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">运行</translation>
+    </message>
+    <message id="digitalinputs_state_stopped">
+      <location filename="../../src/enums.cpp" line="378"/>
+      <source>Stopped</source>
+      <extracomment>Digital input state</extracomment>
+      <translation type="unfinished">已停止</translation>
+    </message>
+    <message id="pvinverter_statusCode_running">
+      <location filename="../../src/enums.cpp" line="400"/>
+      <source>Running</source>
+      <extracomment>PV inverter status code</extracomment>
+      <translation type="unfinished">运行</translation>
+    </message>
+    <message id="solarchargers_state_off">
+      <location filename="../../src/enums.cpp" line="431"/>
+      <source>Off</source>
+      <translation type="unfinished">关</translation>
+    </message>
+    <message id="solarchargers_state_external_control">
+      <location filename="../../src/enums.cpp" line="452"/>
+      <source>External control</source>
+      <translation type="unfinished">外部控制</translation>
+    </message>
+    <message id="switch_state_running">
+      <location filename="../../src/enums.cpp" line="463"/>
+      <source>Running</source>
+      <translation type="unfinished">运行</translation>
+    </message>
+    <message id="switch_state_over_temperature">
+      <location filename="../../src/enums.cpp" line="466"/>
+      <source>Over temperature</source>
+      <translation type="unfinished">温度过高</translation>
+    </message>
     <message id="switch_state_channel_fault">
-      <location filename="../../src/enums.cpp" line="394"/>
+      <location filename="../../src/enums.cpp" line="472"/>
       <source>Channel Fault</source>
       <translation>通道故障</translation>
     </message>
     <message id="switch_state_channel_tripped">
-      <location filename="../../src/enums.cpp" line="397"/>
+      <location filename="../../src/enums.cpp" line="475"/>
       <source>Channel Tripped</source>
       <translation>通道跳闸</translation>
     </message>
     <message id="switch_state_under_voltage">
-      <location filename="../../src/enums.cpp" line="400"/>
+      <location filename="../../src/enums.cpp" line="478"/>
       <source>Under voltage</source>
       <translation>低电压</translation>
     </message>
+    <message id="generic_input_status_on">
+      <location filename="../../src/enums.cpp" line="508"/>
+      <source>On</source>
+      <translation type="unfinished">开</translation>
+    </message>
+    <message id="generic_input_status_fault">
+      <location filename="../../src/enums.cpp" line="511"/>
+      <source>Fault</source>
+      <translation type="unfinished">错误</translation>
+    </message>
     <message id="switchable_output_momentary">
-      <location filename="../../src/enums.cpp" line="411"/>
+      <location filename="../../src/enums.cpp" line="526"/>
       <source>Momentary</source>
       <translation>瞬时</translation>
     </message>
     <message id="switchable_output_dimmable">
-      <location filename="../../src/enums.cpp" line="417"/>
+      <location filename="../../src/enums.cpp" line="532"/>
       <source>Dimmable</source>
       <translation>可调光</translation>
     </message>
     <message id="switchable_output_slave_of">
-      <location filename="../../src/enums.cpp" line="427"/>
+      <location filename="../../src/enums.cpp" line="542"/>
       <source>Slave of %1</source>
       <translation>%1 的从属设备</translation>
     </message>
+    <message id="switchable_output_slave">
+      <location filename="../../src/enums.cpp" line="545"/>
+      <source>Slave</source>
+      <translation type="unfinished">从机</translation>
+    </message>
+    <message id="switchable_output_function_disabled">
+      <location filename="../../src/enums.cpp" line="584"/>
+      <source>Disabled</source>
+      <translation type="unfinished">已禁用</translation>
+    </message>
+    <message id="switchable_output_function_alarm">
+      <location filename="../../src/enums.cpp" line="587"/>
+      <source>Alarm</source>
+      <translation type="unfinished">报警</translation>
+    </message>
+    <message id="switchable_output_function_temperature">
+      <location filename="../../src/enums.cpp" line="599"/>
+      <source>Temperature</source>
+      <translation type="unfinished">温度</translation>
+    </message>
+    <message id="switchable_output_running">
+      <location filename="../../src/enums.cpp" line="625"/>
+      <source>Running</source>
+      <translation type="unfinished">运行</translation>
+    </message>
     <message id="switchable_output_not_running">
-      <location filename="../../src/enums.cpp" line="470"/>
+      <location filename="../../src/enums.cpp" line="632"/>
       <source>Not running</source>
       <translation type="unfinished">不运行</translation>
     </message>
     <message id="switchable_output_off">
-      <location filename="../../src/enums.cpp" line="473"/>
+      <location filename="../../src/enums.cpp" line="648"/>
       <source>Off</source>
       <translation type="unfinished">关</translation>
     </message>
     <message id="switchable_output_powered">
-      <location filename="../../src/enums.cpp" line="477"/>
+      <location filename="../../src/enums.cpp" line="651"/>
       <source>Powered</source>
       <translation>供电</translation>
     </message>
     <message id="switchable_output_tripped">
-      <location filename="../../src/enums.cpp" line="480"/>
+      <location filename="../../src/enums.cpp" line="654"/>
       <source>Tripped</source>
       <translation>绊倒</translation>
     </message>
     <message id="switchable_output_fault">
-      <location filename="../../src/enums.cpp" line="489"/>
+      <location filename="../../src/enums.cpp" line="663"/>
       <source>Fault</source>
       <translation type="unfinished">错误</translation>
     </message>
+    <message id="switchable_output_on">
+      <location filename="../../src/enums.cpp" line="666"/>
+      <source>On</source>
+      <translation type="unfinished">开</translation>
+    </message>
     <message id="switchable_output_short">
-      <location filename="../../src/enums.cpp" line="500"/>
+      <location filename="../../src/enums.cpp" line="669"/>
       <source>Short</source>
       <translation>短</translation>
+    </message>
+    <message id="switchable_output_unknown_status">
+      <location filename="../../src/enums.cpp" line="708"/>
+      <source>Unknown status</source>
+      <translation type="unfinished">未知状态</translation>
     </message>
     <message id="ess_state_optimized_without_batterylife_button">
       <location filename="../../data/Ess.qml" line="36"/>
@@ -8158,17 +8400,17 @@ Do you want to continue?</source>
       <translation>逆变器过载条件</translation>
     </message>
     <message id="application_content_touch_input_on">
-      <location filename="../../ApplicationContent.qml" line="54"/>
+      <location filename="../../ApplicationContent.qml" line="57"/>
       <source>Touch input on</source>
       <translation>触摸输入打开</translation>
     </message>
     <message id="application_content_touch_input_off">
-      <location filename="../../ApplicationContent.qml" line="56"/>
+      <location filename="../../ApplicationContent.qml" line="59"/>
       <source>Touch input off</source>
       <translation>触摸输入关闭</translation>
     </message>
     <message id="application_content_touch_input_disabled">
-      <location filename="../../ApplicationContent.qml" line="70"/>
+      <location filename="../../ApplicationContent.qml" line="73"/>
       <source>Touch input disabled</source>
       <translation>触摸输入已禁用</translation>
     </message>
@@ -8190,17 +8432,17 @@ Do you want to continue?</source>
       <translation>ESS %1</translation>
     </message>
     <message id="systemreason_charge_discharge_disabled">
-      <location filename="../../components/SystemReason.qml" line="47"/>
+      <location filename="../../components/SystemReason.qml" line="49"/>
       <source>ESS %1 Charge/Discharge Disabled</source>
       <translation>ESS %1 充电/放电禁用</translation>
     </message>
     <message id="systemreason_charge_disabled">
-      <location filename="../../components/SystemReason.qml" line="50"/>
+      <location filename="../../components/SystemReason.qml" line="52"/>
       <source>ESS %1 Charge Disabled</source>
       <translation>ESS %1 充电禁用</translation>
     </message>
     <message id="systemreason_discharge_disabled">
-      <location filename="../../components/SystemReason.qml" line="53"/>
+      <location filename="../../components/SystemReason.qml" line="55"/>
       <source>ESS %1 Discharge Disabled</source>
       <translation>ESS %1 放电禁用</translation>
     </message>
@@ -8241,19 +8483,19 @@ If the generator is currently running due to a autostart condition, disabling au
       <source>This current limit is fixed in the system configuration. It cannot be adjusted.</source>
       <translation>该电流限制在系统配置中是固定的，无法调整。</translation>
     </message>
-    <message id="dc_input">
-      <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>
+    <message id="settings_switch_channel_input">
+      <location filename="../../pages/settings/devicelist/PageSwitch.qml" line="79"/>
       <source>Input</source>
-      <extracomment>DC input measurement values</extracomment>
+      <extracomment>Configure channel to use "input" direction</extracomment>
       <translation>输入</translation>
     </message>
     <message id="inverter_mode_not_adjustable">
-      <location filename="../../components/listitems/ListInverterChargerModeButton.qml" line="31"/>
+      <location filename="../../components/listitems/ListInverterChargerModeButton.qml" line="43"/>
       <source>The mode is fixed in the system configuration. It cannot be adjusted.</source>
       <translation>该模式在系统配置中是固定的，无法调整。</translation>
     </message>
     <message id="listlink_open_link">
-      <location filename="../../components/listitems/ListLink.qml" line="25"/>
+      <location filename="../../components/listitems/ListLink.qml" line="68"/>
       <source>Open link</source>
       <translation>打开链接</translation>
     </message>
@@ -8298,7 +8540,7 @@ If the generator is currently running due to a autostart condition, disabling au
       <translation>%1 "不是有效的端口号。请使用 0-65535 之间的数字。</translation>
     </message>
     <message id="overview_widget_essential_loads_title">
-      <location filename="../../components/widgets/EssentialLoadsWidget.qml" line="13"/>
+      <location filename="../../components/widgets/EssentialLoadsWidget.qml" line="16"/>
       <source>Essential Loads</source>
       <translation>基本负载</translation>
     </message>
@@ -8352,17 +8594,17 @@ If the generator is currently running due to a autostart condition, disabling au
       <translation>电池清单</translation>
     </message>
     <message id="firmware_installed_build_gx_device_updated">
-      <location filename="../../pages/DialogLayer.qml" line="56"/>
+      <location filename="../../pages/DialogLayer.qml" line="73"/>
       <source>GX device has been updated</source>
       <translation>GX 设备已更新</translation>
     </message>
     <message id="firmware_installed_build_page_will_reload">
-      <location filename="../../pages/DialogLayer.qml" line="58"/>
+      <location filename="../../pages/DialogLayer.qml" line="75"/>
       <source>Page will automatically reload in ten seconds to load the latest version.</source>
       <translation>页面将在十秒后自动重新加载，以加载最新版本。</translation>
     </message>
     <message id="controlcard_evcs_title">
-      <location filename="../../pages/controlcards/EVCSCard.qml" line="21"/>
+      <location filename="../../pages/controlcards/EVCSCard.qml" line="22"/>
       <source>EVCS (%1)</source>
       <extracomment>%1 = the EVCS name</extracomment>
       <translation>EVCS (%1)</translation>
@@ -8451,6 +8693,11 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
         <numerusform>%n 分钟后</numerusform>
       </translation>
     </message>
+    <message id="settings_startpage_none">
+      <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="53"/>
+      <source>None</source>
+      <translation type="unfinished">无</translation>
+    </message>
     <message id="settings_startpage_description">
       <location filename="../../pages/settings/PageSettingsDisplayStartPage.qml" line="58"/>
       <source>Go to this page when the application starts.</source>
@@ -8472,17 +8719,17 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <translation>静止一分钟后，如果当前页面在此列表中，则选择该页面作为启动页。</translation>
     </message>
     <message id="settings_ess_buying">
-      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="32"/>
+      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="40"/>
       <source>Buying</source>
       <translation>买入</translation>
     </message>
     <message id="settings_ess_selling">
-      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="34"/>
+      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="42"/>
       <source>Selling</source>
       <translation>卖出</translation>
     </message>
     <message id="settings_ess_target_soc">
-      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="42"/>
+      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="50"/>
       <source>Target SOC</source>
       <translation>目标SOC</translation>
     </message>
@@ -8497,7 +8744,7 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <translation>保存的设备</translation>
     </message>
     <message id="common_words_discovered_devices">
-      <location filename="../../components/CommonWords.qml" line="178"/>
+      <location filename="../../components/CommonWords.qml" line="184"/>
       <source>Discovered devices</source>
       <translation>发现的设备</translation>
     </message>
@@ -8536,18 +8783,13 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <source>%1 is not a valid unit number. Use a number between 1-247.</source>
       <translation>%1 不是有效的单位编号。请使用 1-247 之间的数字。</translation>
     </message>
-    <message id="settings_modbus_no_devices_saved">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="39"/>
-      <source>No Modbus devices saved</source>
-      <translation>未保存 Modbus 设备</translation>
-    </message>
     <message id="page_settings_modbus_device_number">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="49"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="65"/>
       <source>Device %1</source>
       <translation>设备 %1</translation>
     </message>
     <message id="page_settings_modbus_device_remove_device">
-      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="110"/>
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="99"/>
       <source>Remove Modbus device?</source>
       <translation>删除 Modbus 设备？</translation>
     </message>
@@ -8557,53 +8799,53 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <translation>未发现 Modbus 设备</translation>
     </message>
     <message id="pagesettingssupportstate_support_state_unsupported_gx_device">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="38"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="33"/>
       <source>Unsupported GX device</source>
       <translation>不支持的GX 设备</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_unknown">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="146"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="135"/>
       <source>Unknown: %1</source>
       <translation>未知：%1</translation>
     </message>
     <message id="pagesettingssupportstate_firmware_no_available">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="163"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="152"/>
       <source>No, %1 is available</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>否，%1 可用</translation>
     </message>
     <message id="pagesettingssupportstate_device_model">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="235"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="224"/>
       <source>Device model</source>
       <translation>设备型号</translation>
     </message>
     <message id="pagesettingssupportstate_hq_serial_number">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="243"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="232"/>
       <source>HQ serial number</source>
       <translation>HQ序列号</translation>
     </message>
     <message id="pagesettingssupportstate_data_free_space">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="250"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="240"/>
       <source>Data partition free space</source>
       <translation>数据分区可用空间</translation>
     </message>
     <message id="pagesettingssupportstate_installed_firmware_version">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="357"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="347"/>
       <source>Installed firmware version</source>
       <translation>安装固件版本</translation>
     </message>
     <message id="pagesettingssupportstate_installed_image_type">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="363"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="353"/>
       <source>Installed image type</source>
       <translation>安装的图像类型</translation>
     </message>
     <message id="pagesettingssupportstate_user_ssh_key_present">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="257"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="247"/>
       <source>User SSH key present</source>
       <translation>存在用户 SSH 密钥</translation>
     </message>
     <message id="pagesettingssupportstate_modifications">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="263"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="253"/>
       <source>Modifications</source>
       <translation>修改</translation>
     </message>
@@ -8637,16 +8879,6 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="49"/>
       <source>Motor RPM</source>
       <translation>电机RPM</translation>
-    </message>
-    <message id="devicelist_motordrive_motortemperature">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="72"/>
-      <source>Motor Temperature</source>
-      <translation>电机温度</translation>
-    </message>
-    <message id="devicelist_motordrive_controllertemperature">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="86"/>
-      <source>Controller Temperature</source>
-      <translation>控制器温度</translation>
     </message>
     <message id="cycle_history_active">
       <location filename="../../pages/settings/devicelist/dc-in/ListCycleHistoryItem.qml" line="18"/>
@@ -8720,15 +8952,10 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <translation>最低电池电压</translation>
     </message>
     <message id="settings_multirs_ac_out_phase">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="157"/>
+      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="158"/>
       <source>AC out %1</source>
       <extracomment>%1 = phase name (e.g. L1, L2, L3)</extracomment>
       <translation>交流输出 %1</translation>
-    </message>
-    <message id="settings_multirs_trackers">
-      <location filename="../../pages/settings/devicelist/rs/PageMultiRs.qml" line="211"/>
-      <source>Trackers</source>
-      <translation>跟踪器</translation>
     </message>
     <message id="rs_alarm_no_alarms_to_be_configured">
       <location filename="../../pages/settings/devicelist/rs/PageRsAlarmSettings.qml" line="32"/>
@@ -8805,7 +9032,7 @@ With streamlined navigation and a fresh look, everything you love is now even ea
       <translation type="unfinished">控制</translation>
     </message>
     <message id="controlcards_empty_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="145"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="154"/>
       <source>Controls</source>
       <translation>控制</translation>
     </message>
@@ -8851,54 +9078,54 @@ With streamlined navigation and a fresh look, everything you love is now even ea
       <translation>下一个</translation>
     </message>
     <message id="direction_north">
-      <location filename="../../src/units.cpp" line="546"/>
+      <location filename="../../src/units.cpp" line="449"/>
       <source>N</source>
       <translation>北</translation>
     </message>
     <message id="direction_northeast">
-      <location filename="../../src/units.cpp" line="548"/>
+      <location filename="../../src/units.cpp" line="451"/>
       <source>NE</source>
-      <translation>不</translation>
+      <translation>东北</translation>
     </message>
     <message id="direction_east">
-      <location filename="../../src/units.cpp" line="550"/>
+      <location filename="../../src/units.cpp" line="453"/>
       <source>E</source>
-      <translation>邮箱</translation>
+      <translation>东</translation>
     </message>
     <message id="direction_southeast">
-      <location filename="../../src/units.cpp" line="552"/>
+      <location filename="../../src/units.cpp" line="455"/>
       <source>SE</source>
       <translation>东南</translation>
     </message>
     <message id="direction_south">
-      <location filename="../../src/units.cpp" line="554"/>
+      <location filename="../../src/units.cpp" line="457"/>
       <source>S</source>
-      <translation>用</translation>
+      <translation>南</translation>
     </message>
     <message id="direction_southwest">
-      <location filename="../../src/units.cpp" line="556"/>
+      <location filename="../../src/units.cpp" line="459"/>
       <source>SW</source>
-      <translation>东北</translation>
+      <translation>西南</translation>
     </message>
     <message id="direction_west">
-      <location filename="../../src/units.cpp" line="558"/>
+      <location filename="../../src/units.cpp" line="461"/>
       <source>W</source>
       <translation>西</translation>
     </message>
     <message id="direction_northwest">
-      <location filename="../../src/units.cpp" line="560"/>
+      <location filename="../../src/units.cpp" line="463"/>
       <source>NW</source>
       <translation>西北</translation>
     </message>
     <message id="genset_controller_multiple_genset_controllers">
-      <location filename="../../components/PageGensetModel.qml" line="68"/>
+      <location filename="../../components/PageGensetModel.qml" line="69"/>
       <source>Multiple genset controllers detected.
 The GX device can only control one connected genset and takes the one with the lowest VRM instance number. To avoid unexpected behavior, make sure that only one unit is available to the GX device.</source>
       <translation>检测到多个发电机组控制器。
 GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号最低的发电机组。为避免意外行为，请确保 GX 设备只能使用一台发电机组。</translation>
     </message>
     <message id="settings_tz_etc">
-      <location filename="../../pages/settings/PageTzInfo.qml" line="280"/>
+      <location filename="../../pages/settings/PageTzInfo.qml" line="302"/>
       <source>Other</source>
       <translation>其他</translation>
     </message>
@@ -8914,12 +9141,13 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>船只页面</translation>
     </message>
     <message id="switchable_output_unsupported">
-      <location filename="../../src/enums.cpp" line="460"/>
+      <location filename="../../src/enums.cpp" line="575"/>
+      <location filename="../../src/enums.cpp" line="608"/>
       <source>Unsupported type: %1</source>
       <translation>不支持的类型：%1</translation>
     </message>
     <message id="common_words_press">
-      <location filename="../../components/CommonWords.qml" line="421"/>
+      <location filename="../../components/CommonWords.qml" line="433"/>
       <source>Press</source>
       <translation>报道</translation>
     </message>
@@ -8938,25 +9166,20 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>Gauge Display</source>
       <translation>仪表显示</translation>
     </message>
-    <message id="settings_minmax_time_to_go">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="195"/>
-      <source>Time to go</source>
-      <translation>剩余时间</translation>
+    <message id="settings_minmax_speed">
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="193"/>
+      <source>Speed</source>
+      <translation type="unfinished">速度</translation>
     </message>
     <message id="settings_minmax_max_speed">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="210"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="209"/>
       <source>Max Speed</source>
       <translation>最大速度</translation>
     </message>
     <message id="settings_minmax_max_rpm">
-      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="222"/>
+      <location filename="../../pages/settings/PageSettingsDisplayMinMax.qml" line="221"/>
       <source>Max RPM</source>
       <translation>最大转速</translation>
-    </message>
-    <message id="devicelist_motordrive_coolanttemperature">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="79"/>
-      <source>Coolant Temperature</source>
-      <translation>冷却剂温度</translation>
     </message>
     <message id="settings_module_state">
       <location filename="../../pages/settings/devicelist/PageSwitch.qml" line="28"/>
@@ -8968,33 +9191,34 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>Module Voltage</source>
       <translation>模块电压</translation>
     </message>
-    <message id="page_switchable_output_group">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="29"/>
+    <message id="page_generic_input_group">
+      <location filename="../../components/listitems/ListIOChannelGroupField.qml" line="11"/>
       <source>Group</source>
       <translation>组</translation>
     </message>
     <message id="page_switchable_output_fuse_rating">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="83"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="76"/>
       <source>Fuse rating</source>
       <translation>保险丝额定值</translation>
     </message>
     <message id="boat_page_rpm">
-      <location filename="../../pages/boat/LargeCenterGauge.qml" line="159"/>
+      <location filename="../../pages/boat/LargeCenterGauge.qml" line="162"/>
+      <location filename="../../pages/boat/LargeCenterGauge.qml" line="302"/>
       <source>RPM</source>
       <translation>转速</translation>
     </message>
     <message id="boat_page_motor_drive">
-      <location filename="../../pages/boat/MotorDriveGauges.qml" line="41"/>
+      <location filename="../../pages/boat/MotorDriveGauges.qml" line="38"/>
       <source>Motordrive</source>
       <translation>汽车驱动</translation>
     </message>
-    <message id="boat_page_time_to_go">
-      <location filename="../../pages/boat/TimeToGo.qml" line="55"/>
+    <message id="common_words_time_to_go">
+      <location filename="../../components/CommonWords.qml" line="551"/>
       <source>Time To Go</source>
       <translation>剩余时间</translation>
     </message>
     <message id="backup_and_restore">
-      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="274"/>
+      <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="307"/>
       <source>Backup &amp; Restore</source>
       <translation>备份 &amp; 恢复</translation>
     </message>
@@ -9068,275 +9292,283 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>Resetting VE.Bus products</source>
       <translation>重置 VE.Bus 产品</translation>
     </message>
+    <message id="Unknown">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="42"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="111"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="130"/>
+      <source>Unknown</source>
+      <translation type="unfinished">未知</translation>
+    </message>
     <message id="mk2vsc_error_mk2_mk3_comm">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="47"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="49"/>
       <source>MK2/MK3 communication error</source>
       <translation>MK2/MK3 通信错误</translation>
     </message>
     <message id="mk2vsc_error_prod_addr_unreach">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="49"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="51"/>
       <source>Product address not reachable</source>
       <translation>产品地址无法访问</translation>
     </message>
     <message id="mk2vsc_error_incomp_mk2_fw">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="51"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="53"/>
       <source>Incompatible MK2 firmware version</source>
       <translation>不兼容的 MK2 固件版本</translation>
     </message>
     <message id="mk2vsc_error_no_vebus_prod">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="53"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="55"/>
       <source>No VE.Bus product was found</source>
       <translation>未找到 VE.Bus 产品</translation>
     </message>
     <message id="mk2vsc_error_too_many_devices">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="55"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="57"/>
       <source>Too many devices on the VE.Bus</source>
       <translation>VE.Bus 上有太多设备</translation>
     </message>
     <message id="mk2vsc_error_timed_out">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="57"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="59"/>
       <source>Timed out</source>
       <translation>超时</translation>
     </message>
     <message id="mk2vsc_error_wrong_pass">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="59"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="61"/>
       <source>Wrong password. (Use VeConfigure to set gridcode to None)</source>
       <translation>密码错误。(使用 VeConfigure 将网格代码设置为 "无"）。</translation>
     </message>
     <message id="mk2vsc_error_malloc">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="61"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="63"/>
       <source>Malloc error</source>
       <translation>Malloc 错误</translation>
     </message>
     <message id="mk2vsc_error_file_no_settings">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="63"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="65"/>
       <source>Uploaded file does not contain settings data for the connected unit</source>
       <translation>上传的文件不包含所连接设备的设置数据</translation>
     </message>
     <message id="mk2vsc_error_file_mismatch">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="65"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="67"/>
       <source>Uploaded file does not match model and/or installed firmware version</source>
       <translation>上传的文件与型号和/或安装的固件版本不匹配</translation>
     </message>
     <message id="mk2vsc_error_mult_unknown_units">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="67"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="69"/>
       <source>More than one unknown unit detected</source>
       <translation>检测到一个以上未知设备</translation>
     </message>
     <message id="mk2vsc_error_update_single_unit">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="69"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="71"/>
       <source>Updating a single unit with another unit's settings is not possible, even if they are of the same type</source>
       <translation>无法用其他设备的设置更新单个设备，即使它们属于同一类型</translation>
     </message>
     <message id="mk2vsc_error_unit_count_mismatch">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="71"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="73"/>
       <source>The number of units in file does not match the number of units discovered</source>
       <translation>文件中的单位数与发现的单位数不符</translation>
     </message>
     <message id="mk2vsc_error_file_open">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="73"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="75"/>
       <source>File open error</source>
       <translation>文件打开错误</translation>
     </message>
     <message id="mk2vsc_error_file_write">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="75"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="77"/>
       <source>File write error</source>
       <translation>文件写入错误</translation>
     </message>
     <message id="mk2vsc_error_file_read">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="77"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="79"/>
       <source>File read error</source>
       <translation>文件读取错误</translation>
     </message>
     <message id="mk2vsc_error_file_checksum">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="79"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="81"/>
       <source>File checksum error</source>
       <translation>文件校验和错误</translation>
     </message>
     <message id="mk2vsc_error_file_ver_incompat">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="81"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="83"/>
       <source>File incompatible version number</source>
       <translation>文件版本号不兼容</translation>
     </message>
     <message id="mk2vsc_error_file_section_not_found">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="83"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="85"/>
       <source>File section not found</source>
       <translation>未找到文件部分</translation>
     </message>
     <message id="mk2vsc_error_file_format">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="85"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="87"/>
       <source>File format error</source>
       <translation>文件格式错误</translation>
     </message>
     <message id="mk2vsc_error_prod_num_mismatch">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="87"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="89"/>
       <source>Product number does not match file</source>
       <translation>产品编号与文件不符</translation>
     </message>
     <message id="mk2vsc_error_file_expired">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="89"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="91"/>
       <source>File expired</source>
       <translation>文件过期</translation>
     </message>
     <message id="mk2vsc_error_wrong_file_format">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="91"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="93"/>
       <source>Wrong file format. First open the file with VE.Bus System Configurator, then save it to a new file by closing VE.Configure</source>
       <translation>文件格式错误。首先用 VE.Bus System Configurator 打开文件，然后关闭 VE.Configure 将其保存为新文件。</translation>
     </message>
     <message id="mk2vsc_error_vebus_write_fail">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="93"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="95"/>
       <source>VE.Bus write of assistant enable/disable setting failed</source>
       <translation>VE.总线写入助手启用/禁用设置失败</translation>
     </message>
     <message id="mk2vsc_error_vebus_config_fail">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="95"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="97"/>
       <source>Incompatible VE.Bus system configuration. Writing system configuration failed</source>
       <translation>VE.Bus 系统配置不兼容。写入系统配置失败</translation>
     </message>
     <message id="mk2vsc_error_read_settings_fail">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="97"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="99"/>
       <source>Cannot read settings. VE.Bus system not configured</source>
       <translation>无法读取设置。VE.Bus 系统未配置</translation>
     </message>
     <message id="mk2vsc_error_assist_write_fail">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="99"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="101"/>
       <source>Assistants write failed</source>
       <translation>助理写作失败</translation>
     </message>
     <message id="mk2vsc_error_assist_read_fail">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="101"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="103"/>
       <source>Assistants read failed</source>
       <translation>助理阅读失败</translation>
     </message>
     <message id="mk2vsc_error_grid_info_read_fail">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="103"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="105"/>
       <source>Grid info read failed</source>
       <translation>网格信息读取失败</translation>
     </message>
     <message id="mk2vsc_error_os_unknown_app">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="105"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="107"/>
       <source>OSerror, unknown application</source>
       <translation>操作系统错误，未知应用程序</translation>
     </message>
     <message id="mk2vsc_error_com_port_no_resp">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="107"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="109"/>
       <source>Failed to open com port(no response)</source>
       <translation>打开 COM 端口失败（无响应）</translation>
     </message>
     <message id="vebus_backup_result_backup_successful">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="116"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="118"/>
       <source>Backup successful</source>
       <translation>备份成功</translation>
     </message>
     <message id="vebus_backup_result_restore_successful">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="118"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="120"/>
       <source>Restore successful</source>
       <translation>恢复成功</translation>
     </message>
     <message id="vebus_backup_result_file delete_successful">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="120"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="122"/>
       <source>File delete successful</source>
       <translation>文件删除成功</translation>
     </message>
     <message id="vebus_backup_result_backup_process_unexpedly_closed">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="122"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="124"/>
       <source>Backup process unexpectedly closed</source>
       <translation>备份进程意外关闭</translation>
     </message>
     <message id="vebus_backup_result_restore_process_unexpedly_closed">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="124"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="126"/>
       <source>Restore process unexpectedly closed</source>
       <translation>恢复程序意外关闭</translation>
     </message>
     <message id="vebus_backup_result_file_delete_failed">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="126"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="128"/>
       <source>File delete failed</source>
       <translation>文件删除失败</translation>
     </message>
     <message id="incompatible">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="228"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="230"/>
       <source>Incompatible</source>
       <translation>不支持</translation>
     </message>
     <message id="backup_name">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="294"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="323"/>
       <source>Backup name</source>
       <translation>备份名称</translation>
     </message>
     <message id="vebus_backup_backup_name">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="299"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="328"/>
       <source>Enter backup name</source>
       <translation>输入备份名称</translation>
     </message>
     <message id="backup_name_empty">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="303"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="332"/>
       <source>File name cannot be empty</source>
       <translation>文件名不能为空</translation>
     </message>
     <message id="backup_name_invalid">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="308"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="337"/>
       <source>Invalid file name. Avoid using special characters</source>
       <translation>文件名无效。避免使用特殊字符</translation>
     </message>
     <message id="vebus_backup_backup">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="322"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="351"/>
       <source>Backup</source>
       <translation>备份</translation>
     </message>
     <message id="vebus_backup_press_to_backup">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="325"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="354"/>
       <source>Press to backup</source>
       <translation>按下备份</translation>
     </message>
     <message id="vebus_backup_backing_up">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="327"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="356"/>
       <source>Backing up...</source>
       <translation>备份...</translation>
     </message>
     <message id="vebus_backup_restore">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="340"/>
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="359"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="369"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="388"/>
       <source>Restore</source>
       <translation>恢复</translation>
     </message>
     <message id="vebus_backup_select_backup_file_to_restore">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="343"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="372"/>
       <source>Select backup file to restore</source>
       <translation>选择要恢复的备份文件</translation>
     </message>
     <message id="vebus_backup_restoring">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="364"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="393"/>
       <source>Restoring...</source>
       <translation>恢复...</translation>
     </message>
     <message id="vebus_backup_delete">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="377"/>
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="396"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="406"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="425"/>
       <source>Delete</source>
       <translation>删除</translation>
     </message>
     <message id="vebus_backup_select_backup_file_to_delete">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="380"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="409"/>
       <source>Select backup file to delete</source>
       <translation>选择要删除的备份文件</translation>
     </message>
     <message id="vebus_backup_press_to_delete">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="399"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="428"/>
       <source>Press to delete</source>
       <translation>按下删除</translation>
     </message>
     <message id="vebus_backup_deleting">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="401"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="430"/>
       <source>Deleting...</source>
       <translation>删除...</translation>
     </message>
     <message id="vebus_backup_press_to_cancel">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="415"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="444"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="467"/>
       <source>Press to cancel</source>
       <translation>按下 取消</translation>
     </message>
     <message id="vebus_backup_firmware_version_specific_message">
-      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="425"/>
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="477"/>
       <source>Note: Backup files are VE.Bus firmware version specific and can only be used to restore settings on products with matching firmware versions</source>
       <translation>注意：备份文件与 VE.Bus 固件版本有关，只能用于在固件版本相匹配的产品上恢复设置。</translation>
     </message>
@@ -9356,29 +9588,24 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>Update</source>
       <translation>更新</translation>
     </message>
-    <message id="pagesettingsgeneral_documentation">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="233"/>
+    <message id="pagecontrollableloads_documentation">
+      <location filename="../../pages/settings/PageControllableLoads.qml" line="113"/>
       <source>Documentation</source>
       <translation>文档</translation>
     </message>
     <message id="common_words_ac_input_number">
-      <location filename="../../components/CommonWords.qml" line="609"/>
+      <location filename="../../components/CommonWords.qml" line="628"/>
       <source>AC input %1</source>
       <extracomment>%1 = number of the AC input</extracomment>
       <translation>交流输入 %1</translation>
     </message>
-    <message id="settings_security_profile_change_password_title">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
-      <source>Changing the GX Password</source>
-      <translation>更改 GX 密码</translation>
-    </message>
     <message id="settings_security_profile_change_password_description">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="83"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="85"/>
       <source>Please enter a new GX password:</source>
       <translation>请输入新的 GX 密码：</translation>
     </message>
     <message id="settings_security_profile_enter_new_password">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="98"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="100"/>
       <source>Enter new password</source>
       <translation>输入新密码</translation>
     </message>
@@ -9399,7 +9626,7 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>当主逆变器/充电器系统使用同一电池组为辅助 MultiPlus 或 Quattro 系统供电时，请启用此设置。 启用此设置后，此辅助系统将使用所选 BMS 的 CVL 和 DCL 参数。</translation>
     </message>
     <message id="settings_access_control_display_firmware">
-      <location filename="../../pages/SettingsPage.qml" line="43"/>
+      <location filename="../../pages/SettingsPage.qml" line="50"/>
       <source>Access control, Display, Firmware, Support</source>
       <translation>访问控制，显示，固件，支持</translation>
     </message>
@@ -9418,24 +9645,24 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>Charging another battery from the main battery</source>
       <translation>从主电池为另一个电池充电</translation>
     </message>
-    <message id="page_switchable_show_controls">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="116"/>
+    <message id="iochannel_showui_controls">
+      <location filename="../../components/listitems/ListIOChannelShowRadioButtonGroup.qml" line="12"/>
       <source>Show controls</source>
-      <extracomment>Whether UI controls should be shown for this output</extracomment>
+      <extracomment>Whether UI controls should be shown for this input/output</extracomment>
       <translation>显示控制</translation>
     </message>
     <message id="page_settings_connect_cellular_modem">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="40"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="41"/>
       <source>Connect a Victron Energy GX GSM or GX LTE 4G modem to enable mobile network connectivity.</source>
       <translation>连接 Victron Energy GX GSM 或 GX LTE 4G 调制解调器以启用移动网络连接。</translation>
     </message>
     <message id="page_settings_no_cellular_modem_connected">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="55"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="73"/>
       <source>No cellular modem connected</source>
       <translation>未连接蜂窝调制解调器</translation>
     </message>
     <message id="ess_active_soc_limit">
-      <location filename="../../pages/controlcards/ESSCard.qml" line="87"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="91"/>
       <source>Active SOC Limit: %1%</source>
       <translation>激活 SOC 限制：%1</translation>
     </message>
@@ -9455,39 +9682,34 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>只读</translation>
     </message>
     <message id="pagesettingsgeneral_modificationchecks_modified">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="23"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="25"/>
       <source>Modifications installed</source>
       <translation>已安装的修改</translation>
     </message>
     <message id="pagesettingsgeneral_modificationchecks_modbus">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="28"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="30"/>
       <source>Modbus TCP Server</source>
       <translation type="unfinished">Modbus TCP 服务器</translation>
     </message>
     <message id="pagesettingsgeneral_modificationchecks_signalk">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="32"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="34"/>
       <source>Signal K</source>
       <translation type="unfinished">Signal K</translation>
     </message>
     <message id="pagesettingsgeneral_modificationchecks_nodered">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="36"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="38"/>
       <source>Node-RED</source>
       <translation type="unfinished">Node-RED</translation>
     </message>
     <message id="pagesettingsgeneral_modificationchecks_running_integrations">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="43"/>
+      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="45"/>
       <source>%1 running integrations</source>
       <translation>%1 个正在运行的集成</translation>
     </message>
     <message id="pagesettingssupportstate_modifiedstate_clean">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="86"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="75"/>
       <source>Clean</source>
       <translation>清洁</translation>
-    </message>
-    <message id="pagesettingsgeneral_support_status_modification_checks">
-      <location filename="../../pages/settings/PageSettingsGeneral.qml" line="239"/>
-      <source>Support status (modifications checks)</source>
-      <translation>支持状态（修改检查）</translation>
     </message>
     <message id="reboot_button_dialoglayer_reboot_initiated">
       <location filename="../../components/dialogs/ModalRebootingDialog.qml" line="16"/>
@@ -9500,116 +9722,106 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>请等待设备重启。</translation>
     </message>
     <message id="pagesettingssupportstate_modifiedstate_not_available_on_this_device">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="92"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="81"/>
       <source>Not available on this device</source>
       <translation>此设备上不可用</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_not_installed">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="112"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="101"/>
       <source>Not installed</source>
       <translation>未安装</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_but_disabled_rc_local_rcS_local">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="117"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="106"/>
       <source>Installed but disabled (rc.local and rcS.local)</source>
       <translation>已安装但已禁用（rc.local 和 rcS.local）</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_but_disabled_rc_local">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="120"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="109"/>
       <source>Installed but disabled (rc.local)</source>
       <translation>已安装但已禁用（rc.local）</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_but_disabled_rcS_local">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="123"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="112"/>
       <source>Installed but disabled (rcS.local)</source>
       <translation>已安装但已禁用（rcS.local）</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_but_disabled_but_enable_next_boot">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="127"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="116"/>
       <source>Installed but disabled, enables at next boot</source>
       <translation>已安装但已禁用，下次启动时启用</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_and_enabled_rc_local_rcS_local">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="133"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="122"/>
       <source>Installed and enabled (rc.local and rcS.local)</source>
       <translation>已安装并启用（rc.local 和 rcS.local）</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_and_enabled_rc_local">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="136"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="125"/>
       <source>Installed and enabled (rc.local)</source>
       <translation>已安装并启用（rc.local）</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_and_enabled_rcS_local">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="139"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="128"/>
       <source>Installed and enabled (rcS.local)</source>
       <translation>已安装并启用（rcS.local）</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_installed_and_enabled_but_disable_next_boot">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="142"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="131"/>
       <source>Installed and enabled, disables at next boot</source>
       <translation>已安装并启用，下次启动时禁用</translation>
     </message>
     <message id="pagesettingssupportstate_firmware_unknown">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="166"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="155"/>
       <source>Unknown</source>
       <translation type="unfinished">未知</translation>
     </message>
     <message id="pagesettingssupportstate_support_status">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="228"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="217"/>
       <source>Support status</source>
       <translation>支持状态</translation>
     </message>
     <message id="pagesettingssupportstate_custom_startup_scripts">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="268"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="426"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="258"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="416"/>
       <source>Custom startup scripts</source>
       <translation>自定义启动脚本</translation>
     </message>
     <message id="pagesettingssupportstate_disable_custom_startup_scripts">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="275"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="286"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="265"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="276"/>
       <source>Disable custom startup scripts</source>
       <translation>禁用自定义启动脚本</translation>
     </message>
     <message id="pagesettingssupportstate_disable_custom_startup_scripts_description">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="288"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="278"/>
       <source>Press 'OK' to disable custom startup scripts and reboot</source>
       <translation>按下“确定”禁用自定义启动脚本并重启</translation>
     </message>
     <message id="pagesettingssupportstate_re_enable_custom_startup_scripts">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="309"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="299"/>
       <source>Re-enable custom startup scripts</source>
       <translation type="unfinished">重新启用自定义启动脚本</translation>
     </message>
     <message id="pagesettingssupportstate_reenable_and_reboot_now">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="322"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="312"/>
       <source>Re-enable custom startup scripts</source>
       <translation>重新启用自定义启动脚本</translation>
     </message>
     <message id="pagesettingssupportstate_press_ok_to_reenable_and_reboot">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="324"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="314"/>
       <source>Press 'OK' to re-enable custom startup scripts and reboot</source>
       <translation>按下“确定”重新启用自定义启动脚本并重启</translation>
     </message>
-    <message id="pagesettingssupportstate_file_system_status">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="345"/>
-      <source>File system (rootfs) status</source>
-      <translation>文件系统(rootfs)状态</translation>
-    </message>
     <message id="pagesettingssupportstate_latest_official_firmware_installed">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="368"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="358"/>
       <source>Latest official firmware version installed?</source>
       <translation>是否已安装最新的官方固件版本？</translation>
     </message>
     <message id="pagesettingssupportstate_disable_also_custom_startup_scripts">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="428"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="418"/>
       <source>Disable also custom startup scripts?</source>
       <translation>同时禁用自定义启动脚本？</translation>
-    </message>
-    <message id="pagesettingssupportstate_orange_items_description">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="494"/>
-      <source>Items colored orange are supported and provided by Victron Energy, but using them incorrectly can affect system stability. In case of troubleshooting, disable those first.</source>
-      <translation>橙色项目由 Victron Energy 提供并支持，但使用不当可能会影响系统稳定性。 出现故障时，请先禁用这些项目。</translation>
     </message>
     <message id="settings_bluetooth_unavailable_message">
       <location filename="../../pages/settings/PageSettingsBluetooth.qml" line="26"/>
@@ -9617,34 +9829,34 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>连接兼容的蓝牙 USB 加密狗以启用蓝牙连接。</translation>
     </message>
     <message id="settings_ess_batteryLife_state">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="140"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="162"/>
       <source>BatteryLife state</source>
       <translation>BatteryLife 状态</translation>
     </message>
     <message id="pagesettingsintegrations_device_integrations">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="33"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="18"/>
       <source>Device Integrations</source>
       <translation>设备集成</translation>
     </message>
     <message id="pagesettingsintegrations_modbus_tcp_server">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="201"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="198"/>
       <source>Modbus TCP Server</source>
       <translation type="unfinished">Modbus TCP 服务器</translation>
     </message>
     <message id="settings_large_signal_k">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="226"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="223"/>
       <location filename="../../pages/settings/PageSettingsSignalK.qml" line="18"/>
       <source>Signal K</source>
       <translation type="unfinished">Signal K</translation>
     </message>
     <message id="settings_large_node_red">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="241"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="238"/>
       <location filename="../../pages/settings/PageSettingsNodeRed.qml" line="17"/>
       <source>Node-RED</source>
       <translation type="unfinished">Node-RED</translation>
     </message>
     <message id="settings_venusos_large_documentation">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="267"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="264"/>
       <source>Venus OS Large Documentation</source>
       <translation>Venus OS Large 文档</translation>
     </message>
@@ -9654,17 +9866,17 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>启用 Modbus TCP 服务器</translation>
     </message>
     <message id="pagesettingsconnectivity_bluetooth_for_victronconnect_app">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="38"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="54"/>
       <source>Bluetooth (for VictronConnect App)</source>
       <translation>蓝牙（用于 VictronConnect 应用程序）</translation>
     </message>
     <message id="pagesettingsconnectivity_bluetooth_not_available">
-      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="42"/>
+      <location filename="../../pages/settings/PageSettingsConnectivity.qml" line="58"/>
       <source>No Bluetooth available</source>
       <translation>无蓝牙可用</translation>
     </message>
     <message id="switchable_output_toggle">
-      <location filename="../../src/enums.cpp" line="414"/>
+      <location filename="../../src/enums.cpp" line="529"/>
       <source>Toggle</source>
       <translation>切换</translation>
     </message>
@@ -9688,61 +9900,46 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>External control</source>
       <translation type="unfinished">外部控制</translation>
     </message>
-    <message id="pagesettingssupportstate_support_state_check_below_red_orange">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="29"/>
-      <source>Check below items in red and orange</source>
-      <translation>检查下方红色和橙色项目</translation>
-    </message>
-    <message id="pagesettingssupportstate_support_state_check_below_red">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="32"/>
-      <source>Check below items in red</source>
-      <translation>检查下方红色项目</translation>
-    </message>
-    <message id="pagesettingssupportstate_support_state_check_below_orange">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="35"/>
-      <source>Check below items in orange</source>
-      <translation>检查下方橙色项目</translation>
-    </message>
     <message id="pagesettingssupportstate_modifiedstate_modified">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="89"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="78"/>
       <source>Modified</source>
       <translation>已修改</translation>
     </message>
     <message id="pagesettingssupportstate_disable_and_reboot_now">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="277"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="267"/>
       <source>Disable and reboot now</source>
       <translation>立即禁用并重启</translation>
     </message>
     <message id="pagesettingssupportstate_re_enable_and_reboot_now">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="311"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="301"/>
       <source>Re-enable and reboot now</source>
       <translation>立即重新启用并重启</translation>
     </message>
     <message id="pagesettingssupportstate_update_firmware_to_fix_modified_state">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="375"/>
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="402"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="365"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="392"/>
       <source>Update the firmware to fix the modified state</source>
       <translation>更新固件以修复已修改状态</translation>
     </message>
     <message id="pagesettingssupportstate_updating_progress">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="381"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="371"/>
       <source>Updating %1 %2%</source>
       <extracomment>Firmware update firmwareProgressItem. %1 = firmware version, %2 = current update progress</extracomment>
       <translation>正在更新 %1 %2%</translation>
     </message>
     <message id="pagesettingssupportstate_updating">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="385"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="375"/>
       <source>Updating %1...</source>
       <extracomment>%1 = firmware version</extracomment>
       <translation>正在更新 %1...</translation>
     </message>
     <message id="pagesettingssupportstate_press_to_update">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="389"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="379"/>
       <source>Press to update to</source>
       <translation>按下以更新至</translation>
     </message>
     <message id="pagesettingssupportstate_update_firmware_to_fix_modified_state_description">
-      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="404"/>
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="394"/>
       <source>This will download and update rootfs with the latest official firmware.&lt;br&gt;Internet connectivity is required.&lt;br&gt;Press 'OK' to continue.</source>
       <translation>这将下载并使用最新的官方固件更新 rootfs。&lt;br&gt;需要 Internet 连接。&lt;br&gt;按“确定”继续。</translation>
     </message>
@@ -9767,12 +9964,12 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>升</translation>
     </message>
     <message id="settings_ui_animations">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="157"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="156"/>
       <source>UI Animations</source>
       <translation>UI 动画</translation>
     </message>
     <message id="settings_ui_animations_description">
-      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="159"/>
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="158"/>
       <source>Disable to reduce CPU usage</source>
       <translation>禁用以减少 CPU 使用率</translation>
     </message>
@@ -9782,12 +9979,12 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>现在可以在设备列表中找到继电器</translation>
     </message>
     <message id="gx_device_relays">
-      <location filename="../../src/switchableoutputgroupmodel.cpp" line="103"/>
+      <location filename="../../src/iochannelgroupmodel.cpp" line="105"/>
       <source>GX device relays</source>
       <translation>GX 设备继电器</translation>
     </message>
     <message id="ess_active_soc_limit_info">
-      <location filename="../../pages/controlcards/ESSCard.qml" line="94"/>
+      <location filename="../../pages/controlcards/ESSCard.qml" line="98"/>
       <source>BatteryLife dynamically adjusts the minimum battery state of charge to prevent deep discharges and ensure regular full charges, helping to prolong battery life and maintain system reliability.</source>
       <translation>BatteryLife 动态调整电池的最小充电状态，以防止深度放电并确保定期充满电，从而有助于延长电池寿命并保持系统可靠性。</translation>
     </message>
@@ -9854,37 +10051,37 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>与 GX 显示相同</translation>
     </message>
     <message id="page_settings_gsm_registration_status">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="136"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="143"/>
       <source>Registration status</source>
       <translation>注册状态</translation>
     </message>
     <message id="page_settings_gsm_not_registered_not_searching">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="141"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="148"/>
       <source>Not registered, not searching for operator</source>
       <translation>未注册，未搜索运营商</translation>
     </message>
     <message id="page_settings_gsm_registered_home_network">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="144"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="151"/>
       <source>Registered, home network</source>
       <translation>已注册，家庭网络</translation>
     </message>
     <message id="page_settings_gsm_not_registered_searching">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="147"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="154"/>
       <source>Not registered, searching for operator</source>
       <translation>未注册，正在搜索运营商</translation>
     </message>
     <message id="page_settings_gsm_registration_denied">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="150"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="157"/>
       <source>Registration denied</source>
       <translation>注册被拒绝</translation>
     </message>
     <message id="page_settings_gsm_registered_roaming">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="156"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="163"/>
       <source>Registered, roaming</source>
       <translation>已注册，正在漫游</translation>
     </message>
     <message id="page_settings_gsm_data_link_status">
-      <location filename="../../pages/settings/PageSettingsGsm.qml" line="168"/>
+      <location filename="../../pages/settings/PageSettingsGsm.qml" line="175"/>
       <source>Data link (PPP) status</source>
       <translation>数据链路 (PPP) 状态</translation>
     </message>
@@ -9894,7 +10091,7 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>访问 Signal K</translation>
     </message>
     <message id="pagesettingsintegrations_shelly_devices">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="56"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="47"/>
       <source>Shelly Devices</source>
       <translation>Shelly 设备</translation>
     </message>
@@ -9904,146 +10101,92 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>访问 Node-RED</translation>
     </message>
     <message id="settings_wifi_access_point_password">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="66"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="85"/>
       <source>Access Point password</source>
       <translation>接入点密码</translation>
     </message>
     <message id="dcMeter_dccharger">
-      <location filename="../../src/enums.cpp" line="140"/>
+      <location filename="../../src/enums.cpp" line="218"/>
       <source>DC/DC charger</source>
       <translation>DC/DC 充电器</translation>
     </message>
     <message id="dcMeter_electric_drive">
-      <location filename="../../src/enums.cpp" line="146"/>
+      <location filename="../../src/enums.cpp" line="224"/>
       <source>Electric drive</source>
       <translation>电力驱动</translation>
     </message>
     <message id="dcMeter_fridge">
-      <location filename="../../src/enums.cpp" line="149"/>
+      <location filename="../../src/enums.cpp" line="227"/>
       <source>Fridge</source>
       <translation>冰箱</translation>
     </message>
     <message id="dcMeter_generic_load">
-      <location filename="../../src/enums.cpp" line="155"/>
+      <location filename="../../src/enums.cpp" line="233"/>
       <source>Generic load</source>
       <translation>通用负载</translation>
     </message>
     <message id="dcMeter_generic_meter">
-      <location filename="../../src/enums.cpp" line="158"/>
+      <location filename="../../src/enums.cpp" line="236"/>
       <source>Generic meter</source>
       <translation>通用电表</translation>
     </message>
     <message id="dcMeter_generic_source">
-      <location filename="../../src/enums.cpp" line="161"/>
+      <location filename="../../src/enums.cpp" line="239"/>
       <source>Generic source</source>
       <translation>通用电源</translation>
     </message>
     <message id="dcMeter_dc_genset">
-      <location filename="../../src/enums.cpp" line="164"/>
+      <location filename="../../src/enums.cpp" line="242"/>
       <source>DC genset</source>
       <translation>直流发电机组</translation>
     </message>
     <message id="dcMeter_inverter">
-      <location filename="../../src/enums.cpp" line="167"/>
+      <location filename="../../src/enums.cpp" line="245"/>
       <source>Inverter</source>
       <translation>逆变器</translation>
     </message>
     <message id="dcMeter_solar_charger">
-      <location filename="../../src/enums.cpp" line="173"/>
+      <location filename="../../src/enums.cpp" line="251"/>
       <source>Solar charger</source>
       <translation>太阳能充电器</translation>
     </message>
     <message id="dcMeter_water_heater">
-      <location filename="../../src/enums.cpp" line="179"/>
+      <location filename="../../src/enums.cpp" line="257"/>
       <source>Water heater</source>
       <translation>热水器</translation>
     </message>
     <message id="dcMeter_water_pump">
-      <location filename="../../src/enums.cpp" line="182"/>
+      <location filename="../../src/enums.cpp" line="260"/>
       <source>Water pump</source>
       <translation>水泵</translation>
     </message>
     <message id="dcMeter_wind_charger">
-      <location filename="../../src/enums.cpp" line="185"/>
+      <location filename="../../src/enums.cpp" line="263"/>
       <source>Wind charger</source>
       <translation>风力充电器</translation>
     </message>
-    <message id="digitalinputs_type_disabled">
-      <location filename="../../src/enums.cpp" line="214"/>
-      <source>Disabled</source>
-      <translation type="unfinished">已禁用</translation>
-    </message>
-    <message id="digitalinputs_type_bilgepump">
-      <location filename="../../src/enums.cpp" line="223"/>
-      <source>Bilge pump</source>
-      <translation type="unfinished">舱底泵</translation>
-    </message>
-    <message id="digitalinputs_state_off">
-      <location filename="../../src/enums.cpp" line="264"/>
-      <source>Off</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">关</translation>
-    </message>
-    <message id="digitalinputs_state_on">
-      <location filename="../../src/enums.cpp" line="268"/>
-      <source>On</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">开</translation>
-    </message>
-    <message id="digitalinputs_state_running">
-      <location filename="../../src/enums.cpp" line="296"/>
-      <source>Running</source>
-      <extracomment>Digital input state</extracomment>
-      <translation type="unfinished">运行</translation>
-    </message>
-    <message id="pvinverter_statusCode_running">
-      <location filename="../../src/enums.cpp" line="322"/>
-      <source>Running</source>
-      <extracomment>PV inverter status code</extracomment>
-      <translation type="unfinished">运行</translation>
-    </message>
-    <message id="solarchargers_state_external control">
-      <location filename="../../src/enums.cpp" line="374"/>
-      <source>External control</source>
-      <translation type="unfinished">外部控制</translation>
-    </message>
-    <message id="switch_state_running">
-      <location filename="../../src/enums.cpp" line="385"/>
-      <source>Running</source>
-      <translation type="unfinished">运行</translation>
-    </message>
-    <message id="switch_state_over_temperature">
-      <location filename="../../src/enums.cpp" line="388"/>
-      <source>Over temperature</source>
-      <translation type="unfinished">温度过高</translation>
-    </message>
     <message id="switchable_output_temperature_setpoint">
-      <location filename="../../src/enums.cpp" line="420"/>
+      <location filename="../../src/enums.cpp" line="535"/>
       <source>Temperature setpoint</source>
       <translation>温度设定点</translation>
     </message>
     <message id="switchable_output_Stepped_Switch">
-      <location filename="../../src/enums.cpp" line="423"/>
+      <location filename="../../src/enums.cpp" line="538"/>
       <source>Stepped switch</source>
       <translation>步进开关</translation>
     </message>
-    <message id="switchable_output_slave">
-      <location filename="../../src/enums.cpp" line="430"/>
-      <source>Slave</source>
-      <translation type="unfinished">从机</translation>
-    </message>
     <message id="switchable_output_dropdown">
-      <location filename="../../src/enums.cpp" line="434"/>
+      <location filename="../../src/enums.cpp" line="549"/>
       <source>Dropdown</source>
       <translation>下拉菜单</translation>
     </message>
     <message id="switchable_output_basic_slider">
-      <location filename="../../src/enums.cpp" line="437"/>
+      <location filename="../../src/enums.cpp" line="552"/>
       <source>Basic slider</source>
       <translation>基础滑块</translation>
     </message>
     <message id="switchable_output_three_state_switch">
-      <location filename="../../src/enums.cpp" line="443"/>
+      <location filename="../../src/enums.cpp" line="558"/>
       <source>Three-state switch</source>
       <translation>三态开关</translation>
     </message>
@@ -10052,23 +10195,18 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>See the Settings → VRM → VRM device instances menu to change the Modbus-TCP unit IDs.</source>
       <translation>请查看设置 → VRM → VRM 设备实例菜单来更改 Modbus-TCP 单元 ID。</translation>
     </message>
-    <message id="device_page_switches">
-      <location filename="../../components/DevicePage.qml" line="49"/>
-      <source>Switches</source>
-      <translation>开关</translation>
-    </message>
     <message id="settings_shelly_refresh_devices">
-      <location filename="../../pages/settings/PageSettingsShelly.qml" line="82"/>
+      <location filename="../../pages/settings/PageSettingsShelly.qml" line="97"/>
       <source>Refresh devices</source>
       <translation>刷新设备</translation>
     </message>
     <message id="settings_shelly_press_to_refresh">
-      <location filename="../../pages/settings/PageSettingsShelly.qml" line="84"/>
+      <location filename="../../pages/settings/PageSettingsShelly.qml" line="99"/>
       <source>Press to refresh</source>
       <translation>按下以刷新</translation>
     </message>
     <message id="common_words_total_power">
-      <location filename="../../components/CommonWords.qml" line="545"/>
+      <location filename="../../components/CommonWords.qml" line="560"/>
       <source>Total power</source>
       <translation>总功率</translation>
     </message>
@@ -10080,7 +10218,7 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <extra-Context>only shown on desktop systems</extra-Context>
     </message>
     <message id="load_delegate_status">
-      <location filename="../../pages/loads/LoadListDelegate.qml" line="75"/>
+      <location filename="../../pages/loads/LoadListDelegate.qml" line="26"/>
       <source>Status: %1</source>
       <translation>状态：%1</translation>
     </message>
@@ -10090,7 +10228,7 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>极性 (继电器 1)</translation>
     </message>
     <message id="page_switchable_output_polarity">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="198"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="208"/>
       <source>Polarity</source>
       <translation>极性</translation>
     </message>
@@ -10100,39 +10238,39 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>极性 (继电器 2)</translation>
     </message>
     <message id="page_settings_wifi_invalid_password">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="75"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="105"/>
       <source>Password length must be either 0 or between 10 and 63 characters long</source>
       <translation>密码长度必须为 0 或介于 10 到 63 个字符之间</translation>
     </message>
     <message id="page_settings_wifi_password_updated">
-      <location filename="../../pages/settings/PageSettingsWifi.qml" line="78"/>
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="108"/>
       <source>Password updated</source>
       <translation>密码已更新</translation>
     </message>
     <message id="common_words_max">
-      <location filename="../../components/CommonWords.qml" line="319"/>
+      <location filename="../../components/CommonWords.qml" line="331"/>
       <source>Max</source>
       <extracomment>Short for Maximum</extracomment>
       <translation>最大值</translation>
     </message>
     <message id="common_words_min">
-      <location filename="../../components/CommonWords.qml" line="335"/>
+      <location filename="../../components/CommonWords.qml" line="347"/>
       <source>Min</source>
       <extracomment>Short for Minimum</extracomment>
       <translation>最小值</translation>
     </message>
     <message id="settings_ess_deprecated">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="319"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="341"/>
       <source>Deprecated settings</source>
       <translation>已弃用的设置</translation>
     </message>
     <message id="settings_ess_max_charge_percentage">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="326"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="348"/>
       <source>Battery charge limit (% of CCL)</source>
       <translation>电池充电限制（占 CCL 的百分比）</translation>
     </message>
     <message id="settings_ess_max_discharge_percentage">
-      <location filename="../../pages/settings/PageSettingsHub4.qml" line="337"/>
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="359"/>
       <source>Battery discharge limit (% of DCL)</source>
       <translation>电池放电限制（占 DCL 的百分比）</translation>
     </message>
@@ -10142,44 +10280,35 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>VE.Bus BMS 会在需要时自动关闭系统以保护电池。因此，无法通过 GX 设备控制系统。</translation>
     </message>
     <message id="switchable_output_numeric_input">
-      <location filename="../../src/enums.cpp" line="440"/>
+      <location filename="../../src/enums.cpp" line="555"/>
       <source>Numeric input</source>
       <translation>数值输入</translation>
     </message>
     <message id="autotoggleswitch_disable_auto_mode_info">
-      <location filename="../../components/controls/AutoToggleButton.qml" line="34"/>
+      <location filename="../../components/controls/AutoToggleButton.qml" line="23"/>
       <source>Disable Auto mode first</source>
       <translation>请先禁用自动模式</translation>
     </message>
     <message id="pagesettingsintegrations_venus_os_enable_large_features">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="219"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="216"/>
       <source>Enable the Venus OS Large firmware to use Node-RED or Signal-K</source>
       <translation>启用 Venus OS Large 固件以使用 Node-RED 或 Signal-K</translation>
     </message>
     <message id="settings_relays_sensors_tanks">
-      <location filename="../../pages/SettingsPage.qml" line="75"/>
+      <location filename="../../pages/SettingsPage.qml" line="84"/>
       <source>Relays, Sensors, PV Inverters, Modbus, Node-RED</source>
       <translation>继电器、传感器、光伏逆变器、Modbus、Node-RED</translation>
     </message>
     <message id="vebus_device_page_microgrid_parameters">
+      <location filename="../../pages/invertercharger/OverviewInverterChargerPage.qml" line="146"/>
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="194"/>
       <source>Microgrid parameters</source>
       <translation>微电网参数</translation>
     </message>
     <message id="microgrid_mode_hybrid_droop">
-      <location filename="../../src/enums.cpp" line="585"/>
+      <location filename="../../src/enums.cpp" line="761"/>
       <source>Hybrid droop</source>
       <translation>混合型下垂控制</translation>
-    </message>
-    <message id="microgrid_mode_grid_following">
-      <location filename="../../src/enums.cpp" line="588"/>
-      <source>Grid-following</source>
-      <translation>并网跟随</translation>
-    </message>
-    <message id="microgrid_mode_grid_forming">
-      <location filename="../../src/enums.cpp" line="591"/>
-      <source>Grid-forming</source>
-      <translation>并网形成</translation>
     </message>
     <message id="microgrid">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="15"/>
@@ -10187,124 +10316,104 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>微电网</translation>
     </message>
     <message id="page_microgrid_active_mode">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="19"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="29"/>
       <source>Active mode</source>
       <translation>激活模式</translation>
     </message>
     <message id="page_microgrid_hybrid_droop_parameters">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="102"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="167"/>
       <source>Hybrid droop parameters</source>
       <translation>混合型下垂控制参数</translation>
     </message>
     <message id="page_microgrid_reference_active_power_p0">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="108"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="173"/>
       <source>Reference active power (P&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>参考有功功率 (P&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_reference_frequency_f0">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="115"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="186"/>
       <source>Reference frequency (f&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>参考频率 (f&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_frequency_droop_slope">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="122"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="200"/>
       <source>Frequency droop slope (droop&lt;sub&gt;fP&lt;/sub&gt;)</source>
       <translation>频率下垂斜率 (droop&lt;sub&gt;fP&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_reference_reactive_power">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="129"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="214"/>
       <source>Reference reactive power (Q&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>参考无功功率 (Q&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_reference_voltage">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="136"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="227"/>
       <source>Reference Voltage (U&lt;sub&gt;0&lt;/sub&gt;)</source>
       <translation>参考电压 (U&lt;sub&gt;0&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_voltage_droop_slope">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="143"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="241"/>
       <source>Voltage droop slope (droop&lt;sub&gt;UQ&lt;/sub&gt;)</source>
       <translation>电压下垂斜率 (droop&lt;sub&gt;UQ&lt;/sub&gt;)</translation>
     </message>
     <message id="page_microgrid_minimum_and_maximum_parameters">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="149"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="254"/>
       <source>Minimum and maximum parameters</source>
       <translation>最小值和最大值参数</translation>
     </message>
     <message id="page_microgrid_allowed_active_power_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="154"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="260"/>
       <source>Allowed active power range</source>
       <translation>允许的有功功率范围</translation>
     </message>
     <message id="page_microgrid_allowed_reactive_power_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="162"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="282"/>
       <source>Allowed reactive power range</source>
       <translation>允许的无功功率范围</translation>
     </message>
     <message id="page_microgrid_p_q_direct_drive_settings">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="179"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="335"/>
       <source>P-Q direct drive settings</source>
       <translation>P-Q 直接驱动设置</translation>
     </message>
     <message id="page_microgrid_active_power_setpoint_p">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="184"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="340"/>
       <source>Active power setpoint (P)</source>
       <translation>有功功率设定点 (P)</translation>
     </message>
     <message id="page_microgrid_reactive_power_setpoint_q">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="191"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="347"/>
       <source>Reactive power setpoint (Q)</source>
       <translation>无功功率设定点 (Q)</translation>
     </message>
     <message id="page_microgrid_allowed_frequency_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="198"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="354"/>
       <source>Allowed frequency range</source>
       <translation>允许的频率范围</translation>
     </message>
     <message id="page_microgrid_allowed_voltage_range">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="206"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="362"/>
       <source>Allowed voltage range</source>
       <translation>允许的电压范围</translation>
     </message>
     <message id="page_microgrid_v_f_direct_drive_settings">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="223"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="379"/>
       <source>V-f direct drive settings</source>
       <translation>V-f 直接驱动设置</translation>
     </message>
     <message id="page_microgrid_voltage_setpoint">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="228"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="384"/>
       <source>Voltage setpoint (U)</source>
       <translation>电压设定点 (U)</translation>
     </message>
     <message id="page_microgrid_frequency_setpoint">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="235"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="391"/>
       <source>Frequency setpoint (f)</source>
       <translation>频率设定点 (f)</translation>
     </message>
-    <message id="pagesettingsintegrations_canopenmotordrive">
-      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="189"/>
-      <source>CANopen motor drives</source>
-      <translation>CANopen 马达驱动器</translation>
-    </message>
     <message id="pagesettingsintegrations_ui_plugins">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="283"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="280"/>
       <source>UI Plugins</source>
       <translation>UI 插件</translation>
-    </message>
-    <message id="devicelist_motordrive_motordirectioninverted">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="93"/>
-      <source>Motor Direction Inverted</source>
-      <translation>电机方向反转</translation>
-    </message>
-    <message id="page_settings_canopenmotordrive_scan_for_motor_drives">
-      <location filename="../../pages/settings/PageSettingsCanOpenMotordrive.qml" line="31"/>
-      <source>Scan for motor drives</source>
-      <translation>扫描马达驱动器</translation>
-    </message>
-    <message id="page_settings_canopenmotordrive_discovered_motor_drive_ids">
-      <location filename="../../pages/settings/PageSettingsCanOpenMotordrive.qml" line="39"/>
-      <source>Discovered motor drive IDs</source>
-      <translation>已发现的马达驱动器 ID</translation>
     </message>
     <message id="temperature_short_circuited">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="32"/>
@@ -10315,6 +10424,11 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="35"/>
       <source>Reverse polarity</source>
       <translation type="unfinished">极性接反</translation>
+    </message>
+    <message id="temperature_sensor_battery_low">
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="38"/>
+      <source>Sensor battery low</source>
+      <translation type="unfinished">感应器电量低</translation>
     </message>
     <message id="temperature_pm25">
       <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="70"/>
@@ -10342,23 +10456,23 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>亮度</translation>
     </message>
     <message id="temperature_sensor_battery_status_low">
-      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="133"/>
+      <location filename="../../pages/settings/devicelist/temperature/PageTemperatureSensor.qml" line="136"/>
       <source>Low</source>
       <translation type="unfinished">低</translation>
     </message>
     <message id="switchable_output_bypassed">
-      <location filename="../../src/enums.cpp" line="515"/>
+      <location filename="../../src/enums.cpp" line="684"/>
       <source>Bypassed</source>
       <translation>已旁路</translation>
     </message>
     <message id="switchableoutput_list_delegate_auto_status">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/SwitchableOutputListDelegate.qml" line="93"/>
+      <location filename="../../pages/settings/devicelist/iochannel/SwitchableOutputListDelegate.qml" line="93"/>
       <source>Auto (%1)</source>
       <extracomment>%1 = 'On' or 'Off'</extracomment>
       <translation>自动 (%1)</translation>
     </message>
     <message id="switchableoutput_list_delegate_state_forced">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/SwitchableOutputListDelegate.qml" line="109"/>
+      <location filename="../../pages/settings/devicelist/iochannel/SwitchableOutputListDelegate.qml" line="109"/>
       <source>Forced</source>
       <translation>强制</translation>
     </message>
@@ -10368,66 +10482,66 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <translation>Modbus端口和设备ID设置</translation>
     </message>
     <message id="pagesettingsintegrations_uiplugin_integrates_with_devicelist">
-      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="322"/>
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="319"/>
       <source>Integrates with the device list</source>
       <translation>与设备列表集成</translation>
     </message>
     <message id="common_words_color">
-      <location filename="../../components/CommonWords.qml" line="136"/>
+      <location filename="../../components/CommonWords.qml" line="139"/>
       <source>Color</source>
       <translation>颜色</translation>
     </message>
     <message id="common_words_value_must_be_greater_than_start_value">
-      <location filename="../../components/CommonWords.qml" line="562"/>
+      <location filename="../../components/CommonWords.qml" line="577"/>
       <source>Value must be greater than start value</source>
       <translation>值必须大于起始值</translation>
     </message>
     <message id="common_words_value_must_be_lower_than_stop_value">
-      <location filename="../../components/CommonWords.qml" line="571"/>
+      <location filename="../../components/CommonWords.qml" line="586"/>
       <source>Value must be lower than stop value</source>
       <translation>值必须小于停止值</translation>
     </message>
     <message id="notifications_page_active_notifications">
-      <location filename="../../pages/NotificationsPage.qml" line="42"/>
+      <location filename="../../pages/NotificationsPage.qml" line="45"/>
       <source>Active Notifications</source>
       <extracomment>List section header, for the section which contains current/active notifications</extracomment>
       <translation>激活的通知</translation>
     </message>
     <message id="notifications_page_inactive_notifications">
-      <location filename="../../pages/NotificationsPage.qml" line="46"/>
+      <location filename="../../pages/NotificationsPage.qml" line="49"/>
       <source>Inactive Notifications</source>
       <extracomment>List section header, for the section which contains inactive (but unseen) notifications</extracomment>
       <translation>未激活的通知</translation>
     </message>
     <message id="notifications_no_active_notifications">
-      <location filename="../../pages/NotificationsPage.qml" line="105"/>
+      <location filename="../../pages/NotificationsPage.qml" line="107"/>
       <source>No active notifications</source>
       <translation>无激活的通知</translation>
     </message>
     <message id="switchable_output_rgb_color_wheel">
-      <location filename="../../src/enums.cpp" line="449"/>
+      <location filename="../../src/enums.cpp" line="564"/>
       <source>RGB color wheel</source>
       <translation>RGB 色轮</translation>
     </message>
     <message id="switchable_output_cct_color_wheel">
-      <location filename="../../src/enums.cpp" line="453"/>
+      <location filename="../../src/enums.cpp" line="568"/>
       <source>CCT color wheel</source>
       <extracomment>Correlated Color Temperature color wheel</extracomment>
       <translation>CCT 色轮</translation>
     </message>
     <message id="switchable_output_rgbw_color_wheel">
-      <location filename="../../src/enums.cpp" line="457"/>
+      <location filename="../../src/enums.cpp" line="572"/>
       <source>RGB + W color wheel</source>
       <extracomment>RGB + white color wheel</extracomment>
       <translation>RGB + W 色轮</translation>
     </message>
     <message id="listlink_show_qr_code">
-      <location filename="../../components/listitems/ListLink.qml" line="43"/>
+      <location filename="../../components/listitems/ListLink.qml" line="89"/>
       <source>Show QR code</source>
       <translation>显示二维码</translation>
     </message>
     <message id="listlink_scan_qr_code">
-      <location filename="../../components/listitems/ListLink.qml" line="52"/>
+      <location filename="../../components/listitems/ListLink.qml" line="114"/>
       <source>Open the QR code to scan it with your portable device.&lt;br /&gt;Or insert the link: %1</source>
       <extracomment>%1 = url text</extracomment>
       <translation>打开二维码，用您的便携设备扫描。&lt;br /&gt;或插入链接: %1</translation>
@@ -10452,20 +10566,13 @@ GX 设备只能控制一个已连接的发电机组，并选择 VRM 实例编号
       <source>Add</source>
       <translation>添加</translation>
     </message>
-    <message id="page_settings_fronius_modbus_locations_note">
-      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="40"/>
-      <source>The default modbus port is 502 and the default unit ID is 126.
-Here you can add additional ports and unit IDs to scan for PV inverters.</source>
-      <translation>默认的Modbus端口是502，默认的设备ID是126。
-您可以在这里添加额外的端口和设备ID来扫描光伏逆变器。</translation>
-    </message>
     <message id="page_settings_fronius_modbus_location_number">
-      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="50"/>
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="62"/>
       <source>Port/Unit ID %1</source>
       <translation>端口/设备ID %1</translation>
     </message>
     <message id="page_settings_fronius_modbus_remove_location_description">
-      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="72"/>
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="17"/>
       <source>Port: %1 (Unit %2)</source>
       <translation>端口: %1 (设备 %2)</translation>
     </message>
@@ -10475,7 +10582,7 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>移除Modbus端口和设备ID？</translation>
     </message>
     <message id="devicelist_tankshape_edit_point">
-      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="182"/>
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="203"/>
       <source>Edit point %1</source>
       <extracomment>%1 = which point is being edited, a number like "1" or "2"</extracomment>
       <translation>编辑点 %1</translation>
@@ -10496,7 +10603,7 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>CANopen E-drive (500 kbit/s)</translation>
     </message>
     <message id="page_microgrid_from_p1_to_p2">
-      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="40"/>
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="66"/>
       <source>%1%2 to %3%4</source>
       <extracomment>Describes a range from one quantity to another, e.g. "30W to 60W". The first argument is the first quantity, the second argument is the units of the first quantity, the third argument is the second quantity, the fourth argument is the units of the second quantity.</extracomment>
       <translation>%1%2 至 %3%4</translation>
@@ -10507,7 +10614,7 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>%1 更改了角色，设备列表已更新</translation>
     </message>
     <message id="page_meteo_estimated_power">
-      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="80"/>
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="98"/>
       <source>Estimated power</source>
       <translation>估计功率</translation>
     </message>
@@ -10517,93 +10624,93 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>设备列表</translation>
     </message>
     <message id="page_switchable_output_switch_mode">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="40"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="30"/>
       <source>Switch mode</source>
       <translation>开关模式</translation>
     </message>
     <message id="page_switchable_output_switch_mode_linear">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="47"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="38"/>
       <source>Permanent on</source>
       <translation>永久开启</translation>
     </message>
     <message id="page_switchable_output_switch_mode_optical">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="49"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="40"/>
       <source>Switching</source>
       <translation>切换</translation>
     </message>
     <message id="page_switchable_output_dim_mode">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="55"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="46"/>
       <source>Dim mode</source>
       <translation>调光模式</translation>
     </message>
     <message id="page_switchable_output_dim_mode_disabled">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="60"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="52"/>
       <source>Dimming disabled</source>
       <translation>禁用调光</translation>
     </message>
     <message id="page_switchable_output_dim_mode_linear">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="62"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="54"/>
       <source>Linear</source>
       <translation>线性</translation>
     </message>
     <message id="page_switchable_output_dim_mode_optical">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="64"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="56"/>
       <source>Optical curve</source>
       <translation>光曲线</translation>
     </message>
     <message id="page_switchable_output_fuse_detection_mode">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="70"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="62"/>
       <source>Fuse detection mode</source>
       <translation>熔断器检测模式</translation>
     </message>
     <message id="page_switchable_output_fuse_detection_mode_only_when_off">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="77"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="70"/>
       <source>Only when the output is off</source>
       <translation>仅在输出关闭时</translation>
     </message>
     <message id="page_switchable_output_startup_state">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="140"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="136"/>
       <source>Startup switch state</source>
       <translation>启动开关状态</translation>
     </message>
     <message id="page_switchable_output_startup_state_restore_from_memory">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="147"/>
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="154"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="144"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="151"/>
       <source>Restore from memory</source>
       <translation>从内存恢复</translation>
     </message>
     <message id="page_switchable_output_startup_dim_level">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="153"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="150"/>
       <source>Startup dim level</source>
       <translation type="unfinished">启动调光级别</translation>
     </message>
     <message id="settings_dvcc_startup_dim_level">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="183"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="193"/>
       <source>Startup dim level</source>
       <translation>启动调光级别</translation>
     </message>
     <message id="page_switchable_output_restore_dim_level">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="173"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="171"/>
       <source>Restore dim level from memory</source>
       <translation>从内存恢复调光级别</translation>
     </message>
     <message id="page_switchable_output_polarity_active_high">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="203"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="214"/>
       <source>Active high / Normally open</source>
       <translation>高电平有效/常开</translation>
     </message>
     <message id="page_switchable_output_polarity_active_low">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="205"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="216"/>
       <source>Active low / Normally closed</source>
       <translation>低电平有效/常闭</translation>
     </message>
     <message id="settings_dvcc_output_limit_min">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="211"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="222"/>
       <source>Output limit min</source>
       <translation>输出限制最小值</translation>
     </message>
     <message id="settings_dvcc_output_limit_max">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="222"/>
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="234"/>
       <source>Output limit max</source>
       <translation>输出限制最大值</translation>
     </message>
@@ -10612,23 +10719,28 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <source>Phase Setting</source>
       <translation>相位设置</translation>
     </message>
-    <message id="page_switchable_output_show_local">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="125"/>
+    <message id="iochannel_showui_local">
+      <location filename="../../components/listitems/ListIOChannelShowRadioButtonGroup.qml" line="20"/>
       <source>Only local</source>
       <translation>仅本地</translation>
     </message>
-    <message id="page_switchable_output_show_vrm">
-      <location filename="../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="127"/>
+    <message id="iochannel_showui_vrm">
+      <location filename="../../components/listitems/ListIOChannelShowRadioButtonGroup.qml" line="22"/>
       <source>Only on VRM</source>
       <translation>仅在 VRM 上</translation>
     </message>
+    <message id="control_cards_title">
+      <location filename="../../pages/ControlCardsPage.qml" line="20"/>
+      <source>Controls</source>
+      <translation type="unfinished">控制</translation>
+    </message>
     <message id="controlcards_empty_desc1">
-      <location filename="../../pages/ControlCardsPage.qml" line="147"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="156"/>
       <source>No compatible devices found</source>
       <translation>未找到兼容设备</translation>
     </message>
     <message id="controlcards_empty_desc2">
-      <location filename="../../pages/ControlCardsPage.qml" line="149"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="158"/>
       <source>Connect devices that support this function</source>
       <translation>连接支持此功能的设备</translation>
     </message>
@@ -10638,7 +10750,7 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>VRM 设备注册</translation>
     </message>
     <message id="common_words_go_to_redetect_system">
-      <location filename="../../components/CommonWords.qml" line="221"/>
+      <location filename="../../components/CommonWords.qml" line="233"/>
       <source>If it was recently disconnected, go to Settings → Devices → %1 → Advanced, and select 'Redetect VE.Bus system'.</source>
       <extracomment>%1 = name of the device</extracomment>
       <translation>如果最近断开连接，请转到“设置”→“设备”→“%1”→“高级”，然后选择“重新检测 VE.Bus 系统”。</translation>
@@ -10654,19 +10766,9 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>VRM 门户访问级别</translation>
     </message>
     <message id="settings_firmware_check_timed_out">
-      <location filename="../../components/FirmwareUpdate.qml" line="207"/>
+      <location filename="../../components/FirmwareUpdate.qml" line="252"/>
       <source>Firmware check timed out</source>
       <translation>固件检查超时</translation>
-    </message>
-    <message id="devicelist_motordrive_motordirection">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="57"/>
-      <source>Motor Direction</source>
-      <translation>电机方向</translation>
-    </message>
-    <message id="devicelist_motordrive_motortorque">
-      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="64"/>
-      <source>Motor Torque</source>
-      <translation>电机扭矩</translation>
     </message>
     <message id="settings_units_mixed">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="53"/>
@@ -10674,54 +10776,980 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation>混合 (交流电，单位：瓦特；直流电，单位：安培)</translation>
     </message>
     <message id="switchable_output_overtemperature_tripped">
-      <location filename="../../src/enums.cpp" line="486"/>
+      <location filename="../../src/enums.cpp" line="660"/>
       <source>Over temp, tripped</source>
       <translation>过温，跳闸</translation>
     </message>
     <message id="switchable_output_disabled">
-      <location filename="../../src/enums.cpp" line="503"/>
+      <location filename="../../src/enums.cpp" line="672"/>
       <source>Disabled</source>
       <translation type="unfinished">已禁用</translation>
     </message>
     <message id="switchable_output_disabled_tripped">
-      <location filename="../../src/enums.cpp" line="506"/>
+      <location filename="../../src/enums.cpp" line="675"/>
       <source>Disabled, tripped</source>
       <translation>已禁用，跳闸</translation>
     </message>
     <message id="switchable_output_disabled_overtemperature">
-      <location filename="../../src/enums.cpp" line="509"/>
+      <location filename="../../src/enums.cpp" line="678"/>
       <source>Disabled, over temp</source>
       <translation>已禁用，过温</translation>
     </message>
     <message id="switchable_output_disabled_on">
-      <location filename="../../src/enums.cpp" line="512"/>
+      <location filename="../../src/enums.cpp" line="681"/>
       <source>Disabled but on</source>
       <translation>已禁用，但已开启</translation>
     </message>
     <message id="switchable_output_bypassed_tripped">
-      <location filename="../../src/enums.cpp" line="518"/>
+      <location filename="../../src/enums.cpp" line="687"/>
       <source>Bypassed, tripped</source>
       <translation>已旁路，跳闸</translation>
     </message>
     <message id="switchable_output_bypassed_overtemperature">
-      <location filename="../../src/enums.cpp" line="521"/>
+      <location filename="../../src/enums.cpp" line="690"/>
       <source>Bypassed, over temp</source>
       <translation>已旁路，过温</translation>
     </message>
     <message id="switchable_output_externalcontrol">
-      <location filename="../../src/enums.cpp" line="524"/>
+      <location filename="../../src/enums.cpp" line="693"/>
       <source>External control</source>
       <translation type="unfinished">外部控制</translation>
     </message>
     <message id="switchable_output_externalcontrol_tripped">
-      <location filename="../../src/enums.cpp" line="527"/>
+      <location filename="../../src/enums.cpp" line="696"/>
       <source>External control, tripped</source>
       <translation>外部控制，跳闸</translation>
     </message>
     <message id="switchable_output_externalcontrol_overtemperature">
-      <location filename="../../src/enums.cpp" line="530"/>
+      <location filename="../../src/enums.cpp" line="699"/>
       <source>External control, over temp</source>
       <translation>外部控制，过温</translation>
+    </message>
+    <message id="page_meteo_configuration_required">
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="23"/>
+      <source>Configuration required</source>
+      <translation>需要配置</translation>
+    </message>
+    <message id="page_meteo_config_caption">
+      <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="31"/>
+      <source>Setup is needed for power estimation. For instructions, open the QR code to scan it with your portable device.&lt;br /&gt;Or insert the link: %1</source>
+      <extracomment>%1 = url text</extracomment>
+      <translation>需要设置才能进行功率估算。 有关说明，请打开二维码并使用您的便携式设备扫描它。&lt;br /&gt;或者插入链接: %1</translation>
+    </message>
+    <message id="ev_target_soc">
+      <location filename="../../pages/ev/EvPage.qml" line="40"/>
+      <source>Target state of charge</source>
+      <translation>目标充电状态</translation>
+    </message>
+    <message id="ev_range">
+      <location filename="../../pages/ev/EvPage.qml" line="47"/>
+      <source>Range</source>
+      <translation>范围</translation>
+    </message>
+    <message id="ev_battery_capacity">
+      <location filename="../../pages/ev/EvPage.qml" line="57"/>
+      <source>Battery capacity</source>
+      <translation>电池容量</translation>
+    </message>
+    <message id="ev_charging_state">
+      <location filename="../../pages/ev/EvPage.qml" line="73"/>
+      <source>Charging state</source>
+      <translation>充电状态</translation>
+    </message>
+    <message id="ev_charging_state_not_charging">
+      <location filename="../../pages/ev/EvPage.qml" line="79"/>
+      <source>Not charging</source>
+      <translation>未充电</translation>
+    </message>
+    <message id="ev_charging_state_low_power">
+      <location filename="../../pages/ev/EvPage.qml" line="82"/>
+      <source>Low power mode</source>
+      <translation>低功耗模式</translation>
+    </message>
+    <message id="ev_charging_state_scheduled_charging">
+      <location filename="../../pages/ev/EvPage.qml" line="97"/>
+      <source>Scheduled charging</source>
+      <translation>定时充电</translation>
+    </message>
+    <message id="ev_at_site">
+      <location filename="../../pages/ev/EvPage.qml" line="108"/>
+      <source>At site</source>
+      <translation>在现场</translation>
+    </message>
+    <message id="ev_vin">
+      <location filename="../../pages/ev/EvPage.qml" line="123"/>
+      <source>VIN</source>
+      <translation>车辆识别码</translation>
+    </message>
+    <message id="ev_odometer">
+      <location filename="../../pages/ev/EvPage.qml" line="130"/>
+      <source>Odometer</source>
+      <translation>里程表</translation>
+    </message>
+    <message id="ev_nr_phases">
+      <location filename="../../pages/ev/EvPage.qml" line="158"/>
+      <source>Number of phases</source>
+      <translation>相数</translation>
+    </message>
+    <message id="battery_individual_info">
+      <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="276"/>
+      <source>Individual Battery Info</source>
+      <translation>单个电池信息</translation>
+    </message>
+    <message id="lynxionbatteryinfo_battery_number_with_serial">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="38"/>
+      <source>Battery #%1 [%2]</source>
+      <extracomment>%1 = battery number, %2 = battery name</extracomment>
+      <translation>电池 #%1 [%2]</translation>
+    </message>
+    <message id="lynxionbatteryinfo_battery_number">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="41"/>
+      <source>Battery #%1</source>
+      <extracomment>%1 = battery number</extracomment>
+      <translation>电池 #%1</translation>
+    </message>
+    <message id="lynxionbatteryinfo_battery_info_section_header">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="72"/>
+      <source>Battery Info</source>
+      <translation>电池信息</translation>
+    </message>
+    <message id="lynxionsystem_capacity">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="84"/>
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonSystem.qml" line="18"/>
+      <source>Capacity</source>
+      <translation type="unfinished">容量</translation>
+    </message>
+    <message id="lynxionbatteryinfo_battery_measurements_section_header">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="106"/>
+      <source>Battery Measurements</source>
+      <translation>电池测量</translation>
+    </message>
+    <message id="lynxionbatteryinfo_cell_measurements_section_header">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="131"/>
+      <source>Cell Measurements</source>
+      <translation>单体电压测量</translation>
+    </message>
+    <message id="lynxionbatteryinfo_cell_number">
+      <location filename="../../pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml" line="155"/>
+      <source>Cell #%1</source>
+      <translation>单体 #%1</translation>
+    </message>
+    <message id="settings_ess_grid_meter_required">
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="71"/>
+      <source>Grid meter required</source>
+      <translation>需要电网计量表</translation>
+    </message>
+    <message id="settings_ess_grid_meter_required_caption">
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="80"/>
+      <source>A grid meter must be present for ESS operation. If not available, the system will switch to pass-through.</source>
+      <translation>ESS 运行需要电网计量表。如果不可用，系统将切换到直通模式。</translation>
+    </message>
+    <message id="settings_ess_grid_meter_optional_caption">
+      <location filename="../../pages/settings/PageSettingsHub4.qml" line="86"/>
+      <source>The system will use a grid meter when present, but fall back to internal measurements if the connection to the grid meter is lost.</source>
+      <translation>系统将在存在电网计量表时使用它，但如果与电网计量表的连接丢失，则会回退到内部测量。</translation>
+    </message>
+    <message id="settings_tcpip_ethernet_gateway_enabled">
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="130"/>
+      <source>Allow using ethernet for internet access</source>
+      <translation>允许使用以太网进行互联网访问</translation>
+    </message>
+    <message id="settings_wifi_access_point">
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="31"/>
+      <source>Access point</source>
+      <translation>热点</translation>
+    </message>
+    <message id="settings_tcpip_wifi_gateway_enabled">
+      <location filename="../../pages/settings/PageSettingsWifi.qml" line="139"/>
+      <source>Allow using WiFi for internet access</source>
+      <translation>允许使用 WiFi 进行互联网访问</translation>
+    </message>
+    <message id="battery_status_overvoltage">
+      <location filename="../../src/enums.cpp" line="82"/>
+      <source>Overvoltage</source>
+      <translation>过压</translation>
+    </message>
+    <message id="battery_status_undervoltage">
+      <location filename="../../src/enums.cpp" line="86"/>
+      <source>Undervoltage</source>
+      <translation>欠压</translation>
+    </message>
+    <message id="battery_status_low_temperature_atc">
+      <location filename="../../src/enums.cpp" line="90"/>
+      <source>Low Temperature (ATC)</source>
+      <translation>低温 (ATC)</translation>
+    </message>
+    <message id="battery_status_high_temperature_atc">
+      <location filename="../../src/enums.cpp" line="94"/>
+      <source>High Temperature (ATC)</source>
+      <translation>高温 (ATC)</translation>
+    </message>
+    <message id="battery_status_cell_error">
+      <location filename="../../src/enums.cpp" line="98"/>
+      <source>Cell Error</source>
+      <translation>单体错误</translation>
+    </message>
+    <message id="battery_status_high_temperature_atd">
+      <location filename="../../src/enums.cpp" line="102"/>
+      <source>High Temperature (ATD)</source>
+      <translation>高温 (ATD)</translation>
+    </message>
+    <message id="battery_status_high_cell_voltage">
+      <location filename="../../src/enums.cpp" line="106"/>
+      <source>High Cell Voltage</source>
+      <translation>电芯电压高</translation>
+    </message>
+    <message id="battery_status_update_failure">
+      <location filename="../../src/enums.cpp" line="110"/>
+      <source>Update Failure</source>
+      <translation>更新失败</translation>
+    </message>
+    <message id="battery_status_charge_overcurrent_warning">
+      <location filename="../../src/enums.cpp" line="114"/>
+      <source>Charge Overcurrent Warning</source>
+      <translation>充电过流警告</translation>
+    </message>
+    <message id="battery_status_charge_overcurrent_alarm">
+      <location filename="../../src/enums.cpp" line="118"/>
+      <source>Charge Overcurrent Alarm</source>
+      <translation>充电过流警报</translation>
+    </message>
+    <message id="battery_status_discharge_overcurrent_warning">
+      <location filename="../../src/enums.cpp" line="122"/>
+      <source>Discharge Overcurrent Warning</source>
+      <translation>放电过流警告</translation>
+    </message>
+    <message id="battery_status_discharge_overcurrent_alarm">
+      <location filename="../../src/enums.cpp" line="126"/>
+      <source>Discharge Overcurrent Alarm</source>
+      <translation>放电过流警报</translation>
+    </message>
+    <message id="battery_status_low_cell_voltage">
+      <location filename="../../src/enums.cpp" line="130"/>
+      <source>Low Cell Voltage</source>
+      <translation>电池电压低</translation>
+    </message>
+    <message id="battery_status_low_temperature_atd">
+      <location filename="../../src/enums.cpp" line="134"/>
+      <source>Low Temperature (ATD)</source>
+      <translation>低温 (ATD)</translation>
+    </message>
+    <message id="devicelist_motordrive_motordirection">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="57"/>
+      <source>Motor direction</source>
+      <translation>电机方向</translation>
+    </message>
+    <message id="devicelist_motordrive_motortorque">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="64"/>
+      <source>Motor torque</source>
+      <translation>电机扭矩</translation>
+    </message>
+    <message id="devicelist_motordrive_motortemperature">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="72"/>
+      <source>Motor temperature</source>
+      <translation>电机温度</translation>
+    </message>
+    <message id="devicelist_motordrive_controllertemperature">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="86"/>
+      <source>Controller temperature</source>
+      <translation>控制器温度</translation>
+    </message>
+    <message id="devicelist_motordrive_motordirectioninverted">
+      <location filename="../../pages/settings/devicelist/PageMotorDrive.qml" line="93"/>
+      <source>Motor direction inverted</source>
+      <translation>电机方向反转</translation>
+    </message>
+    <message id="pagesettingsboatpage_edrive_with_vrm_instance">
+      <location filename="../../pages/settings/PageSettingsBoatPage.qml" line="48"/>
+      <source>E-drive with VRM instance #%1</source>
+      <translation>带有 VRM 实例的电动驱动器 #%1</translation>
+    </message>
+    <message id="pagesettingsboatpage_dual_drive_configuration">
+      <location filename="../../pages/settings/PageSettingsBoatPage.qml" line="79"/>
+      <source>Dual-Drive Configuration</source>
+      <translation>双驱动配置</translation>
+    </message>
+    <message id="pagesettingsboatpage_multi_drive_left">
+      <location filename="../../pages/settings/PageSettingsBoatPage.qml" line="85"/>
+      <source>Left E-drive</source>
+      <translation>左侧电动驱动器</translation>
+    </message>
+    <message id="pagesettingsboatpage_multi_drive_right">
+      <location filename="../../pages/settings/PageSettingsBoatPage.qml" line="93"/>
+      <source>Right E-drive</source>
+      <translation>右侧电动驱动器</translation>
+    </message>
+    <message id="settings_tcpip_ethernet_linklocal_enabled">
+      <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="175"/>
+      <source>Enable Link-local</source>
+      <translation>启用链路本地</translation>
+    </message>
+    <message id="switchable_output_running_over_temperature">
+      <location filename="../../src/enums.cpp" line="619"/>
+      <source>Running, over temperature</source>
+      <translation>运行中，温度过高</translation>
+    </message>
+    <message id="switchable_output_running_disabled">
+      <location filename="../../src/enums.cpp" line="622"/>
+      <source>Running, disabled</source>
+      <translation>运行中，已禁用</translation>
+    </message>
+    <message id="switchable_output_not_running_disabled">
+      <location filename="../../src/enums.cpp" line="629"/>
+      <source>Not running, disabled</source>
+      <translation>未运行，已禁用</translation>
+    </message>
+    <message id="pagesettingssystem_opportunity_loads">
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="59"/>
+      <source>Opportunity Loads</source>
+      <translation>机会负载</translation>
+    </message>
+    <message id="pagesettingssystem_automate_controllable_devices">
+      <location filename="../../pages/settings/PageSettingsSystem.qml" line="61"/>
+      <source>Automate controllable devices to maximize PV self-use</source>
+      <translation>自动化可控设备，以最大限度地利用光伏自用</translation>
+    </message>
+    <message id="microgrid_mode_ems_hybrid_droop">
+      <location filename="../../src/enums.cpp" line="764"/>
+      <source>EMS Control: Hybrid droop</source>
+      <translation>EMS 控制：混合下垂</translation>
+    </message>
+    <message id="microgrid_mode_ems_grid_following">
+      <location filename="../../src/enums.cpp" line="768"/>
+      <source>EMS Control: Grid-following</source>
+      <translation>EMS 控制：电网跟随</translation>
+    </message>
+    <message id="microgrid_mode_ems_grid_forming">
+      <location filename="../../src/enums.cpp" line="771"/>
+      <source>EMS Control: Grid-forming</source>
+      <translation>EMS 控制：电网形成</translation>
+    </message>
+    <message id="microgrid_error_hybrid_droop_values_out_of_sync">
+      <location filename="../../src/enums.cpp" line="785"/>
+      <source>Different fallback hybrid droop values in phase masters</source>
+      <translation>相位主控中不同的回退混合下垂值</translation>
+    </message>
+    <message id="microgrid_error_write_failed">
+      <location filename="../../src/enums.cpp" line="788"/>
+      <source>Hybrid droop parameter write failed</source>
+      <translation>混合下垂参数写入失败</translation>
+    </message>
+    <message id="microgrid_error_param_fmin_greater_than_fmax">
+      <location filename="../../src/enums.cpp" line="791"/>
+      <source>Parameter error Fmin &gt; Fmax</source>
+      <translation>参数错误：Fmin &gt; Fmax</translation>
+    </message>
+    <message id="microgrid_error_param_pmin_greater_than_pmaxv">
+      <location filename="../../src/enums.cpp" line="794"/>
+      <source>Parameter error Pmin &gt; Pmax</source>
+      <translation>参数错误：Pmin &gt; Pmax</translation>
+    </message>
+    <message id="microgrid_error_param_umin_greater_than_umax">
+      <location filename="../../src/enums.cpp" line="797"/>
+      <source>Parameter error Umin &gt; Umax</source>
+      <translation>参数错误：Umin &gt; Umax</translation>
+    </message>
+    <message id="microgrid_error_param_qmin_greater_than_qmax">
+      <location filename="../../src/enums.cpp" line="800"/>
+      <source>Parameter error Qmin &gt; Qmax</source>
+      <translation>参数错误：Qmin &gt; Qmax</translation>
+    </message>
+    <message id="microgrid_error_param_q0_out_of_range">
+      <location filename="../../src/enums.cpp" line="803"/>
+      <source>Parameter error Q0 out of range</source>
+      <translation>参数错误：Q0 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_qmin_out_of_range">
+      <location filename="../../src/enums.cpp" line="806"/>
+      <source>Parameter error Qmin out of range</source>
+      <translation>参数错误：Qmin 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_qmax_out_of_range">
+      <location filename="../../src/enums.cpp" line="809"/>
+      <source>Parameter error Qmax out of range</source>
+      <translation>参数错误：Qmax 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_u0_out_of_range">
+      <location filename="../../src/enums.cpp" line="812"/>
+      <source>Parameter error U0 out of range</source>
+      <translation>参数错误：U0 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_u_droop_out_of_range">
+      <location filename="../../src/enums.cpp" line="815"/>
+      <source>Parameter error U droop out of range</source>
+      <translation>参数错误：U 下垂超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_p0_out_of_range">
+      <location filename="../../src/enums.cpp" line="818"/>
+      <source>Parameter error P0 out of range</source>
+      <translation>参数错误：P0 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_pmin_out_of_range">
+      <location filename="../../src/enums.cpp" line="821"/>
+      <source>Parameter error Pmin out of range</source>
+      <translation>参数错误：Pmin 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_pmax_out_of_range">
+      <location filename="../../src/enums.cpp" line="824"/>
+      <source>Parameter error Pmax out of range</source>
+      <translation>参数错误：Pmax 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_f0_out_of_range">
+      <location filename="../../src/enums.cpp" line="827"/>
+      <source>Parameter error F0 out of range</source>
+      <translation>参数错误：F0 超出范围</translation>
+    </message>
+    <message id="microgrid_error_param_freq_droop_out_of_range">
+      <location filename="../../src/enums.cpp" line="830"/>
+      <source>Parameter error freq droop out of range</source>
+      <translation>参数错误：频率下垂超出范围</translation>
+    </message>
+    <message id="microgrid_error_pf_fp_mismatch">
+      <location filename="../../src/enums.cpp" line="833"/>
+      <source>Ve.Bus internal error PF vs FP data mismatch</source>
+      <translation>Ve.Bus 内部错误：PF 与 FP 数据不匹配</translation>
+    </message>
+    <message id="microgrid_error_qu_uq_mismatch">
+      <location filename="../../src/enums.cpp" line="836"/>
+      <source>Ve.Bus internal error QU vs UQ data mismatch</source>
+      <translation>Ve.Bus 内部错误：QU 与 UQ 数据不匹配</translation>
+    </message>
+    <message id="generic_input_discrete">
+      <location filename="../../src/enums.cpp" line="489"/>
+      <source>Discrete value indicator</source>
+      <translation>离散值指示器</translation>
+    </message>
+    <message id="generic_input_value_unranged">
+      <location filename="../../src/enums.cpp" line="492"/>
+      <source>Value indicator (unranged)</source>
+      <translation>值指示器（无范围）</translation>
+    </message>
+    <message id="generic_input_value_ranged">
+      <location filename="../../src/enums.cpp" line="495"/>
+      <source>Value indicator (ranged)</source>
+      <translation>值指示器（有范围）</translation>
+    </message>
+    <message id="generic_input_temperature">
+      <location filename="../../src/enums.cpp" line="498"/>
+      <source>Temperature indicator</source>
+      <translation>温度指示器</translation>
+    </message>
+    <message id="switchable_output_function_generator_startstop">
+      <location filename="../../src/enums.cpp" line="590"/>
+      <source>Generator start/stop</source>
+      <translation>发电机启/停</translation>
+    </message>
+    <message id="switchable_output_function_genset_helper">
+      <location filename="../../src/enums.cpp" line="602"/>
+      <source>Genset Helper</source>
+      <translation>发电机助手</translation>
+    </message>
+    <message id="switchable_output_function_opportunity_load">
+      <location filename="../../src/enums.cpp" line="605"/>
+      <source>Opportunity load</source>
+      <translation>机会负载</translation>
+    </message>
+    <message id="mk2vsc_state_waiting_for_vebus_setting_access_password">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="40"/>
+      <source>Waiting for VE.Bus setting access password</source>
+      <translation>正在等待 VE.Bus 设置访问密码</translation>
+    </message>
+    <message id="vebus_settings_password_required">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="290"/>
+      <source>VE.Bus settings password required</source>
+      <translation>需要 VE.Bus 设置密码</translation>
+    </message>
+    <message id="vebus_settings_access_password">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="454"/>
+      <source>VE.Bus settings access password</source>
+      <translation>VE.Bus 设置访问密码</translation>
+    </message>
+    <message id="vebus_settings_enter_password">
+      <location filename="../../pages/vebusdevice/PageVeBusBackupRestore.qml" line="457"/>
+      <source>Enter VE.Bus password for access level %1</source>
+      <translation>输入 VE.Bus 密码以访问级别 %1</translation>
+    </message>
+    <message id="device_page_inputs">
+      <location filename="../../components/DevicePage.qml" line="73"/>
+      <source>Inputs</source>
+      <translation>输入</translation>
+    </message>
+    <message id="list-spin-box-range_minimum_maximum_delimiter">
+      <location filename="../../components/listitems/ListSpinBoxRange.qml" line="96"/>
+      <source>to</source>
+      <extracomment>Used as a delimiter between two values that specify a range (e.g. '-70% to 80%')</extracomment>
+      <translation>至</translation>
+    </message>
+    <message id="generic_input_value">
+      <location filename="../../components/switches/delegates/GenericInputCardDelegate_1.qml" line="54"/>
+      <source>Value</source>
+      <extracomment>Refers to the current value of the input.</extracomment>
+      <translation>数值</translation>
+    </message>
+    <message id="pagecontrollableloads_devices_and_priorities">
+      <location filename="../../pages/settings/PageControllableLoads.qml" line="42"/>
+      <source>Devices and Priorities</source>
+      <translation>设备和优先级</translation>
+    </message>
+    <message id="pagecontrollableloads_arrange">
+      <location filename="../../pages/settings/PageControllableLoads.qml" line="97"/>
+      <source>Arrange the controllable devices according to their priority; the control algorithm will control them based on the currently available PV excess.</source>
+      <translation>根据可控设备的优先级对其进行排序；控制算法将根据当前可用的光伏盈余来控制它们。</translation>
+    </message>
+    <message id="pagecontrollableloads_acload_expected_power_consumption">
+      <location filename="../../pages/settings/PageControllableLoadsS2Rm.qml" line="19"/>
+      <source>Expected power consumption</source>
+      <translation>预期功耗</translation>
+    </message>
+    <message id="pagecontrollableloads_acload_minimum_run_duration">
+      <location filename="../../pages/settings/PageControllableLoadsS2Rm.qml" line="28"/>
+      <source>Minimum run duration when turned on</source>
+      <translation>开启时的最短运行时间</translation>
+    </message>
+    <message id="pagecontrollableloads_acload_minimum_rest_duration">
+      <location filename="../../pages/settings/PageControllableLoadsS2Rm.qml" line="35"/>
+      <source>Minimum rest duration when turned off</source>
+      <translation>关闭时的最短休息时间</translation>
+    </message>
+    <message id="page_controllable_loads_preferences_battery_life_compatibility">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="40"/>
+      <source>BatteryLife compatibility</source>
+      <translation>BatteryLife 兼容性</translation>
+    </message>
+    <message id="page_controllable_loads_preferences_pause_opportunity_load_when_active_soc_limit_exceeds_85">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="46"/>
+      <source>Pause Opportunity Loads when Active SOC limit exceeds 85%</source>
+      <translation>当有效 SOC 限制超过 85% 时，暂停机会负载</translation>
+    </message>
+    <message id="page_controllable_loads_preferences_this_helps">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="49"/>
+      <source>This helps the BatteryLife algorithm recharge the battery to 100%.</source>
+      <translation>这有助于 BatteryLife 算法将电池充电至 100%。</translation>
+    </message>
+    <message id="page_generic_input_invert">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="34"/>
+      <source>Invert</source>
+      <translation>反转</translation>
+    </message>
+    <message id="iochannel_digital_input_mode">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="48"/>
+      <source>Digital input mode</source>
+      <translation>数字输入模式</translation>
+    </message>
+    <message id="iochannel_digital_input_mode_input">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="55"/>
+      <source>Digital input</source>
+      <translation>数字信号输入</translation>
+    </message>
+    <message id="iochannel_digital_input_mode_toggle_switch">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="59"/>
+      <source>Toggle switch</source>
+      <translation>切换开关</translation>
+    </message>
+    <message id="page_microgrid_apply_all_parameters">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="308"/>
+      <source>Apply all parameters</source>
+      <translation>应用所有参数</translation>
+    </message>
+    <message id="page_microgrid_apply">
+      <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="310"/>
+      <source>Apply</source>
+      <translation>运用</translation>
+    </message>
+    <message id="page_settings_generator_warm_up_cool_down_unavailable_message">
+      <location filename="../../pages/settings/PageSettingsGenerator.qml" line="60"/>
+      <source>Warm-up &amp; cool-down is unavailable with the current inverter/charger firmware. 
+Please update to the latest firmware to be able to adjust these settings.</source>
+      <translation>当前逆变器/充电器固件不支持预热和冷却功能。
+请更新到最新固件以调整这些设置。</translation>
+    </message>
+    <message id="generic_input_unknown_status">
+      <location filename="../../src/enums.cpp" line="518"/>
+      <source>Unknown status</source>
+      <translation>未知状态</translation>
+    </message>
+    <message id="page_switchable_output_set_dim_level_manually">
+      <location filename="../../pages/settings/devicelist/iochannel/PageSwitchableOutput.qml" line="182"/>
+      <source>Set startup dim level manually</source>
+      <translation>手动设置启动亮度级别</translation>
+    </message>
+    <message id="main_system_service_settings_offline_warning">
+      <location filename="../../Main.qml" line="287"/>
+      <source>Warning: detected localsettings service offline; reloading UI when it becomes available again...</source>
+      <translation>警告：检测到本地设置服务离线；当服务恢复可用时，将重新加载UI...</translation>
+    </message>
+    <message id="main_system_service_platform_offline_warning">
+      <location filename="../../Main.qml" line="308"/>
+      <source>Warning: detected venus-platform service offline; reloading UI when it becomes available again...</source>
+      <translation>警告：检测到venus-platform服务离线；当服务恢复可用时，将重新加载UI...</translation>
+    </message>
+    <message id="pagesettingssupportstate_support_state_check_items">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="30"/>
+      <source>Check items below</source>
+      <translation>检查以下项目</translation>
+    </message>
+    <message id="pagesettingssupportstate_operating_system_partition_status">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="335"/>
+      <source>Operating system partition status</source>
+      <translation>操作系统分区状态</translation>
+    </message>
+    <message id="pagesettingssupportstate_items_with_warning_icon_description">
+      <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="488"/>
+      <source>Items with a warning icon are supported and provided by Victron Energy, but using them incorrectly can affect system stability. In case of troubleshooting, disable those first.</source>
+      <translation>带有警告图标的项目由 Victron Energy 提供并支持，但错误使用可能会影响系统稳定性。 如果需要进行故障排除，请首先禁用这些项目。</translation>
+    </message>
+    <message id="pagecontrollableloads_starting">
+      <location filename="../../pages/settings/PageControllableLoads.qml" line="44"/>
+      <source>Starting, this may take a few seconds...</source>
+      <translation>正在启动，这可能需要几秒钟...</translation>
+    </message>
+    <message id="settings_security_profile_change_password_title">
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
+      <source>Change the GX Password</source>
+      <translation>更改 GX 密码</translation>
+    </message>
+    <message id="settings_modbus_remove_description">
+      <location filename="../../pages/settings/PageSettingsModbusDevices.qml" line="56"/>
+      <source>%1 %2:%3 (Unit %4)</source>
+      <extracomment>%1=protocol, %2=IP address, %3=port number, %4=unit number</extracomment>
+      <translation>%1 %2:%3 (单位 %4)</translation>
+    </message>
+    <message id="settings_switch_channel_configuration">
+      <location filename="../../pages/settings/devicelist/PageSwitch.qml" line="44"/>
+      <source>Channel configuration</source>
+      <translation>通道配置</translation>
+    </message>
+    <message id="device_page_outputs">
+      <location filename="../../components/DevicePage.qml" line="46"/>
+      <source>Outputs</source>
+      <extracomment>Settings page for switchable outputs</extracomment>
+      <translation>输出</translation>
+    </message>
+    <message id="radiobutton_list_password_validation_not_supported">
+      <location filename="../../components/RadioButtonListPage.qml" line="126"/>
+      <source>Password validation not supported!</source>
+      <translation>不支持密码验证！</translation>
+    </message>
+    <message id="devicelist_tankshape_add_shape_point">
+      <location filename="../../pages/settings/devicelist/tank/PageTankShape.qml" line="65"/>
+      <source>Add shape point</source>
+      <translation>添加形状点</translation>
+    </message>
+    <message id="settings_add_ip_addresses">
+      <location filename="../../pages/settings/IpAddressListView.qml" line="40"/>
+      <source>Add IP address</source>
+      <translation>添加IP地址</translation>
+    </message>
+    <message id="pagesettingsintegrations_mqtt_devices">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="41"/>
+      <source>MQTT Devices</source>
+      <translation>MQTT设备</translation>
+    </message>
+    <message id="settings_ess_disable_ol_first">
+      <location filename="../../pages/settings/PageSettingsDynamicEss.qml" line="20"/>
+      <source>Dynamic ESS cannot be enabled while Opportunity Loads is enabled. Disable Dynamic ESS first.</source>
+      <translation>当机会负载启用时，无法启用动态ESS。请先禁用动态ESS。</translation>
+    </message>
+    <message id="pagecontrollableloads_disable_dess_first">
+      <location filename="../../pages/settings/PageControllableLoads.qml" line="31"/>
+      <source>Opportunity loads cannot be enabled while Dynamic ESS is running. Disable Dynamic ESS first.</source>
+      <translation>当动态ESS运行时，无法启用机会负载。请先禁用动态ESS。</translation>
+    </message>
+    <message id="eebus_local_ski">
+      <location filename="../../pages/settings/PageSettingsEebus.qml" line="66"/>
+      <source>Local SKI</source>
+      <translation>本地SKI</translation>
+    </message>
+    <message id="eebus_pairing_qr_code">
+      <location filename="../../pages/settings/PageSettingsEebus.qml" line="73"/>
+      <source>QR Code for pairing</source>
+      <translation>配对二维码</translation>
+    </message>
+    <message id="eebus_trusted">
+      <location filename="../../pages/settings/PageSettingsEebus.qml" line="100"/>
+      <source>Trusted</source>
+      <translation type="unfinished">信任</translation>
+    </message>
+    <message id="eebus_device_trusted">
+      <location filename="../../pages/settings/PageSettingsEebusDevice.qml" line="18"/>
+      <source>Trusted</source>
+      <translation>信任</translation>
+    </message>
+    <message id="eebus_untrusted">
+      <location filename="../../pages/settings/PageSettingsEebus.qml" line="102"/>
+      <source>Untrusted</source>
+      <translation>不信任</translation>
+    </message>
+    <message id="eebus_device_host">
+      <location filename="../../pages/settings/PageSettingsEebusDevice.qml" line="35"/>
+      <source>Host</source>
+      <translation>主机</translation>
+    </message>
+    <message id="eebus_device_ski">
+      <location filename="../../pages/settings/PageSettingsEebusDevice.qml" line="41"/>
+      <source>SKI</source>
+      <translation>SKI</translation>
+    </message>
+    <message id="eebus_device_auto_accept">
+      <location filename="../../pages/settings/PageSettingsEebusDevice.qml" line="52"/>
+      <source>Auto Accept</source>
+      <translation>自动接受</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_add_title">
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="36"/>
+      <source>Add port and unit ID</source>
+      <translation>添加端口和单元ID</translation>
+    </message>
+    <message id="page_settings_fronius_modbus_locations_note">
+      <location filename="../../pages/settings/PageSettingsFroniusModbus.qml" line="45"/>
+      <source>The default modbus port is 502 and the default unit ID is 126.</source>
+      <translation>默认Modbus端口为502，默认单元ID为126。</translation>
+    </message>
+    <message id="settings_fronius_rescan_for_ip_addresses">
+      <location filename="../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="21"/>
+      <source>Rescan for IP addresses</source>
+      <translation>重新扫描IP地址</translation>
+    </message>
+    <message id="mqtt_devices_ev_charging_station">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="16"/>
+      <source>EV Charging Station</source>
+      <translation>电动汽车充电站</translation>
+    </message>
+    <message id="mqtt_devices_pairing_mode">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="52"/>
+      <source>Pairing mode</source>
+      <translation>配对模式</translation>
+    </message>
+    <message id="mqtt_devices_pairing_active">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="56"/>
+      <source>Active • %1s remaining</source>
+      <extracomment>%1 = number of seconds remaining</extracomment>
+      <translation>活动中 • 剩余%1秒</translation>
+    </message>
+    <message id="mqtt_devices_pairing_activate">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="58"/>
+      <source>Activate</source>
+      <translation>激活</translation>
+    </message>
+    <message id="mqtt_devices_pairing_enabled">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="82"/>
+      <source>Pairing mode enabled for %1 seconds</source>
+      <translation>配对模式已启用%1秒</translation>
+    </message>
+    <message id="mqtt_devices_pairing_description">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="94"/>
+      <source>Activate Pairing mode to allow a device to connect. Paired devices appear here, and will show in the Devices list when connected.</source>
+      <translation>激活配对模式以允许设备连接。已配对的设备将在此处显示，并在连接后显示在设备列表中。</translation>
+    </message>
+    <message id="mqtt_devices_pairing_access_tokens">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="101"/>
+      <source>Access tokens for paired devices</source>
+      <translation>已配对设备的访问令牌</translation>
+    </message>
+    <message id="mqtt_devices_pairing_unpair">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="113"/>
+      <source>Unpair</source>
+      <translation>取消配对</translation>
+    </message>
+    <message id="mqtt_devices_unpairing_confirm_title">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="130"/>
+      <source>Unpairing %1</source>
+      <translation>正在取消配对 %1</translation>
+    </message>
+    <message id="mqtt_devices_unpairing_confirm_description">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="133"/>
+      <source>This will disconnect the device and it will need to be paired again to reconnect.</source>
+      <translation>这将断开设备连接，若要重新连接，需要再次进行配对。</translation>
+    </message>
+    <message id="common_words_frequency">
+      <location filename="../../components/CommonWords.qml" line="226"/>
+      <source>Frequency</source>
+      <translation>频率</translation>
+    </message>
+    <message id="pagesettingsintegrations_canopenmotordrive">
+      <location filename="../../pages/settings/PageSettingsCanbus.qml" line="176"/>
+      <source>CANopen E-drives</source>
+      <translation>CANopen 电子驱动器</translation>
+    </message>
+    <message id="page_settings_canopenmotordrive_scan_for_motor_drives">
+      <location filename="../../pages/settings/PageSettingsCanOpenMotordrive.qml" line="31"/>
+      <source>Scan for E-drives</source>
+      <translation>扫描电子驱动器</translation>
+    </message>
+    <message id="page_settings_canopenmotordrive_discovered_motor_drive_ids">
+      <location filename="../../pages/settings/PageSettingsCanOpenMotordrive.qml" line="39"/>
+      <source>Discovered E-drive IDs</source>
+      <translation>已发现的电子驱动器 ID</translation>
+    </message>
+    <message id="iochannel_digital_input_mode_on_off_switch">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="57"/>
+      <source>On/off switch</source>
+      <translation>开关</translation>
+    </message>
+    <message id="iochannel_digital_input_mode_push_button_on_off">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="61"/>
+      <source>Push button on/off</source>
+      <translation>按钮开关</translation>
+    </message>
+    <message id="iochannel_digital_input_mode_push_button_dimmer">
+      <location filename="../../pages/settings/devicelist/iochannel/PageGenericInput.qml" line="63"/>
+      <source>Push button dimmer</source>
+      <translation>按钮调光器</translation>
+    </message>
+    <message id="generic_input_label_released">
+      <location filename="../../src/genericinput.cpp" line="132"/>
+      <source>Released</source>
+      <translation>已释放</translation>
+    </message>
+    <message id="generic_input_label_pressed">
+      <location filename="../../src/genericinput.cpp" line="134"/>
+      <source>Pressed</source>
+      <translation>已按下</translation>
+    </message>
+    <message id="generic_input_label_holding">
+      <location filename="../../src/genericinput.cpp" line="136"/>
+      <source>Holding</source>
+      <translation>保持中</translation>
+    </message>
+    <message id="clear-generator-error">
+      <location filename="../../components/PageGensetModel.qml" line="211"/>
+      <source>Clear generator error</source>
+      <translation>清除发电机错误</translation>
+    </message>
+    <message id="Re-enable_remote_start_mode">
+      <location filename="../../components/PageGensetModel.qml" line="284"/>
+      <source>Re-enable remote start mode</source>
+      <translation>重新启用远程启动模式</translation>
+    </message>
+    <message id="pagesettingsintegrations_eebus_devices">
+      <location filename="../../pages/settings/PageSettingsIntegrations.qml" line="53"/>
+      <source>EEBUS Devices</source>
+      <translation>EEBus设备</translation>
+    </message>
+    <message id="rotate_device_prompt_text">
+      <location filename="../../components/RotateDevicePrompt.qml" line="40"/>
+      <source>Rotate device to view %1</source>
+      <extracomment>Prompts the user to rotate the device. %1 = the name of the current page.</extracomment>
+      <translation>旋转设备以查看 %1</translation>
+    </message>
+    <message id="list_device_priority_no_control">
+      <location filename="../../components/listitems/ListDevicePriority.qml" line="137"/>
+      <source>No control</source>
+      <translation>无控制</translation>
+    </message>
+    <message id="list-spin-box-range_minimum_value">
+      <location filename="../../components/listitems/ListSpinBoxRange.qml" line="81"/>
+      <source>Minimum value</source>
+      <translation>最小值</translation>
+    </message>
+    <message id="list-spin-box-range_maximum_value">
+      <location filename="../../components/listitems/ListSpinBoxRange.qml" line="125"/>
+      <source>Maximum value</source>
+      <translation>最大值</translation>
+    </message>
+    <message id="aux_page_switches">
+      <location filename="../../pages/AuxCardsPage.qml" line="16"/>
+      <source>Switches</source>
+      <extracomment>Name of the Switch Controls feature</extracomment>
+      <translation>开关</translation>
+    </message>
+    <message id="brief_graphs_hidden">
+      <location filename="../../pages/BriefPage_Portrait.qml" line="83"/>
+      <source>Graphs and additional details have been hidden to reduce the CPU load.</source>
+      <translation>为降低 CPU 负载，图表及其他详细信息已隐藏。</translation>
+    </message>
+    <message id="brief_graphs_show">
+      <location filename="../../pages/BriefPage_Portrait.qml" line="90"/>
+      <source>Show graphs</source>
+      <translation>显示图表</translation>
+    </message>
+    <message id="brief_close_graphs_high_cpu">
+      <location filename="../../pages/BriefPage.qml" line="45"/>
+      <source>System load high, hiding graphs to reduce CPU load</source>
+      <translation>系统负载过高，正在隐藏图表以降低 CPU 负载</translation>
+    </message>
+    <message id="navbar_more">
+      <location filename="../../pages/MainView.qml" line="279"/>
+      <source>More</source>
+      <extracomment>Click to show more available items</extracomment>
+      <translation>更多</translation>
+    </message>
+    <message id="pagecontrollableloads_battery_allow_additional_loads_starting_at_battery_soc">
+      <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="20"/>
+      <source>Allow additional loads starting at a battery SOC of</source>
+      <translation>允许在电池 SOC 达到此值时开启附加负载</translation>
+    </message>
+    <message id="pagecontrollableloads_battery_below_this_soc">
+      <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="23"/>
+      <source>Below this SOC, surplus power is used for battery charging as much as possible. From this SOC onward, additional loads may also use surplus power. They may still run earlier if PV production exceeds what the battery can absorb.</source>
+      <translation>低于此 SOC 时，剩余功率将尽可能用于电池充电。达到此 SOC 后，附加负载也可使用剩余功率。如果光伏发电量超过电池接收能力，这些负载可能会提前运行。</translation>
+    </message>
+    <message id="pagecontrollableloads_battery_at_grey_x_soc_reserve_for_battery_charging">
+      <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="35"/>
+      <source>At &lt;font color="%1"&gt;%2%&lt;/font&gt; SOC, reserve for battery charging</source>
+      <translation>当 SOC 为 &lt;font color="%1"&gt;%2%&lt;/font&gt; 时，预留用于电池充电</translation>
+    </message>
+    <message id="pagecontrollableloads_battery_at_x_soc_reserve_for_battery_charging">
+      <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="45"/>
+      <source>At %1% SOC, reserve for battery charging</source>
+      <translation>当 SOC 为 %1% 时，预留用于电池充电</translation>
+    </message>
+    <message id="pagecontrollableloads_battery_between_the_soc">
+      <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="48"/>
+      <source>Between the SOC set in “Allow additional loads from battery SOC” and 100% SOC, the reserved power is adjusted gradually between these values. This allows battery charging to decrease as the SOC rises, leaving more surplus power available for controlled devices.</source>
+      <translation>在“允许使用电池 SOC 开启附加负载”设置的值与 100% SOC 之间，预留功率会逐渐调整。这使得电池充电功率随 SOC 升高而降低，从而为受控设备留出更多剩余功率。</translation>
+    </message>
+    <message id="pagecontrollableloads_evcs_maximum_charging_power">
+      <location filename="../../pages/settings/PageControllableLoadsEVCS.qml" line="20"/>
+      <source>Maximum charging power</source>
+      <translation>最大充电功率</translation>
+    </message>
+    <message id="pagecontrollableloads_evcs_limiting_the_maximum">
+      <location filename="../../pages/settings/PageControllableLoadsEVCS.qml" line="23"/>
+      <source>Limiting the maximum charging power can leave room for lower-priority devices to run at the same time.</source>
+      <translation>限制最大充电功率可为同时运行的低优先级设备留出空间。</translation>
+    </message>
+    <message id="pagecontrollableloads_evcs_remember_detected_ev_phases">
+      <location filename="../../pages/settings/PageControllableLoadsEVCS.qml" line="29"/>
+      <source>Remember detected EV phases</source>
+      <translation>记住已检测到的电动汽车相位</translation>
+    </message>
+    <message id="pagecontrollableloads_evcs_reuses_the_last_detected">
+      <location filename="../../pages/settings/PageControllableLoadsEVCS.qml" line="32"/>
+      <source>Reuses the last detected phase configuration for new charging sessions. Recommended only for a single EV, or when all EVs using this station support the same 1-, 2-, or 3-phase configuration.</source>
+      <translation>为新的充电会话重复使用上次检测到的相位配置。仅建议用于单辆电动汽车，或者当所有使用此充电站的电动汽车均支持相同的 1 相、2 相或 3 相配置时使用。</translation>
+    </message>
+    <message id="pagecontrollableloads_acload_this_should_reflect">
+      <location filename="../../pages/settings/PageControllableLoadsS2Rm.qml" line="21"/>
+      <source>This should reflect the device’s typical power consumption while turned on.</source>
+      <translation>此数值应反映设备开启时的典型功耗。</translation>
+    </message>
+    <message id="page_controllable_loads_preferences_pause_opportunity_loads_if_no_ac">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="24"/>
+      <source>Pause Opportunity Loads if no AC input is connected</source>
+      <translation>若无交流输入连接，则暂停机会负载</translation>
+    </message>
+    <message id="pagecontrollableloads_preferences_nominal_inverter_utilization_limit">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="32"/>
+      <source>Nominal inverter utilization limit</source>
+      <translation>标称逆变器利用率限制</translation>
+    </message>
+    <message id="pagecontrollableloads_preferences_limits_how_much">
+      <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="35"/>
+      <source>Limits how much of the inverter/charger’s nominal power the algorithm plans to use to convert DC-coupled PV to AC for base loads and scheduled loads.</source>
+      <translation>限制算法用于将直流耦合光伏转换为交流电以供基本负载和计划负载使用的逆变器/充电器标称功率比例。</translation>
+    </message>
+    <message id="dc_input">
+      <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>
+      <source>Input</source>
+      <extracomment>DC input measurement values</extracomment>
+      <translation type="unfinished">输入</translation>
+    </message>
+    <message id="dc_output">
+      <location filename="../../components/listitems/ListDcOutputQuantityGroup.qml" line="16"/>
+      <source>Output</source>
+      <extracomment>DC output measurement values</extracomment>
+      <translation type="unfinished">输出</translation>
     </message>
     <message id="settings_radio_button_group_unknown">
       <location filename="../../components/listitems/core/ListRadioButtonGroup.qml" line="44"/>
@@ -10734,129 +11762,29 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation type="unfinished">未知</translation>
     </message>
     <message id="brief_solar_yield">
-      <location filename="../../pages/BriefSidePanel.qml" line="24"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="26"/>
       <source>Solar yield</source>
       <translation type="unfinished">太阳能发电量</translation>
     </message>
     <message id="brief_dc_input">
-      <location filename="../../pages/BriefSidePanel.qml" line="214"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="210"/>
       <source>DC input</source>
       <translation type="unfinished">直流输入</translation>
     </message>
     <message id="brief_ac_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="258"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="255"/>
       <source>AC Loads</source>
       <translation type="unfinished">交流负载</translation>
     </message>
     <message id="brief_dc_loads">
-      <location filename="../../pages/BriefSidePanel.qml" line="287"/>
+      <location filename="../../pages/BriefSidePanel.qml" line="286"/>
       <source>DC Loads</source>
       <translation type="unfinished">直流负载</translation>
     </message>
     <message id="nav_overview">
-      <location filename="../../pages/OverviewPage.qml" line="490"/>
+      <location filename="../../pages/OverviewPage.qml" line="13"/>
       <source>Overview</source>
       <translation type="unfinished">总览</translation>
-    </message>
-    <message id="ev_target_soc">
-      <location filename="../../pages/ev/EvPage.qml" line="25"/>
-      <source>Target state of charge</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_range">
-      <location filename="../../pages/ev/EvPage.qml" line="32"/>
-      <source>Range</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_battery_capacity">
-      <location filename="../../pages/ev/EvPage.qml" line="40"/>
-      <source>Battery capacity</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_power">
-      <location filename="../../pages/ev/EvPage.qml" line="47"/>
-      <source>Power</source>
-      <translation type="unfinished">功率</translation>
-    </message>
-    <message id="ev_charging_state">
-      <location filename="../../pages/ev/EvPage.qml" line="56"/>
-      <source>Charging state</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_charging_state_not_charging">
-      <location filename="../../pages/ev/EvPage.qml" line="62"/>
-      <source>Not charging</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_charging_state_low_power">
-      <location filename="../../pages/ev/EvPage.qml" line="65"/>
-      <source>Low power mode</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_charging_state_charging">
-      <location filename="../../pages/ev/EvPage.qml" line="68"/>
-      <source>Charging</source>
-      <translation type="unfinished">充电</translation>
-    </message>
-    <message id="ev_charging_state_sustain">
-      <location filename="../../pages/ev/EvPage.qml" line="71"/>
-      <source>Sustain</source>
-      <translation type="unfinished">维持</translation>
-    </message>
-    <message id="ev_charging_state_wake_up">
-      <location filename="../../pages/ev/EvPage.qml" line="74"/>
-      <source>Wake up</source>
-      <translation type="unfinished">唤醒</translation>
-    </message>
-    <message id="ev_charging_state_discharging">
-      <location filename="../../pages/ev/EvPage.qml" line="77"/>
-      <source>Discharging</source>
-      <translation type="unfinished">放电</translation>
-    </message>
-    <message id="ev_charging_state_scheduled_charging">
-      <location filename="../../pages/ev/EvPage.qml" line="80"/>
-      <source>Scheduled charging</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_charging_state_unknown">
-      <location filename="../../pages/ev/EvPage.qml" line="83"/>
-      <source>Unknown</source>
-      <translation type="unfinished">未知</translation>
-    </message>
-    <message id="ev_at_site">
-      <location filename="../../pages/ev/EvPage.qml" line="91"/>
-      <source>At site</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_last_contact">
-      <location filename="../../pages/ev/EvPage.qml" line="98"/>
-      <source>Last contact</source>
-      <translation type="unfinished">上次联系</translation>
-    </message>
-    <message id="ev_vin">
-      <location filename="../../pages/ev/EvPage.qml" line="106"/>
-      <source>VIN</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_odometer">
-      <location filename="../../pages/ev/EvPage.qml" line="113"/>
-      <source>Odometer</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="ev_position">
-      <location filename="../../pages/ev/EvPage.qml" line="122"/>
-      <source>Position</source>
-      <translation type="unfinished">位置</translation>
-    </message>
-    <message id="ev_nr_phases">
-      <location filename="../../pages/ev/EvPage.qml" line="139"/>
-      <source>Number of phases</source>
-      <translation type="unfinished"/>
-    </message>
-    <message id="settings_state">
-      <location filename="../../pages/settings/PageCanbusStatus.qml" line="116"/>
-      <source>State</source>
-      <translation type="unfinished">状态</translation>
     </message>
     <message id="inverter_pv">
       <location filename="../../pages/settings/devicelist/inverter/PageInverter.qml" line="56"/>
@@ -10873,11 +11801,6 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <source>System yield</source>
       <translation type="unfinished">系统发电</translation>
     </message>
-    <message id="charger_total_pv_power">
-      <location filename="../../pages/solar/SolarDevicePage.qml" line="61"/>
-      <source>Total PV Power</source>
-      <translation type="unfinished">总的光伏功率</translation>
-    </message>
     <message id="vebus_device_alarm_only">
       <location filename="../../pages/vebusdevice/PageVeBusAlarmSettings.qml" line="18"/>
       <source>Alarm only</source>
@@ -10889,12 +11812,12 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
       <translation type="unfinished">报警&amp;警告</translation>
     </message>
     <message id="vebus_device_alarm_group_warning">
-      <location filename="../../pages/vebusdevice/VeBusDeviceAlarmGroup.qml" line="44"/>
+      <location filename="../../pages/vebusdevice/VeBusAlarm.qml" line="24"/>
       <source>Warning</source>
       <translation type="unfinished">警告</translation>
     </message>
     <message id="switchableoutput_gx_device_relays">
-      <location filename="../../src/switchableoutput.cpp" line="464"/>
+      <location filename="../../src/iochannel.cpp" line="342"/>
       <source>GX device relays</source>
       <translation type="unfinished">GX 设备继电器</translation>
     </message>
@@ -12389,149 +13312,160 @@ Here you can add additional ports and unit IDs to scan for PV inverters.</source
   <context>
     <name>QGuiApplication</name>
     <message>
-      <location filename="../../src/main.cpp" line="120"/>
+      <location filename="../../src/main.cpp" line="121"/>
       <source>Use D-Bus data source: connect to the specified D-Bus address.</source>
       <translation>使用D-Bus数据源：连接到指定的D-Bus地址。</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="121"/>
+      <location filename="../../src/main.cpp" line="122"/>
       <source>address</source>
       <comment>D-Bus address</comment>
       <translation>地址</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="126"/>
+      <location filename="../../src/main.cpp" line="127"/>
       <source>Use D-Bus data source: connect to the default D-Bus address</source>
       <translation>使用D-Bus数据源：连接到默认的D-Bus地址</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="132"/>
+      <location filename="../../src/main.cpp" line="133"/>
       <source>Use MQTT data source: connect to the specified MQTT broker address.</source>
       <translation>使用MQTT数据源：连接到指定的MQTT代理地址。</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="133"/>
+      <location filename="../../src/main.cpp" line="134"/>
       <source>address</source>
       <comment>MQTT broker address</comment>
       <translation>地址</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="139"/>
+      <location filename="../../src/main.cpp" line="140"/>
       <source>MQTT data source device portal id.</source>
       <translation>MQTT 数据源设备门户 ID。</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="140"/>
+      <location filename="../../src/main.cpp" line="141"/>
       <source>portalId</source>
       <translation>门户ID</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="145"/>
+      <location filename="../../src/main.cpp" line="146"/>
       <source>MQTT VRM webhost shard</source>
       <translation>MQTT VRM Web 主机分片</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="146"/>
+      <location filename="../../src/main.cpp" line="147"/>
       <source>shard</source>
       <comment>MQTT VRM webhost shard</comment>
       <translation>分片</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="151"/>
+      <location filename="../../src/main.cpp" line="152"/>
       <source>MQTT data source username</source>
       <translation>MQTT 数据源用户名</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="152"/>
+      <location filename="../../src/main.cpp" line="153"/>
       <source>user</source>
       <comment>MQTT broker username.</comment>
       <translation>用户</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="157"/>
+      <location filename="../../src/main.cpp" line="158"/>
       <source>MQTT data source password</source>
       <translation>MQTT数据源密码</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="158"/>
+      <location filename="../../src/main.cpp" line="159"/>
       <source>pass</source>
       <comment>MQTT broker password.</comment>
       <translation>通过</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="163"/>
+      <location filename="../../src/main.cpp" line="164"/>
       <source>MQTT data source token</source>
       <translation>MQTT 数据源令牌</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="164"/>
+      <location filename="../../src/main.cpp" line="165"/>
       <source>token</source>
       <comment>MQTT broker auth token.</comment>
       <translation>令牌代码</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="169"/>
+      <location filename="../../src/main.cpp" line="170"/>
       <source>Enable FPS counter</source>
       <translation>启用 FPS 计数器</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="174"/>
+      <location filename="../../src/main.cpp" line="175"/>
       <source>Skip splash screen</source>
       <translation>跳过启动画面</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="179"/>
+      <location filename="../../src/main.cpp" line="180"/>
       <source>Use mock data source for testing.</source>
       <translation>使用模拟数据源进行测试。</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="184"/>
+      <location filename="../../src/main.cpp" line="185"/>
       <source>Name of mock configuration</source>
       <translation>模拟配置的名称</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="185"/>
+      <location filename="../../src/main.cpp" line="186"/>
       <source>mockConfig</source>
       <comment>Configuration name</comment>
       <translation>mockConfig</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="191"/>
+      <location filename="../../src/main.cpp" line="198"/>
       <source>Set to disable mock timers on startup</source>
       <translation>设置为在启动时禁用模拟定时器</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="196"/>
+      <location filename="../../src/main.cpp" line="203"/>
       <source>Node-RED URL</source>
       <translation>Node-RED URL</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="197"/>
+      <location filename="../../src/main.cpp" line="204"/>
       <source>url</source>
       <comment>Node-RED URL</comment>
       <translation>url</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="202"/>
+      <location filename="../../src/main.cpp" line="209"/>
       <source>Signal K URL</source>
       <translation>Signal K URL</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="203"/>
+      <location filename="../../src/main.cpp" line="210"/>
       <source>url</source>
       <comment>Signal K URL</comment>
       <translation>url</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="208"/>
+      <location filename="../../src/main.cpp" line="215"/>
       <source>Color scheme (dark, light, auto, default)</source>
       <translation>配色方案（深色、浅色、自动、默认）</translation>
     </message>
     <message>
-      <location filename="../../src/main.cpp" line="209"/>
+      <location filename="../../src/main.cpp" line="216"/>
       <source>scheme</source>
       <comment>Color scheme value</comment>
       <translation>scheme</translation>
+    </message>
+    <message>
+      <location filename="../../src/main.cpp" line="192"/>
+      <source>Name of UI test</source>
+      <translation>UI测试名称</translation>
+    </message>
+    <message>
+      <location filename="../../src/main.cpp" line="193"/>
+      <source>uiTest</source>
+      <comment>UI test name</comment>
+      <translation>UI测试</translation>
     </message>
   </context>
   <context>

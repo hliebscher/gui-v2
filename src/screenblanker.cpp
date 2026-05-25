@@ -20,15 +20,19 @@ ScreenBlanker* ScreenBlanker::create(QQmlEngine *engine, QJSEngine *jsEngine)
 	return screenBlanker;
 }
 
-ScreenBlanker::ScreenBlanker(QObject *parent) : QObject(parent)
+ScreenBlanker::ScreenBlanker(QObject *parent)
+	: QObject(parent)
+	, m_blankDevice(getFeature("blank_display_device"))
 {
-	qInfo() << "ScreenBlanker: determining support";
-	m_blankDevice = getFeature("blank_display_device");
 	m_blanked = supported() ? readFromFile(m_blankDevice) == 1 : false;
 	m_hwBlanked = m_blanked;
 
 	if (supported()) {
-		qInfo() << "ScreenBlanker: supported.  Currently, blanked = " << m_blanked;
+		if (QFile::exists(m_blankDevice)) {
+			qInfo() << "ScreenBlanker: supported.  Currently, blanked = " << m_blanked;
+		} else {
+			qInfo() << "ScreenBlanker: supported, but unsupported display connected";
+		}
 		m_enabled = true;
 		connect(&m_blankingTimer, &QTimer::timeout, this, &ScreenBlanker::setDisplayOff);
 		m_finalOffTimer.setSingleShot(true);
@@ -81,16 +85,13 @@ void ScreenBlanker::stopDisplayOffTimer()
 
 bool ScreenBlanker::supported() const
 {
+	static const bool supp =
 #if defined(VENUS_DESKTOP_BUILD)
-	return true; // For unit testing
+		true; // For unit testing
 #else
-	return m_blankDevice.length() > 0;
+		m_blankDevice.length() > 0;
 #endif
-}
-
-bool ScreenBlanker::blanked() const
-{
-	return m_blanked;
+	return supp;
 }
 
 int ScreenBlanker::displayOffTime() const
@@ -174,13 +175,33 @@ void ScreenBlanker::setDisplayOff()
 	}
 }
 
+bool ScreenBlanker::blanked() const
+{
+	return m_blanked;
+}
+
 void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)
 {
 	bool stateChanged = blanked != m_blanked;
 
 	if (stateChanged) {
+#if defined(VENUS_DESKTOP_BUILD)
 		m_blanked = blanked;
 		emit blankedChanged();
+#else
+		if (writeToFile(m_blankDevice, blanked ? 1 : 0)) {
+			m_blanked = blanked;
+			emit blankedChanged();
+			if (blanked) {
+				qInfo() << "ScreenBlanker: screen blanked";
+			} else {
+				qInfo() << "ScreenBlanker: screen unblanked";
+			}
+		} else {
+			// this might occur if the user has connected some other HDMI display to a CerboGX.
+			qWarning() << "ScreenBlanker: unable to change screen blank status to" << blanked;
+		}
+#endif
 	}
 
 	if (supported() && applyHardware && blanked != m_hwBlanked) {

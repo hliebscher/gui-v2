@@ -13,7 +13,7 @@ QtObject {
 	property var pageManager
 	property var mainView
 	property var firmwareUpdate
-	property bool applicationActive: true
+	property bool applicationActive: true // i.e. not in Idle mode
 	property bool keyNavigationEnabled
 
 	readonly property bool backendReady: BackendConnection.state === BackendConnection.Ready
@@ -25,7 +25,8 @@ QtObject {
 	property var dialogLayer
 	property var notificationLayer
 	property bool displayCpuUsage
-	readonly property bool animationEnabled: (systemSettings?.animationEnabled ?? true) && BackendConnection.applicationVisible
+	readonly property bool animationEnabled: (systemSettings?.animationEnabled ?? true) && BackendConnection.applicationVisible && !ScreenBlanker.blanked
+	readonly property bool timersEnabled: BackendConnection.applicationVisible && !ScreenBlanker.blanked
 
 	// data sources
 	property var acInputs
@@ -105,23 +106,5 @@ QtObject {
 
 	readonly property IntValidator _intValidator: IntValidator {
 	}
-
-/*
-	readonly property VeQuickItem _guiPlugins: VeQuickItem {
-		// Only listen to the gui plugins MQTT path in WASM.
-		// GX and Desktop builds read gui plugins from filesystem instead.
-		// TODO: update the path to the correct MQTT-only path once it is decided.
-		uid: (Qt.platform.os === "wasm")
-			? pluginsService.serviceUid + "/Gui2/Plugins"
-			: ""
-		property string json: valid && BackendConnection.state === BackendConnection.Ready ? value : "[]"
-		onJsonChanged: {
-			// don't unload plugins if we lose backend data connection.
-			if (Qt.platform.os === "wasm" && BackendConnection.state === BackendConnection.Ready) {
-				GuiPluginLoader.pluginsJson = json
-			}
-		}
-	}
-*/
 }
 

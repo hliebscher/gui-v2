@@ -9,6 +9,6 @@ import Victron.VenusOS
 Button {
 	leftPadding: Theme.geometry_listItemButton_horizontalPadding
 	rightPadding: Theme.geometry_listItemButton_horizontalPadding
-	flat: !enabled
-	font.pixelSize: Theme.font_size_body2
+	font.pixelSize: Theme.font_listItem_secondary_size
+	flat: false
 }

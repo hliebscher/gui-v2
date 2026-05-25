@@ -6,8 +6,12 @@
 import QtQuick
 import Victron.VenusOS
 
-BaseListItem {
+FocusScope {
 	id: root
+
+	// Allow the column to be filtered out by VisibleItemModel, similar to an AbstractListItem.
+	property bool preferredVisible: true
+	property bool effectiveVisible: preferredVisible
 
 	property alias spacing: contentColumn.spacing
 	property alias leftPadding: contentColumn.leftPadding
@@ -15,12 +19,15 @@ BaseListItem {
 	property alias topPadding: contentColumn.topPadding
 	property alias bottomPadding: contentColumn.bottomPadding
 
+	readonly property KeyNavigationListHelper __keyNavHelper: keyNavHelper
 	default property alias _data: contentColumn.data
 
 	implicitWidth: contentColumn.implicitWidth
 	implicitHeight: contentColumn.implicitHeight
-	background.visible: false
-	KeyNavigationHighlight.active: false
+
+	// Allow Utils.acceptsKeyNavigation() to accept moving focus to this item.
+	focusPolicy: effectiveVisible ? Qt.TabFocus : Qt.NoFocus
+	focus: true
 
 	Keys.onUpPressed: (event) => event.accepted = keyNavHelper.focusPreviousItem()
 	Keys.onDownPressed: (event) => event.accepted = keyNavHelper.focusNextItem()

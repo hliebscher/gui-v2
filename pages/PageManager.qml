@@ -30,7 +30,8 @@ QtObject {
 		interval: Theme.animation_page_idleResize_timeout
 		onTriggered: {
 			Global.main.keyNavigationTimeout()
-			if (currentMainPage?.fullScreenWhenIdle) {
+			if (currentMainPage?.fullScreenWhenIdle
+					&& Theme.screenSize !== Theme.Portrait) { // Portrait mode does not have idle states
 				root.interactivity = VenusOS.PageManager_InteractionMode_EnterIdleMode
 			}
 		}
@@ -39,7 +40,7 @@ QtObject {
 	property string _hiddenStackMainPage
 
 	function pushPage(obj, properties, operation = PageStack.PushTransition) {
-		pageStack.pushPage(obj, properties, operation)
+		return pageStack.pushPage(obj, properties, operation)
 	}
 
 	function popPage(toPage, operation = PageStack.PopTransition) {
@@ -136,7 +137,7 @@ QtObject {
 			}
 		} else {
 			// If a main page is currently shown, then cycle through the main pages in the nav bar.
-			navBar.setCurrentIndex(Utils.modulo(navBar.currentIndex + 1, navBar.model.count))
+			navBar.setCurrentIndex(Utils.modulo(navBar.currentIndex + 1, navBar.pages.length))
 		}
 	}
 

@@ -4,6 +4,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import Victron.VenusOS
 
 OverviewWidget {
@@ -11,6 +12,7 @@ OverviewWidget {
 
 	required property string serviceType
 	property int inputTypeFilter: -1
+	readonly property real totalPower: inputDeviceModel.totalPower
 
 	readonly property int inputType: inputDeviceModel.commonMeterType >= 0 ? inputDeviceModel.commonMeterType
 			: serviceType === "dcsource" ? VenusOS.DcMeter_Type_GenericSource
@@ -20,13 +22,28 @@ OverviewWidget {
 			: "/pages/settings/devicelist/dc-in/PageDcMeter.qml"
 
 	title: VenusOS.dcMeter_typeToText(inputType)
-	quantityLabel.sourceType: VenusOS.ElectricalQuantity_Source_Dc
-	quantityLabel.dataObject: QtObject {
-		readonly property real power: inputDeviceModel.totalPower
-		readonly property real current: inputDeviceModel.totalCurrent
-	}
-	icon.source: VenusOS.dcMeter_iconForType(inputType)
 	enabled: true
+
+	contentItem: ColumnLayout {
+		spacing: Theme.geometry_overviewPage_widget_content_spacing
+
+		WidgetHeader {
+			text: root.title
+			icon.source: VenusOS.dcMeter_iconForType(root.inputType)
+			Layout.fillWidth: true
+		}
+
+		OverviewElectricalQuantityLabel {
+			widgetSize: root.size
+			dataObject: QtObject {
+				readonly property real power: inputDeviceModel.totalPower
+				readonly property real current: inputDeviceModel.totalCurrent
+			}
+			sourceType: VenusOS.ElectricalQuantity_Source_Dc
+			Layout.fillWidth: true
+			Layout.fillHeight: true
+		}
+	}
 
 	onClicked: {
 		if (inputDeviceModel.count === 1) {
@@ -53,8 +70,12 @@ OverviewWidget {
 			GradientListView {
 				header: QuantityGroupListHeader {
 					width: parent.width
-					metricsFontSize: Theme.font_size_body2 // align columns with those in the delegate
-					rightPadding: Theme.geometry_listItem_content_horizontalMargin + Theme.geometry_icon_size_medium
+					metricsFontSize: Theme.font_listItem_secondary_size // align columns with those in the delegate
+					rightPadding: Theme.geometry_page_content_horizontalMargin // list item right inset
+							+ Theme.geometry_listItem_content_horizontalMargin // list item right padding
+							+ Theme.geometry_icon_size_medium // arrow icon width
+							+ Theme.geometry_listItem_arrow_leftMargin // arrow icon padding
+					textHorizontalAlignment: Text.AlignHCenter
 					model: [
 						{ text: CommonWords.voltage, unit: VenusOS.Units_Volt_DC },
 						{ text: CommonWords.current_amps, unit: VenusOS.Units_Amp },
@@ -67,7 +88,6 @@ OverviewWidget {
 					required property BaseDevice device
 
 					text: device.name
-					tableMode: true
 					quantityModel: QuantityObjectModel {
 						QuantityObject { object: dcInput; key: "voltage"; unit: VenusOS.Units_Volt_DC }
 						QuantityObject { object: dcInput; key: "current"; unit: VenusOS.Units_Amp }

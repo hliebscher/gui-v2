@@ -42,7 +42,7 @@ FocusScope {
 		}
 
 		Component.onCompleted: {
-			ScreenBlanker.enabled = Qt.binding(function() { return !Global.splashScreenVisible && !mainView.statusBar.notificationButtonVisible })
+			ScreenBlanker.enabled = Qt.binding(function() { return !Global.splashScreenVisible && !(Global.notifications?.notificationButtonVisible ?? false) })
 			ScreenBlanker.displayOffTime = Qt.binding(function() { return screenBlanker.displayOffItem.valid ? 1000*screenBlanker.displayOffItem.value : 0 })
 			ScreenBlanker.window = root.Window.window
 		}
@@ -130,7 +130,7 @@ FocusScope {
 		z: 1
 
 		asynchronous: true
-		active: Global.isGxDevice || BackendConnection.needsWasmKeyboardHandler
+		active: (Global.isGxDevice || BackendConnection.needsWasmKeyboardHandler) && !GuiPluginLoader.busy
 
 		// Note that for gx builds, all references to 'qrc:/.../Thing.qml' are intercepted by
 		// UrlInterceptor and changed to '.../Thing.qml', i.e. they are loaded from the file

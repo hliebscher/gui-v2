@@ -19,6 +19,9 @@ QtObject {
 	//% "Add device"
 	readonly property string add_device: qsTrId("common_words_add_device")
 
+	//% "Add Modbus TCP/UDP device"
+	readonly property string add_modbus_device: qsTrId("common_words_add_modbus_device")
+
 	//: The role for an AC input (grid, genset, acload, etc.)
 	//% "Role"
 	readonly property string ac_input_role: qsTrId("common_words_ac_input_role")
@@ -138,6 +141,9 @@ QtObject {
 	//% "Connected"
 	readonly property string connected: qsTrId("common_words_connected");
 
+	//% "Confirm"
+	readonly property string confirm: qsTrId("common_words_confirm");
+
 	//: Electric current, as measured in Amps
 	//% "Current"
 	readonly property string current_amps: qsTrId("common_words_current_amps")
@@ -187,6 +193,9 @@ QtObject {
 	//% "Energy"
 	readonly property string energy: qsTrId("common_words_energy")
 
+	//% "Enter password"
+	readonly property string enter_password: qsTrId("common_words_enter_password")
+
 	//% "Error"
 	readonly property string error: qsTrId("common_words_error")
 
@@ -212,6 +221,9 @@ QtObject {
 
 	//% "Firmware version"
 	readonly property string firmware_version: qsTrId("common_words_firmware_version")
+
+	//% "Frequency"
+	readonly property string frequency: qsTrId("common_words_frequency")
 
 	//% "Generator"
 	readonly property string generator: qsTrId("common_words_generator")
@@ -576,6 +588,10 @@ QtObject {
 	//% "VE.Bus Error"
 	readonly property string vebus_error: qsTrId("common_words_vebus_error")
 
+	//: eg. 'Phase L1, device 3 (6)', where '(6)' is the index into the list of reported values
+	//% "Phase L%1, device %2 (%3)"
+	readonly property string vebus_phase_device: qsTrId("common_words_vebus_device_phase_x_device_x_index_x")
+
 	//% "Voltage"
 	readonly property string voltage: qsTrId("common_words_voltage")
 
@@ -610,6 +626,12 @@ QtObject {
 		//: %1 = number of the AC input
 		//% "AC input %1"
 		return qsTrId("common_words_ac_input_number").arg(number)
+	}
+
+	function autoStatus(stateText) {
+		//: %1 = status such as 'On' or 'Off'
+		//% "Auto (%1)"
+		return qsTrId("common_words_auto_status").arg(stateText)
 	}
 
 	function onOrOff(value) {

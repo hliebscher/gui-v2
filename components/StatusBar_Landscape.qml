@@ -114,29 +114,12 @@ FocusScope {
 				: auxCardsOpened ? "qrc:/images/icon_smartswitch_on_32.svg"
 				: "qrc:/images/icon_smartswitch_off_32.svg"
 		enabled: leftButton.buttonType !== VenusOS.StatusBar_LeftButton_ControlsActive
+		opacity: enabled ? 1.0 : 0.0
 		KeyNavigation.right: breadcrumbs
 
-		contentItem: Item {
-			Image {
-				id: auxIcon
-				source: auxButton.icon.source
-				width: auxButton.icon.width
-				height: auxButton.icon.height
-				sourceSize: Qt.size(width, height)
-				fillMode: Image.PreserveAspectFit
-				visible: !!auxButton.icon.source
-				anchors.verticalCenter: parent.verticalCenter
-			}
-			Label {
-				text: CommonWords.switch_mode
-				color: Theme.color_ok
-				visible: auxButton.auxCardsOpened
-				font.pixelSize: Theme.font_size_body
-				anchors.verticalCenter: parent.verticalCenter
-				anchors.left: auxIcon.right
-				anchors.leftMargin: 4
-			}
-		}
+		display: auxCardsOpened ? Button.TextBesideIcon : Button.IconOnly
+		text: auxCardsOpened ? CommonWords.switch_mode : ""
+		font.pixelSize: Theme.font_size_body
 
 		onClicked: {
 			if (auxCardsOpened) {

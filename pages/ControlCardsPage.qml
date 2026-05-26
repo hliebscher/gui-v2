@@ -108,6 +108,27 @@ Page {
 				}
 			}
 		}
+		footer: ListItemLoader {
+			active: occStatus.isValid
+			sourceComponent: FocusScope {
+				width: heatingCard.width + cardsView.spacing
+				height: heatingCard.height + cardsView.spacing
+				focus: true
+
+				HeatingCard {
+					id: heatingCard
+					width: root.cardWidth
+					height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
+				}
+			}
+
+			VeQuickItem {
+				id: occStatus
+				uid: (BackendConnection.type === BackendConnection.MqttSource
+					? "mqtt/heating.occ" : "dbus/com.victronenergy.heating.occ") + "/Status"
+			}
+		}
+
 		WheelHandler {
 			enabled: Qt.platform.os === "wasm" || Global.isDesktop
 			onWheel: (wheel) => {

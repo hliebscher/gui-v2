@@ -87,6 +87,15 @@ SwipeViewPage {
 			}
 
 			SettingsListNavigation {
+				//% "Heating & Climate"
+				text: qsTrId("settings_heating_climate")
+				//% "Zones, setpoints, valves, climate control"
+				caption: qsTrId("settings_heating_climate_caption")
+				pageSource: "/pages/HeatingPage.qml"
+				iconSource: "qrc:/images/heating.svg"
+			}
+
+			SettingsListNavigation {
 				//% "System Setup"
 				text: qsTrId("settings_system_setup")
 				//% "AC/DC system, ESS, DVCC, Battery..."

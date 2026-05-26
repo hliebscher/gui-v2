@@ -1,18 +1,13 @@
 /*
-** OpenCamperCore — Heating NavBar Page
-** Fork-Layer Seite: Zeigt Heizungsübersicht direkt in der NavBar
+** OpenCamperCore — Heating & Climate Overview
+** Accessed via Settings → Heating & Climate
 */
 
 import QtQuick
 import Victron.VenusOS
 
-SwipeViewPage {
+Page {
     id: root
-
-    //% "Heating"
-    title: qsTrId("nav_heating")
-    iconSource: "qrc:/images/heating.svg"
-    url: "qrc:/qt/qml/Victron/VenusOS/pages/HeatingPage.qml"
 
     readonly property string serviceUid: BackendConnection.type === BackendConnection.MqttSource
         ? "mqtt/heating.occ"
@@ -35,7 +30,7 @@ SwipeViewPage {
             }
 
             ListNavigation {
-                text: zone1Name.isValid ? zone1Name.value : "Wohnraum"
+                text: zone1Name.valid ? zone1Name.value : "Wohnraum"
                 secondaryText: _zoneText(zone1Temp.value, zone1Setpoint.value, zone1State.value)
                 onClicked: Global.pageManager.pushPage("/pages/HeatingZonePage.qml", {
                     "title": text, "zoneId": 1, "serviceUid": root.serviceUid
@@ -43,7 +38,7 @@ SwipeViewPage {
             }
 
             ListNavigation {
-                text: zone2Name.isValid ? zone2Name.value : "Bad"
+                text: zone2Name.valid ? zone2Name.value : "Bad"
                 secondaryText: _zoneText(zone2Temp.value, zone2Setpoint.value, zone2State.value)
                 onClicked: Global.pageManager.pushPage("/pages/HeatingZonePage.qml", {
                     "title": text, "zoneId": 2, "serviceUid": root.serviceUid
@@ -51,7 +46,7 @@ SwipeViewPage {
             }
 
             ListNavigation {
-                text: zone3Name.isValid ? zone3Name.value : "Schlafraum"
+                text: zone3Name.valid ? zone3Name.value : "Schlafraum"
                 secondaryText: _zoneText(zone3Temp.value, zone3Setpoint.value, zone3State.value)
                 onClicked: Global.pageManager.pushPage("/pages/HeatingZonePage.qml", {
                     "title": text, "zoneId": 3, "serviceUid": root.serviceUid
@@ -62,7 +57,7 @@ SwipeViewPage {
                 //% "Climate"
                 text: qsTrId("occ_climate")
                 secondaryText: {
-                    if (!climateMode.isValid) return "---"
+                    if (!climateMode.valid) return "---"
                     var modes = ["", qsTrId("occ_climate_cool"), qsTrId("occ_climate_heat"), qsTrId("occ_climate_auto")]
                     return climateMode.value === 0 ? CommonWords.off : (modes[climateMode.value] || "---")
                 }

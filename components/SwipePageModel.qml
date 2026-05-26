@@ -7,32 +7,25 @@ ObjectModel {
 	id: root
 
 	required property SwipeView view
-	readonly property list<SwipeViewPage> pages: {
-		var p = []
-		if (showBoatPage) p.push(boatPageLoader.item)
-		p.push(briefPage, overviewPage)
-		if (showHeatingPage) p.push(heatingPageLoader.item)
-		if (showLevelsPage) p.push(levelsPageLoader.item)
-		p.push(notificationsPage, settingsPage)
-		return p
-	}
+	readonly property list<SwipeViewPage> pages
+		: showBoatPage && showLevelsPage ? [ boatPageLoader.item, briefPage, overviewPage, levelsPageLoader.item, notificationsPage, settingsPage ]
+		: showBoatPage ? [ boatPageLoader.item, briefPage, overviewPage, notificationsPage, settingsPage ]
+		: showLevelsPage ? [ briefPage, overviewPage, levelsPageLoader.item, notificationsPage, settingsPage ]
+		: [ briefPage, overviewPage, notificationsPage, settingsPage ]
 	readonly property bool showLevelsPage: levelsPageLoader.active && !!levelsPageLoader.item
 	readonly property bool showBoatPage: boatPageLoader.active && !!boatPageLoader.item
-	readonly property bool showHeatingPage: heatingPageLoader.active && !!heatingPageLoader.item
 	readonly property int tankCount: Global.tanks ? Global.tanks.totalTankCount : 0
 	readonly property int environmentInputCount: Global.environmentInputs ? Global.environmentInputs.model.count : 0
-
-	readonly property int _expectedPageCount: 4
-		+ (showBoatPage ? 1 : 0)
-		+ (showHeatingPage ? 1 : 0)
-		+ (showLevelsPage ? 1 : 0)
 
 	readonly property bool completed: _completed
 		&& Global.dataManagerLoaded
 		&& Global.systemSettings
 		&& Global.tanks
 		&& Global.environmentInputs
-		&& pages.length === _expectedPageCount
+		&& ((boatPageLoader.active && levelsPageLoader.active) ? pages.length === 6
+		  : boatPageLoader.active ? pages.length === 5
+		  : levelsPageLoader.active ? pages.length === 5
+		  : pages.length === 4)
 
 	property bool _completed: false
 
@@ -69,22 +62,6 @@ ObjectModel {
 	OverviewPage {
 		id: overviewPage
 		view: root.view
-	}
-
-	Loader {
-		id: heatingPageLoader
-
-		active: occServicePresent.isValid && occServicePresent.value !== undefined
-		sourceComponent: HeatingPage {
-			view: root.view
-		}
-
-		VeQuickItem {
-			id: occServicePresent
-			uid: BackendConnection.type === BackendConnection.MqttSource
-				? "mqtt/heating.occ/Status"
-				: "dbus/com.victronenergy.heating.occ/Status"
-		}
 	}
 
 	Loader {

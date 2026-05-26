@@ -29,11 +29,10 @@ Page {
                 ]
             }
 
-            ListQuantityItem {
+            ListTemperature {
                 //% "Current temperature"
                 text: qsTrId("occ_temperature_current")
                 dataItem.uid: root.climatePrefix + "/Temperature"
-                unit: VenusOS.Units_Temperature_Celsius
             }
 
             ListSlider {

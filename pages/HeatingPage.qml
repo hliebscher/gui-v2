@@ -1,13 +1,18 @@
 /*
 ** OpenCamperCore — Heating & Climate Overview
-** Accessed via Settings → Heating & Climate
+** SwipeView page in NavBar + accessible via Settings
 */
 
 import QtQuick
 import Victron.VenusOS
 
-Page {
+SwipeViewPage {
     id: root
+
+    //% "Heating"
+    title: qsTrId("nav_heating")
+    iconSource: "qrc:/images/heating.svg"
+    url: "qrc:/qt/qml/Victron/VenusOS/pages/HeatingPage.qml"
 
     readonly property string serviceUid: BackendConnection.type === BackendConnection.MqttSource
         ? "mqtt/heating.occ"

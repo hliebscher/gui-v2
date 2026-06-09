@@ -28,7 +28,7 @@ Item {
 			text: ClockTime.currentTime
 			font.family: Global.fontFamily
 			font.pixelSize: 160
-			color: Theme.color_font_primary
+			color: "#FFFFFF"
 			horizontalAlignment: Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
 		}
@@ -46,7 +46,7 @@ Item {
 			}
 			font.family: Global.fontFamily
 			font.pixelSize: 42
-			color: Theme.color_font_secondary
+			color: "#AAAAAA"
 			horizontalAlignment: Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
 		}

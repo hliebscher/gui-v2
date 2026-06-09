@@ -182,31 +182,23 @@ bool ScreenBlanker::blanked() const
 
 void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)
 {
-	bool stateChanged = blanked != m_blanked;
+	const bool stateChanged = blanked != m_blanked;
 
 	if (stateChanged) {
-#if defined(VENUS_DESKTOP_BUILD)
 		m_blanked = blanked;
 		emit blankedChanged();
-#else
-		if (writeToFile(m_blankDevice, blanked ? 1 : 0)) {
-			m_blanked = blanked;
-			emit blankedChanged();
-			if (blanked) {
-				qInfo() << "ScreenBlanker: screen blanked";
-			} else {
-				qInfo() << "ScreenBlanker: screen unblanked";
-			}
+		if (blanked) {
+			qInfo() << "ScreenBlanker: screen blanked";
 		} else {
-			// this might occur if the user has connected some other HDMI display to a CerboGX.
-			qWarning() << "ScreenBlanker: unable to change screen blank status to" << blanked;
+			qInfo() << "ScreenBlanker: screen unblanked";
 		}
-#endif
 	}
 
 	if (supported() && applyHardware && blanked != m_hwBlanked) {
 		m_hwBlanked = blanked;
-		writeToFile(m_blankDevice, blanked ? 1 : 0);
+		if (!writeToFile(m_blankDevice, blanked ? 1 : 0)) {
+			qWarning() << "ScreenBlanker: unable to change screen blank status to" << blanked;
+		}
 	}
 }
 

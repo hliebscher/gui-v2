@@ -21,7 +21,6 @@ Page {
 		ListItem {
 			id: tableListItem
 
-			bottomInset: Theme.geometry_gradientList_spacing
 			topPadding: 0
 			bottomPadding: bottomInset
 			leftPadding: leftInset
@@ -46,7 +45,7 @@ Page {
 					equalWidthColumns: true
 
 					// Set rightPadding to align with the columns in the delegates.
-					rightPadding: Theme.geometry_icon_size_medium + tableListItem.rightPadding
+					rightPadding: Theme.geometry_icon_size_medium + tableListItem.horizontalContentPadding
 					summaryModel: [
 						{ text: "", unit: VenusOS.Units_None },
 						{ text: "", unit: VenusOS.Units_None },
@@ -129,8 +128,8 @@ Page {
 			name: device ? device.name : ""
 			power: powerItem.value ?? NaN
 			current: root.measurements.singlePhaseCurrentValid ? root.measurements.current : NaN
-			columnWidth: ListView.view.headerItem?.contentItem?.columnWidth ?? NaN
-			columnSpacing: ListView.view.headerItem?.contentItem?.columnSpacing ?? 0
+			columnWidth: ListView.view.headerItem?.contentItem?.columnWidth ?? Theme.geometry_loadListPage_defaultColumnWidth
+			columnSpacing: ListView.view.headerItem?.contentItem?.columnSpacing ?? Theme.geometry_quantityTable_horizontalSpacing_large
 
 			// this is an AC device, so only show amps in PreferAmps mode,
 			// and only if we are not displaying the multiple-phases table above

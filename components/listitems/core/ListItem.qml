@@ -29,18 +29,25 @@ AbstractListItem {
 	// use the parent Flickable left/rightMargin to do this, but the gap changes when switching
 	// between portrait/landscape, and due to QTBUG-144841, dynamic left/rightMargin changes have no
 	// effect on list item geometries.
-	// Use zero inset when flat=true and the background is hidden (e.g. in control cards).
+	// Use zero left/rightInset when flat=true and the background is hidden (e.g. in control cards).
+	// Set bottomInset to provide the standard spacing between this item and the next one in the
+	// list. This cannot be done via ListView::spacing as that spacing is shown even between non-
+	// visible items.
 	leftInset: flat ? 0 : Theme.geometry_page_content_horizontalMargin
 	rightInset: flat ? 0 : Theme.geometry_page_content_horizontalMargin
+	bottomInset: Theme.geometry_gradientList_spacing
 	leftPadding: leftInset + horizontalContentPadding
 	rightPadding: rightInset + horizontalContentPadding
 	topPadding: topInset + Theme.geometry_listItem_content_verticalMargin
 	bottomPadding: bottomInset + Theme.geometry_listItem_content_verticalMargin
 
-	implicitWidth: parent?.width ?? Theme.geometry_listItem_width
+	implicitWidth: effectiveVisible ? Math.max(
+			implicitBackgroundWidth + leftInset + rightInset,
+			implicitContentWidth + leftPadding + rightPadding) : 0
 	implicitHeight: effectiveVisible ? Math.max(
 			implicitBackgroundHeight + topInset + bottomInset,
 			implicitContentHeight + topPadding + bottomPadding) : 0
+	width: parent?.width ?? Theme.geometry_listItem_width
 	spacing: Theme.geometry_listItem_content_spacing
 
 	// By default, the item is visible if preferredVisible=true.
@@ -66,8 +73,6 @@ AbstractListItem {
 	Keys.enabled: Global.keyNavigationEnabled
 
 	background: ListItemBackground {
-		implicitWidth: Theme.geometry_listItem_width
-		implicitHeight: Theme.geometry_listItem_height
 		visible: !root.flat
 	}
 }

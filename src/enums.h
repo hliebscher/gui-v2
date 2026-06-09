@@ -102,6 +102,12 @@ public:
 		Units_Volume_Litre,
 		Units_Watt,
 		Units_WattsPerSquareMetre,
+		Units_WattHourPerKilometre,
+		Units_WattHourPerMile,
+		Units_WattHourPerNauticalMile,
+		Units_AmpHourPerKilometre,
+		Units_AmpHourPerMile,
+		Units_AmpHourPerNauticalMile,
 	};
 	Q_ENUM(Units_Type)
 
@@ -905,6 +911,15 @@ public:
 		Genset_StatusCode_Error,
 	};
 	Q_ENUM(Genset_StatusCode)
+
+	enum Genset_ErrorCode {
+		Genset_ErrorCode_NoError,
+		Genset_ErrorCode_RemoteSwitchControlDisabled,
+		Genset_ErrorCode_GeneratorInFaultCondition,
+		Genset_ErrorCode_GeneratorNotDetectedAtAcInput,
+		Genset_ErrorCode_EmptyCustomEnabledGensetsGroup
+	};
+	Q_ENUM(Genset_ErrorCode)
 
 	enum Alarm_Level {
 		Alarm_Level_OK,

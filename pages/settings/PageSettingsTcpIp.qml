@@ -9,14 +9,9 @@ import Victron.VenusOS
 Page {
 	id: root
 
-	property string network: "Wired"
-	property string tech: "ethernet"
+	property string tech: "ethernet" // or "wifi"
 	property alias service: networkServices.service
-
-	VeQuickItem {
-		id: setValueItem
-		uid: Global.venusPlatform.serviceUid + "/Network/SetValue"
-	}
+	property NetworkServices ethernetNetworkServices: networkServices
 
 	GradientListView {
 		id: settingsListView
@@ -39,12 +34,13 @@ Page {
 	NetworkSettingsPageModel {
 		id: connectedModel
 
+		// if tech == "ethernet" these will be the same, otherwise different.
 		networkServices: networkServices
+		ethernetNetworkServices: root.ethernetNetworkServices
 	}
 
 	NetworkServices {
 		id: networkServices
-
 		tech: root.tech
 	}
 }

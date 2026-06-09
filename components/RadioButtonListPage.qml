@@ -20,6 +20,7 @@ Page {
 	property var popDestination: null
 	property var validatePassword
 
+	property alias header: optionsListView.header
 	property alias footer: optionsListView.footer
 
 	signal optionClicked(index: int, value : var)
@@ -65,16 +66,13 @@ Page {
 				}
 			}
 
-			// TODO this is a hack to cancel out the GradientListView spacing, to avoid
-			// showing extra spacing between items if an item is not visible. See #1907.
-			height: effectiveVisible ? implicitHeight : -Theme.geometry_gradientList_spacing
-
 			text: modelObject.display || ""
 			secondaryText: modelObject.secondaryText || ""
 			caption: modelObject.caption ?? ""
 			interactive: !modelObject.readOnly
-					// Prevent selection of already selected index
-					&& root.currentIndex !== model.index
+						 // Prevent selection of already selected index
+						 && root.currentIndex !== model.index
+						 && modelObject.interactive !== false
 			font.family: modelObject.fontFamily || Global.fontFamily
 			preferredVisible: !modelObject.readOnly || root.currentIndex === model.index
 			showAccessLevel: root.showAccessLevel

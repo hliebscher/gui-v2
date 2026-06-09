@@ -47,6 +47,7 @@ public:
 		ProductId_Genset_Cre = 0xB048,
 		ProductId_Genset_Deif = 0xB049,
 		ProductId_Genset_Cummins = 0xB04A,
+		ProductId_Genset_Datakom = 0xB04B,
 		ProductId_Genset_VirtualAc = 0xC06B,
 		ProductId_Genset_VirtualDc = 0xC06D,
 	};
@@ -61,6 +62,7 @@ public:
 		ProductId_PvInverter_Fronius = 0xA142, // VE_PROD_ID_PV_INVERTER_FRONIUS
 		ProductId_TankSensor_Generic = 0xA160,
 		ProductId_MeteoSensor_Imt = 0xB030, // VE_PROD_ID_IMT_SI_RS485_SOLAR_IRRADIANCE_SENSOR
+		ProductId_Dcdb_Aurelia = 0xC0B0,
 	};
 	Q_ENUM(ProductId_Misc)
 
@@ -74,6 +76,7 @@ public:
 		case ProductId_Genset_Cre:
 		case ProductId_Genset_Deif:
 		case ProductId_Genset_Cummins:
+		case ProductId_Genset_Datakom:
 		case ProductId_Genset_VirtualAc:
 		case ProductId_Genset_VirtualDc:
 			return true;

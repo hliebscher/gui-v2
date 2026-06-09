@@ -10,6 +10,10 @@ import QtQml
 QtObject {
 	id: root
 
+	//: Alternating current
+	//% "AC"
+	readonly property string ac: qsTrId("common_words_ac")
+
 	//% "AC In"
 	readonly property string ac_in: qsTrId("common_words_ac_in")
 
@@ -127,6 +131,14 @@ QtObject {
 	//% "Charging"
 	readonly property string charging: qsTrId("common_words_charging")
 
+	//: Checks for a particular state
+	//% "Check now"
+	readonly property string check_now: qsTrId("common_words_check_now")
+
+	//: Trigger an action that clears a value
+	//% "Clear"
+	readonly property string clear_action: qsTrId("common_words_clear_action")
+
 	//: Action to clear an error state
 	//% "Clear error"
 	readonly property string clear_error_action: qsTrId("common_words_clear_error_action")
@@ -160,6 +172,9 @@ QtObject {
 	//% "DC"
 	readonly property string dc: qsTrId("common_words_dc")
 
+	//% "DC Gensets"
+	readonly property string dcGensets: qsTrId("common_words_dc_gensets")
+
 	//: Title for a menu item which displays debugging information
 	//% "Debug"
 	readonly property string debug: qsTrId("common_words_debug")
@@ -188,6 +203,9 @@ QtObject {
 
 	//% "Enabled"
 	readonly property string enabled: qsTrId("common_words_enabled")
+
+	//% "Engine"
+	readonly property string engine: qsTrId("common_words_engine")
 
 	//: Amount of charged energy
 	//% "Energy"
@@ -288,6 +306,18 @@ QtObject {
 
 	//% "IP address"
 	readonly property string ip_address: qsTrId("common_words_ip_address")
+
+	//: The date setting for the locale
+	//% "Date"
+	readonly property string locale_date: qsTrId("common_words_locale_date")
+
+	//: The time setting for the locale
+	//% "Time"
+	readonly property string locale_time: qsTrId("common_words_locale_time")
+
+	//: UTC date/time
+	//% "UTC"
+	readonly property string locale_utc: qsTrId("common_words_locale_utc")
 
 	//% "Low battery temperature"
 	readonly property string low_battery_temperature: qsTrId("common_words_low_battery_temperature")
@@ -432,15 +462,6 @@ QtObject {
 	//% "Press"
 	readonly property string press: qsTrId("common_words_press")
 
-	//% "Press to clear"
-	readonly property string press_to_clear: qsTrId("common_words_press_to_clear")
-
-	//% "Press to reset"
-	readonly property string press_to_reset: qsTrId("common_words_press_to_reset")
-
-	//% "Press to scan"
-	readonly property string press_to_scan: qsTrId("common_words_press_to_scan")
-
 	//% "Product page"
 	readonly property string product_page: qsTrId("common_words_product_page");
 
@@ -453,6 +474,9 @@ QtObject {
 
 	//% "Quiet hours"
 	readonly property string quiet_hours: qsTrId("common_words_quiet_hours")
+
+	//% "Redetect"
+	readonly property string redetect: qsTrId("common_words_redetect")
 
 	//: Relay switch
 	//% "Relay"
@@ -473,6 +497,10 @@ QtObject {
 	//: Status = "running"
 	//% "Running"
 	readonly property string running_status: qsTrId("common_words_running_status")
+
+	//: Trigger a scanning-type action
+	//% "Scan"
+	readonly property string scan_action: qsTrId("common_words_scan_action")
 
 	//% "Scanning %1%"
 	readonly property string scanning: qsTrId("common_words_scanning")
@@ -496,12 +524,19 @@ QtObject {
 	//% "SOC %1"
 	readonly property string soc_with_prefix: qsTrId("common_words_soc")
 
+	//% "Solar"
+	readonly property string solar: qsTrId("common_words_solar")
+
 	//: A speed measurement value
 	//% "Speed"
 	readonly property string speed: qsTrId("common_words_speed")
 
 	//% "Standby"
 	readonly property string standby: qsTrId("common_words_standby")
+
+	//: Start a particular action
+	//% "Start"
+	readonly property string start_action: qsTrId("common_words_start")
 
 	//% "Start after the condition is reached for"
 	readonly property string start_after_the_condition_is_reached_for: qsTrId("common_words_start_after_condition_reached_for")
@@ -527,6 +562,10 @@ QtObject {
 	//: Status = "start up". %1 = the startup status number
 	//% "Startup (%1)"
 	readonly property string startup_status: qsTrId("common_words_startup_status")
+
+	//: Stop a particular action
+	//% "Stop"
+	readonly property string stop_action: qsTrId("common_words_stop_action")
 
 	//% "Stop value during quiet hours"
 	readonly property string stop_value_during_quiet_hours: qsTrId("common_words_stop_value_during_quiet_hours")
@@ -565,6 +604,10 @@ QtObject {
 
 	//% "Type"
 	readonly property string type: qsTrId("common_words_type")
+
+	//: Update the firmware to a specific version
+	//% "Update to %1"
+	readonly property string update_to_version: qsTrId("common_words_update_to_version")
 
 	//% "Unique Identity Number"
 	readonly property string unique_identity_number: qsTrId("common_words_unique_id_number")

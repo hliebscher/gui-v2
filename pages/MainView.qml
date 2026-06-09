@@ -23,7 +23,7 @@ FocusScope {
 
 	property alias navBarAnimatingOut: animateNavBarOut.running
 
-	property bool mainViewVisible: BackendConnection.applicationVisible && !Global.splashScreenVisible
+	property bool mainViewVisible: UiConfig.applicationVisible && !Global.splashScreenVisible
 	onMainViewVisibleChanged: if (mainViewVisible) console.info("MainView: UI loaded and visible")
 
 	// To reduce the animation load, disable page animations when the PageStack is transitioning
@@ -517,6 +517,19 @@ FocusScope {
 
 	GlobalKeyNavigationHighlight {
 		id: globalKeyNavigationHighlight
+	}
+
+	Loader {
+		y: -height + statusBar.height
+		active: demoMode.valid && demoMode.value > 0
+		transformOrigin: Item.BottomLeft
+		rotation: 90
+		sourceComponent: DemoModeIndicator {}
+
+		VeQuickItem {
+			id: demoMode
+			uid: Global.systemSettings.serviceUid + "/Settings/Gui/DemoMode"
+		}
 	}
 
 	Loader {

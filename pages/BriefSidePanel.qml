@@ -10,7 +10,7 @@ import Victron.VenusOS
 ColumnLayout {
 	id: root
 
-	property bool animationEnabled
+	required property bool animationEnabled
 
 	readonly property AcInput generatorInput: Global.acInputs.input1?.source === VenusOS.AcInputs_InputSource_Generator ? Global.acInputs.input1
 			: Global.acInputs.input2?.source === VenusOS.AcInputs_InputSource_Generator ? Global.acInputs.input2
@@ -22,8 +22,7 @@ ColumnLayout {
 	spacing: Theme.geometry_sidePanel_spacing
 
 	BriefSidePanelWidget {
-		//% "Solar yield"
-		title: qsTrId("brief_solar_yield")
+		title: CommonWords.solar
 		icon.source: "qrc:/images/solaryield.svg"
 		loadersActive: Global.solarInputs.devices.count > 0 // only show graph if there are solar inputs with history (i.e. not PV inverters)
 		visible: Global.solarInputs.inputCount > 0 // show if there are any solar inputs (PV chargers, PV inverters, etc.)

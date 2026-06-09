@@ -28,6 +28,7 @@ ListSetting {
 	id: root
 
 	readonly property alias dataItem: dataItem
+	readonly property bool defaultInteractive: (dataItem.uid === "" || dataItem.valid)
 	property bool checked: invertSourceValue ? dataItem.value === valueFalse : dataItem.value === valueTrue
 	property bool checkable
 	property string secondaryText
@@ -46,18 +47,7 @@ ListSetting {
 			return
 		}
 		if (root.updateDataOnClick) {
-			if (root.dataItem.uid.length > 0) {
-				// Note: this logic only holds so long as checkable is false so we can use
-				// the current unmodified checked state at the point of onClicked.
-				// (dataItem might not be valid until the first write so we can't simply use
-				// the comparison of dataItem.value === valueFalse) and forget invertSourceValue).
-				// Note that an malformed uid will result in it being empty when inspected.
-				if (root.invertSourceValue) {
-					root.dataItem.setValue(checked ? valueTrue : valueFalse)
-				} else {
-					root.dataItem.setValue(checked ? valueFalse : valueTrue)
-				}
-			}
+			root.toggleDataValue()
 		}
 		// If checkable, update 'checked' value so that onCheckedChanged signal is fired.
 		if (checkable && !!_switchItem) {
@@ -66,12 +56,27 @@ ListSetting {
 		root.clicked()
 	}
 
+	function toggleDataValue() {
+		if (root.dataItem.uid.length > 0) {
+			// Note: this logic only holds so long as checkable is false so we can use
+			// the current unmodified checked state at the point of onClicked.
+			// (dataItem might not be valid until the first write so we can't simply use
+			// the comparison of dataItem.value === valueFalse) and forget invertSourceValue).
+			// Note that a malformed uid will result in it being empty when inspected.
+			if (root.invertSourceValue) {
+				root.dataItem.setValue(checked ? valueTrue : valueFalse)
+			} else {
+				root.dataItem.setValue(checked ? valueFalse : valueTrue)
+			}
+		}
+	}
+
 	// Remove padding around the edges, so that the internal Switch can expand its touch area.
 	rightPadding: rightInset
-	topPadding: 0
-	bottomPadding: 0
+	topPadding: topInset
+	bottomPadding: bottomInset
 
-	interactive: (dataItem.uid === "" || dataItem.valid)
+	interactive: defaultInteractive
 
 	contentItem: Item {
 		implicitWidth: Theme.geometry_listItem_width
@@ -115,7 +120,7 @@ ListSetting {
 			checked: root.checked
 			checkable: root.checkable && root.clickable
 			focusPolicy: Qt.NoFocus
-			showEnabled: root.clickable
+			enabled: root.clickable
 
 			onClicked: root.click()
 			Component.onCompleted: root._switchItem = switchItem

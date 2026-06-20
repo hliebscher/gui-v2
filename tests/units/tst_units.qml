@@ -10,8 +10,273 @@ import QtTest
 TestCase {
 	name: "UnitsTest"
 
-	QuantityInfo {
-		id: info
+	function expectedAdjustedQuantity(unit, value, fixedNumbers, fixedNumberScale) {
+		const baseUnitSymbol = Units.defaultUnitString(unit)
+
+		if (isNaN(value)) {
+			return { number: "--", unit: baseUnitSymbol, scale: VenusOS.Units_Scale_None }
+		} else if (unit === VenusOS.Units_Watt && Math.abs(value) < 1) {
+			// For Watts, values < abs(1.0) are always converted to zero, regardless of decimals.
+			return { number: "0", unit: baseUnitSymbol, scale: VenusOS.Units_Scale_None }
+		}
+
+		// Scale up if there are more than 4 digits.
+		let scale = VenusOS.Units_Scale_None
+		let scaledValue = value
+		if (Math.abs(value) > 9999) {
+			while (scale < Units.maximumUnitScale(unit)) {
+				scaledValue /= 1000
+				scale++
+				if (Math.abs(scaledValue) <= 9999) {
+					break
+				}
+			}
+		}
+
+		// Now set the desired fixed number depending on the unit type.
+		let fixedNumber
+		const unitsWith4Precision = [ VenusOS.Units_AmpHour, VenusOS.Units_Energy_KiloWattHour, VenusOS.Units_VoltAmpere, VenusOS.Units_VoltAmpereReactive, VenusOS.Units_Watt ]
+		if (Math.abs(value) > 9999 && unitsWith4Precision.indexOf(unit) >= 0) {
+			fixedNumber = scaledValue.toPrecision(4)
+		} else {
+			let decimals
+			if (Math.abs(value) > 100 && Math.abs(value) <= 9999 && (unit === VenusOS.Units_Amp || unit === VenusOS.Units_Volt_DC)) {
+				// Use 0 decimals when over 100 A or 100 V (DC).
+				decimals = 0
+			} else {
+				decimals = Units.defaultUnitDecimals(unit)
+			}
+			fixedNumber = scaledValue.toFixed(decimals)
+		}
+
+		if (parseInt(fixedNumber) === parseFloat(fixedNumber)) {
+			const fixedWithoutDecimals = scaledValue.toFixed(0)
+			if ((scaledValue < 0 && fixedWithoutDecimals.length === 5) // disregard minus symbol if present
+				   || (scaledValue > 0 && fixedWithoutDecimals.length === 4)) {
+				// Use zero decimals if that would give us the same value with 4 digits.
+				fixedNumber = fixedWithoutDecimals
+			}
+		}
+
+		if (fixedNumber === "-0") {
+			fixedNumber = "0"
+		}
+
+		return {
+			number: fixedNumber,
+			unit: Units.scaleToString(scale) + baseUnitSymbol,
+			scale: scale
+		}
+	}
+
+	function test_getDisplayText_data() {
+		function dataRow(unit, value, scale, fixedNumbers) {
+			const symbol = Units.defaultUnitString(unit)
+			if (unit !== VenusOS.Units_None && unit !== VenusOS.Units_PowerFactor) {
+				console.assert(symbol, "no symbol for unit: %1".arg(unit))
+			}
+
+			// Create a unique unit tag in order to avoid duplicate data tags.
+			let unitTag = symbol
+			switch (unit) {
+				// If the symbol is empty, set a hardcoded string id.
+				case VenusOS.Units_None: unitTag = "(Units_None)"; break;
+				case VenusOS.Units_PowerFactor: unitTag = "(PF)"; break;
+				// Distinguish between AC vs DC volts.
+				case VenusOS.Units_Volt_AC: unitTag += " (AC)"; break;
+				case VenusOS.Units_Volt_DC: unitTag += " (DC)"; break;
+				// Distinguish between imperial vs US gallons.
+				case VenusOS.Units_Volume_GallonImperial: unitTag += " (Imp)"; break;
+				case VenusOS.Units_Volume_GallonUS: unitTag += " (US)"; break;
+				default: break;
+			}
+			let expectedSymbol = Units.scaleToString(scale) + symbol
+			const adjusted = expectedAdjustedQuantity(unit, value, fixedNumbers, scale)
+			const tag = "%1 %2 -> nonAdjusted=%3%4, adjusted=%5%6"
+					.arg(value.toString()).arg(unitTag)
+					.arg(fixedNumbers[Units.defaultUnitDecimals(unit)]).arg(expectedSymbol)
+					.arg(adjusted.number).arg(adjusted.unit)
+			return {
+				tag: tag,
+				unit: unit,
+				value: value,
+				nonAdjusted: {
+					fixedNumbers: fixedNumbers,
+					symbol: expectedSymbol,
+					scale: scale,
+				},
+				adjusted: adjusted
+			}
+		}
+
+		// Returns an array of the value with [0,1,2,3] decimals.
+		function fixedNumbersForValue(v) {
+			return [ v.toFixed(0), v.toFixed(1), v.toFixed(2), v.toFixed(3) ]
+		}
+
+		const unscaledTestValues = [ 0, 0.1234, 0.8888, 0.9999, 1, 12, 88.8888, 99.9999, 123, 123.4567, 888.8888, 999.9999, 1234, 1234.5678, 8888.8888 ]
+		const scaledTestValues = [  9999.9999, 12345.6789, 88888.8888, 99999.9999, 123456.7899, 888888.8888, 999999.9999 ]
+
+		// Expected results for unscaled values.
+		const expectedUnscaled = unscaledTestValues.map(v => ({ value: v, fixedNumbers: fixedNumbersForValue(v) }))
+
+		// Expected results for (unscaled) negative values, excluding the first (zero) entry in unscaledTestValues.
+		let expectedNegativeUnscaled = unscaledTestValues.slice(1).map(v => ({ value: v * -1, fixedNumbers: fixedNumbersForValue(v * -1) }))
+		expectedNegativeUnscaled[0].fixedNumbers = ["0", "-0.1", "-0.12", "-0.123"] // fix the first number so that it is not "-0"
+
+		// Expected results for values that are expected to scale to the kilo range.
+		// E.g. for value 12345.6789, the test row is { value: 12345.6789, fixedNumbers: [ "12", "12.3", "12.35, "12.346" ] }
+		const expectedKilo = scaledTestValues.map(v => ({ value: v, fixedNumbers: fixedNumbersForValue(v / 1000) }))
+		const expectedNegativeKilo = scaledTestValues.map(v => ({ value: v * -1, fixedNumbers: fixedNumbersForValue(v / 1000 * -1) }))
+
+		// Expected results for values that are expected to scale to the mega range.
+		// E.g. for value 12345.6789, the test row is { value: 12345678.9, fixedNumbers: [ "12", "12.3", "12.35, "12.346" ] }
+		const expectedMega = scaledTestValues.map(v => ({ value: v * 1000, fixedNumbers: fixedNumbersForValue(v / 1000) }))
+
+		// Expected results for values that are expected to scale to the giga range.
+		// E.g. for value 12345.6789, the test row is { value: 12345678900, fixedNumbers: [ "12", "12.3", "12.35, "12.346" ] }
+		const expectedGiga = scaledTestValues.map(v => ({ value: v * 1000 * 1000, fixedNumbers: fixedNumbersForValue(v / 1000) }))
+
+		// Expected results for values that are expected to scale to the tera range.
+		// E.g. for value 12345.6789, the test row is { value: 12345678900000, fixedNumbers: [ "12", "12.3", "12.35, "12.346" ] }
+		const expectedTera = scaledTestValues.map(v => ({ value: v * 1000 * 1000 * 1000, fixedNumbers: fixedNumbersForValue(v / 1000) }))
+
+
+		let data = []
+
+		// For each unit, add a data row for each scale test value, with an array containing the
+		// expected quantity text for [0,1,2,3] decimals.
+		function addDataRows(unit) {
+			data.push(dataRow(unit, NaN, VenusOS.Units_Scale_None, ["--","--","--","--"]))
+
+			let expectedInfo
+			for (expectedInfo of expectedUnscaled) {
+				data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_None, expectedInfo.fixedNumbers))
+			}
+			for (expectedInfo of expectedNegativeUnscaled) {
+				data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_None, expectedInfo.fixedNumbers))
+			}
+			if (Units.maximumUnitScale(unit) >= VenusOS.Units_Scale_Kilo) {
+				for (expectedInfo of expectedKilo) {
+					data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_Kilo, expectedInfo.fixedNumbers))
+				}
+				for (expectedInfo of expectedNegativeKilo) {
+					data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_Kilo, expectedInfo.fixedNumbers))
+				}
+			}
+			if (Units.maximumUnitScale(unit) >= VenusOS.Units_Scale_Mega) {
+				for (expectedInfo of expectedMega) {
+					data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_Mega, expectedInfo.fixedNumbers))
+				}
+			}
+			if (Units.maximumUnitScale(unit) >= VenusOS.Units_Scale_Giga) {
+				for (expectedInfo of expectedGiga) {
+					data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_Giga, expectedInfo.fixedNumbers))
+				}
+			}
+			if (Units.maximumUnitScale(unit) >= VenusOS.Units_Scale_Tera) {
+				for (expectedInfo of expectedTera) {
+					data.push(dataRow(unit, expectedInfo.value, VenusOS.Units_Scale_Tera, expectedInfo.fixedNumbers))
+				}
+			}
+		}
+
+		const exceptions = [
+			VenusOS.Units_CardinalDirection, // see test_windDirection()
+			VenusOS.Units_Energy_KiloWattHour, // see test_kiloWattHour()
+			VenusOS.Units_Percentage, // see test_percentage()
+			VenusOS.Units_Time_Day, // see test_timeUnits()
+			VenusOS.Units_Time_Hour, // as above
+			VenusOS.Units_Time_Minute, // as above
+			VenusOS.Units_Time_Second, // as above
+		]
+
+		for (let i = 0; i <= VenusOS.Units_Type_Max; ++i) {
+			if (exceptions.indexOf(i) < 0) {
+				addDataRows(i)
+			}
+		}
+		return data
+	}
+
+	function test_getDisplayText(data) {
+		const baseUnitSymbol = Units.defaultUnitString(data.unit)
+		let decimals
+		let quantity
+
+		// For Watts, any number between -1 to 1 (exclusive) becomes zero, to ignore potential noise.
+		const overrideExpectedNumber = data.unit === VenusOS.Units_Watt && Math.abs(data.value) < 1 ? "0" : undefined
+
+		// When decimals = -1 and formatHints = NoDecimalAdjustment, the result should contain a
+		// fixed number with the default number of decimals for that unit. The resulting number
+		// should also be scaled if needed (e.g. 123456W becomes 12.34kW).
+		quantity = Units.getDisplayText(data.unit, data.value, -1, Units.NoDecimalAdjustment)
+		compare(quantity.number, overrideExpectedNumber ?? data.nonAdjusted.fixedNumbers[Units.defaultUnitDecimals(data.unit)])
+		compare(quantity.unit, Units.scaleToString(data.nonAdjusted.scale) + baseUnitSymbol)
+		compare(quantity.scale, data.nonAdjusted.scale)
+
+		// When custom decimals are specified, the result should match the fixedNumbers entry
+		// for that amount of decimals.
+		for (decimals = 0; decimals <= 3; ++decimals) {
+			quantity = Units.getDisplayText(data.unit, data.value, decimals, Units.NoDecimalAdjustment)
+			compare(quantity.number, overrideExpectedNumber ?? data.nonAdjusted.fixedNumbers[decimals])
+			compare(quantity.unit, Units.scaleToString(data.nonAdjusted.scale) + baseUnitSymbol, decimals)
+			compare(quantity.scale, data.nonAdjusted.scale, decimals)
+		}
+
+		// When the NoScaling flag is specified, the resulting number should be the same as the
+		// source value, with the preferred decimals.
+		// Only test numbers for the base and kilo scales, to avoid going over MAX_INT.
+		if (data.nonAdjusted.scale === VenusOS.Units_Scale_None || data.nonAdjusted.scale === VenusOS.Units_Scale_Kilo) {
+			for (decimals = 0; decimals <= 3; ++decimals) {
+				quantity = Units.getDisplayText(data.unit, data.value, decimals, Units.NoDecimalAdjustment | Units.NoScaling)
+				let unscaledNumber = isNaN(data.value) ? "--" : data.value.toFixed(decimals)
+				if (unscaledNumber === "-0") {
+					unscaledNumber = "0"
+				}
+				compare(quantity.number, overrideExpectedNumber ?? unscaledNumber) // expect an unscaled value
+				compare(quantity.unit, baseUnitSymbol) // expect the unit symbol without any scaling
+				compare(quantity.scale, VenusOS.Units_Scale_None) // expect no scaling has been applied
+			}
+		}
+
+		// When the default decimals, scaling and decimal adjustments are used, the resulting
+		// number should be scaled and formatted as needed.
+		quantity = Units.getDisplayText(data.unit, data.value)
+		compare(quantity.number, overrideExpectedNumber ?? data.adjusted.number)
+		compare(quantity.unit, data.adjusted.unit)
+		compare(quantity.scale, data.adjusted.scale)
+	}
+
+	function test_timeUnits_data() {
+		return [
+			{ unit: VenusOS.Units_Time_Day, symbol: "d" },
+			{ unit: VenusOS.Units_Time_Hour, symbol: "h" },
+			{ unit: VenusOS.Units_Time_Minute, symbol: "m" },
+			{ unit: VenusOS.Units_Time_Second, symbol: "s" },
+		]
+	}
+
+	function test_timeUnits(data) {
+		compare(Units.defaultUnitString(data.unit), data.symbol)
+		compare(Units.defaultUnitDecimals(data.unit), 0)
+		compare(Units.maximumUnitScale(data.unit), VenusOS.Units_Scale_None)
+
+		// There are currently no min/max constraints on time units, so getDisplayText() should just
+		// return the given number with the appropriate symbol.
+		let quantity
+		quantity = Units.getDisplayText(data.unit, NaN)
+		compare(quantity.unit, data.symbol)
+		compare(quantity.number, "--")
+		quantity = Units.getDisplayText(data.unit, 0)
+		compare(quantity.unit, data.symbol)
+		compare(quantity.number, "0")
+		quantity = Units.getDisplayText(data.unit, 1)
+		compare(quantity.unit, data.symbol)
+		compare(quantity.number, "1")
+		quantity = Units.getDisplayText(data.unit, 100)
+		compare(quantity.unit, data.symbol)
+		compare(quantity.number, "100")
 	}
 
 	function expect(type, value, number, unit, hysteresis = false) {
@@ -31,47 +296,6 @@ TestCase {
 		console.log("Testing value", value, "(" + Units.defaultUnitString(type) +") ->", numberOut + unitOut)
 		compare(numberOut, number)
 		compare(unitOut, unit)
-	}
-
-	function test_unitsLabel() {
-		expect(VenusOS.Units_None, 1, "1", "")
-		expect(VenusOS.Units_Amp, 1, "1.0", "A")
-		expect(VenusOS.Units_AmpHour, 1, "1.0", "Ah")
-		expect(VenusOS.Units_CardinalDirection, 1, "1", Units.degreesSymbol + " direction_north")
-		expect(VenusOS.Units_Energy_KiloWattHour, 1, "1000", "Wh")
-		expect(VenusOS.Units_Foot, 1, "1", "ft")
-		expect(VenusOS.Units_Hectopascal, 1, "1.0", "hPa")
-		expect(VenusOS.Units_Hertz, 1, "1.0", "Hz")
-		expect(VenusOS.Units_Kilopascal, 1, "1", "kPa")
-		expect(VenusOS.Units_Lux, 1, "1", "lux")
-		expect(VenusOS.Units_MicrogramPerCubicMeter, 1, "1.0", "µg/m³")
-		expect(VenusOS.Units_Metre, 1, "1", "m")
-		expect(VenusOS.Units_NewtonMeter, 1, "1", "Nm")
-		expect(VenusOS.Units_PartsPerMillion, 1, "1", "ppm")
-		expect(VenusOS.Units_Percentage, 1, "1", "%")
-		expect(VenusOS.Units_PowerFactor, 1, "1.000", "")
-		expect(VenusOS.Units_RevolutionsPerMinute, 1, "1", "RPM")
-		expect(VenusOS.Units_Speed_KilometresPerHour, 1, "1", "km/h")
-		expect(VenusOS.Units_Speed_Knots, 1, "1", "kn")
-		expect(VenusOS.Units_Speed_MetresPerSecond, 1, "1", "m/s")
-		expect(VenusOS.Units_Speed_MilesPerHour, 1, "1", "mph")
-		expect(VenusOS.Units_Temperature_Celsius, 1, "1", Units.degreesSymbol + "C")
-		expect(VenusOS.Units_Temperature_Fahrenheit, 1, "1", Units.degreesSymbol + "F")
-		expect(VenusOS.Units_Temperature_Kelvin, 1, "1", Units.degreesSymbol + "K")
-		expect(VenusOS.Units_Time_Day, 1, "1", "d")
-		expect(VenusOS.Units_Time_Hour, 1, "1", "h")
-		expect(VenusOS.Units_Time_Minute, 1, "1", "m")
-		expect(VenusOS.Units_Time_Second, 1, "1", "s")
-		expect(VenusOS.Units_VoltAmpere, 1, "1.0", "VA")
-		expect(VenusOS.Units_VoltAmpereReactive, 1, "1.0", "var")
-		expect(VenusOS.Units_Volt_AC, 1, "1.0", "V")
-		expect(VenusOS.Units_Volt_DC, 1, "1.00", "V")
-		expect(VenusOS.Units_Volume_CubicMetre, 1, "1.000", "m³")
-		expect(VenusOS.Units_Volume_GallonImperial, 1, "1", "gal")
-		expect(VenusOS.Units_Volume_GallonUS, 1, "1", "gal")
-		expect(VenusOS.Units_Volume_Litre, 1, "1", "ℓ")
-		expect(VenusOS.Units_Watt, 1, "1", "W")
-		expect(VenusOS.Units_WattsPerSquareMetre, 1, "1", "W/m2")
 	}
 
 	function test_percentage() {
@@ -103,140 +327,6 @@ TestCase {
 		expect(VenusOS.Units_CardinalDirection, 23.6, "24", "° direction_northeast")
 	}
 
-	function test_powerFactor() {
-		expect(VenusOS.Units_PowerFactor, NaN, "--", "")
-		expect(VenusOS.Units_PowerFactor, -1234, "-1234", "")
-		expect(VenusOS.Units_PowerFactor, -100, "-100.0", "")
-		expect(VenusOS.Units_PowerFactor, -15.55, "-15.55", "")
-		expect(VenusOS.Units_PowerFactor, -1, "-1.000", "")
-		expect(VenusOS.Units_PowerFactor, -0.255, "-0.255", "")
-		expect(VenusOS.Units_PowerFactor, -0.25, "-0.250", "")
-		expect(VenusOS.Units_PowerFactor, -0.1, "-0.100", "")
-		expect(VenusOS.Units_PowerFactor, 0, "0.000", "")
-		expect(VenusOS.Units_PowerFactor, 0.1, "0.100", "")
-		expect(VenusOS.Units_PowerFactor, 0.25, "0.250", "")
-		expect(VenusOS.Units_PowerFactor, 0.255, "0.255", "")
-		expect(VenusOS.Units_PowerFactor, 1, "1.000", "")
-		expect(VenusOS.Units_PowerFactor, 15.55, "15.55", "")
-		expect(VenusOS.Units_PowerFactor, 100, "100.0", "")
-		expect(VenusOS.Units_PowerFactor, 1234, "1234", "")
-	}
-
-	function test_precisionZero() {
-		var units = [VenusOS.Units_Volume_Litre,
-					 VenusOS.Units_Volume_GallonImperial,
-					 VenusOS.Units_Volume_GallonUS,
-					 VenusOS.Units_Watt,
-					 VenusOS.Units_WattsPerSquareMetre,
-					 VenusOS.Units_Temperature_Celsius,
-					 VenusOS.Units_Temperature_Fahrenheit,
-					 VenusOS.Units_Temperature_Kelvin,
-					 VenusOS.Units_Metre,
-					 VenusOS.Units_Kilometre,
-					 VenusOS.Units_Foot,
-					 VenusOS.Units_Mile,
-					 VenusOS.Units_NauticalMile,
-					 VenusOS.Units_RevolutionsPerMinute]
-
-		for (const unit of units) {
-			const unitString = Units.defaultUnitString(unit)
-
-			expect(unit, NaN, "--", unitString)
-			expect(unit, 0, "0", unitString)
-			expect(unit, 0.4, "0", unitString)
-			if (unit === VenusOS.Units_Watt) {
-				expect(unit, 0.55, "0", unitString)
-				expect(unit, 0.9, "0", unitString)
-				expect(unit, 1.1, "1", unitString)
-			} else {
-				expect(unit, 0.55, "1", unitString)
-			}
-			expect(unit, 14, "14", unitString)
-			expect(unit, 15.5, "16", unitString)
-			expect(unit, 100, "100", unitString)
-			expect(unit, 1234, "1234", unitString)
-
-			if (Units.isScalingSupported(unit)) {
-				if (unit === VenusOS.Units_Volume_Litre
-						|| unit === VenusOS.Units_Metre) {
-					expect(unit, 12345, "12", "k" + unitString)
-					expect(unit, 123456789, "123457", "k" + unitString)
-				} else {
-					expect(unit, 12345, "12", "k" + unitString)
-					expect(unit, 123456789, "123", "M" + unitString)
-					expect(unit, 123456789012, "123", "G" + unitString)
-					expect(unit, 123456789012345, "123", "T" + unitString)
-				}
-			} else {
-				expect(unit, 1234, "1234", unitString)
-				expect(unit, 12345, "12345", unitString)
-				expect(unit, 123456789, "123456789", unitString)
-			}
-		}
-	}
-
-	function test_precisionOne() {
-		var units = [VenusOS.Units_VoltAmpere,
-					 VenusOS.Units_Amp,
-					 VenusOS.Units_Hertz,
-					 VenusOS.Units_AmpHour,
-					 VenusOS.Units_Hectopascal]
-
-		for (const unit of units) {
-			const unitString = Units.defaultUnitString(unit)
-
-			expect(unit, NaN, "--", unitString)
-			expect(unit, 0, "0.0", unitString)
-			expect(unit, 0.4, "0.4", unitString)
-			expect(unit, 0.54, "0.5", unitString)
-			expect(unit, 0.55, "0.6", unitString)
-			expect(unit, 14, "14.0", unitString)
-			expect(unit, 15.5, "15.5", unitString)
-			expect(unit, 100, "100", unitString)
-			expect(unit, 1234, "1234", unitString)
-
-			if (Units.isScalingSupported(unit)) {
-				expect(unit, 12345, "12.3", "k" + unitString)
-				expect(unit, 123456789, "123", "M" + unitString)
-				expect(unit, 123556789012, "124", "G" + unitString)
-				expect(unit, 123456789012345, "123", "T" + unitString)
-			} else {
-				expect(unit, 12345, "12345", unitString)
-				expect(unit, 123456789, "123456789", unitString)
-			}
-		}
-	}
-
-	function test_precisionTwo() {
-		var units = [
-			VenusOS.Units_Volt_DC
-		]
-
-		for (const unit of units) {
-			const unitString = Units.defaultUnitString(unit)
-
-			expect(unit, NaN, "--", unitString)
-			expect(unit, 0, "0.00", unitString)
-			expect(unit, 0.64, "0.64", unitString)
-			expect(unit, 0.254, "0.25", unitString)
-			expect(unit, 0.255, "0.26", unitString)
-			expect(unit, 14, "14.00", unitString)
-			expect(unit, 15.55, "15.55", unitString)
-			expect(unit, 100, "100", unitString)
-			expect(unit, 1234, "1234", unitString)
-
-			if (Units.isScalingSupported(unit)) {
-				expect(unit, 12345, "12.35", "k" + unitString)
-				expect(unit, 123456789, "123", "M" + unitString)
-				expect(unit, 123556789012, "124", "G" + unitString)
-				expect(unit, 123456789012345, "123", "T" + unitString)
-			} else {
-				expect(unit, 12345, "12345", unitString)
-				expect(unit, 123456789, "123456789", unitString)
-			}
-		}
-	}
-
 	function test_kiloWattHour() {
 		const unit = VenusOS.Units_Energy_KiloWattHour
 
@@ -256,25 +346,6 @@ TestCase {
 		expect(unit, 12345, "12.35", "MWh")
 		expect(unit, 123456789, "123.5", "GWh")
 		expect(unit, 123456789012, "123.5", "TWh")
-	}
-
-	function test_volumeCubicMetre() {
-		const unit = VenusOS.Units_Volume_CubicMetre
-
-		expect(unit, NaN, "--", "m³")
-		expect(unit, 0, "0.000", "m³")
-		expect(unit, 0.0005, "0.001", "m³")
-		expect(unit, 0.005, "0.005", "m³")
-		expect(unit, 0.554, "0.554", "m³")
-		expect(unit, 0.5555, "0.556", "m³")
-		expect(unit, 14.1234, "14.12", "m³")
-		expect(unit, 15.5123, "15.51", "m³")
-		expect(unit, 100.3134, "100.3", "m³")
-		expect(unit, 1234.59551, "1235", "m³")
-		expect(unit, 12345.5, "12.35", "km³")
-		expect(unit, 123456789, "123.5", "Mm³")
-		expect(unit, 123456789012, "123.5", "Gm³")
-		expect(unit, 123456789012345, "123.5", "Tm³")
 	}
 
 	function test_hysteresis() {
@@ -315,20 +386,23 @@ TestCase {
 		compare(quantity.unit, "TWh")
 
 		// choose scale based on different anchor value
-		quantity = Units.getDisplayText(unit, 19567890123, -1, Units.NoFormatHints, 123456789)
+		quantity = Units.getDisplayText(unit, 19567890123, 0, Units.NoFormatHints, 123456789)
 		compare(quantity.number, "19568")
 		compare(quantity.unit, "GWh")
 	}
 
 	function test_unitFormatHints() {
 		const unit = VenusOS.Units_Metre
-		var quantity = Units.getDisplayText(unit, 19.5678)
+		let quantity
+
+		quantity = Units.getDisplayText(unit, 19.5678)
 		compare(quantity.number, "20")
 		compare(quantity.unit, "m")
 
 		// default internal scaling algorithm ignores passed function parameters
+		// and uses four digits where possible
 		quantity = Units.getDisplayText(unit, 19.5678, 2)
-		compare(quantity.number, "19.6")
+		compare(quantity.number, "19.57")
 		compare(quantity.unit, "m")
 
 		// force internal scaling algorithm to adhere to function parameters
@@ -346,88 +420,15 @@ TestCase {
 		compare(quantity.number, "195.68")
 		compare(quantity.unit, "km")
 
-		// unscaled value correctly round to no decimal places
-		// (TODO: passing in decimal places does not result in displayed decimal places)
+		// unscaled value correctly round to two decimal places
 		quantity = Units.getDisplayText(unit, 195678, 2, Units.NoScaling)
-		compare(quantity.number, "195678")
+		compare(quantity.number, "195678.00")
 		compare(quantity.unit, "m")
 
-		// unscaled value correctly round to no decimal places
-		// (TODO: passing in decimal places rounds to whole value instead of displaying decimals places)
+		// unscaled value correctly round to two decimal places
 		quantity = Units.getDisplayText(unit, 195678.5, 2, Units.NoScaling)
-		compare(quantity.number, "195679")
+		compare(quantity.number, "195678.50")
 		compare(quantity.unit, "m")
-	}
-
-	function test_precision() {
-		const unit = VenusOS.Units_Watt
-		var quantity = Units.getDisplayText(unit, 1.9612345)
-		compare(quantity.number, "2")
-
-		quantity = Units.getDisplayText(unit, 1.9612345, 1)
-		compare(quantity.number, "2.0")
-
-		quantity = Units.getDisplayText(unit, 1.9612345, 2)
-		compare(quantity.number, "1.96")
-
-		quantity = Units.getDisplayText(unit, 1.9612345, 3)
-		compare(quantity.number, "1.961")
-
-		quantity = Units.getDisplayText(unit, 1.9612345, 4)
-		compare(quantity.number, "1.9612")
-	}
-
-	function test_unitNone() {
-		expect(VenusOS.Units_None, NaN, "--", "")
-		expect(VenusOS.Units_None, 123, "123", "")
-		expect(VenusOS.Units_None, 12345678, "12345678", "")
-	}
-
-	function test_partsPerMillion() {
-		const unit = VenusOS.Units_PartsPerMillion
-		const unitString = Units.defaultUnitString(unit)
-
-		expect(unit, NaN, "--", unitString)
-		expect(unit, 0, "0", unitString)
-		expect(unit, 400, "400", unitString)
-		expect(unit, 425, "425", unitString)
-		expect(unit, 1000, "1000", unitString)
-		expect(unit, 5000, "5000", unitString)
-		expect(unit, 40000, "40000", unitString)
-	}
-
-	function test_microgramPerCubicMeter() {
-		const unit = VenusOS.Units_MicrogramPerCubicMeter
-		const unitString = Units.defaultUnitString(unit)
-
-		expect(unit, NaN, "--", unitString)
-		expect(unit, 0, "0.0", unitString)
-		expect(unit, 0.4, "0.4", unitString)
-		expect(unit, 0.54, "0.5", unitString)
-		expect(unit, 0.55, "0.6", unitString)
-		expect(unit, 2.2, "2.2", unitString)
-		expect(unit, 10.5, "10.5", unitString)
-		expect(unit, 100, "100", unitString)
-		expect(unit, 250.7, "251", unitString)
-		expect(unit, 999.9, "1000", unitString)
-		expect(unit, 1000, "1000", unitString)
-	}
-
-	function test_lux() {
-		const unit = VenusOS.Units_Lux
-		const unitString = Units.defaultUnitString(unit)
-
-		expect(unit, NaN, "--", unitString)
-		expect(unit, 0, "0", unitString)
-		expect(unit, 1, "1", unitString)
-		expect(unit, 10, "10", unitString)
-		expect(unit, 100, "100", unitString)
-		expect(unit, 244, "244", unitString)
-		expect(unit, 1000, "1000", unitString)
-		expect(unit, 10472, "10472", unitString)
-		expect(unit, 13026.67, "13027", unitString)
-		expect(unit, 65535, "65535", unitString)
-		expect(unit, 144284, "144284", unitString)
 	}
 
 	function test_coordinate_data() {
@@ -477,5 +478,9 @@ TestCase {
 		// Degrees, decimal minutes
 		compare(Units.formatLatitude(data.latitude.input, VenusOS.GpsData_Format_DegreesMinutes), data.latitude.dm)
 		compare(Units.formatLongitude(data.longitude.input, VenusOS.GpsData_Format_DegreesMinutes), data.longitude.dm)
+	}
+
+	QuantityInfo {
+		id: info
 	}
 }

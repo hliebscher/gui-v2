@@ -227,8 +227,12 @@ sync_veutil_submodule() {
 	[ -n "${main_veutil_sha}" ] || fail "Kein ${VEUTIL_PATH} in ${UPSTREAM} gefunden."
 
 	info "Setze ${VEUTIL_PATH} auf ${UPSTREAM} @ ${main_veutil_sha:0:7}..."
-	git checkout "${main_veutil_sha}" -- "${VEUTIL_PATH}"
 	git submodule update --init "${VEUTIL_PATH}"
+	(
+		cd "${VEUTIL_PATH}"
+		git fetch origin --tags 2>/dev/null || git fetch origin
+		git checkout "${main_veutil_sha}"
+	)
 	git add "${VEUTIL_PATH}"
 	ok "${VEUTIL_PATH} synchronisiert."
 }

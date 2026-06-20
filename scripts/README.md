@@ -5,6 +5,7 @@ Dieses Verzeichnis enthält Hilfsscripts für Build, Deployment und Übersetzung
 ## Inhaltsverzeichnis
 
 - [Build- und Copy-Scripts](#build-und-copy-scripts)
+- [Merge main → Vario](#merge-main--vario)
 - [Übersetzungs-Scripts](#übersetzungs-scripts)
 - [translation-override.py – Externe Übersetzungs-Overrides](#translation-overridepy--externe-übersetzungs-overrides)
 
@@ -42,6 +43,30 @@ Kopiert die Build-Dateien für beide Plattformen (GX-Gerät und WebAssembly) in 
 **Einzelne Builds:** `build-gx.sh`, `build-wasm.sh`, `copy-gx.sh`, `copy-wasm.sh`
 
 Weitere Details: [README_build-all.md](./README_build-all.md)
+
+---
+
+## Merge main → Vario
+
+### `merge-main-into-vario.sh`
+
+Wiederholbarer Workflow zum Integrieren von `origin/main` in einen Vario-Branch unter Beibehaltung branch-spezifischer Features (StatusBar, ScreenBlanker, Übersetzungs-Overrides, etc.).
+
+**Verwendung:**
+```bash
+./scripts/merge-main-into-vario.sh analyze    # Divergenz + Konflikt-Vorschau
+./scripts/merge-main-into-vario.sh backup     # Sicherungsbranch
+./scripts/merge-main-into-vario.sh merge      # Merge + Auto-Lösung (DE + veutil)
+./scripts/merge-main-into-vario.sh verify     # WASM-Build
+./scripts/merge-main-into-vario.sh doc        # Doku-Template docs/merge/
+./scripts/merge-main-into-vario.sh all        # analyze → backup → merge → verify-Hinweis
+```
+
+**Auto-Lösungen bei bekannten Konflikten:**
+- `i18n/venus-gui-v2_de.ts` → main-Basis + `translation-override.py apply`
+- `src/veutil` → Submodule-Pointer von `origin/main`
+
+**Dokumentation:** `docs/merge/`, Skill `.cursor/skills/triage-main-diff/SKILL.md`
 
 ---
 

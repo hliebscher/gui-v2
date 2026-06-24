@@ -38,6 +38,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/ColorWheelModeButton.qml
     components/ConsoleTerminal.qml
     components/ControlCard.qml
+    components/HeatingCard.qml
     components/CpuMonitor.qml
     components/CustomDevicePageEntry.qml
     components/DateSelector.qml
@@ -375,6 +376,9 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/OverviewPage.qml
     pages/OverviewPage_Landscape.qml
     pages/OverviewPage_Portrait.qml
+    pages/HeatingPage.qml
+    pages/HeatingZonePage.qml
+    pages/HeatingClimatePage.qml
     pages/PageContact.qml
     pages/PageManager.qml
     pages/SettingsPage.qml
@@ -879,6 +883,7 @@ set(VictronVenusOS_RESOURCES
     images/notifications.svg
     images/notifications_subtract.svg
     images/overview.svg
+    images/heating.svg
     images/prompt_device_rotation.svg
     images/rain.svg
     images/scatteredcloud.svg

@@ -1,0 +1,10 @@
+<RCC>
+<qresource prefix="/occ-heating">
+<file>OccHeatingSettings.qml</file>
+<file>OccHeatingMain.qml</file>
+<file>OccHeatingClimate.qml</file>
+<file>OccHeatingZone.qml</file>
+<file>occ-heating_en.qm</file>
+<file>occ-heating_de.qm</file>
+</qresource>
+</RCC>

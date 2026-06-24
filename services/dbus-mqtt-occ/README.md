@@ -20,12 +20,16 @@ GUI v2 (OCC Heating Plugin)
 ## Installation auf GX-Gerät
 
 ```bash
-# Dateien auf GX kopieren
-rsync -avc . root@<gx-ip>:/tmp/dbus-mqtt-occ/
-
-# Installation ausführen
-ssh root@<gx-ip> "cd /tmp/dbus-mqtt-occ && bash install.sh"
+cd services/dbus-mqtt-occ
+rsync -avc --exclude '__pycache__' . root@<gx-ip>:/tmp/dbus-mqtt-occ/
+ssh root@<gx-ip> "cd /tmp/dbus-mqtt-occ && bash install.sh && svc -t /service/dbus-mqtt-occ"
 ```
+
+**Hinweise:**
+
+- `install.sh` kopiert `ve_utils.py`, `vedbus.py`, `dbus-mqtt-occ.py`, `config.ini`, `version.py`
+- Auf Venus OS mit paho-mqtt 2.x: Client mit `CallbackAPIVersion.VERSION1` (bereits im Code)
+- Wissensspeicher / Runbook: [docs/occ/00-wissensspeicher.md](../../docs/occ/00-wissensspeicher.md)
 
 ## Konfiguration
 
@@ -40,6 +44,8 @@ Datei: `/data/apps/dbus-mqtt-occ/config.ini`
 | HEATING | ZoneNames | Komma-separierte Zonennamen |
 | VALVES | V17..V25 | Ventil-zu-Zone Zuordnung |
 | CLIMATE | Enabled | Klimaanlage aktiviert |
+| CLIMATE | Units | Anzahl Klima-Einheiten (z. B. 2) |
+| CLIMATE | UnitNames | Komma-separierte Namen (z. B. Klima Wohnen,Klima Schlafen) |
 | DBUS | ServiceName | D-Bus Service-Name |
 | DBUS | DeviceInstance | Geräte-Instanz (100) |
 
@@ -55,9 +61,13 @@ occ/heating/zone/<id>/mode           → manual|auto|off
 occ/heating/zone/<id>/relay          → 0|1
 occ/valve/<id>/state                 → 0|1
 occ/pump/<id>/state                  → 0|1
-occ/climate/mode                     → off|cool|heat|auto
-occ/climate/setpoint                 → float
-occ/climate/temperature              → float
+occ/climate/mode                     → off|cool|heat|auto (Legacy, Unit 1)
+occ/climate/setpoint                 → float (Legacy, Unit 1)
+occ/climate/temperature              → float (Legacy, Unit 1)
+occ/climate/<id>/mode                → pro Einheit
+occ/climate/<id>/setpoint            → pro Einheit
+occ/climate/<id>/temperature         → pro Einheit
+occ/climate/<id>/state               → pro Einheit
 ```
 
 ### Ausgehend (GUI-Steuerung → OCC)
@@ -65,8 +75,10 @@ occ/climate/temperature              → float
 ```
 occ/heating/zone/<id>/setpoint/set   → Neuer Sollwert
 occ/heating/zone/<id>/mode/set       → Neuer Modus
-occ/climate/mode/set                 → Neuer Klima-Modus
-occ/climate/setpoint/set             → Neuer Klima-Sollwert
+occ/climate/mode/set                 → Neuer Klima-Modus (Legacy, Unit 1)
+occ/climate/setpoint/set             → Neuer Klima-Sollwert (Legacy, Unit 1)
+occ/climate/<id>/mode/set            → Modus pro Einheit
+occ/climate/<id>/setpoint/set          → Sollwert pro Einheit
 ```
 
 ## D-Bus Pfade
@@ -83,9 +95,16 @@ com.victronenergy.heating.occ/
 ├── /Valve/V17/State       → 0|1
 ├── /Valve/V17/Zone        → 3
 ├── /Pump/P1/State         → 0|1
-├── /Climate/Mode          → 0=Off, 1=Cool, 2=Heat, 3=Auto (R/W)
-├── /Climate/Setpoint      → float (R/W)
-└── /Climate/Temperature   → float
+├── /NumberOfClimateUnits  → int (z. B. 2)
+├── /Climate/1/Name        → string
+├── /Climate/1/Setpoint    → float (R/W)
+├── /Climate/1/Mode        → 0=Off, 1=Cool, 2=Heat, 3=Auto (R/W)
+├── /Climate/1/Temperature → float
+├── /Climate/1/State       → 0|1
+├── /Climate/2/…           → zweite Einheit (gleiche Struktur)
+├── /Climate/Mode          → Legacy-Alias Unit 1 (R/W)
+├── /Climate/Setpoint      → Legacy-Alias Unit 1 (R/W)
+└── /Climate/Temperature   → Legacy-Alias Unit 1
 ```
 
 ## Wartung

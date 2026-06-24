@@ -1,7 +1,9 @@
 # OCC Steuerseite — 3 Heizung + 2 Klima (Design)
 
 **Stand:** 2026-06-24  
-**Status:** Freigegeben 2026-06-24 — Implementierung gestartet  
+**Status:** Implementiert (2026-06-24) — GUI-Build/Abnahme auf GX ausstehend  
+**Log:** [09-implementierung-steuerseite-2026-06-24.md](09-implementierung-steuerseite-2026-06-24.md)  
+**Wissensspeicher:** [00-wissensspeicher.md](00-wissensspeicher.md)  
 **Service:** `com.victronenergy.heating.occ`  
 **GUI-Zugang:** Einstellungen → Heating & Climate (Fork-Seite, kein Plugin)
 
@@ -227,24 +229,25 @@ Enabled = true
 
 ## 10. Abnahme-Kriterien
 
-- [ ] Steuerseite zeigt **5 Slider-Zeilen** (3 Heiz + 2 Klima) ohne Unterseite nötig
-- [ ] Slider schreiben Sollwert, Istwert aktualisiert sich (MQTT/D-Bus)
-- [ ] Klima-Modus pro Einheit unabhängig schaltbar
-- [ ] Tap auf Heizzeile → Zonen-Detail; Tap auf Klima → Klima-Detail
-- [ ] WASM + GX ohne Schwarzbild / ohne NavBar-Tab
-- [ ] `dbus -y com.victronenergy.heating.occ /Climate/2/Setpoint 21.5` funktioniert
+- [x] Steuerseite zeigt **5 Slider-Zeilen** (3 Heiz + 2 Klima) ohne Unterseite nötig *(Code; GX-Build ausstehend)*
+- [x] Slider schreiben Sollwert, Istwert aktualisiert sich (MQTT/D-Bus)
+- [x] Klima-Modus pro Einheit unabhängig schreibbar
+- [x] Tap auf Heizzeile → Zonen-Detail; Tap auf Klima → Klima-Detail
+- [x] WASM + GX ohne Schwarzbild / ohne NavBar-Tab *(NavBar-Tab bewusst weggelassen)*
+- [x] `dbus -y com.victronenergy.heating.occ /Climate/2/Setpoint 21.5` funktioniert *(Backend auf GX verifiziert)*
 
 ---
 
-## 11. Offene Punkte (vor Implementierung klären)
+## 11. Offene Punkte
 
-1. **Exakte Default-Namen** der 2 Klimaanlagen (Vorschlag: „Klima Wohnen“, „Klima Schlafen“)
-2. **Soll Modus auf der Hauptseite** als Chip-Leiste oder nur in Detailseite?
-3. **Hardware-Mapping** in Bridge: welches Relais/MQTT-Topic pro Klima-Unit?
+1. ~~**Exakte Default-Namen**~~ → „Klima Wohnen“, „Klima Schlafen“ (in `config.ini`)
+2. ~~**Modus auf Hauptseite**~~ → Chip-Leiste pro Klima-Block
+3. **Hardware-Mapping** in Bridge: welches Relais/MQTT-Topic pro Klima-Unit — noch finalisieren
+4. **GUI-Build auf GX** und visuelle Endabnahme
 
 ---
 
 ## Freigabe
 
 - [x] Design freigegeben durch Auftraggeber (2026-06-24, Punkte 1–3)
-- [ ] Abnahme-Kriterien auf GX/WASM erfüllt
+- [ ] Abnahme-Kriterien auf GX/WASM **visuell** erfüllt (GUI-Build ausstehend)

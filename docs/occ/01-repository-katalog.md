@@ -70,11 +70,13 @@ Jeder Treiber:
 
 ---
 
-## Eigene Repositories
+## Eigene Repositories / Services
 
-| Repository | URL | Beschreibung |
+| Repository / Pfad | URL / Ort | Beschreibung |
 |---|---|---|
-| hliebscher/gui-v2 | https://github.com/hliebscher/gui-v2 | Fork mit vario_2026.5 Branch |
+| hliebscher/gui-v2 | https://github.com/hliebscher/gui-v2 | Fork mit `v_2026.6.2` Branch |
+| services/dbus-mqtt-occ | Im Fork | OCC Heating MQTT↔D-Bus Bridge |
+| docs/occ/00-wissensspeicher.md | Im Fork | **Wissensspeicher-Index** |
 
 ---
 

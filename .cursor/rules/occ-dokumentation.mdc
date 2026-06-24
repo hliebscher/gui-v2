@@ -1,0 +1,30 @@
+---
+description: OCC-Projekt — immer dokumentieren und Wissensspeicher pflegen
+alwaysApply: true
+---
+
+# OpenCamperCore — Dokumentationspflicht
+
+Bei jeder Arbeit am OCC-Heating/Climate-Feature in diesem Fork:
+
+## Vor dem Abschluss
+
+1. **Wissensspeicher prüfen:** `docs/occ/00-wissensspeicher.md` — Quick Facts, Fallstricke, Runbooks
+2. **Log schreiben oder aktualisieren** bei Feature, Deploy, Bugfix oder Architektur-Änderung:
+   - Neues Log: `docs/occ/NN-implementierung-<YYYY-MM-DD>.md` oder thematisches Doc
+   - Index aktualisieren: Ereignislog + Dokumenten-Index in `00-wissensspeicher.md`
+3. **Service-README** (`services/dbus-mqtt-occ/README.md`) bei API-/Deploy-Änderungen mitziehen
+4. **Design-Docs** Status/Abnahme-Kriterien aktualisieren wenn umgesetzt
+
+## Was festhalten
+
+- Commits (Hashes + Kurzbeschreibung)
+- GX-Host, Deploy-Befehle, Verifikations-Output
+- Bugfixes mit Ursache und Lösung → auch in Fallstricke-Tabelle
+- Bekannte QML-Fallen: kein NavBar-Tab Heating, `ListText` nicht `ListTextItem`, `VeQuickItem.valid`
+
+## Referenzen
+
+- Index: `docs/occ/00-wissensspeicher.md`
+- Skill: `.cursor/skills/occ-wissensspeicher/SKILL.md`
+- Architektur: `docs/occ/07-architektur-entscheidung.md`

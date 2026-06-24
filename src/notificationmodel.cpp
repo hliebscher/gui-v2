@@ -63,10 +63,22 @@ NotificationSlot::NotificationSlot(VeQItem *notification, QObject *parent)
 			connect(m_active, &VeQItem::valueChanged, this, &NotificationSlot::activeChanged);
 			connect(m_silenced, &VeQItem::valueChanged, this, &NotificationSlot::silencedChanged);
 			connect(m_description, &VeQItem::valueChanged, this, &NotificationSlot::descriptionChanged);
+			// Monitor the Active item's state to detect when the device goes offline
+			// (e.g. when the device disconnects from VRM and topics are cleared).
+			connect(m_active, &VeQItem::stateChanged, this, [this](VeQItem::State state) {
+				if (state == VeQItem::Offline) {
+					Q_EMIT offlineChanged();
+				}
+			});
 		} else {
 			qWarning() << "Invalid notification slot:" << m_notification->id();
 		}
 	}
+}
+
+bool NotificationSlot::offline() const
+{
+	return m_active && m_active->getState() == VeQItem::Offline;
 }
 
 void NotificationSlot::acknowledge()
@@ -92,39 +104,104 @@ NotificationModel* NotificationModel::create(QQmlEngine *engine, QJSEngine *)
 NotificationModel::NotificationModel(QObject *parent)
 	: QAbstractListModel(parent)
 {
-	init();
+	BackendConnection *backend = BackendConnection::create();
+	if (backend) {
+		connect(backend, &BackendConnection::stateChanged,
+			this, &NotificationModel::handleBackendStateChanged);
+	}
+	QMetaObject::invokeMethod(this, &NotificationModel::init, Qt::QueuedConnection);
+}
+
+void NotificationModel::reset()
+{
+	if (m_notifications) {
+		disconnect(m_notifications, nullptr, this, nullptr);
+	}
+
+
+	const qsizetype oldDataSize = m_data.size();
+	const int oldActiveAlarms = m_activeAlarms;
+	const int oldActiveWarnings = m_activeWarnings;
+	const int oldActiveInfos = m_activeInfos;
+	const int oldUnacknowledgedAlarms = m_unacknowledgedAlarms;
+	const int oldUnacknowledgedWarnings = m_unacknowledgedWarnings;
+	const int oldUnacknowledgedInfos = m_unacknowledgedInfos;
+
+	beginResetModel();
+	m_acknowledgeAll = nullptr;
+	qDeleteAll(m_slots);
+	m_slots.clear();
+	m_data.clear();
+	m_activeAlarms = 0;
+	m_activeWarnings = 0;
+	m_activeInfos = 0;
+	m_unacknowledgedAlarms = 0;
+	m_unacknowledgedWarnings = 0;
+	m_unacknowledgedInfos = 0;
+	m_notifications = nullptr;
+	endResetModel();
+
+	if (oldDataSize != m_data.size()) {
+		Q_EMIT countChanged();
+	}
+
+	if (oldActiveAlarms != m_activeAlarms) {
+		Q_EMIT activeAlarmsChanged();
+	}
+	if (oldUnacknowledgedAlarms != m_unacknowledgedAlarms) {
+		Q_EMIT unacknowledgedAlarmsChanged();
+	}
+
+	if (oldActiveWarnings != m_activeWarnings) {
+		Q_EMIT activeWarningsChanged();
+	}
+	if (oldUnacknowledgedWarnings != m_unacknowledgedWarnings) {
+		Q_EMIT unacknowledgedWarningsChanged();
+	}
+
+	if (oldActiveInfos != m_activeInfos) {
+		Q_EMIT activeInfosChanged();
+	}
+	if (oldUnacknowledgedInfos != m_unacknowledgedInfos) {
+		Q_EMIT unacknowledgedInfosChanged();
+	}
+}
+
+void NotificationModel::handleBackendStateChanged()
+{
+	BackendConnection *backend = BackendConnection::create();
+	if (!backend) {
+		return;
+	}
+
+	if (m_notifications != nullptr &&
+			(backend->state() == BackendConnection::Disconnected
+			|| backend->state() == BackendConnection::Reconnecting
+			|| backend->state() == BackendConnection::Failed)) {
+		qInfo() << "Resetting notifications backend due to backend disconnection";
+		reset();
+	} else if (backend->state() == BackendConnection::Ready) {
+		// Re-initialize when the connection is restored.
+		// The init() call will re-discover notification slots.
+		if (!m_notifications) {
+			QMetaObject::invokeMethod(this, &NotificationModel::init, Qt::QueuedConnection);
+		}
+	}
 }
 
 void NotificationModel::init()
 {
-	if (m_data.size()) {
-		qInfo() << "NotificationModel re-initialising!";
-		beginResetModel();
-		m_acknowledgeAll = nullptr;
-		qDeleteAll(m_slots);
-		m_slots.clear();
-		m_data.clear();
-		m_activeAlarms = 0;
-		m_activeWarnings = 0;
-		m_activeInfos = 0;
-		m_unacknowledgedAlarms = 0;
-		m_unacknowledgedWarnings = 0;
-		m_unacknowledgedInfos = 0;
-		endResetModel();
-		Q_EMIT countChanged();
-		Q_EMIT activeAlarmsChanged();
-		Q_EMIT unacknowledgedAlarmsChanged();
-		Q_EMIT activeWarningsChanged();
-		Q_EMIT unacknowledgedWarningsChanged();
-		Q_EMIT activeInfosChanged();
-		Q_EMIT unacknowledgedInfosChanged();
-	}
+	reset();
 
+	qInfo() << "Initialising notifications backend";
 	m_notifications = notificationsItem();
 	if (m_notifications) {
 		m_acknowledgeAll = m_notifications->itemGet(QStringLiteral("AcknowledgeAll"));
 		connect(m_notifications, &QObject::destroyed,
-			this, &NotificationModel::init, Qt::QueuedConnection);
+			this, [this] {
+				m_notifications = nullptr;
+				QMetaObject::invokeMethod(this, &NotificationModel::init, Qt::QueuedConnection);
+			});
 		connect(m_notifications, &VeQItem::childAboutToBeRemoved,
 			this, &NotificationModel::unwatchSlot);
 		// Use QueuedConnection when a child is added, as the "index item"
@@ -168,8 +245,11 @@ void NotificationModel::watchSlot(VeQItem *slotItem)
 		connect(slot, &NotificationSlot::acknowledgedChanged, this, [this, slot] { handleAcknowledgedChanged(slot); });
 		connect(slot, &NotificationSlot::silencedChanged, this, [this, slot] { handleSilencedChanged(slot); });
 		connect(slot, &NotificationSlot::descriptionChanged, this, [this, slot] { handleDescriptionChanged(slot); });
+		connect(slot, &NotificationSlot::offlineChanged, this, [this, slot] { handleSlotOffline(slot); });
 		m_slots.append(slot);
-		addAssociatedEntry(slot, slot->active());
+		if (!slot->offline()) {
+			addAssociatedEntry(slot, slot->active());
+		}
 	}
 }
 
@@ -203,7 +283,7 @@ void NotificationModel::breakAssociation(NotificationSlot *slot)
 	for (qsizetype i = m_data.size() - 1; i >= 0; --i) {
 		notificationData &data = m_data[i];
 		if (data.notificationId == slotId) {
-			data.notificationId = QString();
+			data.notificationId.clear();
 			return;
 		}
 	}
@@ -325,6 +405,7 @@ void NotificationModel::updateAssociatedEntry(NotificationSlot *slot, Notificati
 			// Only the active/acknowledged/silenced values can change dynamically.
 			// However, the description value can change ONCE after construction,
 			// due to a quirk in venus-platform (setting description value after active value).
+			const int oldType = data.type;
 			switch (role) {
 				case NotificationRoles::Active:
 					if (data.active == slot->active()) {
@@ -348,7 +429,18 @@ void NotificationModel::updateAssociatedEntry(NotificationSlot *slot, Notificati
 					if (data.description == slot->description()) {
 						return; // not an actual change.
 					}
+					// venus-platform sets the description value last when
+					// populating (or recycling) a notification slot.
+					// Re-read all fields here, as they may have been
+					// stale when addAssociatedEntry() captured them.
 					data.description = slot->description();
+					data.deviceName = slot->deviceName();
+					data.service = slot->service();
+					data.trigger = slot->trigger();
+					data.alarmValue = slot->alarmValue();
+					data.value = slot->value();
+					data.dateTime = slot->dateTime();
+					data.type = slot->type();
 					break;
 				default:
 					qWarning() << "Unknown notification slot data change";
@@ -358,9 +450,61 @@ void NotificationModel::updateAssociatedEntry(NotificationSlot *slot, Notificati
 			changedRoles.append(static_cast<int>(role));
 			if (role == NotificationRoles::Active || role == NotificationRoles::Acknowledged) {
 				changedRoles.append(static_cast<int>(NotificationRoles::Section));
+			} else if (role == NotificationRoles::Description) {
+				// All fields were refreshed alongside description.
+				changedRoles.append(static_cast<int>(NotificationRoles::DeviceName));
+				changedRoles.append(static_cast<int>(NotificationRoles::Service));
+				changedRoles.append(static_cast<int>(NotificationRoles::Trigger));
+				changedRoles.append(static_cast<int>(NotificationRoles::AlarmValue));
+				changedRoles.append(static_cast<int>(NotificationRoles::Value));
+				changedRoles.append(static_cast<int>(NotificationRoles::DateTime));
+				changedRoles.append(static_cast<int>(NotificationRoles::Type));
+				changedRoles.append(static_cast<int>(NotificationRoles::Section));
 			}
 			Q_EMIT dataChanged(createIndex(i, 0), createIndex(i, 0), changedRoles);
 			Q_EMIT changed(data.modelId, changedRoles);
+
+			// If the type changed during a description refresh, move the
+			// counters from the old type bucket to the new type bucket.
+			if (role == NotificationRoles::Description && oldType != data.type) {
+				auto adjustCounters = [&](int type, int delta) {
+					switch (type) {
+						case Enums::Notification_Alarm:
+							if (data.active) {
+								m_activeAlarms = std::max(0, m_activeAlarms + delta);
+								Q_EMIT activeAlarmsChanged();
+							}
+							if (!data.acknowledged) {
+								m_unacknowledgedAlarms = std::max(0, m_unacknowledgedAlarms + delta);
+								Q_EMIT unacknowledgedAlarmsChanged();
+							}
+							break;
+						case Enums::Notification_Warning:
+							if (data.active) {
+								m_activeWarnings = std::max(0, m_activeWarnings + delta);
+								Q_EMIT activeWarningsChanged();
+							}
+							if (!data.acknowledged) {
+								m_unacknowledgedWarnings = std::max(0, m_unacknowledgedWarnings + delta);
+								Q_EMIT unacknowledgedWarningsChanged();
+							}
+							break;
+						case Enums::Notification_Info:
+							if (data.active) {
+								m_activeInfos = std::max(0, m_activeInfos + delta);
+								Q_EMIT activeInfosChanged();
+							}
+							if (!data.acknowledged) {
+								m_unacknowledgedInfos = std::max(0, m_unacknowledgedInfos + delta);
+								Q_EMIT unacknowledgedInfosChanged();
+							}
+							break;
+						default: break;
+					}
+				};
+				adjustCounters(oldType, -1);   // remove from old type
+				adjustCounters(data.type, +1); // add to new type
+			}
 
 			switch (data.type) {
 				case Enums::Notification_Alarm: {
@@ -417,6 +561,10 @@ void NotificationModel::updateAssociatedEntry(NotificationSlot *slot, Notificati
 
 void NotificationModel::handleActiveChanged(NotificationSlot *slot)
 {
+	if (slot->offline()) {
+		return;
+	}
+
 	if (slot->active() == true) {
 		// This may be a NEW notification, so we need to
 		// create a new entry and associate it with this slot.
@@ -452,6 +600,10 @@ void NotificationModel::handleActiveChanged(NotificationSlot *slot)
 
 void NotificationModel::handleAcknowledgedChanged(NotificationSlot *slot)
 {
+	if (slot->offline()) {
+		return;
+	}
+
 	if (slot->acknowledged() == true && slot->active() == false) {
 		// Consider this notification as "removed".
 		// future changes to this notification slot will NOT affect
@@ -466,12 +618,89 @@ void NotificationModel::handleAcknowledgedChanged(NotificationSlot *slot)
 
 void NotificationModel::handleSilencedChanged(NotificationSlot *slot)
 {
+	if (slot->offline()) {
+		return;
+	}
+
 	updateAssociatedEntry(slot, NotificationRoles::Silenced);
 }
 
 void NotificationModel::handleDescriptionChanged(NotificationSlot *slot)
 {
-	updateAssociatedEntry(slot, NotificationRoles::Description);
+	if (slot->offline()) {
+		return;
+	}
+
+	// Description is set last by venus-platform.
+	// If we skipped adding the row earlier (e.g. slot was offline)
+	// ensure we create an entry once the slot is populated;
+	// otherwise, update the associated entry as per normal.
+	const QString slotId = slot->notificationId();
+	for (qsizetype i = m_data.size() - 1; i >= 0; --i) {
+		if (m_data[i].notificationId == slotId) {
+			updateAssociatedEntry(slot, NotificationRoles::Description);
+			return;
+		}
+	}
+	addAssociatedEntry(slot, slot->active());
+}
+
+void NotificationModel::handleSlotOffline(NotificationSlot *slot)
+{
+	// The device has disconnected from VRM and the broker has cleared the
+	// notification topics.  Remove the associated model entry so that the
+	// view doesn't display stale/empty notification delegates.
+	const QString slotId = slot->notificationId();
+	for (qsizetype i = m_data.size() - 1; i >= 0; --i) {
+		notificationData &data = m_data[i];
+		if (data.notificationId == slotId) {
+			const notificationData entry = data;
+			// Break the association first, then remove.
+			data.notificationId.clear();
+
+			beginRemoveRows(QModelIndex(), i, i);
+			m_data.removeAt(i);
+			endRemoveRows();
+			Q_EMIT countChanged();
+			Q_EMIT removed(entry.modelId);
+
+			if (entry.active) {
+				switch (entry.type) {
+					case Enums::Notification_Alarm:
+						m_activeAlarms = std::max(0, m_activeAlarms - 1);
+						Q_EMIT activeAlarmsChanged();
+						break;
+					case Enums::Notification_Warning:
+						m_activeWarnings = std::max(0, m_activeWarnings - 1);
+						Q_EMIT activeWarningsChanged();
+						break;
+					case Enums::Notification_Info:
+						m_activeInfos = std::max(0, m_activeInfos - 1);
+						Q_EMIT activeInfosChanged();
+						break;
+					default: break;
+				}
+			}
+			if (!entry.acknowledged) {
+				switch (entry.type) {
+					case Enums::Notification_Alarm:
+						m_unacknowledgedAlarms = std::max(0, m_unacknowledgedAlarms - 1);
+						Q_EMIT unacknowledgedAlarmsChanged();
+						break;
+					case Enums::Notification_Warning:
+						m_unacknowledgedWarnings = std::max(0, m_unacknowledgedWarnings - 1);
+						Q_EMIT unacknowledgedWarningsChanged();
+						break;
+					case Enums::Notification_Info:
+						m_unacknowledgedInfos = std::max(0, m_unacknowledgedInfos - 1);
+						Q_EMIT unacknowledgedInfosChanged();
+						break;
+					default: break;
+				}
+			}
+			return;
+		}
+	}
 }
 
 void NotificationModel::acknowledge(quint32 modelId)

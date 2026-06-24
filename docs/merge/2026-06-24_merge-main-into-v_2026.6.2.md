@@ -42,9 +42,9 @@
 
 | Gate | Ergebnis |
 |------|----------|
-| Build (WASM) | ⬜ |
-| Konflikte | ⬜ |
-| Vario-Regression (GX) | ⬜ |
+| Build (WASM) | ✅ Erfolgreich |
+| Konflikte | ✅ Keine (clean merge) |
+| Vario-Regression (GX) | ⬜ Manuell prüfen |
 
 ---
 

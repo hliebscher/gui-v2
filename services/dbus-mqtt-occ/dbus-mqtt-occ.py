@@ -195,7 +195,10 @@ class OccHeatingBridge:
         username = self.config.get("MQTT", "Username")
         password = self.config.get("MQTT", "Password")
 
-        self.mqtt = mqtt.Client(client_id="dbus-mqtt-occ")
+        try:
+            self.mqtt = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, client_id="dbus-mqtt-occ")
+        except TypeError:
+            self.mqtt = mqtt.Client(client_id="dbus-mqtt-occ")
         if username:
             self.mqtt.username_pw_set(username, password)
 

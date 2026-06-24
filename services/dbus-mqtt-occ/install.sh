@@ -21,6 +21,7 @@ cp dbus-mqtt-occ.py "${INSTALL_DIR}/"
 cp config.ini "${INSTALL_DIR}/"
 cp version.py "${INSTALL_DIR}/"
 cp vedbus.py "${INSTALL_DIR}/"
+cp ve_utils.py "${INSTALL_DIR}/"
 cp service/run "${INSTALL_DIR}/service/run"
 cp log/run "${INSTALL_DIR}/log/run"
 

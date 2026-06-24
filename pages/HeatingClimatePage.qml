@@ -1,58 +1,59 @@
 /*
-** OpenCamperCore — Climate Control (Fork-Layer)
-** Pushed from HeatingPage NavBar page
+** OpenCamperCore — Climate unit detail
 */
 
 import QtQuick
 import Victron.VenusOS
 
 Page {
-    id: root
+	id: root
 
-    required property string serviceUid
+	required property string serviceUid
+	property int climateId: 1
 
-    readonly property string climatePrefix: serviceUid + "/Climate"
+	readonly property string climatePrefix: serviceUid + "/Climate/" + climateId
 
-    GradientListView {
-        model: VisibleItemModel {
+	GradientListView {
+		model: VisibleItemModel {
 
-            ListRadioButtonGroup {
-                //% "Climate mode"
-                text: qsTrId("occ_climate_mode")
-                dataItem.uid: root.climatePrefix + "/Mode"
-                writeAccessLevel: VenusOS.User_AccessType_User
-                optionModel: [
-                    { display: CommonWords.off, value: 0 },
-                    { display: qsTrId("occ_climate_cool"), value: 1 },
-                    { display: qsTrId("occ_climate_heat"), value: 2 },
-                    { display: qsTrId("occ_climate_auto"), value: 3 }
-                ]
-            }
+			ListText {
+				text: climateName.valid ? climateName.value : ("Klima " + climateId)
+				secondaryText: climateStateItem.valid && climateStateItem.value === 1
+						? qsTrId("occ_climate_active")
+						: qsTrId("occ_climate_idle")
+			}
 
-            ListTemperature {
-                //% "Current temperature"
-                text: qsTrId("occ_temperature_current")
-                dataItem.uid: root.climatePrefix + "/Temperature"
-            }
+			ListRadioButtonGroup {
+				//% "Climate mode"
+				text: qsTrId("occ_climate_mode")
+				dataItem.uid: root.climatePrefix + "/Mode"
+				writeAccessLevel: VenusOS.User_AccessType_User
+				optionModel: [
+					{ display: CommonWords.off, value: 0 },
+					{ display: qsTrId("occ_climate_cool"), value: 1 },
+					{ display: qsTrId("occ_climate_heat"), value: 2 },
+					{ display: qsTrId("occ_climate_auto"), value: 3 }
+				]
+			}
 
-            ListSlider {
-                //% "Target temperature"
-                text: qsTrId("occ_climate_setpoint")
-                dataItem.uid: root.climatePrefix + "/Setpoint"
-                writeAccessLevel: VenusOS.User_AccessType_User
-                from: 16.0
-                to: 30.0
-                stepSize: 0.5
-            }
+			ListTemperature {
+				//% "Current temperature"
+				text: qsTrId("occ_temperature_current")
+				dataItem.uid: root.climatePrefix + "/Temperature"
+			}
 
-            ListTextItem {
-                //% "Climate state"
-                text: qsTrId("occ_climate_state")
-                dataItem.uid: root.climatePrefix + "/State"
-                secondaryText: dataItem.value === 1
-                    ? qsTrId("occ_climate_active")
-                    : qsTrId("occ_climate_idle")
-            }
-        }
-    }
+			ListSlider {
+				//% "Target temperature"
+				text: qsTrId("occ_climate_setpoint")
+				dataItem.uid: root.climatePrefix + "/Setpoint"
+				writeAccessLevel: VenusOS.User_AccessType_User
+				from: 16.0
+				to: 30.0
+				stepSize: 0.5
+			}
+		}
+	}
+
+	VeQuickItem { id: climateName; uid: root.climatePrefix + "/Name" }
+	VeQuickItem { id: climateStateItem; uid: root.climatePrefix + "/State" }
 }

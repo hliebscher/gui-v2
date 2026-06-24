@@ -65,6 +65,18 @@ class OccHeatingBridge:
         self.topic_prefix = config.get("MQTT", "TopicPrefix")
         self.last_data_time = 0
 
+        self.climate_enabled = config.getboolean("CLIMATE", "Enabled", fallback=False)
+        if config.has_option("CLIMATE", "Units"):
+            self.climate_unit_count = config.getint("CLIMATE", "Units") if self.climate_enabled else 0
+        else:
+            self.climate_unit_count = 1 if self.climate_enabled else 0
+        unit_names_raw = config.get("CLIMATE", "UnitNames", fallback="Klima Wohnen,Klima Schlafen")
+        self.climate_unit_names = [n.strip() for n in unit_names_raw.split(",")]
+
+        self.climate_min_setpoint = config.getfloat("CLIMATE", "MinSetpoint", fallback=16.0)
+        self.climate_max_setpoint = config.getfloat("CLIMATE", "MaxSetpoint", fallback=30.0)
+        self.climate_default_setpoint = config.getfloat("CLIMATE", "DefaultSetpoint", fallback=22.0)
+
         # Valve-to-zone mapping
         self.valve_zones = {}
         if config.has_section("VALVES"):
@@ -127,12 +139,43 @@ class OccHeatingBridge:
         for pump_id in ["P1", "P2", "Floor", "Convector"]:
             self.dbus.add_path(f"/Pump/{pump_id}/State", 0)
 
-        # Climate paths
-        if self.config.getboolean("CLIMATE", "Enabled"):
-            self.dbus.add_path("/Climate/Mode", self.CLIMATE_OFF,
-                               writeable=True, onchangecallback=self._on_climate_mode_change)
-            self.dbus.add_path("/Climate/Setpoint", self.config.getfloat("CLIMATE", "DefaultSetpoint"),
-                               writeable=True, onchangecallback=self._on_climate_setpoint_change)
+        # Climate unit paths (/Climate/1/…, /Climate/2/…) + legacy flat aliases on unit 1
+        if self.climate_unit_count > 0:
+            self.dbus.add_path("/NumberOfClimateUnits", self.climate_unit_count)
+            for unit_id in range(1, self.climate_unit_count + 1):
+                prefix = f"/Climate/{unit_id}"
+                name = (self.climate_unit_names[unit_id - 1]
+                        if unit_id <= len(self.climate_unit_names)
+                        else f"Climate {unit_id}")
+                self.dbus.add_path(f"{prefix}/Name", name)
+                self.dbus.add_path(f"{prefix}/Temperature", None)
+                self.dbus.add_path(
+                    f"{prefix}/Setpoint",
+                    self.climate_default_setpoint,
+                    writeable=True,
+                    onchangecallback=self._on_climate_setpoint_change,
+                )
+                self.dbus.add_path(
+                    f"{prefix}/Mode",
+                    self.CLIMATE_OFF,
+                    writeable=True,
+                    onchangecallback=self._on_climate_mode_change,
+                )
+                self.dbus.add_path(f"{prefix}/State", 0)
+
+            # Legacy flat paths (mirror climate unit 1)
+            self.dbus.add_path(
+                "/Climate/Mode",
+                self.CLIMATE_OFF,
+                writeable=True,
+                onchangecallback=self._on_climate_mode_change,
+            )
+            self.dbus.add_path(
+                "/Climate/Setpoint",
+                self.climate_default_setpoint,
+                writeable=True,
+                onchangecallback=self._on_climate_setpoint_change,
+            )
             self.dbus.add_path("/Climate/Temperature", None)
             self.dbus.add_path("/Climate/State", 0)
 
@@ -176,6 +219,7 @@ class OccHeatingBridge:
             prefix = self.topic_prefix
             client.subscribe(f"{prefix}/heating/zone/+/+")
             client.subscribe(f"{prefix}/climate/+")
+            client.subscribe(f"{prefix}/climate/+/+")
             client.subscribe(f"{prefix}/valve/+/+")
             client.subscribe(f"{prefix}/pump/+/+")
             client.subscribe(f"{prefix}/system/+")
@@ -254,26 +298,53 @@ class OccHeatingBridge:
             self.dbus[dbus_path] = value
 
     def _handle_climate_message(self, rel, value):
-        """Process: climate/<field>"""
+        """Process: climate/<field> (legacy) or climate/<id>/<field>"""
         parts = rel.split("/")
         if len(parts) < 2:
             return
-        field = parts[1]
+
+        if len(parts) >= 3 and parts[1].isdigit():
+            unit_id = parts[1]
+            field = parts[2]
+            indexed_prefix = f"/Climate/{unit_id}"
+        else:
+            unit_id = "1"
+            field = parts[1]
+            indexed_prefix = f"/Climate/{unit_id}"
 
         path_map = {
-            "mode": "/Climate/Mode",
-            "setpoint": "/Climate/Setpoint",
-            "temperature": "/Climate/Temperature",
-            "state": "/Climate/State",
+            "mode": f"{indexed_prefix}/Mode",
+            "setpoint": f"{indexed_prefix}/Setpoint",
+            "temperature": f"{indexed_prefix}/Temperature",
+            "state": f"{indexed_prefix}/State",
         }
 
         dbus_path = path_map.get(field)
-        if dbus_path:
-            if field == "mode":
-                value = self._climate_mode_str_to_int(value)
-            elif field == "state":
-                value = 1 if str(value).lower() in ("active", "1") else 0
-            self.dbus[dbus_path] = value
+        if not dbus_path:
+            return
+
+        if field == "mode":
+            value = self._climate_mode_str_to_int(value)
+        elif field == "state":
+            value = 1 if str(value).lower() in ("active", "1") else 0
+
+        self.dbus[dbus_path] = value
+        if unit_id == "1":
+            self._sync_legacy_climate_from_unit(1)
+
+    def _sync_legacy_climate_from_unit(self, unit_id):
+        """Mirror climate unit 1 onto legacy flat /Climate/* paths."""
+        prefix = f"/Climate/{unit_id}"
+        for field in ("Mode", "Setpoint", "Temperature", "State"):
+            src = f"{prefix}/{field}"
+            dst = f"/Climate/{field}"
+            self.dbus[dst] = self.dbus[src]
+
+    def _climate_unit_id_from_path(self, path):
+        parts = path.strip("/").split("/")
+        if len(parts) >= 2 and parts[1].isdigit():
+            return int(parts[1])
+        return 1
 
     def _handle_valve_message(self, rel, value):
         """Process: valve/<id>/state"""
@@ -355,20 +426,29 @@ class OccHeatingBridge:
 
     def _on_climate_mode_change(self, path, value):
         """GUI changed climate mode -> publish to MQTT."""
+        unit_id = self._climate_unit_id_from_path(path)
         mode_map = {0: "off", 1: "cool", 2: "heat", 3: "auto"}
-        topic = f"{self.topic_prefix}/climate/mode/set"
-        self.mqtt.publish(topic, mode_map.get(int(value), "off"), qos=1)
-        log.info("Climate mode -> %s", mode_map.get(int(value)))
+        mode_str = mode_map.get(int(value), "off")
+        indexed_path = f"/Climate/{unit_id}/Mode"
+        self.dbus[indexed_path] = int(value)
+        if unit_id == 1:
+            self.dbus["/Climate/Mode"] = int(value)
+            self.mqtt.publish(f"{self.topic_prefix}/climate/mode/set", mode_str, qos=1)
+        self.mqtt.publish(f"{self.topic_prefix}/climate/{unit_id}/mode/set", mode_str, qos=1)
+        log.info("Climate mode unit %d -> %s", unit_id, mode_str)
         return True
 
     def _on_climate_setpoint_change(self, path, value):
         """GUI changed climate setpoint -> publish to MQTT."""
-        min_sp = self.config.getfloat("CLIMATE", "MinSetpoint")
-        max_sp = self.config.getfloat("CLIMATE", "MaxSetpoint")
-        value = max(min_sp, min(max_sp, float(value)))
-        topic = f"{self.topic_prefix}/climate/setpoint/set"
-        self.mqtt.publish(topic, str(value), qos=1)
-        log.info("Climate setpoint -> %.1f", value)
+        unit_id = self._climate_unit_id_from_path(path)
+        value = max(self.climate_min_setpoint, min(self.climate_max_setpoint, float(value)))
+        indexed_path = f"/Climate/{unit_id}/Setpoint"
+        self.dbus[indexed_path] = value
+        if unit_id == 1:
+            self.dbus["/Climate/Setpoint"] = value
+            self.mqtt.publish(f"{self.topic_prefix}/climate/setpoint/set", str(value), qos=1)
+        self.mqtt.publish(f"{self.topic_prefix}/climate/{unit_id}/setpoint/set", str(value), qos=1)
+        log.info("Climate setpoint unit %d -> %.1f", unit_id, value)
         return True
 
     # --- Status monitoring ---
@@ -382,8 +462,10 @@ class OccHeatingBridge:
                 self.dbus["/Status"] = self.STATUS_STANDBY
                 for zone_id in range(1, self.zone_count + 1):
                     self.dbus[f"/Zone/{zone_id}/Temperature"] = None
-                if self.config.getboolean("CLIMATE", "Enabled"):
-                    self.dbus["/Climate/Temperature"] = None
+                for unit_id in range(1, self.climate_unit_count + 1):
+                    self.dbus[f"/Climate/{unit_id}/Temperature"] = None
+                    if unit_id == 1:
+                        self.dbus["/Climate/Temperature"] = None
         return True  # keep timer running
 
     # --- Helpers ---

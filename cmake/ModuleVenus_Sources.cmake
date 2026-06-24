@@ -39,6 +39,8 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/ConsoleTerminal.qml
     components/ControlCard.qml
     components/HeatingCard.qml
+    components/OccSetpointSliderRow.qml
+    components/OccClimateUnitBlock.qml
     components/CpuMonitor.qml
     components/CustomDevicePageEntry.qml
     components/DateSelector.qml

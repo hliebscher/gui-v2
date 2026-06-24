@@ -1,93 +1,97 @@
 /*
-** OpenCamperCore — Heating & Climate Overview
-** Accessed via Settings → Heating & Climate
+** OpenCamperCore — Heating & Climate control page
+** Settings → Heating & Climate
 */
 
 import QtQuick
 import Victron.VenusOS
 
 Page {
-    id: root
+	id: root
 
-    readonly property string serviceUid: BackendConnection.type === BackendConnection.MqttSource
-        ? "mqtt/heating.occ"
-        : "dbus/com.victronenergy.heating.occ"
+	readonly property string serviceUid: BackendConnection.type === BackendConnection.MqttSource
+			? "mqtt/heating.occ"
+			: "dbus/com.victronenergy.heating.occ"
 
-    GradientListView {
-        model: VisibleItemModel {
+	readonly property real heatingMin: 5.0
+	readonly property real heatingMax: 35.0
+	readonly property real climateMin: 16.0
+	readonly property real climateMax: 30.0
 
-            ListTextItem {
-                //% "System status"
-                text: qsTrId("occ_heating_system_status")
-                secondaryText: {
-                    switch (statusItem.value) {
-                    case 0: return qsTrId("occ_status_offline")
-                    case 1: return qsTrId("occ_status_standby")
-                    case 2: return qsTrId("occ_status_active")
-                    default: return "---"
-                    }
-                }
-            }
+	readonly property var defaultZoneNames: ["Wohnraum", "Bad", "Schlafraum"]
+	readonly property var defaultClimateNames: ["Klima Wohnen", "Klima Schlafen"]
 
-            ListNavigation {
-                text: zone1Name.valid ? zone1Name.value : "Wohnraum"
-                secondaryText: _zoneText(zone1Temp.value, zone1Setpoint.value, zone1State.value)
-                onClicked: Global.pageManager.pushPage("/pages/HeatingZonePage.qml", {
-                    "title": text, "zoneId": 1, "serviceUid": root.serviceUid
-                })
-            }
+	GradientListView {
+		model: VisibleItemModel {
 
-            ListNavigation {
-                text: zone2Name.valid ? zone2Name.value : "Bad"
-                secondaryText: _zoneText(zone2Temp.value, zone2Setpoint.value, zone2State.value)
-                onClicked: Global.pageManager.pushPage("/pages/HeatingZonePage.qml", {
-                    "title": text, "zoneId": 2, "serviceUid": root.serviceUid
-                })
-            }
+			ListText {
+				//% "System status"
+				text: qsTrId("occ_heating_system_status")
+				secondaryText: {
+					switch (statusItem.value) {
+					case 0: return qsTrId("occ_status_offline")
+					case 1: return qsTrId("occ_status_standby")
+					case 2: return qsTrId("occ_status_active")
+					default: return "---"
+					}
+				}
+			}
 
-            ListNavigation {
-                text: zone3Name.valid ? zone3Name.value : "Schlafraum"
-                secondaryText: _zoneText(zone3Temp.value, zone3Setpoint.value, zone3State.value)
-                onClicked: Global.pageManager.pushPage("/pages/HeatingZonePage.qml", {
-                    "title": text, "zoneId": 3, "serviceUid": root.serviceUid
-                })
-            }
+			PrimaryListLabel {
+				//% "Heating zones"
+				text: qsTrId("occ_heating_zones_header")
+			}
 
-            ListNavigation {
-                //% "Climate"
-                text: qsTrId("occ_climate")
-                secondaryText: {
-                    if (!climateMode.valid) return "---"
-                    var modes = ["", qsTrId("occ_climate_cool"), qsTrId("occ_climate_heat"), qsTrId("occ_climate_auto")]
-                    return climateMode.value === 0 ? CommonWords.off : (modes[climateMode.value] || "---")
-                }
-                onClicked: Global.pageManager.pushPage("/pages/HeatingClimatePage.qml", {
-                    "title": text, "serviceUid": root.serviceUid
-                })
-            }
-        }
-    }
+			Repeater {
+				model: zoneCount.valid ? zoneCount.value : 3
 
-    function _zoneText(temp, setpoint, state) {
-        if (temp === undefined || temp === null) return "---"
-        var t = Math.round(temp * 10) / 10 + "°C"
-        var s = Math.round(setpoint * 10) / 10 + "°C"
-        var suffix = state === 1 ? " \u2022 \u2191" : state === 2 ? " \u2022 \u2193" : ""
-        return t + " \u2192 " + s + suffix
-    }
+				OccSetpointSliderRow {
+					required property int index
+					readonly property int zoneId: index + 1
+					readonly property string zonePrefix: root.serviceUid + "/Zone/" + zoneId
 
-    VeQuickItem { id: statusItem; uid: root.serviceUid + "/Status" }
-    VeQuickItem { id: climateMode; uid: root.serviceUid + "/Climate/Mode" }
-    VeQuickItem { id: zone1Name; uid: root.serviceUid + "/Zone/1/Name" }
-    VeQuickItem { id: zone1Temp; uid: root.serviceUid + "/Zone/1/Temperature" }
-    VeQuickItem { id: zone1Setpoint; uid: root.serviceUid + "/Zone/1/Setpoint" }
-    VeQuickItem { id: zone1State; uid: root.serviceUid + "/Zone/1/State" }
-    VeQuickItem { id: zone2Name; uid: root.serviceUid + "/Zone/2/Name" }
-    VeQuickItem { id: zone2Temp; uid: root.serviceUid + "/Zone/2/Temperature" }
-    VeQuickItem { id: zone2Setpoint; uid: root.serviceUid + "/Zone/2/Setpoint" }
-    VeQuickItem { id: zone2State; uid: root.serviceUid + "/Zone/2/State" }
-    VeQuickItem { id: zone3Name; uid: root.serviceUid + "/Zone/3/Name" }
-    VeQuickItem { id: zone3Temp; uid: root.serviceUid + "/Zone/3/Temperature" }
-    VeQuickItem { id: zone3Setpoint; uid: root.serviceUid + "/Zone/3/Setpoint" }
-    VeQuickItem { id: zone3State; uid: root.serviceUid + "/Zone/3/State" }
+					width: ListView.view ? ListView.view.width : implicitWidth
+					nameUid: zonePrefix + "/Name"
+					defaultTitle: index < root.defaultZoneNames.length
+							? root.defaultZoneNames[index]
+							: ("Zone " + zoneId)
+					setpointUid: zonePrefix + "/Setpoint"
+					temperatureUid: zonePrefix + "/Temperature"
+					stateUid: zonePrefix + "/State"
+					stateHeatingValue: 1
+					from: root.heatingMin
+					to: root.heatingMax
+					stepSize: 0.5
+				}
+			}
+
+			PrimaryListLabel {
+				//% "Climate"
+				text: qsTrId("occ_climate")
+				preferredVisible: climateCount.valid ? climateCount.value > 0 : true
+			}
+
+			Repeater {
+				model: climateCount.valid ? climateCount.value : 2
+
+				OccClimateUnitBlock {
+					required property int index
+					readonly property int climateId: index + 1
+
+					width: ListView.view ? ListView.view.width : implicitWidth
+					serviceUid: root.serviceUid
+					climateId: climateId
+					from: root.climateMin
+					to: root.climateMax
+					defaultTitle: index < root.defaultClimateNames.length
+							? root.defaultClimateNames[index]
+							: ("Klima " + climateId)
+				}
+			}
+		}
+	}
+
+	VeQuickItem { id: statusItem; uid: root.serviceUid + "/Status" }
+	VeQuickItem { id: zoneCount; uid: root.serviceUid + "/NumberOfZones" }
+	VeQuickItem { id: climateCount; uid: root.serviceUid + "/NumberOfClimateUnits" }
 }

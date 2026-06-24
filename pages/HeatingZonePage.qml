@@ -45,7 +45,7 @@ Page {
                 ]
             }
 
-            ListTextItem {
+            ListText {
                 //% "State"
                 text: qsTrId("occ_state")
                 dataItem.uid: root.zonePrefix + "/State"
@@ -59,14 +59,14 @@ Page {
                 }
             }
 
-            ListTextItem {
+            ListText {
                 //% "Relay"
                 text: qsTrId("occ_relay_state")
                 dataItem.uid: root.zonePrefix + "/RelayState"
                 secondaryText: dataItem.value === 1 ? CommonWords.on : CommonWords.off
             }
 
-            ListTextItem {
+            ListText {
                 //% "Valve"
                 text: qsTrId("occ_valves_header")
                 dataItem.uid: root.zonePrefix + "/ValveState"

@@ -22,6 +22,7 @@ Page {
 	// The cards list view is made up of:
 	// - Header - ESS card
 	// - Per-device Control Cards for EVCS, Generators, Inverter/chargers
+	// - Footer - OpenCamperCore heating card
 	BaseListView {
 		id: cardsView
 
@@ -60,6 +61,18 @@ Page {
 			VeQuickItem {
 				id: systemType
 				uid: Global.system.serviceUid + "/SystemType"
+			}
+		}
+
+		footer: ListItemLoader {
+			id: heatingCardLoader
+
+			width: root.cardWidth
+			height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
+
+			sourceComponent: HeatingCard {
+				width: root.cardWidth
+				height: parent.height
 			}
 		}
 
@@ -148,7 +161,7 @@ Page {
 			leftMargin: Theme.geometry_page_content_horizontalMargin
 			rightMargin: Theme.geometry_page_content_horizontalMargin
 		}
-		active: cardsView.count === 0 && !cardsView.headerItem.active
+		active: cardsView.count === 0 && !(cardsView.headerItem?.active ?? false) && !cardsView.footerItem
 		sourceComponent: EmptyPageItem {
 			//% "Controls"
 			titleText: qsTrId("controlcards_empty_title")

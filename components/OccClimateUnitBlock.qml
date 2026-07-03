@@ -5,7 +5,7 @@
 import QtQuick
 import Victron.VenusOS
 
-Item {
+SettingsColumn {
 	id: root
 
 	required property string serviceUid
@@ -16,12 +16,9 @@ Item {
 
 	readonly property string climatePrefix: serviceUid + "/Climate/" + climateId
 
-	implicitWidth: sliderRow.implicitWidth
-	implicitHeight: sliderRow.implicitHeight + modeGroup.height
+	width: parent ? parent.width : 0
 
 	OccSetpointSliderRow {
-		id: sliderRow
-
 		width: parent.width
 		nameUid: root.climatePrefix + "/Name"
 		defaultTitle: root.defaultTitle
@@ -35,9 +32,6 @@ Item {
 	}
 
 	ListRadioButtonGroup {
-		id: modeGroup
-
-		anchors.top: sliderRow.bottom
 		width: parent.width
 		//% "Climate mode"
 		text: qsTrId("occ_climate_mode")

@@ -20,9 +20,8 @@ Page {
 	title: qsTrId("control_cards_title")
 
 	// The cards list view is made up of:
-	// - Header - ESS card
+	// - Header - ESS card (if applicable) + OpenCamperCore heating card
 	// - Per-device Control Cards for EVCS, Generators, Inverter/chargers
-	// - Footer - OpenCamperCore heating card
 	BaseListView {
 		id: cardsView
 
@@ -45,14 +44,28 @@ Page {
 		highlightMoveDuration: -1
 
 		header: ListItemLoader {
-			active: systemType.value === "ESS" || systemType.value === "Hub-4"
-			sourceComponent: FocusScope {
-				width: essCard.width + cardsView.spacing
-				height: essCard.height + cardsView.spacing
-				focus: true
+			id: headerLoader
 
-				ESSCard {
-					id: essCard
+			width: root.cardWidth
+			height: implicitHeight
+
+			sourceComponent: Column {
+				spacing: cardsView.spacing
+				width: parent.width
+
+				ListItemLoader {
+					id: essCardLoader
+					width: parent.width
+					height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
+					active: systemType.value === "ESS" || systemType.value === "Hub-4"
+					sourceComponent: ESSCard {
+						width: root.cardWidth
+						height: parent.height
+					}
+				}
+
+				HeatingCard {
+					id: heatingCard
 					width: root.cardWidth
 					height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
 				}
@@ -61,18 +74,6 @@ Page {
 			VeQuickItem {
 				id: systemType
 				uid: Global.system.serviceUid + "/SystemType"
-			}
-		}
-
-		footer: ListItemLoader {
-			id: heatingCardLoader
-
-			width: root.cardWidth
-			height: Theme.screenSize === Theme.Portrait ? implicitHeight : cardsView.height
-
-			sourceComponent: HeatingCard {
-				width: root.cardWidth
-				height: parent.height
 			}
 		}
 
@@ -161,7 +162,7 @@ Page {
 			leftMargin: Theme.geometry_page_content_horizontalMargin
 			rightMargin: Theme.geometry_page_content_horizontalMargin
 		}
-		active: cardsView.count === 0 && !(cardsView.headerItem?.active ?? false) && !cardsView.footerItem
+		active: cardsView.count === 0 && !(cardsView.headerItem?.active ?? false)
 		sourceComponent: EmptyPageItem {
 			//% "Controls"
 			titleText: qsTrId("controlcards_empty_title")

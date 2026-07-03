@@ -198,7 +198,8 @@ if [[ -n "${HOST_LIST}" ]]; then
 
         # Stop service on the GX device
         echo -n "Stopping service on the GX device..."
-        ssh root@${HOST} "svc -d /service/start-gui"
+        ssh root@${HOST} "svc -d /service/start-gui; killall venus-gui-v2 2>/dev/null || true"
+        sleep 1
         echo " done."
 
         # Upload the files to the GX device

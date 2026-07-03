@@ -3,8 +3,6 @@
 */
 
 import QtQuick
-import QtQuick.Effects as Effects
-import QtQuick.Controls.impl as CP
 import Victron.VenusOS
 
 FocusScope {

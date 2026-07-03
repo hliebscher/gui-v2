@@ -9,9 +9,8 @@ import Victron.VenusOS
 ControlCard {
 	id: root
 
-	property string serviceUid: BackendConnection.type === BackendConnection.MqttSource
-			? "mqtt/heating.occ"
-			: "dbus/com.victronenergy.heating.occ"
+	property string serviceUid: BackendConnection.serviceUidFromName(
+			"com.victronenergy.heating.occ", 100)
 
 	implicitHeight: openButton.y + openButton.height + Theme.geometry_controlCard_contentMargins
 	icon.source: "qrc:/images/heating.svg"

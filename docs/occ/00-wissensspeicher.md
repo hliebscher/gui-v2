@@ -121,6 +121,10 @@ Enthält GX-Build + WASM-Upload. Nach Deploy: GUI auf GX neu laden (vmrlogger-Re
 | Bridge crasht sofort | paho-mqtt 2.x auf Venus OS | `mqtt.Client(CallbackAPIVersion.VERSION1, …)` |
 | D-Bus „no such name“ | Service startet neu (Crash-Loop) | Logs / manuell `python3 dbus-mqtt-occ.py` |
 | Nur `---` in UI | Bridge nicht installiert oder MQTT offline | Deploy + `svstat`, MQTT prüfen |
+| GX-Upload scheitert (`scp: dest open … Failure`) | `venus-gui-v2` noch von GUI-Prozess geöffnet | `build-gx.sh` stoppt jetzt mit `killall`; sonst manuell |
+| HeatingPage leer (nur Überschriften) | `Repeater` direkt in `VisibleItemModel` | Slider in `SettingsColumn { Repeater { … } }` wrappen |
+| Browser zeigt alte GUI | WASM-Cache / nur WASM aktualisiert, native nicht | Hard-Refresh; `./scripts/build-gx.sh -H …` prüfen (Upload-OK?) |
+| WASM ohne Heizungsdaten | Falsche MQTT-UID (`mqtt/heating.occ`) | `BackendConnection.serviceUidFromName("com.victronenergy.heating.occ", 100)` |
 
 ---
 

@@ -9,9 +9,9 @@ import Victron.VenusOS
 Page {
 	id: root
 
-	readonly property string serviceUid: BackendConnection.type === BackendConnection.MqttSource
-			? "mqtt/heating.occ"
-			: "dbus/com.victronenergy.heating.occ"
+	// DeviceInstance 100 — must match services/dbus-mqtt-occ/config.ini
+	readonly property string serviceUid: BackendConnection.serviceUidFromName(
+			"com.victronenergy.heating.occ", 100)
 
 	readonly property real heatingMin: 5.0
 	readonly property real heatingMax: 35.0
@@ -42,26 +42,27 @@ Page {
 				text: qsTrId("occ_heating_zones_header")
 			}
 
-			Repeater {
-				model: zoneCount.valid ? zoneCount.value : 3
+			SettingsColumn {
+				width: parent ? parent.width : 0
 
-				OccSetpointSliderRow {
-					required property int index
-					readonly property int zoneId: index + 1
-					readonly property string zonePrefix: root.serviceUid + "/Zone/" + zoneId
+				Repeater {
+					model: zoneCount.valid ? zoneCount.value : 3
 
-					width: ListView.view ? ListView.view.width : implicitWidth
-					nameUid: zonePrefix + "/Name"
-					defaultTitle: index < root.defaultZoneNames.length
-							? root.defaultZoneNames[index]
-							: ("Zone " + zoneId)
-					setpointUid: zonePrefix + "/Setpoint"
-					temperatureUid: zonePrefix + "/Temperature"
-					stateUid: zonePrefix + "/State"
-					stateHeatingValue: 1
-					from: root.heatingMin
-					to: root.heatingMax
-					stepSize: 0.5
+					ListSlider {
+						required property int index
+						readonly property int zoneId: index + 1
+						readonly property string zonePrefix: root.serviceUid + "/Zone/" + zoneId
+
+						width: parent.width
+						text: index < root.defaultZoneNames.length
+								? root.defaultZoneNames[index]
+								: ("Zone " + zoneId)
+						dataItem.uid: zonePrefix + "/Setpoint"
+						writeAccessLevel: VenusOS.User_AccessType_User
+						from: root.heatingMin
+						to: root.heatingMax
+						stepSize: 0.5
+					}
 				}
 			}
 
@@ -71,21 +72,46 @@ Page {
 				preferredVisible: climateCount.valid ? climateCount.value > 0 : true
 			}
 
-			Repeater {
-				model: climateCount.valid ? climateCount.value : 2
+			SettingsColumn {
+				width: parent ? parent.width : 0
+				preferredVisible: climateCount.valid ? climateCount.value > 0 : true
 
-				OccClimateUnitBlock {
-					required property int index
-					readonly property int climateId: index + 1
+				Repeater {
+					model: climateCount.valid ? climateCount.value : 2
 
-					width: ListView.view ? ListView.view.width : implicitWidth
-					serviceUid: root.serviceUid
-					climateId: climateId
-					from: root.climateMin
-					to: root.climateMax
-					defaultTitle: index < root.defaultClimateNames.length
-							? root.defaultClimateNames[index]
-							: ("Klima " + climateId)
+					SettingsColumn {
+						required property int index
+						readonly property int climateId: index + 1
+						readonly property string climatePrefix: root.serviceUid + "/Climate/" + climateId
+
+						width: parent.width
+
+						ListSlider {
+							width: parent.width
+							text: index < root.defaultClimateNames.length
+									? root.defaultClimateNames[index]
+									: ("Klima " + climateId)
+							dataItem.uid: climatePrefix + "/Setpoint"
+							writeAccessLevel: VenusOS.User_AccessType_User
+							from: root.climateMin
+							to: root.climateMax
+							stepSize: 0.5
+						}
+
+						ListRadioButtonGroup {
+							width: parent.width
+							//% "Climate mode"
+							text: qsTrId("occ_climate_mode")
+							dataItem.uid: climatePrefix + "/Mode"
+							writeAccessLevel: VenusOS.User_AccessType_User
+							optionModel: [
+								{ display: CommonWords.off, value: 0 },
+								{ display: qsTrId("occ_climate_cool"), value: 1 },
+								{ display: qsTrId("occ_climate_heat"), value: 2 },
+								{ display: qsTrId("occ_climate_auto"), value: 3 }
+							]
+						}
+					}
 				}
 			}
 		}

@@ -6,6 +6,8 @@
 import QtQuick
 import Victron.VenusOS
 
+// TODO, ideally make a C++ Column-based type that is a focus scope, instead of making a QML type here
+// and redirecting the children using a default property alias.
 FocusScope {
 	id: root
 

@@ -1,0 +1,1119 @@
+[0;36m>>>[0m Gate A: WASM-Build...
+Running on Ubuntu 24.04
+[1;33mWSL detected: using /tmp for build files to avoid clock skew issues on DrvFs mounts[0m
+Changed to parent directory: /home/hliebscher/github/gui-v2
+WSL detected: using /tmp/victronenergy/gui-v2/build-wasm to avoid clock skew
+Setting up EMSDK environment (suppress these messages with EMSDK_QUIET=1)
+Adding directories to PATH:
+PATH += /opt/venus/build-gx-hostedtoolcache/emsdk
+PATH += /opt/venus/build-gx-hostedtoolcache/emsdk/upstream/emscripten
+PATH += /opt/venus/build-gx-hostedtoolcache/emsdk/node/22.16.0_64bit/bin
+
+Setting environment variables:
+PATH = /opt/venus/build-gx-hostedtoolcache/emsdk:/opt/venus/build-gx-hostedtoolcache/emsdk/upstream/emscripten:/opt/venus/build-gx-hostedtoolcache/emsdk/node/22.16.0_64bit/bin:/opt/venus/build-gx-hostedtoolcache/Qt/Tools/CMake/bin:/home/hliebscher/.local/bin:/home/hliebscher/bin:/home/hliebscher/.cursor-server/bin/042b3c1a4c53f2c3808067f519fbfc67b72cad80/node_modules/@vscode/ripgrep/bin:/home/hliebscher/.cursor-server/bin/042b3c1a4c53f2c3808067f519fbfc67b72cad80/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/hlieb/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/hlieb/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/hlieb/AppData/Local/Programs/cursor/resources/app/bin:/snap/bin
+EMSDK = /opt/venus/build-gx-hostedtoolcache/emsdk
+EMSDK_NODE = /opt/venus/build-gx-hostedtoolcache/emsdk/node/22.16.0_64bit/bin/node
+Cleaning build directory...
+Creating build directory...
+
+
+[33mConfiguring project with CMake...[0m
+
+
+Removing '-g' debug flag set by /opt/venus/dunfell-arm-cortexa7hf-neon-vfpv4/environment-setup-cortexa7hf-neon-vfpv4-ve-linux-gnueabi
+new CMAKE_CXX_FLAGS:  
+-- Using Qt bundled ZLIB.
+-- Found WrapZLIB: TRUE (found version "6.8.3")
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE
+-- Using Qt bundled PCRE2.
+-- Found WrapPCRE2: TRUE (found version "6.8.3")
+-- Found GLESv2: ON
+-- Performing Test HAVE_EGL
+-- Performing Test HAVE_EGL - Success
+-- Found EGL: /opt/venus/build-gx-hostedtoolcache/emsdk/upstream/emscripten/cache/sysroot/include (found version "1.5")
+-- Using Qt bundled PNG.
+-- Found WrapPNG: TRUE (found version "6.8.3")
+-- Using Qt bundled Harfbuzz.
+-- Found WrapHarfbuzz: TRUE (found version "6.8.3")
+-- Using Qt bundled Freetype.
+-- Found WrapFreetype: TRUE (found version "6.8.3")
+-- Using Qt bundled Jpeg.
+-- Found WrapJpeg: TRUE (found version "6.8.3")
+-- Created custom qt6_add_shaders function
+Building VenusOS for Emscripten
+Host system architecture: x86_64
+CMAKE_CXX_FLAGS: 
+CMAKE_C_FLAGS: 
+Disabling cache generation for faster builds
+-- Found Python3: /opt/venus/python/bin/python3.12 (found version "3.12.3") found components: Interpreter
+-- Generating expected translation catalogue filename for ts code: af...
+-- Generating expected translation catalogue filename for ts code: ar...
+-- Generating expected translation catalogue filename for ts code: cs...
+-- Generating expected translation catalogue filename for ts code: da...
+-- Generating expected translation catalogue filename for ts code: de...
+-- Generating expected translation catalogue filename for ts code: es...
+-- Generating expected translation catalogue filename for ts code: fr...
+-- Generating expected translation catalogue filename for ts code: it...
+-- Generating expected translation catalogue filename for ts code: ja...
+-- Generating expected translation catalogue filename for ts code: nl...
+-- Generating expected translation catalogue filename for ts code: pl...
+-- Generating expected translation catalogue filename for ts code: pt...
+-- Generating expected translation catalogue filename for ts code: ro...
+-- Generating expected translation catalogue filename for ts code: ru...
+-- Generating expected translation catalogue filename for ts code: sv...
+-- Generating expected translation catalogue filename for ts code: th...
+-- Generating expected translation catalogue filename for ts code: tr...
+-- Generating expected translation catalogue filename for ts code: uk...
+-- Generating expected translation catalogue filename for ts code: zh_CN...
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_af.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_ar.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_cs.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_da.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_de.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_es.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_fr.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_it.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_ja.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_nl.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_pl.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_pt.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_ro.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_ru.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_sv.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_th.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_tr.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_uk.qm
+-- Setting translation catalogue properties and resource alias for: venus-gui-v2_zh_CN.qm
+qmldir file not found at "/tmp/victronenergy/gui-v2/build-wasm/Victron/VenusOS"
+/home/hliebscher/github/gui-v2/examples/DeviceListExample/DeviceListExample_ComponentError.qml:10:Expected a qualified name id
+qmldir file not found at "/tmp/victronenergy/gui-v2/build-wasm/Victron/Mock"
+qmldir file not found at "/tmp/victronenergy/gui-v2/build-wasm/Victron/Gauges"
+qmldir file not found at "/tmp/victronenergy/gui-v2/build-wasm/Victron/Boat"
+qmldir file not found at "/tmp/victronenergy/gui-v2/build-wasm/Victron/VenusOS/Shaders"
+qmldir file not found at "/tmp/victronenergy/gui-v2/build-wasm/Victron/UiTest"
+qmldir file not found at "/opt/venus/build-gx-hostedtoolcache/Qt/6.8.3/wasm_singlethread/qml/Qt"
+-- Configuring done (9.0s)
+-- Generating done (0.6s)
+-- Build files have been written to: /tmp/victronenergy/gui-v2/build-wasm
+
+
+[33mBuilding project with CMake...[0m
+
+
+[  0%] Running rcc pass 1 for resource VictronVenusOS_large_resources
+[  0%] Generating themeobjects.h
+[  0%] Copying VictronVenusOS qml resources into build dir
+[  0%] Copying VictronVenusOS qml sources into build dir
+[  0%] Built target VictronVenusOS_copy_res
+Generating theme file /home/hliebscher/github/gui-v2/src/themeobjects.h from theme directory /home/hliebscher/github/gui-v2/themes/
+[  0%] Building CXX object CMakeFiles/VictronVenusOS_resources_1.dir/.qt/rcc/qrc_qmake_Victron_VenusOS_init.cpp.o
+[  0%] Built target theme_parser
+[  0%] Built target VictronVenusOSplugin_autogen_timestamp_deps
+[  1%] Building CXX object CMakeFiles/VictronVenusOS_resources_2.dir/.qt/rcc/qrc_VictronVenusOS_raw_qml_0_init.cpp.o
+[  1%] Building CXX object CMakeFiles/VictronVenusOS_VictronVenusOS_large_resources_obj.dir/.qt/rcc/qrc_VictronVenusOS_large_resources_tmp.cpp.o
+[  1%] Built target VictronVenusOS_VictronVenusOS_large_resources_obj
+[  1%] Building CXX object CMakeFiles/VictronVenusOS_resources_3.dir/.qt/rcc/qrc_VictronVenusOS_raw_qml_0_extra_qmldirs_init.cpp.o
+[  1%] Built target VictronVenusOS_resources_1
+[  1%] Built target VictronVenusOS_resources_2
+[  2%] Copying VictronVenusOSShaders qml resources into build dir
+[  2%] Built target VictronVenusOSShaders_copy_res
+[  2%] Built target VictronVenusOS_copy_qml
+[  2%] Built target VictronVenusOSplugin_init_autogen_timestamp_deps
+[  2%] Copying VictronVenusOSShaders qml sources into build dir
+[  2%] Building CXX object CMakeFiles/VictronVenusOSShaders_resources_1.dir/.qt/rcc/qrc_qmake_Victron_VenusOS_Shaders_init.cpp.o
+[  2%] Built target VictronVenusOSShaders_copy_qml
+[  2%] Built target VictronVenusOSShadersplugin_autogen_timestamp_deps
+[  2%] Building CXX object CMakeFiles/VictronVenusOSShaders_resources_2.dir/.qt/rcc/qrc_VictronVenusOSShaders_raw_qml_0_init.cpp.o
+[  2%] Building CXX object CMakeFiles/VictronVenusOSShaders_resources_3.dir/.qt/rcc/qrc_VictronVenusOSShaders_raw_qml_0_extra_qmldirs_init.cpp.o
+[  2%] Built target VictronVenusOS_resources_3
+[  2%] Building CXX object CMakeFiles/VictronVenusOSShaders_resources_4.dir/.qt/rcc/qrc_VictronVenusOSShaders_resources_init.cpp.o
+[  2%] Built target VictronVenusOSShaders_resources_2
+[  2%] Built target VictronVenusOSShaders_resources_3
+[  2%] Built target VictronVenusOSShadersplugin_init_autogen_timestamp_deps
+[  3%] Copying VictronGauges qml resources into build dir
+[  3%] Copying VictronGauges qml sources into build dir
+[  3%] Built target VictronGauges_copy_qml
+[  3%] Built target VictronGauges_copy_res
+[  3%] Building CXX object CMakeFiles/VictronGauges_resources_1.dir/.qt/rcc/qrc_qmake_Victron_Gauges_init.cpp.o
+[  3%] Built target VictronGaugesplugin_autogen_timestamp_deps
+[  3%] Built target VictronVenusOSShaders_resources_1
+[  3%] Building CXX object CMakeFiles/VictronGauges_resources_2.dir/.qt/rcc/qrc_VictronGauges_raw_qml_0_init.cpp.o
+[  3%] Building CXX object CMakeFiles/VictronGauges_resources_3.dir/.qt/rcc/qrc_VictronGauges_raw_qml_0_extra_qmldirs_init.cpp.o
+[  3%] Built target VictronVenusOSShaders_resources_4
+[  3%] Built target VictronGaugesplugin_init_autogen_timestamp_deps
+[  3%] Running rcc pass 1 for resource VictronBoat_large_resources
+[  3%] Building CXX object CMakeFiles/VictronBoat_VictronBoat_large_resources_obj.dir/.qt/rcc/qrc_VictronBoat_large_resources_tmp.cpp.o
+[  3%] Built target VictronGauges_resources_1
+[  3%] Copying VictronBoat qml sources into build dir
+[  3%] Built target VictronBoat_VictronBoat_large_resources_obj
+[  3%] Built target VictronBoat_copy_qml
+[  4%] Copying VictronBoat qml resources into build dir
+[  4%] Built target VictronGauges_resources_2
+[  4%] Building CXX object CMakeFiles/VictronBoat_resources_1.dir/.qt/rcc/qrc_qmake_Victron_Boat_init.cpp.o
+[  4%] Built target VictronBoat_copy_res
+[  4%] Built target VictronBoatplugin_autogen_timestamp_deps
+[  4%] Building CXX object CMakeFiles/VictronBoat_resources_2.dir/.qt/rcc/qrc_VictronBoat_raw_qml_0_init.cpp.o
+[  4%] Built target VictronGauges_resources_3
+[  4%] Built target VictronBoatplugin_init_autogen_timestamp_deps
+[  4%] Running rcc pass 1 for resource VictronMock_resources
+[  4%] Copying VictronMock qml sources into build dir
+[  4%] Built target VictronMock_copy_qml
+[  4%] Copying VictronMock qml resources into build dir
+[  4%] Built target VictronMock_copy_res
+[  4%] Building CXX object CMakeFiles/VictronMock_resources_1.dir/.qt/rcc/qrc_qmake_Victron_Mock_init.cpp.o
+[  5%] Building CXX object CMakeFiles/VictronMock_VictronMock_resources_obj.dir/.qt/rcc/qrc_VictronMock_resources_tmp.cpp.o
+[  5%] Built target VictronMock_VictronMock_resources_obj
+[  5%] Built target VictronMockplugin_autogen_timestamp_deps
+[  6%] Building CXX object CMakeFiles/VictronMock_resources_2.dir/.qt/rcc/qrc_VictronMock_raw_qml_0_init.cpp.o
+[  6%] Built target VictronBoat_resources_1
+[  6%] Building CXX object CMakeFiles/VictronMock_resources_3.dir/.qt/rcc/qrc_VictronMock_raw_qml_0_extra_qmldirs_init.cpp.o
+[  6%] Built target VictronBoat_resources_2
+[  6%] Built target VictronMockplugin_init_autogen_timestamp_deps
+[  6%] Running rcc pass 1 for resource VictronUiTest_resources
+[  6%] Building CXX object CMakeFiles/VictronUiTest_VictronUiTest_resources_obj.dir/.qt/rcc/qrc_VictronUiTest_resources_tmp.cpp.o
+[  6%] Built target VictronMock_resources_1
+[  6%] Copying VictronUiTest qml sources into build dir
+[  6%] Built target VictronUiTest_copy_qml
+[  6%] Copying VictronUiTest qml resources into build dir
+[  6%] Built target VictronUiTest_copy_res
+[  6%] Building CXX object CMakeFiles/VictronUiTest_resources_1.dir/.qt/rcc/qrc_qmake_Victron_UiTest_init.cpp.o
+[  6%] Built target VictronUiTest_VictronUiTest_resources_obj
+[  6%] Built target VictronUiTestplugin_autogen_timestamp_deps
+[  6%] Building CXX object CMakeFiles/VictronUiTest_resources_2.dir/.qt/rcc/qrc_VictronUiTest_raw_qml_0_init.cpp.o
+[  6%] Built target VictronMock_resources_2
+[  6%] Building CXX object CMakeFiles/VictronUiTest_resources_3.dir/.qt/rcc/qrc_VictronUiTest_raw_qml_0_extra_qmldirs_init.cpp.o
+[  6%] Built target VictronMock_resources_3
+[  6%] Built target VictronUiTestplugin_init_autogen_timestamp_deps
+[  6%] Built target qzxing_autogen_timestamp_deps
+[  6%] Copying venus-gui-v2 qml sources into build dir
+[  6%] Built target venus-gui-v2_copy_qml
+[  6%] Copying venus-gui-v2 qml resources into build dir
+[  6%] Built target venus-gui-v2_copy_res
+[  6%] Built target VictronUiTest_resources_1
+[  6%] Built target generate_translation_sources_file
+[  6%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_zh_CN.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_zh_CN.ts
+[  6%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_en.ts
+[  6%] Running rcc pass 2 for resource VictronVenusOS_large_resources
+[  6%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_af.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_af.ts
+[  6%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_ar.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ar.ts
+[  6%] Built target VictronUiTest_resources_2
+[  6%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_cs.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_cs.ts
+[  6%] Automatic MOC and UIC for target VictronVenusOSplugin
+[  6%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_da.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_da.ts
+[  8%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_de.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_de.ts
+[  8%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_es.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_es.ts
+[  8%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_fr.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_fr.ts
+[  8%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_it.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_it.ts
+[  8%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_ja.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ja.ts
+[  8%] Built target VictronUiTest_resources_3
+[  9%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_nl.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_nl.ts
+[  9%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_pl.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_pl.ts
+[  9%] Automatic MOC and UIC for target VictronVenusOSplugin_init
+[  9%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_pt.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_pt.ts
+[  9%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_ro.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ro.ts
+[  9%] Built target VictronVenusOS_VictronVenusOS_large_resources_pass2
+[  9%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_ru.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ru.ts
+[ 10%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_sv.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_sv.ts
+[ 10%] Built target VictronVenusOSShaders_autogen_timestamp_deps
+[ 10%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_th.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_th.ts
+[ 10%] Automatic MOC and UIC for target VictronVenusOSShadersplugin
+[ 10%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_tr.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_tr.ts
+[ 10%] copying: /home/hliebscher/github/gui-v2/i18n/venus-gui-v2_uk.ts to /tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_uk.ts
+[ 10%] Running lupdate and lrelease for venus-gui-v2_zh_CN.ts
+[ 10%] Built target VictronVenusOSplugin_init_autogen
+[ 10%] Automatic MOC and UIC for target VictronVenusOSShadersplugin_init
+[ 10%] Built target VictronVenusOSShadersplugin_init_autogen
+[ 10%] Built target VictronGauges_autogen_timestamp_deps
+[ 10%] Automatic MOC and UIC for target VictronGaugesplugin
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_zh_CN.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+[ 10%] Built target VictronVenusOSplugin_autogen
+[ 10%] Built target VictronVenusOSShadersplugin_autogen
+[ 10%] Automatic MOC and UIC for target VictronGaugesplugin_init
+[ 10%] Running rcc pass 2 for resource VictronBoat_large_resources
+[ 10%] Built target VictronBoat_VictronBoat_large_resources_pass2
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_zh_CN.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 10%] Running lupdate and lrelease for venus-gui-v2_en.ts
+[ 10%] Automatic MOC and UIC for target VictronBoatplugin
+[ 10%] Built target VictronGaugesplugin_autogen
+[ 10%] Running lupdate and lrelease for venus-gui-v2_af.ts
+[ 10%] Built target VictronGaugesplugin_init_autogen
+[ 10%] Running lupdate and lrelease for venus-gui-v2_ar.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_af.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating 'i18n/venus-gui-v2_ar.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_af.qm'...
+[ 10%] Built target VictronBoatplugin_autogen
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (1965 finished and 445 unfinished)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ar.qm'...
+[ 10%] Running lupdate and lrelease for venus-gui-v2_cs.ts
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 10%] Running rcc pass 2 for resource VictronMock_resources
+[ 11%] Automatic MOC and UIC for target VictronBoatplugin_init
+[ 11%] Built target VictronMock_VictronMock_resources_pass2
+Updating 'i18n/venus-gui-v2_en.ts'...
+    Found 2927 source text(s) (400 new and 2527 already existing)
+    Removed 116 obsolete entries
+[ 11%] Automatic MOC and UIC for target VictronMockplugin
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_en.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (0 finished and 2410 unfinished)
+[ 11%] Automatic MOC and UIC for target VictronMockplugin_init
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+[ 11%] Built target VictronBoatplugin_init_autogen
+[ 11%] Running rcc pass 2 for resource VictronUiTest_resources
+[ 11%] Built target VictronUiTest_VictronUiTest_resources_pass2
+Updating 'i18n/venus-gui-v2_cs.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+[ 11%] Automatic MOC and UIC for target VictronUiTestplugin
+[ 11%] Built target VictronMockplugin_init_autogen
+[ 11%] Automatic MOC and UIC for target VictronUiTestplugin_init
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_cs.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 11%] Running lupdate and lrelease for venus-gui-v2_da.ts
+[ 11%] Built target VictronMockplugin_autogen
+[ 12%] Running lupdate and lrelease for venus-gui-v2_de.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+[ 12%] Built target VictronUiTestplugin_init_autogen
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+[ 12%] Running lupdate and lrelease for venus-gui-v2_es.ts
+[ 12%] Built target VictronUiTestplugin_autogen
+[ 12%] Running lupdate and lrelease for venus-gui-v2_fr.ts
+Updating 'i18n/venus-gui-v2_de.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating 'i18n/venus-gui-v2_da.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_de.qm'...
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_da.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2069 finished and 341 unfinished)
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 12%] Running lupdate and lrelease for venus-gui-v2_it.ts
+[ 13%] Running lupdate and lrelease for venus-gui-v2_ja.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_fr.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating 'i18n/venus-gui-v2_es.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_es.qm'...
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_fr.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 13%] Running lupdate and lrelease for venus-gui-v2_nl.ts
+[ 13%] Automatic MOC and UIC for target qzxing
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_it.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_it.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 13%] Running lupdate and lrelease for venus-gui-v2_pl.ts
+Updating 'i18n/venus-gui-v2_ja.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ja.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 13%] Running lupdate and lrelease for venus-gui-v2_pt.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_nl.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_nl.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 13%] Running lupdate and lrelease for venus-gui-v2_ro.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_pl.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating 'i18n/venus-gui-v2_pt.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_pl.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 13%] Running lupdate and lrelease for venus-gui-v2_ru.ts
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_pt.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 14%] Running lupdate and lrelease for venus-gui-v2_sv.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+[ 14%] Built target qzxing_autogen
+[ 14%] Running lupdate and lrelease for venus-gui-v2_th.ts
+Updating 'i18n/venus-gui-v2_ro.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ro.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 14%] Running lupdate and lrelease for venus-gui-v2_tr.ts
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+Updating 'i18n/venus-gui-v2_ru.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating 'i18n/venus-gui-v2_sv.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_ru.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_sv.qm'...
+[ 14%] Built target VictronVenusOS_autogen_timestamp_deps
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 14%] Running AUTOMOC file extraction for target VictronVenusOSplugin_init
+Updating 'i18n/venus-gui-v2_th.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+[ 14%] Automatic MOC and UIC for target VictronVenusOSShaders
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+[ 16%] Running moc --collect-json for target VictronVenusOSplugin_init
+[ 16%] Building CXX object CMakeFiles/VictronVenusOSplugin_init.dir/VictronVenusOSplugin_init_autogen/mocs_compilation.cpp.o
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_th.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 16%] Building CXX object CMakeFiles/VictronVenusOSplugin_init.dir/VictronVenusOSplugin_init.cpp.o
+Updating 'i18n/venus-gui-v2_tr.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_tr.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2050 finished and 360 unfinished)
+[ 16%] Running lupdate and lrelease for venus-gui-v2_uk.ts
+[ 16%] Built target VictronVenusOSShaders_autogen
+[ 16%] Running AUTOMOC file extraction for target VictronVenusOSShadersplugin_init
+[ 16%] Automatic MOC and UIC for target VictronGauges
+[ 16%] Running moc --collect-json for target VictronVenusOSShadersplugin_init
+[ 17%] Building CXX object CMakeFiles/VictronVenusOSShadersplugin_init.dir/VictronVenusOSShadersplugin_init_autogen/mocs_compilation.cpp.o
+lupdate warning: Message with id 'occ_status_offline' has no source.
+lupdate warning: Message with id 'occ_status_standby' has no source.
+lupdate warning: Message with id 'occ_status_active' has no source.
+lupdate warning: Message with id 'occ_climate_cool' has no source.
+lupdate warning: Message with id 'occ_climate_heat' has no source.
+lupdate warning: Message with id 'occ_climate_auto' has no source.
+lupdate warning: Message with id 'occ_mode_manual' has no source.
+lupdate warning: Message with id 'occ_mode_auto' has no source.
+lupdate warning: Message with id 'occ_mode_off' has no source.
+lupdate warning: Message with id 'occ_state_heating' has no source.
+lupdate warning: Message with id 'occ_state_cooling' has no source.
+lupdate warning: Message with id 'occ_valve_open' has no source.
+lupdate warning: Message with id 'occ_valve_closed' has no source.
+lupdate warning: Message with id 'occ_climate_active' has no source.
+lupdate warning: Message with id 'occ_climate_idle' has no source.
+[ 17%] Built target VictronGauges_autogen
+[ 17%] Building CXX object CMakeFiles/VictronVenusOSShadersplugin_init.dir/VictronVenusOSShadersplugin_init.cpp.o
+[ 17%] Running AUTOMOC file extraction for target VictronGaugesplugin_init
+[ 17%] Running moc --collect-json for target VictronGaugesplugin_init
+[ 17%] Building CXX object CMakeFiles/VictronGaugesplugin_init.dir/VictronGaugesplugin_init_autogen/mocs_compilation.cpp.o
+Updating 'i18n/venus-gui-v2_uk.ts'...
+    Found 2927 source text(s) (82 new and 2845 already existing)
+    Same-text heuristic provided 12 translation(s)
+Updating '/tmp/victronenergy/gui-v2/build-wasm/i18n/venus-gui-v2_uk.qm'...
+Dropped 517 message(s) which had no ID.
+    Generated 2410 translation(s) (2049 finished and 361 unfinished)
+[ 17%] Running rcc pass 1 for resource venus-gui-v2_translations_resources
+[ 18%] Building CXX object CMakeFiles/VictronGaugesplugin_init.dir/VictronGaugesplugin_init.cpp.o
+[ 19%] Building CXX object CMakeFiles/venus-gui-v2_venus-gui-v2_translations_resources_obj.dir/.qt/rcc/qrc_venus-gui-v2_translations_resources_tmp.cpp.o
+[ 20%] Built target venus-gui-v2_venus-gui-v2_translations_resources_obj
+[ 20%] Built target VictronBoat_autogen_timestamp_deps
+[ 20%] Running AUTOMOC file extraction for target VictronBoatplugin_init
+[ 20%] Running moc --collect-json for target VictronBoatplugin_init
+[ 20%] Building CXX object CMakeFiles/VictronBoatplugin_init.dir/VictronBoatplugin_init_autogen/mocs_compilation.cpp.o
+[ 20%] Building CXX object CMakeFiles/VictronBoatplugin_init.dir/VictronBoatplugin_init.cpp.o
+[ 20%] Built target VictronVenusOSplugin_init
+[ 20%] Built target VictronGaugesplugin_init
+[ 20%] Built target VictronVenusOSShadersplugin_init
+[ 20%] Built target VictronMock_autogen_timestamp_deps
+[ 20%] Running AUTOMOC file extraction for target VictronMockplugin_init
+[ 20%] Built target VictronUiTest_autogen_timestamp_deps
+[ 21%] Running AUTOMOC file extraction for target VictronUiTestplugin_init
+[ 22%] Running moc --collect-json for target VictronMockplugin_init
+[ 22%] Running moc --collect-json for target VictronUiTestplugin_init
+[ 22%] Building CXX object CMakeFiles/VictronMockplugin_init.dir/VictronMockplugin_init_autogen/mocs_compilation.cpp.o
+[ 22%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/qzxing_autogen/mocs_compilation.cpp.o
+[ 22%] Building CXX object CMakeFiles/VictronUiTestplugin_init.dir/VictronUiTestplugin_init_autogen/mocs_compilation.cpp.o
+[ 22%] Building CXX object CMakeFiles/VictronUiTestplugin_init.dir/VictronUiTestplugin_init.cpp.o
+[ 22%] Building CXX object CMakeFiles/VictronMockplugin_init.dir/VictronMockplugin_init.cpp.o
+[ 22%] Built target VictronBoatplugin_init
+[ 22%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/CameraImageWrapper.cpp.o
+[ 22%] Built target VictronUiTestplugin_init
+[ 22%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/ImageHandler.cpp.o
+[ 22%] Built target VictronMockplugin_init
+[ 24%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/QZXing.cpp.o
+[ 25%] Automatic MOC and UIC for target VictronVenusOS
+[ 26%] Running AUTOMOC file extraction for target VictronVenusOSShaders
+[ 26%] Running rcc for resource VictronVenusOSShaders_raw_qml_0
+[ 26%] Running rcc for resource VictronVenusOSShaders_raw_qml_0_extra_qmldirs
+[ 26%] Compiling shader components/shaders/presseffect.frag
+[ 27%] Running rcc for resource qmake_Victron_VenusOS_Shaders
+[ 27%] Running moc --collect-json for target VictronVenusOSShaders
+[ 27%] Running rcc for resource VictronVenusOSShaders_resources
+[ 27%] Generating meta_types/qt6victronvenusosshaders_minsizerel_metatypes.json
+[ 27%] Automatic QML type registration for target VictronVenusOSShaders
+[ 27%] Building CXX object CMakeFiles/VictronVenusOSShaders.dir/VictronVenusOSShaders_autogen/mocs_compilation.cpp.o
+[ 27%] Building CXX object CMakeFiles/VictronVenusOSShaders.dir/victronvenusosshaders_qmltyperegistrations.cpp.o
+[ 27%] Building CXX object CMakeFiles/VictronVenusOSShaders.dir/.qt/rcc/qrc_qmake_Victron_VenusOS_Shaders.cpp.o
+[ 27%] Building CXX object CMakeFiles/VictronVenusOSShaders.dir/.qt/rcc/qrc_VictronVenusOSShaders_raw_qml_0.cpp.o
+[ 27%] Running AUTOMOC file extraction for target VictronGauges
+[ 27%] Running rcc for resource VictronGauges_raw_qml_0
+[ 28%] Running rcc for resource VictronGauges_raw_qml_0_extra_qmldirs
+[ 28%] Running rcc for resource qmake_Victron_Gauges
+[ 28%] Running moc --collect-json for target VictronGauges
+[ 28%] Generating meta_types/qt6victrongauges_minsizerel_metatypes.json
+[ 28%] Automatic QML type registration for target VictronGauges
+[ 29%] Building CXX object CMakeFiles/VictronVenusOSShaders.dir/.qt/rcc/qrc_VictronVenusOSShaders_raw_qml_0_extra_qmldirs.cpp.o
+[ 29%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/QZXingImageProvider.cpp.o
+[ 29%] Building CXX object CMakeFiles/VictronGauges.dir/VictronGauges_autogen/mocs_compilation.cpp.o
+[ 29%] Building CXX object CMakeFiles/VictronVenusOSShaders.dir/.qt/rcc/qrc_VictronVenusOSShaders_resources.cpp.o
+[ 29%] Building CXX object CMakeFiles/VictronGauges.dir/victrongauges_qmltyperegistrations.cpp.o
+[ 29%] Linking CXX static library libVictronVenusOSShaders.a
+[ 29%] Built target VictronVenusOSShaders
+[ 29%] Automatic MOC and UIC for target VictronBoat
+[ 29%] Built target VictronBoat_autogen
+[ 29%] Automatic MOC and UIC for target VictronMock
+[ 29%] Built target VictronMock_autogen
+[ 29%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/bigint/BigInteger.cc.o
+[ 29%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/bigint/BigIntegerAlgorithms.cc.o
+[ 29%] Building CXX object CMakeFiles/VictronGauges.dir/.qt/rcc/qrc_qmake_Victron_Gauges.cpp.o
+[ 31%] Automatic MOC and UIC for target VictronUiTest
+[ 31%] Built target VictronUiTest_autogen
+[ 31%] Building CXX object CMakeFiles/VictronVenusOSShadersplugin.dir/VictronVenusOSShadersplugin_autogen/mocs_compilation.cpp.o
+[ 32%] Building CXX object CMakeFiles/VictronVenusOSShadersplugin.dir/VictronVenusOSShadersplugin_Victron_VenusOS_ShadersPlugin.cpp.o
+[ 32%] Built target VictronVenusOS_autogen
+[ 32%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/bigint/BigIntegerUtils.cc.o
+[ 33%] Building CXX object CMakeFiles/VictronGauges.dir/.qt/rcc/qrc_VictronGauges_raw_qml_0.cpp.o
+[ 34%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/bigint/BigUnsigned.cc.o
+[ 34%] Building CXX object CMakeFiles/VictronGauges.dir/.qt/rcc/qrc_VictronGauges_raw_qml_0_extra_qmldirs.cpp.o
+[ 34%] Linking CXX static library libVictronGauges.a
+[ 34%] Running AUTOMOC file extraction for target VictronBoat
+[ 34%] Running rcc for resource VictronBoat_raw_qml_0
+[ 34%] Running rcc for resource qmake_Victron_Boat
+[ 34%] Running moc --collect-json for target VictronBoat
+[ 35%] Generating meta_types/qt6victronboat_minsizerel_metatypes.json
+[ 35%] Automatic QML type registration for target VictronBoat
+[ 35%] Built target VictronGauges
+[ 35%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/bigint/BigUnsignedInABase.cc.o
+[ 35%] Building CXX object CMakeFiles/VictronBoat.dir/VictronBoat_autogen/mocs_compilation.cpp.o
+[ 35%] Building CXX object CMakeFiles/VictronBoat.dir/victronboat_qmltyperegistrations.cpp.o
+[ 35%] Running AUTOMOC file extraction for target VictronMock
+[ 35%] Running rcc for resource VictronMock_raw_qml_0
+[ 36%] Running rcc for resource VictronMock_raw_qml_0_extra_qmldirs
+[ 36%] Running rcc for resource qmake_Victron_Mock
+[ 36%] Running moc --collect-json for target VictronMock
+[ 36%] Generating meta_types/qt6victronmock_minsizerel_metatypes.json
+[ 36%] Automatic QML type registration for target VictronMock
+[ 36%] Building CXX object CMakeFiles/VictronMock.dir/VictronMock_autogen/mocs_compilation.cpp.o
+[ 36%] Building CXX object CMakeFiles/VictronMock.dir/victronmock_qmltyperegistrations.cpp.o
+[ 36%] Linking CXX static library Victron/VenusOS/Shaders/libVictronVenusOSShadersplugin.a
+[ 36%] Built target VictronVenusOSShadersplugin
+[ 36%] Building CXX object CMakeFiles/VictronBoat.dir/.qt/rcc/qrc_qmake_Victron_Boat.cpp.o
+[ 36%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/BarcodeFormat.cpp.o
+[ 37%] Building CXX object CMakeFiles/VictronMock.dir/.qt/rcc/qrc_qmake_Victron_Mock.cpp.o
+[ 37%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/Binarizer.cpp.o
+[ 39%] Running AUTOMOC file extraction for target VictronUiTest
+[ 39%] Running rcc for resource VictronUiTest_raw_qml_0
+[ 39%] Running rcc for resource VictronUiTest_raw_qml_0_extra_qmldirs
+[ 39%] Running rcc for resource qmake_Victron_UiTest
+[ 40%] Running moc --collect-json for target VictronUiTest
+[ 40%] Generating meta_types/qt6victronuitest_minsizerel_metatypes.json
+[ 40%] Automatic QML type registration for target VictronUiTest
+[ 40%] Building CXX object CMakeFiles/VictronUiTest.dir/VictronUiTest_autogen/mocs_compilation.cpp.o
+[ 40%] Building CXX object CMakeFiles/VictronUiTest.dir/victronuitest_qmltyperegistrations.cpp.o
+[ 40%] Building CXX object CMakeFiles/VictronBoat.dir/.qt/rcc/qrc_VictronBoat_raw_qml_0.cpp.o
+[ 41%] Linking CXX static library libVictronBoat.a
+[ 41%] Built target VictronBoat
+[ 41%] Building CXX object CMakeFiles/VictronUiTest.dir/.qt/rcc/qrc_qmake_Victron_UiTest.cpp.o
+[ 41%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/BinaryBitmap.cpp.o
+[ 41%] Building CXX object CMakeFiles/VictronMock.dir/.qt/rcc/qrc_VictronMock_raw_qml_0.cpp.o
+[ 41%] Running AUTOMOC file extraction for target VictronVenusOS
+[ 41%] Running rcc for resource VictronVenusOS_raw_qml_0
+[ 41%] Building CXX object CMakeFiles/VictronMock.dir/.qt/rcc/qrc_VictronMock_raw_qml_0_extra_qmldirs.cpp.o
+[ 41%] Running rcc for resource VictronVenusOS_raw_qml_0_extra_qmldirs
+[ 42%] Running rcc for resource qmake_Victron_VenusOS
+[ 42%] Running moc --collect-json for target VictronVenusOS
+[ 42%] Linking CXX static library libVictronMock.a
+[ 42%] Generating meta_types/qt6victronvenusos_minsizerel_metatypes.json
+[ 42%] Automatic QML type registration for target VictronVenusOS
+[ 43%] Building CXX object CMakeFiles/VictronVenusOS.dir/VictronVenusOS_autogen/mocs_compilation.cpp.o
+[ 43%] Built target VictronMock
+[ 43%] Building CXX object CMakeFiles/VictronVenusOS.dir/victronvenusos_qmltyperegistrations.cpp.o
+[ 43%] Building CXX object CMakeFiles/VictronUiTest.dir/.qt/rcc/qrc_VictronUiTest_raw_qml_0.cpp.o
+[ 44%] Building CXX object CMakeFiles/VictronUiTest.dir/.qt/rcc/qrc_VictronUiTest_raw_qml_0_extra_qmldirs.cpp.o
+[ 44%] Linking CXX static library libVictronUiTest.a
+[ 44%] Built target VictronUiTest
+[ 45%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/ChecksumException.cpp.o
+[ 45%] Building CXX object CMakeFiles/VictronVenusOS.dir/.qt/rcc/qrc_qmake_Victron_VenusOS.cpp.o
+[ 45%] Building CXX object CMakeFiles/VictronGaugesplugin.dir/VictronGaugesplugin_autogen/mocs_compilation.cpp.o
+[ 45%] Building CXX object CMakeFiles/VictronGaugesplugin.dir/VictronGaugesplugin_Victron_GaugesPlugin.cpp.o
+[ 45%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/DecodeHints.cpp.o
+[ 47%] Linking CXX static library Victron/Gauges/libVictronGaugesplugin.a
+[ 47%] Built target VictronGaugesplugin
+[ 47%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/abstractlistitem.cpp.o
+[ 47%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/EncodeHint.cpp.o
+[ 47%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/Exception.cpp.o
+[ 47%] Building CXX object CMakeFiles/VictronBoatplugin.dir/VictronBoatplugin_autogen/mocs_compilation.cpp.o
+[ 47%] Building CXX object CMakeFiles/VictronBoatplugin.dir/VictronBoatplugin_Victron_BoatPlugin.cpp.o
+[ 47%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/FormatException.cpp.o
+[ 47%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/IllegalStateException.cpp.o
+[ 48%] Linking CXX static library Victron/Boat/libVictronBoatplugin.a
+[ 48%] Built target VictronBoatplugin
+[ 48%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/alldevicesmodel.cpp.o
+[ 49%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/InvertedLuminanceSource.cpp.o
+[ 49%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/LuminanceSource.cpp.o
+[ 49%] Building CXX object CMakeFiles/VictronMockplugin.dir/VictronMockplugin_autogen/mocs_compilation.cpp.o
+[ 49%] Building CXX object CMakeFiles/VictronMockplugin.dir/VictronMockplugin_Victron_MockPlugin.cpp.o
+[ 50%] Building CXX object CMakeFiles/VictronUiTestplugin.dir/VictronUiTestplugin_autogen/mocs_compilation.cpp.o
+[ 50%] Building CXX object CMakeFiles/VictronUiTestplugin.dir/VictronUiTestplugin_Victron_UiTestPlugin.cpp.o
+[ 50%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/MultiFormatReader.cpp.o
+[ 50%] Linking CXX static library Victron/Mock/libVictronMockplugin.a
+[ 50%] Built target VictronMockplugin
+[ 50%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/NotFoundException.cpp.o
+[ 50%] Linking CXX static library Victron/UiTest/libVictronUiTestplugin.a
+[ 51%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/allservicesmodel.cpp.o
+[ 51%] Built target VictronUiTestplugin
+[ 51%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/Reader.cpp.o
+[ 52%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/ReaderException.cpp.o
+[ 52%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/aggregatedevicemodel.cpp.o
+[ 52%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/aggregatetankmodel.cpp.o
+[ 52%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/Result.cpp.o
+[ 52%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/visibleitemmodel.cpp.o
+[ 52%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/ResultMetadata.cpp.o
+[ 52%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/ResultIO.cpp.o
+[ 52%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/ResultPoint.cpp.o
+[ 52%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/baseautotoggleswitch.cpp.o
+[ 52%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/basedevice.cpp.o
+[ 52%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/ResultPointCallback.cpp.o
+[ 54%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/WriterException.cpp.o
+[ 54%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/aztec/AztecDetectorResult.cpp.o
+[ 54%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/aztec/AztecReader.cpp.o
+[ 55%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/basedevicemodel.cpp.o
+[ 55%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/basetankdevice.cpp.o
+[ 55%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/basetankdevicemodel.cpp.o
+[ 55%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/aztec/decoder/AztecDecoder.cpp.o
+[ 55%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/aztec/detector/AztecDetector.cpp.o
+[ 56%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/BitArray.cpp.o
+[ 56%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/classandvrminstancemodel.cpp.o
+[ 56%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/colordimmerdata.cpp.o
+[ 57%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/dcmeterdevicemodel.cpp.o
+[ 57%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/BitArrayIO.cpp.o
+[ 57%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/BitMatrix.cpp.o
+[ 57%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/BitSource.cpp.o
+[ 57%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/CharacterSetECI.cpp.o
+[ 57%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/device.cpp.o
+[ 57%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/evchargerdevicemodel.cpp.o
+[ 57%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/evchargerstatusmodel.cpp.o
+[ 58%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/DecoderResult.cpp.o
+[ 58%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/filtereddevicemodel.cpp.o
+[ 58%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/DetectorResult.cpp.o
+[ 58%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/filteredservicemodel.cpp.o
+[ 58%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/GlobalHistogramBinarizer.cpp.o
+[ 58%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/GreyscaleLuminanceSource.cpp.o
+[ 58%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/GreyscaleRotatedLuminanceSource.cpp.o
+[ 59%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/guiplugins.cpp.o
+[ 59%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/runtimedevicemodel.cpp.o
+[ 59%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/theme.cpp.o
+[ 59%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/GridSampler.cpp.o
+[ 60%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/HybridBinarizer.cpp.o
+[ 60%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/backendconnection.cpp.o
+[ 60%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/language.cpp.o
+[ 60%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/IllegalArgumentException.cpp.o
+[ 62%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/logging.cpp.o
+[ 62%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/enums.cpp.o
+[ 62%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/PerspectiveTransform.cpp.o
+[ 62%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/Str.cpp.o
+[ 62%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/StringUtils.cpp.o
+[ 63%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/detector/MonochromeRectangleDetector.cpp.o
+[ 63%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/detector/WhiteRectangleDetector.cpp.o
+[ 63%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/fastutils.cpp.o
+[ 63%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/reedsolomon/GenericGF.cpp.o
+[ 63%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/reedsolomon/GenericGFPoly.cpp.o
+[ 63%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/notificationmodel.cpp.o
+[ 63%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/reedsolomon/ReedSolomonDecoder.cpp.o
+[ 64%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/reedsolomon/ReedSolomonEncoder.cpp.o
+[ 64%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/common/reedsolomon/ReedSolomonException.cpp.o
+[ 64%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/DataMatrixReader.cpp.o
+[ 64%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/notificationsortfilterproxymodel.cpp.o
+[ 64%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/DataMatrixVersion.cpp.o
+[ 65%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/clocktime.cpp.o
+[ 65%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/decoder/DataMatrixBitMatrixParser.cpp.o
+[ 65%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/decoder/DataMatrixDataBlock.cpp.o
+/home/hliebscher/github/gui-v2/src/clocktime.cpp:204:42: warning: 'fromSecsSinceEpoch' is deprecated: Pass QTimeZone instead of time-spec, offset [-Wdeprecated-declarations]
+  204 |         const QDateTime currentUtc = QDateTime::fromSecsSinceEpoch(secsSinceEpoch, Qt::UTC);
+      |                                                 ^
+/opt/venus/build-gx-hostedtoolcache/Qt/6.8.3/wasm_singlethread/include/QtCore/qdatetime.h:487:5: note: 'fromSecsSinceEpoch' has been explicitly marked deprecated here
+  487 |     QT_DEPRECATED_VERSION_X_6_9("Pass QTimeZone instead of time-spec, offset")
+      |     ^
+/opt/venus/build-gx-hostedtoolcache/Qt/6.8.3/wasm_singlethread/include/QtCore/qtdeprecationmarkers.h:179:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_9'
+  179 | # define QT_DEPRECATED_VERSION_X_6_9(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/opt/venus/build-gx-hostedtoolcache/Qt/6.8.3/wasm_singlethread/include/QtCore/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/opt/venus/build-gx-hostedtoolcache/Qt/6.8.3/wasm_singlethread/include/QtCore/qcompilerdetection.h:994:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+  994 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+1 warning generated.
+[ 66%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/decoder/DataMatrixDecodedBitStreamParser.cpp.o
+[ 66%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/cpuinfo.cpp.o
+[ 66%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/frameratemodel.cpp.o
+[ 66%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/decoder/DataMatrixDecoder.cpp.o
+[ 66%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/genericinput.cpp.o
+[ 66%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/detector/DataMatrixCornerPoint.cpp.o
+[ 66%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/detector/DataMatrixDetector.cpp.o
+[ 66%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/datamatrix/detector/DataMatrixDetectorException.cpp.o
+[ 66%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/iochannel.cpp.o
+[ 66%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/iochannelgroupmodel.cpp.o
+[ 67%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/iochannelproxymodel.cpp.o
+[ 68%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/multi/ByQuadrantReader.cpp.o
+[ 68%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/multi/GenericMultipleBarcodeReader.cpp.o
+[ 68%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/multi/MultipleBarcodeReader.cpp.o
+[ 68%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/multi/qrcode/QRCodeMultiReader.cpp.o
+[ 68%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/keyeventfilter.cpp.o
+[ 68%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/keynavigationhighlight.cpp.o
+[ 68%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/multi/qrcode/detector/MultiDetector.cpp.o
+[ 68%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/keynavigationhighlighthelper.cpp.o
+[ 68%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/multi/qrcode/detector/MultiFinderPatternFinder.cpp.o
+[ 68%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/mockmanager.cpp.o
+[ 70%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/phasemodel.cpp.o
+[ 71%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/UPCEReader.cpp.o
+[ 71%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/qmlobject.cpp.o
+[ 71%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/quantityinfo.cpp.o
+[ 71%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/UPCEANReader.cpp.o
+[ 71%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/quantityobject.cpp.o
+[ 71%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/quantityobjectmodel.cpp.o
+[ 71%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/UPCEANExtensionSupport.cpp.o
+[ 71%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/qrangemodel.cpp.o
+[ 71%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/UPCEANExtension2Support.cpp.o
+[ 72%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/uiconfig.cpp.o
+[ 72%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/UPCEANExtension5Support.cpp.o
+[ 72%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/uitest.cpp.o
+[ 72%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/uitestcase.cpp.o
+[ 73%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/UPCAReader.cpp.o
+[ 73%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/uiteststep.cpp.o
+[ 73%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/OneDResultPoint.cpp.o
+[ 73%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/OneDReader.cpp.o
+[ 73%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/MultiFormatUPCEANReader.cpp.o
+[ 73%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/units.cpp.o
+[ 74%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/screenblanker.cpp.o
+[ 74%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/MultiFormatOneDReader.cpp.o
+[ 74%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/solarinput.cpp.o
+[ 75%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/ITFReader.cpp.o
+[ 75%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/EAN13Reader.cpp.o
+[ 75%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/solarinputmodel.cpp.o
+[ 75%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/EAN8Reader.cpp.o
+[ 75%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/solaryieldmodel.cpp.o
+[ 75%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/EANManufacturerOrgSupport.cpp.o
+[ 75%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/Code128Reader.cpp.o
+[ 75%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/systemservicelistener.cpp.o
+[ 77%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/switchableoutput.cpp.o
+[ 77%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/Code39Reader.cpp.o
+[ 78%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/CodaBarReader.cpp.o
+[ 78%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/Code93Reader.cpp.o
+[ 78%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/AbstractRSSReader.cpp.o
+[ 78%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veqitemmockproducer.cpp.o
+[ 78%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/widgetconnectorpathupdater.cpp.o
+[ 78%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/alternator_error.cpp.o
+[ 78%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/DataCharacter.cpp.o
+[ 78%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/FinderPattern.cpp.o
+[ 78%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/bms_error.cpp.o
+[ 78%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/charger_error.cpp.o
+[ 79%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/genset_error.cpp.o
+[ 80%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/Pair.cpp.o
+[ 80%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/RSS14Reader.cpp.o
+[ 80%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/RSSUtils.cpp.o
+[ 80%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/unit_conversion.cpp.o
+[ 80%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/BitArrayBuilder.cpp.o
+[ 80%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/ExpandedPair.cpp.o
+[ 80%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/ExpandedRow.cpp.o
+[ 81%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/RSSExpandedReader.cpp.o
+[ 81%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder.cpp.o
+[ 81%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/vebus_error.cpp.o
+[ 81%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI01AndOtherAIs.cpp.o
+[ 81%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI01decoder.cpp.o
+[ 81%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitem.cpp.o
+[ 81%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI01weightDecoder.cpp.o
+[ 82%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI013x0x1xDecoder.cpp.o
+[ 82%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitem_child_model.cpp.o
+[ 82%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI013x0xDecoder.cpp.o
+[ 82%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI01320xDecoder.cpp.o
+[ 82%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI01392xDecoder.cpp.o
+[ 82%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI01393xDecoder.cpp.o
+[ 83%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AI013103decoder.cpp.o
+[ 85%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitem_loader.cpp.o
+[ 85%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/AnyAIDecoder.cpp.o
+[ 85%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitem_sort_table_model.cpp.o
+[ 85%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/BlockParsedResult.cpp.o
+[ 85%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/CurrentParsingState.cpp.o
+[ 85%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitem_table_model.cpp.o
+[ 85%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/DecodedChar.cpp.o
+[ 85%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitem_tree_model.cpp.o
+[ 85%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/DecodedInformation.cpp.o
+[ 86%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/DecodedNumeric.cpp.o
+[ 86%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/DecodedObject.cpp.o
+[ 86%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_quick_item.cpp.o
+[ 86%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/FieldParser.cpp.o
+[ 86%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder.cpp.o
+[ 87%] Building CXX object CMakeFiles/VictronVenusOS.dir/src/veutil/src/qt/ve_qitems_mqtt.cpp.o
+[ 87%] Building CXX object CMakeFiles/VictronVenusOS.dir/.qt/rcc/qrc_VictronVenusOS_raw_qml_0.cpp.o
+[ 87%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/PDF417Reader.cpp.o
+[ 87%] Building CXX object CMakeFiles/VictronVenusOS.dir/.qt/rcc/qrc_VictronVenusOS_raw_qml_0_extra_qmldirs.cpp.o
+[ 88%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/decoder/PDF417BitMatrixParser.cpp.o
+[ 88%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/decoder/PDF417DecodedBitStreamParser.cpp.o
+[ 88%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/decoder/PDF417Decoder.cpp.o
+[ 88%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/decoder/ec/ErrorCorrection.cpp.o
+[ 88%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/decoder/ec/ModulusGF.cpp.o
+[ 88%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/decoder/ec/ModulusPoly.cpp.o
+[ 89%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/detector/LinesSampler.cpp.o
+[ 89%] Linking CXX static library libVictronVenusOS.a
+[ 89%] Built target VictronVenusOS
+[ 89%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/pdf417/detector/PDF417Detector.cpp.o
+[ 89%] Building CXX object CMakeFiles/VictronVenusOSplugin.dir/VictronVenusOSplugin_autogen/mocs_compilation.cpp.o
+[ 89%] Building CXX object CMakeFiles/VictronVenusOSplugin.dir/VictronVenusOSplugin_Victron_VenusOSPlugin.cpp.o
+[ 89%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/QRCodeReader.cpp.o
+[ 89%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/QRErrorCorrectionLevel.cpp.o
+[ 89%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/QRFormatInformation.cpp.o
+[ 90%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/QRVersion.cpp.o
+[ 90%] Linking CXX static library Victron/VenusOS/libVictronVenusOSplugin.a
+[ 90%] Built target VictronVenusOSplugin
+[ 90%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/decoder/QRBitMatrixParser.cpp.o
+[ 90%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/decoder/QRDataBlock.cpp.o
+[ 90%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/decoder/QRDataMask.cpp.o
+[ 90%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/decoder/QRDecodedBitStreamParser.cpp.o
+[ 91%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/decoder/QRDecoder.cpp.o
+[ 91%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/decoder/QRMode.cpp.o
+[ 91%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/detector/QRAlignmentPattern.cpp.o
+[ 91%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/detector/QRAlignmentPatternFinder.cpp.o
+[ 91%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/detector/QRDetector.cpp.o
+[ 91%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/detector/QRFinderPattern.cpp.o
+[ 93%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/detector/QRFinderPatternFinder.cpp.o
+[ 93%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/detector/QRFinderPatternInfo.cpp.o
+[ 93%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/encoder/ByteMatrix.cpp.o
+[ 93%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/encoder/MaskUtil.cpp.o
+[ 93%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/encoder/MatrixUtil.cpp.o
+[ 94%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/encoder/QRCode.cpp.o
+[ 94%] Building CXX object src/qzxing/src/CMakeFiles/qzxing.dir/zxing/zxing/qrcode/encoder/QREncoder.cpp.o
+[ 94%] Linking CXX static library ../../../libqzxing.a
+[ 94%] Built target qzxing
+[ 94%] Built target venus-gui-v2_autogen_timestamp_deps
+[ 94%] Automatic MOC and UIC for target venus-gui-v2
+[ 94%] Built target venus-gui-v2_autogen
+[ 94%] Running AUTOMOC file extraction for target venus-gui-v2
+[ 94%] Running rcc for resource qmake_venus-gui-v2
+[ 94%] Running rcc for resource venus-gui-v2_raw_qml_0
+[ 95%] Running rcc pass 2 for resource venus-gui-v2_translations_resources
+[ 95%] Generating .rcc/qmlcache/venus-gui-v2_qmlcache_loader.cpp
+[ 96%] Running moc --collect-json for target venus-gui-v2
+[ 96%] Generating meta_types/qt6venus-gui-v2_minsizerel_metatypes.json
+[ 96%] Automatic QML type registration for target venus-gui-v2
+Warning: /tmp/victronenergy/gui-v2/build-wasm/venus-gui-v2_qmltyperegistrations.cpp:: venus-gui-v2 is an invalid QML module URI. You cannot import this.
+[ 96%] Generating .rcc/qmlcache/venus-gui-v2_Main_qml.cpp, .rcc/qmlcache/venus-gui-v2_Main_qml.cpp.aotstats
+[ 96%] Building CXX object CMakeFiles/venus-gui-v2.dir/venus-gui-v2_autogen/mocs_compilation.cpp.o
+[ 96%] Building CXX object CMakeFiles/venus-gui-v2.dir/src/main.cpp.o
+[ 97%] Building CXX object CMakeFiles/venus-gui-v2.dir/venus-gui-v2_qmltyperegistrations.cpp.o
+[ 97%] Building CXX object CMakeFiles/venus-gui-v2.dir/.qt/rcc/qrc_qmake_venus-gui-v2.cpp.o
+[ 97%] Building CXX object CMakeFiles/venus-gui-v2.dir/.rcc/qmlcache/venus-gui-v2_qmlcache_loader.cpp.o
+[ 97%] Building CXX object CMakeFiles/venus-gui-v2.dir/.rcc/qmlcache/venus-gui-v2_Main_qml.cpp.o
+[ 97%] Building CXX object CMakeFiles/venus-gui-v2.dir/.qt/rcc/qrc_venus-gui-v2_raw_qml_0.cpp.o
+[ 98%] Linking CXX executable venus-gui-v2.js
+[100%] Built target venus-gui-v2
+
+[32m*** Build successful ***[0m
+Elapsed time: 315 seconds
+
+[0;32m✓[0m Build erfolgreich.

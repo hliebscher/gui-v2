@@ -1,0 +1,53 @@
+[0;36m>>>[0m Fetch origin/main...
+From https://github.com/victronenergy/gui-v2
+ * branch              main       -> FETCH_HEAD
+[0;32m✓[0m Upstream: origin/main @ a9d4d6e0
+
+=== Analyse: v_2026.6.2 ← origin/main ===
+Branch:           v_2026.6.2 @ 66839d50
+Merge-Base:       df99c39a
+Main voraus:      13 Commit(s)
+Branch voraus:    126 Commit(s)
+
+[0;36m>>>[0m Neue Commits in origin/main:
+a9d4d6e02 (origin/main, origin/HEAD) Update translations faberd/update-translations-20260701-0621
+c8da2bc65 Settings: allow "MQTT Access" to be opened by UI tests and key nav
+4c342025f Update translations faberd/update-translations-20260629-1238
+c37784815 (tag: v1.3.13) Bump version to v1.3.13
+6131bdfc9 UI: improve demo mode indicator
+70327c298 Settings: fix condition for whether shelly IP is clickable
+b9c505abb Battery: fix layout for cell measurements
+4eb787623 Tests: add utility for test image comparison
+70bb7353a Overview: fix solar drilldown model insertions for PV chargers
+4239ab443 Shelly: rework settings page to show channels in sub-page
+e89a17933 Switches: do not allow type selection if no options are available
+dad7d164a Generic inputs: update "digital input mode" label and option text
+8b37a8483 Switches: ensure Type is read-only when only one type is available
+
+[0;36m>>>[0m Vario-Hotspots (geändert vs. origin/main):
+  • components/StatusBar_Landscape.qml
+  • pages/PageContact.qml
+  • pages/StandbyPage.qml
+  • pages/settings/PageSettingsGeneral.qml
+  • pages/settings/PageSettingsBackupRestore.qml
+  • pages/settings/PageSettingsStatusBar.qml
+  • pages/HeatingPage.qml
+  • pages/SettingsPage.qml
+  • src/screenblanker.cpp
+  • src/screenblanker.h
+  • themes/color/ColorDesign.json
+  • cmake/ModuleVenus_Sources.cmake
+
+[0;36m>>>[0m Dry-Run Merge (Konflikt-Vorschau)...
+Auto-merging cmake/ModuleVenus_Sources.cmake
+Auto-merging i18n/venus-gui-v2_de.ts
+Automatic merge went well; stopped before committing as requested
+[0;32m✓[0m Keine Konflikte im Dry-Run.
+[0;32m✓[0m Dry-Run abgebrochen (Working tree wiederhergestellt).
+
+[0;36m>>>[0m Bekannte Auto-Lösungen bei merge:
+  • i18n/venus-gui-v2_de.ts  → checkout --theirs + translation-override.py apply
+  • src/veutil → Pointer von origin/main übernehmen
+
+[0;36m>>>[0m Override-JSON: i18n/translation-overrides.json
+  263 Override(s) registriert

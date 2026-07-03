@@ -1,0 +1,19 @@
+[0;36m>>>[0m Fetch origin/main...
+From https://github.com/victronenergy/gui-v2
+ * branch              main       -> FETCH_HEAD
+[0;32m✓[0m Upstream: origin/main @ a9d4d6e0
+[0;36m>>>[0m Starte Merge: origin/main → v_2026.6.2...
+Auto-merging cmake/ModuleVenus_Sources.cmake
+Auto-merging i18n/venus-gui-v2_de.ts
+Automatic merge went well; stopped before committing as requested
+[0;36m>>>[0m Setze src/veutil auf origin/main @ 62a0587...
+HEAD is now at 62a0587 Merge pull request #28 from victronenergy/ncitoleux/energy-per-distance-unit-converter
+[0;32m✓[0m src/veutil synchronisiert.
+
+[0;36m>>>[0m Vario-Hotspot-Check (staged changes vs. HEAD):
+[1;33m![0m   Geändert: cmake/ModuleVenus_Sources.cmake — bitte manuell prüfen!
+
+[0;32m✓[0m Merge vorbereitet (gestaged). Kein Commit — bitte prüfen:
+  git status
+  ./scripts/merge-main-into-vario.sh verify
+  git commit -m "Merge origin/main into v_2026.6.2"

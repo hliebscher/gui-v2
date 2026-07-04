@@ -16,7 +16,7 @@ FocusScope {
 	property string stateUid: ""
 	property int stateHeatingValue: 1
 	property real from: 5.0
-	property real to: 35.0
+	property real to: 30.0
 	property real stepSize: 0.5
 	property int writeAccessLevel: VenusOS.User_AccessType_User
 

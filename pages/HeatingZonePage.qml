@@ -29,7 +29,7 @@ Page {
                 dataItem.uid: root.zonePrefix + "/Setpoint"
                 writeAccessLevel: VenusOS.User_AccessType_User
                 from: 5.0
-                to: 35.0
+                to: 30.0
                 stepSize: 0.5
             }
 

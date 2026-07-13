@@ -217,11 +217,12 @@ OverviewWidget {
 				icon.source: Global.system.battery.icon
 				Layout.fillWidth: true
 				Layout.maximumWidth: parent.width * 0.48
+				Layout.alignment: Qt.AlignLeft | Qt.AlignTop
 			}
 
 			ColumnLayout {
 				spacing: 0
-				Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+				Layout.alignment: Qt.AlignRight | Qt.AlignTop
 				Layout.rightMargin: Theme.geometry_overviewPage_widget_content_horizontalMargin
 
 				Label {
@@ -237,7 +238,8 @@ OverviewWidget {
 					value: starterBatteryVoltage.valid ? starterBatteryVoltage.value : NaN
 					unit: VenusOS.Units_Volt_DC
 					unitColor: Theme.color_overviewPage_widget_battery_font_secondary
-					font.pixelSize: Theme.font_overviewPage_widget_quantityLabel_medium
+					// Keep this compact so the footer doesn't get clipped in small widget modes.
+					font.pixelSize: Theme.font_overviewPage_battery_small
 					alignment: Qt.AlignRight
 					Layout.fillWidth: true
 					visible: starterBatteryVoltage.valid
@@ -246,7 +248,7 @@ OverviewWidget {
 				Label {
 					text: "\u2014"
 					color: Theme.color_overviewPage_widget_battery_font_secondary
-					font.pixelSize: Theme.font_overviewPage_widget_quantityLabel_medium
+					font.pixelSize: Theme.font_overviewPage_battery_small
 					font.family: Global.quantityFontFamily
 					horizontalAlignment: Text.AlignRight
 					Layout.fillWidth: true

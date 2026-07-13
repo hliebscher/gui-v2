@@ -38,6 +38,11 @@
       <source>Inverter / Charger</source>
       <translation>Wechselrichter/Ladegerät</translation>
     </message>
+    <message id="overview_battery_starter_battery">
+      <location filename="../../components/widgets/BatteryWidget.qml" line="343"/>
+      <source>Starter battery</source>
+      <translation>Starterbatterie</translation>
+    </message>
     <message id="common_words_low_battery_voltage">
       <location filename="../../components/CommonWords.qml" line="326"/>
       <source>Low battery voltage</source>

@@ -63,6 +63,7 @@
     "vebus_device_in_progress": "In Arbeit",
     "vebus_device_press_to_stop": "Zum Stoppen drücken",
     "battery_mode_idle": "Ruhezustand",
+    "overview_battery_starter_battery": "Starterbatterie",
     "common_words_low_level_alarm": "Alarm der bei niedrigem Füllstand ausgelöst wird",
     "common_words_low_state_of_charge": "Niedriger Ladezustand SOC",
     "common_words_low_voltage_alarms": "Alarm Batteriespannung zu niedrig",

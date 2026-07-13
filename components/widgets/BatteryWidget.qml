@@ -57,6 +57,43 @@ OverviewWidget {
 		uid: Global.system.veBus.serviceUid ? Global.system.veBus.serviceUid + "/Ac/State/RemoteGeneratorSelected" : ""
 	}
 
+	VeQuickItem {
+		id: activeBatteryService
+		uid: Global.system.serviceUid + "/ActiveBatteryService"
+	}
+
+	readonly property string _activeBatteryBindPrefix: {
+		if (batteries.valid) {
+			const list = batteries.value
+			for (let i = 0; i < list.length; ++i) {
+				if (list[i].active_battery_service && list[i].instance !== undefined) {
+					return BackendConnection.serviceUidFromName(list[i].id, list[i].instance)
+				}
+			}
+			if (list.length === 1 && list[0].instance !== undefined) {
+				return BackendConnection.serviceUidFromName(list[0].id, list[0].instance)
+			}
+		}
+		if (!activeBatteryService.valid) {
+			return ""
+		}
+		const portableId = activeBatteryService.value
+		if (!portableId || portableId === "default" || portableId === "nobattery") {
+			return ""
+		}
+		const parts = portableId.split("/")
+		if (parts.length < 2) {
+			return ""
+		}
+		const instance = parseInt(parts[parts.length - 1])
+		return isNaN(instance) ? "" : BackendConnection.serviceUidFromName(parts[0], instance)
+	}
+
+	VeQuickItem {
+		id: starterBatteryVoltage
+		uid: root._activeBatteryBindPrefix ? root._activeBatteryBindPrefix + "/Dc/1/Voltage" : ""
+	}
+
 	title: CommonWords.battery
 	type: VenusOS.OverviewWidget_Type_Battery
 	enabled: batteries.valid
@@ -171,11 +208,51 @@ OverviewWidget {
 	contentItem: ColumnLayout {
 		spacing: 0
 
-		WidgetHeader {
-			text: root.title
-			icon.source: Global.system.battery.icon
+		RowLayout {
 			Layout.fillWidth: true
 			Layout.bottomMargin: Theme.geometry_overviewPage_widget_content_spacing
+
+			WidgetHeader {
+				text: root.title
+				icon.source: Global.system.battery.icon
+				Layout.fillWidth: true
+				Layout.maximumWidth: parent.width * 0.48
+			}
+
+			ColumnLayout {
+				spacing: 0
+				Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+				Layout.rightMargin: Theme.geometry_overviewPage_widget_content_horizontalMargin
+
+				Label {
+					//% "Starter battery"
+					text: qsTrId("overview_battery_starter_battery")
+					color: Theme.color_overviewPage_widget_battery_font_secondary
+					font.pixelSize: Theme.font_overviewPage_battery_small
+					horizontalAlignment: Text.AlignRight
+					Layout.fillWidth: true
+				}
+
+				QuantityLabel {
+					value: starterBatteryVoltage.valid ? starterBatteryVoltage.value : NaN
+					unit: VenusOS.Units_Volt_DC
+					unitColor: Theme.color_overviewPage_widget_battery_font_secondary
+					font.pixelSize: Theme.font_overviewPage_widget_quantityLabel_medium
+					alignment: Qt.AlignRight
+					Layout.fillWidth: true
+					visible: starterBatteryVoltage.valid
+				}
+
+				Label {
+					text: "\u2014"
+					color: Theme.color_overviewPage_widget_battery_font_secondary
+					font.pixelSize: Theme.font_overviewPage_widget_quantityLabel_medium
+					font.family: Global.quantityFontFamily
+					horizontalAlignment: Text.AlignRight
+					Layout.fillWidth: true
+					visible: !starterBatteryVoltage.valid
+				}
+			}
 		}
 
 		ElectricalQuantityLabel {
@@ -230,7 +307,7 @@ OverviewWidget {
 			readonly property bool _useSmallFont: !quantityLabelFits(batteryVoltageDisplay) || !quantityLabelFits(batteryPowerDisplay)
 
 			function quantityLabelFits(label) {
-				return root.width/2 - 2*Theme.geometry_overviewPage_widget_content_horizontalMargin
+				return root.width - 2*Theme.geometry_overviewPage_widget_content_horizontalMargin
 					> quantityLabelWidth(batteryCurrentDisplay.valueText, batteryCurrentDisplay.unitText)/2
 					+ quantityLabelWidth(label.valueText, label.unitText)
 			}
@@ -243,6 +320,7 @@ OverviewWidget {
 			}
 
 			spacing: Theme.geometry_overviewPage_widget_content_horizontalMargin
+			Layout.fillWidth: true
 
 			FontMetrics {
 				id: quantityLabelFont

@@ -7688,6 +7688,11 @@ Do you want to continue?</source>
         <source>Inverter / Charger</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="overview_battery_starter_battery">
+        <location filename="../../../components/widgets/BatteryWidget.qml" line="228"/>
+        <source>Starter battery</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="acInputs_evcharger">
         <location filename="../../../data/AcInputs.qml" line="48"/>
         <source>EV Charger</source>

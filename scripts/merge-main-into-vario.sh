@@ -213,12 +213,19 @@ resolve_de_ts_conflict() {
 	if git diff --name-only --diff-filter=U | grep -qx "${TS_FILE}"; then
 		info "Löse Konflikt: ${TS_FILE} (main + Overrides)..."
 		git checkout --theirs "${TS_FILE}"
-		[ -f "${TRANSLATION_SCRIPT}" ] || fail "${TRANSLATION_SCRIPT} nicht gefunden."
-		[ -f "${OVERRIDE_JSON}" ] || fail "${OVERRIDE_JSON} nicht gefunden."
-		python3 "${TRANSLATION_SCRIPT}" apply -t "${TS_FILE}" -i "${OVERRIDE_JSON}"
-		git add "${TS_FILE}"
+		apply_translation_overrides
 		ok "${TS_FILE}: main-Basis + Overrides angewendet."
 	fi
+}
+
+apply_translation_overrides() {
+	[ -f "${TRANSLATION_SCRIPT}" ] || fail "${TRANSLATION_SCRIPT} nicht gefunden."
+	[ -f "${OVERRIDE_JSON}" ] || fail "${OVERRIDE_JSON} nicht gefunden."
+	[ -f "${TS_FILE}" ] || fail "${TS_FILE} nicht gefunden."
+	info "Wende Vario-Übersetzungs-Overrides an (${OVERRIDE_JSON} → ${TS_FILE})..."
+	python3 "${TRANSLATION_SCRIPT}" apply -t "${TS_FILE}" -i "${OVERRIDE_JSON}"
+	git add "${TS_FILE}"
+	ok "Übersetzungs-Overrides angewendet."
 }
 
 sync_veutil_submodule() {
@@ -260,6 +267,9 @@ cmd_merge() {
 
 	# Bekannte Auto-Lösungen
 	resolve_de_ts_conflict
+	# Auch ohne Konflikt: Vario-Overrides immer auf de.ts anwenden
+	# (sonst gehen z.B. Fahrzeugbatterie / Kontakt-Texte bei Auto-Merge verloren)
+	apply_translation_overrides
 	sync_veutil_submodule
 
 	# Verbleibende Konflikte?

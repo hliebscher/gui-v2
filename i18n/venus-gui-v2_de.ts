@@ -41,7 +41,7 @@
     <message id="overview_battery_starter_battery">
       <location filename="../../components/widgets/BatteryWidget.qml" line="343"/>
       <source>Starter battery</source>
-      <translation>Starterbatterie</translation>
+      <translation>Fahrzeugbatterie</translation>
     </message>
     <message id="common_words_low_battery_voltage">
       <location filename="../../components/CommonWords.qml" line="326"/>
@@ -850,7 +850,7 @@
     <message id="settings_dvcc_instructions">
       <location filename="../../pages/settings/PageSettingsDvcc.qml" line="18"/>
       <source>&lt;b&gt;CAUTION:&lt;/b&gt; Read the manual before adjusting.</source>
-      <translation>&lt;b&gt;Vorsicht:&lt;/b&gt; Lesen Sie vor der Einstellung das Handbuch.</translation>
+      <translation>&amp;lt;b&amp;gt;Vorsicht:&amp;lt;/b&amp;gt; Lesen Sie vor der Einstellung das Handbuch.</translation>
     </message>
     <message id="settings_dvcc_limit_managed_battery_charge_voltage">
       <location filename="../../pages/settings/PageSettingsDvcc.qml" line="39"/>
@@ -8870,7 +8870,7 @@ Beachten Sie, dass dieses Menü nur Carlo Gavazzi Zähler anzeigt, die über RS4
     <message id="cycle_history_battery_voltage">
       <location filename="../../pages/settings/devicelist/dc-in/ListCycleHistoryItem.qml" line="85"/>
       <source>Battery (V&lt;sub&gt;start&lt;/sub&gt;/V&lt;sub&gt;end&lt;/sub&gt;)</source>
-      <translation>Batterie (V&lt;sub&gt;Start&lt;/sub&gt;/V&lt;sub&gt;Ende&lt;/sub&gt;)</translation>
+      <translation>Batterie (V&amp;lt;sub&amp;gt;Start&amp;lt;/sub&amp;gt;/V&amp;lt;sub&amp;gt;Ende&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="inverter_maximum_pv_voltage">
       <location filename="../../pages/settings/devicelist/inverter/PageSolarStats.qml" line="18"/>
@@ -8996,7 +8996,7 @@ Dank optimierter Navigation und neuem Look ist alles, was Sie lieben, jetzt noch
       <location filename="../../pages/welcome/WelcomeView.qml" line="118"/>
       <source>Access the link below to find out more about the Renewed UI.&lt;br /&gt;&lt;br /&gt;&lt;a href="%1"&gt;%1&lt;/a&gt;</source>
       <extracomment>%1 = link to URL with more information</extracomment>
-      <translation>Unter dem folgenden Link finden Sie weitere Informationen über die erneuerte Benutzeroberfläche.&lt;br /&gt;&lt;br /&gt;&lt;a href="%1"&gt;%1&lt;/a&gt;</translation>
+      <translation>Unter dem folgenden Link finden Sie weitere Informationen über die erneuerte Benutzeroberfläche.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;a href="%1"&amp;gt;%1&amp;lt;/a&amp;gt;</translation>
     </message>
     <message id="welcome_more_text">
       <location filename="../../pages/welcome/WelcomeView.qml" line="120"/>
@@ -9844,7 +9844,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="pagesettingssupportstate_update_firmware_to_fix_modified_state_description">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="399"/>
       <source>This will download and update rootfs with the latest official firmware.&lt;br&gt;Internet connectivity is required.&lt;br&gt;Press 'OK' to continue.</source>
-      <translation>Dies wird das Rootfs mit der neuesten offiziellen Firmware herunterladen und aktualisieren.&lt;br&gt;Internetverbindung erforderlich.&lt;br&gt;Drücken Sie „OK“, um fortzufahren.</translation>
+      <translation>Dies wird das Rootfs mit der neuesten offiziellen Firmware herunterladen und aktualisieren.&amp;lt;br&amp;gt;Internetverbindung erforderlich.&amp;lt;br&amp;gt;Drücken Sie „OK“, um fortzufahren.</translation>
     </message>
     <message id="settings_gps_format_kmh">
       <location filename="../../pages/settings/PageSettingsDisplayUnits.qml" line="95"/>
@@ -10226,32 +10226,32 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="page_microgrid_reference_active_power_p0">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="175"/>
       <source>Reference active power (P&lt;sub&gt;0&lt;/sub&gt;)</source>
-      <translation>Referenz-Wirkleistung (P&lt;sub&gt;0&lt;/sub&gt;)</translation>
+      <translation>Referenz-Wirkleistung (P&amp;lt;sub&amp;gt;0&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="page_microgrid_reference_frequency_f0">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="188"/>
       <source>Reference frequency (f&lt;sub&gt;0&lt;/sub&gt;)</source>
-      <translation>Referenz-Frequenz (f&lt;sub&gt;0&lt;/sub&gt;)</translation>
+      <translation>Referenz-Frequenz (f&amp;lt;sub&amp;gt;0&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="page_microgrid_frequency_droop_slope">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="202"/>
       <source>Frequency droop slope (droop&lt;sub&gt;fP&lt;/sub&gt;)</source>
-      <translation>Frequenz-Droop-Steigung (droop&lt;sub&gt;fP&lt;/sub&gt;)</translation>
+      <translation>Frequenz-Droop-Steigung (droop&amp;lt;sub&amp;gt;fP&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="page_microgrid_reference_reactive_power">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="216"/>
       <source>Reference reactive power (Q&lt;sub&gt;0&lt;/sub&gt;)</source>
-      <translation>Referenz-Blindleistung (Q&lt;sub&gt;0&lt;/sub&gt;)</translation>
+      <translation>Referenz-Blindleistung (Q&amp;lt;sub&amp;gt;0&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="page_microgrid_reference_voltage">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="229"/>
       <source>Reference Voltage (U&lt;sub&gt;0&lt;/sub&gt;)</source>
-      <translation>Referenz-Spannung (U&lt;sub&gt;0&lt;/sub&gt;)</translation>
+      <translation>Referenz-Spannung (U&amp;lt;sub&amp;gt;0&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="page_microgrid_voltage_droop_slope">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="243"/>
       <source>Voltage droop slope (droop&lt;sub&gt;UQ&lt;/sub&gt;)</source>
-      <translation>Spannungs-Droop-Steigung (droop&lt;sub&gt;UQ&lt;/sub&gt;)</translation>
+      <translation>Spannungs-Droop-Steigung (droop&amp;lt;sub&amp;gt;UQ&amp;lt;/sub&amp;gt;)</translation>
     </message>
     <message id="page_microgrid_minimum_and_maximum_parameters">
       <location filename="../../pages/vebusdevice/PageMicrogrid.qml" line="256"/>
@@ -10442,7 +10442,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
       <location filename="../../components/listitems/ListLink.qml" line="114"/>
       <source>Open the QR code to scan it with your portable device.&lt;br /&gt;Or insert the link: %1</source>
       <extracomment>%1 = url text</extracomment>
-      <translation>Öffnen Sie den QR-Code, um ihn mit Ihrem mobilen Gerät zu scannen.&lt;br /&gt;Oder fügen Sie den Link ein: %1</translation>
+      <translation>Öffnen Sie den QR-Code, um ihn mit Ihrem mobilen Gerät zu scannen.&amp;lt;br /&amp;gt;Oder fügen Sie den Link ein: %1</translation>
     </message>
     <message id="color_preset">
       <location filename="../../components/ColorPresetGrid.qml" line="33"/>
@@ -10722,7 +10722,7 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
       <location filename="../../pages/settings/devicelist/PageMeteo.qml" line="31"/>
       <source>Setup is needed for power estimation. For instructions, open the QR code to scan it with your portable device.&lt;br /&gt;Or insert the link: %1</source>
       <extracomment>%1 = url text</extracomment>
-      <translation>Für die Leistungsschätzung ist eine Einrichtung erforderlich. Öffnen Sie den QR-Code, um ihn mit Ihrem tragbaren Gerät zu scannen, um Anweisungen zu erhalten.&lt;br /&gt;Oder fügen Sie den Link ein: %1</translation>
+      <translation>Für die Leistungsschätzung ist eine Einrichtung erforderlich. Öffnen Sie den QR-Code, um ihn mit Ihrem tragbaren Gerät zu scannen, um Anweisungen zu erhalten.&amp;lt;br /&amp;gt;Oder fügen Sie den Link ein: %1</translation>
     </message>
     <message id="ev_target_soc">
       <location filename="../../pages/ev/EvPage.qml" line="40"/>
@@ -11025,22 +11025,22 @@ Das GX-Gerät kann nur ein angeschlossenes Genset steuern und nimmt dasjenige mi
     <message id="microgrid_error_param_fmin_greater_than_fmax">
       <location filename="../../src/enums.cpp" line="900"/>
       <source>Parameter error Fmin &gt; Fmax</source>
-      <translation>Parameterfehler Fmin &gt; Fmax</translation>
+      <translation>Parameterfehler Fmin &amp;gt; Fmax</translation>
     </message>
     <message id="microgrid_error_param_pmin_greater_than_pmaxv">
       <location filename="../../src/enums.cpp" line="903"/>
       <source>Parameter error Pmin &gt; Pmax</source>
-      <translation>Parameterfehler Pmin &gt; Pmax</translation>
+      <translation>Parameterfehler Pmin &amp;gt; Pmax</translation>
     </message>
     <message id="microgrid_error_param_umin_greater_than_umax">
       <location filename="../../src/enums.cpp" line="906"/>
       <source>Parameter error Umin &gt; Umax</source>
-      <translation>Parameterfehler Umin &gt; Umax</translation>
+      <translation>Parameterfehler Umin &amp;gt; Umax</translation>
     </message>
     <message id="microgrid_error_param_qmin_greater_than_qmax">
       <location filename="../../src/enums.cpp" line="909"/>
       <source>Parameter error Qmin &gt; Qmax</source>
-      <translation>Parameterfehler Qmin &gt; Qmax</translation>
+      <translation>Parameterfehler Qmin &amp;gt; Qmax</translation>
     </message>
     <message id="microgrid_error_param_q0_out_of_range">
       <location filename="../../src/enums.cpp" line="912"/>
@@ -11852,7 +11852,7 @@ Bitte aktualisieren Sie auf die neueste Firmware, um diese Einstellungen anpasse
     <message id="pagecontrollableloads_battery_at_or_above_x_soc">
       <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="38"/>
       <source>At or above &lt;font color="%1"&gt;%2%&lt;/font&gt; SOC</source>
-      <translation>Bei oder über &lt;font color="%1"&gt;%2%&lt;/font&gt; SOC</translation>
+      <translation>Bei oder über &amp;lt;font color="%1"&amp;gt;%2%&amp;lt;/font&amp;gt; SOC</translation>
     </message>
     <message id="pagecontrollableloads_battery_at_x_soc">
       <location filename="../../pages/settings/PageControllableLoadsBattery.qml" line="48"/>
@@ -14681,4 +14681,138 @@ Bitte aktualisieren Sie auf die neueste Firmware, um diese Einstellungen anpasse
       <translation>DC/DC-Fehlkonfiguration</translation>
     </message>
   </context>
+<context>
+    <name>Victron.VenusOS</name>
+<message id="settings_fronius_rescan_title">
+        <location filename="../../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="36"/>
+        <source>Rescan for IP addresses?</source>
+        <translation>Nach IP-Adressen suchen?</translation>
+    </message>
+<message id="settings_fronius_rescan">
+        <location filename="../../../pages/settings/PageSettingsFroniusShowIpAddresses.qml" line="38"/>
+        <source>Rescan</source>
+        <translation>Erneut suchen</translation>
+    </message>
+<message id="vebus_device_press_to_stop">
+        <location filename="../../../pages/vebusdevice/PageVeBus.qml" line="87"/>
+        <source>Press to stop</source>
+        <translation>Zum Stoppen drücken</translation>
+    </message>
+<message id="tank_backup_backing_up">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="37"/>
+        <source>Backing up...</source>
+        <translation>Sicherung wird erstellt...</translation>
+    </message>
+<message id="tank_backup_successful">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="40"/>
+        <source>Backup successful</source>
+        <translation>Sicherung erfolgreich</translation>
+    </message>
+<message id="tank_backup_press_to_backup">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="46"/>
+        <source>Press to backup</source>
+        <translation>Drücken zum Sichern</translation>
+    </message>
+<message id="tank_restore_restoring">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="53"/>
+        <source>Restoring...</source>
+        <translation>Wiederherstellung...</translation>
+    </message>
+<message id="tank_restore_successful">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="56"/>
+        <source>Restore successful</source>
+        <translation>Wiederherstellung erfolgreich</translation>
+    </message>
+<message id="tank_restore_press_to_restore">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="62"/>
+        <source>Press to restore</source>
+        <translation>Zum Wiederherst. drücken</translation>
+    </message>
+<message id="tank_delete_deleting">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="69"/>
+        <source>Deleting...</source>
+        <translation>Lösche...</translation>
+    </message>
+<message id="tank_delete_press_to_delete">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="78"/>
+        <source>Press to delete</source>
+        <translation>Drücken zum Löschen</translation>
+    </message>
+<message id="tank_backup_result_backup_process_unexpedly_closed">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="101"/>
+        <source>Backup process unexpectedly closed</source>
+        <translation>Sicherungsprozess wurde unerwartet beendet</translation>
+    </message>
+<message id="tank_backup_result_restore_process_unexpedly_closed">
+        <location filename="../../../pages/settings/PageSettingsBackupRestore.qml" line="104"/>
+        <source>Restore process unexpectedly closed</source>
+        <translation>Wiederherstellungsprozess wurde unerwartet beendet</translation>
+    </message>
+<message id="inverters_state_inverting">
+        <location filename="../../../data/System.qml" line="154"/>
+        <source>Inverting</source>
+        <translation>Erzeugung</translation>
+    </message>
+<message id="pagesettingsgeneral_backup_and_restore">
+        <location filename="../../../pages/settings/PageSettingsGeneral.qml" line="112"/>
+        <location filename="../../../pages/settings/PageSettingsGeneral.qml" line="245"/>
+        <source>Backup &amp; Restore</source>
+        <translation>Sichern &amp; Wiederherstellen</translation>
+    </message>
+<message id="settings_statusbar_temperature_sensor">
+        <location filename="../../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="127"/>
+        <source>Status bar temperature sensor</source>
+        <translation>Statusleiste Temperatursensor</translation>
+    </message>
+<message id="page_switchable_output_show_vrm">
+        <location filename="../../../pages/settings/devicelist/switchable-outputs/PageSwitchableOutput.qml" line="127"/>
+        <source>Only on VRM</source>
+        <translation>Nur im VRM</translation>
+    </message>
+<message id="page_contact_title">
+        <location filename="../../../components/StatusBar.qml" line="291"/>
+        <source>Kontakt</source>
+        <oldsource>Contact</oldsource>
+        <translation>Kontakt</translation>
+    </message>
+<message id="page_contact_contact">
+        <location filename="../../../pages/PageContact.qml" line="16"/>
+        <source>Kontakt</source>
+        <oldsource>Contact</oldsource>
+        <translation>Kontakt</translation>
+    </message>
+<message id="page_contact_address">
+        <location filename="../../../pages/PageContact.qml" line="22"/>
+        <source>Anschrift</source>
+        <oldsource>Address</oldsource>
+        <translation>Anschrift</translation>
+    </message>
+<message id="page_contact_phone">
+        <location filename="../../../pages/PageContact.qml" line="36"/>
+        <source>Telefon</source>
+        <oldsource>Phone</oldsource>
+        <translation>Telefon</translation>
+    </message>
+<message id="page_contact_fax">
+        <location filename="../../../pages/PageContact.qml" line="50"/>
+        <source>Fax</source>
+        <translation>Fax</translation>
+    </message>
+<message id="page_contact_email">
+        <location filename="../../../pages/PageContact.qml" line="64"/>
+        <source>E-Mail</source>
+        <translation>E-Mail</translation>
+    </message>
+<message id="page_contact_opening_hours">
+        <location filename="../../../pages/PageContact.qml" line="78"/>
+        <source>Öffnungszeiten</source>
+        <oldsource>Opening Hours</oldsource>
+        <translation>Öffnungszeiten</translation>
+    </message>
+<message id="page_contact_opening_hours_text">
+        <location filename="../../../pages/PageContact.qml" line="83"/>
+        <source>MO-FR 08:00-16:30</source>
+        <translation>MO-FR 08:00-16:30 Uhr</translation>
+    </message>
+</context>
 </TS>

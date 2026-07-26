@@ -514,6 +514,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/devicelist/PageMotorDrive.qml
     pages/settings/devicelist/PageSwitch.qml
     pages/settings/devicelist/PageUnsupportedDevice.qml
+    pages/settings/devicelist/battery/BatteryBankModel.qml
     pages/settings/devicelist/battery/BatteryDetails.qml
     pages/settings/devicelist/battery/BatteryHistory.qml
     pages/settings/devicelist/battery/BatterySettingsAlarmModel.qml
@@ -527,7 +528,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     pages/settings/devicelist/battery/PageBatteryModuleAlarms.qml
     pages/settings/devicelist/battery/PageBatteryParameters.qml
     pages/settings/devicelist/battery/PageBatterySettings.qml
-    pages/settings/devicelist/battery/PageBatterySettingsBattery.qml
     pages/settings/devicelist/battery/PageLynxDistributorList.qml
     pages/settings/devicelist/battery/PageLynxIonBatteryInfo.qml
     pages/settings/devicelist/battery/PageLynxIonDiagnostics.qml

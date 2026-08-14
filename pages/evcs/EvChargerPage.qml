@@ -133,10 +133,31 @@ DevicePage {
 			writeAccessLevel: VenusOS.User_AccessType_User
 		}
 
+		ListText {
+			//% "Auto mode source"
+			text: qsTrId("evcs_auto_mode_source")
+			readonly property string externalSourceName: (gxAutoModeSource.value ?? "")
+					//% "GX device"
+					|| qsTrId("gx_device")
+			//: %1 = source string from /GxAutoMode/Source, or "GX device" when not available
+			//% "External (%1)"
+			secondaryText: dataItem.value === 1
+						   ? qsTrId("evcs_auto_mode_source_external_with_source").arg(externalSourceName)
+						   //% "Internal (EV Charging Station)"
+						   : qsTrId("evcs_auto_mode_source_evcs_internal")
+			dataItem.uid: evCharger.serviceUid + "/GxAutoMode/Enabled"
+			preferredVisible: dataItem.valid && chargeMode.dataItem.value === VenusOS.Evcs_Mode_Auto
+
+			VeQuickItem {
+				id: gxAutoModeSource
+				uid: evCharger.serviceUid + "/GxAutoMode/Source"
+			}
+		}
+
 		ListEvcsSetCurrentSpinBox {
 			serviceUid: evCharger.serviceUid
 			text: CommonWords.charge_current
-			interactive: dataItem.valid && chargeMode.dataItem.value === VenusOS.Evcs_Mode_Manual
+			preferredVisible: dataItem.valid && chargeMode.dataItem.value === VenusOS.Evcs_Mode_Manual
 		}
 
 		ListSwitch {
@@ -147,11 +168,11 @@ DevicePage {
 			writeAccessLevel: VenusOS.User_AccessType_User
 		}
 
-		AcLimitsConsumptionSettings {
+		PowerGuardConsumptionSettings {
 			bindPrefix: root.bindPrefix
 		}
 
-		AcLimitsProductionSettings {
+		PowerGuardProductionSettings {
 			bindPrefix: root.bindPrefix
 		}
 

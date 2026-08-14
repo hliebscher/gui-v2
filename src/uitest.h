@@ -12,6 +12,28 @@
 namespace Victron {
 namespace VenusOS {
 
+class UiTestConfiguration
+{
+public:
+	UiTestConfiguration();
+	~UiTestConfiguration();
+
+	// Loads a configuration from the specified directory. This is a relative dir under tests/ui,
+	// and it must contain a JSON file of the same name.
+	// E.g. if dirName="smoke/mock-maximal", then this attempts to load a JSON file from
+	// qrc:tests/ui/smoke/mock-maximal/mock-maximal.json.
+	void load(const QString &dirName);
+
+	bool isValid() const { return !dirName().isEmpty(); }
+	QString dirName() const;
+	const QVariantMap &settingsMap() const;
+	bool hasMockConfiguration() const;
+
+private:
+	QVariantMap m_settings;
+	QString m_dirName;
+};
+
 /*
 	Configures and executes the UI testing.
 
@@ -26,11 +48,9 @@ namespace VenusOS {
 		"Mock": {
 			"Configuration": "/data/mock/conf/maximal.json",
 			"TimersActive": false,
-			"UIAnimations": 0
 		},
 		"Steps": {
 			"CaptureAndCompare": {
-				"MaximumStabilizationCaptures": 20,
 				"StabilizationInterval": 16,
 				"ImageDir": "image-captures",
 			},
@@ -57,12 +77,7 @@ public:
 	};
 	Q_ENUM(Status);
 
-	// Loads a configuration from the specified directory. This is a relative dir under tests/ui,
-	// and it must contain a JSON file of the same name.
-	// E.g. if confDir="smoke/mock-maximal", then this attempts to load a JSON file from
-	// qrc:tests/ui/smoke/mock-maximal/mock-maximal.json.
-	void loadConfiguration(const QString &relativeTestDir);
-
+	void loadConfiguration(const UiTestConfiguration &conf);
 	Q_INVOKABLE void start();
 
 	Status status() const;
@@ -81,12 +96,15 @@ private:
 	void setStatus(Status status);
 	void startNextTestCase();
 	bool exitWhenFinished() const;
-	void testCaseFinished();
+	void testCaseFinished(int passCount, int failCount, int elapsed);
 
 	QVariantMap m_settings;
 	QStringList m_testFileNames;
 	QString m_relativeTestDir;
 	int m_currentTestIndex = -1;
+	int m_passCount = 0;
+	int m_failCount = 0;
+	int m_elapsed = 0;
 	Status m_status = NotConfigured;
 };
 

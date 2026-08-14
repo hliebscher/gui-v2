@@ -7,7 +7,13 @@ To run gui-v2 with a specific configuration, specify it with the --mock-conf opt
 
     ./venus-gui-v2 --mock --mock-conf multi-rs
 
+To use mock data in the browser, append `?mock` or `?mock=<config>` to the `index.html` URL.
+
 If --mock is set but no configuration is specified, the 'maximal' configuration is used.
+
+Also, if --mock-conf is set, the --mock option is implied. For example, the above command could also just be:
+
+    ./venus-gui-v2 --mock-conf multi-rs  # the --mock arg is optional, since --mock-conf is set
 
 
 ## Available mock configurations

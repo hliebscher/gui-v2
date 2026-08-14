@@ -4,6 +4,7 @@
 */
 
 #include <QFile>
+#include <QDir>
 #include <QJsonParseError>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -12,29 +13,33 @@
 #include <QLoggingCategory>
 #include <QQmlComponent>
 
+#include "veutil/qt/ve_qitem.hpp"
+
 #include "uitest.h"
 #include "uitestcase.h"
+#include "backendconnection.h"
 #include "mockmanager.h"
 #include "logging.h"
 #include "clocktime.h"
 
 using namespace Victron::VenusOS;
 
-UiTest* UiTest::create(QQmlEngine *, QJSEngine *)
-{
-	static UiTest* object = new UiTest();
-	return object;
-}
-
-UiTest::UiTest(QObject *parent)
-	: QObject(parent)
+UiTestConfiguration::UiTestConfiguration()
 {
 }
 
-void UiTest::loadConfiguration(const QString &relativeTestDir)
+UiTestConfiguration::~UiTestConfiguration()
 {
-	const QString confName = relativeTestDir.mid(relativeTestDir.lastIndexOf('/') + 1);
-	const QString filePath = QString(":/tests/ui/%1/%2.json").arg(relativeTestDir).arg(confName);
+}
+
+void UiTestConfiguration::load(const QString &dirName)
+{
+	if (dirName.isEmpty()) {
+		qCFatal(venusGuiTest) << "Cannot load empty test configuration!";
+	}
+
+	const QString confName = dirName.mid(dirName.lastIndexOf('/') + 1);
+	const QString filePath = QString(":/tests/ui/%1/%2.json").arg(dirName).arg(confName);
 
 	QFile file(filePath);
 	if (!file.open(QFile::ReadOnly | QFile::Text)) {
@@ -48,10 +53,43 @@ void UiTest::loadConfiguration(const QString &relativeTestDir)
 				   << parseError.errorString() << "from file:" << filePath;
 	}
 
-	qCInfo(venusGuiTest) << "Loaded test configuration:" << filePath;
-
+	m_dirName = dirName;
 	m_settings = doc.object().toVariantMap();
-	m_relativeTestDir = relativeTestDir;
+
+	qCInfo(venusGuiTest) << "Loaded test configuration:" << filePath;
+}
+
+QString UiTestConfiguration::dirName() const
+{
+	return m_dirName;
+}
+
+const QVariantMap &UiTestConfiguration::settingsMap() const
+{
+	return m_settings;
+}
+
+bool UiTestConfiguration::hasMockConfiguration() const
+{
+	return m_settings.contains("Mock");
+}
+
+
+UiTest* UiTest::create(QQmlEngine *, QJSEngine *)
+{
+	static UiTest* object = new UiTest();
+	return object;
+}
+
+UiTest::UiTest(QObject *parent)
+	: QObject(parent)
+{
+}
+
+void UiTest::loadConfiguration(const UiTestConfiguration &conf)
+{
+	m_settings = conf.settingsMap();
+	m_relativeTestDir = conf.dirName();
 
 	// Read general configuration values.
 	const QVariant logLevel = settingValue("Logging");
@@ -60,24 +98,32 @@ void UiTest::loadConfiguration(const QString &relativeTestDir)
 		QLoggingCategory::setFilterRules(QString("venus.gui.test.%1=true").arg(logLevel.toString()));
 	}
 
-	// Read 'Mock' configuration values.
-	MockManager *mockManager = MockManager::create();
-	const QVariantMap mockSettings = settingValue("Mock").toMap();
-	if (mockSettings.value("Configuration").isValid()) {
-		mockManager->loadConfiguration(mockSettings.value("Configuration").toString());
+	BackendConnection *backend = BackendConnection::create();
+	if (backend->type() == BackendConnection::MockSource) {
+		// Read 'Mock' configuration values.
+		MockManager *mockManager = MockManager::create();
+		const QVariantMap mockSettings = settingValue("Mock").toMap();
+		if (mockSettings.value("Configuration").isValid()) {
+			mockManager->loadConfiguration(mockSettings.value("Configuration").toString());
+		}
+		if (mockSettings.value("TimersActive").isValid()) {
+			mockManager->setTimersActive(mockSettings.value("TimersActive").toBool());
+		}
 	}
-	if (mockSettings.value("TimersActive").isValid()) {
-		mockManager->setTimersActive(mockSettings.value("TimersActive").toBool());
-	}
-	if (mockSettings.value("UIAnimations").isValid()) {
-		mockManager->setValue("com.victronenergy.settings/Settings/Gui2/UIAnimations",
-				mockSettings.value("UIAnimations").toBool());
+
+	// Disable UI animations for tests. Do this after any mock values have been applied, to override
+	// any value set by a mock configuration.
+	if (backend->type() != BackendConnection::UnknownSource && VeQItems::getRoot()) {
+		if (VeQItem *uiAnimationsItem = VeQItems::getRoot()->itemGet(
+					backend->serviceUidForType("settings") + "/Settings/Gui2/UIAnimations")) {
+			uiAnimationsItem->setValue(0);
+		}
 	}
 
 	// Read 'Tests' configuration values.
 	m_testFileNames = m_settings.value("Tests").toStringList();
 	if (m_testFileNames.isEmpty()) {
-		qCFatal(venusGuiTest) << "UiTest: no tests have been defined in test conf:" << filePath;
+		qCFatal(venusGuiTest) << "UiTest: no tests have been defined in test:" << conf.dirName();
 	}
 
 	emit testCaseCountChanged();
@@ -93,9 +139,31 @@ void UiTest::start()
 
 	// Stop ClockTime updates so that the time changes do not interfere with test image comparisons.
 	ClockTime::create()->setUpdatesActive(false);
+	ClockTime::create()->setClockTime(1);
 
 	qCInfo(venusGuiTest) << "Starting UI tests...";
-	qCInfo(venusGuiTest) << "Image captures will be saved to" << CaptureAndCompareStep::absoluteImagePath(QString());
+
+	QDir imageDir(CaptureAndCompareStep::absoluteImagePath(QString()));
+	const QString imageDirPath = imageDir.absolutePath();
+	qCInfo(venusGuiTest) << "Image captures will be saved to" << imageDirPath;
+	if (!imageDir.isEmpty()) {
+		// The image directory is non-empty. Clear it if it seems safe to do so, i.e. if its parent
+		// is the application working directory, and not an arbitrary directory on the filesystem.
+		const QString appWorkingDir = QDir().absolutePath();
+		const QString dirName = imageDir.dirName();
+		if (imageDir.cdUp() && imageDir.absolutePath() == appWorkingDir) {
+			qCInfo(venusGuiTest) << "Image capture directory is non-empty, clearing contents...";
+			if (!imageDir.cd(dirName) || !imageDir.removeRecursively()) {
+				qCFatal(venusGuiTest) << "Failed to delete directory!";
+			}
+			if (!imageDir.mkpath(imageDirPath)) {
+				qCFatal(venusGuiTest) << "Failed to re-make image capture path:" << imageDirPath;
+			}
+		} else {
+			qCFatal(venusGuiTest) << qPrintable(QStringLiteral("Cannot capture images, directory %1 is not empty and cannot be auto-deleted!")
+					.arg(imageDirPath));
+		}
+	}
 
 	m_currentTestIndex = -1;
 	QTimer::singleShot(0, this, &UiTest::startNextTestCase);
@@ -150,6 +218,17 @@ void UiTest::startNextTestCase()
 			QTimer::singleShot(0, this, &UiTest::startNextTestCase);
 		}
 	} else {
+		const int totalSeconds = m_elapsed / 1000;
+		const QString durationText = totalSeconds <= 0
+				? QStringLiteral("%1ms").arg(m_elapsed)
+				: QStringLiteral("%1m %2s")
+					.arg(totalSeconds / 60)
+					.arg(totalSeconds < 60 ? totalSeconds : totalSeconds % 60);
+		qCInfo(venusGuiTest) << qPrintable(QStringLiteral("All tests finished: %1 steps passed, %2 steps failed, in %3")
+				.arg(m_passCount)
+				.arg(m_failCount)
+				.arg(durationText));
+		qCInfo(venusGuiTest) << "********************************************************";
 		setStatus(Finished);
 		if (exitWhenFinished()) {
 			qApp->quit();
@@ -157,8 +236,12 @@ void UiTest::startNextTestCase()
 	}
 }
 
-void UiTest::testCaseFinished()
+void UiTest::testCaseFinished(int passCount, int failCount, int elapsed)
 {
+	m_passCount += passCount;
+	m_failCount += failCount;
+	m_elapsed += elapsed;
+
 	if (UiTestCase *testCase = qobject_cast<UiTestCase *>(sender())) {
 		testCase->disconnect(this);
 		testCase->deleteLater();

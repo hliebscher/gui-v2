@@ -3208,52 +3208,52 @@ Använd såvida det inte är förbjudet av elleverantören.</translation>
       <translation>Avstänging låg spänning (ignoreras alltid)</translation>
     </message>
     <message id="batterysettings_battery_bank">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="38"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="46"/>
       <source>Battery bank</source>
       <translation>Batteribank</translation>
     </message>
     <message id="batterysettings_relay_on_battery_monitor">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="56"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="64"/>
       <source>Relay (on battery monitor)</source>
       <translation>Relä (på batteriövervakare)</translation>
     </message>
     <message id="batterysettings_restore_factory_defaults">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="66"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="74"/>
       <source>Restore factory defaults</source>
       <translation>Återställ fabriksinställningar</translation>
     </message>
     <message id="batterysettings_restore">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="68"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="76"/>
       <source>Restore</source>
       <translation type="unfinished">Återställ</translation>
     </message>
     <message id="batterysettings_confirm_restore_factory_defaults">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="79"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="87"/>
       <source>Restore factory defaults?</source>
       <translation>Återställ till fabriksinställningar?</translation>
     </message>
     <message id="batterysettings_bluetooth_enabled">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="93"/>
+      <location filename="../../pages/settings/devicelist/battery/PageBatterySettings.qml" line="101"/>
       <source>Bluetooth Enabled</source>
       <translation>Bluetooth aktiv</translation>
     </message>
     <message id="batterysettingsbattery_nominal_voltage">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="24"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="21"/>
       <source>Nominal Voltage</source>
       <translation>Nominell spänning</translation>
     </message>
     <message id="batterysettingsbattery_12_volt">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="28"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="25"/>
       <source>12 Volt</source>
       <translation>12 Volt</translation>
     </message>
     <message id="batterysettingsbattery_24_volt">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="30"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="27"/>
       <source>24 Volt</source>
       <translation>24 volt</translation>
     </message>
     <message id="batterysettingsbattery_48_volt">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="32"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="29"/>
       <source>48 Volt</source>
       <translation>48 Volt</translation>
     </message>
@@ -3263,62 +3263,62 @@ Använd såvida det inte är förbjudet av elleverantören.</translation>
       <translation>Kapacitet</translation>
     </message>
     <message id="batterysettingsbattery_capacity">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="39"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="36"/>
       <source>Capacity</source>
       <translation type="unfinished">Kapacitet</translation>
     </message>
     <message id="batterysettingsbattery_charged_voltage">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="48"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="45"/>
       <source>Charged voltage</source>
       <translation>Laddad spänning</translation>
     </message>
     <message id="batterysettingsbattery_tail_current">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="59"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="56"/>
       <source>Tail current</source>
       <translation>Svansström</translation>
     </message>
     <message id="batterysettingsbattery_charged_detection_time">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="70"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="67"/>
       <source>Charged detection time</source>
       <translation>Laddad detekteringstid</translation>
     </message>
     <message id="batterysettingsbattery_peukert_exponent">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="79"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="76"/>
       <source>Peukert exponent</source>
       <translation>Peukerts exponent</translation>
     </message>
     <message id="batterysettingsbattery_charge_efficiency_factor">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="89"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="86"/>
       <source>Charge efficiency factor</source>
       <translation>Laddningseffektivitetsfaktor</translation>
     </message>
     <message id="batterysettingsbattery_current_threshold">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="98"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="95"/>
       <source>Current threshold</source>
       <translation>Nuvarande tröskelvärde</translation>
     </message>
     <message id="batterysettingsbattery_time_to_go_averaging_period">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="109"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="106"/>
       <source>Time-to-go averaging period</source>
       <translation>Medelvärde kvarvarande tid</translation>
     </message>
     <message id="batterysettingsbattery_time_to_go_discharge_floor">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="129"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="126"/>
       <source>Time-to-go discharge floor</source>
       <translation>Kvarvarande urladdningsgolv</translation>
     </message>
     <message id="batterysettingsbattery_current_offset">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="138"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="135"/>
       <source>Current offset</source>
       <translation>Nuvarande offset</translation>
     </message>
     <message id="batterysettingsbattery_synchronise_state_of_charge_to_100%">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="145"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="142"/>
       <source>Synchronise state-of-charge to 100%</source>
       <translation>Synkroniseringstillstånd för laddning till 100 %</translation>
     </message>
     <message id="batterysettingsbattery_calibrate_zero_current">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="161"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="158"/>
       <source>Calibrate zero current</source>
       <translation>Kalibrera nollström</translation>
     </message>
@@ -6380,7 +6380,7 @@ Vill du fortsätta?</translation>
       <translation>Larm om hög startbatterispänning</translation>
     </message>
     <message id="batterysettingsbattery_time_to_go_discharge_note">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="118"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="115"/>
       <source>Note that changing the Time-to-go discharge floor setting also changes the Low state-of-charge setting in the relay menu.</source>
       <translation>Observera att om du ändrar miniminivån för "tid kvar urladdning" ändrar du även inställningen för "låg laddningsstatus" i relämenyn</translation>
     </message>
@@ -11615,13 +11615,13 @@ Uppdatera till den senaste firmwaren för att kunna justera dessa inställningar
       <translation>Motor</translation>
     </message>
     <message id="batterysettingsbattery_sync">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="148"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="145"/>
       <source>Sync</source>
       <extracomment>Trigger a synchronisation of the battery SOC</extracomment>
       <translation>Synkronisera</translation>
     </message>
     <message id="batterysettingsbattery_set_to_0">
-      <location filename="../../pages/settings/devicelist/battery/PageBatterySettingsBattery.qml" line="163"/>
+      <location filename="../../pages/settings/devicelist/battery/BatteryBankModel.qml" line="160"/>
       <source>Set to 0</source>
       <translation>Ställ in på 0</translation>
     </message>
@@ -11742,35 +11742,25 @@ Uppdatera till den senaste firmwaren för att kunna justera dessa inställningar
       <source>Refresh</source>
       <translation>Uppdatera</translation>
     </message>
-    <message id="ac-limits-consumptionsettings_consumption_limit">
-      <location filename="../../pages/settings/devicelist/ac-in/AcLimitsConsumptionSettings.qml" line="22"/>
+    <message id="powerguard_consumption_active">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="25"/>
       <source>Consumption limit</source>
       <translation>Förbrukningsgräns</translation>
     </message>
-    <message id="ac-limits-consumptionsettings_consumption_power_limit">
-      <location filename="../../pages/settings/devicelist/ac-in/AcLimitsConsumptionSettings.qml" line="32"/>
+    <message id="powerguard_consumption_power_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="35"/>
       <source>Consumption power limit</source>
       <translation>Effektgräns för förbrukning</translation>
     </message>
-    <message id="ac-limits-consumptionsettings_consumption_current_limit">
-      <location filename="../../pages/settings/devicelist/ac-in/AcLimitsConsumptionSettings.qml" line="43"/>
-      <source>Consumption current limit</source>
-      <translation>Strömgräns för förbrukning</translation>
-    </message>
-    <message id="ac-limits-productionsettings_production_limit">
-      <location filename="../../pages/settings/devicelist/ac-in/AcLimitsProductionSettings.qml" line="22"/>
+    <message id="powerguard_production_active">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardProductionSettings.qml" line="25"/>
       <source>Production limit</source>
       <translation>Produktionsgräns</translation>
     </message>
-    <message id="ac-limits-productionsettings_production_power_limit">
-      <location filename="../../pages/settings/devicelist/ac-in/AcLimitsProductionSettings.qml" line="32"/>
+    <message id="powerguard_production_power_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardProductionSettings.qml" line="35"/>
       <source>Production power limit</source>
       <translation>Effektgräns för produktion</translation>
-    </message>
-    <message id="ac-limits-productionsettings_production_current_limit">
-      <location filename="../../pages/settings/devicelist/ac-in/AcLimitsProductionSettings.qml" line="43"/>
-      <source>Production current limit</source>
-      <translation>Strömgräns för produktion</translation>
     </message>
     <message id="settings_services_mqtt_access_paired_devices_only">
       <location filename="../../components/listitems/ListMqttAccessSwitch.qml" line="19"/>
@@ -11877,6 +11867,51 @@ Uppdatera till den senaste firmwaren för att kunna justera dessa inställningar
       <location filename="../../pages/settings/PageControllableLoadsPreferences.qml" line="51"/>
       <source>Only applies when using Optimized with BatteryLife. Opportunity Loads automatically resumes after a full charge.</source>
       <translation>Gäller endast när Optimerad med BatteryLife används. Överskottslaster återupptas automatiskt efter en full laddning.</translation>
+    </message>
+    <message id="settings_ble_gateway_access">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="88"/>
+      <source>BLE gateway access</source>
+      <translation>BLE-gatewayåtkomst</translation>
+    </message>
+    <message id="settings_ble_gateway_access_proxy">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="94"/>
+      <source>Proxy</source>
+      <translation>Proxy</translation>
+    </message>
+    <message id="settings_ble_gateway_access_proxy_and_direct">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="96"/>
+      <source>Proxy and direct</source>
+      <translation>Proxy och direkt</translation>
+    </message>
+    <message id="powerguard_consumption_l1_current_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="46"/>
+      <source>Consumption L1 current limit</source>
+      <translation>Strömgräns förbrukning L1</translation>
+    </message>
+    <message id="powerguard_consumption_l2_current_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="57"/>
+      <source>Consumption L2 current limit</source>
+      <translation>Strömgräns förbrukning L2</translation>
+    </message>
+    <message id="powerguard_consumption_l3_current_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="68"/>
+      <source>Consumption L3 current limit</source>
+      <translation>Strömgräns förbrukning L3</translation>
+    </message>
+    <message id="powerguard_production_l1_current_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardProductionSettings.qml" line="46"/>
+      <source>Production L1 current limit</source>
+      <translation>Strömgräns produktion L1</translation>
+    </message>
+    <message id="powerguard_production_l2_current_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardProductionSettings.qml" line="57"/>
+      <source>Production L2 current limit</source>
+      <translation>Strömgräns produktion L2</translation>
+    </message>
+    <message id="powerguard_production_l3_current_limit">
+      <location filename="../../pages/settings/devicelist/ac-in/PowerGuardProductionSettings.qml" line="68"/>
+      <source>Production L3 current limit</source>
+      <translation>Strömgräns produktion L3</translation>
     </message>
     <message id="dc_input">
       <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>

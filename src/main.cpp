@@ -189,7 +189,6 @@ void initBackend(bool *enableFpsCounter, bool *skipSplashScreen)
 	QCommandLineOption mockConfig({ "mc", "mock-conf" },
 		QGuiApplication::tr("Name of mock configuration"),
 		QGuiApplication::tr("mockConfig", "Configuration name"));
-	mockConfig.setDefaultValue("maximal");
 	parser.addOption(mockConfig);
 	optionList << mockConfig;
 
@@ -278,6 +277,17 @@ void initBackend(bool *enableFpsCounter, bool *skipSplashScreen)
 	}
 
 	parser.process(filteredArgs);
+
+	// Load a UI test configuration if --ui-test is specified.
+	Victron::VenusOS::UiTestConfiguration uiTestConf;
+	const QString uiTestName = parser.value(uiTest);
+	if (!uiTestName.isEmpty()) {
+		uiTestConf.load(uiTestName);
+	}
+
+	// Load the specified --mock-conf option.
+	QString mockConfName = parser.value(mockConfig);
+
 	Victron::VenusOS::BackendConnection *backend = Victron::VenusOS::BackendConnection::create();
 	if (parser.isSet(mqttAddress) || parser.isSet(mqttPortalId)) {
 		if (parser.isSet(mqttUser)) {
@@ -309,13 +319,10 @@ void initBackend(bool *enableFpsCounter, bool *skipSplashScreen)
 		}
 	} else if (parser.isSet(mqttPortalId)) {
 		backend->setType(Victron::VenusOS::BackendConnection::MqttSource, calculateMqttAddressFromPortalId(parser.value(mqttPortalId)));
-	} else if (parser.isSet(mockMode)) {
+	} else if (parser.isSet(mockMode) || !mockConfName.isEmpty() || uiTestConf.hasMockConfiguration()) {
+		// Use the mock backend if --mock or --mock-conf are set, or if the --ui-test option
+		// requires the mock backend.
 		backend->setType(Victron::VenusOS::BackendConnection::MockSource);
-		if (parser.isSet(noMockTimers)) {
-			mockTimersEnabled = false;
-		}
-		// Do not load the mock configuration until ui-test has been parsed, as the UI test config
-		// may specify a mock configuration.
 	} else {
 #if defined(VENUS_WEBASSEMBLY_BUILD)
 		backend->setUsername(queryMqttUser);
@@ -342,19 +349,31 @@ void initBackend(bool *enableFpsCounter, bool *skipSplashScreen)
 #endif
 	}
 
-	// Load the --ui-test option, if specified.
-	const QString uiTestConf = parser.value(uiTest);
-	if (!uiTestConf.isEmpty()) {
+	// Load the UI test configuration if --ui-test is specified.
+	if (uiTestConf.isValid()) {
 		Victron::VenusOS::UiTest::create()->loadConfiguration(uiTestConf);
 	}
 
-	// Load a mock configuration for mock mode, if --ui-test option was not set (since tests will
-	// specify their own mock configurations, if running in mock mode).
-	if (Victron::VenusOS::BackendConnection::create()->type() == Victron::VenusOS::BackendConnection::MockSource
-			&& Victron::VenusOS::UiTest::create()->testCaseCount() == 0) {
-		const QString configName = parser.value(mockConfig);
-		Victron::VenusOS::MockManager::create()->loadConfiguration(QString(":/data/mock/conf/%1.json").arg(configName));
-		Victron::VenusOS::MockManager::create()->setTimersActive(mockTimersEnabled);
+	// Set up the mock backend.
+	if (backend->type() == Victron::VenusOS::BackendConnection::MockSource) {
+		Victron::VenusOS::MockManager *mockManager = Victron::VenusOS::MockManager::create();
+		if (parser.isSet(noMockTimers)) {
+			mockTimersEnabled = false;
+		}
+		mockManager->setTimersActive(mockTimersEnabled);
+
+		if (!mockConfName.isEmpty() && uiTestConf.hasMockConfiguration()) {
+			qFatal() << "Error: --mock-conf was set but --ui-test" << parser.value(uiTest)
+					 << "already specifies a mock configuration:" << uiTestConf.dirName();
+		}
+		if (mockConfName.isEmpty()) {
+			// Use "maximal" as the default mock configuration, if none is set.
+			mockConfName = "maximal";
+		}
+
+		// Load the mock configuration.
+		const QString confJson = QString(":/data/mock/conf/%1.json").arg(mockConfName);
+		mockManager->loadConfiguration(confJson);
 	}
 
 	if (parser.isSet(fpsCounter) || queryFpsCounter.contains(QStringLiteral("enable"))) {
@@ -426,24 +445,70 @@ EM_JS(int, getWindowInnerHeight, (), {
 	return window.innerHeight;
 });
 
-EM_JS(void, setContentEditable, (bool editable), {
-	// Work-around Qt Android issue where keyboard constantly pops up (see QTBUG-88803)
-	const android = /Android/i.test(navigator.userAgent);
-	if (android) {
-		const inputs = document.querySelectorAll('input[type="text"]');
-		for (let i = 0; i < inputs.length; i++) {
-			const input = inputs[i];
-			const rect = input.getBoundingClientRect();
-
-			// Qt <input> has no identifier so identify using off-screen co-ordinates.
-			if (rect.x === -1000 && rect.y === -1000) {
-				input.style.visibility = editable ? "visible" : "hidden";
-				if (editable) {
-					input.focus();
-				}
+EM_JS(void, setInputMethodActive, (bool active), {
+	// Keep the browser's on-screen keyboard open while a Qt item accepts input.
+	//
+	// The keyboard is open exactly while Qt's hidden IME <input> element (created
+	// by QWasmInputContext, recognizable by its 'data-qinputcontext' JS property)
+	// holds DOM focus. Qt calls preventDefault() on all pointer events, which is
+	// supposed to suppress the browser's synthesized compatibility mouse events,
+	// but older mobile WebViews (e.g. Raymarine/Garmin MFDs) still fire them after
+	// touchend - or run context-menu handling after a long press - which blurs
+	// the IME input onto <body> and closes the keyboard right after it opened.
+	// See https://github.com/victronenergy/venus-html5-app/issues/558
+	//
+	// Two defenses, both armed only while a Qt item accepting input method has
+	// active focus:
+	//
+	// 1. Cancel touchend to suppress the compatibility machinery at the source
+	//    (the classic "FastClick" technique, implemented by exactly these old
+	//    WebViews). Qt is unaffected: it consumes pointerup, which fires before
+	//    touchend, and never uses the compatibility mouse events.
+	//
+	// 2. As a safety net for steal paths not covered by 1, restore focus when
+	//    the IME input blurs and shortly after nothing but <body> holds focus.
+	//    Qt's intentional keyboard dismissal is unaffected: it deactivates the
+	//    field first (disarming this guard, synchronously before any queued
+	//    callback runs) and refocuses its canvas rather than <body>.
+	Module.qtInputMethodActive = active;
+	if (Module.qtImeFocusGuardInstalled)
+		return;
+	Module.qtImeFocusGuardInstalled = true;
+	document.addEventListener("touchend", function(e) {
+		if (!Module.qtInputMethodActive)
+			return;
+		// Only cancel touches on Qt-owned elements: the container elements the
+		// embedder passed to qtLoad() (Qt renders in a shadow DOM inside them,
+		// so event retargeting makes the container itself the target of touches
+		// on the Qt UI) and the light-DOM IME input. Leaves any surrounding DOM
+		// of the embedding page (e.g. VRM) untouched while the keyboard is open.
+		var target = e.target;
+		var qtOwned = target["data-qinputcontext"] !== undefined
+			|| (Module.qtContainerElements || []).some(function(container) {
+				return container === target || container.contains(target);
+			});
+		if (qtOwned)
+			e.preventDefault();
+	}, { passive: false, capture: true });
+	document.addEventListener("focusout", function(e) {
+		var input = e.target;
+		if (!input || input["data-qinputcontext"] === undefined)
+			return;
+		// One frame is enough for an intentional focus move to land on its new
+		// target; exact timing is not critical, as the guard re-arms on every
+		// focusout of the IME input, so even a steal arriving later (e.g. a
+		// delayed compatibility click) re-triggers it.
+		if (Module.qtImeRestoreRaf !== undefined)
+			cancelAnimationFrame(Module.qtImeRestoreRaf);
+		Module.qtImeRestoreRaf = requestAnimationFrame(function() {
+			Module.qtImeRestoreRaf = undefined;
+			if (Module.qtInputMethodActive
+					&& document.activeElement === document.body
+					&& input.isConnected) {
+				input.focus({ preventScroll: true });
 			}
-		}
-	}
+		});
+	}, true);
 });
 
 EM_JS(bool, hasNativeVirtualKeyboard, (), {
@@ -454,10 +519,37 @@ EM_JS(bool, hasNativeVirtualKeyboard, (), {
 		|| (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints && navigator.maxTouchPoints > 1);
 });
 
+EM_JS(void, wasmPerfMark, (const char *name), {
+	// window.wasmDebugEnabled is set by wasm/index.html once the HEAD
+	// /debug check resolves, before qtLoad() (and therefore main()) runs.
+	if (!window.wasmDebugEnabled) return;
+	const label = UTF8ToString(name);
+	try { performance.mark(label); } catch (e) {}
+	console.log("[WASM Perf] " + label + " [t=" + performance.now().toFixed(1) + "ms]");
+});
+
 #endif
+
+// Log a named startup phase to the browser console and DevTools performance
+// timeline, in the same format as the [WASM Perf] entries in wasm/index.html.
+// No-op on non-WASM builds.
+static inline void perfMark(const char *phase)
+{
+#if defined(VENUS_WEBASSEMBLY_BUILD)
+	wasmPerfMark(phase);
+#else
+	Q_UNUSED(phase);
+#endif
+}
 
 int main(int argc, char *argv[])
 {
+#if defined(VENUS_WEBASSEMBLY_BUILD)
+	// Timestamp Qt log lines so browser console output can be correlated with
+	// the [WASM Perf] entries logged by wasm/index.html.
+	qSetMessagePattern(QStringLiteral("[%{time process}] %{if-category}%{category}: %{endif}%{message}"));
+#endif
+	perfMark("main() entered");
 	qInfo().nospace() << "Victron gui version: v" << PROJECT_VERSION_MAJOR << "." << PROJECT_VERSION_MINOR << "." << PROJECT_VERSION_PATCH;
 
 	// Must set the default QSurfaceFormat before creating the app object.
@@ -505,6 +597,7 @@ int main(int argc, char *argv[])
 	qputenv("QT_SCALE_FACTOR", scaleAsQByteArray);
 
 	QGuiApplication app(argc, argv);
+	perfMark("QGuiApplication created");
 	QGuiApplication::setApplicationName("Venus");
 	QGuiApplication::setApplicationVersion("2.0");
 
@@ -521,6 +614,7 @@ int main(int argc, char *argv[])
 	QZXing::registerQMLImageProvider(engine);
 
 	initBackend(&enableFpsCounter, &skipSplashScreen);
+	perfMark("backend initialized");
 	QObject::connect(&engine, &QQmlEngine::quit, &app, &QGuiApplication::quit);
 
 	/* Force construction of screen blanker */
@@ -542,6 +636,7 @@ int main(int argc, char *argv[])
 	languageLoader->setFontUrlPrefix(fontUrlPrefix);
 #endif
 	languageLoader->init(); // load the translation catalogue.
+	perfMark("translations loaded");
 
 	/* Force construction of gui plugin loader */
 	Victron::VenusOS::GuiPluginLoader *guiPluginLoader = Victron::VenusOS::GuiPluginLoader::create(&engine);
@@ -550,18 +645,20 @@ int main(int argc, char *argv[])
 	Victron::VenusOS::FrameRateModel* fpsCounter = Victron::VenusOS::FrameRateModel::create();
 
 	QQmlComponent component(&engine, QUrl(QStringLiteral("qrc:/venus-gui-v2/Main.qml")));
+	perfMark("Main.qml compiled");
 	if (component.isError()) {
 		qWarning() << component.errorString();
 		return EXIT_FAILURE;
 	}
 
 	QScopedPointer<QObject> object(component.beginCreate(engine.rootContext()));
+	perfMark("root object instantiated (beginCreate)");
 	const auto window = qobject_cast<QQuickWindow *>(object.data());
 
 #if defined(VENUS_WEBASSEMBLY_BUILD)
 	QObject::connect(window, &QQuickWindow::activeFocusItemChanged, [window] {
-		const bool editable = window->activeFocusItem() != nullptr && (window->activeFocusItem()->flags() & QQuickItem::ItemAcceptsInputMethod);
-		setContentEditable(editable);
+		const bool acceptsInputMethod = window->activeFocusItem() != nullptr && (window->activeFocusItem()->flags() & QQuickItem::ItemAcceptsInputMethod);
+		setInputMethodActive(acceptsInputMethod);
 	});
 #endif
 
@@ -576,9 +673,20 @@ int main(int argc, char *argv[])
 
 	engine.setIncubationController(window->incubationController());
 
+#if defined(VENUS_WEBASSEMBLY_BUILD)
+	// Report when the first frame reaches the browser: this is when the QML
+	// splash becomes visible, well before the asynchronously loaded scene.
+	// WASM uses the single-threaded basic render loop, so a direct connection
+	// is safe here.
+	QObject::connect(window, &QQuickWindow::frameSwapped, window,
+		[] { perfMark("first frame rendered (QML splash visible)"); },
+		Qt::ConnectionType(Qt::DirectConnection | Qt::SingleShotConnection));
+#endif
+
 	/* Write to window properties here to perform any additional initialization
 	   before initial binding evaluation. */
 	component.completeCreate();
+	perfMark("root object completed (completeCreate)");
 
 	if (skipSplashScreen) {
 		QMetaObject::invokeMethod(window, "skipSplashScreen");
@@ -598,5 +706,6 @@ int main(int argc, char *argv[])
 		window->showFullScreen();
 	}
 
+	perfMark("window shown, entering event loop");
 	return app.exec();
 }

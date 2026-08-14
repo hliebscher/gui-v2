@@ -18,6 +18,7 @@ qt_add_qml_module(uicompare
     QML_FILES Main.qml ImageListView.qml CompareView.qml ImageListViewDelegate.qml Toolbar.qml
     SOURCES applicationsettings.h applicationsettings.cpp
     SOURCES comparemodel.h comparemodel.cpp
+    SOURCES imagecomparator.h imagecomparator.cpp
     SOURCES imageprovider.h imageprovider.cpp
 )
 
@@ -26,6 +27,7 @@ set_target_properties(uicompare PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 )
 
 target_link_libraries(uicompare

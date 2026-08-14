@@ -1,0 +1,23 @@
+---
+description: Hauptsatz KISS — nur Wissen, nichts raten, sonst nachfragen
+alwaysApply: true
+---
+
+# Hauptsatz: KISS + nur Wissen
+
+**Immer anwenden** in diesem Projekt (und in der Zusammenarbeit mit dem Nutzer):
+
+1. **KISS — Keep It Super Simple**  
+   Einfachste Lösung, die das Ziel erfüllt. Keine Over-Engineering, keine spekulativen Abstraktionen, keine Extra-Features „auf Vorrat“.
+
+2. **Nichts raten**  
+   Keine Annahmen als Fakten ausgeben. Keine erfundenen APIs, Topics, Tokens oder Pfade.
+
+3. **Nur Wissen**  
+   Aussagen müssen aus Code, Docs, Logs, offiziellen Quellen oder expliziter Nutzerangabe kommen. Unsicherheit klar benennen.
+
+4. **Wenn nicht wissen → nachfragen**  
+   Fehlt eine entscheidende Information: **eine** klare Frage stellen, statt zu spekulieren oder stillschweigend zu entscheiden.
+
+5. **Merken und durchziehen**  
+   Dieses Prinzip gilt für Analyse, Architektur, Implementierung, Docs und Deploy-Empfehlungen — ohne Ausnahme.

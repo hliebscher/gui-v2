@@ -1,0 +1,37 @@
+---
+description: OCC Phase-1/2 Plan — Board Node-RED zuerst, OCC eingefroren. Bei Heizungs-/Gateway-/MQTT-Arbeit lesen.
+alwaysApply: true
+---
+
+# OCC Heizungs-Roadmap (Stand 2026-07-27)
+
+Quelle der Wahrheit: `docs/occ/12-entscheidung-occ-vs-dbus-mqtt-devices.md`  
+Index: `docs/occ/00-wissensspeicher.md`
+
+## Aktuell aktiv: Phase 1 (Board, ≤ 2 Wochen)
+
+- **Ziel:** Victron-Vorstand — Heizung in **Stock-GUI** (Switch Pane / DeviceList), Story „läuft auf Victron-Standard“
+- **Stack:** Stock-Cerbo + **Node-RED Large** + Gateway Topics `occ/heating/…`
+- **Payload:** überall `{"value": …}`
+- **Schreibpfad:** GUI → Virtual Device → Node-RED → `occ/heating/…/set` → ESP
+- **Hardware:** Hybrid — echte Ist-Werte; Write zuerst MQTT (ALDE-Write optional Stub)
+- **Modell:** generisches Heizungsprofil; ALDE = erstes Mapping
+- **Hard-Cut Must:** 2 Zonen Soll/Ist + Gas
+- **Nice:** Elektro 0–3 kW + Priorität Gas/Elektro
+- **Artefakt:** eigenes kleines Node-RED-Repo (nicht in gui-v2)
+- **Fork-Cerbo:** nur intern/Regression — **nicht** Board-Narrativ
+- **dbus-mqtt-devices:** nicht in Phase 1
+
+## Eingefroren bis Board: Phase 2
+
+- **OCC-Bridge + HeatingPage** = Produkt-Primärpfad (Ansatz A)
+- Keine Feature-Arbeit an HeatingPage/`dbus-mqtt-occ` bis Board durch
+- Node-RED ist nur PoC/Board — Produktziel **ohne** Node-RED-Abhängigkeit
+- Nach Board: Payload in Bridge angleichen → Outdoor/Gas/kW/Prio → HeatingPage
+
+## Nicht tun
+
+- OCC/HeatingPage parallel zu Phase 1 ausbauen
+- Board-Demo auf Fork-HeatingPage stützen
+- dbus-mqtt-devices als Parallel-PoC in Phase 1
+- Umsetzung starten ohne Bezug auf Doc 12 / diesen Plan

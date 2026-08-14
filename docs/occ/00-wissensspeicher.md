@@ -1,6 +1,6 @@
 # OpenCamperCore — Wissensspeicher (Index)
 
-**Stand:** 2026-06-24  
+**Stand:** 2026-07-27  
 **Branch:** `v_2026.6.2`  
 **Fork:** [hliebscher/gui-v2](https://github.com/hliebscher/gui-v2)
 
@@ -36,6 +36,9 @@ Dieser Wissensspeicher ist die **zentrale Einstiegsseite** für OCC-Arbeit am Vi
 | 07 | [07-architektur-entscheidung.md](07-architektur-entscheidung.md) | Hybrid-Architektur (Fork + Plugin + Bridge) |
 | 08 | [08-steuerseite-3heizung-2klima-design.md](08-steuerseite-3heizung-2klima-design.md) | Design Steuerseite 3+2 |
 | 09 | [09-implementierung-steuerseite-2026-06-24.md](09-implementierung-steuerseite-2026-06-24.md) | **Implementierungslog** Steuerseite + Deploy |
+| 10 | [10-schritt-2-heatingpage-ist-soll.md](10-schritt-2-heatingpage-ist-soll.md) | Ist/Soll + Heiz-Max 30 °C |
+| 11 | [11-victron-mqtt-token-virtual-devices-esp32.md](11-victron-mqtt-token-virtual-devices-esp32.md) | MQTT Auth/Token, Virtual Devices, ESP32/ALDE |
+| 12 | [12-entscheidung-occ-vs-dbus-mqtt-devices.md](12-entscheidung-occ-vs-dbus-mqtt-devices.md) | Phasenplan: Phase 1 Node-RED Board / Phase 2 OCC; A vs B Scorecard |
 
 ---
 
@@ -43,6 +46,8 @@ Dieser Wissensspeicher ist die **zentrale Einstiegsseite** für OCC-Arbeit am Vi
 
 | Thema | Wert |
 |-------|------|
+| **Aktueller Fokus** | **Phase 1:** Stock + Node-RED Board-Demo (`occ/heating/…`); OCC/HeatingPage **eingefroren** → [12…](12-entscheidung-occ-vs-dbus-mqtt-devices.md) |
+| Cursor-Rule | `.cursor/rules/occ-phasenplan.mdc` (`alwaysApply`) |
 | Aktiver Branch | `v_2026.6.2` |
 | GX-Gerät (Tailscale) | `100.65.95.55` |
 | GUI deployen | `./scripts/build-all.sh -H 100.65.95.55` |
@@ -69,6 +74,8 @@ GUI v2 Fork (HeatingPage, HeatingCard, …)
 ```
 
 **Schichten:** Bridge (Python, GUI-unabhängig) → Fork-QML (Steuerseite, Control Card) → optional Plugin (`plugins/occ-heating/`, derzeit nicht aktiv genutzt).
+
+**Aktuell (2026-07-27):** Phase 1 = Stock + Node-RED + Topics `occ/heating/…` (Board). Phase 2 = OCC-Bridge + HeatingPage (eingefroren bis Board). Details: [12-entscheidung…](12-entscheidung-occ-vs-dbus-mqtt-devices.md).
 
 ---
 
@@ -125,6 +132,9 @@ Enthält GX-Build + WASM-Upload. Nach Deploy: GUI auf GX neu laden (vmrlogger-Re
 | HeatingPage leer (nur Überschriften) | `Repeater` direkt in `VisibleItemModel` | Slider in `SettingsColumn { Repeater { … } }` wrappen |
 | Browser zeigt alte GUI | WASM-Cache / nur WASM aktualisiert, native nicht | Hard-Refresh; `./scripts/build-gx.sh -H …` prüfen (Upload-OK?) |
 | WASM ohne Heizungsdaten | Falsche MQTT-UID (`mqtt/heating.occ`) | `BackendConnection.serviceUidFromName("com.victronenergy.heating.occ", 100)` |
+| Payload-Mismatch `occ/…` | Doc 11/`{"value":…}` vs. Bridge Plain/`str(value)` | Vertrag ab jetzt **`{"value":…}`**; Bridge in Phase 2 angleichen |
+| Board-Scope vs. Deadline | Volles ALDE-Set + ≤ 2 Wochen | Hard-Cut: Must = 2 Zonen + Gas; Nice = kW/Prio |
+| Parallel dbus-mqtt-devices | Ablenkung von Phase‑1‑Story | In Phase 1 **nicht** parallel betreiben |
 
 ---
 
@@ -132,6 +142,8 @@ Enthält GX-Build + WASM-Upload. Nach Deploy: GUI auf GX neu laden (vmrlogger-Re
 
 | Datum | Ereignis | Commits / Log |
 |-------|----------|---------------|
+| 2026-07-27 | Phasenplan: Phase 1 Node-RED Board, OCC = Phase 2 (eingefroren); Doc 12 umgelabelt | [12-entscheidung…](12-entscheidung-occ-vs-dbus-mqtt-devices.md) |
+| 2026-07-26 | Subagenten A vs B; Doc 11 MQTT/Token/Virtual Devices | [11…](11-victron-mqtt-token-virtual-devices-esp32.md), [12…](12-entscheidung-occ-vs-dbus-mqtt-devices.md) |
 | 2026-06-24 | Steuerseite 3 Heiz + 2 Klima implementiert | `02cd95ea` |
 | 2026-06-24 | dbus-mqtt-occ Deploy-Fixes (ve_utils, paho v2) | `cf90d590` |
 | 2026-06-24 | dbus-mqtt-occ auf GX `100.65.95.55` deployed | [09-implementierung…](09-implementierung-steuerseite-2026-06-24.md) |

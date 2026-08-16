@@ -93,7 +93,7 @@ TestCase {
 
 		// Default / restore
 		blanker.enabled = true
-		blanker.standbyClockDuration = 28800000
+		compare(blanker.standbyClockDuration, 28800000)
 		blanker.setDisplayOn()
 		compare(blanker.blanked, false)
 		compare(blanker.standbyClockActive, false)

@@ -198,6 +198,7 @@ void ScreenBlanker::setStandbyClockDuration(int timeMs)
 	if (timeMs < 0 || timeMs == m_standbyClockDurationMs) {
 		return;
 	}
+	const bool wasStandbyClockActive = standbyClockActive();
 	m_standbyClockDurationMs = timeMs;
 	// Wenn bereits in Clock-Phase: Timer neu setzen
 	if (m_blanked && !m_hwBlanked) {
@@ -209,7 +210,9 @@ void ScreenBlanker::setStandbyClockDuration(int timeMs)
 		}
 	}
 	emit standbyClockDurationChanged();
-	emit standbyClockActiveChanged(); // falls sichtbarkeitsrelevant
+	if (wasStandbyClockActive != standbyClockActive()) {
+		emit standbyClockActiveChanged();
+	}
 }
 
 void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)

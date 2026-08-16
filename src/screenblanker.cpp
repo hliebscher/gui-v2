@@ -165,13 +165,16 @@ void ScreenBlanker::setDisplayOn()
 
 void ScreenBlanker::setDisplayOff()
 {
-	if (m_enabled) {
-		m_blankingTimer.stop();
-		// Sofort Standby anzeigen, Backlight aber erst nach kurzer Verzögerung aus.
-		setBlanked(true, m_finalDisplayOffDelayMs == 0);
-		if (m_finalDisplayOffDelayMs > 0) {
-			m_finalOffTimer.start(m_finalDisplayOffDelayMs);
-		}
+	if (!m_enabled) {
+		return;
+	}
+	m_blankingTimer.stop();
+	if (m_standbyClockDurationMs == 0) {
+		setBlanked(true, true);
+		m_finalOffTimer.stop();
+	} else {
+		setBlanked(true, false);
+		m_finalOffTimer.start(m_standbyClockDurationMs);
 	}
 }
 
@@ -180,9 +183,39 @@ bool ScreenBlanker::blanked() const
 	return m_blanked;
 }
 
+bool ScreenBlanker::standbyClockActive() const
+{
+	return m_blanked && !m_hwBlanked && m_standbyClockDurationMs > 0;
+}
+
+int ScreenBlanker::standbyClockDuration() const
+{
+	return m_standbyClockDurationMs;
+}
+
+void ScreenBlanker::setStandbyClockDuration(int timeMs)
+{
+	if (timeMs < 0 || timeMs == m_standbyClockDurationMs) {
+		return;
+	}
+	m_standbyClockDurationMs = timeMs;
+	// Wenn bereits in Clock-Phase: Timer neu setzen
+	if (m_blanked && !m_hwBlanked) {
+		m_finalOffTimer.stop();
+		if (m_standbyClockDurationMs == 0) {
+			setBlanked(true, true);
+		} else {
+			m_finalOffTimer.start(m_standbyClockDurationMs);
+		}
+	}
+	emit standbyClockDurationChanged();
+	emit standbyClockActiveChanged(); // falls sichtbarkeitsrelevant
+}
+
 void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)
 {
 	const bool stateChanged = blanked != m_blanked;
+	const bool wasStandbyClockActive = standbyClockActive();
 
 	if (stateChanged) {
 		m_blanked = blanked;
@@ -199,6 +232,10 @@ void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)
 		if (!writeToFile(m_blankDevice, blanked ? 1 : 0)) {
 			qWarning() << "ScreenBlanker: unable to change screen blank status to" << blanked;
 		}
+	}
+
+	if (wasStandbyClockActive != standbyClockActive()) {
+		emit standbyClockActiveChanged();
 	}
 }
 

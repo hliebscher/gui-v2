@@ -25,6 +25,8 @@ class ScreenBlanker : public QObject
 	Q_PROPERTY(bool supported READ supported CONSTANT FINAL)
 	Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged FINAL)
 	Q_PROPERTY(int displayOffTime READ displayOffTime WRITE setDisplayOffTime NOTIFY displayOffTimeChanged FINAL)
+	Q_PROPERTY(int standbyClockDuration READ standbyClockDuration WRITE setStandbyClockDuration NOTIFY standbyClockDurationChanged FINAL)
+	Q_PROPERTY(bool standbyClockActive READ standbyClockActive NOTIFY standbyClockActiveChanged FINAL)
 	Q_PROPERTY(QQuickWindow* window READ window WRITE setWindow NOTIFY windowChanged FINAL)
 
 public:
@@ -44,6 +46,11 @@ public:
 	int displayOffTime() const;
 	void setDisplayOffTime(int time);
 
+	int standbyClockDuration() const;
+	void setStandbyClockDuration(int timeMs);
+
+	bool standbyClockActive() const;
+
 	QQuickWindow* window() const;
 	void setWindow(QQuickWindow* window);
 
@@ -51,6 +58,8 @@ Q_SIGNALS:
 	void enabledChanged();
 	void blankedChanged();
 	void displayOffTimeChanged();
+	void standbyClockDurationChanged();
+	void standbyClockActiveChanged();
 	void windowChanged();
 protected:
 	bool eventFilter(QObject *obj, QEvent *event) override;
@@ -72,7 +81,7 @@ private:
 	QQuickWindow *m_window = nullptr;
 	QTimer m_blankingTimer;
 	QTimer m_finalOffTimer;
-	const int m_finalDisplayOffDelayMs = 28800000; // 8h Gnadenfrist für Backlight
+	int m_standbyClockDurationMs = 28800000;
 	QString m_blankDevice;
 };
 

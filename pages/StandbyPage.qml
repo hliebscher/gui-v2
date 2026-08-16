@@ -10,7 +10,7 @@ Item {
 	id: root
 
 	anchors.fill: parent
-	visible: ScreenBlanker.supported && ScreenBlanker.blanked
+	visible: ScreenBlanker.supported && ScreenBlanker.standbyClockActive
 
 	Rectangle {
 		anchors.fill: parent

@@ -19,6 +19,7 @@
         "/Settings/Gui/Gauges/Speed/Max": 50,
         "/Settings/Gui/TouchEnabled": 1,
         "/Settings/Gui2/OnBoarding": 1,
+        "/Settings/Gui2/StandbyClockDuration": 28800,
         "/Settings/Gui2/StartPage": 0,
         "/Settings/Gui2/StartPageName": "",
         "/Settings/Gui2/StartPageTimeout": 0,

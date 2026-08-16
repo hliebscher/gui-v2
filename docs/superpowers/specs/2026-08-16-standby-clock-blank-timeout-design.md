@@ -117,7 +117,15 @@ Empfehlung: explizite Property `standbyClockActive` vom C++ Blanker (klar, testb
 - `dataItem.uid: …/Settings/Gui2/StandbyClockDuration`  
 - `optionModel` wie Abschnitt 3  
 
-Local Settings / GUI2-Pfad: wie bei `StatusBar/TemperatureSensorIndex` — Venus legt fehlende Keys typischerweise bei erstem Write an; falls Fork eigene Defaults braucht, in bestehendem Settings-Bootstrap nur dokumentieren/ergänzen falls vorhanden.
+`SetValue` erzeugt fehlende Venus-Settings nicht. Der native D-Bus-Backend-Start registriert
+`Gui2/StandbyClockDuration` deshalb idempotent über
+`com.victronenergy.Settings.AddSettings` mit Default `28800`, Integer-Typ sowie Min/Max
+`0`/`28800`. WASM registriert keine lokalen Settings. Für bestehende Installationen ist die
+äquivalente manuelle Registrierung:
+
+```sh
+dbus -y com.victronenergy.settings /Settings AddSetting Gui2 StandbyClockDuration 28800 i 0 28800
+```
 
 ### 5.5 Tests
 
@@ -133,7 +141,7 @@ Local Settings / GUI2-Pfad: wie bei `StatusBar/TemperatureSensorIndex` — Venus
 - [ ] Default ohne Setting-Änderung: Verhalten wie vor dem Feature (Uhr bis ~8 h, dann Blank).  
 - [ ] Setting „Aus (0)“: nach Display-off **kein** Uhr-Overlay, Display dunkel.  
 - [ ] Setting z. B. 5 min: Uhr ~5 min sichtbar, danach dunkel; Touch weckt.  
-- [x] Setting erscheint unter Display-off, User-Level, nicht auf WASM.  
+- [x] Setting ist registriert und erscheint unter Display-off, User-Level, nicht auf WASM.
 - [ ] Manuelles Display-aus (StatusBar) respektiert dieselbe Duration.  
 - [x] DE-Strings verständlich; Overrides gepflegt falls nötig.  
 - [ ] ScreenBlanker-Unit-Test grün für Duration 0 und > 0.
@@ -150,6 +158,7 @@ Local Settings / GUI2-Pfad: wie bei `StatusBar/TemperatureSensorIndex` — Venus
 | DE-Strings | `translation-overrides.json`, `venus-gui-v2_de.ts` | ✓ abgehakt |
 | Unit-Test | Desktop-Build `cmake -B build-desktop` | Blockiert: Qt6Mqtt fehlt in gcc_64 |
 | GX-Compile + Deploy | `./scripts/build-all.sh -H 100.65.95.55` (2026-08-16) | ✓ Exit 0 — GX 131 s, WASM 181 s, Upload + Service-Restart OK |
+| Setting-Registrierung | `AddSetting` + `GetValue` auf `100.65.95.55` (2026-08-16) | ✓ `GetValue` liefert `28800`; Startup-Registrierung via `AddSettings` |
 | GX-Smoke | Host `100.65.95.55`: SSH ok, interaktive Idle/Uhr/Blank-Checks | Nicht durchgeführt (interaktiv) |
 
 ---

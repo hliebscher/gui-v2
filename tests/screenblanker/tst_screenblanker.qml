@@ -112,7 +112,9 @@ TestCase {
 		blanker.setDisplayOff()
 		compare(blanker.blanked, true)
 		compare(blanker.standbyClockActive, true)
-		tryCompare(blanker, "standbyClockActive", false, 500)
+		wait(300)
+		// Desktop has no hardware blank device. A failed write must keep the clock active.
+		compare(blanker.standbyClockActive, true)
 		compare(blanker.blanked, true)
 
 		blanker.setDisplayOn()

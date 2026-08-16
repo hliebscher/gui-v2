@@ -231,8 +231,9 @@ void ScreenBlanker::setBlanked(bool blanked, bool applyHardware)
 	}
 
 	if (supported() && applyHardware && blanked != m_hwBlanked) {
-		m_hwBlanked = blanked;
-		if (!writeToFile(m_blankDevice, blanked ? 1 : 0)) {
+		if (writeToFile(m_blankDevice, blanked ? 1 : 0)) {
+			m_hwBlanked = blanked;
+		} else {
 			qWarning() << "ScreenBlanker: unable to change screen blank status to" << blanked;
 		}
 	}

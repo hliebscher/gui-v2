@@ -51,8 +51,11 @@ FocusScope {
 			ScreenBlanker.enabled = Qt.binding(function() { return !UiConfig.splashScreenVisible && !(Global.notifications?.notificationButtonVisible ?? false) && !Global.boatPageActive })
 			ScreenBlanker.displayOffTime = Qt.binding(function() { return screenBlanker.displayOffItem.valid ? 1000*screenBlanker.displayOffItem.value : 0 })
 			ScreenBlanker.standbyClockDuration = Qt.binding(function() {
+				const value = screenBlanker.standbyClockDurationItem.value
 				return screenBlanker.standbyClockDurationItem.valid
-					? 1000 * screenBlanker.standbyClockDurationItem.value
+						&& typeof value === "number"
+						&& Number.isFinite(value)
+					? 1000 * value
 					: 28800000
 			})
 			ScreenBlanker.window = root.Window.window

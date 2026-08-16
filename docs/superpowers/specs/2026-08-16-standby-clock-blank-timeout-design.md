@@ -157,9 +157,10 @@ dbus -y com.victronenergy.settings /Settings AddSetting Gui2 StandbyClockDuratio
 | Manuelles Display-aus | Code-Review: `StatusBar` → `ScreenBlanker.setDisplayOff()` | Laufzeit offen |
 | DE-Strings | `translation-overrides.json`, `venus-gui-v2_de.ts` | ✓ abgehakt |
 | Unit-Test | Desktop-Build `cmake -B build-desktop` | Blockiert: Qt6Mqtt fehlt in gcc_64 |
-| GX-Compile + Deploy | `./scripts/build-all.sh -H 100.65.95.55` (2026-08-16) | ✓ Exit 0 — GX 131 s, WASM 181 s, Upload + Service-Restart OK |
-| Setting-Registrierung | `AddSetting` + `GetValue` auf `100.65.95.55` (2026-08-16) | ✓ `GetValue` liefert `28800`; Startup-Registrierung via `AddSettings` |
-| GX-Smoke | Host `100.65.95.55`: SSH ok, interaktive Idle/Uhr/Blank-Checks | Nicht durchgeführt (interaktiv) |
+| GX-Compile + Deploy | `./scripts/build-all.sh -H 100.65.95.55` (2026-08-16 ~22:43) | ✓ Exit 0 — **vor** Commit `73ada946` (Setting-Registrierung). Neuer Deploy des Tip empfohlen. |
+| Setting-Registrierung | manueller `AddSetting` + `GetValue` auf GX; Code: `BackendConnection::initDBusConnection` → `AddSettings` | ✓ Key `28800` nach manuellem Add; Startup-Code im Tip, Deploy des Tip ggf. noch offen |
+| GX-Smoke | Host `100.65.95.55`: Idle/Uhr/Blank 0 / 5 min / 8 h | Nicht durchgeführt (interaktiv) |
+| Unit-Test Duration >0 | Desktop: Write schlägt fehl → Assertion hält Clock aktiv (I2) | Erfolgspfad (HW-Write OK → Phase endet) nur per GX-Smoke belegbar |
 
 ---
 

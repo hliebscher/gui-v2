@@ -1,6 +1,6 @@
-build-*/
-build/
 CMakeLists.txt.user
 CMakeLists.txt.user.*
 src/themeobjects.h
+build/
+build-*/
 .superpowers/

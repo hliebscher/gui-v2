@@ -133,10 +133,24 @@ Local Settings / GUI2-Pfad: wie bei `StatusBar/TemperatureSensorIndex` — Venus
 - [ ] Default ohne Setting-Änderung: Verhalten wie vor dem Feature (Uhr bis ~8 h, dann Blank).  
 - [ ] Setting „Aus (0)“: nach Display-off **kein** Uhr-Overlay, Display dunkel.  
 - [ ] Setting z. B. 5 min: Uhr ~5 min sichtbar, danach dunkel; Touch weckt.  
-- [ ] Setting erscheint unter Display-off, User-Level, nicht auf WASM.  
+- [x] Setting erscheint unter Display-off, User-Level, nicht auf WASM.  
 - [ ] Manuelles Display-aus (StatusBar) respektiert dieselbe Duration.  
-- [ ] DE-Strings verständlich; Overrides gepflegt falls nötig.  
+- [x] DE-Strings verständlich; Overrides gepflegt falls nötig.  
 - [ ] ScreenBlanker-Unit-Test grün für Duration 0 und > 0.
+
+### Verifikation Task 4 (2026-08-16)
+
+| Kriterium | Methode | Ergebnis |
+|-----------|---------|----------|
+| Default 8 h | Code-Review: `m_standbyClockDurationMs = 28800000`, Binding invalid → 28800000 | Laufzeit/GX-Smoke offen |
+| Setting 0 | Code-Review + `test_standby_clock_duration()` vorhanden | Unit-Test blockiert (Qt6Mqtt); GX-Smoke offen |
+| Setting 5 min | — | GX-Smoke offen (manuell) |
+| Setting-UI | Code-Review `PageSettingsDisplayAndAppearance.qml` | ✓ abgehakt |
+| Manuelles Display-aus | Code-Review: `StatusBar` → `ScreenBlanker.setDisplayOff()` | Laufzeit offen |
+| DE-Strings | `translation-overrides.json`, `venus-gui-v2_de.ts` | ✓ abgehakt |
+| Unit-Test | Desktop-Build `cmake -B build-desktop` | Blockiert: Qt6Mqtt fehlt in gcc_64 |
+| GX-Compile | Incremental `cmake --build …/build-gx --target venus-gui-v2` | ✓ Exit 0 |
+| GX-Smoke | Host `100.65.95.55`: Ping fail, SSH ok | Nicht durchgeführt (interaktiv) |
 
 ---
 

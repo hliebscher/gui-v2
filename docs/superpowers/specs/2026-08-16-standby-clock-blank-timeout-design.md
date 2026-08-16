@@ -149,8 +149,8 @@ Local Settings / GUI2-Pfad: wie bei `StatusBar/TemperatureSensorIndex` — Venus
 | Manuelles Display-aus | Code-Review: `StatusBar` → `ScreenBlanker.setDisplayOff()` | Laufzeit offen |
 | DE-Strings | `translation-overrides.json`, `venus-gui-v2_de.ts` | ✓ abgehakt |
 | Unit-Test | Desktop-Build `cmake -B build-desktop` | Blockiert: Qt6Mqtt fehlt in gcc_64 |
-| GX-Compile | Incremental `cmake --build …/build-gx --target venus-gui-v2` | ✓ Exit 0 |
-| GX-Smoke | Host `100.65.95.55`: Ping fail, SSH ok | Nicht durchgeführt (interaktiv) |
+| GX-Compile + Deploy | `./scripts/build-all.sh -H 100.65.95.55` (2026-08-16) | ✓ Exit 0 — GX 131 s, WASM 181 s, Upload + Service-Restart OK |
+| GX-Smoke | Host `100.65.95.55`: SSH ok, interaktive Idle/Uhr/Blank-Checks | Nicht durchgeführt (interaktiv) |
 
 ---
 

@@ -207,9 +207,30 @@ void BackendConnection::initDBusConnection(const QString &address)
 	dbusProducer->open(dbus);
 	emit producerChanged();
 
+	VeQItemSettingsInfo settings;
+	settings.add(QStringLiteral("Gui2/StandbyClockDuration"), 28800, 0, 28800);
+	addSettings(&settings);
+
 	setState(VeDbusConnection::getConnection().isConnected());
 }
 #endif
+
+void BackendConnection::addSettings(VeQItemSettingsInfo *info)
+{
+#if !defined(VENUS_WEBASSEMBLY_BUILD)
+	VeQItemDbusProducer *dbusProducer = qobject_cast<VeQItemDbusProducer *>(m_producer);
+	if (!info || !dbusProducer) {
+		return;
+	}
+
+	VeQItemDbusSettings settings(dbusProducer->services(), QStringLiteral("com.victronenergy.settings"));
+	if (!settings.addSettings(*info)) {
+		qWarning() << "Unable to register GUI settings";
+	}
+#else
+	Q_UNUSED(info)
+#endif
+}
 
 #if defined(VENUS_WEBASSEMBLY_BUILD)
 void BackendConnection::onNetworkConfigChanged(const QVariant var)

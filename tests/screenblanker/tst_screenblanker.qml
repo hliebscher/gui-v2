@@ -85,4 +85,39 @@ TestCase {
 		wait(160)
 		compare(blanker.blanked, false)
 	}
+
+	function test_standby_clock_duration() {
+		if (!blanker.supported) {
+			return
+		}
+
+		// Default / restore
+		blanker.enabled = true
+		compare(blanker.standbyClockDuration, 28800000)
+		blanker.setDisplayOn()
+		compare(blanker.blanked, false)
+		compare(blanker.standbyClockActive, false)
+
+		// Duration 0 → sofort blanked, keine Clock-Phase
+		blanker.standbyClockDuration = 0
+		blanker.setDisplayOff()
+		compare(blanker.blanked, true)
+		compare(blanker.standbyClockActive, false)
+
+		blanker.setDisplayOn()
+		compare(blanker.blanked, false)
+
+		// Duration 200 ms → zuerst Clock-Phase, dann Ende der Phase
+		blanker.standbyClockDuration = 200
+		blanker.setDisplayOff()
+		compare(blanker.blanked, true)
+		compare(blanker.standbyClockActive, true)
+		wait(300)
+		// Desktop has no hardware blank device. A failed write must keep the clock active.
+		compare(blanker.standbyClockActive, true)
+		compare(blanker.blanked, true)
+
+		blanker.setDisplayOn()
+		blanker.standbyClockDuration = 28800000
+	}
 }

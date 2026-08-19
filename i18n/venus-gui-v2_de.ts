@@ -6616,6 +6616,46 @@ Möchtest Sie fortfahren?</translation>
       <source>Never</source>
       <translation type="unfinished">Nie</translation>
     </message>
+    <message id="settings_standby_clock_duration">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="59"/>
+      <source>Standby clock</source>
+      <translation>Standby-Uhr</translation>
+    </message>
+    <message id="settings_standby_clock_off">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="64"/>
+      <source>Off (blank immediately)</source>
+      <translation>Aus (sofort dunkel)</translation>
+    </message>
+    <message id="settings_standby_clock_1min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="66"/>
+      <source>1 min</source>
+      <translation>1 Min.</translation>
+    </message>
+    <message id="settings_standby_clock_5min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="68"/>
+      <source>5 min</source>
+      <translation>5 Min.</translation>
+    </message>
+    <message id="settings_standby_clock_15min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="70"/>
+      <source>15 min</source>
+      <translation>15 Min.</translation>
+    </message>
+    <message id="settings_standby_clock_30min">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="72"/>
+      <source>30 min</source>
+      <translation>30 Min.</translation>
+    </message>
+    <message id="settings_standby_clock_1hour">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="74"/>
+      <source>1 hour</source>
+      <translation>1 Std.</translation>
+    </message>
+    <message id="settings_standby_clock_8hours">
+      <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="76"/>
+      <source>8 hours</source>
+      <translation>8 Std.</translation>
+    </message>
     <message id="settings_remote_console_appearance_auto">
       <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="112"/>
       <source>Auto</source>

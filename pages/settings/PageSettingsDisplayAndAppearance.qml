@@ -55,6 +55,30 @@ Page {
 			}
 
 			ListRadioButtonGroup {
+				//% "Standby clock"
+				text: qsTrId("settings_standby_clock_duration")
+				dataItem.uid: Global.systemSettings.serviceUid + "/Settings/Gui2/StandbyClockDuration"
+				writeAccessLevel: VenusOS.User_AccessType_User
+				optionModel: [
+					//% "Off (blank immediately)"
+					{ display: qsTrId("settings_standby_clock_off"), value: 0 },
+					//% "1 min"
+					{ display: qsTrId("settings_standby_clock_1min"), value: 60 },
+					//% "5 min"
+					{ display: qsTrId("settings_standby_clock_5min"), value: 300 },
+					//% "15 min"
+					{ display: qsTrId("settings_standby_clock_15min"), value: 900 },
+					//% "30 min"
+					{ display: qsTrId("settings_standby_clock_30min"), value: 1800 },
+					//% "1 hour"
+					{ display: qsTrId("settings_standby_clock_1hour"), value: 3600 },
+					//% "8 hours"
+					{ display: qsTrId("settings_standby_clock_8hours"), value: 28800 },
+				]
+				preferredVisible: Qt.platform.os != "wasm"
+			}
+
+			ListRadioButtonGroup {
 				//% "GX display appearance"
 				text: qsTrId("settings_gx_display_appearance")
 				writeAccessLevel: VenusOS.User_AccessType_User

@@ -19,7 +19,7 @@
       <translation>Güç</translation>
     </message>
     <message id="generic_input_label_off">
-      <location filename="../../src/genericinput.cpp" line="112"/>
+      <location filename="../../src/genericinput.cpp" line="32"/>
       <source>Off</source>
       <translation>Kapalı</translation>
     </message>
@@ -59,7 +59,7 @@
       <translation>Konum</translation>
     </message>
     <message id="generic_input_primaryLabel_speed">
-      <location filename="../../src/genericinput.cpp" line="173"/>
+      <location filename="../../src/genericinput.cpp" line="217"/>
       <source>Speed</source>
       <translation>Hız</translation>
     </message>
@@ -100,12 +100,12 @@
       <translation>Extern kontrol</translation>
     </message>
     <message id="levels_page_tanks">
-      <location filename="../../pages/LevelsPage.qml" line="75"/>
+      <location filename="../../pages/LevelsPage.qml" line="71"/>
       <source>Tanks</source>
       <translation>Tanklar</translation>
     </message>
     <message id="levels_page_environment">
-      <location filename="../../pages/LevelsPage.qml" line="77"/>
+      <location filename="../../pages/LevelsPage.qml" line="73"/>
       <source>Environment</source>
       <translation>Çevre</translation>
     </message>
@@ -620,12 +620,12 @@
       <translation>İsim girin</translation>
     </message>
     <message id="settings_continuous_scan">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="46"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="187"/>
       <source>Continuous scanning</source>
       <translation>Sürekli tarama</translation>
     </message>
     <message id="settings_io_bluetooth_adapters">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="59"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="159"/>
       <source>Bluetooth adapters</source>
       <translation>Bluetooth adaptörleri</translation>
     </message>
@@ -1048,10 +1048,15 @@
       <source>Update build date/time</source>
       <translation>Güncelleme yapım tarihi/saati</translation>
     </message>
+    <message id="settings_rssystem_inverters">
+      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
+      <source>Inverters</source>
+      <translation>İnvertörler</translation>
+    </message>
     <message id="page_settings_fronius_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="30"/>
       <source>Inverters</source>
-      <translation>İnvertörler</translation>
+      <translation type="unfinished">İnvertörler</translation>
     </message>
     <message id="page_settings_fronius_find_pv_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="36"/>
@@ -2577,12 +2582,12 @@ Hizmet sağlayıcı tarafından yasaklanmadığı sürece kullanın.</translatio
       <translation type="unfinished">Alarm</translation>
     </message>
     <message id="generic_input_label_alarm">
-      <location filename="../../src/genericinput.cpp" line="126"/>
+      <location filename="../../src/genericinput.cpp" line="60"/>
       <source>Alarm</source>
       <translation>Alarm</translation>
     </message>
     <message id="generic_input_primaryLabel_volume">
-      <location filename="../../src/genericinput.cpp" line="181"/>
+      <location filename="../../src/genericinput.cpp" line="225"/>
       <source>Volume</source>
       <translation>Hacim</translation>
     </message>
@@ -3586,10 +3591,15 @@ Hizmet sağlayıcı tarafından yasaklanmadığı sürece kullanın.</translatio
       <source>US (240 to 30 Ohm)</source>
       <translation>ABD (240-30 Ohm)</translation>
     </message>
+    <message id="settings_ble_bridge_access_custom">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="213"/>
+      <source>Custom</source>
+      <translation>Özel</translation>
+    </message>
     <message id="devicelist_tanksetup_custom">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="53"/>
       <source>Custom</source>
-      <translation>Özel</translation>
+      <translation type="unfinished">Özel</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_empty">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="59"/>
@@ -4557,7 +4567,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Hatayı sil</translation>
     </message>
     <message id="generic_input_label_closed">
-      <location filename="../../src/genericinput.cpp" line="122"/>
+      <location filename="../../src/genericinput.cpp" line="52"/>
       <source>Closed</source>
       <translation>Kapalı</translation>
     </message>
@@ -4765,7 +4775,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Model Adı</translation>
     </message>
     <message id="generic_input_label_no">
-      <location filename="../../src/genericinput.cpp" line="116"/>
+      <location filename="../../src/genericinput.cpp" line="40"/>
       <source>No</source>
       <translation>Hayır</translation>
     </message>
@@ -4790,12 +4800,12 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Çevrimdışı</translation>
     </message>
     <message id="generic_input_label_ok">
-      <location filename="../../src/genericinput.cpp" line="124"/>
+      <location filename="../../src/genericinput.cpp" line="56"/>
       <source>OK</source>
       <translation>OK</translation>
     </message>
     <message id="generic_input_label_on">
-      <location filename="../../src/genericinput.cpp" line="114"/>
+      <location filename="../../src/genericinput.cpp" line="36"/>
       <source>On</source>
       <translation>Açık</translation>
     </message>
@@ -4805,7 +4815,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Online</translation>
     </message>
     <message id="generic_input_label_open">
-      <location filename="../../src/genericinput.cpp" line="120"/>
+      <location filename="../../src/genericinput.cpp" line="48"/>
       <source>Open</source>
       <translation>Açık</translation>
     </message>
@@ -4852,7 +4862,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Çıkar</translation>
     </message>
     <message id="generic_input_label_running">
-      <location filename="../../src/genericinput.cpp" line="130"/>
+      <location filename="../../src/genericinput.cpp" line="68"/>
       <source>Running</source>
       <translation>Çalışıyor</translation>
     </message>
@@ -4867,7 +4877,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Seri Numarası</translation>
     </message>
     <message id="nav_settings">
-      <location filename="../../pages/SettingsPage.qml" line="18"/>
+      <location filename="../../pages/SettingsPage.qml" line="19"/>
       <source>Settings</source>
       <translation>Ayarlar</translation>
     </message>
@@ -4934,12 +4944,12 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Koşullara ulaşıldıktan sonra durdur</translation>
     </message>
     <message id="generic_input_label_stopped">
-      <location filename="../../src/genericinput.cpp" line="128"/>
+      <location filename="../../src/genericinput.cpp" line="64"/>
       <source>Stopped</source>
       <translation>Durduruldu</translation>
     </message>
     <message id="generic_input_primaryLabel_temperature">
-      <location filename="../../src/genericinput.cpp" line="177"/>
+      <location filename="../../src/genericinput.cpp" line="221"/>
       <source>Temperature</source>
       <translation>Sıcaklık</translation>
     </message>
@@ -5000,7 +5010,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Uyarı şundan sonra kaybolduğunda durdur:</translation>
     </message>
     <message id="generic_input_label_yes">
-      <location filename="../../src/genericinput.cpp" line="118"/>
+      <location filename="../../src/genericinput.cpp" line="44"/>
       <source>Yes</source>
       <translation>Evet</translation>
     </message>
@@ -5052,7 +5062,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Otomatik başlatma koşulu karşılandığında jeneratör çalışmaya devam edecektir.</translation>
     </message>
     <message id="modaldialog_set">
-      <location filename="../../components/dialogs/ModalDialog.qml" line="43"/>
+      <location filename="../../components/dialogs/ModalDialog.qml" line="45"/>
       <source>Set</source>
       <translation>Ayarla</translation>
     </message>
@@ -5262,7 +5272,7 @@ Devam etmek istiyor musunuz?</translation>
       <location filename="../../components/Utils.js" line="270"/>
       <source>%1h %2m ago</source>
       <extracomment>Indicates an even happened some hours and minutes before now. %1 = number of hours in the past, %2 = number of minutes in the past</extracomment>
-      <translation>1 saat %2 dakika önce</translation>
+      <translation>%1 saat %2 dakika önce</translation>
     </message>
     <message id="cgwacs_battery_schedule_every_day">
       <location filename="../../components/listitems/ListChargeSchedule.qml" line="17"/>
@@ -5813,7 +5823,7 @@ Devam etmek istiyor musunuz?</translation>
     </message>
     <message id="tank_description">
       <location filename="../../data/common/TankDescription.qml" line="24"/>
-      <location filename="../../src/device.cpp" line="134"/>
+      <location filename="../../src/device.cpp" line="137"/>
       <source>%1 tank (%2)</source>
       <extracomment>Tank description. %1 = tank type (e.g. Fuel, Fresh water), %2 = tank device instance (a number)</extracomment>
       <translation>1 tank (%2)</translation>
@@ -5849,12 +5859,12 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Su Jeneratör</translation>
     </message>
     <message id="generic_input_label_low">
-      <location filename="../../src/genericinput.cpp" line="108"/>
+      <location filename="../../src/genericinput.cpp" line="24"/>
       <source>Low</source>
       <translation>Düşük</translation>
     </message>
     <message id="generic_input_label_high">
-      <location filename="../../src/genericinput.cpp" line="110"/>
+      <location filename="../../src/genericinput.cpp" line="28"/>
       <source>High</source>
       <translation>Yüksek</translation>
     </message>
@@ -6353,11 +6363,6 @@ Devam etmek istiyor musunuz?</translation>
       <source>High current</source>
       <translation>Yüksek akım</translation>
     </message>
-    <message id="batteryalarms_bms_cable">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
-      <source>BMS cable fault</source>
-      <translation>BMS kablo hatası</translation>
-    </message>
     <message id="batteryalarms_contactor">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="176"/>
       <source>Bad contactor</source>
@@ -6556,7 +6561,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Genel Bakış sayfasında Pil simgesine tıklandığında gösterilen pil verilerini tanımlamak için bu menüyü kullanın. Aynı seçim VRM Portalında da görülebilir.</translation>
     </message>
     <message id="settings_continuous_scan_may_interfere">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="193"/>
       <source>Continuous scanning may interfere with Wi-Fi operation.</source>
       <translation>Sürekli tarama Wi-Fi çalışmasını engelleyebilir.</translation>
     </message>
@@ -6671,7 +6676,7 @@ Devam etmek istiyor musunuz?</translation>
       <location filename="../../pages/settings/PageSettingsDisplayAndAppearance.qml" line="225"/>
       <source>%1 is set to %2</source>
       <extracomment>%1 = The name of the setting being updated %2 = the UI version that the system has switched to.</extracomment>
-      <translation>1, %2 olarak ayarlanmıştır</translation>
+      <translation>%1, %2 olarak ayarlanmıştır</translation>
     </message>
     <message id="pagesettingsgeneral_access_and_security">
       <location filename="../../pages/settings/PageSettingsGeneral.qml" line="126"/>
@@ -6892,7 +6897,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Şifre yok ve ağ iletişimi şifrelenmemiş</translation>
     </message>
     <message id="settings_security_profile_password_incorrect_length">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="21"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation>Şifrenin en az 8 karakter uzunluğunda olması gerekir</translation>
     </message>
@@ -7073,17 +7078,17 @@ Devam etmek istiyor musunuz?</translation>
     <message id="settings_ess_use_this_option_for_peak_shaving">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="63"/>
       <source>Use this option for peak shaving.</source>
-      <translation>Yoğun tıraş için bu seçeneği kullanın.</translation>
+      <translation>Peak Shaving için bu seçeneği kullanın.</translation>
     </message>
     <message id="settings_ess_use_this_option_for_peak_shaving_no_grid_meter">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="73"/>
       <source>The peak shaving threshold is set using the AC input current limit setting. See documentation for further information.</source>
-      <translation>Tepe tıraş eşiği, AC giriş akımı limit ayarı kullanılarak ayarlanır. Daha fazla bilgi için belgelere bakın.</translation>
+      <translation>Peak Shaving eşiği, AC giriş akımı limit ayarı kullanılarak ayarlanır. Daha fazla bilgi için belgelere bakın.</translation>
     </message>
     <message id="settings_ess_use_this_option_for_peak_shaving_with_grid_meter">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="76"/>
       <source>The peak shaving thresholds for import and export can be changed on this screen. See documentation for further information.</source>
-      <translation>İçe ve dışa aktarma için en yüksek tıraş eşikleri bu ekranda değiştirilebilir. Daha fazla bilgi için belgelere bakın.</translation>
+      <translation>İçe ve dışa aktarma için Peak Shaving eşikleri bu ekranda değiştirilebilir. Daha fazla bilgi için belgelere bakın.</translation>
     </message>
     <message id="settings_ess_limit_system_ac_import_current">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="86"/>
@@ -7417,42 +7422,42 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Artic</translation>
     </message>
     <message id="settings_all_connected_devices">
-      <location filename="../../pages/SettingsPage.qml" line="40"/>
+      <location filename="../../pages/SettingsPage.qml" line="68"/>
       <source>All connected devices</source>
       <translation>Tüm bağlantılı cihazlar</translation>
     </message>
     <message id="settings_general">
-      <location filename="../../pages/SettingsPage.qml" line="48"/>
+      <location filename="../../pages/SettingsPage.qml" line="76"/>
       <source>General</source>
       <translation type="unfinished">Genel</translation>
     </message>
     <message id="settings_connectivity">
-      <location filename="../../pages/SettingsPage.qml" line="59"/>
+      <location filename="../../pages/SettingsPage.qml" line="87"/>
       <source>Connectivity</source>
       <translation>Bağlantı</translation>
     </message>
     <message id="settings_ethernet_wifi_bluetooth_vecan">
-      <location filename="../../pages/SettingsPage.qml" line="61"/>
+      <location filename="../../pages/SettingsPage.qml" line="89"/>
       <source>Ethernet, Wi-Fi, Bluetooth, VE.Can</source>
       <translation>Ethernet, WiFi, Bluetooth, VE.Can</translation>
     </message>
     <message id="settings_vrm">
-      <location filename="../../pages/SettingsPage.qml" line="68"/>
+      <location filename="../../pages/SettingsPage.qml" line="96"/>
       <source>VRM</source>
       <translation>VRM</translation>
     </message>
     <message id="settings_remote_monitoring_portal">
-      <location filename="../../pages/SettingsPage.qml" line="70"/>
+      <location filename="../../pages/SettingsPage.qml" line="98"/>
       <source>Remote monitoring portal</source>
       <translation>Uzaktan izleme portalı</translation>
     </message>
     <message id="settings_advanced">
-      <location filename="../../pages/SettingsPage.qml" line="77"/>
+      <location filename="../../pages/SettingsPage.qml" line="105"/>
       <source>Advanced</source>
       <translation type="unfinished">Gelişmiş</translation>
     </message>
     <message id="settings_integrations">
-      <location filename="../../pages/SettingsPage.qml" line="82"/>
+      <location filename="../../pages/SettingsPage.qml" line="110"/>
       <source>Integrations</source>
       <translation type="unfinished">Entegrasyonlar</translation>
     </message>
@@ -7462,22 +7467,22 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Entegrasyonlar</translation>
     </message>
     <message id="settings_acdcsystem_ess_dvcc_battery">
-      <location filename="../../pages/SettingsPage.qml" line="93"/>
+      <location filename="../../pages/SettingsPage.qml" line="121"/>
       <source>AC/DC system, ESS, DVCC, Battery...</source>
       <translation>AC/DC sistemi, ESS, DVCC, Akü...</translation>
     </message>
     <message id="settings_debug_and_develop">
-      <location filename="../../pages/SettingsPage.qml" line="100"/>
+      <location filename="../../pages/SettingsPage.qml" line="128"/>
       <source>Debug &amp; Develop</source>
       <translation>Hata Ayıklama ve Geliştirme</translation>
     </message>
     <message id="settings_profilingtools_debugstatistics_appversion">
-      <location filename="../../pages/SettingsPage.qml" line="102"/>
+      <location filename="../../pages/SettingsPage.qml" line="130"/>
       <source>Profiling tools, debug statistics, app version...</source>
       <translation>Profil oluşturma araçları, hata ayıklama istatistikleri, uygulama sürümü...</translation>
     </message>
     <message id="settings_system_setup">
-      <location filename="../../pages/SettingsPage.qml" line="91"/>
+      <location filename="../../pages/SettingsPage.qml" line="119"/>
       <source>System Setup</source>
       <translation>Sistem kurulumu</translation>
     </message>
@@ -7558,7 +7563,7 @@ Devam etmek istiyor musunuz?</translation>
     <message id="vebus_device_update_firmware">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="138"/>
       <source>This feature requires firmware version 400 or higher. Contact your installer to update your Multi/Quattro.</source>
-      <translation>fBu özellik için ürün firmware sürümü 400 veya üstü gerekir. Multi/Quattro'nuzu güncellemek için kurulumcunuzla iletişime geçin.</translation>
+      <translation>Bu özellik için ürün firmware sürümü 400 veya üstü gerekir. Multi/Quattro'nuzu güncellemek için kurulumcunuzla iletişime geçin.</translation>
     </message>
     <message id="vebus_device_charger_not_ready">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="144"/>
@@ -7910,7 +7915,7 @@ Devam etmek istiyor musunuz?</translation>
       <translation>Ürün Firmware yüklendi, cihaz yeniden başlatılıyor</translation>
     </message>
     <message id="modaldialog_confirm">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="39"/>
       <source>Confirm</source>
       <translation>Evet, aboneliğimi iptal et</translation>
     </message>
@@ -8324,17 +8329,17 @@ Devam etmek istiyor musunuz?</translation>
       <translation>İnvertör aşırı yük durumu</translation>
     </message>
     <message id="application_content_touch_input_on">
-      <location filename="../../ApplicationContent.qml" line="57"/>
+      <location filename="../../ApplicationContent.qml" line="55"/>
       <source>Touch input on</source>
       <translation>Dokunmatik giriş açık</translation>
     </message>
     <message id="application_content_touch_input_off">
-      <location filename="../../ApplicationContent.qml" line="59"/>
+      <location filename="../../ApplicationContent.qml" line="57"/>
       <source>Touch input off</source>
       <translation>Dokunmatik giriş kapalı</translation>
     </message>
     <message id="application_content_touch_input_disabled">
-      <location filename="../../ApplicationContent.qml" line="73"/>
+      <location filename="../../ApplicationContent.qml" line="71"/>
       <source>Touch input disabled</source>
       <translation>Dokunma Girişi devre dışı</translation>
     </message>
@@ -8431,7 +8436,7 @@ Jeneratör otomatik başlatma koşulu nedeniyle çalışıyorsa otomatik başlat
     <message id="settings_security_warning_profile_configuration_order">
       <location filename="../../components/listitems/ListMqttAccessSwitch.qml" line="33"/>
       <source>A Security Profile must be configured before the network services can be enabled, see Settings - General</source>
-      <translation>Ağ hizmetlerinin etkinleştirilebilmesi için önce bir Güvenlik Profili yapılandırılmalıdır, bkz.</translation>
+      <translation>Ağ hizmetlerinin etkinleştirilebilmesi için önce bir Güvenlik Profili yapılandırılmalıdır, bkz. Ayarlar - Genel</translation>
     </message>
     <message id="reboot_button_press_ok_to_reboot">
       <location filename="../../components/listitems/ListRebootButton.qml" line="24"/>
@@ -8891,11 +8896,6 @@ Bu menünün sadece RS485 üzerinden bağlı Carlo Gavazzi sayaçlarını göste
       <source>System alarms</source>
       <translation>Sistem alarmları</translation>
     </message>
-    <message id="settings_rs_devices">
-      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
-      <source>RS devices</source>
-      <translation>RS cihazları</translation>
-    </message>
     <message id="rs_no_system_alarms">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="60"/>
       <source>No system alarms</source>
@@ -8914,7 +8914,7 @@ Bu menünün sadece RS485 üzerinden bağlı Carlo Gavazzi sayaçlarını göste
     <message id="welcome_skip">
       <location filename="../../pages/welcome/WelcomeView.qml" line="44"/>
       <source>Skip</source>
-      <translation>atl</translation>
+      <translation>Atla</translation>
     </message>
     <message id="welcome_landing_title">
       <location filename="../../pages/welcome/WelcomeView.qml" line="63"/>
@@ -8956,7 +8956,7 @@ Kolaylaştırılmış navigasyon ve yeni bir görünümle, sevdiğiniz her şeye
       <translation type="unfinished">Kontroller:</translation>
     </message>
     <message id="controlcards_empty_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="154"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="155"/>
       <source>Controls</source>
       <translation>Kontroller:</translation>
     </message>
@@ -9501,12 +9501,12 @@ GX cihazı yalnızca bir bağlı jeneratörü kontrol edebilir ve en düşük VR
       <translation>AC girişi %1</translation>
     </message>
     <message id="settings_security_profile_change_password_description">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="85"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="69"/>
       <source>Please enter a new GX password:</source>
       <translation>Lütfen yeni bir GX parolası girin:</translation>
     </message>
     <message id="settings_security_profile_enter_new_password">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="100"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="84"/>
       <source>Enter new password</source>
       <translation>Yeni parolayı girin</translation>
     </message>
@@ -9527,7 +9527,7 @@ GX cihazı yalnızca bir bağlı jeneratörü kontrol edebilir ve en düşük VR
       <translation>Ana invertör/şarj cihazı sistemi ile aynı akü grubundan güç alan ikincil bir MultiPlus veya Quattro sistemine sahipseniz bu ayarı etkinleştirin. Bu ayar etkinleştirildiğinde, bu ikincil sistem seçilen BMS'nin CVL ve DCL parametrelerini kullanacaktır.</translation>
     </message>
     <message id="settings_access_control_display_firmware">
-      <location filename="../../pages/SettingsPage.qml" line="50"/>
+      <location filename="../../pages/SettingsPage.qml" line="78"/>
       <source>Access control, Display, Firmware, Support</source>
       <translation>Erişim kontrolü, Ekran, Ürün yazılımı, Destek</translation>
     </message>
@@ -9870,7 +9870,7 @@ GX cihazı yalnızca bir bağlı jeneratörü kontrol edebilir ve en düşük VR
       <translation>Röle artık cihazlar listesinde bulunabilir</translation>
     </message>
     <message id="gx_device_relays">
-      <location filename="../../src/iochannelgroupmodel.cpp" line="105"/>
+      <location filename="../../src/iochannelgroupmodel.cpp" line="107"/>
       <source>GX device relays</source>
       <translation>GX cihazı röleleri</translation>
     </message>
@@ -10181,7 +10181,7 @@ GX cihazı yalnızca bir bağlı jeneratörü kontrol edebilir ve en düşük VR
       <translation>Node-RED veya Signal-K kullanmak için Venus OS Large yazılımını etkinleştirin</translation>
     </message>
     <message id="settings_relays_sensors_tanks">
-      <location filename="../../pages/SettingsPage.qml" line="84"/>
+      <location filename="../../pages/SettingsPage.qml" line="112"/>
       <source>Relays, Sensors, PV Inverters, Modbus, Node-RED</source>
       <translation>Röleler, Sensörler, PV İnvertörler, Modbus, Node-RED</translation>
     </message>
@@ -10616,17 +10616,17 @@ GX cihazı yalnızca bir bağlı jeneratörü kontrol edebilir ve en düşük VR
       <translation>Sadece VRM üzerinde</translation>
     </message>
     <message id="control_cards_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="20"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="21"/>
       <source>Controls</source>
       <translation type="unfinished">Kontroller:</translation>
     </message>
     <message id="controlcards_empty_desc1">
-      <location filename="../../pages/ControlCardsPage.qml" line="156"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="157"/>
       <source>No compatible devices found</source>
       <translation>Uyumlu cihaz bulunamadı</translation>
     </message>
     <message id="controlcards_empty_desc2">
-      <location filename="../../pages/ControlCardsPage.qml" line="158"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="159"/>
       <source>Connect devices that support this function</source>
       <translation>Bu işlevi destekleyen cihazları bağlayın</translation>
     </message>
@@ -11245,7 +11245,7 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation>Başlatılıyor, bu birkaç saniye sürebilir...</translation>
     </message>
     <message id="settings_security_profile_change_password_title">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="36"/>
       <source>Change the GX Password</source>
       <translation>GX Şifresini Değiştir</translation>
     </message>
@@ -11346,54 +11346,44 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <source>Rescan for IP addresses</source>
       <translation>IP adresleri için yeniden tara</translation>
     </message>
-    <message id="mqtt_devices_ev_charging_station">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="16"/>
-      <source>EV Charging Station</source>
-      <translation>Elektrikli Araç Şarj İstasyonları</translation>
-    </message>
     <message id="mqtt_devices_pairing_mode">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="51"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="15"/>
       <source>Pairing mode</source>
       <translation>Eşleştirme modu</translation>
     </message>
     <message id="mqtt_devices_pairing_active">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="55"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="19"/>
       <source>Active • %1s remaining</source>
       <extracomment>%1 = number of seconds remaining</extracomment>
       <translation>Etkin • %1s kaldı</translation>
     </message>
     <message id="mqtt_devices_pairing_activate">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="57"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="21"/>
       <source>Activate</source>
       <translation>Etkinleştir</translation>
     </message>
     <message id="mqtt_devices_pairing_enabled">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="81"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="37"/>
       <source>Pairing mode enabled for %1 seconds</source>
       <translation>Eşleştirme modu %1 saniye boyunca etkinleştirildi</translation>
     </message>
     <message id="mqtt_devices_pairing_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="66"/>
       <source>Activate Pairing mode to allow a device to connect. Paired devices appear here, and will show in the Devices list when connected.</source>
       <translation>Bir cihazın bağlanmasına izin vermek için Eşleştirme modunu etkinleştirin. Eşleştirilen cihazlar burada görünür ve bağlandığında Cihazlar listesinde gösterilir.</translation>
     </message>
-    <message id="mqtt_devices_pairing_access_tokens">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="100"/>
-      <source>Access tokens for paired devices</source>
-      <translation>Eşleştirilmiş cihazlar için erişim belirteçleri</translation>
-    </message>
-    <message id="mqtt_devices_pairing_unpair">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="112"/>
+    <message id="devices_pairing_unpair">
+      <location filename="../../components/listitems/ListUnpairButton.qml" line="11"/>
       <source>Unpair</source>
       <translation>EŞLEŞTİRMEYİ KALDIR</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_title">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="129"/>
+    <message id="unpairing_confirm_title">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="13"/>
       <source>Unpairing %1</source>
       <translation>%1 eşleşmesi kaldırılıyor</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="132"/>
+    <message id="unpairing_confirm_description">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="16"/>
       <source>This will disconnect the device and it will need to be paired again to reconnect.</source>
       <translation>Bu işlem cihazın bağlantısını kesecek ve yeniden bağlanmak için tekrar eşleştirilmesi gerekecektir.</translation>
     </message>
@@ -11418,17 +11408,17 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation>Bulunan E-sürücü kimlikleri</translation>
     </message>
     <message id="generic_input_label_released">
-      <location filename="../../src/genericinput.cpp" line="132"/>
+      <location filename="../../src/genericinput.cpp" line="72"/>
       <source>Released</source>
       <translation>Serbest</translation>
     </message>
     <message id="generic_input_label_pressed">
-      <location filename="../../src/genericinput.cpp" line="134"/>
+      <location filename="../../src/genericinput.cpp" line="76"/>
       <source>Pressed</source>
       <translation>Basılı</translation>
     </message>
     <message id="generic_input_label_holding">
-      <location filename="../../src/genericinput.cpp" line="136"/>
+      <location filename="../../src/genericinput.cpp" line="80"/>
       <source>Holding</source>
       <translation>Basılı tutuluyor</translation>
     </message>
@@ -11469,7 +11459,7 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation>Maksimum değer</translation>
     </message>
     <message id="aux_page_switches">
-      <location filename="../../pages/AuxCardsPage.qml" line="16"/>
+      <location filename="../../pages/AuxCardsPage.qml" line="18"/>
       <source>Switches</source>
       <extracomment>Name of the Switch Controls feature</extracomment>
       <translation>Anahtarlar</translation>
@@ -11490,7 +11480,7 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation>Sistem yükü yüksek, CPU yükünü azaltmak için grafikler gizleniyor</translation>
     </message>
     <message id="navbar_more">
-      <location filename="../../pages/MainView.qml" line="285"/>
+      <location filename="../../pages/MainView.qml" line="281"/>
       <source>More</source>
       <extracomment>Click to show more available items</extracomment>
       <translation>Daha Fazla</translation>
@@ -11628,7 +11618,7 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="63"/>
       <source>Boot</source>
       <extracomment>Boot the system to a particular firmware version</extracomment>
-      <translation>tekne</translation>
+      <translation>Başlat</translation>
     </message>
     <message id="settings_tcpip_disable_ethernet_gateway">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="153"/>
@@ -11862,21 +11852,6 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <source>Only applies when using Optimized with BatteryLife. Opportunity Loads automatically resumes after a full charge.</source>
       <translation>Yalnızca BatteryLife ile Optimize Edilmiş modu kullanılırken geçerlidir. Fırsat Yükleri, tam şarjın ardından otomatik olarak devam eder.</translation>
     </message>
-    <message id="settings_ble_gateway_access">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="88"/>
-      <source>BLE gateway access</source>
-      <translation>BLE ağ geçidi erişimi</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="94"/>
-      <source>Proxy</source>
-      <translation>Proxy</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy_and_direct">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="96"/>
-      <source>Proxy and direct</source>
-      <translation>Proxy ve doğrudan</translation>
-    </message>
     <message id="powerguard_consumption_l1_current_limit">
       <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="46"/>
       <source>Consumption L1 current limit</source>
@@ -11935,24 +11910,69 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation>Dahili (EV Şarj İstasyonu)</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_rejected">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="182"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="140"/>
       <source>The submitted encryption key is invalid.</source>
       <translation>Gönderilen şifreleme anahtarı geçersiz.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_placeholder">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="260"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="218"/>
       <source>Enter a 32-character key</source>
       <translation>32 karakterli bir anahtar girin</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_invalid">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="267"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="225"/>
       <source>The encryption key must be 32 hexadecimal characters.</source>
       <translation>Şifreleme anahtarı 32 onaltılık (hexadecimal) karakterden oluşmalıdır.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="311"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="269"/>
       <source>Encryption key</source>
       <translation>Şifreleme Anahtarı</translation>
+    </message>
+    <message id="batteryalarms_bms_cable">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
+      <source>Battery communication lost</source>
+      <translation>Akü iletişimi kesildi</translation>
+    </message>
+    <message id="batteryalarms_cell_measurements_fault">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="183"/>
+      <source>Cell measurements fault</source>
+      <translation>Hücre ölçümleri hatası</translation>
+    </message>
+    <message id="settings_ble_advanced">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="93"/>
+      <source>Advanced</source>
+      <translation type="unfinished">Gelişmiş</translation>
+    </message>
+    <message id="settings_ble_sensors">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="100"/>
+      <source>Sensors</source>
+      <translation>Sensörler</translation>
+    </message>
+    <message id="settings_ble_bridge_access">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="201"/>
+      <source>BLE bridge access</source>
+      <translation>BLE köprü erişimi</translation>
+    </message>
+    <message id="settings_ble_bridge_access_paired_only">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="210"/>
+      <source>Paired devices only</source>
+      <translation type="unfinished">Yalnızca eşleştirilmiş cihazlar</translation>
+    </message>
+    <message id="pairing_ble_paired_bridges">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="230"/>
+      <source>Paired BLE bridges</source>
+      <translation>Eşleştirilmiş BLE köprüleri</translation>
+    </message>
+    <message id="pairing_mqtt_paired_devices">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="73"/>
+      <source>Paired devices</source>
+      <translation>Eşleştirilmiş cihazlar</translation>
+    </message>
+    <message id="settings_ble_sensors_add_encryption_keys_via_victronconnect">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="122"/>
+      <source>Use VictronConnect app over Bluetooth to add encryption keys automatically.</source>
+      <translation>Şifreleme anahtarlarını otomatik olarak eklemek için Bluetooth üzerinden VictronConnect uygulamasını kullanın.</translation>
     </message>
     <message id="dc_input">
       <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>
@@ -12037,7 +12057,7 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation type="unfinished">Akü</translation>
     </message>
     <message id="switchableoutput_gx_device_relays">
-      <location filename="../../src/iochannel.cpp" line="342"/>
+      <location filename="../../src/iochannel.cpp" line="345"/>
       <source>GX device relays</source>
       <translation type="unfinished">GX cihazı röleleri</translation>
     </message>
@@ -12063,170 +12083,195 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
       <translation>Hata yok</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="13"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="14"/>
       <source>Battery initialization error</source>
       <translation>Akü başlatma hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="16"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="17"/>
       <source>No batteries connected</source>
       <translation>Bağlı akü yok</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="19"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="20"/>
       <source>Unknown battery</source>
       <translation>Bilinmeyen akü</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="22"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="23"/>
       <source>Different battery types</source>
       <translation>Farklı akü türleri</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="25"/>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="40"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="26"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="41"/>
       <source>No. of batteries incorrect</source>
       <translation>Akü sayısı hatalı</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="28"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="29"/>
       <source>Lynx Shunt not found</source>
       <translation>Lynx Shunt bulunamadı</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="31"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="32"/>
       <source>Battery measure error</source>
       <translation>Akü ölçüm hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="34"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="35"/>
       <source>Internal calculation error</source>
       <translation>İntern hesap hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="37"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="38"/>
       <source>No. of batteries in series incorrect</source>
       <translation>Seri bağlı akü sayısı yanlış</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="44"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="45"/>
       <source>Hardware error</source>
       <translation>Donanım hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="47"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="48"/>
       <source>Watchdog error</source>
       <translation>Watchdog hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="50"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="51"/>
       <source>Over voltage</source>
       <translation>Aşırı voltaj</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="53"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="54"/>
       <source>Under voltage</source>
       <translation>Alçak gerilim</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="56"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="57"/>
       <source>Over temperature</source>
       <translation>Aşırı sıcaklık</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="59"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="60"/>
       <source>Under temperature</source>
       <translation>Düşük sıcaklık</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="62"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="63"/>
       <source>Under-charge standby</source>
       <translation>Şarj oluyor beklemede</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="65"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="66"/>
       <source>ADC error</source>
       <translation>ADC hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="68"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="69"/>
       <source>Battery comm. error</source>
       <translation>Akü iletişim hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="71"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="74"/>
       <source>Pre-Charge error</source>
       <translation>Ön Şarj hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="75"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="78"/>
       <source>Safety contactor error</source>
       <translation>Emniyet kontaktörü hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="79"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
       <source>Battery update error</source>
       <translation>Akü güncelleme hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
       <source>BMS cable error</source>
       <translation>BMS kablo hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
       <source>Reference voltage failure</source>
       <translation>Referans voltaj hatası</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
       <source>Wrong system voltage</source>
       <translation>Yanlış sistem voltajı</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
       <source>Pre charge timeout</source>
       <translation>Ön şarj zaman aşımı</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="97"/>
       <source>ATC/ATD failure</source>
       <translation>ATC/ATD hata</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="98"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="101"/>
       <source>Calibration data lost</source>
       <translation>Kalibrasyon verileri kaybedildi</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="102"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
       <source>Settings invalid</source>
       <translation>Ayarlar geçersiz</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
       <source>Interlock</source>
       <translation>İnterlok</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
       <source>Emergency stop</source>
       <translation>Acil durdurma</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
       <source>Communication timeout</source>
       <translation>İletişim zaman aşımı</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="118"/>
       <source>Safety lock</source>
       <translation>Güvenlik kilidi</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="117"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="121"/>
       <source>Terminal over temperature</source>
       <translation>Terminal aşırı sıcaklığı</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="124"/>
+      <source>High cell voltage</source>
+      <translation>Yüksek hücre voltajı</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="127"/>
+      <source>External disconnection</source>
+      <translation>Harici bağlantı kesilmesi</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="130"/>
+      <source>Battery voltage not allowed</source>
+      <translation>Akü voltajına izin verilmiyor</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="133"/>
+      <source>Over current</source>
+      <translation>Aşırı akım</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="136"/>
+      <source>Battery voltage measurement mismatch</source>
+      <translation>Akü voltajı ölçüm uyumsuzluğu</translation>
     </message>
   </context>
   <context>
@@ -13261,7 +13306,7 @@ Bu ayarları yapabilmek için lütfen en son üretici yazılımına güncelleyin
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="219"/>
       <source>Bus #1 dead</source>
-      <translation>1 numaralı otobüs öldü.</translation>
+      <translation>Bus #1 arızalı</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="220"/>

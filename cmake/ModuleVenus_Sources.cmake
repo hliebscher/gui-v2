@@ -27,7 +27,6 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/Breadcrumbs.qml
     components/BriefSidePanelWidget.qml
     components/BriefCenterDisplay.qml
-    components/CaptionLabel.qml
     components/CardViewLoader.qml
     components/CircularMultiGauge.qml
     components/CircularSingleGauge.qml
@@ -204,6 +203,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/dialogs/SecurityProfilePasswordDialog.qml
     components/dialogs/SolarDailyHistoryDialog.qml
     components/dialogs/TimeSelectorDialog.qml
+    components/dialogs/UnpairDialog.qml
 
     components/listitems/ListAcInError.qml
     components/listitems/ListActiveAcInput.qml
@@ -234,6 +234,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/ListMotorDriveGear.qml
     components/listitems/ListMqttAccessSwitch.qml
     components/listitems/ListMountStateButton.qml
+    components/listitems/ListPairingModeButton.qml
     components/listitems/ListAcInPositionRadioButtonGroup.qml
     components/listitems/ListOutputBatteryRadioButtonGroup.qml
     components/listitems/ListPvInverterPositionRadioButtonGroup.qml
@@ -243,6 +244,7 @@ set (VictronVenusOS_QML_MODULE_SOURCES
     components/listitems/ListGeneratorAutoStartSwitch.qml
     components/listitems/ListTemperatureRelay.qml
     components/listitems/ListTextStatus.qml
+    components/listitems/ListUnpairButton.qml
     components/listitems/ListVoltageCurrentPower.qml
     components/listitems/ListVolumeUnitRadioButtonGroup.qml
 

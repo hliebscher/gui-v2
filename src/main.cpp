@@ -359,21 +359,31 @@ void initBackend(bool *enableFpsCounter, bool *skipSplashScreen)
 		Victron::VenusOS::MockManager *mockManager = Victron::VenusOS::MockManager::create();
 		if (parser.isSet(noMockTimers)) {
 			mockTimersEnabled = false;
+			mockManager->setTimersActive(mockTimersEnabled);
+		} else if (!uiTestConf.hasMockTimersActive()) {
+			// A UI test configuration that sets Mock/TimersActive has already applied it above.
+			// Do not overwrite it here, or the test runs with mock timers it asked to have off.
+			mockManager->setTimersActive(mockTimersEnabled);
 		}
-		mockManager->setTimersActive(mockTimersEnabled);
 
+		// Some UI tests specify a mock configuration, if the test is only designed to be run
+		// against that configuration. In that case, exit with an error if --mock-conf is also set,
+		// as that may conflict with the configuration specified by the UI test.
 		if (!mockConfName.isEmpty() && uiTestConf.hasMockConfiguration()) {
 			qFatal() << "Error: --mock-conf was set but --ui-test" << parser.value(uiTest)
 					 << "already specifies a mock configuration:" << uiTestConf.dirName();
 		}
-		if (mockConfName.isEmpty()) {
-			// Use "maximal" as the default mock configuration, if none is set.
-			mockConfName = "maximal";
-		}
 
-		// Load the mock configuration.
-		const QString confJson = QString(":/data/mock/conf/%1.json").arg(mockConfName);
-		mockManager->loadConfiguration(confJson);
+		if (mockManager->configurationFileName().isEmpty()) { // UI test may have already set a mock configuration
+			if (mockConfName.isEmpty()) {
+				// Use "maximal" as the default mock configuration, if none is set.
+				mockConfName = "maximal";
+			}
+
+			// Load the mock configuration.
+			const QString confJson = QString(":/data/mock/conf/%1.json").arg(mockConfName);
+			mockManager->loadConfiguration(confJson);
+		}
 	}
 
 	if (parser.isSet(fpsCounter) || queryFpsCounter.contains(QStringLiteral("enable"))) {

@@ -19,7 +19,7 @@
       <translation>Krag</translation>
     </message>
     <message id="generic_input_label_off">
-      <location filename="../../src/genericinput.cpp" line="112"/>
+      <location filename="../../src/genericinput.cpp" line="32"/>
       <source>Off</source>
       <translation>Af</translation>
     </message>
@@ -59,7 +59,7 @@
       <translation>Posisie</translation>
     </message>
     <message id="generic_input_primaryLabel_speed">
-      <location filename="../../src/genericinput.cpp" line="173"/>
+      <location filename="../../src/genericinput.cpp" line="217"/>
       <source>Speed</source>
       <translation>Spoed</translation>
     </message>
@@ -100,12 +100,12 @@
       <translation>Eksterne beheer</translation>
     </message>
     <message id="levels_page_tanks">
-      <location filename="../../pages/LevelsPage.qml" line="75"/>
+      <location filename="../../pages/LevelsPage.qml" line="71"/>
       <source>Tanks</source>
       <translation>Tenks</translation>
     </message>
     <message id="levels_page_environment">
-      <location filename="../../pages/LevelsPage.qml" line="77"/>
+      <location filename="../../pages/LevelsPage.qml" line="73"/>
       <source>Environment</source>
       <translation>Omgewing</translation>
     </message>
@@ -620,12 +620,12 @@
       <translation>Voer naam in</translation>
     </message>
     <message id="settings_continuous_scan">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="46"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="187"/>
       <source>Continuous scanning</source>
       <translation>Deurlopende skandering</translation>
     </message>
     <message id="settings_io_bluetooth_adapters">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="59"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="159"/>
       <source>Bluetooth adapters</source>
       <translation>Bluetooth koppelstukke</translation>
     </message>
@@ -1048,10 +1048,15 @@
       <source>Update build date/time</source>
       <translation type="unfinished">Opdateer bou-datum/-tyd op</translation>
     </message>
+    <message id="settings_rssystem_inverters">
+      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
+      <source>Inverters</source>
+      <translation>Omsetters</translation>
+    </message>
     <message id="page_settings_fronius_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="30"/>
       <source>Inverters</source>
-      <translation>Omsetters</translation>
+      <translation type="unfinished">Omsetters</translation>
     </message>
     <message id="page_settings_fronius_find_pv_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="36"/>
@@ -1601,7 +1606,7 @@ Gebruik tensy dit deur die diensverskaffer verbied word.</translation>
       <location filename="../../pages/settings/PageSettingsHub4.qml" line="267"/>
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="48"/>
       <source>Peak shaving</source>
-      <translation type="unfinished">Piek skeer</translation>
+      <translation>Piekafvlakking</translation>
     </message>
     <message id="settings_ess_above_minimum_soc_only">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="53"/>
@@ -2577,12 +2582,12 @@ Gebruik tensy dit deur die diensverskaffer verbied word.</translation>
       <translation type="unfinished">Alarm</translation>
     </message>
     <message id="generic_input_label_alarm">
-      <location filename="../../src/genericinput.cpp" line="126"/>
+      <location filename="../../src/genericinput.cpp" line="60"/>
       <source>Alarm</source>
       <translation>Alarm</translation>
     </message>
     <message id="generic_input_primaryLabel_volume">
-      <location filename="../../src/genericinput.cpp" line="181"/>
+      <location filename="../../src/genericinput.cpp" line="225"/>
       <source>Volume</source>
       <translation>Volume</translation>
     </message>
@@ -3586,10 +3591,15 @@ Gebruik tensy dit deur die diensverskaffer verbied word.</translation>
       <source>US (240 to 30 Ohm)</source>
       <translation>VSA (240 tot 30 Ohm)</translation>
     </message>
+    <message id="settings_ble_bridge_access_custom">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="213"/>
+      <source>Custom</source>
+      <translation>Pasgemaak</translation>
+    </message>
     <message id="devicelist_tanksetup_custom">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="53"/>
       <source>Custom</source>
-      <translation>Pasgemaak</translation>
+      <translation type="unfinished">Pasgemaak</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_empty">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="59"/>
@@ -4557,7 +4567,7 @@ Wil jy voortgaan?</translation>
       <translation>Vee fout uit</translation>
     </message>
     <message id="generic_input_label_closed">
-      <location filename="../../src/genericinput.cpp" line="122"/>
+      <location filename="../../src/genericinput.cpp" line="52"/>
       <source>Closed</source>
       <translation>Gesluit</translation>
     </message>
@@ -4765,7 +4775,7 @@ Wil jy voortgaan?</translation>
       <translation>Model naam</translation>
     </message>
     <message id="generic_input_label_no">
-      <location filename="../../src/genericinput.cpp" line="116"/>
+      <location filename="../../src/genericinput.cpp" line="40"/>
       <source>No</source>
       <translation>Nee/geen/nie</translation>
     </message>
@@ -4790,12 +4800,12 @@ Wil jy voortgaan?</translation>
       <translation>Van lyn af</translation>
     </message>
     <message id="generic_input_label_ok">
-      <location filename="../../src/genericinput.cpp" line="124"/>
+      <location filename="../../src/genericinput.cpp" line="56"/>
       <source>OK</source>
       <translation>Reg</translation>
     </message>
     <message id="generic_input_label_on">
-      <location filename="../../src/genericinput.cpp" line="114"/>
+      <location filename="../../src/genericinput.cpp" line="36"/>
       <source>On</source>
       <translation>Aan</translation>
     </message>
@@ -4805,7 +4815,7 @@ Wil jy voortgaan?</translation>
       <translation>Aanlyn</translation>
     </message>
     <message id="generic_input_label_open">
-      <location filename="../../src/genericinput.cpp" line="120"/>
+      <location filename="../../src/genericinput.cpp" line="48"/>
       <source>Open</source>
       <translation>Oop</translation>
     </message>
@@ -4852,7 +4862,7 @@ Wil jy voortgaan?</translation>
       <translation>Verwyder</translation>
     </message>
     <message id="generic_input_label_running">
-      <location filename="../../src/genericinput.cpp" line="130"/>
+      <location filename="../../src/genericinput.cpp" line="68"/>
       <source>Running</source>
       <translation>Hardloop</translation>
     </message>
@@ -4867,7 +4877,7 @@ Wil jy voortgaan?</translation>
       <translation>Reeksnommer</translation>
     </message>
     <message id="nav_settings">
-      <location filename="../../pages/SettingsPage.qml" line="18"/>
+      <location filename="../../pages/SettingsPage.qml" line="19"/>
       <source>Settings</source>
       <translation>Instellings</translation>
     </message>
@@ -4934,12 +4944,12 @@ Wil jy voortgaan?</translation>
       <translation>Stop nadat die toestand bereik is vir</translation>
     </message>
     <message id="generic_input_label_stopped">
-      <location filename="../../src/genericinput.cpp" line="128"/>
+      <location filename="../../src/genericinput.cpp" line="64"/>
       <source>Stopped</source>
       <translation>Gestop</translation>
     </message>
     <message id="generic_input_primaryLabel_temperature">
-      <location filename="../../src/genericinput.cpp" line="177"/>
+      <location filename="../../src/genericinput.cpp" line="221"/>
       <source>Temperature</source>
       <translation>Temperatuur</translation>
     </message>
@@ -5000,7 +5010,7 @@ Wil jy voortgaan?</translation>
       <translation>Wanneer waarskuwing uitgevee is, stop daarna</translation>
     </message>
     <message id="generic_input_label_yes">
-      <location filename="../../src/genericinput.cpp" line="118"/>
+      <location filename="../../src/genericinput.cpp" line="44"/>
       <source>Yes</source>
       <translation>Ja</translation>
     </message>
@@ -5052,7 +5062,7 @@ Wil jy voortgaan?</translation>
       <translation>Kragopwekker sal aanhou loop as daar aan 'n outostart-voorwaarde voldoen word.</translation>
     </message>
     <message id="modaldialog_set">
-      <location filename="../../components/dialogs/ModalDialog.qml" line="43"/>
+      <location filename="../../components/dialogs/ModalDialog.qml" line="45"/>
       <source>Set</source>
       <translation>Stel</translation>
     </message>
@@ -5106,7 +5116,7 @@ Wil jy voortgaan?</translation>
     <message id="deviceinstanceswap_timed_out">
       <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="117"/>
       <source>Cannot swap device instances: operation timed out.</source>
-      <translation type="unfinished">Kan nie toestelgevalle omruil nie: werking  tyd uit</translation>
+      <translation>Kan nie toestelgevalle omruil nie: werking tyd uit</translation>
     </message>
     <message id="deviceinstanceswap_active_on_reboot">
       <location filename="../../components/dialogs/VrmInstanceSwapDialog.qml" line="119"/>
@@ -5813,7 +5823,7 @@ Wil jy voortgaan?</translation>
     </message>
     <message id="tank_description">
       <location filename="../../data/common/TankDescription.qml" line="24"/>
-      <location filename="../../src/device.cpp" line="134"/>
+      <location filename="../../src/device.cpp" line="137"/>
       <source>%1 tank (%2)</source>
       <extracomment>Tank description. %1 = tank type (e.g. Fuel, Fresh water), %2 = tank device instance (a number)</extracomment>
       <translation>%1 tenk (%2)</translation>
@@ -5849,12 +5859,12 @@ Wil jy voortgaan?</translation>
       <translation>Water kragopwekker</translation>
     </message>
     <message id="generic_input_label_low">
-      <location filename="../../src/genericinput.cpp" line="108"/>
+      <location filename="../../src/genericinput.cpp" line="24"/>
       <source>Low</source>
       <translation>Laag</translation>
     </message>
     <message id="generic_input_label_high">
-      <location filename="../../src/genericinput.cpp" line="110"/>
+      <location filename="../../src/genericinput.cpp" line="28"/>
       <source>High</source>
       <translation>Hoog</translation>
     </message>
@@ -6153,7 +6163,7 @@ Wil jy voortgaan?</translation>
     <message id="settings_ess_use_this_option_for_systems_no_peak_shaving">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="56"/>
       <source>Use this option in systems that do not perform peak shaving.</source>
-      <translation>Gebruik hierdie opsie in stelsels wat nie piek skeer verrig nie.</translation>
+      <translation>Gebruik hierdie opsie in stelsels wat nie piekafvlakking verrig nie.</translation>
     </message>
     <message id="list_generator_auto_start_switch_auto_start_functionality">
       <location filename="../../components/listitems/ListGeneratorAutoStartSwitch.qml" line="12"/>
@@ -6353,11 +6363,6 @@ Wil jy voortgaan?</translation>
       <source>High current</source>
       <translation>Hoë stroom</translation>
     </message>
-    <message id="batteryalarms_bms_cable">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
-      <source>BMS cable fault</source>
-      <translation>BMS kabel fout</translation>
-    </message>
     <message id="batteryalarms_contactor">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="176"/>
       <source>Bad contactor</source>
@@ -6556,7 +6561,7 @@ Wil jy voortgaan?</translation>
       <translation>Gebruik hierdie kieslys om die batterydata te definieer wat gewys word wanneer die Battery-ikoon op die Oorsig-bladsy geklik word. Dieselfde keuse is ook sigbaar op die VRM-portaal.</translation>
     </message>
     <message id="settings_continuous_scan_may_interfere">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="193"/>
       <source>Continuous scanning may interfere with Wi-Fi operation.</source>
       <translation>Deurlopende skandering kan inmeng met Wi-Fi-werking.</translation>
     </message>
@@ -6892,7 +6897,7 @@ Wil jy voortgaan?</translation>
       <translation>Geen wagwoord nie en die netwerkkommunikasie is nie geïnkripteer nie</translation>
     </message>
     <message id="settings_security_profile_password_incorrect_length">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="21"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation>Wagwoord moet ten minste 8 karakters lank wees</translation>
     </message>
@@ -7073,17 +7078,17 @@ Wil jy voortgaan?</translation>
     <message id="settings_ess_use_this_option_for_peak_shaving">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="63"/>
       <source>Use this option for peak shaving.</source>
-      <translation>Gebruik hierdie opsie vir  piek skeer</translation>
+      <translation>Gebruik hierdie opsie vir piekafvlakking.</translation>
     </message>
     <message id="settings_ess_use_this_option_for_peak_shaving_no_grid_meter">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="73"/>
       <source>The peak shaving threshold is set using the AC input current limit setting. See documentation for further information.</source>
-      <translation>Die piek skeer drempel word gestel deur die AC-insetstroomlimietinstelling te gebruik. Sien dokumentasie vir verdere inligting.</translation>
+      <translation>Die piekafvlakkingdrempel word gestel deur die AC-insetstroomlimietinstelling te gebruik. Sien dokumentasie vir verdere inligting.</translation>
     </message>
     <message id="settings_ess_use_this_option_for_peak_shaving_with_grid_meter">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="76"/>
       <source>The peak shaving thresholds for import and export can be changed on this screen. See documentation for further information.</source>
-      <translation>Die piekskeerdrempels vir invoer en uitvoer kan op hierdie skerm verander word. Sien dokumentasie vir verdere inligting.</translation>
+      <translation>Die piekafvlakkingdrempels vir invoer en uitvoer kan op hierdie skerm verander word. Sien dokumentasie vir verdere inligting.</translation>
     </message>
     <message id="settings_ess_limit_system_ac_import_current">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="86"/>
@@ -7417,42 +7422,42 @@ Wil jy voortgaan?</translation>
       <translation>Artiek</translation>
     </message>
     <message id="settings_all_connected_devices">
-      <location filename="../../pages/SettingsPage.qml" line="40"/>
+      <location filename="../../pages/SettingsPage.qml" line="68"/>
       <source>All connected devices</source>
       <translation>Alle gekoppelde toestelle</translation>
     </message>
     <message id="settings_general">
-      <location filename="../../pages/SettingsPage.qml" line="48"/>
+      <location filename="../../pages/SettingsPage.qml" line="76"/>
       <source>General</source>
       <translation type="unfinished">Algemeen</translation>
     </message>
     <message id="settings_connectivity">
-      <location filename="../../pages/SettingsPage.qml" line="59"/>
+      <location filename="../../pages/SettingsPage.qml" line="87"/>
       <source>Connectivity</source>
       <translation>Konnektiwiteit</translation>
     </message>
     <message id="settings_ethernet_wifi_bluetooth_vecan">
-      <location filename="../../pages/SettingsPage.qml" line="61"/>
+      <location filename="../../pages/SettingsPage.qml" line="89"/>
       <source>Ethernet, Wi-Fi, Bluetooth, VE.Can</source>
       <translation>Ethernet, Wi-Fi, Bluetooth, VE.Can</translation>
     </message>
     <message id="settings_vrm">
-      <location filename="../../pages/SettingsPage.qml" line="68"/>
+      <location filename="../../pages/SettingsPage.qml" line="96"/>
       <source>VRM</source>
       <translation>VRM</translation>
     </message>
     <message id="settings_remote_monitoring_portal">
-      <location filename="../../pages/SettingsPage.qml" line="70"/>
+      <location filename="../../pages/SettingsPage.qml" line="98"/>
       <source>Remote monitoring portal</source>
       <translation>Afgeleë moniteringsportaal</translation>
     </message>
     <message id="settings_advanced">
-      <location filename="../../pages/SettingsPage.qml" line="77"/>
+      <location filename="../../pages/SettingsPage.qml" line="105"/>
       <source>Advanced</source>
       <translation type="unfinished">Gevorderd</translation>
     </message>
     <message id="settings_integrations">
-      <location filename="../../pages/SettingsPage.qml" line="82"/>
+      <location filename="../../pages/SettingsPage.qml" line="110"/>
       <source>Integrations</source>
       <translation type="unfinished">Integrasies</translation>
     </message>
@@ -7462,22 +7467,22 @@ Wil jy voortgaan?</translation>
       <translation>Integrasies</translation>
     </message>
     <message id="settings_acdcsystem_ess_dvcc_battery">
-      <location filename="../../pages/SettingsPage.qml" line="93"/>
+      <location filename="../../pages/SettingsPage.qml" line="121"/>
       <source>AC/DC system, ESS, DVCC, Battery...</source>
       <translation>AC/DC-stelsel, ESS, DVCC, Battery...</translation>
     </message>
     <message id="settings_debug_and_develop">
-      <location filename="../../pages/SettingsPage.qml" line="100"/>
+      <location filename="../../pages/SettingsPage.qml" line="128"/>
       <source>Debug &amp; Develop</source>
       <translation>Ontfout en ontwikkel</translation>
     </message>
     <message id="settings_profilingtools_debugstatistics_appversion">
-      <location filename="../../pages/SettingsPage.qml" line="102"/>
+      <location filename="../../pages/SettingsPage.qml" line="130"/>
       <source>Profiling tools, debug statistics, app version...</source>
       <translation>Profielnutsgoed, ontfoutingstatistieke, programweergawe...</translation>
     </message>
     <message id="settings_system_setup">
-      <location filename="../../pages/SettingsPage.qml" line="91"/>
+      <location filename="../../pages/SettingsPage.qml" line="119"/>
       <source>System Setup</source>
       <translation>Stelsel opstelling</translation>
     </message>
@@ -7910,7 +7915,7 @@ Wil jy voortgaan?</translation>
       <translation>Fermware geïnstalleer, toestel herlaai</translation>
     </message>
     <message id="modaldialog_confirm">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="39"/>
       <source>Confirm</source>
       <translation>Bevestig</translation>
     </message>
@@ -8324,17 +8329,17 @@ Wil jy voortgaan?</translation>
       <translation>Omsetter oorlading toestand</translation>
     </message>
     <message id="application_content_touch_input_on">
-      <location filename="../../ApplicationContent.qml" line="57"/>
+      <location filename="../../ApplicationContent.qml" line="55"/>
       <source>Touch input on</source>
       <translation>Raak invoer aan</translation>
     </message>
     <message id="application_content_touch_input_off">
-      <location filename="../../ApplicationContent.qml" line="59"/>
+      <location filename="../../ApplicationContent.qml" line="57"/>
       <source>Touch input off</source>
       <translation>Raak invoer af</translation>
     </message>
     <message id="application_content_touch_input_disabled">
-      <location filename="../../ApplicationContent.qml" line="73"/>
+      <location filename="../../ApplicationContent.qml" line="71"/>
       <source>Touch input disabled</source>
       <translation>Raakinvoer gedeaktiveer</translation>
     </message>
@@ -8892,11 +8897,6 @@ Let daarop dat hierdie spyskaart slegs Carlo Gavazzi-meters wys wat oor RS485 ge
       <source>System alarms</source>
       <translation>Stelsel alarms</translation>
     </message>
-    <message id="settings_rs_devices">
-      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
-      <source>RS devices</source>
-      <translation>RS toestelle</translation>
-    </message>
     <message id="rs_no_system_alarms">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="60"/>
       <source>No system alarms</source>
@@ -8957,7 +8957,7 @@ Met vaartbelynde navigasie en 'n vars voorkoms is alles waarvan jy hou nou selfs
       <translation type="unfinished">Kontroles</translation>
     </message>
     <message id="controlcards_empty_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="154"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="155"/>
       <source>Controls</source>
       <translation>Kontroles</translation>
     </message>
@@ -9502,12 +9502,12 @@ Die GX-toestel kan net een gekoppelde genset beheer en neem die een met die laag
       <translation>AC inset %1</translation>
     </message>
     <message id="settings_security_profile_change_password_description">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="85"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="69"/>
       <source>Please enter a new GX password:</source>
       <translation>Voer 'n nuwe GX wagwoord in:</translation>
     </message>
     <message id="settings_security_profile_enter_new_password">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="100"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="84"/>
       <source>Enter new password</source>
       <translation>Voer nuwe wagwoord in</translation>
     </message>
@@ -9528,7 +9528,7 @@ Die GX-toestel kan net een gekoppelde genset beheer en neem die een met die laag
       <translation>Aktiveer hierdie instelling wanneer u 'n sekondêre MultiPlus- of Quattro-stelsel het wat deur dieselfde batterybank as die hoof-inverter/laaierstelsel aangedryf word. Wanneer hierdie instelling geaktiveer is, sal hierdie sekondêre stelsel die CVL- en DCL-parameters van die geselekteerde BMS gebruik.</translation>
     </message>
     <message id="settings_access_control_display_firmware">
-      <location filename="../../pages/SettingsPage.qml" line="50"/>
+      <location filename="../../pages/SettingsPage.qml" line="78"/>
       <source>Access control, Display, Firmware, Support</source>
       <translation>Toegangsbeheer, Vertoon, Firmware, Ondersteuning</translation>
     </message>
@@ -9871,7 +9871,7 @@ Die GX-toestel kan net een gekoppelde genset beheer en neem die een met die laag
       <translation>Die Relais kan nou in die toestellys gevind word</translation>
     </message>
     <message id="gx_device_relays">
-      <location filename="../../src/iochannelgroupmodel.cpp" line="105"/>
+      <location filename="../../src/iochannelgroupmodel.cpp" line="107"/>
       <source>GX device relays</source>
       <translation>GX toestel relais</translation>
     </message>
@@ -10182,7 +10182,7 @@ Die GX-toestel kan net een gekoppelde genset beheer en neem die een met die laag
       <translation>Aktiveer die Venus OS Large fermware om Node-RED of Signal-K te gebruik</translation>
     </message>
     <message id="settings_relays_sensors_tanks">
-      <location filename="../../pages/SettingsPage.qml" line="84"/>
+      <location filename="../../pages/SettingsPage.qml" line="112"/>
       <source>Relays, Sensors, PV Inverters, Modbus, Node-RED</source>
       <translation>Relais, Sensors, PV Omskakelaars, Modbus, Node-RED</translation>
     </message>
@@ -10617,17 +10617,17 @@ Die GX-toestel kan net een gekoppelde genset beheer en neem die een met die laag
       <translation>Slegs op VRM</translation>
     </message>
     <message id="control_cards_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="20"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="21"/>
       <source>Controls</source>
       <translation type="unfinished">Kontroles</translation>
     </message>
     <message id="controlcards_empty_desc1">
-      <location filename="../../pages/ControlCardsPage.qml" line="156"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="157"/>
       <source>No compatible devices found</source>
       <translation>Geen versoenbare toestelle gevind nie</translation>
     </message>
     <message id="controlcards_empty_desc2">
-      <location filename="../../pages/ControlCardsPage.qml" line="158"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="159"/>
       <source>Connect devices that support this function</source>
       <translation>Koppel toestelle wat hierdie funksie ondersteun</translation>
     </message>
@@ -11246,7 +11246,7 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation>Besig om te begin, dit kan 'n paar sekondes neem...</translation>
     </message>
     <message id="settings_security_profile_change_password_title">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="36"/>
       <source>Change the GX Password</source>
       <translation>Verander die GX Wagwoord</translation>
     </message>
@@ -11347,54 +11347,44 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <source>Rescan for IP addresses</source>
       <translation>Herskandeer vir IP-adresse</translation>
     </message>
-    <message id="mqtt_devices_ev_charging_station">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="16"/>
-      <source>EV Charging Station</source>
-      <translation>EV-laaistasies</translation>
-    </message>
     <message id="mqtt_devices_pairing_mode">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="51"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="15"/>
       <source>Pairing mode</source>
       <translation>Paringmodus</translation>
     </message>
     <message id="mqtt_devices_pairing_active">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="55"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="19"/>
       <source>Active • %1s remaining</source>
       <extracomment>%1 = number of seconds remaining</extracomment>
       <translation>Aktief • %1s oor</translation>
     </message>
     <message id="mqtt_devices_pairing_activate">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="57"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="21"/>
       <source>Activate</source>
       <translation>Aktiveer</translation>
     </message>
     <message id="mqtt_devices_pairing_enabled">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="81"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="37"/>
       <source>Pairing mode enabled for %1 seconds</source>
       <translation>Paringmodus geaktiveer vir %1 sekondes</translation>
     </message>
     <message id="mqtt_devices_pairing_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="66"/>
       <source>Activate Pairing mode to allow a device to connect. Paired devices appear here, and will show in the Devices list when connected.</source>
       <translation>Aktiveer Paringmodus om 'n toestel toe te laat om te koppel. Gekoppelde toestelle verskyn hier, en sal in die Toestellys verskyn sodra dit gekoppel is.</translation>
     </message>
-    <message id="mqtt_devices_pairing_access_tokens">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="100"/>
-      <source>Access tokens for paired devices</source>
-      <translation>Toegangstokens vir gekoppelde toestelle</translation>
-    </message>
-    <message id="mqtt_devices_pairing_unpair">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="112"/>
+    <message id="devices_pairing_unpair">
+      <location filename="../../components/listitems/ListUnpairButton.qml" line="11"/>
       <source>Unpair</source>
       <translation>Ontkoppel</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_title">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="129"/>
+    <message id="unpairing_confirm_title">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="13"/>
       <source>Unpairing %1</source>
       <translation>Ontkoppel %1</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="132"/>
+    <message id="unpairing_confirm_description">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="16"/>
       <source>This will disconnect the device and it will need to be paired again to reconnect.</source>
       <translation>Dit sal die toestel ontkoppel en dit sal weer gepaar moet word om te herkoppel.</translation>
     </message>
@@ -11419,17 +11409,17 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation>Ontdekte E-aandrywer-ID's</translation>
     </message>
     <message id="generic_input_label_released">
-      <location filename="../../src/genericinput.cpp" line="132"/>
+      <location filename="../../src/genericinput.cpp" line="72"/>
       <source>Released</source>
       <translation>Vrygestel</translation>
     </message>
     <message id="generic_input_label_pressed">
-      <location filename="../../src/genericinput.cpp" line="134"/>
+      <location filename="../../src/genericinput.cpp" line="76"/>
       <source>Pressed</source>
       <translation>Gedruk</translation>
     </message>
     <message id="generic_input_label_holding">
-      <location filename="../../src/genericinput.cpp" line="136"/>
+      <location filename="../../src/genericinput.cpp" line="80"/>
       <source>Holding</source>
       <translation>Hou in</translation>
     </message>
@@ -11470,7 +11460,7 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation>Maksimum waarde</translation>
     </message>
     <message id="aux_page_switches">
-      <location filename="../../pages/AuxCardsPage.qml" line="16"/>
+      <location filename="../../pages/AuxCardsPage.qml" line="18"/>
       <source>Switches</source>
       <extracomment>Name of the Switch Controls feature</extracomment>
       <translation>Skakelaars</translation>
@@ -11491,7 +11481,7 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation>Stelsellading hoog, grafieke word versteek om SVE-lading te verminder</translation>
     </message>
     <message id="navbar_more">
-      <location filename="../../pages/MainView.qml" line="285"/>
+      <location filename="../../pages/MainView.qml" line="281"/>
       <source>More</source>
       <extracomment>Click to show more available items</extracomment>
       <translation>Meer</translation>
@@ -11863,21 +11853,6 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <source>Only applies when using Optimized with BatteryLife. Opportunity Loads automatically resumes after a full charge.</source>
       <translation>Geld slegs wanneer Optimized met BatteryLife gebruik word. Geleentheidsladings hervat outomaties na 'n volle lading.</translation>
     </message>
-    <message id="settings_ble_gateway_access">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="88"/>
-      <source>BLE gateway access</source>
-      <translation>BLE-gateway-toegang</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="94"/>
-      <source>Proxy</source>
-      <translation>Proxy</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy_and_direct">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="96"/>
-      <source>Proxy and direct</source>
-      <translation>Proxy en direk</translation>
-    </message>
     <message id="powerguard_consumption_l1_current_limit">
       <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="46"/>
       <source>Consumption L1 current limit</source>
@@ -11936,24 +11911,69 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation>Interne (EV-laaistasie)</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_rejected">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="182"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="140"/>
       <source>The submitted encryption key is invalid.</source>
       <translation>Die ingediende enkripsiesleutel is ongeldig.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_placeholder">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="260"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="218"/>
       <source>Enter a 32-character key</source>
       <translation>Voer 'n 32-karakter sleutel in</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_invalid">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="267"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="225"/>
       <source>The encryption key must be 32 hexadecimal characters.</source>
       <translation>Die enkripsiesleutel moet 32 heksadesimale karakters wees.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="311"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="269"/>
       <source>Encryption key</source>
       <translation>Enkripsiesleutel</translation>
+    </message>
+    <message id="batteryalarms_bms_cable">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
+      <source>Battery communication lost</source>
+      <translation>Batteryekommunikasie verloor</translation>
+    </message>
+    <message id="batteryalarms_cell_measurements_fault">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="183"/>
+      <source>Cell measurements fault</source>
+      <translation>Selmetingsfout</translation>
+    </message>
+    <message id="settings_ble_advanced">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="93"/>
+      <source>Advanced</source>
+      <translation type="unfinished">Gevorderd</translation>
+    </message>
+    <message id="settings_ble_sensors">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="100"/>
+      <source>Sensors</source>
+      <translation>Sensors</translation>
+    </message>
+    <message id="settings_ble_bridge_access">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="201"/>
+      <source>BLE bridge access</source>
+      <translation>BLE-brugtoegang</translation>
+    </message>
+    <message id="settings_ble_bridge_access_paired_only">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="210"/>
+      <source>Paired devices only</source>
+      <translation type="unfinished">Slegs gekoppelde toestelle</translation>
+    </message>
+    <message id="pairing_ble_paired_bridges">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="230"/>
+      <source>Paired BLE bridges</source>
+      <translation>Gekoppelde BLE-brûe</translation>
+    </message>
+    <message id="pairing_mqtt_paired_devices">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="73"/>
+      <source>Paired devices</source>
+      <translation>Gekoppelde toestelle</translation>
+    </message>
+    <message id="settings_ble_sensors_add_encryption_keys_via_victronconnect">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="122"/>
+      <source>Use VictronConnect app over Bluetooth to add encryption keys automatically.</source>
+      <translation>Gebruik die VictronConnect-toepassing oor Bluetooth om enkripsiesleutels outomaties by te voeg.</translation>
     </message>
     <message id="dc_input">
       <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>
@@ -12038,7 +12058,7 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation type="unfinished">Battery</translation>
     </message>
     <message id="switchableoutput_gx_device_relays">
-      <location filename="../../src/iochannel.cpp" line="342"/>
+      <location filename="../../src/iochannel.cpp" line="345"/>
       <source>GX device relays</source>
       <translation type="unfinished">GX toestel relais</translation>
     </message>
@@ -12064,170 +12084,195 @@ Dateer asseblief op na die nuutste fermware om hierdie instellings te kan aanpas
       <translation>Geen fout nie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="13"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="14"/>
       <source>Battery initialization error</source>
       <translation>Battery-initialiseringsfout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="16"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="17"/>
       <source>No batteries connected</source>
       <translation>Geen batterye gekoppel nie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="19"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="20"/>
       <source>Unknown battery</source>
       <translation>Onbekende battery</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="22"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="23"/>
       <source>Different battery types</source>
       <translation>Verskillende tipes batterye</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="25"/>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="40"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="26"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="41"/>
       <source>No. of batteries incorrect</source>
       <translation>Aantal batterye is verkeerd</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="28"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="29"/>
       <source>Lynx Shunt not found</source>
       <translation>Lynx-shunt nie gevind nie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="31"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="32"/>
       <source>Battery measure error</source>
       <translation>Battery meet fout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="34"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="35"/>
       <source>Internal calculation error</source>
       <translation>Interne berekeningsfout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="37"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="38"/>
       <source>No. of batteries in series incorrect</source>
       <translation>Aantal batterye in serie verkeerd</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="44"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="45"/>
       <source>Hardware error</source>
       <translation>Hardeware fout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="47"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="48"/>
       <source>Watchdog error</source>
       <translation>Waghondfout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="50"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="51"/>
       <source>Over voltage</source>
       <translation>Oorspanning</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="53"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="54"/>
       <source>Under voltage</source>
       <translation>Onder spanning</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="56"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="57"/>
       <source>Over temperature</source>
       <translation>Oor temperatuur</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="59"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="60"/>
       <source>Under temperature</source>
       <translation>Onder temperatuur</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="62"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="63"/>
       <source>Under-charge standby</source>
       <translation>Onderlaai bystand</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="65"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="66"/>
       <source>ADC error</source>
       <translation>ADC fout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="68"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="69"/>
       <source>Battery comm. error</source>
       <translation>Battery komm. fout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="71"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="74"/>
       <source>Pre-Charge error</source>
       <translation>Vooraflaaifout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="75"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="78"/>
       <source>Safety contactor error</source>
       <translation>Veiligheidskontaktorfout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="79"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
       <source>Battery update error</source>
       <translation>Batteryopdateringfout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
       <source>BMS cable error</source>
       <translation>BMS kabel fout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
       <source>Reference voltage failure</source>
       <translation>Verwysingsspanningsfout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
       <source>Wrong system voltage</source>
       <translation>Verkeerde stelselspanning</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
       <source>Pre charge timeout</source>
       <translation>Pre charge timeout</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="97"/>
       <source>ATC/ATD failure</source>
       <translation>ATC/ATD mislukking</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="98"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="101"/>
       <source>Calibration data lost</source>
       <translation>Kalibrasiedata verloor</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="102"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
       <source>Settings invalid</source>
       <translation>Instellings ongeldig</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
       <source>Interlock</source>
       <translation>Interlock</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
       <source>Emergency stop</source>
       <translation>Noodstop</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
       <source>Communication timeout</source>
       <translation>Kommunikasie-time-out</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="118"/>
       <source>Safety lock</source>
       <translation>Veiligheidslot</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="117"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="121"/>
       <source>Terminal over temperature</source>
       <translation>Terminale oor temperatuur</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="124"/>
+      <source>High cell voltage</source>
+      <translation>Hoë selspanning</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="127"/>
+      <source>External disconnection</source>
+      <translation>Eksterne ontkoppeling</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="130"/>
+      <source>Battery voltage not allowed</source>
+      <translation>Batteryspanning nie toegelaat nie</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="133"/>
+      <source>Over current</source>
+      <translation>Oorstroom</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="136"/>
+      <source>Battery voltage measurement mismatch</source>
+      <translation>Batteryspanningmeting-wanpassingfout</translation>
     </message>
   </context>
   <context>

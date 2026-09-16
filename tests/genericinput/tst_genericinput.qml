@@ -474,10 +474,10 @@ TestCase {
 				inputProperties: { "Settings/Type": 0, "Name": "A", "Settings/Group": "test" },
 				deviceValues: {
 					"mock/com.victronenergy.test.a/ProductName": "Test product",
-					"mock/com.victronenergy.test.a/ProductName": "Test custom",
+					"mock/com.victronenergy.test.a/CustomName": "Test custom",
 					"mock/com.victronenergy.test.a/DeviceInstance": 1,
 				},
-				formattedName: "Test custom (1) | A",
+				formattedName: "Test custom | A",
 			},
 		]
 	}
@@ -496,6 +496,63 @@ TestCase {
 		input.uid = data.uid
 		compare(input.uid, data.uid)
 		compare(input.formattedName, data.formattedName)
+
+		// Clean up
+		input.uid = ""
+		MockManager.removeValue(data.uid)
+		if (data.deviceValues) {
+			for (propertyName in data.deviceValues) {
+				MockManager.removeValue(propertyName)
+			}
+		}
+	}
+
+	function test_formattedName_without_device_data() {
+		return [
+			{
+				tag: "no custom name, in group: use device product name",
+				uid: "mock/com.victronenergy.test.x/GenericInput/0",
+				inputProperties: { "Settings/Type": 0, "Name": "X", "Settings/Group": "test" },
+				deviceValues: {
+					"mock/com.victronenergy.test.x/ProductName": "Test product",
+					"mock/com.victronenergy.test.x/DeviceInstance": 1,
+				},
+				formattedNameWithoutDevice: "X",
+				formattedNameWithDevice: "Test product (1) | X",
+			},
+
+			{
+				tag: "no custom name, in group: use device custom name",
+				uid: "mock/com.victronenergy.test.y/GenericInput/0",
+				inputProperties: { "Settings/Type": 0, "Name": "Y", "Settings/Group": "test" },
+				deviceValues: {
+					"mock/com.victronenergy.test.y/ProductName": "Test product",
+					"mock/com.victronenergy.test.y/CustomName": "Test custom",
+					"mock/com.victronenergy.test.y/DeviceInstance": 1,
+				},
+				formattedNameWithoutDevice: "Y",
+				formattedNameWithDevice: "Test custom | Y",
+			},
+		]
+	}
+
+	function test_formattedName_without_device(data) {
+		let propertyName
+		compare(input.formattedName, "")
+
+		// Set the input properties first, and initialise the input, before the device is available.
+		setInputProperties(data.uid, data.inputProperties)
+		input.uid = data.uid
+		compare(input.uid, data.uid)
+		compare(input.formattedName, data.formattedNameWithoutDevice)
+
+		// Now set the device properties and check the formatted name again.
+		if (data.deviceValues) {
+			for (propertyName in data.deviceValues) {
+				MockManager.setValue(propertyName, data.deviceValues[propertyName])
+			}
+		}
+		compare(input.formattedName, data.formattedNameWithDevice)
 
 		// Clean up
 		input.uid = ""
@@ -641,6 +698,24 @@ TestCase {
 				uid: "mock/com.victronenergy.test.a/GenericInput/0",
 				inputProperties: { "Value": 1, "Settings/Labels": ["/stopped", "/running"] },
 				textValue: qsTrId("generic_input_label_running"),
+			},
+			{
+				tag: "released-pressed-holding: released",
+				uid: "mock/com.victronenergy.test.a/GenericInput/0",
+				inputProperties: { "Value": 0, "Settings/Labels": ["/released", "/pressed", "/holding"] },
+				textValue: qsTrId("generic_input_label_released"),
+			},
+			{
+				tag: "released-pressed-holding: pressed",
+				uid: "mock/com.victronenergy.test.a/GenericInput/0",
+				inputProperties: { "Value": 1, "Settings/Labels": ["/released", "/pressed", "/holding"] },
+				textValue: qsTrId("generic_input_label_pressed"),
+			},
+			{
+				tag: "released-pressed-holding: holding",
+				uid: "mock/com.victronenergy.test.a/GenericInput/0",
+				inputProperties: { "Value": 2, "Settings/Labels": ["/released", "/pressed", "/holding"] },
+				textValue: qsTrId("generic_input_label_holding"),
 			},
 			{
 				tag: "custom label: option 0",

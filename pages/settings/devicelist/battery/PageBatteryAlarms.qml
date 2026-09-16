@@ -165,7 +165,7 @@ Page {
 			}
 
 			ListAlarm {
-				//% "BMS cable fault"
+				//% "Battery communication lost"
 				text: qsTrId("batteryalarms_bms_cable")
 				dataItem.uid: root.bindPrefix + "/Alarms/BmsCable"
 				preferredVisible: dataItem.valid
@@ -175,6 +175,13 @@ Page {
 				//% "Bad contactor"
 				text: qsTrId("batteryalarms_contactor")
 				dataItem.uid: root.bindPrefix + "/Alarms/Contactor"
+				preferredVisible: dataItem.valid
+			}
+
+			ListAlarm {
+				//% "Cell measurements fault"
+				text: qsTrId("batteryalarms_cell_measurements_fault")
+				dataItem.uid: root.bindPrefix + "/Alarms/CellMeasurementsFault"
 				preferredVisible: dataItem.valid
 			}
 		}

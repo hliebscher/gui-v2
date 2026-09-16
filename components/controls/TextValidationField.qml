@@ -11,7 +11,7 @@ TextField {
 
 	property var validateInput
 	property bool validateOnFocusLost: true
-	property var flickable
+	property Flickable flickable
 
 	property int toast
 
@@ -73,9 +73,7 @@ TextField {
 	function _aboutToFocus() {
 		// Intercept the event before the VKB opens and scroll the parent flickable to
 		// ensure the whole textfield is visible.
-		Global.aboutToFocusTextField(root,
-				parent,
-				root.flickable)
+		Global.aboutToFocusTextField(root, root.flickable)
 	}
 
 	borderColor: _showErrorHighlight ? Theme.color_red : Theme.color_ok
@@ -134,6 +132,7 @@ TextField {
 		_inputCancelled = true // flag to prevent validation from running when focus is lost
 		focus = false
 		_inputCancelled = false
+		_validateBeforeSaving = false
 	}
 
 	MouseArea {

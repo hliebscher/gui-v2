@@ -19,7 +19,7 @@
       <translation>طاقة</translation>
     </message>
     <message id="generic_input_label_off">
-      <location filename="../../src/genericinput.cpp" line="112"/>
+      <location filename="../../src/genericinput.cpp" line="32"/>
       <source>Off</source>
       <translation>مطفأ</translation>
     </message>
@@ -59,7 +59,7 @@
       <translation>الموقع</translation>
     </message>
     <message id="generic_input_primaryLabel_speed">
-      <location filename="../../src/genericinput.cpp" line="173"/>
+      <location filename="../../src/genericinput.cpp" line="217"/>
       <source>Speed</source>
       <translation>السرعة</translation>
     </message>
@@ -100,12 +100,12 @@
       <translation>التحكم الخارجي</translation>
     </message>
     <message id="levels_page_tanks">
-      <location filename="../../pages/LevelsPage.qml" line="75"/>
+      <location filename="../../pages/LevelsPage.qml" line="71"/>
       <source>Tanks</source>
       <translation>خزانات</translation>
     </message>
     <message id="levels_page_environment">
-      <location filename="../../pages/LevelsPage.qml" line="77"/>
+      <location filename="../../pages/LevelsPage.qml" line="73"/>
       <source>Environment</source>
       <translation>بيئة</translation>
     </message>
@@ -620,12 +620,12 @@
       <translation>إدخال الاسم</translation>
     </message>
     <message id="settings_continuous_scan">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="46"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="187"/>
       <source>Continuous scanning</source>
       <translation>مسح متواصل</translation>
     </message>
     <message id="settings_io_bluetooth_adapters">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="59"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="159"/>
       <source>Bluetooth adapters</source>
       <translation>مهايئات بلوتوث</translation>
     </message>
@@ -1048,10 +1048,15 @@
       <source>Update build date/time</source>
       <translation>تحديث إقامة التاريخ/الوقت</translation>
     </message>
+    <message id="settings_rssystem_inverters">
+      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
+      <source>Inverters</source>
+      <translation>معاكسات</translation>
+    </message>
     <message id="page_settings_fronius_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="30"/>
       <source>Inverters</source>
-      <translation>معاكسات</translation>
+      <translation type="unfinished">معاكسات</translation>
     </message>
     <message id="page_settings_fronius_find_pv_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="36"/>
@@ -1856,8 +1861,8 @@ Use unless prohibited by the utility provider.</source>
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="249"/>
       <source>Error message: 
 %1</source>
-      <translation>رسالة خطأ 
-%1/&gt;</translation>
+      <translation>رسالة خطأ:
+%1</translation>
     </message>
     <message id="settings_no_contact_reboot">
       <location filename="../../pages/settings/PageSettingsLogger.qml" line="274"/>
@@ -2577,12 +2582,12 @@ Use unless prohibited by the utility provider.</source>
       <translation type="unfinished">إنذار</translation>
     </message>
     <message id="generic_input_label_alarm">
-      <location filename="../../src/genericinput.cpp" line="126"/>
+      <location filename="../../src/genericinput.cpp" line="60"/>
       <source>Alarm</source>
       <translation>إنذار</translation>
     </message>
     <message id="generic_input_primaryLabel_volume">
-      <location filename="../../src/genericinput.cpp" line="181"/>
+      <location filename="../../src/genericinput.cpp" line="225"/>
       <source>Volume</source>
       <translation>الحجم</translation>
     </message>
@@ -3590,10 +3595,15 @@ Use unless prohibited by the utility provider.</source>
       <source>US (240 to 30 Ohm)</source>
       <translation>أمريكا (240 إلى 30 Ohm)</translation>
     </message>
+    <message id="settings_ble_bridge_access_custom">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="213"/>
+      <source>Custom</source>
+      <translation>تخصيص</translation>
+    </message>
     <message id="devicelist_tanksetup_custom">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="53"/>
       <source>Custom</source>
-      <translation>تخصيص</translation>
+      <translation type="unfinished">تخصيص</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_empty">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="59"/>
@@ -3987,7 +3997,7 @@ Use unless prohibited by the utility provider.</source>
     <message id="vebus_device_ac_sensor_x_y">
       <location filename="../../pages/vebusdevice/PageAcSensor.qml" line="19"/>
       <source>AC sensor %1 %2</source>
-      <translation>حساس مكيف الهواء  %1 %2</translation>
+      <translation>حساس مكيف الهواء %1 %2</translation>
     </message>
     <message id="vebus_mk3_new_version_available">
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="37"/>
@@ -4043,8 +4053,8 @@ Do you want to continue?</source>
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="122"/>
       <source>Shore power will be used when available and the "Solar &amp; wind priority" option will be ignored.
 Do you want to continue?</source>
-      <translation>سيتم استخدام الطاقة البرية عند توفرها، وسيتم تجاهل الخيار 'الأولوية للطاقة الشمسية والرياح'. 
-هل ترغب في المتابعة</translation>
+      <translation>سيتم استخدام الطاقة البرية عند توفرها، وسيتم تجاهل الخيار 'الأولوية للطاقة الشمسية والرياح'.
+هل ترغب في المتابعة؟</translation>
     </message>
     <message id="ebus_device_use_shore_power_once">
       <location filename="../../pages/vebusdevice/PageVeBus.qml" line="127"/>
@@ -4206,7 +4216,7 @@ Do you want to continue?</source>
     <message id="vebus_veice_network_quality_counter">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="335"/>
       <source>Network quality counter Phase L%1, device %2 (%3)</source>
-      <translation>طور L لعداد جودة الشبكة%1، الجهاز  %2 (%3)</translation>
+      <translation>طور L لعداد جودة الشبكة%1، الجهاز %2 (%3)</translation>
     </message>
     <message id="vebus_device_error_8_11_report">
       <location filename="../../pages/vebusdevice/PageVeBusAlarms.qml" line="62"/>
@@ -4237,7 +4247,7 @@ Do you want to continue?</source>
     <message id="vebus_device_last_vebus_error_11_report">
       <location filename="../../pages/vebusdevice/PageVeBusError11Device.qml" line="33"/>
       <source>Last VE.Bus Error 11 report #%1</source>
-      <translation>آخر خطأ VE.Bus 11 تقرير رقم  #%1</translation>
+      <translation>آخر خطأ VE.Bus 11 تقرير رقم #%1</translation>
     </message>
     <message id="vebus_device_bf_safety_test_in_progress">
       <location filename="../../pages/vebusdevice/PageVeBusError11Device.qml" line="40"/>
@@ -4474,7 +4484,7 @@ Do you want to continue?</source>
       <location filename="../../components/CommonWords.qml" line="44"/>
       <source>AC Phase L%1</source>
       <extracomment>%1 = phase number (1-3)</extracomment>
-      <translation>طور التيار المناوب  L%1</translation>
+      <translation>طور التيار المناوب L%1</translation>
     </message>
     <message id="common_words_ac_sensor_x">
       <location filename="../../components/CommonWords.qml" line="47"/>
@@ -4561,7 +4571,7 @@ Do you want to continue?</source>
       <translation>محو الخطأ</translation>
     </message>
     <message id="generic_input_label_closed">
-      <location filename="../../src/genericinput.cpp" line="122"/>
+      <location filename="../../src/genericinput.cpp" line="52"/>
       <source>Closed</source>
       <translation>مغلق</translation>
     </message>
@@ -4769,7 +4779,7 @@ Do you want to continue?</source>
       <translation>اسم الطراز</translation>
     </message>
     <message id="generic_input_label_no">
-      <location filename="../../src/genericinput.cpp" line="116"/>
+      <location filename="../../src/genericinput.cpp" line="40"/>
       <source>No</source>
       <translation>لا</translation>
     </message>
@@ -4794,12 +4804,12 @@ Do you want to continue?</source>
       <translation>خارج الخط</translation>
     </message>
     <message id="generic_input_label_ok">
-      <location filename="../../src/genericinput.cpp" line="124"/>
+      <location filename="../../src/genericinput.cpp" line="56"/>
       <source>OK</source>
       <translation>صحيح</translation>
     </message>
     <message id="generic_input_label_on">
-      <location filename="../../src/genericinput.cpp" line="114"/>
+      <location filename="../../src/genericinput.cpp" line="36"/>
       <source>On</source>
       <translation>مشغل</translation>
     </message>
@@ -4809,7 +4819,7 @@ Do you want to continue?</source>
       <translation>على الخط</translation>
     </message>
     <message id="generic_input_label_open">
-      <location filename="../../src/genericinput.cpp" line="120"/>
+      <location filename="../../src/genericinput.cpp" line="48"/>
       <source>Open</source>
       <translation>مفتوح</translation>
     </message>
@@ -4856,7 +4866,7 @@ Do you want to continue?</source>
       <translation>إزالة</translation>
     </message>
     <message id="generic_input_label_running">
-      <location filename="../../src/genericinput.cpp" line="130"/>
+      <location filename="../../src/genericinput.cpp" line="68"/>
       <source>Running</source>
       <translation>مشغل</translation>
     </message>
@@ -4871,7 +4881,7 @@ Do you want to continue?</source>
       <translation>رقم السلسلة</translation>
     </message>
     <message id="nav_settings">
-      <location filename="../../pages/SettingsPage.qml" line="18"/>
+      <location filename="../../pages/SettingsPage.qml" line="19"/>
       <source>Settings</source>
       <translation>الإعدادات</translation>
     </message>
@@ -4938,12 +4948,12 @@ Do you want to continue?</source>
       <translation>الإيقاف بعد ما يصل الشرط إلى</translation>
     </message>
     <message id="generic_input_label_stopped">
-      <location filename="../../src/genericinput.cpp" line="128"/>
+      <location filename="../../src/genericinput.cpp" line="64"/>
       <source>Stopped</source>
       <translation>متوقف</translation>
     </message>
     <message id="generic_input_primaryLabel_temperature">
-      <location filename="../../src/genericinput.cpp" line="177"/>
+      <location filename="../../src/genericinput.cpp" line="221"/>
       <source>Temperature</source>
       <translation>الحرارة</translation>
     </message>
@@ -5004,7 +5014,7 @@ Do you want to continue?</source>
       <translation>عندما يختفي التنبيه توقف بعد</translation>
     </message>
     <message id="generic_input_label_yes">
-      <location filename="../../src/genericinput.cpp" line="118"/>
+      <location filename="../../src/genericinput.cpp" line="44"/>
       <source>Yes</source>
       <translation>نعم</translation>
     </message>
@@ -5056,7 +5066,7 @@ Do you want to continue?</source>
       <translation>سيستمر تشغيل المولد إن تم تلبية حالة التشغيل التلقائي.</translation>
     </message>
     <message id="modaldialog_set">
-      <location filename="../../components/dialogs/ModalDialog.qml" line="43"/>
+      <location filename="../../components/dialogs/ModalDialog.qml" line="45"/>
       <source>Set</source>
       <translation>تعيين</translation>
     </message>
@@ -5137,7 +5147,7 @@ Do you want to continue?</source>
       <location filename="../../components/FirmwareUpdate.qml" line="110"/>
       <source>Downloading and installing firmware %1...</source>
       <extracomment>%1 = firmware version</extracomment>
-      <translation>جارٍ تنزيل البرامج الثابتة وتثبيتها  %1...</translation>
+      <translation>جارٍ تنزيل البرامج الثابتة وتثبيتها %1...</translation>
     </message>
     <message id="settings_firmware_installing_firmware">
       <location filename="../../components/FirmwareUpdate.qml" line="117"/>
@@ -5817,7 +5827,7 @@ Do you want to continue?</source>
     </message>
     <message id="tank_description">
       <location filename="../../data/common/TankDescription.qml" line="24"/>
-      <location filename="../../src/device.cpp" line="134"/>
+      <location filename="../../src/device.cpp" line="137"/>
       <source>%1 tank (%2)</source>
       <extracomment>Tank description. %1 = tank type (e.g. Fuel, Fresh water), %2 = tank device instance (a number)</extracomment>
       <translation>%1 خزان (%2)</translation>
@@ -5853,12 +5863,12 @@ Do you want to continue?</source>
       <translation>مولد باستخدام المياه</translation>
     </message>
     <message id="generic_input_label_low">
-      <location filename="../../src/genericinput.cpp" line="108"/>
+      <location filename="../../src/genericinput.cpp" line="24"/>
       <source>Low</source>
       <translation>منخفض</translation>
     </message>
     <message id="generic_input_label_high">
-      <location filename="../../src/genericinput.cpp" line="110"/>
+      <location filename="../../src/genericinput.cpp" line="28"/>
       <source>High</source>
       <translation>مرتفع</translation>
     </message>
@@ -6224,7 +6234,7 @@ Do you want to continue?</source>
     <message id="genset_controller_requires_helper_relay">
       <location filename="../../components/PageGensetModel.qml" line="66"/>
       <source>This genset controller requires a helper relay to be controlled but the helper relay is not configured. Please configure Relay 1 under Settings → Relay to "Connected genset helper relay".</source>
-      <translation>يتطلب جهاز التحكم في المولد الكهربائي هذا مرحل مساعد للتحكم فيه ولكن المرحل المساعد غير مهيأ. برجاء تكوين المرحل 1 من خلال الإعدادات - المرحل إلى / «المرحل المساعد للمولد الكهربائي المتصل/».</translation>
+      <translation>يتطلب جهاز التحكم في المولد الكهربائي هذا مرحل مساعد للتحكم فيه ولكن المرحل المساعد غير مهيأ. برجاء تكوين المرحل 1 من خلال الإعدادات → المرحل إلى «المرحل المساعد للمولد الكهربائي المتصل».</translation>
     </message>
     <message id="settings_page_relay_generator_run_time">
       <location filename="../../pages/settings/PageGenerator.qml" line="67"/>
@@ -6356,11 +6366,6 @@ Do you want to continue?</source>
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="45"/>
       <source>High current</source>
       <translation>تيار عالي</translation>
-    </message>
-    <message id="batteryalarms_bms_cable">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
-      <source>BMS cable fault</source>
-      <translation>عيب كيبل BMS</translation>
     </message>
     <message id="batteryalarms_contactor">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="176"/>
@@ -6560,7 +6565,7 @@ Do you want to continue?</source>
       <translation>استخدم هذه القائمة لتحديد بيانات البطارية التي تظهر عند النقر على أيقونة «البطارية» في صفحة «النظرة العامة». يظهر نفس الخيار على منصة VRM.</translation>
     </message>
     <message id="settings_continuous_scan_may_interfere">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="193"/>
       <source>Continuous scanning may interfere with Wi-Fi operation.</source>
       <translation>قد يتداخل المسح المستمر مع تشغيل الواي فاي.</translation>
     </message>
@@ -6896,7 +6901,7 @@ Do you want to continue?</source>
       <translation>لا توجد كلمة مرور والاتصال الشبكي غير مشفر</translation>
     </message>
     <message id="settings_security_profile_password_incorrect_length">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="21"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation>يجب أن تحتوي كلمة المرور على الأقل على 8 رموز</translation>
     </message>
@@ -7416,42 +7421,42 @@ Do you want to continue?</source>
       <translation>القطب الشمالي</translation>
     </message>
     <message id="settings_all_connected_devices">
-      <location filename="../../pages/SettingsPage.qml" line="40"/>
+      <location filename="../../pages/SettingsPage.qml" line="68"/>
       <source>All connected devices</source>
       <translation>جميع الأجهزة المتصلة</translation>
     </message>
     <message id="settings_general">
-      <location filename="../../pages/SettingsPage.qml" line="48"/>
+      <location filename="../../pages/SettingsPage.qml" line="76"/>
       <source>General</source>
       <translation type="unfinished">عام</translation>
     </message>
     <message id="settings_connectivity">
-      <location filename="../../pages/SettingsPage.qml" line="59"/>
+      <location filename="../../pages/SettingsPage.qml" line="87"/>
       <source>Connectivity</source>
       <translation>الاتصال</translation>
     </message>
     <message id="settings_ethernet_wifi_bluetooth_vecan">
-      <location filename="../../pages/SettingsPage.qml" line="61"/>
+      <location filename="../../pages/SettingsPage.qml" line="89"/>
       <source>Ethernet, Wi-Fi, Bluetooth, VE.Can</source>
       <translation>إيثرنت، Wi-Fi، بلوتوث، VE.Can</translation>
     </message>
     <message id="settings_vrm">
-      <location filename="../../pages/SettingsPage.qml" line="68"/>
+      <location filename="../../pages/SettingsPage.qml" line="96"/>
       <source>VRM</source>
       <translation>VRM</translation>
     </message>
     <message id="settings_remote_monitoring_portal">
-      <location filename="../../pages/SettingsPage.qml" line="70"/>
+      <location filename="../../pages/SettingsPage.qml" line="98"/>
       <source>Remote monitoring portal</source>
       <translation>بوابة المراقبة عن بعد</translation>
     </message>
     <message id="settings_advanced">
-      <location filename="../../pages/SettingsPage.qml" line="77"/>
+      <location filename="../../pages/SettingsPage.qml" line="105"/>
       <source>Advanced</source>
       <translation type="unfinished">متقدم</translation>
     </message>
     <message id="settings_integrations">
-      <location filename="../../pages/SettingsPage.qml" line="82"/>
+      <location filename="../../pages/SettingsPage.qml" line="110"/>
       <source>Integrations</source>
       <translation type="unfinished">التكاملات</translation>
     </message>
@@ -7461,22 +7466,22 @@ Do you want to continue?</source>
       <translation>التكاملات</translation>
     </message>
     <message id="settings_acdcsystem_ess_dvcc_battery">
-      <location filename="../../pages/SettingsPage.qml" line="93"/>
+      <location filename="../../pages/SettingsPage.qml" line="121"/>
       <source>AC/DC system, ESS, DVCC, Battery...</source>
       <translation>نظام التيار المتردد/ التيار المستمر، ESS، نظام التحكم للجهد الكهربائي الموزع، البطارية...</translation>
     </message>
     <message id="settings_debug_and_develop">
-      <location filename="../../pages/SettingsPage.qml" line="100"/>
+      <location filename="../../pages/SettingsPage.qml" line="128"/>
       <source>Debug &amp; Develop</source>
       <translation>تصحيح الأخطاء والتطوير</translation>
     </message>
     <message id="settings_profilingtools_debugstatistics_appversion">
-      <location filename="../../pages/SettingsPage.qml" line="102"/>
+      <location filename="../../pages/SettingsPage.qml" line="130"/>
       <source>Profiling tools, debug statistics, app version...</source>
       <translation>أدوات التوصيف، إحصائيات التصحيح، إصدار التطبيق...</translation>
     </message>
     <message id="settings_system_setup">
-      <location filename="../../pages/SettingsPage.qml" line="91"/>
+      <location filename="../../pages/SettingsPage.qml" line="119"/>
       <source>System Setup</source>
       <translation>إعادة ضبط النظام</translation>
     </message>
@@ -7557,7 +7562,7 @@ Do you want to continue?</source>
     <message id="vebus_device_update_firmware">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="138"/>
       <source>This feature requires firmware version 400 or higher. Contact your installer to update your Multi/Quattro.</source>
-      <translation>تتطلب هذه الميزة الإصدار 400 من البرنامج الثابت أو إصدارًا أعلى.  اتصل بمسئول التثبيت لتحديث Multi/Quattro.</translation>
+      <translation>تتطلب هذه الميزة الإصدار 400 من البرنامج الثابت أو إصدارًا أعلى. اتصل بمسئول التثبيت لتحديث Multi/Quattro.</translation>
     </message>
     <message id="vebus_device_charger_not_ready">
       <location filename="../../pages/vebusdevice/PageVeBusAdvanced.qml" line="144"/>
@@ -7909,7 +7914,7 @@ Do you want to continue?</source>
       <translation>تم تثبيت البرامج الثابتة وإعادة تشغيل الجهاز</translation>
     </message>
     <message id="modaldialog_confirm">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="39"/>
       <source>Confirm</source>
       <translation>تأكيد</translation>
     </message>
@@ -8323,17 +8328,17 @@ Do you want to continue?</source>
       <translation>حالة الحمل الزائد في المعاكس</translation>
     </message>
     <message id="application_content_touch_input_on">
-      <location filename="../../ApplicationContent.qml" line="57"/>
+      <location filename="../../ApplicationContent.qml" line="55"/>
       <source>Touch input on</source>
       <translation>الإدخال باللمس قيد التشغيل</translation>
     </message>
     <message id="application_content_touch_input_off">
-      <location filename="../../ApplicationContent.qml" line="59"/>
+      <location filename="../../ApplicationContent.qml" line="57"/>
       <source>Touch input off</source>
       <translation>الإدخال باللمس معطل</translation>
     </message>
     <message id="application_content_touch_input_disabled">
-      <location filename="../../ApplicationContent.qml" line="73"/>
+      <location filename="../../ApplicationContent.qml" line="71"/>
       <source>Touch input disabled</source>
       <translation>تم تعطيل الإدخال باللمس</translation>
     </message>
@@ -8894,11 +8899,6 @@ Note that this menu only shows Carlo Gavazzi meters connected over RS485. For an
       <source>System alarms</source>
       <translation>نظام الإنذارات</translation>
     </message>
-    <message id="settings_rs_devices">
-      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
-      <source>RS devices</source>
-      <translation>أجهزة RS</translation>
-    </message>
     <message id="rs_no_system_alarms">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="60"/>
       <source>No system alarms</source>
@@ -8957,7 +8957,7 @@ With streamlined navigation and a fresh look, everything you love is now even ea
       <translation type="unfinished">التحكمات</translation>
     </message>
     <message id="controlcards_empty_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="154"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="155"/>
       <source>Controls</source>
       <translation>التحكمات</translation>
     </message>
@@ -9501,12 +9501,12 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>مدخلات التيار المتردد %1</translation>
     </message>
     <message id="settings_security_profile_change_password_description">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="85"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="69"/>
       <source>Please enter a new GX password:</source>
       <translation>يرجى إدخال كلمة مرور GX جديدة:</translation>
     </message>
     <message id="settings_security_profile_enter_new_password">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="100"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="84"/>
       <source>Enter new password</source>
       <translation>أدخل كلمة مرور جديدة</translation>
     </message>
@@ -9527,7 +9527,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>فعّل هذا الإعداد عند وجود نظام MultiPlus أو Quattro ثانوي يعمل على نفس مجموعة البطارية المستخدمة في نظام المعاكس/الشاحن الرئيسي. عند تفعيل هذا الإعداد، سيستخدم النظام الثانوي عامل متغير CVL وDCL الخاص بنظام إدارة البطاريات المحدد.</translation>
     </message>
     <message id="settings_access_control_display_firmware">
-      <location filename="../../pages/SettingsPage.qml" line="50"/>
+      <location filename="../../pages/SettingsPage.qml" line="78"/>
       <source>Access control, Display, Firmware, Support</source>
       <translation>التحكم في الوصول، العرض، البرامج الثابتة، الدعم</translation>
     </message>
@@ -9870,7 +9870,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>يمكن الآن العثور على المرحل في قائمة الأجهزة</translation>
     </message>
     <message id="gx_device_relays">
-      <location filename="../../src/iochannelgroupmodel.cpp" line="105"/>
+      <location filename="../../src/iochannelgroupmodel.cpp" line="107"/>
       <source>GX device relays</source>
       <translation>مرحلات جهاز GX</translation>
     </message>
@@ -10181,7 +10181,7 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>تمكين برنامج Venus OS Large الثابت لاستخدام Node-RED أو Signal-K</translation>
     </message>
     <message id="settings_relays_sensors_tanks">
-      <location filename="../../pages/SettingsPage.qml" line="84"/>
+      <location filename="../../pages/SettingsPage.qml" line="112"/>
       <source>Relays, Sensors, PV Inverters, Modbus, Node-RED</source>
       <translation>المرحلات، وأجهزة الاستشعار، ومحولات الطاقة الشمسية الكهروضوئية، و Modbus، و Node-RED</translation>
     </message>
@@ -10616,17 +10616,17 @@ The GX device can only control one connected genset and takes the one with the l
       <translation>على VRM فقط</translation>
     </message>
     <message id="control_cards_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="20"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="21"/>
       <source>Controls</source>
       <translation type="unfinished">التحكمات</translation>
     </message>
     <message id="controlcards_empty_desc1">
-      <location filename="../../pages/ControlCardsPage.qml" line="156"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="157"/>
       <source>No compatible devices found</source>
       <translation>لم يتم العثور على أجهزة متوافقة</translation>
     </message>
     <message id="controlcards_empty_desc2">
-      <location filename="../../pages/ControlCardsPage.qml" line="158"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="159"/>
       <source>Connect devices that support this function</source>
       <translation>قم بتوصيل الأجهزة التي تدعم هذه الوظيفة</translation>
     </message>
@@ -11245,7 +11245,7 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation>جارٍ البدء، قد يستغرق هذا بضع ثوانٍ...</translation>
     </message>
     <message id="settings_security_profile_change_password_title">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="36"/>
       <source>Change the GX Password</source>
       <translation>تغيير كلمة مرور GX</translation>
     </message>
@@ -11346,54 +11346,44 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <source>Rescan for IP addresses</source>
       <translation>إعادة البحث عن عناوين IP</translation>
     </message>
-    <message id="mqtt_devices_ev_charging_station">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="16"/>
-      <source>EV Charging Station</source>
-      <translation>محطات شحن المركبات الكهربائية</translation>
-    </message>
     <message id="mqtt_devices_pairing_mode">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="51"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="15"/>
       <source>Pairing mode</source>
       <translation>وضع الاقتران</translation>
     </message>
     <message id="mqtt_devices_pairing_active">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="55"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="19"/>
       <source>Active • %1s remaining</source>
       <extracomment>%1 = number of seconds remaining</extracomment>
       <translation>نشط • متبقٍ %1 ثانية</translation>
     </message>
     <message id="mqtt_devices_pairing_activate">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="57"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="21"/>
       <source>Activate</source>
       <translation>تفعيل</translation>
     </message>
     <message id="mqtt_devices_pairing_enabled">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="81"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="37"/>
       <source>Pairing mode enabled for %1 seconds</source>
       <translation>وضع الاقتران مفعّل لمدة %1 ثانية</translation>
     </message>
     <message id="mqtt_devices_pairing_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="66"/>
       <source>Activate Pairing mode to allow a device to connect. Paired devices appear here, and will show in the Devices list when connected.</source>
       <translation>فعّل وضع الاقتران للسماح لجهاز بالاتصال. تظهر الأجهزة المقترنة هنا، وستظهر في قائمة الأجهزة عند الاتصال.</translation>
     </message>
-    <message id="mqtt_devices_pairing_access_tokens">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="100"/>
-      <source>Access tokens for paired devices</source>
-      <translation>رموز الوصول للأجهزة المقترنة</translation>
-    </message>
-    <message id="mqtt_devices_pairing_unpair">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="112"/>
+    <message id="devices_pairing_unpair">
+      <location filename="../../components/listitems/ListUnpairButton.qml" line="11"/>
       <source>Unpair</source>
       <translation>إلغاء الاقتران</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_title">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="129"/>
+    <message id="unpairing_confirm_title">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="13"/>
       <source>Unpairing %1</source>
       <translation>إلغاء اقتران %1</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="132"/>
+    <message id="unpairing_confirm_description">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="16"/>
       <source>This will disconnect the device and it will need to be paired again to reconnect.</source>
       <translation>سيؤدي هذا إلى قطع اتصال الجهاز وسيحتاج إلى إعادة الاقتران لإعادة الاتصال.</translation>
     </message>
@@ -11418,17 +11408,17 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation>معرفات المشغلات الإلكترونية المكتشفة</translation>
     </message>
     <message id="generic_input_label_released">
-      <location filename="../../src/genericinput.cpp" line="132"/>
+      <location filename="../../src/genericinput.cpp" line="72"/>
       <source>Released</source>
       <translation>مُحرر</translation>
     </message>
     <message id="generic_input_label_pressed">
-      <location filename="../../src/genericinput.cpp" line="134"/>
+      <location filename="../../src/genericinput.cpp" line="76"/>
       <source>Pressed</source>
       <translation>مضغوط</translation>
     </message>
     <message id="generic_input_label_holding">
-      <location filename="../../src/genericinput.cpp" line="136"/>
+      <location filename="../../src/genericinput.cpp" line="80"/>
       <source>Holding</source>
       <translation>قيد الضغط</translation>
     </message>
@@ -11469,7 +11459,7 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation>الحد الأقصى للقيمة</translation>
     </message>
     <message id="aux_page_switches">
-      <location filename="../../pages/AuxCardsPage.qml" line="16"/>
+      <location filename="../../pages/AuxCardsPage.qml" line="18"/>
       <source>Switches</source>
       <extracomment>Name of the Switch Controls feature</extracomment>
       <translation>المفاتيح</translation>
@@ -11490,7 +11480,7 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation>حمل النظام مرتفع، يتم إخفاء الرسوم البيانية لتقليل حمل المعالج</translation>
     </message>
     <message id="navbar_more">
-      <location filename="../../pages/MainView.qml" line="285"/>
+      <location filename="../../pages/MainView.qml" line="281"/>
       <source>More</source>
       <extracomment>Click to show more available items</extracomment>
       <translation>المزيد</translation>
@@ -11628,7 +11618,7 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="63"/>
       <source>Boot</source>
       <extracomment>Boot the system to a particular firmware version</extracomment>
-      <translation>قارب</translation>
+      <translation>إقلاع</translation>
     </message>
     <message id="settings_tcpip_disable_ethernet_gateway">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="153"/>
@@ -11862,21 +11852,6 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <source>Only applies when using Optimized with BatteryLife. Opportunity Loads automatically resumes after a full charge.</source>
       <translation>ينطبق فقط عند استخدام الخيار المحسّن (Optimized) مع ميزة BatteryLife. تستأنف أحمال الفرص (Opportunity Loads) تلقائيًا بعد الشحن الكامل.</translation>
     </message>
-    <message id="settings_ble_gateway_access">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="88"/>
-      <source>BLE gateway access</source>
-      <translation>الوصول عبر بوابة BLE</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="94"/>
-      <source>Proxy</source>
-      <translation>وكيل</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy_and_direct">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="96"/>
-      <source>Proxy and direct</source>
-      <translation>وكيل ومباشر</translation>
-    </message>
     <message id="powerguard_consumption_l1_current_limit">
       <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="46"/>
       <source>Consumption L1 current limit</source>
@@ -11935,24 +11910,69 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation>داخلي (محطة شحن المركبات الكهربائية)</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_rejected">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="182"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="140"/>
       <source>The submitted encryption key is invalid.</source>
       <translation>مفتاح التشفير المقدم غير صالح.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_placeholder">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="260"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="218"/>
       <source>Enter a 32-character key</source>
       <translation>أدخل مفتاحاً يتكون من 32 حرفاً</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_invalid">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="267"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="225"/>
       <source>The encryption key must be 32 hexadecimal characters.</source>
       <translation>يجب أن يتكون مفتاح التشفير من 32 حرفاً ست عشرياً.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="311"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="269"/>
       <source>Encryption key</source>
       <translation>مفتاح التشفير</translation>
+    </message>
+    <message id="batteryalarms_bms_cable">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
+      <source>Battery communication lost</source>
+      <translation>فُقد الاتصال بالبطارية</translation>
+    </message>
+    <message id="batteryalarms_cell_measurements_fault">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="183"/>
+      <source>Cell measurements fault</source>
+      <translation>عطل في قياسات الخلايا</translation>
+    </message>
+    <message id="settings_ble_advanced">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="93"/>
+      <source>Advanced</source>
+      <translation type="unfinished">متقدم</translation>
+    </message>
+    <message id="settings_ble_sensors">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="100"/>
+      <source>Sensors</source>
+      <translation>المستشعرات</translation>
+    </message>
+    <message id="settings_ble_bridge_access">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="201"/>
+      <source>BLE bridge access</source>
+      <translation>الوصول إلى جسر BLE</translation>
+    </message>
+    <message id="settings_ble_bridge_access_paired_only">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="210"/>
+      <source>Paired devices only</source>
+      <translation type="unfinished">الأجهزة المقترنة فقط</translation>
+    </message>
+    <message id="pairing_ble_paired_bridges">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="230"/>
+      <source>Paired BLE bridges</source>
+      <translation>جسور BLE المقترنة</translation>
+    </message>
+    <message id="pairing_mqtt_paired_devices">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="73"/>
+      <source>Paired devices</source>
+      <translation>الأجهزة المقترنة</translation>
+    </message>
+    <message id="settings_ble_sensors_add_encryption_keys_via_victronconnect">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="122"/>
+      <source>Use VictronConnect app over Bluetooth to add encryption keys automatically.</source>
+      <translation>استخدم تطبيق VictronConnect عبر البلوتوث لإضافة مفاتيح التشفير تلقائيًا.</translation>
     </message>
     <message id="dc_input">
       <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>
@@ -12037,7 +12057,7 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation type="unfinished">بطارية</translation>
     </message>
     <message id="switchableoutput_gx_device_relays">
-      <location filename="../../src/iochannel.cpp" line="342"/>
+      <location filename="../../src/iochannel.cpp" line="345"/>
       <source>GX device relays</source>
       <translation type="unfinished">مرحلات جهاز GX</translation>
     </message>
@@ -12063,170 +12083,195 @@ Please update to the latest firmware to be able to adjust these settings.</sourc
       <translation>لا يوجد خطأ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="13"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="14"/>
       <source>Battery initialization error</source>
       <translation>خطأ في بدء تشغيل البطارية</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="16"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="17"/>
       <source>No batteries connected</source>
       <translation>ليس هناك بطاريات متصلة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="19"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="20"/>
       <source>Unknown battery</source>
       <translation>بطارية مجهولة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="22"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="23"/>
       <source>Different battery types</source>
       <translation>اختلاف في أنواع البطاريات</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="25"/>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="40"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="26"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="41"/>
       <source>No. of batteries incorrect</source>
       <translation>عدد البطاريات خاطئ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="28"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="29"/>
       <source>Lynx Shunt not found</source>
       <translation>تحويلة لينكس غير موجودة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="31"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="32"/>
       <source>Battery measure error</source>
       <translation>قياس البطارية خاطئ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="34"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="35"/>
       <source>Internal calculation error</source>
       <translation>خطأ في الحساب الداخلي</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="37"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="38"/>
       <source>No. of batteries in series incorrect</source>
       <translation>عدد البطاريات المتسلسل خاطئ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="44"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="45"/>
       <source>Hardware error</source>
       <translation>خطأ في المكونات المادية</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="47"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="48"/>
       <source>Watchdog error</source>
       <translation>خطأ في المراقب</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="50"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="51"/>
       <source>Over voltage</source>
       <translation>جهد كهربائي زائد</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="53"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="54"/>
       <source>Under voltage</source>
       <translation>تيار منخفض</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="56"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="57"/>
       <source>Over temperature</source>
       <translation>درجة حرارة زائدة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="59"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="60"/>
       <source>Under temperature</source>
       <translation>درجة حرارة منخفضة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="62"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="63"/>
       <source>Under-charge standby</source>
       <translation>في حالة انتظار بسبب قلة شحن البطارية</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="65"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="66"/>
       <source>ADC error</source>
       <translation>خطأ في ADC</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="68"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="69"/>
       <source>Battery comm. error</source>
       <translation>خطأ في اتصال البطارية</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="71"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="74"/>
       <source>Pre-Charge error</source>
       <translation>خطأ ما قبل الشحن</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="75"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="78"/>
       <source>Safety contactor error</source>
       <translation>خطأ في حماية الملامس</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="79"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
       <source>Battery update error</source>
       <translation>خطأ في تحديث البطارية</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
       <source>BMS cable error</source>
       <translation>خطأ في كابل نظام إدارة المبنى (BMS)</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
       <source>Reference voltage failure</source>
       <translation>عطل في الجهد المرجعي</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
       <source>Wrong system voltage</source>
       <translation>جهد النظام خاطئ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
       <source>Pre charge timeout</source>
       <translation>انتهاء مهلة ما قبل الشحن</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="97"/>
       <source>ATC/ATD failure</source>
       <translation>عطل ATC/ATD</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="98"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="101"/>
       <source>Calibration data lost</source>
       <translation>بيانات المعايرة مفقودة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="102"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
       <source>Settings invalid</source>
       <translation>إعدادات غير صالحة</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
       <source>Interlock</source>
       <translation>تعشيق</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
       <source>Emergency stop</source>
       <translation>توقف لأمر طارئ</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
       <source>Communication timeout</source>
       <translation>مهلة الاتصال</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="118"/>
       <source>Safety lock</source>
       <translation>قفل الأمان</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="117"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="121"/>
       <source>Terminal over temperature</source>
       <translation>المحطة تجاوزت درجة الحرارة</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="124"/>
+      <source>High cell voltage</source>
+      <translation>جهد الخلية مرتفع</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="127"/>
+      <source>External disconnection</source>
+      <translation>فصل خارجي</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="130"/>
+      <source>Battery voltage not allowed</source>
+      <translation>جهد البطارية غير مسموح به</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="133"/>
+      <source>Over current</source>
+      <translation>تيار زائد</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="136"/>
+      <source>Battery voltage measurement mismatch</source>
+      <translation>عدم تطابق في قياس جهد البطارية</translation>
     </message>
   </context>
   <context>

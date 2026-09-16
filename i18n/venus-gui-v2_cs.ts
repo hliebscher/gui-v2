@@ -19,7 +19,7 @@
       <translation>Výkon</translation>
     </message>
     <message id="generic_input_label_off">
-      <location filename="../../src/genericinput.cpp" line="112"/>
+      <location filename="../../src/genericinput.cpp" line="32"/>
       <source>Off</source>
       <translation>Vypnuto</translation>
     </message>
@@ -59,7 +59,7 @@
       <translation>Pozice</translation>
     </message>
     <message id="generic_input_primaryLabel_speed">
-      <location filename="../../src/genericinput.cpp" line="173"/>
+      <location filename="../../src/genericinput.cpp" line="217"/>
       <source>Speed</source>
       <translation>Rychlost</translation>
     </message>
@@ -100,12 +100,12 @@
       <translation>Externí ovládání</translation>
     </message>
     <message id="levels_page_tanks">
-      <location filename="../../pages/LevelsPage.qml" line="75"/>
+      <location filename="../../pages/LevelsPage.qml" line="71"/>
       <source>Tanks</source>
       <translation>Nádrže</translation>
     </message>
     <message id="levels_page_environment">
-      <location filename="../../pages/LevelsPage.qml" line="77"/>
+      <location filename="../../pages/LevelsPage.qml" line="73"/>
       <source>Environment</source>
       <translation>Prostředí</translation>
     </message>
@@ -163,7 +163,7 @@
     <message id="controlcard_generator_subcard_button_manual_start">
       <location filename="../../components/GeneratorManualControlButton.qml" line="37"/>
       <source>Manual Start</source>
-      <translation>MANUÁLNÍ SPUŠTĚNÍ</translation>
+      <translation>Manuální spuštění</translation>
     </message>
     <message id="evcs_autostart">
       <location filename="../../pages/evcs/EvChargerSetupPage.qml" line="22"/>
@@ -318,7 +318,7 @@
     <message id="common_words_manual_start">
       <location filename="../../components/CommonWords.qml" line="351"/>
       <source>Manual start</source>
-      <translation>MANUÁLNÍ SPUŠTĚNÍ</translation>
+      <translation>Manuální spuštění</translation>
     </message>
     <message id="page_generator_conditions_start_generator">
       <location filename="../../pages/settings/PageGeneratorConditions.qml" line="74"/>
@@ -620,12 +620,12 @@
       <translation>Zadejte jméno</translation>
     </message>
     <message id="settings_continuous_scan">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="46"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="187"/>
       <source>Continuous scanning</source>
       <translation>Průběžné skenování</translation>
     </message>
     <message id="settings_io_bluetooth_adapters">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="59"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="159"/>
       <source>Bluetooth adapters</source>
       <translation>Adaptéry Bluetooth</translation>
     </message>
@@ -1048,10 +1048,15 @@
       <source>Update build date/time</source>
       <translation>Datum a čas aktualizace</translation>
     </message>
+    <message id="settings_rssystem_inverters">
+      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
+      <source>Inverters</source>
+      <translation>Měniče</translation>
+    </message>
     <message id="page_settings_fronius_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="30"/>
       <source>Inverters</source>
-      <translation>Měniče</translation>
+      <translation type="unfinished">Měniče</translation>
     </message>
     <message id="page_settings_fronius_find_pv_inverters">
       <location filename="../../pages/settings/PageSettingsFronius.qml" line="36"/>
@@ -2577,12 +2582,12 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
       <translation type="unfinished">Alarm</translation>
     </message>
     <message id="generic_input_label_alarm">
-      <location filename="../../src/genericinput.cpp" line="126"/>
+      <location filename="../../src/genericinput.cpp" line="60"/>
       <source>Alarm</source>
       <translation>Alarm</translation>
     </message>
     <message id="generic_input_primaryLabel_volume">
-      <location filename="../../src/genericinput.cpp" line="181"/>
+      <location filename="../../src/genericinput.cpp" line="225"/>
       <source>Volume</source>
       <translation>Objem</translation>
     </message>
@@ -2862,7 +2867,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="batteryalarms_state_of_health">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="66"/>
       <source>State of health</source>
-      <translation>Stav životnosti</translation>
+      <translation>Stav baterie (SOH)</translation>
     </message>
     <message id="common_words_battery_temperature">
       <location filename="../../components/CommonWords.qml" line="102"/>
@@ -2897,7 +2902,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="battery_state_of_health">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="182"/>
       <source>State of health</source>
-      <translation type="unfinished">Stav životnosti</translation>
+      <translation type="unfinished">Stav baterie (SOH)</translation>
     </message>
     <message id="battery_bus_voltage">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="212"/>
@@ -2912,7 +2917,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="battery_mid_point_deviation">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="236"/>
       <source>Mid-point deviation</source>
-      <translation>Středová odchylka</translation>
+      <translation>Odchylka středního bodu</translation>
     </message>
     <message id="battery_consumed_amphours">
       <location filename="../../pages/settings/devicelist/battery/PageBattery.qml" line="244"/>
@@ -3017,7 +3022,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="batteryalarms_mid_point_voltage">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="106"/>
       <source>Mid-point voltage</source>
-      <translation>Střední napětí</translation>
+      <translation>Napětí středního bodu</translation>
     </message>
     <message id="batteryalarms_fuse_blown">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="113"/>
@@ -3047,7 +3052,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="batteryalarms_circuit_breaker_tripped">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="148"/>
       <source>Circuit breaker tripped</source>
-      <translation>Vypnutí jističe</translation>
+      <translation>Vybavení jističe</translation>
     </message>
     <message id="batteryalarms_cell_imbalance">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="155"/>
@@ -3587,10 +3592,15 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
       <source>US (240 to 30 Ohm)</source>
       <translation>US (240 až 30 Ohmů)</translation>
     </message>
+    <message id="settings_ble_bridge_access_custom">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="213"/>
+      <source>Custom</source>
+      <translation>Vlastní</translation>
+    </message>
     <message id="devicelist_tanksetup_custom">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="53"/>
       <source>Custom</source>
-      <translation>Vlastní</translation>
+      <translation type="unfinished">Vlastní</translation>
     </message>
     <message id="devicelist_tanksetup_sensor_value_when_empty">
       <location filename="../../pages/settings/devicelist/tank/PageTankSetup.qml" line="59"/>
@@ -3663,7 +3673,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="cycle_history_watchdog">
       <location filename="../../pages/settings/devicelist/dc-in/ListCycleHistoryItem.qml" line="41"/>
       <source>Watchdog</source>
-      <translation>Hlídací pes</translation>
+      <translation>Watchdog</translation>
     </message>
     <message id="ac-in-setup_unlocked_(kvarh)">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInSetup.qml" line="41"/>
@@ -3788,7 +3798,7 @@ Používejte, pokud to není zakázáno poskytovatelem elektrické energie.</tra
     <message id="ac-in-modeldefault_phase_sequence">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="160"/>
       <source>Phase Sequence</source>
-      <translation>Fázová sekvence</translation>
+      <translation>Pořadí fází</translation>
     </message>
     <message id="ac-in-modeldefault_phase_sequence_l3_first">
       <location filename="../../pages/settings/devicelist/ac-in/PageAcInModel.qml" line="166"/>
@@ -4361,7 +4371,7 @@ Chcete pokračovat?</translation>
       <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="21"/>
       <location filename="../../pages/vebusdevice/VeBusDeviceAlarmStatusModel.qml" line="19"/>
       <source>Phase rotation</source>
-      <translation type="unfinished">Otáčení fáze</translation>
+      <translation type="unfinished">Pořadí fází</translation>
     </message>
     <message id="vebus_device_temperature_sense_error">
       <location filename="../../pages/vebusdevice/VeBusDeviceAlarmSettingsModel.qml" line="23"/>
@@ -4392,7 +4402,7 @@ Chcete pokračovat?</translation>
     <message id="rssystemalarms_phase_rotation">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="27"/>
       <source>Phase rotation</source>
-      <translation>Otáčení fáze</translation>
+      <translation>Pořadí fází</translation>
     </message>
     <message id="vebus_device_vebus_version">
       <location filename="../../pages/vebusdevice/VeBusDeviceInfoModel.qml" line="11"/>
@@ -4558,7 +4568,7 @@ Chcete pokračovat?</translation>
       <translation>Zrušení chyby</translation>
     </message>
     <message id="generic_input_label_closed">
-      <location filename="../../src/genericinput.cpp" line="122"/>
+      <location filename="../../src/genericinput.cpp" line="52"/>
       <source>Closed</source>
       <translation>Sepnuto</translation>
     </message>
@@ -4766,7 +4776,7 @@ Chcete pokračovat?</translation>
       <translation>Název modelu</translation>
     </message>
     <message id="generic_input_label_no">
-      <location filename="../../src/genericinput.cpp" line="116"/>
+      <location filename="../../src/genericinput.cpp" line="40"/>
       <source>No</source>
       <translation>Ne</translation>
     </message>
@@ -4791,12 +4801,12 @@ Chcete pokračovat?</translation>
       <translation>Offline</translation>
     </message>
     <message id="generic_input_label_ok">
-      <location filename="../../src/genericinput.cpp" line="124"/>
+      <location filename="../../src/genericinput.cpp" line="56"/>
       <source>OK</source>
       <translation>Ok</translation>
     </message>
     <message id="generic_input_label_on">
-      <location filename="../../src/genericinput.cpp" line="114"/>
+      <location filename="../../src/genericinput.cpp" line="36"/>
       <source>On</source>
       <translation>Zapnuto</translation>
     </message>
@@ -4806,7 +4816,7 @@ Chcete pokračovat?</translation>
       <translation>Online</translation>
     </message>
     <message id="generic_input_label_open">
-      <location filename="../../src/genericinput.cpp" line="120"/>
+      <location filename="../../src/genericinput.cpp" line="48"/>
       <source>Open</source>
       <translation>Rozpojeno</translation>
     </message>
@@ -4853,7 +4863,7 @@ Chcete pokračovat?</translation>
       <translation>Odstranit</translation>
     </message>
     <message id="generic_input_label_running">
-      <location filename="../../src/genericinput.cpp" line="130"/>
+      <location filename="../../src/genericinput.cpp" line="68"/>
       <source>Running</source>
       <translation>Chod</translation>
     </message>
@@ -4868,7 +4878,7 @@ Chcete pokračovat?</translation>
       <translation>Výrobní číslo</translation>
     </message>
     <message id="nav_settings">
-      <location filename="../../pages/SettingsPage.qml" line="18"/>
+      <location filename="../../pages/SettingsPage.qml" line="19"/>
       <source>Settings</source>
       <translation>Nastavení</translation>
     </message>
@@ -4935,12 +4945,12 @@ Chcete pokračovat?</translation>
       <translation>Zastavit po dosažení podmínek pro</translation>
     </message>
     <message id="generic_input_label_stopped">
-      <location filename="../../src/genericinput.cpp" line="128"/>
+      <location filename="../../src/genericinput.cpp" line="64"/>
       <source>Stopped</source>
       <translation>Zastavený</translation>
     </message>
     <message id="generic_input_primaryLabel_temperature">
-      <location filename="../../src/genericinput.cpp" line="177"/>
+      <location filename="../../src/genericinput.cpp" line="221"/>
       <source>Temperature</source>
       <translation>Teplota</translation>
     </message>
@@ -5001,7 +5011,7 @@ Chcete pokračovat?</translation>
       <translation>Po vymazání varování, zastavit po</translation>
     </message>
     <message id="generic_input_label_yes">
-      <location filename="../../src/genericinput.cpp" line="118"/>
+      <location filename="../../src/genericinput.cpp" line="44"/>
       <source>Yes</source>
       <translation>Ano</translation>
     </message>
@@ -5053,7 +5063,7 @@ Chcete pokračovat?</translation>
       <translation>Generátor bude pokračovat v provozu, pokud je splněna podmínka automatického spuštění.</translation>
     </message>
     <message id="modaldialog_set">
-      <location filename="../../components/dialogs/ModalDialog.qml" line="43"/>
+      <location filename="../../components/dialogs/ModalDialog.qml" line="45"/>
       <source>Set</source>
       <translation>Nastavit</translation>
     </message>
@@ -5174,7 +5184,7 @@ Chcete pokračovat?</translation>
     <message id="tank_type_live_well">
       <location filename="../../src/enums.cpp" line="834"/>
       <source>Live well</source>
-      <translation>Nádrž na vodu</translation>
+      <translation>Nádrž na živé ryby</translation>
     </message>
     <message id="tank_type_oil">
       <location filename="../../src/enums.cpp" line="837"/>
@@ -5184,7 +5194,7 @@ Chcete pokračovat?</translation>
     <message id="tank_type_black_water">
       <location filename="../../src/enums.cpp" line="840"/>
       <source>Black water</source>
-      <translation>SPLAŠKY</translation>
+      <translation>Černá voda (splašky)</translation>
     </message>
     <message id="tank_type_gasoline">
       <location filename="../../src/enums.cpp" line="843"/>
@@ -5214,7 +5224,7 @@ Chcete pokračovat?</translation>
     <message id="tank_type_raw_water">
       <location filename="../../src/enums.cpp" line="858"/>
       <source>Raw water</source>
-      <translation>Surová voda</translation>
+      <translation>Neupravená voda</translation>
     </message>
     <message id="listItem_no_access">
       <location filename="../../components/listitems/core/ListSetting.qml" line="78"/>
@@ -5713,7 +5723,7 @@ Chcete pokračovat?</translation>
     <message id="utils_format_hours_min">
       <location filename="../../components/Utils.js" line="191"/>
       <source>%1h %2m</source>
-      <translation>%1d %2h</translation>
+      <translation>%1h %2m</translation>
     </message>
     <message id="utils_format_min_sec">
       <location filename="../../components/Utils.js" line="224"/>
@@ -5814,7 +5824,7 @@ Chcete pokračovat?</translation>
     </message>
     <message id="tank_description">
       <location filename="../../data/common/TankDescription.qml" line="24"/>
-      <location filename="../../src/device.cpp" line="134"/>
+      <location filename="../../src/device.cpp" line="137"/>
       <source>%1 tank (%2)</source>
       <extracomment>Tank description. %1 = tank type (e.g. Fuel, Fresh water), %2 = tank device instance (a number)</extracomment>
       <translation>nádrž %1 (%2)</translation>
@@ -5850,12 +5860,12 @@ Chcete pokračovat?</translation>
       <translation>Generátor vody</translation>
     </message>
     <message id="generic_input_label_low">
-      <location filename="../../src/genericinput.cpp" line="108"/>
+      <location filename="../../src/genericinput.cpp" line="24"/>
       <source>Low</source>
       <translation>Nízko</translation>
     </message>
     <message id="generic_input_label_high">
-      <location filename="../../src/genericinput.cpp" line="110"/>
+      <location filename="../../src/genericinput.cpp" line="28"/>
       <source>High</source>
       <translation>Vysoko</translation>
     </message>
@@ -6354,15 +6364,10 @@ Chcete pokračovat?</translation>
       <source>High current</source>
       <translation>Vysoký proud</translation>
     </message>
-    <message id="batteryalarms_bms_cable">
-      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
-      <source>BMS cable fault</source>
-      <translation>Porucha kabelu BMS</translation>
-    </message>
     <message id="batteryalarms_contactor">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="176"/>
       <source>Bad contactor</source>
-      <translation>Špatný stykač</translation>
+      <translation>Vadný stykač</translation>
     </message>
     <message id="batterydetails_connection_information">
       <location filename="../../pages/settings/devicelist/battery/PageBatteryDetails.qml" line="99"/>
@@ -6557,7 +6562,7 @@ Chcete pokračovat?</translation>
       <translation>Pomocí této nabídky můžete definovat údaje o baterii, které se zobrazí po kliknutí na ikonu Baterie na stránce Přehled. Stejný výběr je viditelný také na portálu VRM.</translation>
     </message>
     <message id="settings_continuous_scan_may_interfere">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="53"/>
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="193"/>
       <source>Continuous scanning may interfere with Wi-Fi operation.</source>
       <translation>Nepřetržité skenování může rušit provoz Wi-Fi.</translation>
     </message>
@@ -6893,7 +6898,7 @@ Chcete pokračovat?</translation>
       <translation>Žádné heslo a síťová komunikace není šifrovaná.</translation>
     </message>
     <message id="settings_security_profile_password_incorrect_length">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="28"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="21"/>
       <source>Password needs to be at least 8 characters long</source>
       <translation>Heslo musí mít alespoň 8 znaků</translation>
     </message>
@@ -6918,24 +6923,24 @@ Chcete pokračovat?</translation>
 • The network communication is encrypted
 • A secure connection with VRM is enabled
 • Insecure settings cannot be enabled</source>
-      <translation>- Místní síťové služby jsou chráněny heslem
-- síťová komunikace je šifrovaná
-- je povoleno zabezpečené připojení s VRM
-- Nezabezpečená nastavení nelze povolit</translation>
+      <translation>• Místní síťové služby jsou chráněny heslem
+• síťová komunikace je šifrovaná
+• je povoleno zabezpečené připojení s VRM
+• Nezabezpečená nastavení nelze povolit</translation>
     </message>
     <message id="settings_security_profile_weak_description">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="243"/>
       <source>• Local network services are password protected
 • Unencrypted access to local websites is enabled as well (HTTP/HTTPS)</source>
-      <translation>- Místní síťové služby jsou chráněny heslem
-- Je povolen i nešifrovaný přístup k místním webovým stránkám (HTTP/HTTPS).</translation>
+      <translation>• Místní síťové služby jsou chráněny heslem
+• Je povolen i nešifrovaný přístup k místním webovým stránkám (HTTP/HTTPS).</translation>
     </message>
     <message id="settings_security_profile_unsecured_description">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="246"/>
       <source>• Local network services do not need a password
 • Unencrypted access to local websites is enabled as well (HTTP/HTTPS)</source>
-      <translation>- Místní síťové služby nepotřebují heslo
-- Je povolen i nešifrovaný přístup k místním webovým stránkám (HTTP/HTTPS).</translation>
+      <translation>• Místní síťové služby nepotřebují heslo
+• Je povolen i nešifrovaný přístup k místním webovým stránkám (HTTP/HTTPS).</translation>
     </message>
     <message id="access_and_security_page_will_reload">
       <location filename="../../pages/settings/PageSettingsAccessAndSecurity.qml" line="118"/>
@@ -7074,7 +7079,7 @@ Chcete pokračovat?</translation>
     <message id="settings_ess_use_this_option_for_peak_shaving">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="63"/>
       <source>Use this option for peak shaving.</source>
-      <translation>Tuto možnost použijte pro špičkové holení.</translation>
+      <translation>Tuto možnost použijte pro snížení špiček.</translation>
     </message>
     <message id="settings_ess_use_this_option_for_peak_shaving_no_grid_meter">
       <location filename="../../pages/settings/PageSettingsHub4Peakshaving.qml" line="73"/>
@@ -7418,42 +7423,42 @@ Chcete pokračovat?</translation>
       <translation>Arktida</translation>
     </message>
     <message id="settings_all_connected_devices">
-      <location filename="../../pages/SettingsPage.qml" line="40"/>
+      <location filename="../../pages/SettingsPage.qml" line="68"/>
       <source>All connected devices</source>
       <translation>Všechna připojená zařízení</translation>
     </message>
     <message id="settings_general">
-      <location filename="../../pages/SettingsPage.qml" line="48"/>
+      <location filename="../../pages/SettingsPage.qml" line="76"/>
       <source>General</source>
       <translation type="unfinished">Všeobecné</translation>
     </message>
     <message id="settings_connectivity">
-      <location filename="../../pages/SettingsPage.qml" line="59"/>
+      <location filename="../../pages/SettingsPage.qml" line="87"/>
       <source>Connectivity</source>
       <translation>Připojení</translation>
     </message>
     <message id="settings_ethernet_wifi_bluetooth_vecan">
-      <location filename="../../pages/SettingsPage.qml" line="61"/>
+      <location filename="../../pages/SettingsPage.qml" line="89"/>
       <source>Ethernet, Wi-Fi, Bluetooth, VE.Can</source>
       <translation>Ethernet, Wi-Fi, Bluetooth, VE.Can</translation>
     </message>
     <message id="settings_vrm">
-      <location filename="../../pages/SettingsPage.qml" line="68"/>
+      <location filename="../../pages/SettingsPage.qml" line="96"/>
       <source>VRM</source>
       <translation>VRM</translation>
     </message>
     <message id="settings_remote_monitoring_portal">
-      <location filename="../../pages/SettingsPage.qml" line="70"/>
+      <location filename="../../pages/SettingsPage.qml" line="98"/>
       <source>Remote monitoring portal</source>
       <translation>Portál pro vzdálené monitorování</translation>
     </message>
     <message id="settings_advanced">
-      <location filename="../../pages/SettingsPage.qml" line="77"/>
+      <location filename="../../pages/SettingsPage.qml" line="105"/>
       <source>Advanced</source>
       <translation type="unfinished">Pokročilé</translation>
     </message>
     <message id="settings_integrations">
-      <location filename="../../pages/SettingsPage.qml" line="82"/>
+      <location filename="../../pages/SettingsPage.qml" line="110"/>
       <source>Integrations</source>
       <translation type="unfinished">Integrace</translation>
     </message>
@@ -7463,22 +7468,22 @@ Chcete pokračovat?</translation>
       <translation>Integrace</translation>
     </message>
     <message id="settings_acdcsystem_ess_dvcc_battery">
-      <location filename="../../pages/SettingsPage.qml" line="93"/>
+      <location filename="../../pages/SettingsPage.qml" line="121"/>
       <source>AC/DC system, ESS, DVCC, Battery...</source>
       <translation>Systém AC/DC, ESS, DVCC, baterie...</translation>
     </message>
     <message id="settings_debug_and_develop">
-      <location filename="../../pages/SettingsPage.qml" line="100"/>
+      <location filename="../../pages/SettingsPage.qml" line="128"/>
       <source>Debug &amp; Develop</source>
       <translation>Ladění a vývoj</translation>
     </message>
     <message id="settings_profilingtools_debugstatistics_appversion">
-      <location filename="../../pages/SettingsPage.qml" line="102"/>
+      <location filename="../../pages/SettingsPage.qml" line="130"/>
       <source>Profiling tools, debug statistics, app version...</source>
       <translation>Nástroje pro profilování, statistiky ladění, verze aplikace...</translation>
     </message>
     <message id="settings_system_setup">
-      <location filename="../../pages/SettingsPage.qml" line="91"/>
+      <location filename="../../pages/SettingsPage.qml" line="119"/>
       <source>System Setup</source>
       <translation>Nastavení systému</translation>
     </message>
@@ -7589,7 +7594,7 @@ Chcete pokračovat?</translation>
     <message id="controlcard_generator_autostarted">
       <location filename="../../components/CommonWords.qml" line="93"/>
       <source>Auto-started • %1</source>
-      <translation>Automatické spuštění - %1</translation>
+      <translation>Automatické spuštění • %1</translation>
     </message>
     <message id="common_words_battery">
       <location filename="../../components/CommonWords.qml" line="96"/>
@@ -7911,7 +7916,7 @@ Chcete pokračovat?</translation>
       <translation>Firmware nainstalován, zařízení se restartuje</translation>
     </message>
     <message id="modaldialog_confirm">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="55"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="39"/>
       <source>Confirm</source>
       <translation>Ano, odhlaste mě</translation>
     </message>
@@ -8192,7 +8197,7 @@ Chcete pokračovat?</translation>
     <message id="switchable_output_powered">
       <location filename="../../src/enums.cpp" line="674"/>
       <source>Powered</source>
-      <translation>Powered</translation>
+      <translation>Napájeno</translation>
     </message>
     <message id="switchable_output_tripped">
       <location filename="../../src/enums.cpp" line="677"/>
@@ -8325,17 +8330,17 @@ Chcete pokračovat?</translation>
       <translation>Stav přetížení měniče</translation>
     </message>
     <message id="application_content_touch_input_on">
-      <location filename="../../ApplicationContent.qml" line="57"/>
+      <location filename="../../ApplicationContent.qml" line="55"/>
       <source>Touch input on</source>
       <translation>Dotykový vstup zapnut</translation>
     </message>
     <message id="application_content_touch_input_off">
-      <location filename="../../ApplicationContent.qml" line="59"/>
+      <location filename="../../ApplicationContent.qml" line="57"/>
       <source>Touch input off</source>
       <translation>Dotykový vstup vypnut</translation>
     </message>
     <message id="application_content_touch_input_disabled">
-      <location filename="../../ApplicationContent.qml" line="73"/>
+      <location filename="../../ApplicationContent.qml" line="71"/>
       <source>Touch input disabled</source>
       <translation>Dotykový vstup deaktivován</translation>
     </message>
@@ -8894,11 +8899,6 @@ Všimněte si, že tato nabídka zobrazuje pouze měřiče Carlo Gavazzi připoj
       <source>System alarms</source>
       <translation>Systémové alarmy</translation>
     </message>
-    <message id="settings_rs_devices">
-      <location filename="../../pages/settings/devicelist/rs/PageRsSystem.qml" line="99"/>
-      <source>RS devices</source>
-      <translation>Zařízení RS</translation>
-    </message>
     <message id="rs_no_system_alarms">
       <location filename="../../pages/settings/devicelist/rs/PageRsSystemAlarms.qml" line="60"/>
       <source>No system alarms</source>
@@ -8959,7 +8959,7 @@ Díky zjednodušené navigaci a novému vzhledu je nyní vše, co máte rádi, j
       <translation type="unfinished">Ovládací prvky</translation>
     </message>
     <message id="controlcards_empty_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="154"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="155"/>
       <source>Controls</source>
       <translation>Ovládací prvky</translation>
     </message>
@@ -9151,7 +9151,7 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
     <message id="wifimodel_disconnected_ap_on">
       <location filename="../../components/WifiModel.qml" line="23"/>
       <source>Disconnected | AP On</source>
-      <translation>Odpojeno | Zapnutý přístupový bod</translation>
+      <translation>Odpojeno | AP zapnuto</translation>
     </message>
     <message id="ess_check_multiphase_regulation_setting">
       <location filename="../../data/Ess.qml" line="76"/>
@@ -9504,12 +9504,12 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
       <translation>AC vstup %1</translation>
     </message>
     <message id="settings_security_profile_change_password_description">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="85"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="69"/>
       <source>Please enter a new GX password:</source>
       <translation>Zadejte nové heslo GX:</translation>
     </message>
     <message id="settings_security_profile_enter_new_password">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="100"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="84"/>
       <source>Enter new password</source>
       <translation>Zadejte nové heslo</translation>
     </message>
@@ -9530,7 +9530,7 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
       <translation>Povolte toto nastavení, pokud máte sekundární systém MultiPlus nebo Quattro napájený ze stejné bateriové banky jako hlavní střídač/nabíječ. Když je toto nastavení povoleno, tento sekundární systém bude používat parametry CVL a DCL vybraného BMS.</translation>
     </message>
     <message id="settings_access_control_display_firmware">
-      <location filename="../../pages/SettingsPage.qml" line="50"/>
+      <location filename="../../pages/SettingsPage.qml" line="78"/>
       <source>Access control, Display, Firmware, Support</source>
       <translation>Řízení přístupu, Displej, Firmware, Podpora</translation>
     </message>
@@ -9873,7 +9873,7 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
       <translation>Relé nyní najdete v seznamu zařízení.</translation>
     </message>
     <message id="gx_device_relays">
-      <location filename="../../src/iochannelgroupmodel.cpp" line="105"/>
+      <location filename="../../src/iochannelgroupmodel.cpp" line="107"/>
       <source>GX device relays</source>
       <translation>Relé zařízení GX</translation>
     </message>
@@ -10184,7 +10184,7 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
       <translation>Povolte použití firmwaru Venus OS Large pro Node-RED nebo Signal-K</translation>
     </message>
     <message id="settings_relays_sensors_tanks">
-      <location filename="../../pages/SettingsPage.qml" line="84"/>
+      <location filename="../../pages/SettingsPage.qml" line="112"/>
       <source>Relays, Sensors, PV Inverters, Modbus, Node-RED</source>
       <translation>Relé, Snímače, FV střídače, Modbus, Node-RED</translation>
     </message>
@@ -10619,17 +10619,17 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
       <translation>Pouze na VRM</translation>
     </message>
     <message id="control_cards_title">
-      <location filename="../../pages/ControlCardsPage.qml" line="20"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="21"/>
       <source>Controls</source>
       <translation type="unfinished">Ovládací prvky</translation>
     </message>
     <message id="controlcards_empty_desc1">
-      <location filename="../../pages/ControlCardsPage.qml" line="156"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="157"/>
       <source>No compatible devices found</source>
       <translation>Nebyly nalezeny žádné kompatibilní zařízení</translation>
     </message>
     <message id="controlcards_empty_desc2">
-      <location filename="../../pages/ControlCardsPage.qml" line="158"/>
+      <location filename="../../pages/ControlCardsPage.qml" line="159"/>
       <source>Connect devices that support this function</source>
       <translation>Připojte zařízení, která podporují tuto funkci</translation>
     </message>
@@ -11157,7 +11157,7 @@ Zařízení GX může ovládat pouze jednu připojenou generátorovou soustavu a
       <location filename="../../components/listitems/ListSpinBoxRange.qml" line="96"/>
       <source>to</source>
       <extracomment>Used as a delimiter between two values that specify a range (e.g. '-70% to 80%')</extracomment>
-      <translation>Na</translation>
+      <translation>na</translation>
     </message>
     <message id="generic_input_value">
       <location filename="../../components/switches/delegates/GenericInputCardDelegate_1.qml" line="54"/>
@@ -11248,7 +11248,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation>Spouštění, může to trvat několik sekund...</translation>
     </message>
     <message id="settings_security_profile_change_password_title">
-      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="52"/>
+      <location filename="../../components/dialogs/SecurityProfilePasswordDialog.qml" line="36"/>
       <source>Change the GX Password</source>
       <translation>Změnit heslo GX</translation>
     </message>
@@ -11349,54 +11349,44 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <source>Rescan for IP addresses</source>
       <translation>Znovu vyhledat IP adresy</translation>
     </message>
-    <message id="mqtt_devices_ev_charging_station">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="16"/>
-      <source>EV Charging Station</source>
-      <translation>Nabíjecí stanice pro elektromobily</translation>
-    </message>
     <message id="mqtt_devices_pairing_mode">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="51"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="15"/>
       <source>Pairing mode</source>
       <translation>Režim párování</translation>
     </message>
     <message id="mqtt_devices_pairing_active">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="55"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="19"/>
       <source>Active • %1s remaining</source>
       <extracomment>%1 = number of seconds remaining</extracomment>
       <translation>Aktivní • zbývá %1s</translation>
     </message>
     <message id="mqtt_devices_pairing_activate">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="57"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="21"/>
       <source>Activate</source>
       <translation>Aktivovat</translation>
     </message>
     <message id="mqtt_devices_pairing_enabled">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="81"/>
+      <location filename="../../components/listitems/ListPairingModeButton.qml" line="37"/>
       <source>Pairing mode enabled for %1 seconds</source>
       <translation>Režim párování povolen na %1 sekund</translation>
     </message>
     <message id="mqtt_devices_pairing_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="93"/>
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="66"/>
       <source>Activate Pairing mode to allow a device to connect. Paired devices appear here, and will show in the Devices list when connected.</source>
       <translation>Aktivujte režim párování, aby se zařízení mohlo připojit. Spárovaná zařízení se zde zobrazí a po připojení se objeví v seznamu Zařízení.</translation>
     </message>
-    <message id="mqtt_devices_pairing_access_tokens">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="100"/>
-      <source>Access tokens for paired devices</source>
-      <translation>Přístupové tokeny pro spárovaná zařízení</translation>
-    </message>
-    <message id="mqtt_devices_pairing_unpair">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="112"/>
+    <message id="devices_pairing_unpair">
+      <location filename="../../components/listitems/ListUnpairButton.qml" line="11"/>
       <source>Unpair</source>
       <translation>ZRUSHIT PÁROVÁNÍ</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_title">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="129"/>
+    <message id="unpairing_confirm_title">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="13"/>
       <source>Unpairing %1</source>
       <translation>Zrušení párování %1</translation>
     </message>
-    <message id="mqtt_devices_unpairing_confirm_description">
-      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="132"/>
+    <message id="unpairing_confirm_description">
+      <location filename="../../components/dialogs/UnpairDialog.qml" line="16"/>
       <source>This will disconnect the device and it will need to be paired again to reconnect.</source>
       <translation>Tím se zařízení odpojí a bude nutné jej znovu spárovat pro opětovné připojení.</translation>
     </message>
@@ -11421,17 +11411,17 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation>Nalezená ID E-pohonů</translation>
     </message>
     <message id="generic_input_label_released">
-      <location filename="../../src/genericinput.cpp" line="132"/>
+      <location filename="../../src/genericinput.cpp" line="72"/>
       <source>Released</source>
       <translation>Uvolněno</translation>
     </message>
     <message id="generic_input_label_pressed">
-      <location filename="../../src/genericinput.cpp" line="134"/>
+      <location filename="../../src/genericinput.cpp" line="76"/>
       <source>Pressed</source>
       <translation>Stisknuto</translation>
     </message>
     <message id="generic_input_label_holding">
-      <location filename="../../src/genericinput.cpp" line="136"/>
+      <location filename="../../src/genericinput.cpp" line="80"/>
       <source>Holding</source>
       <translation>Držení</translation>
     </message>
@@ -11472,7 +11462,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation>Maximální hodnota</translation>
     </message>
     <message id="aux_page_switches">
-      <location filename="../../pages/AuxCardsPage.qml" line="16"/>
+      <location filename="../../pages/AuxCardsPage.qml" line="18"/>
       <source>Switches</source>
       <extracomment>Name of the Switch Controls feature</extracomment>
       <translation>Přepínače</translation>
@@ -11493,7 +11483,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation>Vysoké vytížení systému, grafy skryty pro snížení vytížení procesoru</translation>
     </message>
     <message id="navbar_more">
-      <location filename="../../pages/MainView.qml" line="285"/>
+      <location filename="../../pages/MainView.qml" line="281"/>
       <source>More</source>
       <extracomment>Click to show more available items</extracomment>
       <translation>Více</translation>
@@ -11631,7 +11621,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <location filename="../../pages/settings/PageSettingsRootfsSelect.qml" line="63"/>
       <source>Boot</source>
       <extracomment>Boot the system to a particular firmware version</extracomment>
-      <translation>loď</translation>
+      <translation>Spustit</translation>
     </message>
     <message id="settings_tcpip_disable_ethernet_gateway">
       <location filename="../../pages/settings/NetworkSettingsPageModel.qml" line="153"/>
@@ -11865,21 +11855,6 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <source>Only applies when using Optimized with BatteryLife. Opportunity Loads automatically resumes after a full charge.</source>
       <translation>Platí pouze při použití režimu Optimalizováno s BatteryLife. Neprioritní spotřebiče se automaticky obnoví po plném nabití.</translation>
     </message>
-    <message id="settings_ble_gateway_access">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="88"/>
-      <source>BLE gateway access</source>
-      <translation>Přístup k bráně BLE</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="94"/>
-      <source>Proxy</source>
-      <translation>Proxy</translation>
-    </message>
-    <message id="settings_ble_gateway_access_proxy_and_direct">
-      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="96"/>
-      <source>Proxy and direct</source>
-      <translation>Proxy a přímé</translation>
-    </message>
     <message id="powerguard_consumption_l1_current_limit">
       <location filename="../../pages/settings/devicelist/ac-in/PowerGuardConsumptionSettings.qml" line="46"/>
       <source>Consumption L1 current limit</source>
@@ -11938,24 +11913,69 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation>Interní (nabíjecí stanice EV)</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_rejected">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="182"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="140"/>
       <source>The submitted encryption key is invalid.</source>
       <translation>Odeslaný šifrovací klíč je neplatný.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_placeholder">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="260"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="218"/>
       <source>Enter a 32-character key</source>
       <translation>Zadejte 32znakový klíč</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key_invalid">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="267"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="225"/>
       <source>The encryption key must be 32 hexadecimal characters.</source>
       <translation>Šifrovací klíč musí mít 32 hexadecimálních znaků.</translation>
     </message>
     <message id="settings_ble_sensors_encryption_key">
-      <location filename="../../pages/settings/BleSensorDelegate.qml" line="311"/>
+      <location filename="../../pages/settings/BleSensorDelegate.qml" line="269"/>
       <source>Encryption key</source>
       <translation>Šifrovací klíč</translation>
+    </message>
+    <message id="batteryalarms_bms_cable">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="169"/>
+      <source>Battery communication lost</source>
+      <translation>Ztráta komunikace s baterií</translation>
+    </message>
+    <message id="batteryalarms_cell_measurements_fault">
+      <location filename="../../pages/settings/devicelist/battery/PageBatteryAlarms.qml" line="183"/>
+      <source>Cell measurements fault</source>
+      <translation>Chyba měření článků</translation>
+    </message>
+    <message id="settings_ble_advanced">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="93"/>
+      <source>Advanced</source>
+      <translation type="unfinished">Pokročilé</translation>
+    </message>
+    <message id="settings_ble_sensors">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="100"/>
+      <source>Sensors</source>
+      <translation>Senzory</translation>
+    </message>
+    <message id="settings_ble_bridge_access">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="201"/>
+      <source>BLE bridge access</source>
+      <translation>Přístup k BLE bridge</translation>
+    </message>
+    <message id="settings_ble_bridge_access_paired_only">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="210"/>
+      <source>Paired devices only</source>
+      <translation type="unfinished">Pouze spárovaná zařízení</translation>
+    </message>
+    <message id="pairing_ble_paired_bridges">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="230"/>
+      <source>Paired BLE bridges</source>
+      <translation>Spárované BLE bridge</translation>
+    </message>
+    <message id="pairing_mqtt_paired_devices">
+      <location filename="../../pages/settings/PageSettingsMqttDevices.qml" line="73"/>
+      <source>Paired devices</source>
+      <translation>Spárovaná zařízení</translation>
+    </message>
+    <message id="settings_ble_sensors_add_encryption_keys_via_victronconnect">
+      <location filename="../../pages/settings/PageSettingsBleSensors.qml" line="122"/>
+      <source>Use VictronConnect app over Bluetooth to add encryption keys automatically.</source>
+      <translation>Pro automatické přidání šifrovacích klíčů použijte aplikaci VictronConnect přes Bluetooth.</translation>
     </message>
     <message id="dc_input">
       <location filename="../../components/listitems/ListDcInputQuantityGroup.qml" line="16"/>
@@ -12040,7 +12060,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation type="unfinished">Baterie</translation>
     </message>
     <message id="switchableoutput_gx_device_relays">
-      <location filename="../../src/iochannel.cpp" line="342"/>
+      <location filename="../../src/iochannel.cpp" line="345"/>
       <source>GX device relays</source>
       <translation type="unfinished">Relé zařízení GX</translation>
     </message>
@@ -12066,170 +12086,195 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <translation>Žádná chyba</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="13"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="14"/>
       <source>Battery initialization error</source>
-      <translation>Chyba spuštění baterie</translation>
+      <translation>Chyba inicializace baterie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="16"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="17"/>
       <source>No batteries connected</source>
       <translation>Nejsou připojeny baterie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="19"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="20"/>
       <source>Unknown battery</source>
       <translation>Neznámá baterie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="22"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="23"/>
       <source>Different battery types</source>
       <translation>Odlišné typy baterií</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="25"/>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="40"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="26"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="41"/>
       <source>No. of batteries incorrect</source>
-      <translation>Počet neprávných baterií</translation>
+      <translation>Nesprávný počet baterií</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="28"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="29"/>
       <source>Lynx Shunt not found</source>
-      <translation>Lynx Shunt nenalazen</translation>
+      <translation>Lynx Shunt nenalezen</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="31"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="32"/>
       <source>Battery measure error</source>
       <translation>Chyba měření baterie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="34"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="35"/>
       <source>Internal calculation error</source>
       <translation>Chyba interního výpočtu</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="37"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="38"/>
       <source>No. of batteries in series incorrect</source>
       <translation>Počet nesprávných baterií v sérii</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="44"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="45"/>
       <source>Hardware error</source>
       <translation>Chyba hardwaru</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="47"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="48"/>
       <source>Watchdog error</source>
-      <translation>Chyba hlídače</translation>
+      <translation>Chyba watchdogu</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="50"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="51"/>
       <source>Over voltage</source>
       <translation>Přepětí</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="53"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="54"/>
       <source>Under voltage</source>
       <translation>Podpětí</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="56"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="57"/>
       <source>Over temperature</source>
       <translation>Příliš vysoká teplota</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="59"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="60"/>
       <source>Under temperature</source>
       <translation>Příliš nízká teplota</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="62"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="63"/>
       <source>Under-charge standby</source>
-      <translation>Nedostatečné nabíjení v pohotovostním režimu</translation>
+      <translation>Pohotovostní režim při nedostatečném nabití</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="65"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="66"/>
       <source>ADC error</source>
       <translation>Chyba ADC</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="68"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="69"/>
       <source>Battery comm. error</source>
-      <translation>Chyba komunikace baterie</translation>
+      <translation>Chyba komunikace s baterií</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="71"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="74"/>
       <source>Pre-Charge error</source>
-      <translation>Chyba počátku nabíjení</translation>
+      <translation>Chyba přednabití</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="75"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="78"/>
       <source>Safety contactor error</source>
       <translation>Chyba bezpečnostního stykače</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="79"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
       <source>Battery update error</source>
       <translation>Chyba aktualizace baterie</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="82"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
       <source>BMS cable error</source>
-      <translation>Chyba komunikačního kabelu BMS</translation>
+      <translation>Chyba kabelu BMS</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="85"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
       <source>Reference voltage failure</source>
       <translation>Selhání referenčního napětí</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="88"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
       <source>Wrong system voltage</source>
       <translation>Nesprávné napětí systému</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="91"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
       <source>Pre charge timeout</source>
-      <translation>Vypršel čas pro počáteční nabíjení</translation>
+      <translation>Vypršel časový limit přednabití</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="94"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="97"/>
       <source>ATC/ATD failure</source>
       <translation>Selhání ATC/ATD</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="98"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="101"/>
       <source>Calibration data lost</source>
       <translation>Ztráta kalibračních dat</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="102"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
       <source>Settings invalid</source>
       <translation>Neplatné nastavení</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="105"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
       <source>Interlock</source>
-      <translation>Interlock</translation>
+      <translation>Blokování</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="108"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
       <source>Emergency stop</source>
       <translation>Nouzové vypnutí</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="111"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
       <source>Communication timeout</source>
       <translation>Časový limit komunikace</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="114"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="118"/>
       <source>Safety lock</source>
       <translation>Bezpečnostní zámek</translation>
     </message>
     <message>
-      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="117"/>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="121"/>
       <source>Terminal over temperature</source>
-      <translation>Přehřátí terminálu</translation>
+      <translation>Přehřátí svorky</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="124"/>
+      <source>High cell voltage</source>
+      <translation>Vysoké napětí článků</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="127"/>
+      <source>External disconnection</source>
+      <translation>Externí odpojení</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="130"/>
+      <source>Battery voltage not allowed</source>
+      <translation>Napětí baterie není povoleno</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="133"/>
+      <source>Over current</source>
+      <translation>Nadproud</translation>
+    </message>
+    <message>
+      <location filename="../../src/veutil/src/qt/bms_error.cpp" line="136"/>
+      <source>Battery voltage measurement mismatch</source>
+      <translation>Nesoulad měření napětí baterie</translation>
     </message>
   </context>
   <context>
@@ -12273,28 +12318,28 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="11"/>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="12"/>
       <source>Battery Tsense miswired</source>
-      <translation>Tčidlo baterie chybně zapojeno</translation>
+      <translation>Teplotní čidlo baterie je chybně zapojeno</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="13"/>
       <source>Battery Tsense missing</source>
-      <translation>Chybějící Tčidlo baterie</translation>
+      <translation>Chybí teplotní čidlo baterie</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="14"/>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="15"/>
       <source>Battery Vsense miswired</source>
-      <translation>Včidlo baterie chybně zapojeno</translation>
+      <translation>Napěťové čidlo baterie je chybně zapojeno</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="16"/>
       <source>Battery Vsense missing</source>
-      <translation>Chybějící Včidlo baterie</translation>
+      <translation>Chybí napěťové čidlo baterie</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="17"/>
       <source>Battery high wire losses</source>
-      <translation>Vysoké ztráty vodičů baterie</translation>
+      <translation>Vysoké ztráty na vedení baterie</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="18"/>
@@ -12304,17 +12349,17 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="19"/>
       <source>Battery high ripple voltage</source>
-      <translation>Velké zvlnění napětí baterie</translation>
+      <translation>Vysoké zvlnění napětí baterie</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="20"/>
       <source>Battery low state of charge</source>
-      <translation>Nízká úroveň stavu nabití</translation>
+      <translation>Nízký stav nabití baterie</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="21"/>
       <source>Battery mid-point voltage issue</source>
-      <translation>Problém se středním napětím baterie</translation>
+      <translation>Problém s napětím středního bodu baterie</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="22"/>
@@ -12341,27 +12386,27 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="29"/>
       <source>Charger bulk time expired</source>
-      <translation>Překročen čas pro bulk</translation>
+      <translation>Překročen čas fáze Bulk</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="30"/>
       <source>Charger current sensor issue</source>
-      <translation>Problém s proudovým čidlem nabíječky</translation>
+      <translation>Problém s proudovým snímačem nabíječky</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="31"/>
       <source>Internal Tsensor miswired</source>
-      <translation>Interní T čidlo špatně zapojeno</translation>
+      <translation>Interní teplotní čidlo je chybně zapojeno</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="32"/>
       <source>Internal Tsensor missing</source>
-      <translation>Chybějící interní T čidlo</translation>
+      <translation>Chybí interní teplotní čidlo</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="33"/>
       <source>Charger fan not detected</source>
-      <translation>Ventilátor nabíječky nebyl nalezen</translation>
+      <translation>Ventilátor nabíječky nebyl detekován</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="34"/>
@@ -12383,7 +12428,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="37"/>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="113"/>
       <source>Charger power stage issue</source>
-      <translation>Problém fáze rychlého nabíjení</translation>
+      <translation>Problém výkonového stupně nabíječky</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="38"/>
@@ -12418,12 +12463,12 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="45"/>
       <source>Input shutdown (no retries)</source>
-      <translation>Vypnutí vstupu (žádné opětovné zapnutí)</translation>
+      <translation>Vypnutí vstupu (bez opakování)</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="46"/>
       <source>Input shutdown (retry)</source>
-      <translation>Vypnutí vstupu (opětovné zapnutí)</translation>
+      <translation>Vypnutí vstupu (s opakováním)</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="47"/>
@@ -12439,7 +12484,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="51"/>
       <source>Ground fault detected</source>
-      <translation>Detekována chyba uzemnění</translation>
+      <translation>Detekováno zemní spojení</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="53"/>
@@ -12459,7 +12504,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="56"/>
       <source>Inverter internal DC level</source>
-      <translation>Interní úroveň DC měniče</translation>
+      <translation>Interní úroveň DC napětí měniče</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="57"/>
@@ -12471,7 +12516,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="59"/>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="61"/>
       <source>Inverter powerstage fault</source>
-      <translation>Chyba fáze rychlého nabíjení měniče</translation>
+      <translation>Chyba výkonového stupně měniče</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="60"/>
@@ -12491,7 +12536,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="65"/>
       <source>Device disappeared</source>
-      <translation>Zařízení zmizelo</translation>
+      <translation>Zařízení přestalo být dostupné</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="66"/>
@@ -12501,7 +12546,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="67"/>
       <source>BMS connection lost</source>
-      <translation>Ztráta BMS komunikace</translation>
+      <translation>Ztráta komunikace s BMS</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="68"/>
@@ -12515,7 +12560,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="72"/>
       <source>Phase rotation</source>
-      <translation>Otáčení fáze</translation>
+      <translation>Pořadí fází</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="73"/>
@@ -12565,7 +12610,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="87"/>
       <source>Tester fail</source>
-      <translation>Selhání testování</translation>
+      <translation>Test selhal</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/charger_error.cpp" line="88"/>
@@ -12694,7 +12739,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../data/EnvironmentInputs.qml" line="24"/>
       <source>Fridge</source>
-      <translation>Lednička</translation>
+      <translation>Chladnička</translation>
     </message>
     <message>
       <location filename="../../data/EnvironmentInputs.qml" line="30"/>
@@ -12773,7 +12818,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="121"/>
       <source>AC frequency too high</source>
-      <translation>AC frekvence příliš nízká</translation>
+      <translation>AC frekvence příliš vysoká</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="122"/>
@@ -13264,7 +13309,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="219"/>
       <source>Bus #1 dead</source>
-      <translation>Autobus č. 1 mrtvý</translation>
+      <translation>Bus č. 1 mrtvý</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="220"/>
@@ -13354,7 +13399,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="239"/>
       <source>Watchdog</source>
-      <translation>Hlídací pes</translation>
+      <translation>Watchdog</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/genset_error.cpp" line="240"/>
@@ -14671,7 +14716,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/alternator_error.cpp" line="205"/>
       <source>Battery instance ouf of range</source>
-      <translation>Akumulátor mimo rozsah</translation>
+      <translation>Instance baterie mimo rozsah</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/alternator_error.cpp" line="208"/>
@@ -14711,7 +14756,7 @@ Aktualizujte na nejnovější firmware, abyste mohli tato nastavení upravit.</t
     <message>
       <location filename="../../src/veutil/src/qt/alternator_error.cpp" line="229"/>
       <source>BMS connection lost</source>
-      <translation>Ztráta BMS komunikace</translation>
+      <translation>Ztráta komunikace s BMS</translation>
     </message>
     <message>
       <location filename="../../src/veutil/src/qt/alternator_error.cpp" line="232"/>

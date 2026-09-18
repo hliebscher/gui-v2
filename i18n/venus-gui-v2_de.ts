@@ -7506,6 +7506,16 @@ Möchtest Sie fortfahren?</translation>
       <source>Integrations</source>
       <translation type="unfinished">Integrationen</translation>
     </message>
+    <message id="settings_heating_climate">
+      <location filename="../../pages/SettingsPage.qml" line="119"/>
+      <source>Heating &amp; Climate</source>
+      <translation>Heizung und Klimatisierung</translation>
+    </message>
+    <message id="settings_heating_climate_caption">
+      <location filename="../../pages/SettingsPage.qml" line="121"/>
+      <source>Zones, setpoints, valves, climate control</source>
+      <translation>Zonen, Sollwerte, Ventile, Klimasteuerung</translation>
+    </message>
     <message id="pagesettingssupportstate_integrations">
       <location filename="../../pages/settings/PageSettingsSupportStatus.qml" line="443"/>
       <source>Integrations</source>

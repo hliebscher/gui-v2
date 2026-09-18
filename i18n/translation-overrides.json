@@ -231,6 +231,8 @@
     "ev_odometer": "",
     "ev_position": "Position",
     "ev_nr_phases": "",
+    "settings_heating_climate": "Heizung und Klimatisierung",
+    "settings_heating_climate_caption": "Zonen, Sollwerte, Ventile, Klimasteuerung",
     "page_contact_title": "Kontakt",
     "page_contact_contact": "Kontakt",
     "page_contact_address": "Anschrift",

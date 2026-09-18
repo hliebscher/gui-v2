@@ -806,6 +806,7 @@ set(VictronVenusOS_RESOURCES
     images/icon_energymeter_3f_32.svg
     images/icon_general_32.svg
     images/icon_integration_32.svg
+    images/icon_heating_32.svg
     images/icon_more_dots.svg
     images/icon_smartswitch_off_32.svg
     images/icon_smartswitch_on_32.svg

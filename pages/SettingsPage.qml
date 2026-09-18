@@ -120,7 +120,7 @@ SwipeViewPage {
 				//% "Zones, setpoints, valves, climate control"
 				caption: qsTrId("settings_heating_climate_caption")
 				pageSource: "/pages/HeatingPage.qml"
-				iconSource: "qrc:/images/heating.svg"
+				pageIconSource: "qrc:/images/icon_heating_32.svg"
 			}
 
 			SettingsListNavigation {
